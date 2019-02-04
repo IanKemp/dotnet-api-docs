@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.ExportLifetimeContext`1" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ExportLifetimeContext(Of T)&#xA;Implements IDisposable" />
   <TypeSignature Language="C++ CLI" Value="generic &lt;typename T&gt;&#xA;public ref class ExportLifetimeContext sealed : IDisposable" />
+  <TypeSignature Language="F#" Value="type ExportLifetimeContext&lt;'T&gt; = class&#xA;    interface IDisposable" />
   <AssemblyInfo>
     <AssemblyName>System.ComponentModel.Composition</AssemblyName>
     <AssemblyVersion>2.0.5.0</AssemblyVersion>
@@ -41,6 +42,7 @@
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.ExportLifetimeContext`1.#ctor(`0,System.Action)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (value As T, disposeAction As Action)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ExportLifetimeContext(T value, Action ^ disposeAction);" />
+      <MemberSignature Language="F#" Value="new System.ComponentModel.Composition.ExportLifetimeContext&lt;'T&gt; : 'T * Action -&gt; System.ComponentModel.Composition.ExportLifetimeContext&lt;'T&gt;" Usage="new System.ComponentModel.Composition.ExportLifetimeContext&lt;'T&gt; (value, disposeAction)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.Composition</AssemblyName>
@@ -64,6 +66,7 @@
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.ExportLifetimeContext`1.Dispose" />
       <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Dispose();" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="exportLifetimeContext.Dispose " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
@@ -87,7 +90,7 @@
   
  Call `Dispose` when you are finished using the <xref:System.ComponentModel.Composition.ExportLifetimeContext%601>. The `Dispose` method leaves the <xref:System.ComponentModel.Composition.ExportLifetimeContext%601> in an unusable state. After calling `Dispose`, you must release all references to the <xref:System.ComponentModel.Composition.ExportLifetimeContext%601> so the garbage collector can reclaim the memory that the <xref:System.ComponentModel.Composition.ExportLifetimeContext%601> was occupying.  
   
- For more information, see [Cleaning Up Unmanaged Resources](http://go.microsoft.com/fwlink/?LinkId=187455) and [Implementing a Dispose Method](http://go.microsoft.com/fwlink/?LinkId=187456).  
+ For more information, see [Cleaning Up Unmanaged Resources](https://go.microsoft.com/fwlink/?LinkId=187455) and [Implementing a Dispose Method](https://go.microsoft.com/fwlink/?LinkId=187456).  
   
 > [!NOTE]
 >  Always call `Dispose` before you release your last reference to the <xref:System.ComponentModel.Composition.ExportLifetimeContext%601>. Otherwise, the resources it is using will not be freed until the garbage collector calls the <xref:System.ComponentModel.Composition.ExportLifetimeContext%601> object's `Finalize` method.  
@@ -102,6 +105,7 @@
       <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.ExportLifetimeContext`1.Value" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Value As T" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property T Value { T get(); };" />
+      <MemberSignature Language="F#" Value="member this.Value : 'T" Usage="System.ComponentModel.Composition.ExportLifetimeContext&lt;'T&gt;.Value" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ComponentModel.Composition</AssemblyName>

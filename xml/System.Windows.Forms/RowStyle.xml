@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Forms.RowStyle" />
   <TypeSignature Language="VB.NET" Value="Public Class RowStyle&#xA;Inherits TableLayoutStyle" />
   <TypeSignature Language="C++ CLI" Value="public ref class RowStyle : System::Windows::Forms::TableLayoutStyle" />
+  <TypeSignature Language="F#" Value="type RowStyle = class&#xA;    inherit TableLayoutStyle" />
   <AssemblyInfo>
     <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -57,8 +59,14 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Initializes an instance of the <see cref="T:System.Windows.Forms.RowStyle" /> class to its default state.</summary>
@@ -78,9 +86,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.SizeType sizeType) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.RowStyle.#ctor(System.Windows.Forms.SizeType)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; RowStyle(System::Windows::Forms::SizeType sizeType);" />
+      <MemberSignature Language="F#" Value="new System.Windows.Forms.RowStyle : System.Windows.Forms.SizeType -&gt; System.Windows.Forms.RowStyle" Usage="new System.Windows.Forms.RowStyle sizeType" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
@@ -105,9 +115,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.SizeType sizeType, float32 height) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.RowStyle.#ctor(System.Windows.Forms.SizeType,System.Single)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; RowStyle(System::Windows::Forms::SizeType sizeType, float height);" />
+      <MemberSignature Language="F#" Value="new System.Windows.Forms.RowStyle : System.Windows.Forms.SizeType * single -&gt; System.Windows.Forms.RowStyle" Usage="new System.Windows.Forms.RowStyle (sizeType, height)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
@@ -116,7 +128,7 @@
       </Parameters>
       <Docs>
         <param name="sizeType">A <see cref="P:System.Windows.Forms.TableLayoutStyle.SizeType" /> indicating how the row should be should be sized relative to its containing table.</param>
-        <param name="height">The preferred height in pixels or percentage of the <see cref="T:System.Windows.Forms.TableLayoutPanel" />, depending on <c>sizeType</c>.</param>
+        <param name="height">The preferred height in pixels or percentage of the <see cref="T:System.Windows.Forms.TableLayoutPanel" />, depending on <paramref name="sizeType" />.</param>
         <summary>Initializes an instance of the <see cref="T:System.Windows.Forms.RowStyle" /> class using the supplied <see cref="T:System.Windows.Forms.SizeType" /> and height values.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -138,9 +150,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.RowStyle.Height" />
       <MemberSignature Language="VB.NET" Value="Public Property Height As Single" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property float Height { float get(); void set(float value); };" />
+      <MemberSignature Language="F#" Value="member this.Height : single with get, set" Usage="System.Windows.Forms.RowStyle.Height" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -158,7 +172,7 @@
 |`SizeType` value|`Height` interpretation|  
 |----------------------|-----------------------------|  
 |<xref:System.Windows.Forms.SizeType.Absolute>|The preferred row height in pixels (fractional portion ignored).|  
-|<xref:System.Windows.Forms.SizeType.AutoSize>|Not applicable—the <xref:System.Windows.Forms.RowStyle.Height%2A> property is ignored.|  
+|<xref:System.Windows.Forms.SizeType.AutoSize>|Not applicable - the <xref:System.Windows.Forms.RowStyle.Height%2A> property is ignored.|  
 |<xref:System.Windows.Forms.SizeType.Percent>|The preferred row height as a percentage of the containing table.|  
   
  ]]></format>

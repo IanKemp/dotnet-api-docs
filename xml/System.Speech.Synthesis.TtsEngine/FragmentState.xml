@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.TtsEngine.FragmentState" />
   <TypeSignature Language="VB.NET" Value="Public Structure FragmentState&#xA;Implements IEquatable(Of FragmentState)" />
   <TypeSignature Language="C++ CLI" Value="public value class FragmentState : IEquatable&lt;System::Speech::Synthesis::TtsEngine::FragmentState&gt;" />
+  <TypeSignature Language="F#" Value="type FragmentState = struct" />
   <AssemblyInfo>
     <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -46,11 +48,18 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Speech.Synthesis.TtsEngine.TtsEngineAction action, int32 langId, int32 emphasis, int32 duration, class System.Speech.Synthesis.TtsEngine.SayAs sayAs, class System.Speech.Synthesis.TtsEngine.Prosody prosody, char[] phonemes) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.FragmentState.#ctor(System.Speech.Synthesis.TtsEngine.TtsEngineAction,System.Int32,System.Int32,System.Int32,System.Speech.Synthesis.TtsEngine.SayAs,System.Speech.Synthesis.TtsEngine.Prosody,System.Char[])" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; FragmentState(System::Speech::Synthesis::TtsEngine::TtsEngineAction action, int langId, int emphasis, int duration, System::Speech::Synthesis::TtsEngine::SayAs ^ sayAs, System::Speech::Synthesis::TtsEngine::Prosody ^ prosody, cli::array &lt;char&gt; ^ phonemes);" />
+      <MemberSignature Language="F#" Value="new System.Speech.Synthesis.TtsEngine.FragmentState : System.Speech.Synthesis.TtsEngine.TtsEngineAction * int * int * int * System.Speech.Synthesis.TtsEngine.SayAs * System.Speech.Synthesis.TtsEngine.Prosody * char[] -&gt; System.Speech.Synthesis.TtsEngine.FragmentState" Usage="new System.Speech.Synthesis.TtsEngine.FragmentState (action, langId, emphasis, duration, sayAs, prosody, phonemes)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters>
         <Parameter Name="action" Type="System.Speech.Synthesis.TtsEngine.TtsEngineAction" />
         <Parameter Name="langId" Type="System.Int32" />
@@ -97,6 +106,7 @@
   
  ]]></format>
         </remarks>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=58363">International Phonetic Alphabet</related>
       </Docs>
     </Member>
     <Member MemberName="Action">
@@ -105,11 +115,18 @@
       <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.FragmentState.Action" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Action As TtsEngineAction" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Speech::Synthesis::TtsEngine::TtsEngineAction Action { System::Speech::Synthesis::TtsEngine::TtsEngineAction get(); };" />
+      <MemberSignature Language="F#" Value="member this.Action : System.Speech.Synthesis.TtsEngine.TtsEngineAction" Usage="System.Speech.Synthesis.TtsEngine.FragmentState.Action" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Speech.Synthesis.TtsEngine.TtsEngineAction</ReturnType>
       </ReturnValue>
@@ -125,11 +142,18 @@
       <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.FragmentState.Duration" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Duration As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Duration { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Duration : int" Usage="System.Speech.Synthesis.TtsEngine.FragmentState.Duration" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
@@ -145,11 +169,18 @@
       <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.FragmentState.Emphasis" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Emphasis As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Emphasis { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Emphasis : int" Usage="System.Speech.Synthesis.TtsEngine.FragmentState.Emphasis" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
@@ -184,7 +215,7 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Docs>
-        <summary>Determines if the current instance of <see cref="T:System.Speech.Synthesis.TtsEngine.FragmentState" /> describes the same <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> state as another <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> instance, or an [Object](http://msdn.microsoft.com/library/vstudio/system.object\(v=vs.110\).aspx) which can be cast to <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" />.</summary>
+        <summary>Determines if the current instance of <see cref="T:System.Speech.Synthesis.TtsEngine.FragmentState" /> describes the same <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> state as another <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> instance, or an [Object](https://msdn.microsoft.com/library/vstudio/system.object\(v=vs.110\).aspx) which can be cast to <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" />.</summary>
       </Docs>
     </MemberGroup>
     <Member MemberName="Equals">
@@ -193,9 +224,11 @@
       <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.FragmentState.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="fragmentState.Equals obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -207,12 +240,12 @@
       <Docs>
         <param name="obj">An object that can be cast to an instance of <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /></param>
         <summary>Determines if a given object is an instance <see cref="T:System.Speech.Synthesis.TtsEngine.FragmentState" /> equal to the current instance of <see cref="T:System.Speech.Synthesis.TtsEngine.FragmentState" />.</summary>
-        <returns>Returns <see langword="true" />, if the current instance of <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> and that obtained from the [Object](http://msdn.microsoft.com/library/vstudio/system.object\(v=vs.110\).aspx) provided by the <paramref name="obj" /> argument describe the same <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> state. Returns <see langword="false" /> if the current <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> and the <paramref name="obj" /> argument do not support the same <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> state.</returns>
+        <returns>Returns <see langword="true" />, if the current instance of <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> and that obtained from the <see cref="T:System.Object" /> provided by the <paramref name="obj" /> argument describe the same <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> state. Returns <see langword="false" /> if the current <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> and the <paramref name="obj" /> argument do not support the same <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> state.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The method return false if the [Object](http://msdn.microsoft.com/library/vstudio/system.object\(v=vs.110\).aspx) provided by the `obj` argument cannot be cast to <xref:System.Speech.Synthesis.TtsEngine.TextFragment>.  
+ The method return false if the [Object](https://msdn.microsoft.com/library/vstudio/system.object\(v=vs.110\).aspx) provided by the `obj` argument cannot be cast to <xref:System.Speech.Synthesis.TtsEngine.TextFragment>.  
   
  ]]></format>
         </remarks>
@@ -224,12 +257,14 @@
       <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.FragmentState.Equals(System.Speech.Synthesis.TtsEngine.FragmentState)" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (other As FragmentState) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Equals(System::Speech::Synthesis::TtsEngine::FragmentState other);" />
+      <MemberSignature Language="F#" Value="override this.Equals : System.Speech.Synthesis.TtsEngine.FragmentState -&gt; bool" Usage="fragmentState.Equals other" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -251,9 +286,11 @@
       <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.FragmentState.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="fragmentState.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -273,11 +310,18 @@
       <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.FragmentState.LangId" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LangId As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int LangId { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.LangId : int" Usage="System.Speech.Synthesis.TtsEngine.FragmentState.LangId" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
@@ -300,9 +344,11 @@
       <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.FragmentState.op_Equality(System.Speech.Synthesis.TtsEngine.FragmentState,System.Speech.Synthesis.TtsEngine.FragmentState)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator == (state1 As FragmentState, state2 As FragmentState) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator ==(System::Speech::Synthesis::TtsEngine::FragmentState state1, System::Speech::Synthesis::TtsEngine::FragmentState state2);" />
+      <MemberSignature Language="F#" Value="static member ( = ) : System.Speech.Synthesis.TtsEngine.FragmentState * System.Speech.Synthesis.TtsEngine.FragmentState -&gt; bool" Usage="state1 = state2" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -313,8 +359,8 @@
         <Parameter Name="state2" Type="System.Speech.Synthesis.TtsEngine.FragmentState" />
       </Parameters>
       <Docs>
-        <param name="state1">An instance of <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> whose described state is compared against the instance of <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> provided by the <c>state2</c> argument.</param>
-        <param name="state2">An instance of <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> whose described state is compared against the instance of <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> provided by the <c>state1</c> argument.</param>
+        <param name="state1">An instance of <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> whose described state is compared against the instance of <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> provided by the <paramref name="state2" /> argument.</param>
+        <param name="state2">An instance of <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> whose described state is compared against the instance of <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> provided by the <paramref name="state1" /> argument.</param>
         <summary>Determines if two instances of <see cref="T:System.Speech.Synthesis.TtsEngine.FragmentState" /> describes the same <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> state.</summary>
         <returns>Returns <see langword="true" /> if both instances of <see cref="T:System.Speech.Synthesis.TtsEngine.FragmentState" />, <paramref name="state1" /> and <paramref name="state2" />, describe the same <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> state, otherwise <see langword="false" /> is returned.</returns>
         <remarks>
@@ -328,9 +374,11 @@
       <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.FragmentState.op_Inequality(System.Speech.Synthesis.TtsEngine.FragmentState,System.Speech.Synthesis.TtsEngine.FragmentState)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator != (state1 As FragmentState, state2 As FragmentState) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator !=(System::Speech::Synthesis::TtsEngine::FragmentState state1, System::Speech::Synthesis::TtsEngine::FragmentState state2);" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : System.Speech.Synthesis.TtsEngine.FragmentState * System.Speech.Synthesis.TtsEngine.FragmentState -&gt; bool" Usage="System.Speech.Synthesis.TtsEngine.FragmentState.op_Inequality (state1, state2)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -341,8 +389,8 @@
         <Parameter Name="state2" Type="System.Speech.Synthesis.TtsEngine.FragmentState" />
       </Parameters>
       <Docs>
-        <param name="state1">An instance of <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> whose described state is compared against the instance of <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> provided by the <c>state2</c> argument.</param>
-        <param name="state2">An instance of <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> whose described state is compared against the instance of <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> provided by the <c>state1</c> argument.</param>
+        <param name="state1">An instance of <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> whose described state is compared against the instance of <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> provided by the <paramref name="state2" /> argument.</param>
+        <param name="state2">An instance of <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> whose described state is compared against the instance of <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> provided by the <paramref name="state1" /> argument.</param>
         <summary>Determines if two instances of <see cref="T:System.Speech.Synthesis.TtsEngine.FragmentState" /> describes the different <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> state.</summary>
         <returns>Returns <see langword="true" /> if both instances of <see cref="T:System.Speech.Synthesis.TtsEngine.FragmentState" />, <paramref name="state1" /> and <paramref name="state2" />, do not describe the same <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> state, otherwise <see langword="false" /> is returned.</returns>
         <remarks>
@@ -356,11 +404,18 @@
       <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.FragmentState.Phoneme" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Phoneme As Char()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;char&gt; ^ Phoneme { cli::array &lt;char&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Phoneme : char[]" Usage="System.Speech.Synthesis.TtsEngine.FragmentState.Phoneme" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Char[]</ReturnType>
       </ReturnValue>
@@ -377,6 +432,7 @@
   
  ]]></format>
         </remarks>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=58363">International Phonetic Alphabet</related>
       </Docs>
     </Member>
     <Member MemberName="Prosody">
@@ -385,11 +441,18 @@
       <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.FragmentState.Prosody" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Prosody As Prosody" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Speech::Synthesis::TtsEngine::Prosody ^ Prosody { System::Speech::Synthesis::TtsEngine::Prosody ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Prosody : System.Speech.Synthesis.TtsEngine.Prosody" Usage="System.Speech.Synthesis.TtsEngine.FragmentState.Prosody" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Speech.Synthesis.TtsEngine.Prosody</ReturnType>
       </ReturnValue>
@@ -412,16 +475,23 @@
       <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.FragmentState.SayAs" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SayAs As SayAs" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Speech::Synthesis::TtsEngine::SayAs ^ SayAs { System::Speech::Synthesis::TtsEngine::SayAs ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SayAs : System.Speech.Synthesis.TtsEngine.SayAs" Usage="System.Speech.Synthesis.TtsEngine.FragmentState.SayAs" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Speech.Synthesis.TtsEngine.SayAs</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Returns information about the context for the generation of speech from text..</summary>
+        <summary>Returns information about the context for the generation of speech from text.</summary>
         <value>Returns a value <see cref="T:System.Speech.Synthesis.TtsEngine.SayAs" /> instance if the SSML used by a speech synthesis engine contains detailed information about the context to be used to generate speech, otherwise <see langword="null" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.DatePickerTextBox" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class DatePickerTextBox&#xA;Inherits TextBox" />
   <TypeSignature Language="C++ CLI" Value="public ref class DatePickerTextBox sealed : System::Windows::Controls::TextBox" />
+  <TypeSignature Language="F#" Value="type DatePickerTextBox = class&#xA;    inherit TextBox" />
   <AssemblyInfo>
     <AssemblyName>PresentationFramework</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -28,10 +29,9 @@
 ## Customizing the DatePickerTextBox Control  
  To apply the same property settings to multiple <xref:System.Windows.Controls.Primitives.DatePickerTextBox> controls, use the <xref:System.Windows.FrameworkElement.Style%2A> property. You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance. For more information about creating a <xref:System.Windows.Controls.ControlTemplate>, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  To see the parts and states that are specific to the <xref:System.Windows.Controls.Primitives.DatePickerTextBox>, see [DatePicker Syles and Templates](~/docs/framework/wpf/controls/datepicker-styles-and-templates.md).  
   
- Dependency properties for this control might be set by the control’s default style.  If a property is set by a default style, the property might change from its default value when the control appears in the application. The default style is determined by which desktop theme is used when the application is running.  For more information, see [Default WPF Themes](http://go.microsoft.com/fwlink/?LinkID=158252).  
+ Dependency properties for this control might be set by the control's default style.  If a property is set by a default style, the property might change from its default value when the control appears in the application. The default style is determined by which desktop theme is used when the application is running.  For more information, see [Default WPF Themes](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
-> [!NOTE]
->  Setting a visual property will only have an effect if that property is both present in Button control's default template and is set by using a . You can find a list of visual properties in the "Changing the Visual Structure of a Control" section in [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+[!INCLUDE[setting-a-visual-property](~/includes/visual-property-note.md)]  
   
  ]]></format>
     </remarks>
@@ -60,6 +60,7 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DatePickerTextBox.OnApplyTemplate" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub OnApplyTemplate ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void OnApplyTemplate();" />
+      <MemberSignature Language="F#" Value="override this.OnApplyTemplate : unit -&gt; unit" Usage="datePickerTextBox.OnApplyTemplate " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
@@ -80,6 +81,7 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DatePickerTextBox.OnGotFocus(System.Windows.RoutedEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub OnGotFocus (e As RoutedEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void OnGotFocus(System::Windows::RoutedEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="override this.OnGotFocus : System.Windows.RoutedEventArgs -&gt; unit" Usage="datePickerTextBox.OnGotFocus e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>

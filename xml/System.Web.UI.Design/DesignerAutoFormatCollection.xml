@@ -4,14 +4,22 @@
   <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.DesignerAutoFormatCollection" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class DesignerAutoFormatCollection&#xA;Implements IList" />
   <TypeSignature Language="C++ CLI" Value="public ref class DesignerAutoFormatCollection sealed : System::Collections::IList" />
+  <TypeSignature Language="F#" Value="type DesignerAutoFormatCollection = class&#xA;    interface IList&#xA;    interface ICollection&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
     <Interface>
       <InterfaceName>System.Collections.IList</InterfaceName>
     </Interface>
@@ -62,6 +70,7 @@
     <altmember cref="T:System.Web.UI.Design.ControlDesigner" />
     <altmember cref="P:System.Web.UI.Design.ControlDesigner.AutoFormats" />
     <altmember cref="T:System.Web.UI.Design.DesignerAutoFormatStyle" />
+    <related type="Article" href="https://docs.microsoft.com/previous-versions/aspnet/wxh45wzs(v=vs.100)">ASP.NET Control Designers Overview</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -73,6 +82,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
@@ -89,6 +99,7 @@
         <altmember cref="T:System.Web.UI.Design.DesignerAutoFormat" />
         <altmember cref="T:System.Web.UI.Design.ControlDesigner" />
         <altmember cref="P:System.Web.UI.Design.ControlDesigner.AutoFormats" />
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/aspnet/wxh45wzs(v=vs.100)">ASP.NET Control Designers Overview</related>
       </Docs>
     </Member>
     <Member MemberName="Add">
@@ -97,9 +108,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignerAutoFormatCollection.Add(System.Web.UI.Design.DesignerAutoFormat)" />
       <MemberSignature Language="VB.NET" Value="Public Function Add (format As DesignerAutoFormat) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; int Add(System::Web::UI::Design::DesignerAutoFormat ^ format);" />
+      <MemberSignature Language="F#" Value="member this.Add : System.Web.UI.Design.DesignerAutoFormat -&gt; int" Usage="designerAutoFormatCollection.Add format" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -131,6 +144,7 @@
         <altmember cref="T:System.Web.UI.Design.DesignerAutoFormat" />
         <altmember cref="T:System.Web.UI.Design.ControlDesigner" />
         <altmember cref="P:System.Web.UI.Design.ControlDesigner.AutoFormats" />
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/aspnet/wxh45wzs(v=vs.100)">ASP.NET Control Designers Overview</related>
       </Docs>
     </Member>
     <Member MemberName="Clear">
@@ -139,12 +153,14 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignerAutoFormatCollection.Clear" />
       <MemberSignature Language="VB.NET" Value="Public Sub Clear ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Clear();" />
+      <MemberSignature Language="F#" Value="abstract member Clear : unit -&gt; unit&#xA;override this.Clear : unit -&gt; unit" Usage="designerAutoFormatCollection.Clear " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IList.Clear</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -164,6 +180,7 @@
         <altmember cref="T:System.Web.UI.Design.DesignerAutoFormat" />
         <altmember cref="T:System.Web.UI.Design.ControlDesigner" />
         <altmember cref="P:System.Web.UI.Design.ControlDesigner.AutoFormats" />
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/aspnet/wxh45wzs(v=vs.100)">ASP.NET Control Designers Overview</related>
       </Docs>
     </Member>
     <Member MemberName="Contains">
@@ -172,9 +189,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignerAutoFormatCollection.Contains(System.Web.UI.Design.DesignerAutoFormat)" />
       <MemberSignature Language="VB.NET" Value="Public Function Contains (format As DesignerAutoFormat) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Contains(System::Web::UI::Design::DesignerAutoFormat ^ format);" />
+      <MemberSignature Language="F#" Value="member this.Contains : System.Web.UI.Design.DesignerAutoFormat -&gt; bool" Usage="designerAutoFormatCollection.Contains format" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -200,6 +219,7 @@
         <altmember cref="T:System.Web.UI.Design.DesignerAutoFormat" />
         <altmember cref="T:System.Web.UI.Design.ControlDesigner" />
         <altmember cref="P:System.Web.UI.Design.ControlDesigner.AutoFormats" />
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/aspnet/wxh45wzs(v=vs.100)">ASP.NET Control Designers Overview</related>
       </Docs>
     </Member>
     <Member MemberName="Count">
@@ -208,12 +228,14 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerAutoFormatCollection.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="System.Web.UI.Design.DesignerAutoFormatCollection.Count" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.ICollection.Count</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -233,6 +255,7 @@
         <altmember cref="T:System.Web.UI.Design.DesignerAutoFormat" />
         <altmember cref="T:System.Web.UI.Design.ControlDesigner" />
         <altmember cref="P:System.Web.UI.Design.ControlDesigner.AutoFormats" />
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/aspnet/wxh45wzs(v=vs.100)">ASP.NET Control Designers Overview</related>
       </Docs>
     </Member>
     <Member MemberName="IndexOf">
@@ -241,9 +264,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignerAutoFormatCollection.IndexOf(System.Web.UI.Design.DesignerAutoFormat)" />
       <MemberSignature Language="VB.NET" Value="Public Function IndexOf (format As DesignerAutoFormat) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; int IndexOf(System::Web::UI::Design::DesignerAutoFormat ^ format);" />
+      <MemberSignature Language="F#" Value="member this.IndexOf : System.Web.UI.Design.DesignerAutoFormat -&gt; int" Usage="designerAutoFormatCollection.IndexOf format" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -267,6 +292,7 @@
         <altmember cref="T:System.Web.UI.Design.DesignerAutoFormat" />
         <altmember cref="T:System.Web.UI.Design.ControlDesigner" />
         <altmember cref="P:System.Web.UI.Design.ControlDesigner.AutoFormats" />
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/aspnet/wxh45wzs(v=vs.100)">ASP.NET Control Designers Overview</related>
       </Docs>
     </Member>
     <Member MemberName="Insert">
@@ -275,9 +301,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignerAutoFormatCollection.Insert(System.Int32,System.Web.UI.Design.DesignerAutoFormat)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Insert (index As Integer, format As DesignerAutoFormat)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Insert(int index, System::Web::UI::Design::DesignerAutoFormat ^ format);" />
+      <MemberSignature Language="F#" Value="member this.Insert : int * System.Web.UI.Design.DesignerAutoFormat -&gt; unit" Usage="designerAutoFormatCollection.Insert (index, format)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -288,7 +316,7 @@
         <Parameter Name="format" Type="System.Web.UI.Design.DesignerAutoFormat" />
       </Parameters>
       <Docs>
-        <param name="index">The zero-based index within the collection at which to insert <c>format</c>.</param>
+        <param name="index">The zero-based index within the collection at which to insert <paramref name="format" />.</param>
         <param name="format">The <see cref="T:System.Web.UI.Design.DesignerAutoFormat" /> to insert into the collection.</param>
         <summary>Inserts a <see cref="T:System.Web.UI.Design.DesignerAutoFormat" /> object into the collection at the specified index.</summary>
         <remarks>
@@ -305,12 +333,13 @@
         <exception cref="T:System.ArgumentOutOfRangeException">
           <paramref name="index" /> is less than zero.  
   
- \- or -  
+-or-
   
  <paramref name="index" /> is greater than the <see cref="P:System.Web.UI.Design.DesignerAutoFormatCollection.Count" /> property.</exception>
         <altmember cref="T:System.Web.UI.Design.DesignerAutoFormat" />
         <altmember cref="T:System.Web.UI.Design.ControlDesigner" />
         <altmember cref="P:System.Web.UI.Design.ControlDesigner.AutoFormats" />
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/aspnet/wxh45wzs(v=vs.100)">ASP.NET Control Designers Overview</related>
       </Docs>
     </Member>
     <Member MemberName="Item">
@@ -319,9 +348,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerAutoFormatCollection.Item(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(index As Integer) As DesignerAutoFormat" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::Design::DesignerAutoFormat ^ default[int] { System::Web::UI::Design::DesignerAutoFormat ^ get(int index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : System.Web.UI.Design.DesignerAutoFormat" Usage="System.Web.UI.Design.DesignerAutoFormatCollection.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -347,12 +378,13 @@
         <exception cref="T:System.ArgumentOutOfRangeException">
           <paramref name="index" /> is less than zero.  
   
- \- or -  
+-or-
   
  <paramref name="index" /> is greater than the <see cref="P:System.Web.UI.Design.DesignerAutoFormatCollection.Count" /> property.</exception>
         <altmember cref="T:System.Web.UI.Design.DesignerAutoFormat" />
         <altmember cref="T:System.Web.UI.Design.ControlDesigner" />
         <altmember cref="P:System.Web.UI.Design.ControlDesigner.AutoFormats" />
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/aspnet/wxh45wzs(v=vs.100)">ASP.NET Control Designers Overview</related>
       </Docs>
     </Member>
     <Member MemberName="PreviewSize">
@@ -361,9 +393,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerAutoFormatCollection.PreviewSize" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PreviewSize As Size" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Drawing::Size PreviewSize { System::Drawing::Size get(); };" />
+      <MemberSignature Language="F#" Value="member this.PreviewSize : System.Drawing.Size" Usage="System.Web.UI.Design.DesignerAutoFormatCollection.PreviewSize" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -383,6 +417,7 @@
         <altmember cref="T:System.Web.UI.Design.DesignerAutoFormat" />
         <altmember cref="T:System.Web.UI.Design.ControlDesigner" />
         <altmember cref="P:System.Web.UI.Design.ControlDesigner.AutoFormats" />
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/aspnet/wxh45wzs(v=vs.100)">ASP.NET Control Designers Overview</related>
       </Docs>
     </Member>
     <Member MemberName="Remove">
@@ -391,9 +426,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignerAutoFormatCollection.Remove(System.Web.UI.Design.DesignerAutoFormat)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Remove (format As DesignerAutoFormat)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Remove(System::Web::UI::Design::DesignerAutoFormat ^ format);" />
+      <MemberSignature Language="F#" Value="member this.Remove : System.Web.UI.Design.DesignerAutoFormat -&gt; unit" Usage="designerAutoFormatCollection.Remove format" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -425,6 +462,7 @@
         <altmember cref="T:System.Web.UI.Design.DesignerAutoFormat" />
         <altmember cref="T:System.Web.UI.Design.ControlDesigner" />
         <altmember cref="P:System.Web.UI.Design.ControlDesigner.AutoFormats" />
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/aspnet/wxh45wzs(v=vs.100)">ASP.NET Control Designers Overview</related>
       </Docs>
     </Member>
     <Member MemberName="RemoveAt">
@@ -433,12 +471,14 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignerAutoFormatCollection.RemoveAt(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub RemoveAt (index As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void RemoveAt(int index);" />
+      <MemberSignature Language="F#" Value="member this.RemoveAt : int -&gt; unit" Usage="designerAutoFormatCollection.RemoveAt index" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IList.RemoveAt(System.Int32)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -464,9 +504,10 @@
         <exception cref="T:System.ArgumentOutOfRangeException">
           <paramref name="index" /> is less than zero.  
   
- \- or -  
+-or-
   
  <paramref name="index" /> is greater than the <see cref="P:System.Web.UI.Design.DesignerAutoFormatCollection.Count" /> property.</exception>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/aspnet/wxh45wzs(v=vs.100)">ASP.NET Control Designers Overview</related>
       </Docs>
     </Member>
     <Member MemberName="SyncRoot">
@@ -475,12 +516,14 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerAutoFormatCollection.SyncRoot" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SyncRoot As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ SyncRoot { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SyncRoot : obj" Usage="System.Web.UI.Design.DesignerAutoFormatCollection.SyncRoot" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.ICollection.SyncRoot</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -503,6 +546,7 @@
         <altmember cref="T:System.Web.UI.Design.DesignerAutoFormat" />
         <altmember cref="T:System.Web.UI.Design.ControlDesigner" />
         <altmember cref="P:System.Web.UI.Design.ControlDesigner.AutoFormats" />
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/aspnet/wxh45wzs(v=vs.100)">ASP.NET Control Designers Overview</related>
       </Docs>
     </Member>
     <Member MemberName="System.Collections.ICollection.CopyTo">
@@ -516,6 +560,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -546,15 +591,22 @@
       <MemberSignature Language="ILAsm" Value=".property instance int32 System.Collections.ICollection.Count" />
       <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerAutoFormatCollection.System#Collections#ICollection#Count" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property Count As Integer Implements ICollection.Count" />
-      <MemberSignature Language="C++ CLI" Value="property int System.Collections.ICollection.Count { int get(); };" />
+      <MemberSignature Language="C++ CLI" Value="property int System::Collections::ICollection::Count { int get(); };" />
+      <MemberSignature Language="F#" Usage="System.Collections.ICollection.Count" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.ICollection.Count</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
@@ -578,13 +630,15 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
       <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerAutoFormatCollection.System#Collections#ICollection#IsSynchronized" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property IsSynchronized As Boolean Implements ICollection.IsSynchronized" />
-      <MemberSignature Language="C++ CLI" Value="property bool System.Collections.ICollection.IsSynchronized { bool get(); };" />
+      <MemberSignature Language="C++ CLI" Value="property bool System::Collections::ICollection::IsSynchronized { bool get(); };" />
+      <MemberSignature Language="F#" Usage="System.Collections.ICollection.IsSynchronized" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.ICollection.IsSynchronized</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -617,6 +671,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -650,6 +705,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -686,6 +742,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -723,6 +780,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -759,6 +817,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -769,7 +828,7 @@
         <Parameter Name="value" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="index">The index at which to insert <c>value</c>.</param>
+        <param name="index">The index at which to insert <paramref name="value" />.</param>
         <param name="value">A <see cref="T:System.Web.UI.Design.DesignerAutoFormat" /> to insert.</param>
         <summary>Inserts an item into the collection at the specified index when the <see cref="T:System.Web.UI.Design.DesignerAutoFormatCollection" /> object is cast to an <see cref="T:System.Collections.IList" /> interface.</summary>
         <remarks>
@@ -789,13 +848,15 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
       <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerAutoFormatCollection.System#Collections#IList#IsFixedSize" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property IsFixedSize As Boolean Implements IList.IsFixedSize" />
-      <MemberSignature Language="C++ CLI" Value="property bool System.Collections.IList.IsFixedSize { bool get(); };" />
+      <MemberSignature Language="C++ CLI" Value="property bool System::Collections::IList::IsFixedSize { bool get(); };" />
+      <MemberSignature Language="F#" Usage="System.Collections.IList.IsFixedSize" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.IList.IsFixedSize</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -820,13 +881,15 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsReadOnly" />
       <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerAutoFormatCollection.System#Collections#IList#IsReadOnly" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property IsReadOnly As Boolean Implements IList.IsReadOnly" />
-      <MemberSignature Language="C++ CLI" Value="property bool System.Collections.IList.IsReadOnly { bool get(); };" />
+      <MemberSignature Language="C++ CLI" Value="property bool System::Collections::IList::IsReadOnly { bool get(); };" />
+      <MemberSignature Language="F#" Usage="System.Collections.IList.IsReadOnly" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.IList.IsReadOnly</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -847,6 +910,7 @@
         <altmember cref="T:System.Web.UI.Design.ControlDesigner" />
         <altmember cref="P:System.Web.UI.Design.ControlDesigner.AutoFormats" />
         <altmember cref="T:System.Collections.IList" />
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/aspnet/wxh45wzs(v=vs.100)">ASP.NET Control Designers Overview</related>
       </Docs>
     </Member>
     <Member MemberName="System.Collections.IList.Item">
@@ -854,13 +918,15 @@
       <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
       <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerAutoFormatCollection.System#Collections#IList#Item(System.Int32)" />
       <MemberSignature Language="VB.NET" Value=" Property Item(index As Integer) As Object Implements IList.Item" />
-      <MemberSignature Language="C++ CLI" Value="property System::Object ^ System.Collections.IList.Item[int] { System::Object ^ get(int index); void set(int index, System::Object ^ value); };" />
+      <MemberSignature Language="C++ CLI" Value="property System::Object ^ System::Collections::IList::Item[int] { System::Object ^ get(int index); void set(int index, System::Object ^ value); };" />
+      <MemberSignature Language="F#" Usage="System.Collections.IList.Item" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.IList.Item(System.Int32)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -896,6 +962,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -931,8 +998,14 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>

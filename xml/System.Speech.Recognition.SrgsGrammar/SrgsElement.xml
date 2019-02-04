@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.SrgsGrammar.SrgsElement" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class SrgsElement&#xA;Inherits MarshalByRefObject" />
   <TypeSignature Language="C++ CLI" Value="public ref class SrgsElement abstract : MarshalByRefObject" />
+  <TypeSignature Language="F#" Value="type SrgsElement = class&#xA;    inherit MarshalByRefObject" />
   <AssemblyInfo>
     <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -19,6 +21,9 @@
     <Attribute>
       <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.Speech.Recognition.SrgsGrammar.SrgsElement/SrgsElementDebugDisplay))</AttributeName>
     </Attribute>
+    <Attribute>
+      <AttributeName>System.Serializable</AttributeName>
+    </Attribute>
   </Attributes>
   <Docs>
     <summary>Defines the base class for classes in the <see cref="N:System.Speech.Recognition.SrgsGrammar" /> namespace that correspond to the elements in an SRGS grammar.</summary>
@@ -26,7 +31,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The <xref:System.Speech.Recognition.SrgsGrammar.SrgsElement> class is the base class for the following classes, which correspond to elements defined in the [Speech Recognition Grammar Specification (SRGS) Version 1.0](http://go.microsoft.com/fwlink/?LinkId=201761):  
+ The <xref:System.Speech.Recognition.SrgsGrammar.SrgsElement> class is the base class for the following classes, which correspond to elements defined in the [Speech Recognition Grammar Specification (SRGS) Version 1.0](https://go.microsoft.com/fwlink/?LinkId=201761):  
   
 -   <xref:System.Speech.Recognition.SrgsGrammar.SrgsItem>  
   
@@ -59,8 +64,14 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsElement" /> class.</summary>

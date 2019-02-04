@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Diagnostics.EventSchemaTraceListener" />
   <TypeSignature Language="VB.NET" Value="Public Class EventSchemaTraceListener&#xA;Inherits TextWriterTraceListener" />
   <TypeSignature Language="C++ CLI" Value="public ref class EventSchemaTraceListener : System::Diagnostics::TextWriterTraceListener" />
+  <TypeSignature Language="F#" Value="type EventSchemaTraceListener = class&#xA;    inherit TextWriterTraceListener" />
   <AssemblyInfo>
     <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -18,13 +20,13 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The <xref:System.Diagnostics.EventSchemaTraceListener> class provides tracing of end-to-end schema-compliant events. You can use end-to-end tracing for a system that has heterogeneous components that cross thread, <xref:System.AppDomain>, process, and computer boundaries. A standardized event schema (see [Event Representation for Event Consumers](http://go.microsoft.com/fwlink/?LinkId=78955)) has been defined to enable tracing across these boundaries. The schema enables the addition of custom, schema-compliant elements. You can use the [Service Trace Viewer Tool (SvcTraceViewer.exe)](http://go.microsoft.com/fwlink/p/?LinkId=240129) to display the event data.  
+ The <xref:System.Diagnostics.EventSchemaTraceListener> class provides tracing of end-to-end schema-compliant events. You can use end-to-end tracing for a system that has heterogeneous components that cross thread, <xref:System.AppDomain>, process, and computer boundaries. A standardized event schema (see [Event Representation for Event Consumers](https://go.microsoft.com/fwlink/?LinkId=78955)) has been defined to enable tracing across these boundaries. The schema enables the addition of custom, schema-compliant elements. You can use the [Service Trace Viewer Tool (SvcTraceViewer.exe)](https://go.microsoft.com/fwlink/p/?LinkId=240129) to display the event data.  
   
  <xref:System.Diagnostics.EventSchemaTraceListener> is tuned for logging performance with implicit support for lock-free tracing.  
   
  The <xref:System.Diagnostics.EventSchemaTraceListener> class converts tracing and debugging information into an XML-encoded text stream. The description of the XML output is shown in the tables later in this section.  
   
- You can enable or disable an <xref:System.Diagnostics.EventSchemaTraceListener> object through the application configuration file, and then use the configured <xref:System.Diagnostics.EventSchemaTraceListener> object in your application. Alternately, you can create an <xref:System.Diagnostics.EventSchemaTraceListener> object in your code. We recommend that you enable trace listeners through the application configuration file. For information about the use of configuration files for tracing and debugging, see [Trace and Debug Settings Schema](http://msdn.microsoft.com/library/277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac).  
+ You can enable or disable an <xref:System.Diagnostics.EventSchemaTraceListener> object through the application configuration file, and then use the configured <xref:System.Diagnostics.EventSchemaTraceListener> object in your application. Alternately, you can create an <xref:System.Diagnostics.EventSchemaTraceListener> object in your code. We recommend that you enable trace listeners through the application configuration file. For information about the use of configuration files for tracing and debugging, see [Trace and Debug Settings Schema](~/docs/framework/configure-apps/file-schema/trace-debug/index.md).  
   
  To configure an <xref:System.Diagnostics.EventSchemaTraceListener> object, modify the configuration file that corresponds to the name of your application. In this file, you can add, remove, or set the properties for a listener. The configuration file should be formatted as follows:  
   
@@ -124,9 +126,11 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (fileName As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; EventSchemaTraceListener(System::String ^ fileName);" />
+      <MemberSignature Language="F#" Value="new System.Diagnostics.EventSchemaTraceListener : string -&gt; System.Diagnostics.EventSchemaTraceListener" Usage="new System.Diagnostics.EventSchemaTraceListener fileName" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
@@ -159,11 +163,18 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.#ctor(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (fileName As String, name As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; EventSchemaTraceListener(System::String ^ fileName, System::String ^ name);" />
+      <MemberSignature Language="F#" Value="new System.Diagnostics.EventSchemaTraceListener : string * string -&gt; System.Diagnostics.EventSchemaTraceListener" Usage="new System.Diagnostics.EventSchemaTraceListener (fileName, name)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters>
         <Parameter Name="fileName" Type="System.String" />
         <Parameter Name="name" Type="System.String" />
@@ -191,11 +202,18 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.#ctor(System.String,System.String,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (fileName As String, name As String, bufferSize As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; EventSchemaTraceListener(System::String ^ fileName, System::String ^ name, int bufferSize);" />
+      <MemberSignature Language="F#" Value="new System.Diagnostics.EventSchemaTraceListener : string * string * int -&gt; System.Diagnostics.EventSchemaTraceListener" Usage="new System.Diagnostics.EventSchemaTraceListener (fileName, name, bufferSize)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters>
         <Parameter Name="fileName" Type="System.String" />
         <Parameter Name="name" Type="System.String" />
@@ -230,9 +248,11 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.#ctor(System.String,System.String,System.Int32,System.Diagnostics.TraceLogRetentionOption)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (fileName As String, name As String, bufferSize As Integer, logRetentionOption As TraceLogRetentionOption)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; EventSchemaTraceListener(System::String ^ fileName, System::String ^ name, int bufferSize, System::Diagnostics::TraceLogRetentionOption logRetentionOption);" />
+      <MemberSignature Language="F#" Value="new System.Diagnostics.EventSchemaTraceListener : string * string * int * System.Diagnostics.TraceLogRetentionOption -&gt; System.Diagnostics.EventSchemaTraceListener" Usage="new System.Diagnostics.EventSchemaTraceListener (fileName, name, bufferSize, logRetentionOption)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
@@ -271,11 +291,18 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.#ctor(System.String,System.String,System.Int32,System.Diagnostics.TraceLogRetentionOption,System.Int64)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (fileName As String, name As String, bufferSize As Integer, logRetentionOption As TraceLogRetentionOption, maximumFileSize As Long)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; EventSchemaTraceListener(System::String ^ fileName, System::String ^ name, int bufferSize, System::Diagnostics::TraceLogRetentionOption logRetentionOption, long maximumFileSize);" />
+      <MemberSignature Language="F#" Value="new System.Diagnostics.EventSchemaTraceListener : string * string * int * System.Diagnostics.TraceLogRetentionOption * int64 -&gt; System.Diagnostics.EventSchemaTraceListener" Usage="new System.Diagnostics.EventSchemaTraceListener (fileName, name, bufferSize, logRetentionOption, maximumFileSize)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters>
         <Parameter Name="fileName" Type="System.String" />
         <Parameter Name="name" Type="System.String" />
@@ -307,7 +334,12 @@
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentOutOfRangeException">
-          <paramref name="maximumFileSize" /> is a negative number.</exception>
+          <paramref name="maximumFileSize" /> is a negative number or less than <paramref name="bufferSize" />.
+
+-or-
+
+<paramref name="bufferSize" /> is a negative number.
+        </exception>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -316,9 +348,11 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.#ctor(System.String,System.String,System.Int32,System.Diagnostics.TraceLogRetentionOption,System.Int64,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (fileName As String, name As String, bufferSize As Integer, logRetentionOption As TraceLogRetentionOption, maximumFileSize As Long, maximumNumberOfFiles As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; EventSchemaTraceListener(System::String ^ fileName, System::String ^ name, int bufferSize, System::Diagnostics::TraceLogRetentionOption logRetentionOption, long maximumFileSize, int maximumNumberOfFiles);" />
+      <MemberSignature Language="F#" Value="new System.Diagnostics.EventSchemaTraceListener : string * string * int * System.Diagnostics.TraceLogRetentionOption * int64 * int -&gt; System.Diagnostics.EventSchemaTraceListener" Usage="new System.Diagnostics.EventSchemaTraceListener (fileName, name, bufferSize, logRetentionOption, maximumFileSize, maximumNumberOfFiles)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
@@ -354,7 +388,20 @@
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentOutOfRangeException">
-          <paramref name="maximumNumberOfFiles" /> is less than 2, and <paramref name="logRetentionOption" /> is <see cref="F:System.Diagnostics.TraceLogRetentionOption.LimitedCircularFiles" />.</exception>
+          <paramref name="maximumFileSize" /> is a negative number or less than <paramref name="bufferSize" />.
+
+-or-
+
+<paramref name="maximumNumberOfFiles" /> is less than 1, and <paramref name="logRetentionOption" /> is <see cref="F:System.Diagnostics.TraceLogRetentionOption.LimitedSequentialFiles" />.
+
+-or-
+
+<paramref name="maximumNumberOfFiles" /> is less than 2, and <paramref name="logRetentionOption" /> is <see cref="F:System.Diagnostics.TraceLogRetentionOption.LimitedCircularFiles" />.
+
+-or-
+
+<paramref name="bufferSize" /> is a negative number.
+        </exception>
       </Docs>
     </Member>
     <Member MemberName="BufferSize">
@@ -363,9 +410,11 @@
       <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventSchemaTraceListener.BufferSize" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BufferSize As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int BufferSize { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.BufferSize : int" Usage="System.Diagnostics.EventSchemaTraceListener.BufferSize" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -398,9 +447,11 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.Close" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub Close ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void Close();" />
+      <MemberSignature Language="F#" Value="override this.Close : unit -&gt; unit" Usage="eventSchemaTraceListener.Close " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -418,9 +469,11 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.Fail(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub Fail (message As String, detailMessage As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void Fail(System::String ^ message, System::String ^ detailMessage);" />
+      <MemberSignature Language="F#" Value="override this.Fail : string * string -&gt; unit" Usage="eventSchemaTraceListener.Fail (message, detailMessage)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -443,9 +496,11 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.Flush" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub Flush ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void Flush();" />
+      <MemberSignature Language="F#" Value="override this.Flush : unit -&gt; unit" Usage="eventSchemaTraceListener.Flush " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -468,9 +523,11 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.GetSupportedAttributes" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetSupportedAttributes () As String()" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override cli::array &lt;System::String ^&gt; ^ GetSupportedAttributes();" />
+      <MemberSignature Language="F#" Value="override this.GetSupportedAttributes : unit -&gt; string[]" Usage="eventSchemaTraceListener.GetSupportedAttributes " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -496,9 +553,11 @@
       <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventSchemaTraceListener.IsThreadSafe" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property IsThreadSafe As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool IsThreadSafe { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsThreadSafe : bool" Usage="System.Diagnostics.EventSchemaTraceListener.IsThreadSafe" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -526,9 +585,11 @@
       <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventSchemaTraceListener.MaximumFileSize" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MaximumFileSize As Long" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property long MaximumFileSize { long get(); };" />
+      <MemberSignature Language="F#" Value="member this.MaximumFileSize : int64" Usage="System.Diagnostics.EventSchemaTraceListener.MaximumFileSize" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -571,9 +632,11 @@
       <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventSchemaTraceListener.MaximumNumberOfFiles" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MaximumNumberOfFiles As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MaximumNumberOfFiles { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.MaximumNumberOfFiles : int" Usage="System.Diagnostics.EventSchemaTraceListener.MaximumNumberOfFiles" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -625,9 +688,11 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.TraceData(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub TraceData (eventCache As TraceEventCache, source As String, eventType As TraceEventType, id As Integer, data As Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void TraceData(System::Diagnostics::TraceEventCache ^ eventCache, System::String ^ source, System::Diagnostics::TraceEventType eventType, int id, System::Object ^ data);" />
+      <MemberSignature Language="F#" Value="override this.TraceData : System.Diagnostics.TraceEventCache * string * System.Diagnostics.TraceEventType * int * obj -&gt; unit" Usage="eventSchemaTraceListener.TraceData (eventCache, source, eventType, id, data)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -671,9 +736,11 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.TraceData(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.Object[])" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub TraceData (eventCache As TraceEventCache, source As String, eventType As TraceEventType, id As Integer, ParamArray data As Object())" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void TraceData(System::Diagnostics::TraceEventCache ^ eventCache, System::String ^ source, System::Diagnostics::TraceEventType eventType, int id, ... cli::array &lt;System::Object ^&gt; ^ data);" />
+      <MemberSignature Language="F#" Value="override this.TraceData : System.Diagnostics.TraceEventCache * string * System.Diagnostics.TraceEventType * int * obj[] -&gt; unit" Usage="eventSchemaTraceListener.TraceData (eventCache, source, eventType, id, data)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -732,9 +799,11 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub TraceEvent (eventCache As TraceEventCache, source As String, eventType As TraceEventType, id As Integer, message As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void TraceEvent(System::Diagnostics::TraceEventCache ^ eventCache, System::String ^ source, System::Diagnostics::TraceEventType eventType, int id, System::String ^ message);" />
+      <MemberSignature Language="F#" Value="override this.TraceEvent : System.Diagnostics.TraceEventCache * string * System.Diagnostics.TraceEventType * int * string -&gt; unit" Usage="eventSchemaTraceListener.TraceEvent (eventCache, source, eventType, id, message)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -778,9 +847,11 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String,System.Object[])" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub TraceEvent (eventCache As TraceEventCache, source As String, eventType As TraceEventType, id As Integer, format As String, ParamArray args As Object())" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void TraceEvent(System::Diagnostics::TraceEventCache ^ eventCache, System::String ^ source, System::Diagnostics::TraceEventType eventType, int id, System::String ^ format, ... cli::array &lt;System::Object ^&gt; ^ args);" />
+      <MemberSignature Language="F#" Value="override this.TraceEvent : System.Diagnostics.TraceEventCache * string * System.Diagnostics.TraceEventType * int * string * obj[] -&gt; unit" Usage="eventSchemaTraceListener.TraceEvent (eventCache, source, eventType, id, format, args)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -810,7 +881,7 @@
         <param name="source">The source name.</param>
         <param name="eventType">One of the <see cref="T:System.Diagnostics.TraceEventType" /> values.</param>
         <param name="id">A numeric identifier for the event.</param>
-        <param name="format">A format string that contains zero or more format items that correspond to objects in the <c>args</c> array.</param>
+        <param name="format">A format string that contains zero or more format items that correspond to objects in the <paramref name="args" /> array.</param>
         <param name="args">An object array that contains zero or more objects to format.</param>
         <summary>Writes trace information, a formatted message, and event information to the log file.</summary>
         <remarks>
@@ -832,9 +903,11 @@
       <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventSchemaTraceListener.TraceLogRetentionOption" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TraceLogRetentionOption As TraceLogRetentionOption" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Diagnostics::TraceLogRetentionOption TraceLogRetentionOption { System::Diagnostics::TraceLogRetentionOption get(); };" />
+      <MemberSignature Language="F#" Value="member this.TraceLogRetentionOption : System.Diagnostics.TraceLogRetentionOption" Usage="System.Diagnostics.EventSchemaTraceListener.TraceLogRetentionOption" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -862,9 +935,11 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.TraceTransfer(System.Diagnostics.TraceEventCache,System.String,System.Int32,System.String,System.Guid)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub TraceTransfer (eventCache As TraceEventCache, source As String, id As Integer, message As String, relatedActivityId As Guid)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void TraceTransfer(System::Diagnostics::TraceEventCache ^ eventCache, System::String ^ source, int id, System::String ^ message, Guid relatedActivityId);" />
+      <MemberSignature Language="F#" Value="override this.TraceTransfer : System.Diagnostics.TraceEventCache * string * int * string * Guid -&gt; unit" Usage="eventSchemaTraceListener.TraceTransfer (eventCache, source, id, message, relatedActivityId)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -908,9 +983,11 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.Write(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub Write (message As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void Write(System::String ^ message);" />
+      <MemberSignature Language="F#" Value="override this.Write : string -&gt; unit" Usage="eventSchemaTraceListener.Write message" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -941,9 +1018,11 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventSchemaTraceListener.WriteLine(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub WriteLine (message As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void WriteLine(System::String ^ message);" />
+      <MemberSignature Language="F#" Value="override this.WriteLine : string -&gt; unit" Usage="eventSchemaTraceListener.WriteLine message" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -974,9 +1053,11 @@
       <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventSchemaTraceListener.Writer" />
       <MemberSignature Language="VB.NET" Value="Public Property Writer As TextWriter" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::IO::TextWriter ^ Writer { System::IO::TextWriter ^ get(); void set(System::IO::TextWriter ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Writer : System.IO.TextWriter with get, set" Usage="System.Diagnostics.EventSchemaTraceListener.Writer" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>

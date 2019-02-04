@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Management.Instrumentation.ManagementKeyAttribute" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ManagementKeyAttribute&#xA;Inherits ManagementMemberAttribute" />
   <TypeSignature Language="C++ CLI" Value="public ref class ManagementKeyAttribute sealed : System::Management::Instrumentation::ManagementMemberAttribute" />
+  <TypeSignature Language="F#" Value="type ManagementKeyAttribute = class&#xA;    inherit ManagementMemberAttribute" />
   <AssemblyInfo>
     <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -14,7 +16,7 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>System.AttributeUsage(System.AttributeTargets.Field | System.AttributeTargets.Property, AllowMultiple=false)</AttributeName>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field, AllowMultiple=false)</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -56,6 +58,7 @@ public int Id
     <altmember cref="T:System.Management.Instrumentation.ManagementProbeAttribute" />
     <altmember cref="T:System.Management.Instrumentation.ManagementConfigurationAttribute" />
     <altmember cref="T:System.Management.Instrumentation.ManagementTaskAttribute" />
+    <related type="Article" href="https://msdn.microsoft.com/library/d7eb170a-f1ba-454c-a8f0-b9acd2008464">WMI.NET Provider Extensions Attributes</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -67,11 +70,17 @@ public int Id
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
-        <summary>Initializes a new instance of the <see cref="T:System.Management.ManagementKeyAttribute" /> class. This is the default constructor.</summary>
+        <summary>Initializes a new instance of the <see cref="T:System.Management.Instrumentation.ManagementKeyAttribute" /> class. This is the default constructor.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

@@ -4,22 +4,31 @@
   <TypeSignature Language="DocId" Value="T:System.Security.HostProtectionException" />
   <TypeSignature Language="VB.NET" Value="Public Class HostProtectionException&#xA;Inherits SystemException" />
   <TypeSignature Language="C++ CLI" Value="public ref class HostProtectionException : SystemException" />
+  <TypeSignature Language="F#" Value="type HostProtectionException = class&#xA;    inherit SystemException" />
   <AssemblyInfo>
     <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.0.5.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System.Security.Permissions</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.SystemException</BaseTypeName>
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8">
       <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netcore-2.0;netcore-2.1;netcore-2.2">
+      <AttributeName>System.Serializable</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netcore-2.2">
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089")</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -28,7 +37,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- A <xref:System.Security.Permissions.HostProtectionAttribute> attribute is used to determine if a type or member can be loaded, based on the host’s protection preferences established when the common language runtime is started. If a type or member with an active <xref:System.Security.Permissions.HostProtectionAttribute> is called, a link demand occurs for that protection attribute. If the caller does not meet the demand for host protection, a <xref:System.Security.HostProtectionException> is thrown.  
+ A <xref:System.Security.Permissions.HostProtectionAttribute> attribute is used to determine if a type or member can be loaded, based on the host's protection preferences established when the common language runtime is started. If a type or member with an active <xref:System.Security.Permissions.HostProtectionAttribute> is called, a link demand occurs for that protection attribute. If the caller does not meet the demand for host protection, a <xref:System.Security.HostProtectionException> is thrown.  
   
 > [!NOTE]
 >  A <xref:System.Security.Permissions.HostProtectionAttribute> is not a permission, even though it is the target of a link demand. Because a <xref:System.Security.HostProtectionException> is thrown for a link demand, it cannot be handled, and therefore it cannot be trapped and processed in code.  
@@ -56,12 +65,14 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Permissions</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -87,15 +98,18 @@
       <MemberSignature Language="DocId" Value="M:System.Security.HostProtectionException.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; HostProtectionException(System::String ^ message);" />
+      <MemberSignature Language="F#" Value="new System.Security.HostProtectionException : string -&gt; System.Security.HostProtectionException" Usage="new System.Security.HostProtectionException message" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Permissions</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="message" Type="System.String" />
@@ -119,16 +133,24 @@
       <MemberSignature Language="DocId" Value="M:System.Security.HostProtectionException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (info As SerializationInfo, context As StreamingContext)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; HostProtectionException(System::Runtime::Serialization::SerializationInfo ^ info, System::Runtime::Serialization::StreamingContext context);" />
+      <MemberSignature Language="F#" Value="new System.Security.HostProtectionException : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; System.Security.HostProtectionException" Usage="new System.Security.HostProtectionException (info, context)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Permissions</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters>
         <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
         <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
@@ -155,15 +177,18 @@
       <MemberSignature Language="DocId" Value="M:System.Security.HostProtectionException.#ctor(System.String,System.Exception)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, e As Exception)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; HostProtectionException(System::String ^ message, Exception ^ e);" />
+      <MemberSignature Language="F#" Value="new System.Security.HostProtectionException : string * Exception -&gt; System.Security.HostProtectionException" Usage="new System.Security.HostProtectionException (message, e)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Permissions</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="message" Type="System.String" />
@@ -189,15 +214,18 @@
       <MemberSignature Language="DocId" Value="M:System.Security.HostProtectionException.#ctor(System.String,System.Security.Permissions.HostProtectionResource,System.Security.Permissions.HostProtectionResource)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, protectedResources As HostProtectionResource, demandedResources As HostProtectionResource)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; HostProtectionException(System::String ^ message, System::Security::Permissions::HostProtectionResource protectedResources, System::Security::Permissions::HostProtectionResource demandedResources);" />
+      <MemberSignature Language="F#" Value="new System.Security.HostProtectionException : string * System.Security.Permissions.HostProtectionResource * System.Security.Permissions.HostProtectionResource -&gt; System.Security.HostProtectionException" Usage="new System.Security.HostProtectionException (message, protectedResources, demandedResources)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Permissions</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="message" Type="System.String" />
@@ -225,15 +253,18 @@
       <MemberSignature Language="DocId" Value="P:System.Security.HostProtectionException.DemandedResources" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DemandedResources As HostProtectionResource" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Security::Permissions::HostProtectionResource DemandedResources { System::Security::Permissions::HostProtectionResource get(); };" />
+      <MemberSignature Language="F#" Value="member this.DemandedResources : System.Security.Permissions.HostProtectionResource" Usage="System.Security.HostProtectionException.DemandedResources" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Permissions</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Permissions.HostProtectionResource</ReturnType>
@@ -257,12 +288,23 @@
       <MemberSignature Language="DocId" Value="M:System.Security.HostProtectionException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub GetObjectData (info As SerializationInfo, context As StreamingContext)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void GetObjectData(System::Runtime::Serialization::SerializationInfo ^ info, System::Runtime::Serialization::StreamingContext context);" />
+      <MemberSignature Language="F#" Value="override this.GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit" Usage="hostProtectionException.GetObjectData (info, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -293,15 +335,18 @@
       <MemberSignature Language="DocId" Value="P:System.Security.HostProtectionException.ProtectedResources" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProtectedResources As HostProtectionResource" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Security::Permissions::HostProtectionResource ProtectedResources { System::Security::Permissions::HostProtectionResource get(); };" />
+      <MemberSignature Language="F#" Value="member this.ProtectedResources : System.Security.Permissions.HostProtectionResource" Usage="System.Security.HostProtectionException.ProtectedResources" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Permissions</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.Permissions.HostProtectionResource</ReturnType>
@@ -325,15 +370,18 @@
       <MemberSignature Language="DocId" Value="M:System.Security.HostProtectionException.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="hostProtectionException.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security.Permissions</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

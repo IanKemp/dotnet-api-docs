@@ -4,12 +4,15 @@
   <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.PeerTransportSecurityElement" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class PeerTransportSecurityElement&#xA;Inherits ServiceModelConfigurationElement" />
   <TypeSignature Language="C++ CLI" Value="public ref class PeerTransportSecurityElement sealed : System::ServiceModel::Configuration::ServiceModelConfigurationElement" />
+  <TypeSignature Language="F#" Value="type PeerTransportSecurityElement = class&#xA;    inherit ServiceModelConfigurationElement" />
   <AssemblyInfo>
     <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.ServiceModel.Configuration.ServiceModelConfigurationElement</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-3.0">System.Configuration.ConfigurationElement</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
@@ -26,8 +29,14 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.Configuration.PeerTransportSecurityElement" /> class.</summary>
@@ -40,9 +49,11 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.PeerTransportSecurityElement.CredentialType" />
       <MemberSignature Language="VB.NET" Value="Public Property CredentialType As PeerTransportCredentialType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::ServiceModel::PeerTransportCredentialType CredentialType { System::ServiceModel::PeerTransportCredentialType get(); void set(System::ServiceModel::PeerTransportCredentialType value); };" />
+      <MemberSignature Language="F#" Value="member this.CredentialType : System.ServiceModel.PeerTransportCredentialType with get, set" Usage="System.ServiceModel.Configuration.PeerTransportSecurityElement.CredentialType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -54,7 +65,7 @@
         <ReturnType>System.ServiceModel.PeerTransportCredentialType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets and sets the configuration for the type of credentials used to verify messages sent with the peer transport.</summary>
+        <summary>Gets or sets the configuration for the type of credentials used to verify messages sent with the peer transport.</summary>
         <value>
           <see cref="T:System.ServiceModel.PeerTransportCredentialType" /> enumeration value that contains the type of credentials used to verify messages sent with the peer transport.</value>
         <remarks>To be added.</remarks>
@@ -66,9 +77,11 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.PeerTransportSecurityElement.Properties" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property Properties As ConfigurationPropertyCollection" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property System::Configuration::ConfigurationPropertyCollection ^ Properties { System::Configuration::ConfigurationPropertyCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Properties : System.Configuration.ConfigurationPropertyCollection" Usage="System.ServiceModel.Configuration.PeerTransportSecurityElement.Properties" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

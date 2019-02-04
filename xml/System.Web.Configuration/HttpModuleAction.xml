@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Web.Configuration.HttpModuleAction" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class HttpModuleAction&#xA;Inherits ConfigurationElement" />
   <TypeSignature Language="C++ CLI" Value="public ref class HttpModuleAction sealed : System::Configuration::ConfigurationElement" />
+  <TypeSignature Language="F#" Value="type HttpModuleAction = class&#xA;    inherit ConfigurationElement" />
   <AssemblyInfo>
     <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -29,7 +31,7 @@
   
  The following configuration file example shows how to specify values declaratively for the `httpModules` section.  
   
- Refer to the [NIB: How to: Create and Configure an HTTP Module](http://msdn.microsoft.com/library/4174fd13-a9c4-4ff6-baa5-3f7d7fc73ef3) to see how to build and configure an HTTP module.  
+ Refer to the [NIB: How to: Create and Configure an HTTP Module](https://msdn.microsoft.com/library/4174fd13-a9c4-4ff6-baa5-3f7d7fc73ef3) to see how to build and configure an HTTP module.  
   
 ```  
 <httpModules>  
@@ -56,9 +58,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Configuration.HttpModuleAction.#ctor(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, type As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; HttpModuleAction(System::String ^ name, System::String ^ type);" />
+      <MemberSignature Language="F#" Value="new System.Web.Configuration.HttpModuleAction : string * string -&gt; System.Web.Configuration.HttpModuleAction" Usage="new System.Web.Configuration.HttpModuleAction (name, type)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
@@ -85,6 +89,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/cf5eacd0-d3ec-4879-b6da-5fd5e4372202">Global Assembly Cache</related>
       </Docs>
     </Member>
     <Member MemberName="ElementProperty">
@@ -93,11 +98,18 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpModuleAction.ElementProperty" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property ElementProperty As ConfigurationElementProperty" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property System::Configuration::ConfigurationElementProperty ^ ElementProperty { System::Configuration::ConfigurationElementProperty ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ElementProperty : System.Configuration.ConfigurationElementProperty" Usage="System.Web.Configuration.HttpModuleAction.ElementProperty" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Configuration.ConfigurationElementProperty</ReturnType>
       </ReturnValue>
@@ -113,9 +125,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpModuleAction.Name" />
       <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="System.Web.Configuration.HttpModuleAction.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -156,11 +170,18 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpModuleAction.Properties" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property Properties As ConfigurationPropertyCollection" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property System::Configuration::ConfigurationPropertyCollection ^ Properties { System::Configuration::ConfigurationPropertyCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Properties : System.Configuration.ConfigurationPropertyCollection" Usage="System.Web.Configuration.HttpModuleAction.Properties" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
       </ReturnValue>
@@ -176,9 +197,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpModuleAction.Type" />
       <MemberSignature Language="VB.NET" Value="Public Property Type As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Type { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Type : string with get, set" Usage="System.Web.Configuration.HttpModuleAction.Type" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>

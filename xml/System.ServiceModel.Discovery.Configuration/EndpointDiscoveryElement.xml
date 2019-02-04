@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class EndpointDiscoveryElement&#xA;Inherits BehaviorExtensionElement" />
   <TypeSignature Language="C++ CLI" Value="public ref class EndpointDiscoveryElement sealed : System::ServiceModel::Configuration::BehaviorExtensionElement" />
+  <TypeSignature Language="F#" Value="type EndpointDiscoveryElement = class&#xA;    inherit BehaviorExtensionElement" />
   <AssemblyInfo>
     <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -18,7 +19,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- When added to endpoint’s behavior configuration, the <xref:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement> element allows the discovery functionality of the endpoint to be enabled or disabled. Additionally it allows specifying custom scope URIs that can be used to filter service endpoints during discovery operations. It also allows specifying custom XML metadata that is published along with the standard discoverable metadata.  
+ When added to endpoint's behavior configuration, the <xref:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement> element allows the discovery functionality of the endpoint to be enabled or disabled. Additionally it allows specifying custom scope URIs that can be used to filter service endpoints during discovery operations. It also allows specifying custom XML metadata that is published along with the standard discoverable metadata.  
   
 > [!NOTE]
 >  The <xref:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement> is dependent on the <xref:System.ServiceModel.Discovery.Configuration.ServiceDiscoveryElement> that provides service level control of discoverability. This means that the <xref:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement> and its settings are ignored if a <xref:System.ServiceModel.Discovery.Configuration.ServiceDiscoveryElement> element is not present.  
@@ -72,6 +73,11 @@
         <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Creates a new instance of the <see cref="T:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement" /> class.</summary>
@@ -84,6 +90,7 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement.BehaviorType" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property BehaviorType As Type" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Type ^ BehaviorType { Type ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.BehaviorType : Type" Usage="System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement.BehaviorType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
@@ -104,6 +111,7 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement.ContractTypeNames" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContractTypeNames As ContractTypeNameElementCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::ServiceModel::Discovery::Configuration::ContractTypeNameElementCollection ^ ContractTypeNames { System::ServiceModel::Discovery::Configuration::ContractTypeNameElementCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ContractTypeNames : System.ServiceModel.Discovery.Configuration.ContractTypeNameElementCollection" Usage="System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement.ContractTypeNames" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
@@ -129,6 +137,7 @@
       <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement.CreateBehavior" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function CreateBehavior () As Object" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override System::Object ^ CreateBehavior();" />
+      <MemberSignature Language="F#" Value="override this.CreateBehavior : unit -&gt; obj" Usage="endpointDiscoveryElement.CreateBehavior " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
@@ -150,6 +159,7 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement.Enabled" />
       <MemberSignature Language="VB.NET" Value="Public Property Enabled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Enabled { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Enabled : bool with get, set" Usage="System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement.Enabled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
@@ -176,6 +186,7 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement.Extensions" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Extensions As XmlElementElementCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::ServiceModel::Configuration::XmlElementElementCollection ^ Extensions { System::ServiceModel::Configuration::XmlElementElementCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Extensions : System.ServiceModel.Configuration.XmlElementElementCollection" Usage="System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement.Extensions" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
@@ -201,6 +212,7 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement.Properties" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property Properties As ConfigurationPropertyCollection" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property System::Configuration::ConfigurationPropertyCollection ^ Properties { System::Configuration::ConfigurationPropertyCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Properties : System.Configuration.ConfigurationPropertyCollection" Usage="System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement.Properties" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
@@ -221,6 +233,7 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement.Scopes" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Scopes As ScopeElementCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::ServiceModel::Discovery::Configuration::ScopeElementCollection ^ Scopes { System::ServiceModel::Discovery::Configuration::ScopeElementCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Scopes : System.ServiceModel.Discovery.Configuration.ScopeElementCollection" Usage="System.ServiceModel.Discovery.Configuration.EndpointDiscoveryElement.Scopes" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel.Discovery</AssemblyName>

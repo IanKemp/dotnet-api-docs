@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Construction.ProjectUsingTaskBodyElement" />
   <TypeSignature Language="VB.NET" Value="Public Class ProjectUsingTaskBodyElement&#xA;Inherits ProjectElement" />
   <TypeSignature Language="C++ CLI" Value="public ref class ProjectUsingTaskBodyElement : Microsoft::Build::Construction::ProjectElement" />
+  <TypeSignature Language="F#" Value="type ProjectUsingTaskBodyElement = class&#xA;    inherit ProjectElement" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskBodyElement.Condition" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Property Condition As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Condition { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Condition : string with get, set" Usage="Microsoft.Build.Construction.ProjectUsingTaskBodyElement.Condition" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -37,8 +39,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets null because the Condition attribute is nonexistent for this element and a nonexistent condition is implicitly true.</summary>
-        <value>Returns a null.</value>
+        <summary>Always returns <see langword="null" /> because the Condition attribute is nonexistent for this element and a nonexistent condition is implicitly true.</summary>
+        <value>Always returns <see langword="null" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -48,6 +50,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskBodyElement.ConditionLocation" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ConditionLocation As ElementLocation" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::Build::Construction::ElementLocation ^ ConditionLocation { Microsoft::Build::Construction::ElementLocation ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ConditionLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Construction.ProjectUsingTaskBodyElement.ConditionLocation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -58,7 +61,7 @@
       </ReturnValue>
       <Docs>
         <summary>Do not use. The Condition attribute is nonexistent for <see cref="T:Microsoft.Build.Construction.ProjectUsingTaskBodyElement" />. Get throws an internal error.</summary>
-        <value>Throws an internal error and returns null.</value>
+        <value>Throws an internal error and returns <see langword="null" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -68,6 +71,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskBodyElement.Evaluate" />
       <MemberSignature Language="VB.NET" Value="Public Property Evaluate As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Evaluate { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Evaluate : string with get, set" Usage="Microsoft.Build.Construction.ProjectUsingTaskBodyElement.Evaluate" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -78,7 +82,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets the value of the Evaluate attribute.</summary>
-        <value>Returns the value of the Evaluate attribute, which is either "true" or "false". Returns "true" if the attribute is not present.</value>
+        <value>The value of the Evaluate attribute, which is either "true" or "false". Returns "true" if the attribute is not present.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -95,6 +99,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskBodyElement.EvaluateLocation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EvaluateLocation As ElementLocation" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Construction::ElementLocation ^ EvaluateLocation { Microsoft::Build::Construction::ElementLocation ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.EvaluateLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Construction.ProjectUsingTaskBodyElement.EvaluateLocation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -115,6 +120,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskBodyElement.TaskBody" />
       <MemberSignature Language="VB.NET" Value="Public Property TaskBody As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TaskBody { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.TaskBody : string with get, set" Usage="Microsoft.Build.Construction.ProjectUsingTaskBodyElement.TaskBody" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -125,7 +131,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the unevaluated value of the contents of the inline task.</summary>
-        <value>Returns the unevaluated inner XML content of the inline task. Returns an empty string if no inline task body is present.</value>
+        <value>The unevaluated inner XML content of the inline task, or an empty string if no inline task body is present.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

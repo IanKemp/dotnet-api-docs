@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Data.OrderedEnumerableRowCollection`1" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class OrderedEnumerableRowCollection(Of TRow)&#xA;Inherits EnumerableRowCollection(Of TRow)" />
   <TypeSignature Language="C++ CLI" Value="generic &lt;typename TRow&gt;&#xA;public ref class OrderedEnumerableRowCollection sealed : System::Data::EnumerableRowCollection&lt;TRow&gt;" />
+  <TypeSignature Language="F#" Value="type OrderedEnumerableRowCollection&lt;'Row&gt; = class&#xA;    inherit EnumerableRowCollection&lt;'Row&gt;" />
   <AssemblyInfo>
     <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeParameters>
@@ -20,7 +22,7 @@
   <Interfaces />
   <Docs>
     <typeparam name="TRow">The type of objects in the source sequence, typically <see cref="T:System.Data.DataRow" />.</typeparam>
-    <summary>This API supports the .NET Framework infrastructure and is not intended to be used directly from your code. Represents a collection of ordered <see cref="T:System.Data.DataRow" /> objects returned from a query.</summary>
+    <summary>Represents a collection of ordered <see cref="T:System.Data.DataRow" /> objects returned from a query.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -31,8 +33,10 @@
   
  ]]></format>
     </remarks>
+    <forInternalUseOnly />
     <altmember cref="T:System.Data.DataRow" />
     <altmember cref="T:System.Data.EnumerableRowCollection" />
+    <related type="Article" href="https://msdn.microsoft.com/library/743e3755-3ecb-45a2-8d9b-9ed41f0dcf17">LINQ to DataSet</related>
   </Docs>
   <Members />
 </Type>

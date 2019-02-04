@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Data.EnumerableRowCollectionExtensions" />
   <TypeSignature Language="VB.NET" Value="Public Module EnumerableRowCollectionExtensions" />
   <TypeSignature Language="C++ CLI" Value="public ref class EnumerableRowCollectionExtensions abstract sealed" />
+  <TypeSignature Language="F#" Value="type EnumerableRowCollectionExtensions = class" />
   <AssemblyInfo>
     <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -13,7 +15,7 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>Contains the extension methods for the data row collection classes. This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    <summary>Contains the extension methods for the data row collection classes.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -24,8 +26,10 @@
   
  ]]></format>
     </remarks>
+    <forInternalUseOnly />
     <altmember cref="T:System.Data.EnumerableRowCollection`1" />
     <altmember cref="T:System.Data.OrderedEnumerableRowCollection`1" />
+    <related type="Article" href="https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2">Standard Query Operators Overview</related>
   </Docs>
   <Members>
     <Member MemberName="Cast&lt;TResult&gt;">
@@ -34,9 +38,11 @@
       <MemberSignature Language="DocId" Value="M:System.Data.EnumerableRowCollectionExtensions.Cast``1(System.Data.EnumerableRowCollection)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Cast(Of TResult) (source As EnumerableRowCollection) As EnumerableRowCollection(Of TResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TResult&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::Data::EnumerableRowCollection&lt;TResult&gt; ^ Cast(System::Data::EnumerableRowCollection ^ source);" />
+      <MemberSignature Language="F#" Value="static member Cast : System.Data.EnumerableRowCollection -&gt; System.Data.EnumerableRowCollection&lt;'Result&gt;" Usage="System.Data.EnumerableRowCollectionExtensions.Cast source" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -51,7 +57,7 @@
       <Docs>
         <typeparam name="TResult">The type to convert the elements of source to.</typeparam>
         <param name="source">The <see cref="T:System.Data.EnumerableRowCollection" /> that contains the elements to be converted.</param>
-        <summary>Converts the elements of an <see cref="T:System.Data.EnumerableRowCollection" /> to the specified type. This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+        <summary>Converts the elements of an <see cref="T:System.Data.EnumerableRowCollection" /> to the specified type.</summary>
         <returns>An <see cref="T:System.Data.EnumerableRowCollection" /> that contains each element of the source sequence converted to the specified type.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -61,6 +67,7 @@
   
  ]]></format>
         </remarks>
+        <forInternalUseOnly />
         <exception cref="T:System.ArgumentNullException">
           <paramref name="source" /> is <see langword="null" />.</exception>
         <exception cref="T:System.InvalidCastException">An element in the sequence cannot be cast to type <paramref name="TResult" />.</exception>
@@ -74,7 +81,8 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Docs>
-        <summary>Sorts the rows of a <see cref="T:System.Data.EnumerableRowCollection" /> in ascending order. This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+        <summary>Sorts the rows of a <see cref="T:System.Data.EnumerableRowCollection" /> in ascending order.</summary>
+        <forInternalUseOnly />
       </Docs>
     </MemberGroup>
     <Member MemberName="OrderBy&lt;TRow,TKey&gt;">
@@ -83,9 +91,11 @@
       <MemberSignature Language="DocId" Value="M:System.Data.EnumerableRowCollectionExtensions.OrderBy``2(System.Data.EnumerableRowCollection{``0},System.Func{``0,``1})" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function OrderBy(Of TRow, TKey) (source As EnumerableRowCollection(Of TRow), keySelector As Func(Of TRow, TKey)) As OrderedEnumerableRowCollection(Of TRow)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TRow, typename TKey&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::Data::OrderedEnumerableRowCollection&lt;TRow&gt; ^ OrderBy(System::Data::EnumerableRowCollection&lt;TRow&gt; ^ source, Func&lt;TRow, TKey&gt; ^ keySelector);" />
+      <MemberSignature Language="F#" Value="static member OrderBy : System.Data.EnumerableRowCollection&lt;'Row&gt; * Func&lt;'Row, 'Key&gt; -&gt; System.Data.OrderedEnumerableRowCollection&lt;'Row&gt;" Usage="System.Data.EnumerableRowCollectionExtensions.OrderBy (source, keySelector)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -100,11 +110,11 @@
         <Parameter Name="keySelector" Type="System.Func&lt;TRow,TKey&gt;" />
       </Parameters>
       <Docs>
-        <typeparam name="TRow">The type of the row elements in <c>source</c>, typically <see cref="T:System.Data.DataRow" />.</typeparam>
-        <typeparam name="TKey">The type of the key returned by <c>keySelector</c>.</typeparam>
+        <typeparam name="TRow">The type of the row elements in <paramref name="source" />, typically <see cref="T:System.Data.DataRow" />.</typeparam>
+        <typeparam name="TKey">The type of the key returned by <paramref name="keySelector" />.</typeparam>
         <param name="source">An <see cref="T:System.Data.EnumerableRowCollection" /> containing the <see cref="T:System.Data.DataRow" /> elements to be ordered.</param>
         <param name="keySelector">A function to extract a key from an element.</param>
-        <summary>Sorts the rows of a <see cref="T:System.Data.EnumerableRowCollection" /> in ascending order according to the specified key. This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+        <summary>Sorts the rows of a <see cref="T:System.Data.EnumerableRowCollection" /> in ascending order according to the specified key.</summary>
         <returns>An <see cref="T:System.Data.OrderedEnumerableRowCollection`1" /> whose elements are sorted by the specified key.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -114,6 +124,7 @@
   
  ]]></format>
         </remarks>
+        <forInternalUseOnly />
         <altmember cref="M:System.Data.EnumerableRowCollectionExtensions.Select``2(System.Data.EnumerableRowCollection{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})" />
         <altmember cref="Overload:System.Data.EnumerableRowCollectionExtensions.ThenBy" />
         <altmember cref="M:System.Linq.Enumerable.OrderBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})" />
@@ -125,9 +136,11 @@
       <MemberSignature Language="DocId" Value="M:System.Data.EnumerableRowCollectionExtensions.OrderBy``2(System.Data.EnumerableRowCollection{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function OrderBy(Of TRow, TKey) (source As EnumerableRowCollection(Of TRow), keySelector As Func(Of TRow, TKey), comparer As IComparer(Of TKey)) As OrderedEnumerableRowCollection(Of TRow)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TRow, typename TKey&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::Data::OrderedEnumerableRowCollection&lt;TRow&gt; ^ OrderBy(System::Data::EnumerableRowCollection&lt;TRow&gt; ^ source, Func&lt;TRow, TKey&gt; ^ keySelector, System::Collections::Generic::IComparer&lt;TKey&gt; ^ comparer);" />
+      <MemberSignature Language="F#" Value="static member OrderBy : System.Data.EnumerableRowCollection&lt;'Row&gt; * Func&lt;'Row, 'Key&gt; * System.Collections.Generic.IComparer&lt;'Key&gt; -&gt; System.Data.OrderedEnumerableRowCollection&lt;'Row&gt;" Usage="System.Data.EnumerableRowCollectionExtensions.OrderBy (source, keySelector, comparer)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -143,12 +156,12 @@
         <Parameter Name="comparer" Type="System.Collections.Generic.IComparer&lt;TKey&gt;" />
       </Parameters>
       <Docs>
-        <typeparam name="TRow">The type of the row elements in <c>source</c>, typically <see cref="T:System.Data.DataRow" />.</typeparam>
-        <typeparam name="TKey">The type of the key returned by <c>keySelector</c>.</typeparam>
+        <typeparam name="TRow">The type of the row elements in <paramref name="source" />, typically <see cref="T:System.Data.DataRow" />.</typeparam>
+        <typeparam name="TKey">The type of the key returned by <paramref name="keySelector" />.</typeparam>
         <param name="source">An <see cref="T:System.Data.EnumerableRowCollection" /> containing the <see cref="T:System.Data.DataRow" /> elements to be ordered.</param>
         <param name="keySelector">A function to extract a key from an element.</param>
         <param name="comparer">An <see cref="T:System.Collections.Generic.IComparer`1" /> to compare keys.</param>
-        <summary>Sorts the rows of a <see cref="T:System.Data.EnumerableRowCollection" /> in ascending order according to the specified key and comparer. This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+        <summary>Sorts the rows of a <see cref="T:System.Data.EnumerableRowCollection" /> in ascending order according to the specified key and comparer.</summary>
         <returns>An <see cref="T:System.Data.OrderedEnumerableRowCollection`1" /> whose elements are sorted by the specified key and comparer.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -158,6 +171,7 @@
   
  ]]></format>
         </remarks>
+        <forInternalUseOnly />
         <altmember cref="M:System.Data.EnumerableRowCollectionExtensions.Select``2(System.Data.EnumerableRowCollection{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})" />
         <altmember cref="Overload:System.Data.EnumerableRowCollectionExtensions.ThenBy" />
         <altmember cref="M:System.Linq.Enumerable.OrderBy``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})" />
@@ -169,7 +183,8 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Docs>
-        <summary>Sorts the rows of a <see cref="T:System.Data.EnumerableRowCollection" /> in descending order. This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+        <summary>Sorts the rows of a <see cref="T:System.Data.EnumerableRowCollection" /> in descending order.</summary>
+        <forInternalUseOnly />
       </Docs>
     </MemberGroup>
     <Member MemberName="OrderByDescending&lt;TRow,TKey&gt;">
@@ -178,9 +193,11 @@
       <MemberSignature Language="DocId" Value="M:System.Data.EnumerableRowCollectionExtensions.OrderByDescending``2(System.Data.EnumerableRowCollection{``0},System.Func{``0,``1})" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function OrderByDescending(Of TRow, TKey) (source As EnumerableRowCollection(Of TRow), keySelector As Func(Of TRow, TKey)) As OrderedEnumerableRowCollection(Of TRow)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TRow, typename TKey&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::Data::OrderedEnumerableRowCollection&lt;TRow&gt; ^ OrderByDescending(System::Data::EnumerableRowCollection&lt;TRow&gt; ^ source, Func&lt;TRow, TKey&gt; ^ keySelector);" />
+      <MemberSignature Language="F#" Value="static member OrderByDescending : System.Data.EnumerableRowCollection&lt;'Row&gt; * Func&lt;'Row, 'Key&gt; -&gt; System.Data.OrderedEnumerableRowCollection&lt;'Row&gt;" Usage="System.Data.EnumerableRowCollectionExtensions.OrderByDescending (source, keySelector)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -195,11 +212,11 @@
         <Parameter Name="keySelector" Type="System.Func&lt;TRow,TKey&gt;" />
       </Parameters>
       <Docs>
-        <typeparam name="TRow">The type of the row elements in <c>source</c>, typically <see cref="T:System.Data.DataRow" />.</typeparam>
-        <typeparam name="TKey">The type of the key returned by <c>keySelector</c>.</typeparam>
+        <typeparam name="TRow">The type of the row elements in <paramref name="source" />, typically <see cref="T:System.Data.DataRow" />.</typeparam>
+        <typeparam name="TKey">The type of the key returned by <paramref name="keySelector" />.</typeparam>
         <param name="source">An <see cref="T:System.Data.EnumerableRowCollection" /> containing the <see cref="T:System.Data.DataRow" /> elements to be ordered.</param>
         <param name="keySelector">A function to extract a key from an element.</param>
-        <summary>Sorts the rows of a <see cref="T:System.Data.EnumerableRowCollection" /> in descending order according to the specified key. This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+        <summary>Sorts the rows of a <see cref="T:System.Data.EnumerableRowCollection" /> in descending order according to the specified key.</summary>
         <returns>An <see cref="T:System.Data.OrderedEnumerableRowCollection`1" /> whose elements are sorted by the specified key.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -209,6 +226,7 @@
   
  ]]></format>
         </remarks>
+        <forInternalUseOnly />
         <altmember cref="M:System.Data.EnumerableRowCollectionExtensions.Select``2(System.Data.EnumerableRowCollection{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})" />
         <altmember cref="Overload:System.Data.EnumerableRowCollectionExtensions.ThenByDescending" />
         <altmember cref="M:System.Linq.Enumerable.OrderByDescending``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})" />
@@ -220,9 +238,11 @@
       <MemberSignature Language="DocId" Value="M:System.Data.EnumerableRowCollectionExtensions.OrderByDescending``2(System.Data.EnumerableRowCollection{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function OrderByDescending(Of TRow, TKey) (source As EnumerableRowCollection(Of TRow), keySelector As Func(Of TRow, TKey), comparer As IComparer(Of TKey)) As OrderedEnumerableRowCollection(Of TRow)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TRow, typename TKey&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::Data::OrderedEnumerableRowCollection&lt;TRow&gt; ^ OrderByDescending(System::Data::EnumerableRowCollection&lt;TRow&gt; ^ source, Func&lt;TRow, TKey&gt; ^ keySelector, System::Collections::Generic::IComparer&lt;TKey&gt; ^ comparer);" />
+      <MemberSignature Language="F#" Value="static member OrderByDescending : System.Data.EnumerableRowCollection&lt;'Row&gt; * Func&lt;'Row, 'Key&gt; * System.Collections.Generic.IComparer&lt;'Key&gt; -&gt; System.Data.OrderedEnumerableRowCollection&lt;'Row&gt;" Usage="System.Data.EnumerableRowCollectionExtensions.OrderByDescending (source, keySelector, comparer)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -238,12 +258,12 @@
         <Parameter Name="comparer" Type="System.Collections.Generic.IComparer&lt;TKey&gt;" />
       </Parameters>
       <Docs>
-        <typeparam name="TRow">The type of the row elements in <c>source</c>, typically <see cref="T:System.Data.DataRow" />.</typeparam>
-        <typeparam name="TKey">The type of the key returned by <c>keySelector</c>.</typeparam>
+        <typeparam name="TRow">The type of the row elements in <paramref name="source" />, typically <see cref="T:System.Data.DataRow" />.</typeparam>
+        <typeparam name="TKey">The type of the key returned by <paramref name="keySelector" />.</typeparam>
         <param name="source">An <see cref="T:System.Data.EnumerableRowCollection" /> containing the <see cref="T:System.Data.DataRow" /> elements to be ordered.</param>
         <param name="keySelector">A function to extract a key from an element.</param>
         <param name="comparer">An <see cref="T:System.Collections.Generic.IComparer`1" /> to compare keys.</param>
-        <summary>Sorts the rows of a <see cref="T:System.Data.EnumerableRowCollection" /> in descending order according to the specified key and comparer. This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+        <summary>Sorts the rows of a <see cref="T:System.Data.EnumerableRowCollection" /> in descending order according to the specified key and comparer.</summary>
         <returns>An <see cref="T:System.Data.OrderedEnumerableRowCollection`1" /> whose elements are sorted by the specified key and comparer.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -253,6 +273,7 @@
   
  ]]></format>
         </remarks>
+        <forInternalUseOnly />
         <altmember cref="M:System.Data.EnumerableRowCollectionExtensions.Select``2(System.Data.EnumerableRowCollection{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})" />
         <altmember cref="Overload:System.Data.EnumerableRowCollectionExtensions.ThenByDescending" />
         <altmember cref="M:System.Linq.Enumerable.OrderByDescending``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})" />
@@ -264,9 +285,11 @@
       <MemberSignature Language="DocId" Value="M:System.Data.EnumerableRowCollectionExtensions.Select``2(System.Data.EnumerableRowCollection{``0},System.Func{``0,``1})" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Select(Of TRow, S) (source As EnumerableRowCollection(Of TRow), selector As Func(Of TRow, S)) As EnumerableRowCollection(Of S)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TRow, typename S&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::Data::EnumerableRowCollection&lt;S&gt; ^ Select(System::Data::EnumerableRowCollection&lt;TRow&gt; ^ source, Func&lt;TRow, S&gt; ^ selector);" />
+      <MemberSignature Language="F#" Value="static member Select : System.Data.EnumerableRowCollection&lt;'Row&gt; * Func&lt;'Row, 'S&gt; -&gt; System.Data.EnumerableRowCollection&lt;'S&gt;" Usage="System.Data.EnumerableRowCollectionExtensions.Select (source, selector)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -281,11 +304,11 @@
         <Parameter Name="selector" Type="System.Func&lt;TRow,S&gt;" />
       </Parameters>
       <Docs>
-        <typeparam name="TRow">The type of the row elements in <c>source</c>, typically <see cref="T:System.Data.DataRow" />.</typeparam>
-        <typeparam name="S">The type that <c>TRow</c> will be transformed into.</typeparam>
+        <typeparam name="TRow">The type of the row elements in <paramref name="source" />, typically <see cref="T:System.Data.DataRow" />.</typeparam>
+        <typeparam name="S">The type that <paramref name="TRow" /> will be transformed into.</typeparam>
         <param name="source">An <see cref="T:System.Data.EnumerableRowCollection`1" /> containing the <see cref="T:System.Data.DataRow" /> elements to invoke a transform function upon.</param>
         <param name="selector">A transform function to apply to each element.</param>
-        <summary>Projects each element of an <see cref="T:System.Data.EnumerableRowCollection`1" /> into a new form. This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+        <summary>Projects each element of an <see cref="T:System.Data.EnumerableRowCollection`1" /> into a new form.</summary>
         <returns>An <see cref="T:System.Data.EnumerableRowCollection`1" /> whose elements are the result of invoking the transform function on each element of <paramref name="source" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -297,6 +320,7 @@
   
  ]]></format>
         </remarks>
+        <forInternalUseOnly />
       </Docs>
     </Member>
     <MemberGroup MemberName="ThenBy&lt;TRow,TKey&gt;">
@@ -305,7 +329,8 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Docs>
-        <summary>Performs a secondary ordering of the rows of a <see cref="T:System.Data.EnumerableRowCollection" /> in ascending order. This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+        <summary>Performs a secondary ordering of the rows of a <see cref="T:System.Data.EnumerableRowCollection" /> in ascending order.</summary>
+        <forInternalUseOnly />
       </Docs>
     </MemberGroup>
     <Member MemberName="ThenBy&lt;TRow,TKey&gt;">
@@ -314,9 +339,11 @@
       <MemberSignature Language="DocId" Value="M:System.Data.EnumerableRowCollectionExtensions.ThenBy``2(System.Data.OrderedEnumerableRowCollection{``0},System.Func{``0,``1})" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ThenBy(Of TRow, TKey) (source As OrderedEnumerableRowCollection(Of TRow), keySelector As Func(Of TRow, TKey)) As OrderedEnumerableRowCollection(Of TRow)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TRow, typename TKey&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::Data::OrderedEnumerableRowCollection&lt;TRow&gt; ^ ThenBy(System::Data::OrderedEnumerableRowCollection&lt;TRow&gt; ^ source, Func&lt;TRow, TKey&gt; ^ keySelector);" />
+      <MemberSignature Language="F#" Value="static member ThenBy : System.Data.OrderedEnumerableRowCollection&lt;'Row&gt; * Func&lt;'Row, 'Key&gt; -&gt; System.Data.OrderedEnumerableRowCollection&lt;'Row&gt;" Usage="System.Data.EnumerableRowCollectionExtensions.ThenBy (source, keySelector)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -331,11 +358,11 @@
         <Parameter Name="keySelector" Type="System.Func&lt;TRow,TKey&gt;" />
       </Parameters>
       <Docs>
-        <typeparam name="TRow">The type of the row elements in <c>source</c>, typically <see cref="T:System.Data.DataRow" />.</typeparam>
-        <typeparam name="TKey">The type of the key returned by <c>keySelector</c>.</typeparam>
+        <typeparam name="TRow">The type of the row elements in <paramref name="source" />, typically <see cref="T:System.Data.DataRow" />.</typeparam>
+        <typeparam name="TKey">The type of the key returned by <paramref name="keySelector" />.</typeparam>
         <param name="source">An <see cref="T:System.Data.EnumerableRowCollection" /> containing the <see cref="T:System.Data.DataRow" /> elements to be ordered.</param>
         <param name="keySelector">A function to extract a key from an element.</param>
-        <summary>Performs a secondary ordering of the rows of a <see cref="T:System.Data.EnumerableRowCollection" /> in ascending order according to the specified key. This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+        <summary>Performs a secondary ordering of the rows of a <see cref="T:System.Data.EnumerableRowCollection" /> in ascending order according to the specified key.</summary>
         <returns>An <see cref="T:System.Data.OrderedEnumerableRowCollection`1" /> whose elements are sorted by the specified key.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -347,6 +374,7 @@
   
  ]]></format>
         </remarks>
+        <forInternalUseOnly />
         <altmember cref="M:System.Data.EnumerableRowCollectionExtensions.Select``2(System.Data.EnumerableRowCollection{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})" />
         <altmember cref="Overload:System.Data.EnumerableRowCollectionExtensions.OrderBy" />
         <altmember cref="M:System.Linq.Enumerable.ThenBy``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1})" />
@@ -358,9 +386,11 @@
       <MemberSignature Language="DocId" Value="M:System.Data.EnumerableRowCollectionExtensions.ThenBy``2(System.Data.OrderedEnumerableRowCollection{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ThenBy(Of TRow, TKey) (source As OrderedEnumerableRowCollection(Of TRow), keySelector As Func(Of TRow, TKey), comparer As IComparer(Of TKey)) As OrderedEnumerableRowCollection(Of TRow)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TRow, typename TKey&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::Data::OrderedEnumerableRowCollection&lt;TRow&gt; ^ ThenBy(System::Data::OrderedEnumerableRowCollection&lt;TRow&gt; ^ source, Func&lt;TRow, TKey&gt; ^ keySelector, System::Collections::Generic::IComparer&lt;TKey&gt; ^ comparer);" />
+      <MemberSignature Language="F#" Value="static member ThenBy : System.Data.OrderedEnumerableRowCollection&lt;'Row&gt; * Func&lt;'Row, 'Key&gt; * System.Collections.Generic.IComparer&lt;'Key&gt; -&gt; System.Data.OrderedEnumerableRowCollection&lt;'Row&gt;" Usage="System.Data.EnumerableRowCollectionExtensions.ThenBy (source, keySelector, comparer)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -376,12 +406,12 @@
         <Parameter Name="comparer" Type="System.Collections.Generic.IComparer&lt;TKey&gt;" />
       </Parameters>
       <Docs>
-        <typeparam name="TRow">The type of the row elements in <c>source</c>, typically <see cref="T:System.Data.DataRow" />.</typeparam>
-        <typeparam name="TKey">The type of the key returned by <c>keySelector</c>.</typeparam>
+        <typeparam name="TRow">The type of the row elements in <paramref name="source" />, typically <see cref="T:System.Data.DataRow" />.</typeparam>
+        <typeparam name="TKey">The type of the key returned by <paramref name="keySelector" />.</typeparam>
         <param name="source">An <see cref="T:System.Data.EnumerableRowCollection" /> containing the <see cref="T:System.Data.DataRow" /> elements to be ordered.</param>
         <param name="keySelector">A function to extract a key from an element.</param>
         <param name="comparer">An <see cref="T:System.Collections.Generic.IComparer`1" /> to compare keys.</param>
-        <summary>Performs a secondary ordering of the rows of a <see cref="T:System.Data.EnumerableRowCollection" /> in ascending order according to the specified key and comparer. This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+        <summary>Performs a secondary ordering of the rows of a <see cref="T:System.Data.EnumerableRowCollection" /> in ascending order according to the specified key and comparer.</summary>
         <returns>An <see cref="T:System.Data.OrderedEnumerableRowCollection`1" /> whose elements are sorted by the specified key and comparer.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -393,6 +423,7 @@
   
  ]]></format>
         </remarks>
+        <forInternalUseOnly />
         <altmember cref="M:System.Data.EnumerableRowCollectionExtensions.Select``2(System.Data.EnumerableRowCollection{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})" />
         <altmember cref="Overload:System.Data.EnumerableRowCollectionExtensions.OrderBy" />
         <altmember cref="M:System.Linq.Enumerable.ThenBy``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})" />
@@ -404,7 +435,8 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Docs>
-        <summary>Performs a secondary ordering of the rows of a <see cref="T:System.Data.EnumerableRowCollection" /> in descending order. This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+        <summary>Performs a secondary ordering of the rows of a <see cref="T:System.Data.EnumerableRowCollection" /> in descending order.</summary>
+        <forInternalUseOnly />
       </Docs>
     </MemberGroup>
     <Member MemberName="ThenByDescending&lt;TRow,TKey&gt;">
@@ -413,9 +445,11 @@
       <MemberSignature Language="DocId" Value="M:System.Data.EnumerableRowCollectionExtensions.ThenByDescending``2(System.Data.OrderedEnumerableRowCollection{``0},System.Func{``0,``1})" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ThenByDescending(Of TRow, TKey) (source As OrderedEnumerableRowCollection(Of TRow), keySelector As Func(Of TRow, TKey)) As OrderedEnumerableRowCollection(Of TRow)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TRow, typename TKey&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::Data::OrderedEnumerableRowCollection&lt;TRow&gt; ^ ThenByDescending(System::Data::OrderedEnumerableRowCollection&lt;TRow&gt; ^ source, Func&lt;TRow, TKey&gt; ^ keySelector);" />
+      <MemberSignature Language="F#" Value="static member ThenByDescending : System.Data.OrderedEnumerableRowCollection&lt;'Row&gt; * Func&lt;'Row, 'Key&gt; -&gt; System.Data.OrderedEnumerableRowCollection&lt;'Row&gt;" Usage="System.Data.EnumerableRowCollectionExtensions.ThenByDescending (source, keySelector)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -430,11 +464,11 @@
         <Parameter Name="keySelector" Type="System.Func&lt;TRow,TKey&gt;" />
       </Parameters>
       <Docs>
-        <typeparam name="TRow">The type of the row elements in <c>source</c>, typically <see cref="T:System.Data.DataRow" />.</typeparam>
-        <typeparam name="TKey">The type of the key returned by <c>keySelector</c>.</typeparam>
+        <typeparam name="TRow">The type of the row elements in <paramref name="source" />, typically <see cref="T:System.Data.DataRow" />.</typeparam>
+        <typeparam name="TKey">The type of the key returned by <paramref name="keySelector" />.</typeparam>
         <param name="source">An <see cref="T:System.Data.EnumerableRowCollection" /> containing the <see cref="T:System.Data.DataRow" /> elements to be ordered.</param>
         <param name="keySelector">A function to extract a key from an element.</param>
-        <summary>Performs a secondary ordering of the rows of a <see cref="T:System.Data.EnumerableRowCollection" /> in descending order according to the specified key. This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+        <summary>Performs a secondary ordering of the rows of a <see cref="T:System.Data.EnumerableRowCollection" /> in descending order according to the specified key.</summary>
         <returns>An <see cref="T:System.Data.OrderedEnumerableRowCollection`1" /> whose elements are sorted by the specified key.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -446,6 +480,7 @@
   
  ]]></format>
         </remarks>
+        <forInternalUseOnly />
         <altmember cref="M:System.Data.EnumerableRowCollectionExtensions.Select``2(System.Data.EnumerableRowCollection{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})" />
         <altmember cref="Overload:System.Data.EnumerableRowCollectionExtensions.OrderByDescending" />
         <altmember cref="M:System.Linq.Enumerable.ThenByDescending``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1})" />
@@ -457,9 +492,11 @@
       <MemberSignature Language="DocId" Value="M:System.Data.EnumerableRowCollectionExtensions.ThenByDescending``2(System.Data.OrderedEnumerableRowCollection{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ThenByDescending(Of TRow, TKey) (source As OrderedEnumerableRowCollection(Of TRow), keySelector As Func(Of TRow, TKey), comparer As IComparer(Of TKey)) As OrderedEnumerableRowCollection(Of TRow)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TRow, typename TKey&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::Data::OrderedEnumerableRowCollection&lt;TRow&gt; ^ ThenByDescending(System::Data::OrderedEnumerableRowCollection&lt;TRow&gt; ^ source, Func&lt;TRow, TKey&gt; ^ keySelector, System::Collections::Generic::IComparer&lt;TKey&gt; ^ comparer);" />
+      <MemberSignature Language="F#" Value="static member ThenByDescending : System.Data.OrderedEnumerableRowCollection&lt;'Row&gt; * Func&lt;'Row, 'Key&gt; * System.Collections.Generic.IComparer&lt;'Key&gt; -&gt; System.Data.OrderedEnumerableRowCollection&lt;'Row&gt;" Usage="System.Data.EnumerableRowCollectionExtensions.ThenByDescending (source, keySelector, comparer)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -475,12 +512,12 @@
         <Parameter Name="comparer" Type="System.Collections.Generic.IComparer&lt;TKey&gt;" />
       </Parameters>
       <Docs>
-        <typeparam name="TRow">The type of the row elements in <c>source</c>, typically <see cref="T:System.Data.DataRow" />.</typeparam>
-        <typeparam name="TKey">The type of the key returned by <c>keySelector</c>.</typeparam>
+        <typeparam name="TRow">The type of the row elements in <paramref name="source" />, typically <see cref="T:System.Data.DataRow" />.</typeparam>
+        <typeparam name="TKey">The type of the key returned by <paramref name="keySelector" />.</typeparam>
         <param name="source">An <see cref="T:System.Data.EnumerableRowCollection" /> containing the <see cref="T:System.Data.DataRow" /> elements to be ordered.</param>
         <param name="keySelector">A function to extract a key from an element.</param>
         <param name="comparer">An <see cref="T:System.Collections.Generic.IComparer`1" /> to compare keys.</param>
-        <summary>Performs a secondary ordering of the rows of a <see cref="T:System.Data.EnumerableRowCollection" /> in descending order according to the specified key and comparer. This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+        <summary>Performs a secondary ordering of the rows of a <see cref="T:System.Data.EnumerableRowCollection" /> in descending order according to the specified key and comparer.</summary>
         <returns>An <see cref="T:System.Data.OrderedEnumerableRowCollection`1" /> whose elements are sorted by the specified key and comparer.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -492,6 +529,7 @@
   
  ]]></format>
         </remarks>
+        <forInternalUseOnly />
         <altmember cref="M:System.Data.EnumerableRowCollectionExtensions.Select``2(System.Data.EnumerableRowCollection{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})" />
         <altmember cref="Overload:System.Data.EnumerableRowCollectionExtensions.OrderByDescending" />
         <altmember cref="M:System.Linq.Enumerable.ThenByDescending``2(System.Linq.IOrderedEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})" />
@@ -503,9 +541,11 @@
       <MemberSignature Language="DocId" Value="M:System.Data.EnumerableRowCollectionExtensions.Where``1(System.Data.EnumerableRowCollection{``0},System.Func{``0,System.Boolean})" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Where(Of TRow) (source As EnumerableRowCollection(Of TRow), predicate As Func(Of TRow, Boolean)) As EnumerableRowCollection(Of TRow)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TRow&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::Data::EnumerableRowCollection&lt;TRow&gt; ^ Where(System::Data::EnumerableRowCollection&lt;TRow&gt; ^ source, Func&lt;TRow, bool&gt; ^ predicate);" />
+      <MemberSignature Language="F#" Value="static member Where : System.Data.EnumerableRowCollection&lt;'Row&gt; * Func&lt;'Row, bool&gt; -&gt; System.Data.EnumerableRowCollection&lt;'Row&gt;" Usage="System.Data.EnumerableRowCollectionExtensions.Where (source, predicate)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -519,10 +559,10 @@
         <Parameter Name="predicate" Type="System.Func&lt;TRow,System.Boolean&gt;" />
       </Parameters>
       <Docs>
-        <typeparam name="TRow">The type of the row elements in <c>source</c>, typically <see cref="T:System.Data.DataRow" />.</typeparam>
+        <typeparam name="TRow">The type of the row elements in <paramref name="source" />, typically <see cref="T:System.Data.DataRow" />.</typeparam>
         <param name="source">An <see cref="T:System.Data.EnumerableRowCollection" /> containing the <see cref="T:System.Data.DataRow" /> elements to filter.</param>
         <param name="predicate">A function to test each element for a condition.</param>
-        <summary>Filters a sequence of rows based on the specified predicate. This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+        <summary>Filters a sequence of rows based on the specified predicate.</summary>
         <returns>An <see cref="T:System.Data.OrderedEnumerableRowCollection`1" /> that contains rows from the input sequence that satisfy the condition.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -532,6 +572,7 @@
   
  ]]></format>
         </remarks>
+        <forInternalUseOnly />
         <altmember cref="M:System.Data.EnumerableRowCollectionExtensions.Select``2(System.Data.EnumerableRowCollection{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})" />
         <altmember cref="M:System.Linq.Enumerable.Where``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean})" />
       </Docs>

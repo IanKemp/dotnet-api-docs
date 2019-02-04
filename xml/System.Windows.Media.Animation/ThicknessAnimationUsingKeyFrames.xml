@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames" />
   <TypeSignature Language="VB.NET" Value="Public Class ThicknessAnimationUsingKeyFrames&#xA;Inherits ThicknessAnimationBase&#xA;Implements IAddChild, IKeyFrameAnimation" />
   <TypeSignature Language="C++ CLI" Value="public ref class ThicknessAnimationUsingKeyFrames : System::Windows::Media::Animation::ThicknessAnimationBase, System::Windows::Markup::IAddChild, System::Windows::Media::Animation::IKeyFrameAnimation" />
+  <TypeSignature Language="F#" Value="type ThicknessAnimationUsingKeyFrames = class&#xA;    inherit ThicknessAnimationBase&#xA;    interface IKeyFrameAnimation&#xA;    interface IAddChild" />
   <AssemblyInfo>
     <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -38,6 +40,7 @@
   
  ]]></format>
     </remarks>
+    <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkID=160012">KeyFrame Animation Sample</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -49,6 +52,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
@@ -63,12 +67,14 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames.AddChild(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub AddChild (child As Object)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void AddChild(System::Object ^ child);" />
+      <MemberSignature Language="F#" Value="abstract member AddChild : obj -&gt; unit&#xA;override this.AddChild : obj -&gt; unit" Usage="thicknessAnimationUsingKeyFrames.AddChild child" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Windows.Markup.IAddChild.AddChild(System.Object)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -102,12 +108,14 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames.AddText(System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub AddText (childText As String)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void AddText(System::String ^ childText);" />
+      <MemberSignature Language="F#" Value="abstract member AddText : string -&gt; unit&#xA;override this.AddText : string -&gt; unit" Usage="thicknessAnimationUsingKeyFrames.AddText childText" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Windows.Markup.IAddChild.AddText(System.String)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -141,9 +149,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames.Clone" />
       <MemberSignature Language="VB.NET" Value="Public Function Clone () As ThicknessAnimationUsingKeyFrames" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Windows::Media::Animation::ThicknessAnimationUsingKeyFrames ^ Clone();" />
+      <MemberSignature Language="F#" Value="override this.Clone : unit -&gt; System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames" Usage="thicknessAnimationUsingKeyFrames.Clone " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -171,9 +181,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames.CloneCore(System.Windows.Freezable)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub CloneCore (sourceFreezable As Freezable)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void CloneCore(System::Windows::Freezable ^ sourceFreezable);" />
+      <MemberSignature Language="F#" Value="override this.CloneCore : System.Windows.Freezable -&gt; unit" Usage="thicknessAnimationUsingKeyFrames.CloneCore sourceFreezable" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -203,9 +215,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames.CloneCurrentValue" />
       <MemberSignature Language="VB.NET" Value="Public Function CloneCurrentValue () As ThicknessAnimationUsingKeyFrames" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Windows::Media::Animation::ThicknessAnimationUsingKeyFrames ^ CloneCurrentValue();" />
+      <MemberSignature Language="F#" Value="override this.CloneCurrentValue : unit -&gt; System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames" Usage="thicknessAnimationUsingKeyFrames.CloneCurrentValue " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -233,9 +247,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames.CloneCurrentValueCore(System.Windows.Freezable)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub CloneCurrentValueCore (sourceFreezable As Freezable)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void CloneCurrentValueCore(System::Windows::Freezable ^ sourceFreezable);" />
+      <MemberSignature Language="F#" Value="override this.CloneCurrentValueCore : System.Windows.Freezable -&gt; unit" Usage="thicknessAnimationUsingKeyFrames.CloneCurrentValueCore sourceFreezable" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -266,9 +282,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames.CreateInstanceCore" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateInstanceCore () As Freezable" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Windows::Freezable ^ CreateInstanceCore();" />
+      <MemberSignature Language="F#" Value="override this.CreateInstanceCore : unit -&gt; System.Windows.Freezable" Usage="thicknessAnimationUsingKeyFrames.CreateInstanceCore " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -288,9 +306,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames.FreezeCore(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function FreezeCore (isChecking As Boolean) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override bool FreezeCore(bool isChecking);" />
+      <MemberSignature Language="F#" Value="override this.FreezeCore : bool -&gt; bool" Usage="thicknessAnimationUsingKeyFrames.FreezeCore isChecking" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -302,7 +322,7 @@
       <Docs>
         <param name="isChecking">
           <see langword="true" /> to check if this instance can be frozen; <see langword="false" /> to freeze this instance.</param>
-        <summary>Makes this instance of <see cref="T:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames" /> object unmodifiable or determines whether it can be made unmodifiable..</summary>
+        <summary>Makes this instance of <see cref="T:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames" /> object unmodifiable or determines whether it can be made unmodifiable.</summary>
         <returns>If <paramref name="isChecking" /> is true, this method returns <see langword="true" /> if this instance can be made read-only, or <see langword="false" /> if it cannot be made read-only. If <paramref name="isChecking" /> is false, this method returns <see langword="true" /> if this instance is now read-only, or <see langword="false" /> if it cannot be made read-only, with the side effect of having begun to change the frozen status of this object.</returns>
         <remarks>To be added.</remarks>
         <altmember cref="M:System.Windows.Freezable.FreezeCore(System.Boolean)" />
@@ -314,9 +334,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames.GetAsFrozenCore(System.Windows.Freezable)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub GetAsFrozenCore (source As Freezable)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void GetAsFrozenCore(System::Windows::Freezable ^ source);" />
+      <MemberSignature Language="F#" Value="override this.GetAsFrozenCore : System.Windows.Freezable -&gt; unit" Usage="thicknessAnimationUsingKeyFrames.GetAsFrozenCore source" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -348,9 +370,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames.GetCurrentValueAsFrozenCore(System.Windows.Freezable)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub GetCurrentValueAsFrozenCore (source As Freezable)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void GetCurrentValueAsFrozenCore(System::Windows::Freezable ^ source);" />
+      <MemberSignature Language="F#" Value="override this.GetCurrentValueAsFrozenCore : System.Windows.Freezable -&gt; unit" Usage="thicknessAnimationUsingKeyFrames.GetCurrentValueAsFrozenCore source" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -379,9 +403,11 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Thickness GetCurrentValueCore(valuetype System.Windows.Thickness defaultOriginValue, valuetype System.Windows.Thickness defaultDestinationValue, class System.Windows.Media.Animation.AnimationClock animationClock) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames.GetCurrentValueCore(System.Windows.Thickness,System.Windows.Thickness,System.Windows.Media.Animation.AnimationClock)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Windows::Thickness GetCurrentValueCore(System::Windows::Thickness defaultOriginValue, System::Windows::Thickness defaultDestinationValue, System::Windows::Media::Animation::AnimationClock ^ animationClock);" />
+      <MemberSignature Language="F#" Value="override this.GetCurrentValueCore : System.Windows.Thickness * System.Windows.Thickness * System.Windows.Media.Animation.AnimationClock -&gt; System.Windows.Thickness" Usage="thicknessAnimationUsingKeyFrames.GetCurrentValueCore (defaultOriginValue, defaultDestinationValue, animationClock)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -416,9 +442,11 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Duration GetNaturalDurationCore(class System.Windows.Media.Animation.Clock clock) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames.GetNaturalDurationCore(System.Windows.Media.Animation.Clock)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Windows::Duration GetNaturalDurationCore(System::Windows::Media::Animation::Clock ^ clock);" />
+      <MemberSignature Language="F#" Value="override this.GetNaturalDurationCore : System.Windows.Media.Animation.Clock -&gt; System.Windows.Duration" Usage="thicknessAnimationUsingKeyFrames.GetNaturalDurationCore clock" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -442,9 +470,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames.IsAdditive" />
       <MemberSignature Language="VB.NET" Value="Public Property IsAdditive As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsAdditive { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsAdditive : bool with get, set" Usage="System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames.IsAdditive" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -463,9 +493,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames.IsCumulative" />
       <MemberSignature Language="VB.NET" Value="Public Property IsCumulative As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsCumulative { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsCumulative : bool with get, set" Usage="System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames.IsCumulative" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -492,9 +524,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames.KeyFrames" />
       <MemberSignature Language="VB.NET" Value="Public Property KeyFrames As ThicknessKeyFrameCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Media::Animation::ThicknessKeyFrameCollection ^ KeyFrames { System::Windows::Media::Animation::ThicknessKeyFrameCollection ^ get(); void set(System::Windows::Media::Animation::ThicknessKeyFrameCollection ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.KeyFrames : System.Windows.Media.Animation.ThicknessKeyFrameCollection with get, set" Usage="System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames.KeyFrames" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -513,9 +547,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames.OnChanged" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub OnChanged ()" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void OnChanged();" />
+      <MemberSignature Language="F#" Value="override this.OnChanged : unit -&gt; unit" Usage="thicknessAnimationUsingKeyFrames.OnChanged " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -534,9 +570,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames.ShouldSerializeKeyFrames" />
       <MemberSignature Language="VB.NET" Value="Public Function ShouldSerializeKeyFrames () As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool ShouldSerializeKeyFrames();" />
+      <MemberSignature Language="F#" Value="member this.ShouldSerializeKeyFrames : unit -&gt; bool" Usage="thicknessAnimationUsingKeyFrames.ShouldSerializeKeyFrames " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -567,6 +605,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -593,6 +632,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -612,15 +652,22 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList System.Windows.Media.Animation.IKeyFrameAnimation.KeyFrames" />
       <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames.System#Windows#Media#Animation#IKeyFrameAnimation#KeyFrames" />
       <MemberSignature Language="VB.NET" Value=" Property KeyFrames As IList Implements IKeyFrameAnimation.KeyFrames" />
-      <MemberSignature Language="C++ CLI" Value="property System::Collections::IList ^ System.Windows.Media.Animation.IKeyFrameAnimation.KeyFrames { System::Collections::IList ^ get(); void set(System::Collections::IList ^ value); };" />
+      <MemberSignature Language="C++ CLI" Value="property System::Collections::IList ^ System::Windows::Media::Animation::IKeyFrameAnimation::KeyFrames { System::Collections::IList ^ get(); void set(System::Collections::IList ^ value); };" />
+      <MemberSignature Language="F#" Usage="System.Windows.Media.Animation.IKeyFrameAnimation.KeyFrames" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Windows.Media.Animation.IKeyFrameAnimation.KeyFrames</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.IList</ReturnType>
       </ReturnValue>

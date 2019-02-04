@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ImageField" />
   <TypeSignature Language="VB.NET" Value="Public Class ImageField&#xA;Inherits DataControlField" />
   <TypeSignature Language="C++ CLI" Value="public ref class ImageField : System::Web::UI::WebControls::DataControlField" />
+  <TypeSignature Language="F#" Value="type ImageField = class&#xA;    inherit DataControlField" />
   <AssemblyInfo>
     <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -82,8 +84,14 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.Web.UI.WebControls.ImageField" /> class.</summary>
@@ -120,9 +128,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ImageField.AlternateText" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property AlternateText As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ AlternateText { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.AlternateText : string with get, set" Usage="System.Web.UI.WebControls.ImageField.AlternateText" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -148,7 +158,7 @@
 > [!NOTE]
 >  When this property is set, all images displayed in an <xref:System.Web.UI.WebControls.ImageField> object share the same alternate text. As an alternative, you can bind the alternate text to a field in a data source by setting the <xref:System.Web.UI.WebControls.ImageField.DataAlternateTextField%2A> property instead of this property. This allows you to have different alternate text for each image displayed. If both the <xref:System.Web.UI.WebControls.ImageField.AlternateText%2A> and <xref:System.Web.UI.WebControls.ImageField.DataAlternateTextField%2A> properties are set, the <xref:System.Web.UI.WebControls.ImageField.DataAlternateTextField%2A> property takes precedence.  
   
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
    
   
@@ -169,9 +179,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ImageField.ConvertEmptyStringToNull" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property ConvertEmptyStringToNull As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool ConvertEmptyStringToNull { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.ConvertEmptyStringToNull : bool with get, set" Usage="System.Web.UI.WebControls.ImageField.ConvertEmptyStringToNull" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -205,9 +217,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageField.CopyProperties(System.Web.UI.WebControls.DataControlField)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub CopyProperties (newField As DataControlField)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void CopyProperties(System::Web::UI::WebControls::DataControlField ^ newField);" />
+      <MemberSignature Language="F#" Value="override this.CopyProperties : System.Web.UI.WebControls.DataControlField -&gt; unit" Usage="imageField.CopyProperties newField" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -235,9 +249,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageField.CreateField" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateField () As DataControlField" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Web::UI::WebControls::DataControlField ^ CreateField();" />
+      <MemberSignature Language="F#" Value="override this.CreateField : unit -&gt; System.Web.UI.WebControls.DataControlField" Usage="imageField.CreateField " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -263,17 +279,22 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ImageField.DataAlternateTextField" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property DataAlternateTextField As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ DataAlternateTextField { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DataAlternateTextField : string with get, set" Usage="System.Web.UI.WebControls.ImageField.DataAlternateTextField" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.DataSourceViewSchemaConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.DataSourceViewSchemaConverter, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -311,9 +332,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ImageField.DataAlternateTextFormatString" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property DataAlternateTextFormatString As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ DataAlternateTextFormatString { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DataAlternateTextFormatString : string with get, set" Usage="System.Web.UI.WebControls.ImageField.DataAlternateTextFormatString" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -379,6 +402,7 @@
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.ImageField.DataAlternateTextField" />
         <altmember cref="P:System.Web.UI.WebControls.ImageField.DataImageUrlFormatString" />
+        <related type="Article" href="~/docs/standard/base-types/formatting-types.md">Formatting Types in .NET</related>
       </Docs>
     </Member>
     <Member MemberName="DataImageUrlField">
@@ -387,17 +411,22 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ImageField.DataImageUrlField" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property DataImageUrlField As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ DataImageUrlField { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DataImageUrlField : string with get, set" Usage="System.Web.UI.WebControls.ImageField.DataImageUrlField" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.DataSourceViewSchemaConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.DataSourceViewSchemaConverter, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -438,9 +467,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ImageField.DataImageUrlFormatString" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property DataImageUrlFormatString As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ DataImageUrlFormatString { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DataImageUrlFormatString : string with get, set" Usage="System.Web.UI.WebControls.ImageField.DataImageUrlFormatString" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -501,6 +532,7 @@
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.ImageField.DataImageUrlField" />
         <altmember cref="P:System.Web.UI.WebControls.ImageField.DataAlternateTextFormatString" />
+        <related type="Article" href="~/docs/standard/base-types/formatting-types.md">Formatting Types in .NET</related>
       </Docs>
     </Member>
     <Member MemberName="ExtractValuesFromCell">
@@ -509,9 +541,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageField.ExtractValuesFromCell(System.Collections.Specialized.IOrderedDictionary,System.Web.UI.WebControls.DataControlFieldCell,System.Web.UI.WebControls.DataControlRowState,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub ExtractValuesFromCell (dictionary As IOrderedDictionary, cell As DataControlFieldCell, rowState As DataControlRowState, includeReadOnly As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void ExtractValuesFromCell(System::Collections::Specialized::IOrderedDictionary ^ dictionary, System::Web::UI::WebControls::DataControlFieldCell ^ cell, System::Web::UI::WebControls::DataControlRowState rowState, bool includeReadOnly);" />
+      <MemberSignature Language="F#" Value="override this.ExtractValuesFromCell : System.Collections.Specialized.IOrderedDictionary * System.Web.UI.WebControls.DataControlFieldCell * System.Web.UI.WebControls.DataControlRowState * bool -&gt; unit" Usage="imageField.ExtractValuesFromCell (dictionary, cell, rowState, includeReadOnly)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -557,9 +591,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageField.FormatImageUrlValue(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function FormatImageUrlValue (dataValue As Object) As String" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual System::String ^ FormatImageUrlValue(System::Object ^ dataValue);" />
+      <MemberSignature Language="F#" Value="abstract member FormatImageUrlValue : obj -&gt; string&#xA;override this.FormatImageUrlValue : obj -&gt; string" Usage="imageField.FormatImageUrlValue dataValue" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -592,9 +628,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageField.GetDesignTimeValue" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function GetDesignTimeValue () As String" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual System::String ^ GetDesignTimeValue();" />
+      <MemberSignature Language="F#" Value="abstract member GetDesignTimeValue : unit -&gt; string&#xA;override this.GetDesignTimeValue : unit -&gt; string" Usage="imageField.GetDesignTimeValue " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -624,9 +662,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageField.GetFormattedAlternateText(System.Web.UI.Control)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function GetFormattedAlternateText (controlContainer As Control) As String" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual System::String ^ GetFormattedAlternateText(System::Web::UI::Control ^ controlContainer);" />
+      <MemberSignature Language="F#" Value="abstract member GetFormattedAlternateText : System.Web.UI.Control -&gt; string&#xA;override this.GetFormattedAlternateText : System.Web.UI.Control -&gt; string" Usage="imageField.GetFormattedAlternateText controlContainer" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -659,9 +699,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageField.GetValue(System.Web.UI.Control,System.String,System.ComponentModel.PropertyDescriptor@)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function GetValue (controlContainer As Control, fieldName As String, ByRef cachedDescriptor As PropertyDescriptor) As Object" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual System::Object ^ GetValue(System::Web::UI::Control ^ controlContainer, System::String ^ fieldName, System::ComponentModel::PropertyDescriptor ^ % cachedDescriptor);" />
+      <MemberSignature Language="F#" Value="abstract member GetValue : System.Web.UI.Control * string *  -&gt; obj&#xA;override this.GetValue : System.Web.UI.Control * string *  -&gt; obj" Usage="imageField.GetValue (controlContainer, fieldName, cachedDescriptor)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -670,7 +712,7 @@
       <Parameters>
         <Parameter Name="controlContainer" Type="System.Web.UI.Control" />
         <Parameter Name="fieldName" Type="System.String" />
-        <Parameter Name="cachedDescriptor" Type="System.ComponentModel.PropertyDescriptor&amp;" RefType="ref" />
+        <Parameter Name="cachedDescriptor" Type="System.ComponentModel.PropertyDescriptor" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="controlContainer">The <see cref="T:System.Web.UI.Control" /> that contains the field value.</param>
@@ -688,11 +730,11 @@
         </remarks>
         <exception cref="T:System.Web.HttpException">The <paramref name="controlContainer" /> parameter is <see langword="null" />.  
   
- \- or -  
+-or-
   
  The data item associated with the container control is <see langword="null" />.  
   
- \- or -  
+-or-
   
  The field specified by the <paramref name="fieldName" /> parameter could not be found.</exception>
         <block subset="none" type="overrides">
@@ -707,9 +749,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Initialize(bool enableSorting, class System.Web.UI.Control control) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageField.Initialize(System.Boolean,System.Web.UI.Control)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Initialize(bool enableSorting, System::Web::UI::Control ^ control);" />
+      <MemberSignature Language="F#" Value="override this.Initialize : bool * System.Web.UI.Control -&gt; bool" Usage="imageField.Initialize (enableSorting, control)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -747,9 +791,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageField.InitializeCell(System.Web.UI.WebControls.DataControlFieldCell,System.Web.UI.WebControls.DataControlCellType,System.Web.UI.WebControls.DataControlRowState,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub InitializeCell (cell As DataControlFieldCell, cellType As DataControlCellType, rowState As DataControlRowState, rowIndex As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void InitializeCell(System::Web::UI::WebControls::DataControlFieldCell ^ cell, System::Web::UI::WebControls::DataControlCellType cellType, System::Web::UI::WebControls::DataControlRowState rowState, int rowIndex);" />
+      <MemberSignature Language="F#" Value="override this.InitializeCell : System.Web.UI.WebControls.DataControlFieldCell * System.Web.UI.WebControls.DataControlCellType * System.Web.UI.WebControls.DataControlRowState * int -&gt; unit" Usage="imageField.InitializeCell (cell, cellType, rowState, rowIndex)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -788,9 +834,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageField.InitializeDataCell(System.Web.UI.WebControls.DataControlFieldCell,System.Web.UI.WebControls.DataControlRowState)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub InitializeDataCell (cell As DataControlFieldCell, rowState As DataControlRowState)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void InitializeDataCell(System::Web::UI::WebControls::DataControlFieldCell ^ cell, System::Web::UI::WebControls::DataControlRowState rowState);" />
+      <MemberSignature Language="F#" Value="abstract member InitializeDataCell : System.Web.UI.WebControls.DataControlFieldCell * System.Web.UI.WebControls.DataControlRowState -&gt; unit&#xA;override this.InitializeDataCell : System.Web.UI.WebControls.DataControlFieldCell * System.Web.UI.WebControls.DataControlRowState -&gt; unit" Usage="imageField.InitializeDataCell (cell, rowState)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -825,9 +873,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ImageField.NullDisplayText" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property NullDisplayText As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ NullDisplayText { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.NullDisplayText : string with get, set" Usage="System.Web.UI.WebControls.ImageField.NullDisplayText" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -853,7 +903,7 @@
 > [!NOTE]
 >  As an alternative, you can display an alternate image when the field value is `null` by setting the <xref:System.Web.UI.WebControls.ImageField.NullImageUrl%2A> property instead of this property. If the <xref:System.Web.UI.WebControls.ImageField.NullImageUrl%2A> and <xref:System.Web.UI.WebControls.ImageField.NullDisplayText%2A> properties are both set, the <xref:System.Web.UI.WebControls.ImageField.NullImageUrl%2A> property has precedence.  
   
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
    
   
@@ -874,20 +924,25 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ImageField.NullImageUrl" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property NullImageUrl As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ NullImageUrl { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.NullImageUrl : string with get, set" Usage="System.Web.UI.WebControls.ImageField.NullImageUrl" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -924,9 +979,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageField.OnDataBindField(System.Object,System.EventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnDataBindField (sender As Object, e As EventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnDataBindField(System::Object ^ sender, EventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member OnDataBindField : obj * EventArgs -&gt; unit&#xA;override this.OnDataBindField : obj * EventArgs -&gt; unit" Usage="imageField.OnDataBindField (sender, e)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -961,9 +1018,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ImageField.ReadOnly" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property ReadOnly As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool ReadOnly { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.ReadOnly : bool with get, set" Usage="System.Web.UI.WebControls.ImageField.ReadOnly" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1006,9 +1065,11 @@
       <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.ImageField.ThisExpression" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly ThisExpression As String " />
       <MemberSignature Language="C++ CLI" Value="public: static initonly System::String ^ ThisExpression;" />
+      <MemberSignature Language="F#" Value=" staticval mutable ThisExpression : string" Usage="System.Web.UI.WebControls.ImageField.ThisExpression" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1032,9 +1093,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ImageField.ValidateSupportsCallback" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub ValidateSupportsCallback ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void ValidateSupportsCallback();" />
+      <MemberSignature Language="F#" Value="override this.ValidateSupportsCallback : unit -&gt; unit" Usage="imageField.ValidateSupportsCallback " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

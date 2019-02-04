@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.ActivityBind" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ActivityBind&#xA;Inherits MarkupExtension" />
   <TypeSignature Language="C++ CLI" Value="public ref class ActivityBind sealed : System::Workflow::ComponentModel::Serialization::MarkupExtension" />
+  <TypeSignature Language="F#" Value="type ActivityBind = class&#xA;    inherit MarkupExtension" />
   <AssemblyInfo>
     <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -22,7 +24,7 @@
     <Attribute>
       <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Workflow.ComponentModel.Design.ActivityBindTypeConverter))</AttributeName>
     </Attribute>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
       <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
     </Attribute>
     <Attribute>
@@ -67,6 +69,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
@@ -78,7 +81,7 @@
 ## Examples  
  This example illustrates creating and using an <xref:System.Workflow.ComponentModel.ActivityBind>.  
   
- This code example is part of the Throw Activity SDK sample and is from the ThrowActivity.cs file. For more information, see [Using the ThrowActivity Activity](http://msdn.microsoft.com/library/82bc0fef-d78a-4750-82b4-e4cb397a10f1).  
+ This code example is part of the Throw Activity SDK sample and is from the ThrowActivity.cs file. For more information, see [Using the ThrowActivity Activity](https://msdn.microsoft.com/library/82bc0fef-d78a-4750-82b4-e4cb397a10f1).  
   
  [!code-csharp[WF_Samples#178](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#178)]
  [!code-vb[WF_Samples#178](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#178)]  
@@ -93,9 +96,11 @@
       <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.ActivityBind.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (name As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ActivityBind(System::String ^ name);" />
+      <MemberSignature Language="F#" Value="new System.Workflow.ComponentModel.ActivityBind : string -&gt; System.Workflow.ComponentModel.ActivityBind" Usage="new System.Workflow.ComponentModel.ActivityBind name" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
@@ -113,9 +118,11 @@
       <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.ActivityBind.#ctor(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, path As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ActivityBind(System::String ^ name, System::String ^ path);" />
+      <MemberSignature Language="F#" Value="new System.Workflow.ComponentModel.ActivityBind : string * string -&gt; System.Workflow.ComponentModel.ActivityBind" Usage="new System.Workflow.ComponentModel.ActivityBind (name, path)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
@@ -132,7 +139,7 @@
 ## Examples  
  This example illustrates creating and using <xref:System.Workflow.ComponentModel.ActivityBind>.  
   
- The code example is part of the Throw Activity SDK sample and is from the ThrowActivity.cs file. For more information, see [Using the ThrowActivity Activity](http://msdn.microsoft.com/library/82bc0fef-d78a-4750-82b4-e4cb397a10f1).  
+ The code example is part of the Throw Activity SDK sample and is from the ThrowActivity.cs file. For more information, see [Using the ThrowActivity Activity](https://msdn.microsoft.com/library/82bc0fef-d78a-4750-82b4-e4cb397a10f1).  
   
  [!code-csharp[WF_Samples#178](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#178)]
  [!code-vb[WF_Samples#178](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#178)]  
@@ -166,9 +173,11 @@ Returns the run-time value.
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetRuntimeValue(class System.Workflow.ComponentModel.Activity activity) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.ActivityBind.GetRuntimeValue(System.Workflow.ComponentModel.Activity)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Object ^ GetRuntimeValue(System::Workflow::ComponentModel::Activity ^ activity);" />
+      <MemberSignature Language="F#" Value="member this.GetRuntimeValue : System.Workflow.ComponentModel.Activity -&gt; obj" Usage="activityBind.GetRuntimeValue activity" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -191,9 +200,11 @@ Returns the run-time value.
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetRuntimeValue(class System.Workflow.ComponentModel.Activity activity, class System.Type targetType) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.ActivityBind.GetRuntimeValue(System.Workflow.ComponentModel.Activity,System.Type)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Object ^ GetRuntimeValue(System::Workflow::ComponentModel::Activity ^ activity, Type ^ targetType);" />
+      <MemberSignature Language="F#" Value="member this.GetRuntimeValue : System.Workflow.ComponentModel.Activity * Type -&gt; obj" Usage="activityBind.GetRuntimeValue (activity, targetType)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -205,7 +216,7 @@ Returns the run-time value.
       </Parameters>
       <Docs>
         <param name="activity">The <see cref="T:System.Workflow.ComponentModel.Activity" /> that owns this bind.</param>
-        <param name="targetType">The <see cref="T:System.Type" /> of the object if a <see cref="T:System.Delegate" />; otherwise a null reference (<see langword="Nothing" /> in Visual Basic). <c>activity</c> is null.</param>
+        <param name="targetType">The <see cref="T:System.Type" /> of the object if a <see cref="T:System.Delegate" />; otherwise a null reference (<see langword="Nothing" /> in Visual Basic). <paramref name="activity" /> is null.</param>
         <summary>Gets the <see cref="T:System.Object" /> representing the run-time value of this <see cref="T:System.Workflow.ComponentModel.ActivityBind" />.</summary>
         <returns>The <see cref="T:System.Object" /> representing the run-time value of this <see cref="T:System.Workflow.ComponentModel.ActivityBind" />.</returns>
         <remarks>To be added.</remarks>
@@ -219,9 +230,11 @@ Returns the run-time value.
       <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.ActivityBind.Name" />
       <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="System.Workflow.ComponentModel.ActivityBind.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -244,7 +257,7 @@ Returns the run-time value.
 ## Examples  
  This example illustrates creating and using an <xref:System.Workflow.ComponentModel.ActivityBind> and also of setting the <xref:System.Workflow.ComponentModel.ActivityBind.Name%2A>.  
   
- This code example is part of the Throw Activity SDK sample and is from the ThrowActivity.cs file. For more information, see [Using the ThrowActivity Activity](http://msdn.microsoft.com/library/82bc0fef-d78a-4750-82b4-e4cb397a10f1).  
+ This code example is part of the Throw Activity SDK sample and is from the ThrowActivity.cs file. For more information, see [Using the ThrowActivity Activity](https://msdn.microsoft.com/library/82bc0fef-d78a-4750-82b4-e4cb397a10f1).  
   
  ]]></format>
         </remarks>
@@ -257,9 +270,11 @@ Returns the run-time value.
       <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.ActivityBind.Path" />
       <MemberSignature Language="VB.NET" Value="Public Property Path As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Path { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Path : string with get, set" Usage="System.Workflow.ComponentModel.ActivityBind.Path" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -289,7 +304,7 @@ Returns the run-time value.
 ## Examples  
  This example illustrates creating and using an <xref:System.Workflow.ComponentModel.ActivityBind>, and also setting the <xref:System.Workflow.ComponentModel.ActivityBind.Name%2A> and <xref:System.Workflow.ComponentModel.ActivityBind.Path%2A>.  
   
- This code example is part of the Throw Activity SDK sample and is from the ThrowActivity.cs file. For more information, see [Using the ThrowActivity Activity](http://msdn.microsoft.com/library/82bc0fef-d78a-4750-82b4-e4cb397a10f1).  
+ This code example is part of the Throw Activity SDK sample and is from the ThrowActivity.cs file. For more information, see [Using the ThrowActivity Activity](https://msdn.microsoft.com/library/82bc0fef-d78a-4750-82b4-e4cb397a10f1).  
   
  ]]></format>
         </remarks>
@@ -302,9 +317,11 @@ Returns the run-time value.
       <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.ActivityBind.ProvideValue(System.IServiceProvider)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ProvideValue (provider As IServiceProvider) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::Object ^ ProvideValue(IServiceProvider ^ provider);" />
+      <MemberSignature Language="F#" Value="override this.ProvideValue : IServiceProvider -&gt; obj" Usage="activityBind.ProvideValue provider" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -325,9 +342,11 @@ Returns the run-time value.
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetRuntimeValue(class System.Workflow.ComponentModel.Activity activity, object value) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.ActivityBind.SetRuntimeValue(System.Workflow.ComponentModel.Activity,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetRuntimeValue(System::Workflow::ComponentModel::Activity ^ activity, System::Object ^ value);" />
+      <MemberSignature Language="F#" Value="member this.SetRuntimeValue : System.Workflow.ComponentModel.Activity * obj -&gt; unit" Usage="activityBind.SetRuntimeValue (activity, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -352,9 +371,11 @@ Returns the run-time value.
       <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.ActivityBind.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="activityBind.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -373,9 +394,11 @@ Returns the run-time value.
       <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.ActivityBind.UserData" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UserData As IDictionary" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::IDictionary ^ UserData { System::Collections::IDictionary ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.UserData : System.Collections.IDictionary" Usage="System.Workflow.ComponentModel.ActivityBind.UserData" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -383,7 +406,7 @@ Returns the run-time value.
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

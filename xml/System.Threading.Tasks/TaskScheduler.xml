@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.TaskScheduler" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class TaskScheduler" />
   <TypeSignature Language="C++ CLI" Value="public ref class TaskScheduler abstract" />
+  <TypeSignature Language="F#" Value="type TaskScheduler = class" />
   <AssemblyInfo>
     <AssemblyName>System.Threading.Tasks</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -28,10 +29,10 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8">
       <AttributeName>System.Diagnostics.DebuggerDisplay("Id={Id}")</AttributeName>
     </Attribute>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8">
       <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.Threading.Tasks.TaskScheduler/SystemThreadingTasks_TaskSchedulerDebugView))</AttributeName>
     </Attribute>
   </Attributes>
@@ -69,7 +70,7 @@
   
 <a name="Stealing"></a>   
 ### Work stealing  
- Starting with the .NET Framework 4, the thread pool also features a work-stealing algorithm to help make sure that no threads are sitting idle while others still have work in their queues. When a thread-pool thread is ready for more work, it first looks at the head of its local queue, then in the global queue, and then in the local queues of other threads. If it finds a work item in the local queue of another thread, it first applies heuristics to make sure that it can run the work efficiently. If it can, it de-queues the work item from the tail (in FIFO order). This reduces contention on each local queue and preserves data locality. This architecture helps the  thread pool load-balance work more efficiently than past versions did.  
+ Starting with the .NET Framework 4, the thread pool also features a work-stealing algorithm to help make sure that no threads are sitting idle while others still have work in their queues. When a thread-pool thread is ready for more work, it first looks at the head of its local queue, then in the global queue, and then in the local queues of other threads. If it finds a work item in the local queue of another thread, it first applies heuristics to make sure that it can run the work efficiently. If it can, it de-queues the work item from the tail (in FIFO order). This reduces contention on each local queue and preserves data locality. This architecture helps the thread pool load-balance work more efficiently than past versions did.  
   
 <a name="LongRunning"></a>   
 ### Long-running tasks  
@@ -90,31 +91,31 @@
  [!code-csharp[TPL_SyncContext#01](~/samples/snippets/csharp/VS_Snippets_Misc/tpl_synccontext/cs/mainwindow.xaml.cs#01)]
  [!code-vb[TPL_SyncContext#01](~/samples/snippets/visualbasic/VS_Snippets_Misc/tpl_synccontext/vb/MainWindow.xaml.vb#01)]  
   
- To create the example, create a WPF application project in Visual Studio and assign it a name of your choice. Then do the following:  
+ To create the example, create a WPF application project in Visual Studio and name it WPF_CS1 (for a C# WPF project) or WPF_VB1 (for a Visual Basic WPF project). Then do the following:  
   
-1.  In design view, drag an <xref:System.Windows.Controls.Image> control from the **Toolbox** to the design surface. In XAML view, specify the horizontal alignment as "Left." The size does not matter because the control is be dynamically resized at run time. Accept the default name, "image".  
+1. In design view, drag an <xref:System.Windows.Controls.Image> control from the **Toolbox** onto the upper left corner of the design surface. In the **Name** textbox of the **Properties** window, name the control "image".    
   
-2.  Drag a <xref:System.Windows.Controls.Button> control from the **Toolbox** to the lower left part of the application window. Double-click the button to add a <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event handler. In XAML view, specify the <xref:System.Windows.Controls.ContentControl.Content%2A> property of the button as "Make a Mosaic" and specify its horizontal alignment as "Left". Accept the default name, "button".  
+2. Drag a <xref:System.Windows.Controls.Button> control from the **Toolbox** to the lower left part of the application window. In XAML view, specify the <xref:System.Windows.Controls.ContentControl.Content%2A> property of the button as "Make a mosaic", and specify its <xref:System.Windows.FrameworkElement.Width> property as "100". Connect the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event with the `button_Click` event handler defined in the example's code by adding `Click="button_Click"` to the `<Button>` element. In the **Name** textbox of the **Properties** window, name the control "button".  
   
-3.  Replace the entire contents of the MainWindow.xaml.cs or MainWindow.xaml.vb file with the code from this example. Make sure that the name of the workspace matches the project name.  
+3. Replace the entire contents of the MainWindow.xaml.cs or MainWindow.xaml.vb file with the code from this example. For a C# WPF project, make sure that the name of the workspace matches the project name. 
   
-4.  The example reads JPEG images from a directory named C:\Users\Public\Pictures\Sample Pictures\\. Either create the directory and place some images in it, or change the path to refer to some other directory that contains images.  
+4. The example reads JPEG images from a directory named C:\Users\Public\Pictures\Sample Pictures\\. Either create the directory and place some images in it, or change the path to refer to some other directory that contains images. 
   
- This example has some limitations. For example, only 32-bits-per-pixel images are supported; images in other formats are corrupted by the <xref:System.Windows.Media.Imaging.BitmapImage> object during the resizing operation. Also, the source images must all be larger than the tile size. As a further exercise, you can add functionality to handle multiple pixel formats and file sizes.  
-  
-   
+This example has some limitations. For example, only 32-bits-per-pixel images are supported; images in other formats are corrupted by the <xref:System.Windows.Media.Imaging.BitmapImage> object during the resizing operation. Also, the source images must all be larger than the tile size. As a further exercise, you can add functionality to handle multiple pixel formats and file sizes.  
   
 ## Examples  
- The following example is taken from the [Samples for Parallel Programming with the .NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=165717) on the MSDN Code Gallery Web site.  It creates a custom task scheduler that limits the number of threads used by the app. It then launches two sets of tasks and displays information about the task and the thread on which the task is executing.  
+ The following example is taken from the [Samples for Parallel Programming with the .NET Framework 4](https://go.microsoft.com/fwlink/?LinkID=165717) on the MSDN Code Gallery Web site.  It creates a custom task scheduler that limits the number of threads used by the app. It then launches two sets of tasks and displays information about the task and the thread on which the task is executing.  
   
  [!code-csharp[TPL_Schedulers#02](~/samples/snippets/csharp/VS_Snippets_Misc/tpl_schedulers/cs/limitex1.cs#02)]
  [!code-vb[TPL_Schedulers#02](~/samples/snippets/visualbasic/VS_Snippets_Misc/tpl_schedulers/vb/module2.vb#02)]  
   
- In addition, several sample task schedulers are available on Code Gallery: [Samples for Parallel Programming with the .NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=165717).  
+ In addition, several sample task schedulers are available on Code Gallery: [Samples for Parallel Programming with the .NET Framework 4](https://go.microsoft.com/fwlink/?LinkID=165717).  
   
  ]]></format>
     </remarks>
     <threadsafe>All members of the abstract <see cref="T:System.Threading.Tasks.TaskScheduler" /> type are thread-safe and may be used from multiple threads concurrently.</threadsafe>
+    <altmember cref="T:System.Threading.Tasks.TaskScheduler" />
+    <related type="Article" href="~/docs/standard/parallel-programming/task-parallel-library-tpl.md">Task Parallel Library (TPL)</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -147,6 +148,8 @@
       <Docs>
         <summary>Initializes the <see cref="T:System.Threading.Tasks.TaskScheduler" />.</summary>
         <remarks>To be added.</remarks>
+        <altmember cref="T:System.Threading.Tasks.TaskScheduler" />
+        <related type="Article" href="~/docs/standard/parallel-programming/task-parallel-library-tpl.md">Task Parallel Library (TPL)</related>
       </Docs>
     </Member>
     <Member MemberName="Current">
@@ -155,6 +158,7 @@
       <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.TaskScheduler.Current" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Current As TaskScheduler" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::Threading::Tasks::TaskScheduler ^ Current { System::Threading::Tasks::TaskScheduler ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Current : System.Threading.Tasks.TaskScheduler" Usage="System.Threading.Tasks.TaskScheduler.Current" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Threading.Tasks</AssemblyName>
@@ -191,6 +195,8 @@
   
  ]]></format>
         </remarks>
+        <altmember cref="T:System.Threading.Tasks.TaskScheduler" />
+        <related type="Article" href="~/docs/standard/parallel-programming/task-parallel-library-tpl.md">Task Parallel Library (TPL)</related>
       </Docs>
     </Member>
     <Member MemberName="Default">
@@ -199,6 +205,7 @@
       <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.TaskScheduler.Default" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Default As TaskScheduler" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::Threading::Tasks::TaskScheduler ^ Default { System::Threading::Tasks::TaskScheduler ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Default : System.Threading.Tasks.TaskScheduler" Usage="System.Threading.Tasks.TaskScheduler.Default" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Threading.Tasks</AssemblyName>
@@ -229,10 +236,42 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- For more information, see [Task Schedulers](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).  
+ For more information, see <xref:System.Threading.Tasks.TaskScheduler>.  
   
  ]]></format>
         </remarks>
+        <altmember cref="T:System.Threading.Tasks.TaskScheduler" />
+        <related type="Article" href="~/docs/standard/parallel-programming/task-parallel-library-tpl.md">Task Parallel Library (TPL)</related>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~TaskScheduler ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskScheduler.Finalize" />
+      <MemberSignature Language="VB.NET" Value="Finalize ()" />
+      <MemberSignature Language="C++ CLI" Value="!TaskScheduler ()" />
+      <MemberSignature Language="F#" Value="override this.Finalize : unit -&gt; unit" Usage="taskScheduler.Finalize " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Frees all resources associated with this scheduler.</summary>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="FromCurrentSynchronizationContext">
@@ -241,6 +280,7 @@
       <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function FromCurrentSynchronizationContext () As TaskScheduler" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Threading::Tasks::TaskScheduler ^ FromCurrentSynchronizationContext();" />
+      <MemberSignature Language="F#" Value="static member FromCurrentSynchronizationContext : unit -&gt; System.Threading.Tasks.TaskScheduler" Usage="System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Threading.Tasks</AssemblyName>
@@ -274,11 +314,12 @@
 ## Remarks  
  All <xref:System.Threading.Tasks.Task> instances queued to the returned scheduler will be executed through a call to the <xref:System.Threading.SynchronizationContext.Post%2A> method on that context.  
   
- For more information, see [Task Schedulers](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).  
+ For more information, see <xref:System.Threading.Tasks.TaskScheduler>.  
   
  ]]></format>
         </remarks>
         <exception cref="T:System.InvalidOperationException">The current SynchronizationContext may not be used as a TaskScheduler.</exception>
+        <related type="Article" href="~/docs/standard/parallel-programming/task-parallel-library-tpl.md">Task Parallel Library (TPL)</related>
       </Docs>
     </Member>
     <Member MemberName="GetScheduledTasks">
@@ -287,6 +328,7 @@
       <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskScheduler.GetScheduledTasks" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Function GetScheduledTasks () As IEnumerable(Of Task)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract System::Collections::Generic::IEnumerable&lt;System::Threading::Tasks::Task ^&gt; ^ GetScheduledTasks();" />
+      <MemberSignature Language="F#" Value="abstract member GetScheduledTasks : unit -&gt; seq&lt;System.Threading.Tasks.Task&gt;" Usage="taskScheduler.GetScheduledTasks " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Threading.Tasks</AssemblyName>
@@ -308,7 +350,7 @@
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netcore-1.0;netcore-1.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.6;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.0">
           <AttributeName>System.Security.SecurityCritical</AttributeName>
         </Attribute>
       </Attributes>
@@ -355,6 +397,8 @@ protected override IEnumerable<Task> GetScheduledTasks()
  ]]></format>
         </remarks>
         <exception cref="T:System.NotSupportedException">This scheduler is unable to generate a list of queued tasks at this time.</exception>
+        <altmember cref="T:System.Threading.Tasks.TaskScheduler" />
+        <related type="Article" href="~/docs/standard/parallel-programming/task-parallel-library-tpl.md">Task Parallel Library (TPL)</related>
       </Docs>
     </Member>
     <Member MemberName="Id">
@@ -363,6 +407,7 @@ protected override IEnumerable<Task> GetScheduledTasks()
       <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.TaskScheduler.Id" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Id As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Id { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Id : int" Usage="System.Threading.Tasks.TaskScheduler.Id" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Threading.Tasks</AssemblyName>
@@ -393,10 +438,12 @@ protected override IEnumerable<Task> GetScheduledTasks()
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- For more information, see [Task Schedulers](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).  
+ For more information, see <xref:System.Threading.Tasks.TaskScheduler>.  
   
  ]]></format>
         </remarks>
+        <altmember cref="T:System.Threading.Tasks.TaskScheduler" />
+        <related type="Article" href="~/docs/standard/parallel-programming/task-parallel-library-tpl.md">Task Parallel Library (TPL)</related>
       </Docs>
     </Member>
     <Member MemberName="MaximumConcurrencyLevel">
@@ -405,6 +452,7 @@ protected override IEnumerable<Task> GetScheduledTasks()
       <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.TaskScheduler.MaximumConcurrencyLevel" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property MaximumConcurrencyLevel As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property int MaximumConcurrencyLevel { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.MaximumConcurrencyLevel : int" Usage="System.Threading.Tasks.TaskScheduler.MaximumConcurrencyLevel" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Threading.Tasks</AssemblyName>
@@ -435,10 +483,12 @@ protected override IEnumerable<Task> GetScheduledTasks()
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- For more information, see [Task Schedulers](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).  
+ For more information, see <xref:System.Threading.Tasks.TaskScheduler>.  
   
  ]]></format>
         </remarks>
+        <altmember cref="T:System.Threading.Tasks.TaskScheduler" />
+        <related type="Article" href="~/docs/standard/parallel-programming/task-parallel-library-tpl.md">Task Parallel Library (TPL)</related>
       </Docs>
     </Member>
     <Member MemberName="QueueTask">
@@ -446,6 +496,7 @@ protected override IEnumerable<Task> GetScheduledTasks()
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void QueueTask(class System.Threading.Tasks.Task task) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskScheduler.QueueTask(System.Threading.Tasks.Task)" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; abstract void QueueTask(System::Threading::Tasks::Task ^ task);" />
+      <MemberSignature Language="F#" Value="abstract member QueueTask : System.Threading.Tasks.Task -&gt; unit" Usage="taskScheduler.QueueTask task" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Threading.Tasks</AssemblyName>
@@ -467,7 +518,7 @@ protected override IEnumerable<Task> GetScheduledTasks()
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netcore-1.0;netcore-1.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.6;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.0">
           <AttributeName>System.Security.SecurityCritical</AttributeName>
         </Attribute>
       </Attributes>
@@ -493,6 +544,8 @@ protected override IEnumerable<Task> GetScheduledTasks()
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="task" /> argument is null.</exception>
+        <altmember cref="T:System.Threading.Tasks.TaskScheduler" />
+        <related type="Article" href="~/docs/standard/parallel-programming/task-parallel-library-tpl.md">Task Parallel Library (TPL)</related>
       </Docs>
     </Member>
     <Member MemberName="TryDequeue">
@@ -500,6 +553,7 @@ protected override IEnumerable<Task> GetScheduledTasks()
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool TryDequeue(class System.Threading.Tasks.Task task) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskScheduler.TryDequeue(System.Threading.Tasks.Task)" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; virtual bool TryDequeue(System::Threading::Tasks::Task ^ task);" />
+      <MemberSignature Language="F#" Value="abstract member TryDequeue : System.Threading.Tasks.Task -&gt; bool&#xA;override this.TryDequeue : System.Threading.Tasks.Task -&gt; bool" Usage="taskScheduler.TryDequeue task" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Threading.Tasks</AssemblyName>
@@ -521,7 +575,7 @@ protected override IEnumerable<Task> GetScheduledTasks()
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netcore-1.0;netcore-1.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.6;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.0">
           <AttributeName>System.Security.SecurityCritical</AttributeName>
         </Attribute>
       </Attributes>
@@ -539,13 +593,15 @@ protected override IEnumerable<Task> GetScheduledTasks()
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- For more information, see [Task Schedulers](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).  
+ For more information, see <xref:System.Threading.Tasks.TaskScheduler>.  
   
  This method may execute in a finally block; therefore it should return as quickly as possible so that any resources such as <xref:System.Threading.CancellationTokenRegistration> objects can be disposed of in a timely manner.  
   
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="task" /> argument is null.</exception>
+        <altmember cref="T:System.Threading.Tasks.TaskScheduler" />
+        <related type="Article" href="~/docs/standard/parallel-programming/task-parallel-library-tpl.md">Task Parallel Library (TPL)</related>
       </Docs>
     </Member>
     <Member MemberName="TryExecuteTask">
@@ -553,6 +609,7 @@ protected override IEnumerable<Task> GetScheduledTasks()
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool TryExecuteTask(class System.Threading.Tasks.Task task) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskScheduler.TryExecuteTask(System.Threading.Tasks.Task)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; bool TryExecuteTask(System::Threading::Tasks::Task ^ task);" />
+      <MemberSignature Language="F#" Value="member this.TryExecuteTask : System.Threading.Tasks.Task -&gt; bool" Usage="taskScheduler.TryExecuteTask task" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Threading.Tasks</AssemblyName>
@@ -574,7 +631,7 @@ protected override IEnumerable<Task> GetScheduledTasks()
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netcore-1.0;netcore-1.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.6;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.0">
           <AttributeName>System.Security.SecurityCritical</AttributeName>
         </Attribute>
       </Attributes>
@@ -599,6 +656,8 @@ protected override IEnumerable<Task> GetScheduledTasks()
  ]]></format>
         </remarks>
         <exception cref="T:System.InvalidOperationException">The <paramref name="task" /> is not associated with this scheduler.</exception>
+        <altmember cref="T:System.Threading.Tasks.TaskScheduler" />
+        <related type="Article" href="~/docs/standard/parallel-programming/task-parallel-library-tpl.md">Task Parallel Library (TPL)</related>
       </Docs>
     </Member>
     <Member MemberName="TryExecuteTaskInline">
@@ -606,6 +665,7 @@ protected override IEnumerable<Task> GetScheduledTasks()
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool TryExecuteTaskInline(class System.Threading.Tasks.Task task, bool taskWasPreviouslyQueued) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskScheduler.TryExecuteTaskInline(System.Threading.Tasks.Task,System.Boolean)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract bool TryExecuteTaskInline(System::Threading::Tasks::Task ^ task, bool taskWasPreviouslyQueued);" />
+      <MemberSignature Language="F#" Value="abstract member TryExecuteTaskInline : System.Threading.Tasks.Task * bool -&gt; bool" Usage="taskScheduler.TryExecuteTaskInline (task, taskWasPreviouslyQueued)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Threading.Tasks</AssemblyName>
@@ -627,7 +687,7 @@ protected override IEnumerable<Task> GetScheduledTasks()
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netcore-1.0;netcore-1.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.6;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.0">
           <AttributeName>System.Security.SecurityCritical</AttributeName>
         </Attribute>
       </Attributes>
@@ -653,12 +713,14 @@ protected override IEnumerable<Task> GetScheduledTasks()
   
  The derived scheduler is responsible for making sure that the calling thread is suitable for executing the given task as far as its own scheduling and execution policies are concerned.  
   
- For more information, see [Task Schedulers](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).  
+ For more information, see <xref:System.Threading.Tasks.TaskScheduler>.  
   
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="task" /> argument is null.</exception>
         <exception cref="T:System.InvalidOperationException">The <paramref name="task" /> was already executed.</exception>
+        <altmember cref="T:System.Threading.Tasks.TaskScheduler" />
+        <related type="Article" href="~/docs/standard/parallel-programming/task-parallel-library-tpl.md">Task Parallel Library (TPL)</related>
       </Docs>
     </Member>
     <Member MemberName="UnobservedTaskException">
@@ -667,6 +729,7 @@ protected override IEnumerable<Task> GetScheduledTasks()
       <MemberSignature Language="DocId" Value="E:System.Threading.Tasks.TaskScheduler.UnobservedTaskException" />
       <MemberSignature Language="VB.NET" Value="Public Shared Custom Event UnobservedTaskException As EventHandler(Of UnobservedTaskExceptionEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static event EventHandler&lt;System::Threading::Tasks::UnobservedTaskExceptionEventArgs ^&gt; ^ UnobservedTaskException;" />
+      <MemberSignature Language="F#" Value="member this.UnobservedTaskException : EventHandler&lt;System.Threading.Tasks.UnobservedTaskExceptionEventArgs&gt; " Usage="member this.UnobservedTaskException : System.EventHandler&lt;System.Threading.Tasks.UnobservedTaskExceptionEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Threading.Tasks</AssemblyName>
@@ -688,10 +751,10 @@ protected override IEnumerable<Task> GetScheduledTasks()
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8">
           <AttributeName>add: System.Security.SecurityCritical</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8">
           <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
         </Attribute>
       </Attributes>
@@ -706,7 +769,7 @@ protected override IEnumerable<Task> GetScheduledTasks()
 ## Remarks  
  This application domain-wide event provides a mechanism to prevent exception escalation policy (which, by default, terminates the process) from triggering.  
   
- To make it easier for developers to write asynchronous code based on tasks, the [!INCLUDE[net_v45](~/includes/net-v45-md.md)] changes the default exception behavior for unobserved exceptions. Although unobserved exceptions still raise the <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> exception, the process does not terminate by default. Instead, the exception is handled by the runtime after the event is raised, regardless of whether an event handler observes the exception. This behavior can be configured. Starting with the [!INCLUDE[net_v45](~/includes/net-v45-md.md)], you can use the  configuration element to revert to the behavior of the [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] and terminate the process:  
+ To make it easier for developers to write asynchronous code based on tasks, the [!INCLUDE[net_v45](~/includes/net-v45-md.md)] changes the default exception behavior for unobserved exceptions. Although unobserved exceptions still raise the <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> exception, the process does not terminate by default. Instead, the exception is handled by the runtime after the event is raised, regardless of whether an event handler observes the exception. This behavior can be configured. Starting with the [!INCLUDE[net_v45](~/includes/net-v45-md.md)], you can use the [`<ThrowUnobservedTaskExceptions>`](~/docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) configuration element to revert to the behavior of the [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] and terminate the process:  
   
 ```xml  
 <configuration>   
@@ -719,6 +782,8 @@ protected override IEnumerable<Task> GetScheduledTasks()
   
  ]]></format>
         </remarks>
+        <related type="Article" href="~/docs/standard/parallel-programming/task-parallel-library-tpl.md">Task Parallel Library (TPL)</related>
+        <related type="Article" href="~/docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md">&lt;ThrowUnobservedTaskExceptions&gt; Element</related>
       </Docs>
     </Member>
   </Members>

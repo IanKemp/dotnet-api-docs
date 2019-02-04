@@ -4,14 +4,22 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.ObjectKeyFrameCollection" />
   <TypeSignature Language="VB.NET" Value="Public Class ObjectKeyFrameCollection&#xA;Inherits Freezable&#xA;Implements IList" />
   <TypeSignature Language="C++ CLI" Value="public ref class ObjectKeyFrameCollection : System::Windows::Freezable, System::Collections::IList" />
+  <TypeSignature Language="F#" Value="type ObjectKeyFrameCollection = class&#xA;    inherit Freezable&#xA;    interface IList&#xA;    interface ICollection&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Windows.Freezable</BaseTypeName>
   </Base>
   <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
     <Interface>
       <InterfaceName>System.Collections.IList</InterfaceName>
     </Interface>
@@ -44,6 +52,7 @@
     </remarks>
     <altmember cref="T:System.Windows.Media.Animation.ObjectKeyFrame" />
     <altmember cref="T:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames" />
+    <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkID=160012">KeyFrame Animation Sample</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -55,6 +64,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
@@ -69,9 +79,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ObjectKeyFrameCollection.Add(System.Windows.Media.Animation.ObjectKeyFrame)" />
       <MemberSignature Language="VB.NET" Value="Public Function Add (keyFrame As ObjectKeyFrame) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; int Add(System::Windows::Media::Animation::ObjectKeyFrame ^ keyFrame);" />
+      <MemberSignature Language="F#" Value="member this.Add : System.Windows.Media.Animation.ObjectKeyFrame -&gt; int" Usage="objectKeyFrameCollection.Add keyFrame" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -85,7 +97,7 @@
         <summary>Adds an <see cref="T:System.Windows.Media.Animation.ObjectKeyFrame" /> to the end of this collection.</summary>
         <returns>The index at which the <paramref name="keyFrame" /> was added.</returns>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.InvalidOperationException">The attempt to modify the collection is invalid because the collection is frozen (its <see cref="P:System.Windows.Freezable.IsFrozen" /> property is **true**).</exception>
+        <exception cref="T:System.InvalidOperationException">The attempt to modify the collection is invalid because the collection is frozen (its <see cref="P:System.Windows.Freezable.IsFrozen" /> property is <see langword="true" />).</exception>
       </Docs>
     </Member>
     <Member MemberName="Clear">
@@ -94,12 +106,14 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ObjectKeyFrameCollection.Clear" />
       <MemberSignature Language="VB.NET" Value="Public Sub Clear ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Clear();" />
+      <MemberSignature Language="F#" Value="abstract member Clear : unit -&gt; unit&#xA;override this.Clear : unit -&gt; unit" Usage="objectKeyFrameCollection.Clear " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IList.Clear</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -117,9 +131,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ObjectKeyFrameCollection.Clone" />
       <MemberSignature Language="VB.NET" Value="Public Function Clone () As ObjectKeyFrameCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Windows::Media::Animation::ObjectKeyFrameCollection ^ Clone();" />
+      <MemberSignature Language="F#" Value="override this.Clone : unit -&gt; System.Windows.Media.Animation.ObjectKeyFrameCollection" Usage="objectKeyFrameCollection.Clone " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -147,9 +163,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ObjectKeyFrameCollection.CloneCore(System.Windows.Freezable)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub CloneCore (sourceFreezable As Freezable)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void CloneCore(System::Windows::Freezable ^ sourceFreezable);" />
+      <MemberSignature Language="F#" Value="override this.CloneCore : System.Windows.Freezable -&gt; unit" Usage="objectKeyFrameCollection.CloneCore sourceFreezable" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -179,9 +197,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ObjectKeyFrameCollection.CloneCurrentValueCore(System.Windows.Freezable)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub CloneCurrentValueCore (sourceFreezable As Freezable)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void CloneCurrentValueCore(System::Windows::Freezable ^ sourceFreezable);" />
+      <MemberSignature Language="F#" Value="override this.CloneCurrentValueCore : System.Windows.Freezable -&gt; unit" Usage="objectKeyFrameCollection.CloneCurrentValueCore sourceFreezable" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -212,9 +232,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ObjectKeyFrameCollection.Contains(System.Windows.Media.Animation.ObjectKeyFrame)" />
       <MemberSignature Language="VB.NET" Value="Public Function Contains (keyFrame As ObjectKeyFrame) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Contains(System::Windows::Media::Animation::ObjectKeyFrame ^ keyFrame);" />
+      <MemberSignature Language="F#" Value="member this.Contains : System.Windows.Media.Animation.ObjectKeyFrame -&gt; bool" Usage="objectKeyFrameCollection.Contains keyFrame" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -226,14 +248,15 @@
       <Docs>
         <param name="keyFrame">The key frame to locate in the collection.</param>
         <summary>Indicates whether the collection contains the specified <see cref="T:System.Windows.Media.Animation.ObjectKeyFrameCollection" />.</summary>
-        <returns>**true** if the collection contains <paramref name="keyFrame" />; otherwise, **false**.</returns>
+        <returns>
+          <see langword="true" /> if the collection contains <paramref name="keyFrame" />; otherwise, <see langword="false" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
  This method performs a linear search; therefore, the average execution time is proportional to <xref:System.Windows.Media.Animation.ObjectKeyFrameCollection.Count%2A>. That is, this method is an O(*n*) operation, where *n* is  <xref:System.Windows.Media.Animation.ObjectKeyFrameCollection.Count%2A>.  
   
- This method determines equality by calling the object's Equals method..  
+ This method determines equality by calling the object's Equals method. 
   
  ]]></format>
         </remarks>
@@ -245,9 +268,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ObjectKeyFrameCollection.CopyTo(System.Windows.Media.Animation.ObjectKeyFrame[],System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub CopyTo (array As ObjectKeyFrame(), index As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void CopyTo(cli::array &lt;System::Windows::Media::Animation::ObjectKeyFrame ^&gt; ^ array, int index);" />
+      <MemberSignature Language="F#" Value="member this.CopyTo : System.Windows.Media.Animation.ObjectKeyFrame[] * int -&gt; unit" Usage="objectKeyFrameCollection.CopyTo (array, index)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -270,12 +295,14 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.ObjectKeyFrameCollection.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="System.Windows.Media.Animation.ObjectKeyFrameCollection.Count" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.ICollection.Count</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -293,9 +320,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ObjectKeyFrameCollection.CreateInstanceCore" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateInstanceCore () As Freezable" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Windows::Freezable ^ CreateInstanceCore();" />
+      <MemberSignature Language="F#" Value="override this.CreateInstanceCore : unit -&gt; System.Windows.Freezable" Usage="objectKeyFrameCollection.CreateInstanceCore " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -315,9 +344,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.ObjectKeyFrameCollection.Empty" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Empty As ObjectKeyFrameCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::Windows::Media::Animation::ObjectKeyFrameCollection ^ Empty { System::Windows::Media::Animation::ObjectKeyFrameCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Empty : System.Windows.Media.Animation.ObjectKeyFrameCollection" Usage="System.Windows.Media.Animation.ObjectKeyFrameCollection.Empty" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -335,9 +366,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ObjectKeyFrameCollection.FreezeCore(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function FreezeCore (isChecking As Boolean) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override bool FreezeCore(bool isChecking);" />
+      <MemberSignature Language="F#" Value="override this.FreezeCore : bool -&gt; bool" Usage="objectKeyFrameCollection.FreezeCore isChecking" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -360,9 +393,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ObjectKeyFrameCollection.GetAsFrozenCore(System.Windows.Freezable)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub GetAsFrozenCore (sourceFreezable As Freezable)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void GetAsFrozenCore(System::Windows::Freezable ^ sourceFreezable);" />
+      <MemberSignature Language="F#" Value="override this.GetAsFrozenCore : System.Windows.Freezable -&gt; unit" Usage="objectKeyFrameCollection.GetAsFrozenCore sourceFreezable" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -394,9 +429,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ObjectKeyFrameCollection.GetCurrentValueAsFrozenCore(System.Windows.Freezable)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub GetCurrentValueAsFrozenCore (sourceFreezable As Freezable)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void GetCurrentValueAsFrozenCore(System::Windows::Freezable ^ sourceFreezable);" />
+      <MemberSignature Language="F#" Value="override this.GetCurrentValueAsFrozenCore : System.Windows.Freezable -&gt; unit" Usage="objectKeyFrameCollection.GetCurrentValueAsFrozenCore sourceFreezable" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -426,12 +463,14 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ObjectKeyFrameCollection.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator&#xA;override this.GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="objectKeyFrameCollection.GetEnumerator " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -467,9 +506,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ObjectKeyFrameCollection.IndexOf(System.Windows.Media.Animation.ObjectKeyFrame)" />
       <MemberSignature Language="VB.NET" Value="Public Function IndexOf (keyFrame As ObjectKeyFrame) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; int IndexOf(System::Windows::Media::Animation::ObjectKeyFrame ^ keyFrame);" />
+      <MemberSignature Language="F#" Value="member this.IndexOf : System.Windows.Media.Animation.ObjectKeyFrame -&gt; int" Usage="objectKeyFrameCollection.IndexOf keyFrame" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -502,9 +543,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ObjectKeyFrameCollection.Insert(System.Int32,System.Windows.Media.Animation.ObjectKeyFrame)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Insert (index As Integer, keyFrame As ObjectKeyFrame)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Insert(int index, System::Windows::Media::Animation::ObjectKeyFrame ^ keyFrame);" />
+      <MemberSignature Language="F#" Value="member this.Insert : int * System.Windows.Media.Animation.ObjectKeyFrame -&gt; unit" Usage="objectKeyFrameCollection.Insert (index, keyFrame)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -527,12 +570,14 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.ObjectKeyFrameCollection.IsFixedSize" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsFixedSize As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsFixedSize { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsFixedSize : bool" Usage="System.Windows.Media.Animation.ObjectKeyFrameCollection.IsFixedSize" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.IList.IsFixedSize</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -540,12 +585,13 @@
       </ReturnValue>
       <Docs>
         <summary>Gets a value that indicates whether this <see cref="T:System.Windows.Media.Animation.ObjectKeyFrameCollection" /> has a fixed size.</summary>
-        <value>**true** if this <see cref="T:System.Windows.Media.Animation.ObjectKeyFrameCollection" /> has a fixed size; otherwise, **false**.</value>
+        <value>
+          <see langword="true" /> if this <see cref="T:System.Windows.Media.Animation.ObjectKeyFrameCollection" /> has a fixed size; otherwise, <see langword="false" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- If this property returns **true**, then this collection is frozen; see the <xref:System.Windows.Freezable.IsFrozen%2A> property for more information.  
+ If this property returns `true`, then this collection is frozen; see the <xref:System.Windows.Freezable.IsFrozen%2A> property for more information.  
   
  ]]></format>
         </remarks>
@@ -558,12 +604,14 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.ObjectKeyFrameCollection.IsReadOnly" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsReadOnly As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsReadOnly { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsReadOnly : bool" Usage="System.Windows.Media.Animation.ObjectKeyFrameCollection.IsReadOnly" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.IList.IsReadOnly</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -571,12 +619,13 @@
       </ReturnValue>
       <Docs>
         <summary>Gets a value that indicates whether this <see cref="T:System.Windows.Media.Animation.ObjectKeyFrameCollection" /> is read-only.</summary>
-        <value>**true** if this collection is read-only; otherwise, **false**.</value>
+        <value>
+          <see langword="true" /> if this collection is read-only; otherwise, <see langword="false" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- A frozen collection's <xref:System.Windows.Media.Animation.ObjectKeyFrameCollection.IsReadOnly%2A> property is **true**. For more information, see the <xref:System.Windows.Freezable.IsFrozen%2A> property.  
+ A frozen collection's <xref:System.Windows.Media.Animation.ObjectKeyFrameCollection.IsReadOnly%2A> property is `true`. For more information, see the <xref:System.Windows.Freezable.IsFrozen%2A> property.  
   
  ]]></format>
         </remarks>
@@ -589,12 +638,14 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.ObjectKeyFrameCollection.IsSynchronized" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsSynchronized As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsSynchronized { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsSynchronized : bool" Usage="System.Windows.Media.Animation.ObjectKeyFrameCollection.IsSynchronized" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.ICollection.IsSynchronized</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -602,7 +653,8 @@
       </ReturnValue>
       <Docs>
         <summary>Gets a value that indicates whether access to this <see cref="T:System.Windows.Media.Animation.ObjectKeyFrameCollection" /> is synchronized (thread-safe)</summary>
-        <value>**true** if access to the collection is synchronized (thread-safe); otherwise, **false**.</value>
+        <value>
+          <see langword="true" /> if access to the collection is synchronized (thread-safe); otherwise, <see langword="false" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -619,9 +671,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.ObjectKeyFrameCollection.Item(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Default Public Property Item(index As Integer) As ObjectKeyFrame" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Media::Animation::ObjectKeyFrame ^ default[int] { System::Windows::Media::Animation::ObjectKeyFrame ^ get(int index); void set(int index, System::Windows::Media::Animation::ObjectKeyFrame ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : System.Windows.Media.Animation.ObjectKeyFrame with get, set" Usage="System.Windows.Media.Animation.ObjectKeyFrameCollection.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -635,7 +689,7 @@
         <summary>Gets or sets the <see cref="T:System.Windows.Media.Animation.ObjectKeyFrameCollection" /> at the specified index.</summary>
         <value>The <see cref="T:System.Windows.Media.Animation.ObjectKeyFrame" /> at the specified index.</value>
         <remarks>To be added.</remarks>
-        <exception cref="T:System.InvalidOperationException">The attempt to modify the collection is invalid because the collection is frozen (its <see cref="P:System.Windows.Freezable.IsFrozen" /> property is **true**).</exception>
+        <exception cref="T:System.InvalidOperationException">The attempt to modify the collection is invalid because the collection is frozen (its <see cref="P:System.Windows.Freezable.IsFrozen" /> property is <see langword="true" />).</exception>
         <exception cref="T:System.ArgumentOutOfRangeException">
           <paramref name="index" /> is less than zero.  
   
@@ -650,9 +704,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ObjectKeyFrameCollection.Remove(System.Windows.Media.Animation.ObjectKeyFrame)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Remove (keyFrame As ObjectKeyFrame)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Remove(System::Windows::Media::Animation::ObjectKeyFrame ^ keyFrame);" />
+      <MemberSignature Language="F#" Value="member this.Remove : System.Windows.Media.Animation.ObjectKeyFrame -&gt; unit" Usage="objectKeyFrameCollection.Remove keyFrame" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -673,12 +729,14 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ObjectKeyFrameCollection.RemoveAt(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub RemoveAt (index As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void RemoveAt(int index);" />
+      <MemberSignature Language="F#" Value="abstract member RemoveAt : int -&gt; unit&#xA;override this.RemoveAt : int -&gt; unit" Usage="objectKeyFrameCollection.RemoveAt index" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IList.RemoveAt(System.Int32)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -699,12 +757,14 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.ObjectKeyFrameCollection.SyncRoot" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SyncRoot As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ SyncRoot { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SyncRoot : obj" Usage="System.Windows.Media.Animation.ObjectKeyFrameCollection.SyncRoot" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.ICollection.SyncRoot</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -727,6 +787,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -738,7 +799,7 @@
       </Parameters>
       <Docs>
         <param name="array">The one-dimensional <see cref="T:System.Array" /> that is the destination of the elements copied from <see cref="T:System.Collections.ICollection" />. The <see cref="T:System.Array" /> must have zero-based indexing.</param>
-        <param name="index">The zero-based index in <c>array</c> at which copying begins.</param>
+        <param name="index">The zero-based index in <paramref name="array" /> at which copying begins.</param>
         <summary>Copies the elements of the <see cref="T:System.Collections.ICollection" /> to an <see cref="T:System.Array" />, starting at a particular <see cref="T:System.Array" /> index.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -755,6 +816,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -782,6 +844,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -810,6 +873,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -837,6 +901,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -858,15 +923,22 @@
       <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
       <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.ObjectKeyFrameCollection.System#Collections#IList#Item(System.Int32)" />
       <MemberSignature Language="VB.NET" Value=" Property Item(index As Integer) As Object Implements IList.Item" />
-      <MemberSignature Language="C++ CLI" Value="property System::Object ^ System.Collections.IList.Item[int] { System::Object ^ get(int index); void set(int index, System::Object ^ value); };" />
+      <MemberSignature Language="C++ CLI" Value="property System::Object ^ System::Collections::IList::Item[int] { System::Object ^ get(int index); void set(int index, System::Object ^ value); };" />
+      <MemberSignature Language="F#" Usage="System.Collections.IList.Item" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.IList.Item(System.Int32)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
@@ -893,6 +965,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

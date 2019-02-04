@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Data.Objects.ObjectParameterCollection" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ObjectParameterCollection&#xA;Implements ICollection(Of ObjectParameter), IEnumerable(Of ObjectParameter)" />
   <TypeSignature Language="C++ CLI" Value="public ref class ObjectParameterCollection sealed : System::Collections::Generic::ICollection&lt;System::Data::Objects::ObjectParameter ^&gt;, System::Collections::Generic::IEnumerable&lt;System::Data::Objects::ObjectParameter ^&gt;" />
+  <TypeSignature Language="F#" Value="type ObjectParameterCollection = class&#xA;    interface ICollection&lt;ObjectParameter&gt;&#xA;    interface seq&lt;ObjectParameter&gt;&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -17,6 +19,12 @@
     </Interface>
     <Interface>
       <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Data.Objects.ObjectParameter&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
     </Interface>
   </Interfaces>
   <Docs>
@@ -33,18 +41,19 @@
   
  Parameters must be unique in the <xref:System.Data.Objects.ObjectParameterCollection>. There cannot be two parameters in the collection with the same name.  
   
- When using composition methods, such as <xref:System.Data.Objects.ObjectQuery%601.Union%2A>, <xref:System.Data.Objects.ObjectQuery%601.UnionAll%2A>, <xref:System.Data.Objects.ObjectQuery%601.Intersect%2A> and <xref:System.Data.Objects.ObjectQuery%601.Except%2A>, the parameters are merged. An exception is thrown when the sets of parameters are incompatible or incomplete. For more information, see [Query Builder Methods](http://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+ When using composition methods, such as <xref:System.Data.Objects.ObjectQuery%601.Union%2A>, <xref:System.Data.Objects.ObjectQuery%601.UnionAll%2A>, <xref:System.Data.Objects.ObjectQuery%601.Intersect%2A> and <xref:System.Data.Objects.ObjectQuery%601.Except%2A>, the parameters are merged. An exception is thrown when the sets of parameters are incompatible or incomplete. For more information, see [Query Builder Methods](https://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0).  
   
    
   
 ## Examples  
- The example in this topic is based on the [AdventureWorks Sales Model](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832). The example adds new parameters to the collection and gets the count of the parameters in the collection. Then it iterates through the <xref:System.Data.Objects.ObjectParameterCollection> and displays the name, type, and value of each parameter in the collection.  
+ The example in this topic is based on the [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832). The example adds new parameters to the collection and gets the count of the parameters in the collection. Then it iterates through the <xref:System.Data.Objects.ObjectParameterCollection> and displays the name, type, and value of each parameter in the collection.  
   
  [!code-csharp[DP ObjectServices Concepts#ObjectParameterCollection_Count_Add_Indexer](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectparametercollection_count_add_indexer)]
  [!code-vb[DP ObjectServices Concepts#ObjectParameterCollection_Count_Add_Indexer](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectparametercollection_count_add_indexer)]  
   
  ]]></format>
     </remarks>
+    <related type="Article" href="~/docs/framework/data/adonet/ef/querying-a-conceptual-model.md">Querying Data as Objects and Shaping Results (Entity Framework)</related>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -53,12 +62,14 @@
       <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectParameterCollection.Add(System.Data.Objects.ObjectParameter)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Add (parameter As ObjectParameter)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Add(System::Data::Objects::ObjectParameter ^ parameter);" />
+      <MemberSignature Language="F#" Value="abstract member Add : System.Data.Objects.ObjectParameter -&gt; unit&#xA;override this.Add : System.Data.Objects.ObjectParameter -&gt; unit" Usage="objectParameterCollection.Add parameter" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.Generic.ICollection`1.Add(`0)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -76,12 +87,12 @@
 ## Remarks  
  After parameters have been added, they can be removed from the collection and the collection can be cleared, as long as the query has not been compiled or executed. Parameter names cannot be changed, but values can be changed at any time.  
   
- Parameters must be unique in the <xref:System.Data.Objects.ObjectParameterCollection>. There cannot be two parameters in the collection with the same name. For more information, see [Query Builder Methods](http://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+ Parameters must be unique in the <xref:System.Data.Objects.ObjectParameterCollection>. There cannot be two parameters in the collection with the same name. For more information, see [Query Builder Methods](https://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0).  
   
    
   
 ## Examples  
- The example in this topic is based on the [AdventureWorks Sales Model](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832). The example adds new parameters to the collection. It iterates through the <xref:System.Data.Objects.ObjectParameterCollection> and displays the name, type, and value of each parameter in the collection.  
+ The example in this topic is based on the [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832). The example adds new parameters to the collection. It iterates through the <xref:System.Data.Objects.ObjectParameterCollection> and displays the name, type, and value of each parameter in the collection.  
   
  [!code-csharp[DP ObjectServices Concepts#ObjectParameterCollection_Count_Add_Indexer](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectparametercollection_count_add_indexer)]
  [!code-vb[DP ObjectServices Concepts#ObjectParameterCollection_Count_Add_Indexer](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectparametercollection_count_add_indexer)]  
@@ -93,8 +104,9 @@
   
  -or-  
   
- Another parameter with the same name as the <paramref name="parameter" /> argument already exists in the collection. Note that the lookup is case-insensitive. This behavior differs from that of most collections, and is more like that of a <see cref="T:System.Collections.Generic.Dictionary" />.</exception>
+ Another parameter with the same name as the <paramref name="parameter" /> argument already exists in the collection. Note that the lookup is case-insensitive. This behavior differs from that of most collections, and is more like that of a <see cref="T:System.Collections.Generic.Dictionary`2" />.</exception>
         <exception cref="T:System.ArgumentOutOfRangeException">The type of the <paramref name="parameter" /> is not valid.</exception>
+        <related type="Article" href="~/docs/framework/data/adonet/ef/querying-a-conceptual-model.md">Querying Data as Objects and Shaping Results (Entity Framework)</related>
       </Docs>
     </Member>
     <Member MemberName="Clear">
@@ -103,12 +115,14 @@
       <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectParameterCollection.Clear" />
       <MemberSignature Language="VB.NET" Value="Public Sub Clear ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Clear();" />
+      <MemberSignature Language="F#" Value="abstract member Clear : unit -&gt; unit&#xA;override this.Clear : unit -&gt; unit" Usage="objectParameterCollection.Clear " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.Generic.ICollection`1.Clear</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -135,12 +149,14 @@
       <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectParameterCollection.Contains(System.Data.Objects.ObjectParameter)" />
       <MemberSignature Language="VB.NET" Value="Public Function Contains (parameter As ObjectParameter) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Contains(System::Data::Objects::ObjectParameter ^ parameter);" />
+      <MemberSignature Language="F#" Value="abstract member Contains : System.Data.Objects.ObjectParameter -&gt; bool&#xA;override this.Contains : System.Data.Objects.ObjectParameter -&gt; bool" Usage="objectParameterCollection.Contains parameter" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.Generic.ICollection`1.Contains(`0)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -152,7 +168,8 @@
       <Docs>
         <param name="parameter">The <see cref="T:System.Data.Objects.ObjectParameter" /> to find in the collection.</param>
         <summary>Checks for the existence of a specified <see cref="T:System.Data.Objects.ObjectParameter" /> in the collection by reference.</summary>
-        <returns>Returns <see langword="true" /> if the parameter object was found in the collection; otherwise, <see langword="false" />.</returns>
+        <returns>
+          <see langword="true" /> if the parameter object was found in the collection; otherwise, <see langword="false" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -170,9 +187,11 @@
       <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectParameterCollection.Contains(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function Contains (name As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Contains(System::String ^ name);" />
+      <MemberSignature Language="F#" Value="member this.Contains : string -&gt; bool" Usage="objectParameterCollection.Contains name" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -182,14 +201,15 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">The name of the parameter to look for in the collection. This name should not include the "@" parameter marker that is used in the [!INCLUDE[esql](~/includes/esql-md.md)] statements, only the actual name.</param>
+        <param name="name">The name of the parameter to look for in the collection. This name should not include the "\@" parameter marker that is used in the Entity SQL statements, only the actual name.</param>
         <summary>Determines whether an <see cref="T:System.Data.Objects.ObjectParameter" /> with the specified name is in the collection.</summary>
-        <returns>Returns <see langword="true" /> if a parameter with the specified name was found in the collection; otherwise, <see langword="false" />.</returns>
+        <returns>
+          <see langword="true" /> if a parameter with the specified name was found in the collection; otherwise, <see langword="false" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- The example in this topic is based on the [AdventureWorks Sales Model](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832). The example uses the <xref:System.Data.Objects.ObjectParameterCollection.Contains%2A> method to determine whether the specified parameter is in the collection.  
+ The example in this topic is based on the [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832). The example uses the <xref:System.Data.Objects.ObjectParameterCollection.Contains%2A> method to determine whether the specified parameter is in the collection.  
   
  [!code-csharp[DP ObjectServices Concepts#ObjectParameterCollection_StringArg](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectparametercollection_stringarg)]
  [!code-vb[DP ObjectServices Concepts#ObjectParameterCollection_StringArg](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectparametercollection_stringarg)]  
@@ -205,9 +225,11 @@
       <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectParameterCollection.CopyTo(System.Data.Objects.ObjectParameter[],System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub CopyTo (array As ObjectParameter(), index As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void CopyTo(cli::array &lt;System::Data::Objects::ObjectParameter ^&gt; ^ array, int index);" />
+      <MemberSignature Language="F#" Value="abstract member CopyTo : System.Data.Objects.ObjectParameter[] * int -&gt; unit&#xA;override this.CopyTo : System.Data.Objects.ObjectParameter[] * int -&gt; unit" Usage="objectParameterCollection.CopyTo (array, index)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -225,7 +247,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- The example in this topic is based on the [AdventureWorks Sales Model](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832). The example copies the parameters into the specified array.  
+ The example in this topic is based on the [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832). The example copies the parameters into the specified array.  
   
  [!code-csharp[DP ObjectServices Concepts#ObjectParameterCollection_CopyTo](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectparametercollection_copyto)]
  [!code-vb[DP ObjectServices Concepts#ObjectParameterCollection_CopyTo](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectparametercollection_copyto)]  
@@ -240,12 +262,14 @@
       <MemberSignature Language="DocId" Value="P:System.Data.Objects.ObjectParameterCollection.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="System.Data.Objects.ObjectParameterCollection.Count" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.Generic.ICollection`1.Count</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -258,13 +282,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- The example in this topic is based on the [AdventureWorks Sales Model](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832). The example adds new parameters to the collection and gets the count of the parameters in the collection. Then it iterates through the <xref:System.Data.Objects.ObjectParameterCollection> and displays the name, type, and value of each parameter in the collection.  
+ The example in this topic is based on the [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832). The example adds new parameters to the collection and gets the count of the parameters in the collection. Then it iterates through the <xref:System.Data.Objects.ObjectParameterCollection> and displays the name, type, and value of each parameter in the collection.  
   
  [!code-csharp[DP ObjectServices Concepts#ObjectParameterCollection_Count_Add_Indexer](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectparametercollection_count_add_indexer)]
  [!code-vb[DP ObjectServices Concepts#ObjectParameterCollection_Count_Add_Indexer](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectparametercollection_count_add_indexer)]  
   
  ]]></format>
         </remarks>
+        <related type="Article" href="~/docs/framework/data/adonet/ef/querying-a-conceptual-model.md">Querying Data as Objects and Shaping Results (Entity Framework)</related>
       </Docs>
     </Member>
     <Member MemberName="Item">
@@ -273,9 +298,11 @@
       <MemberSignature Language="DocId" Value="P:System.Data.Objects.ObjectParameterCollection.Item(System.String)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(name As String) As ObjectParameter" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Data::Objects::ObjectParameter ^ default[System::String ^] { System::Data::Objects::ObjectParameter ^ get(System::String ^ name); };" />
+      <MemberSignature Language="F#" Value="member this.Item(string) : System.Data.Objects.ObjectParameter" Usage="System.Data.Objects.ObjectParameterCollection.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -285,7 +312,7 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">The name of the parameter to find. This name should not include the "@" parameter marker that is used in the [!INCLUDE[esql](~/includes/esql-md.md)] statements, only the actual name.</param>
+        <param name="name">The name of the parameter to find. This name should not include the "\@" parameter marker that is used in the Entity SQL statements, only the actual name.</param>
         <summary>Provides an indexer that allows callers to retrieve parameters by name.</summary>
         <value>The <see cref="T:System.Data.Objects.ObjectParameter" /> instance.</value>
         <remarks>To be added.</remarks>
@@ -298,12 +325,14 @@
       <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectParameterCollection.Remove(System.Data.Objects.ObjectParameter)" />
       <MemberSignature Language="VB.NET" Value="Public Function Remove (parameter As ObjectParameter) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Remove(System::Data::Objects::ObjectParameter ^ parameter);" />
+      <MemberSignature Language="F#" Value="abstract member Remove : System.Data.Objects.ObjectParameter -&gt; bool&#xA;override this.Remove : System.Data.Objects.ObjectParameter -&gt; bool" Usage="objectParameterCollection.Remove parameter" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.Generic.ICollection`1.Remove(`0)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -315,7 +344,8 @@
       <Docs>
         <param name="parameter">An object to remove from the collection.</param>
         <summary>Removes an instance of an <see cref="T:System.Data.Objects.ObjectParameter" /> from the collection by reference if it exists in the collection.</summary>
-        <returns>Returns <see langword="true" /> if the parameter object was found and removed from the collection; otherwise, <see langword="false" />.</returns>
+        <returns>
+          <see langword="true" /> if the parameter object was found and removed from the collection; otherwise, <see langword="false" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -325,7 +355,7 @@
    
   
 ## Examples  
- The example in this topic is based on the [AdventureWorks Sales Model](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832). The example adds two parameters to the collection and then removes the parameters.  
+ The example in this topic is based on the [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832). The example adds two parameters to the collection and then removes the parameters.  
   
  [!code-csharp[DP ObjectServices Concepts#ObjectParameterCollection_Remove](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectparametercollection_remove)]
  [!code-vb[DP ObjectServices Concepts#ObjectParameterCollection_Remove](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectparametercollection_remove)]  
@@ -340,13 +370,15 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.Generic.ICollection&lt;System.Data.Objects.ObjectParameter&gt;.IsReadOnly" />
       <MemberSignature Language="DocId" Value="P:System.Data.Objects.ObjectParameterCollection.System#Collections#Generic#ICollection&lt;System#Data#Objects#ObjectParameter&gt;#IsReadOnly" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property IsReadOnly As Boolean Implements ICollection(Of ObjectParameter).IsReadOnly" />
-      <MemberSignature Language="C++ CLI" Value="property bool System.Collections.Generic.ICollection&lt;System.Data.Objects.ObjectParameter&gt;.IsReadOnly { bool get(); };" />
+      <MemberSignature Language="C++ CLI" Value="property bool System::Collections::Generic::ICollection&lt;System::Data::Objects::ObjectParameter&gt;::IsReadOnly { bool get(); };" />
+      <MemberSignature Language="F#" Usage="System.Collections.Generic.ICollection&lt;System.Data.Objects.ObjectParameter&gt;.IsReadOnly" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.Generic.ICollection`1.IsReadOnly</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -377,6 +409,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -408,6 +441,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

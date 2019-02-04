@@ -4,8 +4,11 @@
   <TypeSignature Language="DocId" Value="T:System.Web.UI.DataBinder" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class DataBinder" />
   <TypeSignature Language="C++ CLI" Value="public ref class DataBinder sealed" />
+  <TypeSignature Language="F#" Value="type DataBinder = class" />
   <AssemblyInfo>
     <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -20,7 +23,7 @@
 ## Remarks  
  You can use the overloaded static <xref:System.Web.UI.DataBinder.Eval%2A> method of this class in data-binding syntax in an ASP.NET Web page. This provides an easier syntax to work with than standard data binding. However, because `DataBinder.Eval` provides automatic type conversion, it can result in slower performance.  
   
- For more information about ASP.NET data binding, expressions, and syntax, see [Binding to Databases](http://msdn.microsoft.com/library/ab7b2846-975b-4057-a948-45527497c742) and [Data-Binding Expressions Overview](http://msdn.microsoft.com/library/14cdd57d-0f82-4667-b503-73e1a96f136a).  
+ For more information about ASP.NET data binding, expressions, and syntax, see [Binding to Databases](https://msdn.microsoft.com/library/ab7b2846-975b-4057-a948-45527497c742) and [Data-Binding Expressions Overview](https://msdn.microsoft.com/library/14cdd57d-0f82-4667-b503-73e1a96f136a).  
   
  Starting in .NET Framework 4.5, you can use model binding to simplify some of the tasks that you had to perform through data-binding in earlier versions. For a tutorial series on using model binding with Web Forms, see [Model Binding and Web Forms](/aspnet/web-forms/overview/presenting-and-managing-data/model-binding/retrieving-data).  
   
@@ -54,8 +57,15 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.Web.UI.DataBinder" /> class.</summary>
@@ -68,11 +78,17 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataBinder.EnableCaching" />
       <MemberSignature Language="VB.NET" Value="Public Shared Property EnableCaching As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property bool EnableCaching { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.EnableCaching : bool with get, set" Usage="System.Web.UI.DataBinder.EnableCaching" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -106,9 +122,12 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBinder.Eval(System.Object,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Eval (container As Object, expression As String) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Object ^ Eval(System::Object ^ container, System::String ^ expression);" />
+      <MemberSignature Language="F#" Value="static member Eval : obj * string -&gt; obj" Usage="System.Web.UI.DataBinder.Eval (container, expression)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -120,7 +139,7 @@
       </Parameters>
       <Docs>
         <param name="container">The object reference against which the expression is evaluated. This must be a valid object identifier in the page's specified language.</param>
-        <param name="expression">The navigation path from the <c>container</c> object to the public property value to be placed in the bound control property. This must be a string of property or field names separated by periods, such as <c>Tables[0].DefaultView.[0].Price</c> in C# or <c>Tables(0).DefaultView.(0).Price</c> in Visual Basic.</param>
+        <param name="expression">The navigation path from the <paramref name="container" /> object to the public property value to be placed in the bound control property. This must be a string of property or field names separated by periods, such as <c>Tables[0].DefaultView.[0].Price</c> in C# or <c>Tables(0).DefaultView.(0).Price</c> in Visual Basic.</param>
         <summary>Evaluates data-binding expressions at run time.</summary>
         <returns>An <see cref="T:System.Object" /> instance that results from the evaluation of the data-binding expression.</returns>
         <remarks>
@@ -179,9 +198,12 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBinder.Eval(System.Object,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Eval (container As Object, expression As String, format As String) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ Eval(System::Object ^ container, System::String ^ expression, System::String ^ format);" />
+      <MemberSignature Language="F#" Value="static member Eval : obj * string * string -&gt; string" Usage="System.Web.UI.DataBinder.Eval (container, expression, format)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -194,7 +216,7 @@
       </Parameters>
       <Docs>
         <param name="container">The object reference against which the expression is evaluated. This must be a valid object identifier in the page's specified language.</param>
-        <param name="expression">The navigation path from the <c>container</c> object to the public property value to be placed in the bound control property. This must be a string of property or field names separated by periods, such as <c>Tables[0].DefaultView.[0].Price</c> in C# or <c>Tables(0).DefaultView.(0).Price</c> in Visual Basic.</param>
+        <param name="expression">The navigation path from the <paramref name="container" /> object to the public property value to be placed in the bound control property. This must be a string of property or field names separated by periods, such as <c>Tables[0].DefaultView.[0].Price</c> in C# or <c>Tables(0).DefaultView.(0).Price</c> in Visual Basic.</param>
         <param name="format">A .NET Framework format string (like those used by <see cref="M:System.String.Format(System.String,System.Object)" />) that converts the <see cref="T:System.Object" /> instance returned by the data-binding expression to a <see cref="T:System.String" /> object.</param>
         <summary>Evaluates data-binding expressions at run time and formats the result as a string.</summary>
         <returns>A <see cref="T:System.String" /> object that results from evaluating the data-binding expression and converting it to a string type.</returns>
@@ -244,6 +266,7 @@
         </remarks>
         <altmember cref="T:System.Web.UI.XPathBinder" />
         <altmember cref="T:System.Web.UI.IBindableTemplate" />
+        <related type="Article" href="~/docs/standard/base-types/formatting-types.md">Formatting Types in .NET</related>
       </Docs>
     </Member>
     <MemberGroup MemberName="GetDataItem">
@@ -261,9 +284,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBinder.GetDataItem(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetDataItem (container As Object) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Object ^ GetDataItem(System::Object ^ container);" />
+      <MemberSignature Language="F#" Value="static member GetDataItem : obj -&gt; obj" Usage="System.Web.UI.DataBinder.GetDataItem container" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -295,9 +320,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBinder.GetDataItem(System.Object,System.Boolean@)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetDataItem (container As Object, ByRef foundDataItem As Boolean) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Object ^ GetDataItem(System::Object ^ container, [Runtime::InteropServices::Out] bool % foundDataItem);" />
+      <MemberSignature Language="F#" Value="static member GetDataItem : obj *  -&gt; obj" Usage="System.Web.UI.DataBinder.GetDataItem (container, foundDataItem)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -305,7 +332,7 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="container" Type="System.Object" />
-        <Parameter Name="foundDataItem" Type="System.Boolean&amp;" RefType="out" />
+        <Parameter Name="foundDataItem" Type="System.Boolean" RefType="out" />
       </Parameters>
       <Docs>
         <param name="container">The object reference against which the expression is evaluated. This must be a valid object identifier in the page's specified language.</param>
@@ -338,9 +365,12 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBinder.GetIndexedPropertyValue(System.Object,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetIndexedPropertyValue (container As Object, expr As String) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Object ^ GetIndexedPropertyValue(System::Object ^ container, System::String ^ expr);" />
+      <MemberSignature Language="F#" Value="static member GetIndexedPropertyValue : obj * string -&gt; obj" Usage="System.Web.UI.DataBinder.GetIndexedPropertyValue (container, expr)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -351,8 +381,8 @@
         <Parameter Name="expr" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="container">The object reference against which <c>expr</c> is evaluated. This must be a valid object identifier in the specified language for the page.</param>
-        <param name="expr">The navigation path from the <c>container</c> object to the public property value to place in the bound control property. This must be a string of property or field names separated by periods, such as <c>Tables[0].DefaultView.[0].Price</c> in C# or <c>Tables(0).DefaultView.(0).Price</c> in Visual Basic.</param>
+        <param name="container">The object reference against which <paramref name="expr" /> is evaluated. This must be a valid object identifier in the specified language for the page.</param>
+        <param name="expr">The navigation path from the <paramref name="container" /> object to the public property value to place in the bound control property. This must be a string of property or field names separated by periods, such as <c>Tables[0].DefaultView.[0].Price</c> in C# or <c>Tables(0).DefaultView.(0).Price</c> in Visual Basic.</param>
         <summary>Retrieves the value of a property of the specified container and navigation path.</summary>
         <returns>An object that results from the evaluation of the data-binding expression.</returns>
         <remarks>
@@ -368,13 +398,13 @@
         <exception cref="T:System.ArgumentNullException">
           <paramref name="container" /> is <see langword="null" />.  
   
- \- or -  
+-or-
   
  <paramref name="expr" /> is <see langword="null" /> or an empty string ("").</exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="expr" /> is not a valid indexed expression.  
   
- \- or -  
+-or-
   
  <paramref name="expr" /> does not allow indexed access.</exception>
         <altmember cref="Overload:System.Web.UI.DataBinder.GetPropertyValue" />
@@ -386,9 +416,12 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBinder.GetIndexedPropertyValue(System.Object,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetIndexedPropertyValue (container As Object, propName As String, format As String) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ GetIndexedPropertyValue(System::Object ^ container, System::String ^ propName, System::String ^ format);" />
+      <MemberSignature Language="F#" Value="static member GetIndexedPropertyValue : obj * string * string -&gt; string" Usage="System.Web.UI.DataBinder.GetIndexedPropertyValue (container, propName, format)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -441,9 +474,12 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBinder.GetPropertyValue(System.Object,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetPropertyValue (container As Object, propName As String) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Object ^ GetPropertyValue(System::Object ^ container, System::String ^ propName);" />
+      <MemberSignature Language="F#" Value="static member GetPropertyValue : obj * string -&gt; obj" Usage="System.Web.UI.DataBinder.GetPropertyValue (container, propName)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -486,9 +522,12 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBinder.GetPropertyValue(System.Object,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetPropertyValue (container As Object, propName As String, format As String) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ GetPropertyValue(System::Object ^ container, System::String ^ propName, System::String ^ format);" />
+      <MemberSignature Language="F#" Value="static member GetPropertyValue : obj * string * string -&gt; string" Usage="System.Web.UI.DataBinder.GetPropertyValue (container, propName, format)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -521,7 +560,7 @@
         <exception cref="T:System.ArgumentNullException">
           <paramref name="container" /> is <see langword="null" />.  
   
- \- or -  
+-or-
   
  <paramref name="propName" /> is <see langword="null" /> or an empty string ("").</exception>
         <exception cref="T:System.Web.HttpException">The object in <paramref name="container" /> does not have the property specified by <paramref name="propName" />.</exception>
@@ -532,6 +571,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsBindableType(class System.Type type) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBinder.IsBindableType(System.Type)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool IsBindableType(Type ^ type);" />
+      <MemberSignature Language="F#" Value="static member IsBindableType : Type -&gt; bool" Usage="System.Web.UI.DataBinder.IsBindableType type" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Evaluation.Project" />
   <TypeSignature Language="VB.NET" Value="Public Class Project" />
   <TypeSignature Language="C++ CLI" Value="public ref class Project" />
+  <TypeSignature Language="F#" Value="type Project = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -61,11 +62,17 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(Microsoft.Build.Construction.ProjectRootElement)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (xml As ProjectRootElement)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Project(Microsoft::Build::Construction::ProjectRootElement ^ xml);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Evaluation.Project : Microsoft.Build.Construction.ProjectRootElement -&gt; Microsoft.Build.Evaluation.Project" Usage="new Microsoft.Build.Evaluation.Project xml" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters>
         <Parameter Name="xml" Type="Microsoft.Build.Construction.ProjectRootElement" />
       </Parameters>
@@ -89,6 +96,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Evaluation.ProjectCollection projectCollection) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(Microsoft.Build.Evaluation.ProjectCollection)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Project(Microsoft::Build::Evaluation::ProjectCollection ^ projectCollection);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Evaluation.Project : Microsoft.Build.Evaluation.ProjectCollection -&gt; Microsoft.Build.Evaluation.Project" Usage="new Microsoft.Build.Evaluation.Project projectCollection" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -116,11 +124,17 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectFile As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Project(System::String ^ projectFile);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Evaluation.Project : string -&gt; Microsoft.Build.Evaluation.Project" Usage="new Microsoft.Build.Evaluation.Project projectFile" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters>
         <Parameter Name="projectFile" Type="System.String" />
       </Parameters>
@@ -145,11 +159,17 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlReader xmlReader) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(System.Xml.XmlReader)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Project(System::Xml::XmlReader ^ xmlReader);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Evaluation.Project : System.Xml.XmlReader -&gt; Microsoft.Build.Evaluation.Project" Usage="new Microsoft.Build.Evaluation.Project xmlReader" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters>
         <Parameter Name="xmlReader" Type="System.Xml.XmlReader" />
       </Parameters>
@@ -174,6 +194,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(Microsoft.Build.Construction.ProjectRootElement,System.Collections.Generic.IDictionary{System.String,System.String},System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (xml As ProjectRootElement, globalProperties As IDictionary(Of String, String), toolsVersion As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Project(Microsoft::Build::Construction::ProjectRootElement ^ xml, System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ globalProperties, System::String ^ toolsVersion);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Evaluation.Project : Microsoft.Build.Construction.ProjectRootElement * System.Collections.Generic.IDictionary&lt;string, string&gt; * string -&gt; Microsoft.Build.Evaluation.Project" Usage="new Microsoft.Build.Evaluation.Project (xml, globalProperties, toolsVersion)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -206,6 +227,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion, class Microsoft.Build.Evaluation.ProjectCollection projectCollection) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(System.Collections.Generic.IDictionary{System.String,System.String},System.String,Microsoft.Build.Evaluation.ProjectCollection)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Project(System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ globalProperties, System::String ^ toolsVersion, Microsoft::Build::Evaluation::ProjectCollection ^ projectCollection);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Evaluation.Project : System.Collections.Generic.IDictionary&lt;string, string&gt; * string * Microsoft.Build.Evaluation.ProjectCollection -&gt; Microsoft.Build.Evaluation.Project" Usage="new Microsoft.Build.Evaluation.Project (globalProperties, toolsVersion, projectCollection)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -237,6 +259,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (projectFile As String, globalProperties As IDictionary(Of String, String), toolsVersion As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Project(System::String ^ projectFile, System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ globalProperties, System::String ^ toolsVersion);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Evaluation.Project : string * System.Collections.Generic.IDictionary&lt;string, string&gt; * string -&gt; Microsoft.Build.Evaluation.Project" Usage="new Microsoft.Build.Evaluation.Project (projectFile, globalProperties, toolsVersion)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -269,6 +292,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlReader xmlReader, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(System.Xml.XmlReader,System.Collections.Generic.IDictionary{System.String,System.String},System.String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Project(System::Xml::XmlReader ^ xmlReader, System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ globalProperties, System::String ^ toolsVersion);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Evaluation.Project : System.Xml.XmlReader * System.Collections.Generic.IDictionary&lt;string, string&gt; * string -&gt; Microsoft.Build.Evaluation.Project" Usage="new Microsoft.Build.Evaluation.Project (xmlReader, globalProperties, toolsVersion)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -301,11 +325,17 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Construction.ProjectRootElement xml, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion, class Microsoft.Build.Evaluation.ProjectCollection projectCollection) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(Microsoft.Build.Construction.ProjectRootElement,System.Collections.Generic.IDictionary{System.String,System.String},System.String,Microsoft.Build.Evaluation.ProjectCollection)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Project(Microsoft::Build::Construction::ProjectRootElement ^ xml, System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ globalProperties, System::String ^ toolsVersion, Microsoft::Build::Evaluation::ProjectCollection ^ projectCollection);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Evaluation.Project : Microsoft.Build.Construction.ProjectRootElement * System.Collections.Generic.IDictionary&lt;string, string&gt; * string * Microsoft.Build.Evaluation.ProjectCollection -&gt; Microsoft.Build.Evaluation.Project" Usage="new Microsoft.Build.Evaluation.Project (xml, globalProperties, toolsVersion, projectCollection)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters>
         <Parameter Name="xml" Type="Microsoft.Build.Construction.ProjectRootElement" />
         <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
@@ -335,11 +365,17 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string projectFile, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion, class Microsoft.Build.Evaluation.ProjectCollection projectCollection) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String,Microsoft.Build.Evaluation.ProjectCollection)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Project(System::String ^ projectFile, System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ globalProperties, System::String ^ toolsVersion, Microsoft::Build::Evaluation::ProjectCollection ^ projectCollection);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Evaluation.Project : string * System.Collections.Generic.IDictionary&lt;string, string&gt; * string * Microsoft.Build.Evaluation.ProjectCollection -&gt; Microsoft.Build.Evaluation.Project" Usage="new Microsoft.Build.Evaluation.Project (projectFile, globalProperties, toolsVersion, projectCollection)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters>
         <Parameter Name="projectFile" Type="System.String" />
         <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
@@ -369,11 +405,17 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlReader xmlReader, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion, class Microsoft.Build.Evaluation.ProjectCollection projectCollection) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(System.Xml.XmlReader,System.Collections.Generic.IDictionary{System.String,System.String},System.String,Microsoft.Build.Evaluation.ProjectCollection)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Project(System::Xml::XmlReader ^ xmlReader, System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ globalProperties, System::String ^ toolsVersion, Microsoft::Build::Evaluation::ProjectCollection ^ projectCollection);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Evaluation.Project : System.Xml.XmlReader * System.Collections.Generic.IDictionary&lt;string, string&gt; * string * Microsoft.Build.Evaluation.ProjectCollection -&gt; Microsoft.Build.Evaluation.Project" Usage="new Microsoft.Build.Evaluation.Project (xmlReader, globalProperties, toolsVersion, projectCollection)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters>
         <Parameter Name="xmlReader" Type="System.Xml.XmlReader" />
         <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
@@ -403,6 +445,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Construction.ProjectRootElement xml, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion, class Microsoft.Build.Evaluation.ProjectCollection projectCollection, valuetype Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(Microsoft.Build.Construction.ProjectRootElement,System.Collections.Generic.IDictionary{System.String,System.String},System.String,Microsoft.Build.Evaluation.ProjectCollection,Microsoft.Build.Evaluation.ProjectLoadSettings)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Project(Microsoft::Build::Construction::ProjectRootElement ^ xml, System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ globalProperties, System::String ^ toolsVersion, Microsoft::Build::Evaluation::ProjectCollection ^ projectCollection, Microsoft::Build::Evaluation::ProjectLoadSettings loadSettings);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Evaluation.Project : Microsoft.Build.Construction.ProjectRootElement * System.Collections.Generic.IDictionary&lt;string, string&gt; * string * Microsoft.Build.Evaluation.ProjectCollection * Microsoft.Build.Evaluation.ProjectLoadSettings -&gt; Microsoft.Build.Evaluation.Project" Usage="new Microsoft.Build.Evaluation.Project (xml, globalProperties, toolsVersion, projectCollection, loadSettings)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -439,6 +482,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string projectFile, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion, class Microsoft.Build.Evaluation.ProjectCollection projectCollection, valuetype Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String,Microsoft.Build.Evaluation.ProjectCollection,Microsoft.Build.Evaluation.ProjectLoadSettings)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Project(System::String ^ projectFile, System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ globalProperties, System::String ^ toolsVersion, Microsoft::Build::Evaluation::ProjectCollection ^ projectCollection, Microsoft::Build::Evaluation::ProjectLoadSettings loadSettings);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Evaluation.Project : string * System.Collections.Generic.IDictionary&lt;string, string&gt; * string * Microsoft.Build.Evaluation.ProjectCollection * Microsoft.Build.Evaluation.ProjectLoadSettings -&gt; Microsoft.Build.Evaluation.Project" Usage="new Microsoft.Build.Evaluation.Project (projectFile, globalProperties, toolsVersion, projectCollection, loadSettings)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -475,6 +519,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlReader xmlReader, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion, class Microsoft.Build.Evaluation.ProjectCollection projectCollection, valuetype Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(System.Xml.XmlReader,System.Collections.Generic.IDictionary{System.String,System.String},System.String,Microsoft.Build.Evaluation.ProjectCollection,Microsoft.Build.Evaluation.ProjectLoadSettings)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Project(System::Xml::XmlReader ^ xmlReader, System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ globalProperties, System::String ^ toolsVersion, Microsoft::Build::Evaluation::ProjectCollection ^ projectCollection, Microsoft::Build::Evaluation::ProjectLoadSettings loadSettings);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Evaluation.Project : System.Xml.XmlReader * System.Collections.Generic.IDictionary&lt;string, string&gt; * string * Microsoft.Build.Evaluation.ProjectCollection * Microsoft.Build.Evaluation.ProjectLoadSettings -&gt; Microsoft.Build.Evaluation.Project" Usage="new Microsoft.Build.Evaluation.Project (xmlReader, globalProperties, toolsVersion, projectCollection, loadSettings)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -511,6 +556,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Construction.ProjectRootElement xml, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion, string subToolsetVersion, class Microsoft.Build.Evaluation.ProjectCollection projectCollection, valuetype Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(Microsoft.Build.Construction.ProjectRootElement,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,Microsoft.Build.Evaluation.ProjectCollection,Microsoft.Build.Evaluation.ProjectLoadSettings)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Project(Microsoft::Build::Construction::ProjectRootElement ^ xml, System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ globalProperties, System::String ^ toolsVersion, System::String ^ subToolsetVersion, Microsoft::Build::Evaluation::ProjectCollection ^ projectCollection, Microsoft::Build::Evaluation::ProjectLoadSettings loadSettings);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Evaluation.Project : Microsoft.Build.Construction.ProjectRootElement * System.Collections.Generic.IDictionary&lt;string, string&gt; * string * string * Microsoft.Build.Evaluation.ProjectCollection * Microsoft.Build.Evaluation.ProjectLoadSettings -&gt; Microsoft.Build.Evaluation.Project" Usage="new Microsoft.Build.Evaluation.Project (xml, globalProperties, toolsVersion, subToolsetVersion, projectCollection, loadSettings)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -549,6 +595,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string projectFile, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion, string subToolsetVersion, class Microsoft.Build.Evaluation.ProjectCollection projectCollection, valuetype Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,Microsoft.Build.Evaluation.ProjectCollection,Microsoft.Build.Evaluation.ProjectLoadSettings)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Project(System::String ^ projectFile, System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ globalProperties, System::String ^ toolsVersion, System::String ^ subToolsetVersion, Microsoft::Build::Evaluation::ProjectCollection ^ projectCollection, Microsoft::Build::Evaluation::ProjectLoadSettings loadSettings);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Evaluation.Project : string * System.Collections.Generic.IDictionary&lt;string, string&gt; * string * string * Microsoft.Build.Evaluation.ProjectCollection * Microsoft.Build.Evaluation.ProjectLoadSettings -&gt; Microsoft.Build.Evaluation.Project" Usage="new Microsoft.Build.Evaluation.Project (projectFile, globalProperties, toolsVersion, subToolsetVersion, projectCollection, loadSettings)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -587,6 +634,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlReader xmlReader, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion, string subToolsetVersion, class Microsoft.Build.Evaluation.ProjectCollection projectCollection, valuetype Microsoft.Build.Evaluation.ProjectLoadSettings loadSettings) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.#ctor(System.Xml.XmlReader,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,Microsoft.Build.Evaluation.ProjectCollection,Microsoft.Build.Evaluation.ProjectLoadSettings)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Project(System::Xml::XmlReader ^ xmlReader, System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ globalProperties, System::String ^ toolsVersion, System::String ^ subToolsetVersion, Microsoft::Build::Evaluation::ProjectCollection ^ projectCollection, Microsoft::Build::Evaluation::ProjectLoadSettings loadSettings);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Evaluation.Project : System.Xml.XmlReader * System.Collections.Generic.IDictionary&lt;string, string&gt; * string * string * Microsoft.Build.Evaluation.ProjectCollection * Microsoft.Build.Evaluation.ProjectLoadSettings -&gt; Microsoft.Build.Evaluation.Project" Usage="new Microsoft.Build.Evaluation.Project (xmlReader, globalProperties, toolsVersion, subToolsetVersion, projectCollection, loadSettings)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -635,11 +683,17 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.AddItem(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function AddItem (itemType As String, unevaluatedInclude As String) As IList(Of ProjectItem)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Generic::IList&lt;Microsoft::Build::Evaluation::ProjectItem ^&gt; ^ AddItem(System::String ^ itemType, System::String ^ unevaluatedInclude);" />
+      <MemberSignature Language="F#" Value="member this.AddItem : string * string -&gt; System.Collections.Generic.IList&lt;Microsoft.Build.Evaluation.ProjectItem&gt;" Usage="project.AddItem (itemType, unevaluatedInclude)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Build.Evaluation.ProjectItem&gt;</ReturnType>
       </ReturnValue>
@@ -651,7 +705,7 @@
         <param name="itemType">The item type of the added item.</param>
         <param name="unevaluatedInclude">Include attribute of the item to be added.</param>
         <summary>Adds an item with no metadata to the project.</summary>
-        <returns>Returns the added item.</returns>
+        <returns>The added item.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -670,6 +724,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.AddItem(System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})" />
       <MemberSignature Language="VB.NET" Value="Public Function AddItem (itemType As String, unevaluatedInclude As String, metadata As IEnumerable(Of KeyValuePair(Of String, String))) As IList(Of ProjectItem)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Generic::IList&lt;Microsoft::Build::Evaluation::ProjectItem ^&gt; ^ AddItem(System::String ^ itemType, System::String ^ unevaluatedInclude, System::Collections::Generic::IEnumerable&lt;System::Collections::Generic::KeyValuePair&lt;System::String ^, System::String ^&gt;&gt; ^ metadata);" />
+      <MemberSignature Language="F#" Value="member this.AddItem : string * string * seq&lt;System.Collections.Generic.KeyValuePair&lt;string, string&gt;&gt; -&gt; System.Collections.Generic.IList&lt;Microsoft.Build.Evaluation.ProjectItem&gt;" Usage="project.AddItem (itemType, unevaluatedInclude, metadata)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -688,7 +743,7 @@
         <param name="unevaluatedInclude">Include attribute of the item to be added.</param>
         <param name="metadata">The metadata of the added item.</param>
         <summary>Adds an item with the given metadata to the project.</summary>
-        <returns>Returns the added item.</returns>
+        <returns>The added item.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -716,11 +771,17 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.AddItemFast(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function AddItemFast (itemType As String, unevaluatedInclude As String) As IList(Of ProjectItem)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Generic::IList&lt;Microsoft::Build::Evaluation::ProjectItem ^&gt; ^ AddItemFast(System::String ^ itemType, System::String ^ unevaluatedInclude);" />
+      <MemberSignature Language="F#" Value="member this.AddItemFast : string * string -&gt; System.Collections.Generic.IList&lt;Microsoft.Build.Evaluation.ProjectItem&gt;" Usage="project.AddItemFast (itemType, unevaluatedInclude)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Build.Evaluation.ProjectItem&gt;</ReturnType>
       </ReturnValue>
@@ -732,7 +793,7 @@
         <param name="itemType">The item type to be added.</param>
         <param name="unevaluatedInclude">The unevaluated Include attribute to be added to the item.</param>
         <summary>Adds an item with no metadata to the project.  Makes no effort to see if an existing wildcard would already match the new item, unless it is the first item in an item group.  Makes no effort to locate the new item near similar items.</summary>
-        <returns>Returns a list of the project items added.</returns>
+        <returns>A list of the project items added.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -755,6 +816,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.AddItemFast(System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})" />
       <MemberSignature Language="VB.NET" Value="Public Function AddItemFast (itemType As String, unevaluatedInclude As String, metadata As IEnumerable(Of KeyValuePair(Of String, String))) As IList(Of ProjectItem)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Generic::IList&lt;Microsoft::Build::Evaluation::ProjectItem ^&gt; ^ AddItemFast(System::String ^ itemType, System::String ^ unevaluatedInclude, System::Collections::Generic::IEnumerable&lt;System::Collections::Generic::KeyValuePair&lt;System::String ^, System::String ^&gt;&gt; ^ metadata);" />
+      <MemberSignature Language="F#" Value="member this.AddItemFast : string * string * seq&lt;System.Collections.Generic.KeyValuePair&lt;string, string&gt;&gt; -&gt; System.Collections.Generic.IList&lt;Microsoft.Build.Evaluation.ProjectItem&gt;" Usage="project.AddItemFast (itemType, unevaluatedInclude, metadata)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -773,7 +835,7 @@
         <param name="unevaluatedInclude">The unevaluated Include attribute to be added to the item.</param>
         <param name="metadata">The metadata to be added.</param>
         <summary>Adds an item with metadata to the project. Metadata may be null, indicating no metadata. Makes no effort to see if an existing wildcard would already match the new item, unless it is the first item in an item group. Makes no effort to locate the new item near similar items.</summary>
-        <returns>Returns a list of the project items added.</returns>
+        <returns>A list of the project items added.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -796,6 +858,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.AllEvaluatedItemDefinitionMetadata" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AllEvaluatedItemDefinitionMetadata As ICollection(Of ProjectMetadata)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectMetadata ^&gt; ^ AllEvaluatedItemDefinitionMetadata { System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectMetadata ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.AllEvaluatedItemDefinitionMetadata : System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectMetadata&gt;" Usage="Microsoft.Build.Evaluation.Project.AllEvaluatedItemDefinitionMetadata" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -806,7 +869,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets all item definition metadata encountered during evaluation.</summary>
-        <value>Returns all item definition metadata encountered during evaluation. This does not include any elements whose conditions did not evaluate to true, nor any item definition metadata added since the last evaluation.</value>
+        <value>All item definition metadata encountered during evaluation. This does not include any elements whose conditions did not evaluate to true, nor any item definition metadata added since the last evaluation.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -823,6 +886,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.AllEvaluatedItems" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AllEvaluatedItems As ICollection(Of ProjectItem)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectItem ^&gt; ^ AllEvaluatedItems { System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectItem ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.AllEvaluatedItems : System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectItem&gt;" Usage="Microsoft.Build.Evaluation.Project.AllEvaluatedItems" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -833,7 +897,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets an enumerator over all items encountered during evaluation. These are read during the third evaluation pass.</summary>
-        <value>Returns an enumerator over all items encountered during evaluation. These are read during the third evaluation pass.</value>
+        <value>An enumerator over all items encountered during evaluation. These are read during the third evaluation pass.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -854,6 +918,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.AllEvaluatedProperties" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AllEvaluatedProperties As ICollection(Of ProjectProperty)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectProperty ^&gt; ^ AllEvaluatedProperties { System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectProperty ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.AllEvaluatedProperties : System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectProperty&gt;" Usage="Microsoft.Build.Evaluation.Project.AllEvaluatedProperties" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -864,7 +929,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets all properties encountered during evaluation.</summary>
-        <value>Returns all properties encountered during evaluation. This does not include any properties whose conditions did not evaluate to true, nor any properties added since the last evaluation.</value>
+        <value>All properties encountered during evaluation. This does not include any properties whose conditions did not evaluate to true, nor any properties added since the last evaluation.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -890,18 +955,25 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Build" />
       <MemberSignature Language="VB.NET" Value="Public Function Build () As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Build();" />
+      <MemberSignature Language="F#" Value="member this.Build : unit -&gt; bool" Usage="project.Build " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
         <summary>Builds this project, using the default targets.</summary>
-        <returns>Returns true on success; false otherwise.</returns>
+        <returns>
+          <see langword="true" /> on success; otherwise, <see langword="false" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -918,6 +990,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Build(Microsoft.Build.Framework.ILogger)" />
       <MemberSignature Language="VB.NET" Value="Public Function Build (logger As ILogger) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Build(Microsoft::Build::Framework::ILogger ^ logger);" />
+      <MemberSignature Language="F#" Value="member this.Build : Microsoft.Build.Framework.ILogger -&gt; bool" Usage="project.Build logger" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -932,7 +1005,8 @@
       <Docs>
         <param name="logger">The logger to be used during the build.</param>
         <summary>Builds this project, using the default targets and the given logger.</summary>
-        <returns>Returns true on success; false otherwise.</returns>
+        <returns>
+          <see langword="true" /> on success; otherwise, <see langword="false" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -949,11 +1023,17 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Build(System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger})" />
       <MemberSignature Language="VB.NET" Value="Public Function Build (loggers As IEnumerable(Of ILogger)) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Build(System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Framework::ILogger ^&gt; ^ loggers);" />
+      <MemberSignature Language="F#" Value="member this.Build : seq&lt;Microsoft.Build.Framework.ILogger&gt; -&gt; bool" Usage="project.Build loggers" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -963,7 +1043,8 @@
       <Docs>
         <param name="loggers">An enumerator over all loggers to be used during the build.</param>
         <summary>Builds this project, using the default targets and the given loggers.</summary>
-        <returns>Returns true on success; false otherwise.</returns>
+        <returns>
+          <see langword="true" /> on success; otherwise, <see langword="false" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -980,11 +1061,17 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Build(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function Build (target As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Build(System::String ^ target);" />
+      <MemberSignature Language="F#" Value="member this.Build : string -&gt; bool" Usage="project.Build target" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -994,7 +1081,8 @@
       <Docs>
         <param name="target">The target to be built.</param>
         <summary>Builds this project, building the given target.</summary>
-        <returns>Returns true on success; false otherwise.</returns>
+        <returns>
+          <see langword="true" /> on success; otherwise, <see langword="false" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1011,11 +1099,17 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Build(System.String[])" />
       <MemberSignature Language="VB.NET" Value="Public Function Build (targets As String()) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Build(cli::array &lt;System::String ^&gt; ^ targets);" />
+      <MemberSignature Language="F#" Value="member this.Build : string[] -&gt; bool" Usage="project.Build targets" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -1025,7 +1119,8 @@
       <Docs>
         <param name="targets">An array of targets to be built.</param>
         <summary>Builds this project, building the given targets.</summary>
-        <returns>Returns true on success; false otherwise.</returns>
+        <returns>
+          <see langword="true" /> on success; otherwise, <see langword="false" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1042,11 +1137,17 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Build(System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger},System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord})" />
       <MemberSignature Language="VB.NET" Value="Public Function Build (loggers As IEnumerable(Of ILogger), remoteLoggers As IEnumerable(Of ForwardingLoggerRecord)) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Build(System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Framework::ILogger ^&gt; ^ loggers, System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Logging::ForwardingLoggerRecord ^&gt; ^ remoteLoggers);" />
+      <MemberSignature Language="F#" Value="member this.Build : seq&lt;Microsoft.Build.Framework.ILogger&gt; * seq&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt; -&gt; bool" Usage="project.Build (loggers, remoteLoggers)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -1058,7 +1159,8 @@
         <param name="loggers">The loggers to be used during the build.</param>
         <param name="remoteLoggers">The remote loggers to be used during the build.</param>
         <summary>Builds this project, using the default targets and the given loggers and remote loggers.</summary>
-        <returns>Returns true on success; false otherwise.</returns>
+        <returns>
+          <see langword="true" /> on success; otherwise, <see langword="false" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1075,11 +1177,17 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Build(System.String,System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger})" />
       <MemberSignature Language="VB.NET" Value="Public Function Build (target As String, loggers As IEnumerable(Of ILogger)) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Build(System::String ^ target, System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Framework::ILogger ^&gt; ^ loggers);" />
+      <MemberSignature Language="F#" Value="member this.Build : string * seq&lt;Microsoft.Build.Framework.ILogger&gt; -&gt; bool" Usage="project.Build (target, loggers)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -1091,7 +1199,8 @@
         <param name="target">The target to be built.</param>
         <param name="loggers">The loggers to be used during the build.</param>
         <summary>Builds this project, building the given target and using the given loggers.</summary>
-        <returns>Returns true on success; false otherwise.</returns>
+        <returns>
+          <see langword="true" /> on success; otherwise, <see langword="false" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1108,11 +1217,17 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Build(System.String[],System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger})" />
       <MemberSignature Language="VB.NET" Value="Public Function Build (targets As String(), loggers As IEnumerable(Of ILogger)) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Build(cli::array &lt;System::String ^&gt; ^ targets, System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Framework::ILogger ^&gt; ^ loggers);" />
+      <MemberSignature Language="F#" Value="member this.Build : string[] * seq&lt;Microsoft.Build.Framework.ILogger&gt; -&gt; bool" Usage="project.Build (targets, loggers)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -1124,7 +1239,8 @@
         <param name="targets">The targets to be built.</param>
         <param name="loggers">The loggers to be used during the build.</param>
         <summary>Builds this project, building the given targets and using the given loggers.</summary>
-        <returns>Returns true on success; false otherwise.</returns>
+        <returns>
+          <see langword="true" /> on success; otherwise, <see langword="false" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1141,6 +1257,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Build(System.String,System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger},System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord})" />
       <MemberSignature Language="VB.NET" Value="Public Function Build (target As String, loggers As IEnumerable(Of ILogger), remoteLoggers As IEnumerable(Of ForwardingLoggerRecord)) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Build(System::String ^ target, System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Framework::ILogger ^&gt; ^ loggers, System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Logging::ForwardingLoggerRecord ^&gt; ^ remoteLoggers);" />
+      <MemberSignature Language="F#" Value="member this.Build : string * seq&lt;Microsoft.Build.Framework.ILogger&gt; * seq&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt; -&gt; bool" Usage="project.Build (target, loggers, remoteLoggers)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1159,7 +1276,8 @@
         <param name="loggers">The loggers to be used during the build.</param>
         <param name="remoteLoggers">The remote loggers to be used during the build.</param>
         <summary>Builds this project, building the given target and using the given loggers and remote loggers.</summary>
-        <returns>Returns true on success; false otherwise.</returns>
+        <returns>
+          <see langword="true" /> on success; otherwise, <see langword="false" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1176,6 +1294,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Build(System.String[],System.Collections.Generic.IEnumerable{Microsoft.Build.Framework.ILogger},System.Collections.Generic.IEnumerable{Microsoft.Build.Logging.ForwardingLoggerRecord})" />
       <MemberSignature Language="VB.NET" Value="Public Function Build (targets As String(), loggers As IEnumerable(Of ILogger), remoteLoggers As IEnumerable(Of ForwardingLoggerRecord)) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Build(cli::array &lt;System::String ^&gt; ^ targets, System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Framework::ILogger ^&gt; ^ loggers, System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Logging::ForwardingLoggerRecord ^&gt; ^ remoteLoggers);" />
+      <MemberSignature Language="F#" Value="member this.Build : string[] * seq&lt;Microsoft.Build.Framework.ILogger&gt; * seq&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt; -&gt; bool" Usage="project.Build (targets, loggers, remoteLoggers)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1194,7 +1313,8 @@
         <param name="loggers">The loggers to be used during the build.</param>
         <param name="remoteLoggers">The remote loggers to be used during the build.</param>
         <summary>Builds this project, building the given targets and using the given loggers and remote loggers.</summary>
-        <returns>Returns true on success; false otherwise.</returns>
+        <returns>
+          <see langword="true" /> on success; otherwise, <see langword="false" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1211,6 +1331,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.ConditionedProperties" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConditionedProperties As IDictionary(Of String, List(Of String))" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IDictionary&lt;System::String ^, System::Collections::Generic::List&lt;System::String ^&gt; ^&gt; ^ ConditionedProperties { System::Collections::Generic::IDictionary&lt;System::String ^, System::Collections::Generic::List&lt;System::String ^&gt; ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ConditionedProperties : System.Collections.Generic.IDictionary&lt;string, System.Collections.Generic.List&lt;string&gt;&gt;" Usage="Microsoft.Build.Evaluation.Project.ConditionedProperties" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1226,7 +1347,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets a collection of possible property values for properties used to evaluate conditions found on properties, property groups, imports, and whens.</summary>
-        <value>Returns a collection of possible property values for properties used to evaluate conditions found on properties, property groups, imports, and whens. The collection is in canonical form. The name of the entry is the name of the property to be evaluated, and the value is a list of possible property values.</value>
+        <value>A collection of possible property values for properties used to evaluate conditions found on properties, property groups, imports, and whens. The collection is in canonical form. The name of the entry is the name of the property to be evaluated, and the value is a list of possible property values.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1260,6 +1381,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.CreateProjectInstance" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateProjectInstance () As ProjectInstance" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Execution::ProjectInstance ^ CreateProjectInstance();" />
+      <MemberSignature Language="F#" Value="member this.CreateProjectInstance : unit -&gt; Microsoft.Build.Execution.ProjectInstance" Usage="project.CreateProjectInstance " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1271,7 +1393,7 @@
       <Parameters />
       <Docs>
         <summary>Creates a project instance based on this project, but completely disconnected from it.</summary>
-        <returns>Returns the project instance.</returns>
+        <returns>The project instance.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1288,6 +1410,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.CreateProjectInstance(Microsoft.Build.Execution.ProjectInstanceSettings)" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateProjectInstance (settings As ProjectInstanceSettings) As ProjectInstance" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Execution::ProjectInstance ^ CreateProjectInstance(Microsoft::Build::Execution::ProjectInstanceSettings settings);" />
+      <MemberSignature Language="F#" Value="member this.CreateProjectInstance : Microsoft.Build.Execution.ProjectInstanceSettings -&gt; Microsoft.Build.Execution.ProjectInstance" Usage="project.CreateProjectInstance settings" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1302,7 +1425,7 @@
       <Docs>
         <param name="settings">Determines whether created project instance is immutable and whether it contains a look up table to improve performance.</param>
         <summary>Creates a project instance based on this project, but completely disconnected from it.</summary>
-        <returns>Returns the project instance.</returns>
+        <returns>The project instance.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1319,6 +1442,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.DirectoryPath" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DirectoryPath As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DirectoryPath { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DirectoryPath : string" Usage="Microsoft.Build.Evaluation.Project.DirectoryPath" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1334,7 +1458,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets the root directory for this project.</summary>
-        <value>Returns the root directory for this project. The root directory is never null; in-memory projects use the current directory at the time of project load.</value>
+        <value>The root directory for this project. The root directory is never null; in-memory projects use the current directory at the time of project load.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1344,17 +1468,27 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.DisableMarkDirty" />
       <MemberSignature Language="VB.NET" Value="Public Property DisableMarkDirty As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool DisableMarkDirty { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.DisableMarkDirty : bool with get, set" Usage="Microsoft.Build.Evaluation.Project.DisableMarkDirty" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets a flag the determines whether <see cref="M:Microsoft.Build.Evaluation.Project.MarkDirty" /> is temporarily disabled. This allows, for example, a global property to be set without the project getting marked dirty for reevaluation as a consequence.</summary>
-        <value>Returns a flag the determines whether <see langword="MarkDirty" /> is temporarily disabled.</value>
+        <summary>Gets or sets a value that indicates whether <see cref="M:Microsoft.Build.Evaluation.Project.MarkDirty" /> is temporarily disabled. This allows, for example, a global property to be set without the project getting marked dirty for reevaluation as a consequence.</summary>
+        <value>
+          <see langword="true" /> to indicate <see langword="MarkDirty" /> is temporarily disabled; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1364,17 +1498,23 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.EvaluationCounter" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EvaluationCounter As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int EvaluationCounter { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.EvaluationCounter : int" Usage="Microsoft.Build.Evaluation.Project.EvaluationCounter" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets a number that is incremented every time that project is re-evaluated.</summary>
-        <value>Returns the incremented value.</value>
+        <value>The incremented value.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1391,6 +1531,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.ExpandString(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function ExpandString (unexpandedValue As String) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ ExpandString(System::String ^ unexpandedValue);" />
+      <MemberSignature Language="F#" Value="member this.ExpandString : string -&gt; string" Usage="project.ExpandString unexpandedValue" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1405,7 +1546,7 @@
       <Docs>
         <param name="unexpandedValue">The string to be evaluated.</param>
         <summary>Evaluates the given string by expanding items and properties. The string is evaluated as if it were found at the very end of the project file.</summary>
-        <returns>Returns the evaluated string.</returns>
+        <returns>The evaluated string.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1422,6 +1563,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.FullPath" />
       <MemberSignature Language="VB.NET" Value="Public Property FullPath As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ FullPath { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.FullPath : string with get, set" Usage="Microsoft.Build.Evaluation.Project.FullPath" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1440,7 +1582,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the full path to the project source file.</summary>
-        <value>Returns the full path to the project source file. Returns an empty string if the project was not loaded from disk.</value>
+        <value>The full path to the project source file, or an empty string if the project was not loaded from disk.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1466,6 +1608,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.GetEvaluatedItemIncludeEscaped(Microsoft.Build.Evaluation.ProjectItem)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetEvaluatedItemIncludeEscaped (item As ProjectItem) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ GetEvaluatedItemIncludeEscaped(Microsoft::Build::Evaluation::ProjectItem ^ item);" />
+      <MemberSignature Language="F#" Value="static member GetEvaluatedItemIncludeEscaped : Microsoft.Build.Evaluation.ProjectItem -&gt; string" Usage="Microsoft.Build.Evaluation.Project.GetEvaluatedItemIncludeEscaped item" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1480,7 +1623,7 @@
       <Docs>
         <param name="item">The item to be evaluated and escaped.</param>
         <summary>Gets evaluated, escaped value of the Include attribute of the provided items.</summary>
-        <returns>Returns the evaluated, escaped value of the Include attribute of the provided items.</returns>
+        <returns>The evaluated, escaped value of the Include attribute of the provided items.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1490,6 +1633,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.GetEvaluatedItemIncludeEscaped(Microsoft.Build.Evaluation.ProjectItemDefinition)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetEvaluatedItemIncludeEscaped (item As ProjectItemDefinition) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ GetEvaluatedItemIncludeEscaped(Microsoft::Build::Evaluation::ProjectItemDefinition ^ item);" />
+      <MemberSignature Language="F#" Value="static member GetEvaluatedItemIncludeEscaped : Microsoft.Build.Evaluation.ProjectItemDefinition -&gt; string" Usage="Microsoft.Build.Evaluation.Project.GetEvaluatedItemIncludeEscaped item" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1504,7 +1648,7 @@
       <Docs>
         <param name="item">The item definition to be evaluated and escaped.</param>
         <summary>Gets the evaluated, escaped value of the Include attribute of the provided item definition.</summary>
-        <returns>Returns the value of the Include attribute.</returns>
+        <returns>The value of the Include attribute.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1514,6 +1658,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.GetItems(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetItems (itemType As String) As ICollection(Of ProjectItem)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectItem ^&gt; ^ GetItems(System::String ^ itemType);" />
+      <MemberSignature Language="F#" Value="member this.GetItems : string -&gt; System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectItem&gt;" Usage="project.GetItems itemType" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1528,7 +1673,7 @@
       <Docs>
         <param name="itemType">The item type to be retrieved.</param>
         <summary>Gets all the items in the project of the given item type. If there are none, returns an empty list. Use AddItem or RemoveItem to modify items in this project.</summary>
-        <returns>Returns all the items in the project of the given item type. Returns an empty list if there are no items with the given item name.</returns>
+        <returns>All the items in the project of the given item type, or an empty list if there are no items with the given item name.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1545,6 +1690,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.GetItemsByEvaluatedInclude(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetItemsByEvaluatedInclude (evaluatedInclude As String) As ICollection(Of ProjectItem)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectItem ^&gt; ^ GetItemsByEvaluatedInclude(System::String ^ evaluatedInclude);" />
+      <MemberSignature Language="F#" Value="member this.GetItemsByEvaluatedInclude : string -&gt; System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectItem&gt;" Usage="project.GetItemsByEvaluatedInclude evaluatedInclude" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1559,7 +1705,7 @@
       <Docs>
         <param name="evaluatedInclude">The evaluated Include attribute.</param>
         <summary>Gets all items that have the given evaluated Include attribute.</summary>
-        <returns>Returns all items that have the given evaluated Include attribute.</returns>
+        <returns>All items that have the given evaluated Include attribute.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1576,6 +1722,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.GetItemsIgnoringCondition(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetItemsIgnoringCondition (itemType As String) As ICollection(Of ProjectItem)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectItem ^&gt; ^ GetItemsIgnoringCondition(System::String ^ itemType);" />
+      <MemberSignature Language="F#" Value="member this.GetItemsIgnoringCondition : string -&gt; System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectItem&gt;" Usage="project.GetItemsIgnoringCondition itemType" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1590,7 +1737,7 @@
       <Docs>
         <param name="itemType">The item type to be retrieved.</param>
         <summary>Gets all the items in the project of the given type, whether or not their Condition attribute evaluates to true. This is a read-only list: use AddItem or RemoveItem to modify items in this project.</summary>
-        <returns>Returns all the items in the project of the given type, whether or not their Condition attribute evaluates to true.</returns>
+        <returns>All the items in the project of the given type, whether or not their Condition attribute evaluates to true.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1607,6 +1754,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.GetLogicalProject" />
       <MemberSignature Language="VB.NET" Value="Public Function GetLogicalProject () As IEnumerable(Of ProjectElement)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Construction::ProjectElement ^&gt; ^ GetLogicalProject();" />
+      <MemberSignature Language="F#" Value="member this.GetLogicalProject : unit -&gt; seq&lt;Microsoft.Build.Construction.ProjectElement&gt;" Usage="project.GetLogicalProject " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1618,7 +1766,7 @@
       <Parameters />
       <Docs>
         <summary>Gets an enumerator over all the elements in the "logical project". The logical project is defined as the unevaluated project obtained from the single MSBuild file that is the result of inlining the text of all imports of the original MSBuild project manifest file.</summary>
-        <returns>Returns an enumerator over all the elements in the "logical project".</returns>
+        <returns>An enumerator over all the elements in the "logical project".</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1644,6 +1792,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.GetMetadataValueEscaped(Microsoft.Build.Evaluation.ProjectMetadata)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetMetadataValueEscaped (metadatum As ProjectMetadata) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ GetMetadataValueEscaped(Microsoft::Build::Evaluation::ProjectMetadata ^ metadatum);" />
+      <MemberSignature Language="F#" Value="static member GetMetadataValueEscaped : Microsoft.Build.Evaluation.ProjectMetadata -&gt; string" Usage="Microsoft.Build.Evaluation.Project.GetMetadataValueEscaped metadatum" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1658,7 +1807,7 @@
       <Docs>
         <param name="metadatum">The metadatum to be escaped.</param>
         <summary>Gets the escaped value of the provided metadatum.</summary>
-        <returns>Gets the escaped value of the provided metadatum.</returns>
+        <returns>The escaped value of the provided metadatum.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1668,6 +1817,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.GetMetadataValueEscaped(Microsoft.Build.Evaluation.ProjectItem,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetMetadataValueEscaped (item As ProjectItem, name As String) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ GetMetadataValueEscaped(Microsoft::Build::Evaluation::ProjectItem ^ item, System::String ^ name);" />
+      <MemberSignature Language="F#" Value="static member GetMetadataValueEscaped : Microsoft.Build.Evaluation.ProjectItem * string -&gt; string" Usage="Microsoft.Build.Evaluation.Project.GetMetadataValueEscaped (item, name)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1684,7 +1834,7 @@
         <param name="item">The item whose metadata is to be escaped.</param>
         <param name="name">The name of the metadata to be escaped.</param>
         <summary>Gets the escaped value of the metadatum with the provided name on the provided item.</summary>
-        <returns>Gets the escaped value of the metadatum with the provided name on the provided item.</returns>
+        <returns>The escaped value of the metadatum with the provided name on the provided item.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1694,6 +1844,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.GetMetadataValueEscaped(Microsoft.Build.Evaluation.ProjectItemDefinition,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetMetadataValueEscaped (item As ProjectItemDefinition, name As String) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ GetMetadataValueEscaped(Microsoft::Build::Evaluation::ProjectItemDefinition ^ item, System::String ^ name);" />
+      <MemberSignature Language="F#" Value="static member GetMetadataValueEscaped : Microsoft.Build.Evaluation.ProjectItemDefinition * string -&gt; string" Usage="Microsoft.Build.Evaluation.Project.GetMetadataValueEscaped (item, name)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1710,7 +1861,7 @@
         <param name="item">The item definition whose metadata is to be escaped.</param>
         <param name="name">The name of the metadata to be escaped.</param>
         <summary>Gets the escaped value of the metadatum with the provided name on the provided item definition.</summary>
-        <returns>Returns the escaped value of the metadatum with the provided name on the provided item definition.</returns>
+        <returns>The escaped value of the metadatum with the provided name on the provided item definition.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1720,6 +1871,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.GetProperty(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetProperty (name As String) As ProjectProperty" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Evaluation::ProjectProperty ^ GetProperty(System::String ^ name);" />
+      <MemberSignature Language="F#" Value="member this.GetProperty : string -&gt; Microsoft.Build.Evaluation.ProjectProperty" Usage="project.GetProperty name" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1739,7 +1891,7 @@
       <Docs>
         <param name="name">The name of the property to retrieve.</param>
         <summary>Gets any property in the project that has the specified name.</summary>
-        <returns>Returns any property in the project that has the specified name. Returns null if no property of that name exists.</returns>
+        <returns>Any property in the project that has the specified name, or <see langword="null" /> if no property of that name exists.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1749,6 +1901,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.GetPropertyValue(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetPropertyValue (name As String) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ GetPropertyValue(System::String ^ name);" />
+      <MemberSignature Language="F#" Value="member this.GetPropertyValue : string -&gt; string" Usage="project.GetPropertyValue name" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1763,7 +1916,7 @@
       <Docs>
         <param name="name">The name of the property whose value is retrieved.</param>
         <summary>Gets the value of the given property in this project.</summary>
-        <returns>Returns the value of the given property in this project. Return an empty string if no property of that name exists. Escape sequences are converted before returning the string.</returns>
+        <returns>The value of the given property in this project, or an empty string if no property of that name exists. Escape sequences are converted before returning the string.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1780,6 +1933,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.GetPropertyValueEscaped(Microsoft.Build.Evaluation.ProjectProperty)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetPropertyValueEscaped (property As ProjectProperty) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ GetPropertyValueEscaped(Microsoft::Build::Evaluation::ProjectProperty ^ property);" />
+      <MemberSignature Language="F#" Value="static member GetPropertyValueEscaped : Microsoft.Build.Evaluation.ProjectProperty -&gt; string" Usage="Microsoft.Build.Evaluation.Project.GetPropertyValueEscaped property" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1793,8 +1947,8 @@
       </Parameters>
       <Docs>
         <param name="property">The property to be escaped.</param>
-        <summary>Get the escaped value of the provided property.</summary>
-        <returns>Returns the escaped value of the provided property.</returns>
+        <summary>Gets the escaped value of the provided property.</summary>
+        <returns>The escaped value of the provided property.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1804,6 +1958,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.GlobalProperties" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property GlobalProperties As IDictionary(Of String, String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ GlobalProperties { System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.GlobalProperties : System.Collections.Generic.IDictionary&lt;string, string&gt;" Usage="Microsoft.Build.Evaluation.Project.GlobalProperties" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1819,7 +1974,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets a dictionary of the global properties used for the evaluation of this project.</summary>
-        <value>Returns a dictionary of the global properties used for the evaluation of this project.</value>
+        <value>A dictionary of the global properties used for the evaluation of this project.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1838,6 +1993,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.Imports" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Imports As IList(Of ResolvedImport)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IList&lt;Microsoft::Build::Evaluation::ResolvedImport&gt; ^ Imports { System::Collections::Generic::IList&lt;Microsoft::Build::Evaluation::ResolvedImport&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Imports : System.Collections.Generic.IList&lt;Microsoft.Build.Evaluation.ResolvedImport&gt;" Usage="Microsoft.Build.Evaluation.Project.Imports" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1848,7 +2004,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets a list of all the files that contributed to the evaluation of this project.</summary>
-        <value>Returns a list of all the files that contributed to the evaluation of this project.  
+        <value>A list of all the files that contributed to the evaluation of this project.  
   
  The name of each item is the Import element that caused the file to be imported. The value of each item is the project root of the imported project. Import elements whose Condition attribute evaluated to false are not included.</value>
         <remarks>
@@ -1867,6 +2023,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.ImportsIncludingDuplicates" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ImportsIncludingDuplicates As IList(Of ResolvedImport)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IList&lt;Microsoft::Build::Evaluation::ResolvedImport&gt; ^ ImportsIncludingDuplicates { System::Collections::Generic::IList&lt;Microsoft::Build::Evaluation::ResolvedImport&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ImportsIncludingDuplicates : System.Collections.Generic.IList&lt;Microsoft.Build.Evaluation.ResolvedImport&gt;" Usage="Microsoft.Build.Evaluation.Project.ImportsIncludingDuplicates" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1877,7 +2034,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets a list of duplicate imports if an import was imported multiple times. However, only the first import was used in evaluation.</summary>
-        <value>Returns a list of duplicate imports.</value>
+        <value>A list of duplicate imports.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1887,6 +2044,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.IsBuildEnabled" />
       <MemberSignature Language="VB.NET" Value="Public Property IsBuildEnabled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsBuildEnabled { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsBuildEnabled : bool with get, set" Usage="Microsoft.Build.Evaluation.Project.IsBuildEnabled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1897,7 +2055,8 @@
       </ReturnValue>
       <Docs>
         <summary>Gets or sets a property that selects whether the targets and tasks of this project can be built.</summary>
-        <value>Returns true if the targets and tasks of this project can be built; false otherwise.</value>
+        <value>
+          <see langword="true" /> if the targets and tasks of this project can be built; otherwise, <see langword="false" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1914,6 +2073,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.IsDirty" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsDirty As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsDirty { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsDirty : bool" Usage="Microsoft.Build.Evaluation.Project.IsDirty" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1923,8 +2083,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets a property that indicates whether this project has been modified so that it must be reevaluated.</summary>
-        <value>Returns a property that indicates whether this project has been modified so that it must be reevaluated.</value>
+        <summary>Gets a value that indicates whether this project has been modified so that it must be reevaluated.</summary>
+        <value>
+          <see langword="true" /> if this project has been modified so that it must be reevaluated; otherwise, <see langword="false" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1941,6 +2102,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.ItemDefinitions" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ItemDefinitions As IDictionary(Of String, ProjectItemDefinition)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IDictionary&lt;System::String ^, Microsoft::Build::Evaluation::ProjectItemDefinition ^&gt; ^ ItemDefinitions { System::Collections::Generic::IDictionary&lt;System::String ^, Microsoft::Build::Evaluation::ProjectItemDefinition ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ItemDefinitions : System.Collections.Generic.IDictionary&lt;string, Microsoft.Build.Evaluation.ProjectItemDefinition&gt;" Usage="Microsoft.Build.Evaluation.Project.ItemDefinitions" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1956,7 +2118,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets a dictionary of item definitions in this project, keyed by item type.</summary>
-        <value>Returns a dictionary of item definitions in this project, keyed by item type.</value>
+        <value>A dictionary of item definitions in this project, keyed by item type.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1966,6 +2128,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.Items" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Items As ICollection(Of ProjectItem)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectItem ^&gt; ^ Items { System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectItem ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Items : System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectItem&gt;" Usage="Microsoft.Build.Evaluation.Project.Items" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -1981,7 +2144,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets an enumerator over all items in this project, ordered within groups of item types.</summary>
-        <value>Returns an enumerator over all items in this project, ordered within groups of item types.</value>
+        <value>An enumerator over all items in this project, ordered within groups of item types.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1991,6 +2154,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.ItemsIgnoringCondition" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ItemsIgnoringCondition As ICollection(Of ProjectItem)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectItem ^&gt; ^ ItemsIgnoringCondition { System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectItem ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ItemsIgnoringCondition : System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectItem&gt;" Usage="Microsoft.Build.Evaluation.Project.ItemsIgnoringCondition" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2006,7 +2170,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets an enumerator over all items in this project, ordered within groups of item types.</summary>
-        <value>Returns an enumerator over all items in this project., ordered within groups of item types, including items whose conditions evaluate to false, or are contained within item groups whose condition evaluates to false.</value>
+        <value>An enumerator over all items in this project, ordered within groups of item types, including items whose conditions evaluate to false, or are contained within item groups whose condition evaluates to <see langword="false" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2023,6 +2187,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.ItemTypes" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ItemTypes As ICollection(Of String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ ItemTypes { System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ItemTypes : System.Collections.Generic.ICollection&lt;string&gt;" Usage="Microsoft.Build.Evaluation.Project.ItemTypes" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2038,7 +2203,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets an enumerator over all item types in this project.</summary>
-        <value>Returns an enumerator over all item types in this project. This is an ordered collection.</value>
+        <value>An enumerator over all item types in this project. This is an ordered collection.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2048,6 +2213,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.MarkDirty" />
       <MemberSignature Language="VB.NET" Value="Public Sub MarkDirty ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void MarkDirty();" />
+      <MemberSignature Language="F#" Value="member this.MarkDirty : unit -&gt; unit" Usage="project.MarkDirty " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2079,6 +2245,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.ProjectCollection" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProjectCollection As ProjectCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Evaluation::ProjectCollection ^ ProjectCollection { Microsoft::Build::Evaluation::ProjectCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ProjectCollection : Microsoft.Build.Evaluation.ProjectCollection" Usage="Microsoft.Build.Evaluation.Project.ProjectCollection" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2088,13 +2255,16 @@
         <Attribute>
           <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Build.Evaluation.ProjectCollection</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets the project collection which contains this project.</summary>
-        <value>Returns the project collection which contains this project, which is never null.</value>
+        <value>The project collection that contains this project, which is never <see langword="null" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2104,6 +2274,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.ProjectFileLocation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProjectFileLocation As ElementLocation" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Construction::ElementLocation ^ ProjectFileLocation { Microsoft::Build::Construction::ElementLocation ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ProjectFileLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Evaluation.Project.ProjectFileLocation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2114,7 +2285,7 @@
       </ReturnValue>
       <Docs>
         <summary>The location of the originating file itself, not any specific content within it. If the file has not been given a name, this is an empty location. This is a legitimate case of having no location.</summary>
-        <value>Returns the originating file location or an empty location.</value>
+        <value>The originating file location, or an empty location if the file has not been given a name.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2124,6 +2295,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.Properties" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Properties As ICollection(Of ProjectProperty)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectProperty ^&gt; ^ Properties { System::Collections::Generic::ICollection&lt;Microsoft::Build::Evaluation::ProjectProperty ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Properties : System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.ProjectProperty&gt;" Usage="Microsoft.Build.Evaluation.Project.Properties" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2139,7 +2311,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets an enumerator over all properties in this project. This is an unordered collection.</summary>
-        <value>Returns an enumerator over all properties in this project. Since properties are evaluated as they appear, this is an unordered collection.</value>
+        <value>An enumerator over all properties in this project. Since properties are evaluated as they appear, this is an unordered collection.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2149,6 +2321,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.ReevaluateIfNecessary" />
       <MemberSignature Language="VB.NET" Value="Public Sub ReevaluateIfNecessary ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void ReevaluateIfNecessary();" />
+      <MemberSignature Language="F#" Value="member this.ReevaluateIfNecessary : unit -&gt; unit" Usage="project.ReevaluateIfNecessary " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2178,6 +2351,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.RemoveGlobalProperty(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function RemoveGlobalProperty (name As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool RemoveGlobalProperty(System::String ^ name);" />
+      <MemberSignature Language="F#" Value="member this.RemoveGlobalProperty : string -&gt; bool" Usage="project.RemoveGlobalProperty name" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2192,7 +2366,8 @@
       <Docs>
         <param name="name">The name of the global property to be removed.</param>
         <summary>Removes a global property and marks the project as modified.</summary>
-        <returns>Returns true if the value of the global property was set.</returns>
+        <returns>
+          <see langword="true" /> if the value of the global property was set.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2202,6 +2377,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.RemoveItem(Microsoft.Build.Evaluation.ProjectItem)" />
       <MemberSignature Language="VB.NET" Value="Public Function RemoveItem (item As ProjectItem) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool RemoveItem(Microsoft::Build::Evaluation::ProjectItem ^ item);" />
+      <MemberSignature Language="F#" Value="member this.RemoveItem : Microsoft.Build.Evaluation.ProjectItem -&gt; bool" Usage="project.RemoveItem item" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2216,7 +2392,8 @@
       <Docs>
         <param name="item">The item to be removed.</param>
         <summary>Removes an item from the project. The item to be removed must be present in the project, and must not originate from an imported file.</summary>
-        <returns>Returns true if the item is present in this evaluated project; otherwise false. Normally this method returns true, since if the requested item is not present, the method throws an exception. If the item is present only in the ItemsIgnoringCondition collection, however, the method returns false.</returns>
+        <returns>
+          <see langword="true" /> if the item is present in this evaluated project; otherwise, <see langword="false" />. Normally this method returns true, since if the requested item is not present, the method throws an exception. If the item is present only in the ItemsIgnoringCondition collection, however, the method returns false.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2237,6 +2414,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.RemoveItems(System.Collections.Generic.IEnumerable{Microsoft.Build.Evaluation.ProjectItem})" />
       <MemberSignature Language="VB.NET" Value="Public Sub RemoveItems (items As IEnumerable(Of ProjectItem))" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void RemoveItems(System::Collections::Generic::IEnumerable&lt;Microsoft::Build::Evaluation::ProjectItem ^&gt; ^ items);" />
+      <MemberSignature Language="F#" Value="member this.RemoveItems : seq&lt;Microsoft.Build.Evaluation.ProjectItem&gt; -&gt; unit" Usage="project.RemoveItems items" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2267,6 +2445,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.RemoveProperty(Microsoft.Build.Evaluation.ProjectProperty)" />
       <MemberSignature Language="VB.NET" Value="Public Function RemoveProperty (property As ProjectProperty) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool RemoveProperty(Microsoft::Build::Evaluation::ProjectProperty ^ property);" />
+      <MemberSignature Language="F#" Value="member this.RemoveProperty : Microsoft.Build.Evaluation.ProjectProperty -&gt; bool" Usage="project.RemoveProperty property" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2281,7 +2460,8 @@
       <Docs>
         <param name="property">The property to remove.</param>
         <summary>Removes an property from the project. The property to be removed must be present in the project, and must not originate from an imported file.</summary>
-        <returns>Returns true if the property is present in this evaluated project; otherwise false.</returns>
+        <returns>
+          <see langword="true" /> if the property is present in this evaluated project; otherwise, <see langword="false" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2309,6 +2489,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Save" />
       <MemberSignature Language="VB.NET" Value="Public Sub Save ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Save();" />
+      <MemberSignature Language="F#" Value="member this.Save : unit -&gt; unit" Usage="project.Save " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2329,6 +2510,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Save(System.IO.TextWriter)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Save (writer As TextWriter)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Save(System::IO::TextWriter ^ writer);" />
+      <MemberSignature Language="F#" Value="member this.Save : System.IO.TextWriter -&gt; unit" Usage="project.Save writer" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2352,6 +2534,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Save(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Save (path As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Save(System::String ^ path);" />
+      <MemberSignature Language="F#" Value="member this.Save : string -&gt; unit" Usage="project.Save path" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2374,6 +2557,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(class System.Text.Encoding encoding) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Save(System.Text.Encoding)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Save(System::Text::Encoding ^ encoding);" />
+      <MemberSignature Language="F#" Value="member this.Save : System.Text.Encoding -&gt; unit" Usage="project.Save encoding" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2396,6 +2580,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(string path, class System.Text.Encoding encoding) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.Save(System.String,System.Text.Encoding)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Save(System::String ^ path, System::Text::Encoding ^ encoding);" />
+      <MemberSignature Language="F#" Value="member this.Save : string * System.Text.Encoding -&gt; unit" Usage="project.Save (path, encoding)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2421,6 +2606,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.SaveLogicalProject(System.IO.TextWriter)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SaveLogicalProject (writer As TextWriter)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SaveLogicalProject(System::IO::TextWriter ^ writer);" />
+      <MemberSignature Language="F#" Value="member this.SaveLogicalProject : System.IO.TextWriter -&gt; unit" Usage="project.SaveLogicalProject writer" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2444,6 +2630,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.SetGlobalProperty(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetGlobalProperty (name As String, escapedValue As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetGlobalProperty(System::String ^ name, System::String ^ escapedValue);" />
+      <MemberSignature Language="F#" Value="member this.SetGlobalProperty : string * string -&gt; bool" Usage="project.SetGlobalProperty (name, escapedValue)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2460,7 +2647,8 @@
         <param name="name">The name of the global property to set.</param>
         <param name="escapedValue">The new value of the global property.</param>
         <summary>Sets a global property after the project has been evaluated. If the value changes, the project is marked to require reevaluation.</summary>
-        <returns>Returns <see langword="true" /> if the value changes, otherwise returns <see langword="false" />.</returns>
+        <returns>
+          <see langword="true" /> if the value changes; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2470,6 +2658,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Evaluation.Project.SetProperty(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetProperty (name As String, unevaluatedValue As String) As ProjectProperty" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Evaluation::ProjectProperty ^ SetProperty(System::String ^ name, System::String ^ unevaluatedValue);" />
+      <MemberSignature Language="F#" Value="member this.SetProperty : string * string -&gt; Microsoft.Build.Evaluation.ProjectProperty" Usage="project.SetProperty (name, unevaluatedValue)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2486,7 +2675,7 @@
         <param name="name">The name of the property to set.</param>
         <param name="unevaluatedValue">The new unevaluated value of the property.</param>
         <summary>Sets or adds a property with the given name and value to the project. Overwrites the value of a property with the same name if it did not originate in an imported file.</summary>
-        <returns>Returns the property.</returns>
+        <returns>The property.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2507,17 +2696,26 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.SkipEvaluation" />
       <MemberSignature Language="VB.NET" Value="Public Property SkipEvaluation As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool SkipEvaluation { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.SkipEvaluation : bool with get, set" Usage="Microsoft.Build.Evaluation.Project.SkipEvaluation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets a flag the determines whether ReevaluateIfNecessary is temporarily disabled. This is useful when the host expects to make a number of reads and writes to the project, and wants to temporarily sacrifice correctness for performance.</summary>
-        <value>Returns a flag the determines whether ReevaluateIfNecessary is temporarily disabled.</value>
+        <summary>Gets or sets a value that indicates whether ReevaluateIfNecessary is temporarily disabled. This is useful when the host expects to make a number of reads and writes to the project, and wants to temporarily sacrifice correctness for performance.</summary>
+        <value>A flag that determines whether ReevaluateIfNecessary is temporarily disabled.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2527,6 +2725,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.SubToolsetVersion" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SubToolsetVersion As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ SubToolsetVersion { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SubToolsetVersion : string" Usage="Microsoft.Build.Evaluation.Project.SubToolsetVersion" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2537,7 +2736,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets the value of the SubToolsetVersion attribute, if any. This value was combined with the value of the ToolsVersion attribute to determine the toolset properties for this project.</summary>
-        <value>Returns the SubToolsetVersion attribute value. Returns an empty string if the attribute is not present.</value>
+        <value>The SubToolsetVersion attribute value, or an empty string if the attribute is not present.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2547,6 +2746,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.Targets" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Targets As IDictionary(Of String, ProjectTargetInstance)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IDictionary&lt;System::String ^, Microsoft::Build::Execution::ProjectTargetInstance ^&gt; ^ Targets { System::Collections::Generic::IDictionary&lt;System::String ^, Microsoft::Build::Execution::ProjectTargetInstance ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Targets : System.Collections.Generic.IDictionary&lt;string, Microsoft.Build.Execution.ProjectTargetInstance&gt;" Usage="Microsoft.Build.Evaluation.Project.Targets" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2562,7 +2762,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets a dictionary of all targets in this project, keyed by target name.</summary>
-        <value>Returns a dictionary of all targets in this project, keyed by target name. Overridden targets are not included in this collection. This dictionary is read-only.</value>
+        <value>A read-only dictionary of all targets in this project, keyed by target name. Overridden targets are not included in this collection. </value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2572,6 +2772,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.ToolsVersion" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ToolsVersion As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ToolsVersion { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ToolsVersion : string" Usage="Microsoft.Build.Evaluation.Project.ToolsVersion" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2582,7 +2783,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets the tools version that this project was evaluated with, if any.</summary>
-        <value>Gets the tools version that this project was evaluated with, if any.</value>
+        <value>The tools version that this project was evaluated with, if any.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2599,6 +2800,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.Project.Xml" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Xml As ProjectRootElement" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Construction::ProjectRootElement ^ Xml { Microsoft::Build::Construction::ProjectRootElement ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Xml : Microsoft.Build.Construction.ProjectRootElement" Usage="Microsoft.Build.Evaluation.Project.Xml" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -2608,13 +2810,16 @@
         <Attribute>
           <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Build.Construction.ProjectRootElement</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the root project associated with this project. Can never be null</summary>
-        <value>Returns the root project associated with this project, which can never be null.</value>
+        <summary>Gets the root project associated with this project. Can never be <see langword="null" />.</summary>
+        <value>The root project associated with this project, which can never be <see langword="null" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   

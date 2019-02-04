@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.SemanticValue" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class SemanticValue&#xA;Implements ICollection(Of KeyValuePair(Of String, SemanticValue)), IDictionary(Of String, SemanticValue), IEnumerable(Of KeyValuePair(Of String, SemanticValue))" />
   <TypeSignature Language="C++ CLI" Value="public ref class SemanticValue sealed : System::Collections::Generic::ICollection&lt;System::Collections::Generic::KeyValuePair&lt;System::String ^, System::Speech::Recognition::SemanticValue ^&gt;&gt;, System::Collections::Generic::IDictionary&lt;System::String ^, System::Speech::Recognition::SemanticValue ^&gt;, System::Collections::Generic::IEnumerable&lt;System::Collections::Generic::KeyValuePair&lt;System::String ^, System::Speech::Recognition::SemanticValue ^&gt;&gt;" />
+  <TypeSignature Language="F#" Value="type SemanticValue = class&#xA;    interface IDictionary&lt;string, SemanticValue&gt;&#xA;    interface ICollection&lt;KeyValuePair&lt;string, SemanticValue&gt;&gt;&#xA;    interface seq&lt;KeyValuePair&lt;string, SemanticValue&gt;&gt;&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -16,10 +18,22 @@
       <InterfaceName>System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Speech.Recognition.SemanticValue&gt;&gt;</InterfaceName>
     </Interface>
     <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>System.Collections.Generic.IDictionary&lt;System.String,System.Speech.Recognition.SemanticValue&gt;</InterfaceName>
     </Interface>
     <Interface>
       <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Speech.Recognition.SemanticValue&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
     </Interface>
   </Interfaces>
   <Attributes>
@@ -28,6 +42,9 @@
     </Attribute>
     <Attribute>
       <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.Speech.Recognition.SemanticValue/SemanticValueDebugDisplay))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Serializable</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -214,9 +231,11 @@ newGrammar.SpeechRecognized +=
       <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SemanticValue.#ctor(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (value As Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SemanticValue(System::Object ^ value);" />
+      <MemberSignature Language="F#" Value="new System.Speech.Recognition.SemanticValue : obj -&gt; System.Speech.Recognition.SemanticValue" Usage="new System.Speech.Recognition.SemanticValue value" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
@@ -247,9 +266,11 @@ newGrammar.SpeechRecognized +=
       <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SemanticValue.#ctor(System.String,System.Object,System.Single)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (keyName As String, value As Object, confidence As Single)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SemanticValue(System::String ^ keyName, System::Object ^ value, float confidence);" />
+      <MemberSignature Language="F#" Value="new System.Speech.Recognition.SemanticValue : string * obj * single -&gt; System.Speech.Recognition.SemanticValue" Usage="new System.Speech.Recognition.SemanticValue (keyName, value, confidence)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
@@ -282,11 +303,18 @@ newGrammar.SpeechRecognized +=
       <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SemanticValue.Confidence" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Confidence As Single" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property float Confidence { float get(); };" />
+      <MemberSignature Language="F#" Value="member this.Confidence : single" Usage="System.Speech.Recognition.SemanticValue.Confidence" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
@@ -346,12 +374,14 @@ internal static void CreateSemanticsTreeNodes(
       <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SemanticValue.Contains(System.Collections.Generic.KeyValuePair{System.String,System.Speech.Recognition.SemanticValue})" />
       <MemberSignature Language="VB.NET" Value="Public Function Contains (item As KeyValuePair(Of String, SemanticValue)) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Contains(System::Collections::Generic::KeyValuePair&lt;System::String ^, System::Speech::Recognition::SemanticValue ^&gt; item);" />
+      <MemberSignature Language="F#" Value="abstract member Contains : System.Collections.Generic.KeyValuePair&lt;string, System.Speech.Recognition.SemanticValue&gt; -&gt; bool&#xA;override this.Contains : System.Collections.Generic.KeyValuePair&lt;string, System.Speech.Recognition.SemanticValue&gt; -&gt; bool" Usage="semanticValue.Contains item" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.Generic.ICollection`1.Contains(`0)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -373,12 +403,14 @@ internal static void CreateSemanticsTreeNodes(
       <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SemanticValue.ContainsKey(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function ContainsKey (key As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool ContainsKey(System::String ^ key);" />
+      <MemberSignature Language="F#" Value="abstract member ContainsKey : string -&gt; bool&#xA;override this.ContainsKey : string -&gt; bool" Usage="semanticValue.ContainsKey key" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.Generic.IDictionary`2.ContainsKey(`0)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -515,12 +547,14 @@ newGrammar.SpeechRecognized +=
       <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SemanticValue.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="System.Speech.Recognition.SemanticValue.Count" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.Generic.ICollection`1.Count</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -654,9 +688,11 @@ newGrammar.SpeechRecognized +=
       <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SemanticValue.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="semanticValue.Equals obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -679,11 +715,18 @@ newGrammar.SpeechRecognized +=
       <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SemanticValue.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="semanticValue.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
@@ -700,12 +743,14 @@ newGrammar.SpeechRecognized +=
       <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SemanticValue.Item(System.String)" />
       <MemberSignature Language="VB.NET" Value="Default Public Property Item(key As String) As SemanticValue" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Speech::Recognition::SemanticValue ^ default[System::String ^] { System::Speech::Recognition::SemanticValue ^ get(System::String ^ key); void set(System::String ^ key, System::Speech::Recognition::SemanticValue ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Item(string) : System.Speech.Recognition.SemanticValue with get, set" Usage="System.Speech.Recognition.SemanticValue.Item" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.Generic.IDictionary`2.Item(`0)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -855,6 +900,7 @@ newGrammar.SpeechRecognized +=
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -864,8 +910,8 @@ newGrammar.SpeechRecognized +=
         <Parameter Name="key" Type="System.Collections.Generic.KeyValuePair&lt;System.String,System.Speech.Recognition.SemanticValue&gt;" />
       </Parameters>
       <Docs>
-        <param name="key">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="key">A key for a <see cref="T:System.Speech.Recognition.SemanticValue" />.</param>
+        <summary>Adds the specified key and <see cref="T:System.Speech.Recognition.SemanticValue" /> to the collection.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -881,6 +927,7 @@ newGrammar.SpeechRecognized +=
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -888,7 +935,7 @@ newGrammar.SpeechRecognized +=
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Removes all key/value pairs from the collection.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -901,6 +948,7 @@ newGrammar.SpeechRecognized +=
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -911,9 +959,9 @@ newGrammar.SpeechRecognized +=
         <Parameter Name="index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="array">To be added.</param>
-        <param name="index">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="array">The array of key/value pairs that is the target of the operation.</param>
+        <param name="index">An integer that specifies the location in the array to which the key/value pair will be copied.</param>
+        <summary>Copies a key/value pair to a specific location in a targeted array.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -922,21 +970,23 @@ newGrammar.SpeechRecognized +=
       <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Speech.Recognition.SemanticValue&gt;&gt;.IsReadOnly" />
       <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SemanticValue.System#Collections#Generic#ICollection&lt;System#Collections#Generic#KeyValuePair&lt;System#String,System#Speech#Recognition#SemanticValue&gt;&gt;#IsReadOnly" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property IsReadOnly As Boolean Implements ICollection(Of KeyValuePair(Of String, SemanticValue)).IsReadOnly" />
-      <MemberSignature Language="C++ CLI" Value="property bool System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Speech.Recognition.SemanticValue&gt;&gt;.IsReadOnly { bool get(); };" />
+      <MemberSignature Language="C++ CLI" Value="property bool System::Collections::Generic::ICollection&lt;System::Collections::Generic::KeyValuePair&lt;System::String,System::Speech::Recognition::SemanticValue&gt;&gt;::IsReadOnly { bool get(); };" />
+      <MemberSignature Language="F#" Usage="System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Speech.Recognition.SemanticValue&gt;&gt;.IsReadOnly" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.Generic.ICollection`1.IsReadOnly</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>Gets a value that indicates whether the collection is read-only.</summary>
+        <value>Returns a value that indicates whether the collection is read-only.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -952,6 +1002,7 @@ newGrammar.SpeechRecognized +=
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -961,9 +1012,10 @@ newGrammar.SpeechRecognized +=
         <Parameter Name="key" Type="System.Collections.Generic.KeyValuePair&lt;System.String,System.Speech.Recognition.SemanticValue&gt;" />
       </Parameters>
       <Docs>
-        <param name="key">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="key">A key for a <see cref="T:System.Speech.Recognition.SemanticValue" />.</param>
+        <summary>Removes the specified key and <see cref="T:System.Speech.Recognition.SemanticValue" /> from the collection.</summary>
+        <returns>
+          <see langword="true" /> if the key/value pair was successfully removed from the collection; otherwise, <see langword="false" />. This method also returns <see langword="false" /> if the key/value pair is not found in the collection.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -979,6 +1031,7 @@ newGrammar.SpeechRecognized +=
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -989,9 +1042,9 @@ newGrammar.SpeechRecognized +=
         <Parameter Name="value" Type="System.Speech.Recognition.SemanticValue" />
       </Parameters>
       <Docs>
-        <param name="key">To be added.</param>
-        <param name="value">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="key">A key for a <see cref="T:System.Speech.Recognition.SemanticValue" />.</param>
+        <param name="value">The <see cref="T:System.Speech.Recognition.SemanticValue" /> to add.</param>
+        <summary>Adds the specified key and <see cref="T:System.Speech.Recognition.SemanticValue" /> to the dictionary.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1000,21 +1053,23 @@ newGrammar.SpeechRecognized +=
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;string&gt; System.Collections.Generic.IDictionary&lt;System.String,System.Speech.Recognition.SemanticValue&gt;.Keys" />
       <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SemanticValue.System#Collections#Generic#IDictionary&lt;System#String,System#Speech#Recognition#SemanticValue&gt;#Keys" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property Keys As ICollection(Of String) Implements IDictionary(Of String, SemanticValue).Keys" />
-      <MemberSignature Language="C++ CLI" Value="property System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ System.Collections.Generic.IDictionary&lt;System.String,System.Speech.Recognition.SemanticValue&gt;.Keys { System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ get(); };" />
+      <MemberSignature Language="C++ CLI" Value="property System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ System::Collections::Generic::IDictionary&lt;System::String,System::Speech::Recognition::SemanticValue&gt;::Keys { System::Collections::Generic::ICollection&lt;System::String ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Usage="System.Collections.Generic.IDictionary&lt;System.String,System.Speech.Recognition.SemanticValue&gt;.Keys" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.Generic.IDictionary`2.Keys</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>Gets a collection that contains the keys from a dictionary of key/value pairs.</summary>
+        <value>A collection that contains the keys from a dictionary of key/value pairs.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1030,6 +1085,7 @@ newGrammar.SpeechRecognized +=
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1039,9 +1095,10 @@ newGrammar.SpeechRecognized +=
         <Parameter Name="key" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="key">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="key">A key for a <see cref="T:System.Speech.Recognition.SemanticValue" />.</param>
+        <summary>Removes the specified key and <see cref="T:System.Speech.Recognition.SemanticValue" /> from the dictionary.</summary>
+        <returns>
+          <see langword="true" /> if the key/value pair was successfully removed from the dictionary; otherwise, <see langword="false" />. This method also returns <see langword="false" /> if the key/value pair is not found in the dictionary.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1054,6 +1111,7 @@ newGrammar.SpeechRecognized +=
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1061,13 +1119,14 @@ newGrammar.SpeechRecognized +=
       </ReturnValue>
       <Parameters>
         <Parameter Name="key" Type="System.String" />
-        <Parameter Name="value" Type="System.Speech.Recognition.SemanticValue&amp;" RefType="out" />
+        <Parameter Name="value" Type="System.Speech.Recognition.SemanticValue" RefType="out" />
       </Parameters>
       <Docs>
-        <param name="key">To be added.</param>
-        <param name="value">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <param name="key">A key for a <see cref="T:System.Speech.Recognition.SemanticValue" />.</param>
+        <param name="value">The <see cref="T:System.Speech.Recognition.SemanticValue" /> to get.</param>
+        <summary>Gets the <see cref="T:System.Speech.Recognition.SemanticValue" /> associated with the specified key.</summary>
+        <returns>
+          <see langword="true" /> if the dictionary contains a key/value pair with the specified key; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1076,21 +1135,23 @@ newGrammar.SpeechRecognized +=
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class System.Speech.Recognition.SemanticValue&gt; System.Collections.Generic.IDictionary&lt;System.String,System.Speech.Recognition.SemanticValue&gt;.Values" />
       <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SemanticValue.System#Collections#Generic#IDictionary&lt;System#String,System#Speech#Recognition#SemanticValue&gt;#Values" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property Values As ICollection(Of SemanticValue) Implements IDictionary(Of String, SemanticValue).Values" />
-      <MemberSignature Language="C++ CLI" Value="property System::Collections::Generic::ICollection&lt;System::Speech::Recognition::SemanticValue ^&gt; ^ System.Collections.Generic.IDictionary&lt;System.String,System.Speech.Recognition.SemanticValue&gt;.Values { System::Collections::Generic::ICollection&lt;System::Speech::Recognition::SemanticValue ^&gt; ^ get(); };" />
+      <MemberSignature Language="C++ CLI" Value="property System::Collections::Generic::ICollection&lt;System::Speech::Recognition::SemanticValue ^&gt; ^ System::Collections::Generic::IDictionary&lt;System::String,System::Speech::Recognition::SemanticValue&gt;::Values { System::Collections::Generic::ICollection&lt;System::Speech::Recognition::SemanticValue ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Usage="System.Collections.Generic.IDictionary&lt;System.String,System.Speech.Recognition.SemanticValue&gt;.Values" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.Generic.IDictionary`2.Values</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.ICollection&lt;System.Speech.Recognition.SemanticValue&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>Gets a collection that contains the values from a dictionary of key/value pairs.</summary>
+        <value>A collection that contains the values from a dictionary of key/value pairs.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1106,6 +1167,7 @@ newGrammar.SpeechRecognized +=
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1113,8 +1175,8 @@ newGrammar.SpeechRecognized +=
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>Returns an enumerator that iterates through a collection.</summary>
+        <returns>An enumerator that iterates through a collection.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1130,6 +1192,7 @@ newGrammar.SpeechRecognized +=
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1148,11 +1211,18 @@ newGrammar.SpeechRecognized +=
       <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SemanticValue.Value" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Value As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Value { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Value : obj" Usage="System.Speech.Recognition.SemanticValue.Value" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>

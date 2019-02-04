@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Hosting.ICscHostObject3" />
   <TypeSignature Language="VB.NET" Value="Public Interface ICscHostObject3&#xA;Implements ICscHostObject2, ITaskHost" />
   <TypeSignature Language="C++ CLI" Value="public interface class ICscHostObject3 : Microsoft::Build::Framework::ITaskHost, Microsoft::Build::Tasks::Hosting::ICscHostObject2" />
+  <TypeSignature Language="F#" Value="type ICscHostObject3 = interface&#xA;    interface ICscHostObject2&#xA;    interface ICscHostObject&#xA;    interface ITaskHost" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -11,6 +12,9 @@
   <Interfaces>
     <Interface>
       <InterfaceName>Microsoft.Build.Framework.ITaskHost</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Tasks.Hosting.ICscHostObject</InterfaceName>
     </Interface>
     <Interface>
       <InterfaceName>Microsoft.Build.Tasks.Hosting.ICscHostObject2</InterfaceName>
@@ -24,7 +28,7 @@
       <AttributeName>System.Runtime.InteropServices.Guid("F9353662-F1ED-4a23-A323-5F5047E85F5D")</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.InterfaceType</AttributeName>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -38,6 +42,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject3.SetApplicationConfiguration(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetApplicationConfiguration (applicationConfiguration As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetApplicationConfiguration(System::String ^ applicationConfiguration);" />
+      <MemberSignature Language="F#" Value="abstract member SetApplicationConfiguration : string -&gt; bool" Usage="iCscHostObject3.SetApplicationConfiguration applicationConfiguration" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>

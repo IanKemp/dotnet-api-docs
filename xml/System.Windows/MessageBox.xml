@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.MessageBox" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class MessageBox" />
   <TypeSignature Language="C++ CLI" Value="public ref class MessageBox sealed" />
+  <TypeSignature Language="F#" Value="type MessageBox = class" />
   <AssemblyInfo>
     <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -32,7 +34,7 @@
   
  Message boxes always have an owner window. By default, the owner of a message box is the window that is currently active in an application at the time that a message box is opened. However, you can specify another owner for the <xref:System.Windows.Window> by using one of several <xref:System.Windows.MessageBox.Show%2A> overloads. For more information about owner windows, see <xref:System.Windows.Window.Owner%2A?displayProperty=nameWithType>.  
   
- For more information, see [MessageBox Sample](http://go.microsoft.com/fwlink/?LinkID=160023).  
+ For more information, see [MessageBox Sample](https://go.microsoft.com/fwlink/?LinkID=160023).  
   
  ]]></format>
     </remarks>
@@ -65,9 +67,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.MessageBox.Show(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Show (messageBoxText As String) As MessageBoxResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Windows::MessageBoxResult Show(System::String ^ messageBoxText);" />
+      <MemberSignature Language="F#" Value="static member Show : string -&gt; System.Windows.MessageBoxResult" Usage="System.Windows.MessageBox.Show messageBoxText" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -104,9 +108,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.MessageBox.Show(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Show (messageBoxText As String, caption As String) As MessageBoxResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Windows::MessageBoxResult Show(System::String ^ messageBoxText, System::String ^ caption);" />
+      <MemberSignature Language="F#" Value="static member Show : string * string -&gt; System.Windows.MessageBoxResult" Usage="System.Windows.MessageBox.Show (messageBoxText, caption)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -145,9 +151,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.MessageBox.Show(System.Windows.Window,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Show (owner As Window, messageBoxText As String) As MessageBoxResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Windows::MessageBoxResult Show(System::Windows::Window ^ owner, System::String ^ messageBoxText);" />
+      <MemberSignature Language="F#" Value="static member Show : System.Windows.Window * string -&gt; System.Windows.MessageBoxResult" Usage="System.Windows.MessageBox.Show (owner, messageBoxText)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -185,9 +193,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.MessageBox.Show(System.String,System.String,System.Windows.MessageBoxButton)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Show (messageBoxText As String, caption As String, button As MessageBoxButton) As MessageBoxResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Windows::MessageBoxResult Show(System::String ^ messageBoxText, System::String ^ caption, System::Windows::MessageBoxButton button);" />
+      <MemberSignature Language="F#" Value="static member Show : string * string * System.Windows.MessageBoxButton -&gt; System.Windows.MessageBoxResult" Usage="System.Windows.MessageBox.Show (messageBoxText, caption, button)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -228,9 +238,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.MessageBox.Show(System.Windows.Window,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Show (owner As Window, messageBoxText As String, caption As String) As MessageBoxResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Windows::MessageBoxResult Show(System::Windows::Window ^ owner, System::String ^ messageBoxText, System::String ^ caption);" />
+      <MemberSignature Language="F#" Value="static member Show : System.Windows.Window * string * string -&gt; System.Windows.MessageBoxResult" Usage="System.Windows.MessageBox.Show (owner, messageBoxText, caption)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -270,9 +282,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.MessageBox.Show(System.String,System.String,System.Windows.MessageBoxButton,System.Windows.MessageBoxImage)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Show (messageBoxText As String, caption As String, button As MessageBoxButton, icon As MessageBoxImage) As MessageBoxResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Windows::MessageBoxResult Show(System::String ^ messageBoxText, System::String ^ caption, System::Windows::MessageBoxButton button, System::Windows::MessageBoxImage icon);" />
+      <MemberSignature Language="F#" Value="static member Show : string * string * System.Windows.MessageBoxButton * System.Windows.MessageBoxImage -&gt; System.Windows.MessageBoxResult" Usage="System.Windows.MessageBox.Show (messageBoxText, caption, button, icon)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -315,9 +329,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.MessageBox.Show(System.Windows.Window,System.String,System.String,System.Windows.MessageBoxButton)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Show (owner As Window, messageBoxText As String, caption As String, button As MessageBoxButton) As MessageBoxResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Windows::MessageBoxResult Show(System::Windows::Window ^ owner, System::String ^ messageBoxText, System::String ^ caption, System::Windows::MessageBoxButton button);" />
+      <MemberSignature Language="F#" Value="static member Show : System.Windows.Window * string * string * System.Windows.MessageBoxButton -&gt; System.Windows.MessageBoxResult" Usage="System.Windows.MessageBox.Show (owner, messageBoxText, caption, button)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -359,9 +375,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.MessageBox.Show(System.String,System.String,System.Windows.MessageBoxButton,System.Windows.MessageBoxImage,System.Windows.MessageBoxResult)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Show (messageBoxText As String, caption As String, button As MessageBoxButton, icon As MessageBoxImage, defaultResult As MessageBoxResult) As MessageBoxResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Windows::MessageBoxResult Show(System::String ^ messageBoxText, System::String ^ caption, System::Windows::MessageBoxButton button, System::Windows::MessageBoxImage icon, System::Windows::MessageBoxResult defaultResult);" />
+      <MemberSignature Language="F#" Value="static member Show : string * string * System.Windows.MessageBoxButton * System.Windows.MessageBoxImage * System.Windows.MessageBoxResult -&gt; System.Windows.MessageBoxResult" Usage="System.Windows.MessageBox.Show (messageBoxText, caption, button, icon, defaultResult)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -406,9 +424,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.MessageBox.Show(System.Windows.Window,System.String,System.String,System.Windows.MessageBoxButton,System.Windows.MessageBoxImage)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Show (owner As Window, messageBoxText As String, caption As String, button As MessageBoxButton, icon As MessageBoxImage) As MessageBoxResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Windows::MessageBoxResult Show(System::Windows::Window ^ owner, System::String ^ messageBoxText, System::String ^ caption, System::Windows::MessageBoxButton button, System::Windows::MessageBoxImage icon);" />
+      <MemberSignature Language="F#" Value="static member Show : System.Windows.Window * string * string * System.Windows.MessageBoxButton * System.Windows.MessageBoxImage -&gt; System.Windows.MessageBoxResult" Usage="System.Windows.MessageBox.Show (owner, messageBoxText, caption, button, icon)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -452,9 +472,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.MessageBox.Show(System.String,System.String,System.Windows.MessageBoxButton,System.Windows.MessageBoxImage,System.Windows.MessageBoxResult,System.Windows.MessageBoxOptions)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Show (messageBoxText As String, caption As String, button As MessageBoxButton, icon As MessageBoxImage, defaultResult As MessageBoxResult, options As MessageBoxOptions) As MessageBoxResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Windows::MessageBoxResult Show(System::String ^ messageBoxText, System::String ^ caption, System::Windows::MessageBoxButton button, System::Windows::MessageBoxImage icon, System::Windows::MessageBoxResult defaultResult, System::Windows::MessageBoxOptions options);" />
+      <MemberSignature Language="F#" Value="static member Show : string * string * System.Windows.MessageBoxButton * System.Windows.MessageBoxImage * System.Windows.MessageBoxResult * System.Windows.MessageBoxOptions -&gt; System.Windows.MessageBoxResult" Usage="System.Windows.MessageBox.Show (messageBoxText, caption, button, icon, defaultResult, options)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -501,9 +523,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.MessageBox.Show(System.Windows.Window,System.String,System.String,System.Windows.MessageBoxButton,System.Windows.MessageBoxImage,System.Windows.MessageBoxResult)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Show (owner As Window, messageBoxText As String, caption As String, button As MessageBoxButton, icon As MessageBoxImage, defaultResult As MessageBoxResult) As MessageBoxResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Windows::MessageBoxResult Show(System::Windows::Window ^ owner, System::String ^ messageBoxText, System::String ^ caption, System::Windows::MessageBoxButton button, System::Windows::MessageBoxImage icon, System::Windows::MessageBoxResult defaultResult);" />
+      <MemberSignature Language="F#" Value="static member Show : System.Windows.Window * string * string * System.Windows.MessageBoxButton * System.Windows.MessageBoxImage * System.Windows.MessageBoxResult -&gt; System.Windows.MessageBoxResult" Usage="System.Windows.MessageBox.Show (owner, messageBoxText, caption, button, icon, defaultResult)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -549,9 +573,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.MessageBox.Show(System.Windows.Window,System.String,System.String,System.Windows.MessageBoxButton,System.Windows.MessageBoxImage,System.Windows.MessageBoxResult,System.Windows.MessageBoxOptions)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Show (owner As Window, messageBoxText As String, caption As String, button As MessageBoxButton, icon As MessageBoxImage, defaultResult As MessageBoxResult, options As MessageBoxOptions) As MessageBoxResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Windows::MessageBoxResult Show(System::Windows::Window ^ owner, System::String ^ messageBoxText, System::String ^ caption, System::Windows::MessageBoxButton button, System::Windows::MessageBoxImage icon, System::Windows::MessageBoxResult defaultResult, System::Windows::MessageBoxOptions options);" />
+      <MemberSignature Language="F#" Value="static member Show : System.Windows.Window * string * string * System.Windows.MessageBoxButton * System.Windows.MessageBoxImage * System.Windows.MessageBoxResult * System.Windows.MessageBoxOptions -&gt; System.Windows.MessageBoxResult" Usage="System.Windows.MessageBox.Show (owner, messageBoxText, caption, button, icon, defaultResult, options)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>

@@ -4,12 +4,15 @@
   <TypeSignature Language="DocId" Value="T:System.Xml.XPath.XPathNavigator" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class XPathNavigator&#xA;Inherits XPathItem&#xA;Implements ICloneable, IXmlNamespaceResolver, IXPathNavigable" />
   <TypeSignature Language="C++ CLI" Value="public ref class XPathNavigator abstract : System::Xml::XPath::XPathItem, ICloneable, System::Xml::IXmlNamespaceResolver, System::Xml::XPath::IXPathNavigable" />
+  <TypeSignature Language="F#" Value="type XPathNavigator = class&#xA;    inherit XPathItem&#xA;    interface ICloneable&#xA;    interface IXPathNavigable&#xA;    interface IXmlNamespaceResolver" />
   <AssemblyInfo>
     <AssemblyName>System.Xml.XPath</AssemblyName>
     <AssemblyVersion>4.0.1.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.0.5.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
@@ -24,6 +27,7 @@
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Xml.XPath.XPathItem</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-1.1">System.Object</BaseTypeName>
   </Base>
   <Interfaces>
     <Interface>
@@ -37,7 +41,7 @@
     </Interface>
   </Interfaces>
   <Attributes>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8">
       <AttributeName>System.Diagnostics.DebuggerDisplay("{debuggerDisplayProxy}")</AttributeName>
     </Attribute>
   </Attributes>
@@ -107,6 +111,7 @@
     <altmember cref="T:System.Xml.XPath.XPathDocument" />
     <altmember cref="T:System.Xml.XmlDocument" />
     <altmember cref="T:System.Xml.XmlNode" />
+    <related type="Article" href="https://msdn.microsoft.com/library/536c6fce-1453-4654-9c72-bca54d47e081">Process XML Data Using the XPath Data Model</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -122,6 +127,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -134,6 +141,11 @@
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.Xml.XPath.XPathNavigator" /> class.</summary>
@@ -162,6 +174,7 @@
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.AppendChild" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function AppendChild () As XmlWriter" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Xml::XmlWriter ^ AppendChild();" />
+      <MemberSignature Language="F#" Value="abstract member AppendChild : unit -&gt; System.Xml.XmlWriter&#xA;override this.AppendChild : unit -&gt; System.Xml.XmlWriter" Usage="xPathNavigator.AppendChild " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -169,6 +182,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -258,6 +272,7 @@
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.AppendChild(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub AppendChild (newChild As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void AppendChild(System::String ^ newChild);" />
+      <MemberSignature Language="F#" Value="abstract member AppendChild : string -&gt; unit&#xA;override this.AppendChild : string -&gt; unit" Usage="xPathNavigator.AppendChild newChild" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -265,6 +280,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -356,6 +372,7 @@
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.AppendChild(System.Xml.XmlReader)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub AppendChild (newChild As XmlReader)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void AppendChild(System::Xml::XmlReader ^ newChild);" />
+      <MemberSignature Language="F#" Value="abstract member AppendChild : System.Xml.XmlReader -&gt; unit&#xA;override this.AppendChild : System.Xml.XmlReader -&gt; unit" Usage="xPathNavigator.AppendChild newChild" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -363,6 +380,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -455,6 +473,7 @@
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.AppendChild(System.Xml.XPath.XPathNavigator)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub AppendChild (newChild As XPathNavigator)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void AppendChild(System::Xml::XPath::XPathNavigator ^ newChild);" />
+      <MemberSignature Language="F#" Value="abstract member AppendChild : System.Xml.XPath.XPathNavigator -&gt; unit&#xA;override this.AppendChild : System.Xml.XPath.XPathNavigator -&gt; unit" Usage="xPathNavigator.AppendChild newChild" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -462,6 +481,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -552,6 +572,7 @@
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.AppendChildElement(System.String,System.String,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub AppendChildElement (prefix As String, localName As String, namespaceURI As String, value As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void AppendChildElement(System::String ^ prefix, System::String ^ localName, System::String ^ namespaceURI, System::String ^ value);" />
+      <MemberSignature Language="F#" Value="abstract member AppendChildElement : string * string * string * string -&gt; unit&#xA;override this.AppendChildElement : string * string * string * string -&gt; unit" Usage="xPathNavigator.AppendChildElement (prefix, localName, namespaceURI, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -559,6 +580,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -594,7 +616,7 @@
   
  Namespace prefix and URI values can be obtained by using the <xref:System.Xml.XPath.XPathNavigator.LookupPrefix%2A> method or the  <xref:System.Xml.XPath.XPathNavigator.LookupNamespace%2A> method. For example, the following syntax appends a child element by using the in-scope namespace `xmlns:bk=http://www.contoso.com/books`:  
   
-```  
+```csharp  
 navigator.AppendChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navigator.Prefix), String.Empty)  
 ```  
   
@@ -662,6 +684,7 @@ navigator.AppendChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navig
       <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNavigator.BaseURI" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property BaseURI As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ BaseURI { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.BaseURI : string" Usage="System.Xml.XPath.XPathNavigator.BaseURI" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -669,6 +692,8 @@ navigator.AppendChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navig
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -708,6 +733,7 @@ navigator.AppendChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navig
       <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNavigator.CanEdit" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property CanEdit As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool CanEdit { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.CanEdit : bool" Usage="System.Xml.XPath.XPathNavigator.CanEdit" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -715,6 +741,7 @@ navigator.AppendChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navig
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -731,9 +758,9 @@ navigator.AppendChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navig
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets a value indicating whether the <see cref="T:System.Xml.XPath.XPathNavigator" /> can edit the underlying XML data.</summary>
+        <summary>Gets a value that indicates whether the <see cref="T:System.Xml.XPath.XPathNavigator" /> can edit the underlying XML data.</summary>
         <value>
-          <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> can edit the underlying XML data; otherwise <see langword="false" />.</value>
+          <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> can edit the underlying XML data; otherwise, <see langword="false" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -796,9 +823,11 @@ navigator.AppendChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navig
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CheckValidity(class System.Xml.Schema.XmlSchemaSet schemas, class System.Xml.Schema.ValidationEventHandler validationEventHandler) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.CheckValidity(System.Xml.Schema.XmlSchemaSet,System.Xml.Schema.ValidationEventHandler)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool CheckValidity(System::Xml::Schema::XmlSchemaSet ^ schemas, System::Xml::Schema::ValidationEventHandler ^ validationEventHandler);" />
+      <MemberSignature Language="F#" Value="abstract member CheckValidity : System.Xml.Schema.XmlSchemaSet * System.Xml.Schema.ValidationEventHandler -&gt; bool&#xA;override this.CheckValidity : System.Xml.Schema.XmlSchemaSet * System.Xml.Schema.ValidationEventHandler -&gt; bool" Usage="xPathNavigator.CheckValidity (schemas, validationEventHandler)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -810,6 +839,9 @@ navigator.AppendChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navig
         <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -852,6 +884,7 @@ navigator.AppendChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navig
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.Clone" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function Clone () As XPathNavigator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Xml::XPath::XPathNavigator ^ Clone();" />
+      <MemberSignature Language="F#" Value="abstract member Clone : unit -&gt; System.Xml.XPath.XPathNavigator" Usage="xPathNavigator.Clone " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -859,6 +892,8 @@ navigator.AppendChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navig
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -937,6 +972,7 @@ navigator.AppendChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navig
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.ComparePosition(System.Xml.XPath.XPathNavigator)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function ComparePosition (nav As XPathNavigator) As XmlNodeOrder" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Xml::XmlNodeOrder ComparePosition(System::Xml::XPath::XPathNavigator ^ nav);" />
+      <MemberSignature Language="F#" Value="abstract member ComparePosition : System.Xml.XPath.XPathNavigator -&gt; System.Xml.XmlNodeOrder&#xA;override this.ComparePosition : System.Xml.XPath.XPathNavigator -&gt; System.Xml.XmlNodeOrder" Usage="xPathNavigator.ComparePosition nav" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -944,6 +980,8 @@ navigator.AppendChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navig
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -988,7 +1026,7 @@ navigator.AppendChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navig
 -   <xref:System.Xml.XPath.XPathNodeType.Attribute> nodes: These nodes may be returned in document order. They always come after the <xref:System.Xml.XPath.XPathNodeType.Namespace> nodes and before any child nodes of the parent node.  
   
 > [!NOTE]
->  For more information about the XPath data model and details about each of the node types, see section 5 of the W3C XML Path Language (XPath) recommendation located at http://www.w3.org/TR/xpath#data-model.  
+>  For more information about the XPath data model and details about each of the node types, see section 5 of the W3C [XML Path Language (XPath)](https://www.w3.org/TR/xpath/all/#data-model) recommendation.
   
  This method has no effect on the state of the <xref:System.Xml.XPath.XPathNavigator>.  
   
@@ -1006,6 +1044,7 @@ navigator.AppendChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navig
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.Compile(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function Compile (xpath As String) As XPathExpression" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Xml::XPath::XPathExpression ^ Compile(System::String ^ xpath);" />
+      <MemberSignature Language="F#" Value="abstract member Compile : string -&gt; System.Xml.XPath.XPathExpression&#xA;override this.Compile : string -&gt; System.Xml.XPath.XPathExpression" Usage="xPathNavigator.Compile xpath" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -1013,6 +1052,8 @@ navigator.AppendChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navig
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1063,6 +1104,7 @@ navigator.AppendChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navig
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.CreateAttribute(System.String,System.String,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub CreateAttribute (prefix As String, localName As String, namespaceURI As String, value As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void CreateAttribute(System::String ^ prefix, System::String ^ localName, System::String ^ namespaceURI, System::String ^ value);" />
+      <MemberSignature Language="F#" Value="abstract member CreateAttribute : string * string * string * string -&gt; unit&#xA;override this.CreateAttribute : string * string * string * string -&gt; unit" Usage="xPathNavigator.CreateAttribute (prefix, localName, namespaceURI, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -1070,6 +1112,7 @@ navigator.AppendChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navig
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1103,7 +1146,7 @@ navigator.AppendChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navig
 ## Remarks  
  Namespace prefix and URI values can be obtained using the <xref:System.Xml.XPath.XPathNavigator.LookupPrefix%2A> or <xref:System.Xml.XPath.XPathNavigator.LookupNamespace%2A> method. For example, the following syntax creates an attribute by using the in-scope namespace `xmlns:bk="http://www.contoso.com/books"`:  
   
-```  
+```csharp  
 editor.CreateAttribute(navigator.Prefix, "attributeName", LookupNamespace(navigator.Prefix), "text")  
 ```  
   
@@ -1171,6 +1214,7 @@ editor.CreateAttribute(navigator.Prefix, "attributeName", LookupNamespace(naviga
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.CreateAttributes" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateAttributes () As XmlWriter" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Xml::XmlWriter ^ CreateAttributes();" />
+      <MemberSignature Language="F#" Value="abstract member CreateAttributes : unit -&gt; System.Xml.XmlWriter&#xA;override this.CreateAttributes : unit -&gt; System.Xml.XmlWriter" Usage="xPathNavigator.CreateAttributes " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -1178,6 +1222,7 @@ editor.CreateAttribute(navigator.Prefix, "attributeName", LookupNamespace(naviga
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1269,6 +1314,7 @@ editor.CreateAttribute(navigator.Prefix, "attributeName", LookupNamespace(naviga
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.CreateNavigator" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateNavigator () As XPathNavigator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Xml::XPath::XPathNavigator ^ CreateNavigator();" />
+      <MemberSignature Language="F#" Value="abstract member CreateNavigator : unit -&gt; System.Xml.XPath.XPathNavigator&#xA;override this.CreateNavigator : unit -&gt; System.Xml.XPath.XPathNavigator" Usage="xPathNavigator.CreateNavigator " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Xml.XPath.IXPathNavigable.CreateNavigator</InterfaceMember>
@@ -1279,6 +1325,7 @@ editor.CreateAttribute(navigator.Prefix, "attributeName", LookupNamespace(naviga
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1291,6 +1338,11 @@ editor.CreateAttribute(navigator.Prefix, "attributeName", LookupNamespace(naviga
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
       </ReturnValue>
@@ -1314,6 +1366,7 @@ editor.CreateAttribute(navigator.Prefix, "attributeName", LookupNamespace(naviga
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.DeleteRange(System.Xml.XPath.XPathNavigator)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub DeleteRange (lastSiblingToDelete As XPathNavigator)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void DeleteRange(System::Xml::XPath::XPathNavigator ^ lastSiblingToDelete);" />
+      <MemberSignature Language="F#" Value="abstract member DeleteRange : System.Xml.XPath.XPathNavigator -&gt; unit&#xA;override this.DeleteRange : System.Xml.XPath.XPathNavigator -&gt; unit" Usage="xPathNavigator.DeleteRange lastSiblingToDelete" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -1321,6 +1374,7 @@ editor.CreateAttribute(navigator.Prefix, "attributeName", LookupNamespace(naviga
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1403,6 +1457,7 @@ editor.CreateAttribute(navigator.Prefix, "attributeName", LookupNamespace(naviga
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.DeleteSelf" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub DeleteSelf ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void DeleteSelf();" />
+      <MemberSignature Language="F#" Value="abstract member DeleteSelf : unit -&gt; unit&#xA;override this.DeleteSelf : unit -&gt; unit" Usage="xPathNavigator.DeleteSelf " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -1410,6 +1465,7 @@ editor.CreateAttribute(navigator.Prefix, "attributeName", LookupNamespace(naviga
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1422,6 +1478,11 @@ editor.CreateAttribute(navigator.Prefix, "attributeName", LookupNamespace(naviga
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -1502,6 +1563,7 @@ editor.CreateAttribute(navigator.Prefix, "attributeName", LookupNamespace(naviga
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.Evaluate(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function Evaluate (xpath As String) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Object ^ Evaluate(System::String ^ xpath);" />
+      <MemberSignature Language="F#" Value="abstract member Evaluate : string -&gt; obj&#xA;override this.Evaluate : string -&gt; obj" Usage="xPathNavigator.Evaluate xpath" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -1509,6 +1571,8 @@ editor.CreateAttribute(navigator.Prefix, "attributeName", LookupNamespace(naviga
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1537,7 +1601,7 @@ editor.CreateAttribute(navigator.Prefix, "attributeName", LookupNamespace(naviga
 ## Remarks  
  The following C# code converts the `Price/text()` node to a number, multiplies it by 10, and returns the resulting value.  
   
-```  
+```csharp 
 nav.Evaluate("Price/text()*10");  
 ```  
   
@@ -1603,6 +1667,7 @@ nav.Evaluate("Price/text()*10");
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.Evaluate(System.Xml.XPath.XPathExpression)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function Evaluate (expr As XPathExpression) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Object ^ Evaluate(System::Xml::XPath::XPathExpression ^ expr);" />
+      <MemberSignature Language="F#" Value="abstract member Evaluate : System.Xml.XPath.XPathExpression -&gt; obj&#xA;override this.Evaluate : System.Xml.XPath.XPathExpression -&gt; obj" Usage="xPathNavigator.Evaluate expr" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -1610,6 +1675,8 @@ nav.Evaluate("Price/text()*10");
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1622,6 +1689,11 @@ nav.Evaluate("Price/text()*10");
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
@@ -1638,7 +1710,7 @@ nav.Evaluate("Price/text()*10");
 ## Remarks  
  The following C# code returns a number after converting the `Price/text()` node to a number and multiplying the value by 10.  
   
-```  
+```csharp  
 XPathExpression expr = nav.Compile("Price/text()*10");  
 nav.Evaluate(expr);  
 ```  
@@ -1659,7 +1731,7 @@ nav.Evaluate(expr);
   
  The example takes the `books.xml` file as an input.  
   
-```  
+```xml  
   
 <?xml version="1.0" encoding="utf-8" ?>   
 <bookstore>  
@@ -1704,6 +1776,7 @@ nav.Evaluate(expr);
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.Evaluate(System.String,System.Xml.IXmlNamespaceResolver)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function Evaluate (xpath As String, resolver As IXmlNamespaceResolver) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Object ^ Evaluate(System::String ^ xpath, System::Xml::IXmlNamespaceResolver ^ resolver);" />
+      <MemberSignature Language="F#" Value="abstract member Evaluate : string * System.Xml.IXmlNamespaceResolver -&gt; obj&#xA;override this.Evaluate : string * System.Xml.IXmlNamespaceResolver -&gt; obj" Usage="xPathNavigator.Evaluate (xpath, resolver)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -1711,6 +1784,7 @@ nav.Evaluate(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1741,7 +1815,7 @@ nav.Evaluate(expr);
 ## Remarks  
  The following C# code returns a number after converting the `Price/text()` node to a number and multiplying the value by 10.  
   
-```  
+```csharp  
 XPathExpression expr = nav.Compile("Price/text()*10");  
 nav.Evaluate(expr);  
 ```  
@@ -1805,6 +1879,7 @@ nav.Evaluate(expr);
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.Evaluate(System.Xml.XPath.XPathExpression,System.Xml.XPath.XPathNodeIterator)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function Evaluate (expr As XPathExpression, context As XPathNodeIterator) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Object ^ Evaluate(System::Xml::XPath::XPathExpression ^ expr, System::Xml::XPath::XPathNodeIterator ^ context);" />
+      <MemberSignature Language="F#" Value="abstract member Evaluate : System.Xml.XPath.XPathExpression * System.Xml.XPath.XPathNodeIterator -&gt; obj&#xA;override this.Evaluate : System.Xml.XPath.XPathExpression * System.Xml.XPath.XPathNodeIterator -&gt; obj" Usage="xPathNavigator.Evaluate (expr, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -1812,6 +1887,8 @@ nav.Evaluate(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1906,6 +1983,7 @@ nav.Evaluate(expr);
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.GetAttribute(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function GetAttribute (localName As String, namespaceURI As String) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::String ^ GetAttribute(System::String ^ localName, System::String ^ namespaceURI);" />
+      <MemberSignature Language="F#" Value="abstract member GetAttribute : string * string -&gt; string&#xA;override this.GetAttribute : string * string -&gt; string" Usage="xPathNavigator.GetAttribute (localName, namespaceURI)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -1913,6 +1991,8 @@ nav.Evaluate(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1933,7 +2013,7 @@ nav.Evaluate(expr);
         <Parameter Name="namespaceURI" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="localName">The local name of the attribute. <c>localName</c> is case-sensitive.</param>
+        <param name="localName">The local name of the attribute. <paramref name="localName" /> is case-sensitive.</param>
         <param name="namespaceURI">The namespace URI of the attribute.</param>
         <summary>Gets the value of the attribute with the specified local name and namespace URI.</summary>
         <returns>A <see cref="T:System.String" /> that contains the value of the specified attribute; <see cref="F:System.String.Empty" /> if a matching attribute is not found, or if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is not positioned on an element node.</returns>
@@ -1959,6 +2039,7 @@ nav.Evaluate(expr);
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.GetNamespace(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function GetNamespace (name As String) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::String ^ GetNamespace(System::String ^ name);" />
+      <MemberSignature Language="F#" Value="abstract member GetNamespace : string -&gt; string&#xA;override this.GetNamespace : string -&gt; string" Usage="xPathNavigator.GetNamespace name" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -1966,6 +2047,8 @@ nav.Evaluate(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1994,7 +2077,7 @@ nav.Evaluate(expr);
 ## Remarks  
  Namespaces `xml` and `xmlns` always return a value. If <xref:System.String.Empty?displayProperty=nameWithType> is specified as the `name` parameter, the <xref:System.Xml.XPath.XPathNavigator.GetNamespace%2A> method returns the default `xmlns` namespace.  
   
- For a definition of namespace nodes, see section 5.4 of the W3C XML Path Language (XPath) recommendation located at http://www.w3.org/TR/xpath#data-model.  
+ For a definition of namespace nodes, see section 5.4 of the W3C [XML Path Language (XPath)](https://www.w3.org/TR/xpath/all/#data-model) recommendation.
   
  This method does not affect the state of the <xref:System.Xml.XPath.XPathNavigator>.  
   
@@ -2011,6 +2094,7 @@ nav.Evaluate(expr);
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.GetNamespacesInScope(System.Xml.XmlNamespaceScope)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function GetNamespacesInScope (scope As XmlNamespaceScope) As IDictionary(Of String, String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ GetNamespacesInScope(System::Xml::XmlNamespaceScope scope);" />
+      <MemberSignature Language="F#" Value="abstract member GetNamespacesInScope : System.Xml.XmlNamespaceScope -&gt; System.Collections.Generic.IDictionary&lt;string, string&gt;&#xA;override this.GetNamespacesInScope : System.Xml.XmlNamespaceScope -&gt; System.Collections.Generic.IDictionary&lt;string, string&gt;" Usage="xPathNavigator.GetNamespacesInScope scope" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Xml.IXmlNamespaceResolver.GetNamespacesInScope(System.Xml.XmlNamespaceScope)</InterfaceMember>
@@ -2021,6 +2105,7 @@ nav.Evaluate(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2065,6 +2150,7 @@ nav.Evaluate(expr);
       <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNavigator.HasAttributes" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property HasAttributes As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool HasAttributes { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.HasAttributes : bool" Usage="System.Xml.XPath.XPathNavigator.HasAttributes" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -2072,6 +2158,8 @@ nav.Evaluate(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2088,8 +2176,9 @@ nav.Evaluate(expr);
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets a value indicating whether the current node has any attributes.</summary>
-        <value>Returns <see langword="true" /> if the current node has attributes; returns <see langword="false" /> if the current node has no attributes, or if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is not positioned on an element node.</value>
+        <summary>Gets a value that indicates whether the current node has any attributes.</summary>
+        <value>
+          <see langword="true" /> if the current node has attributes; returns <see langword="false" /> if the current node has no attributes, or if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is not positioned on an element node.</value>
         <remarks>To be added.</remarks>
         <altmember cref="M:System.Xml.XPath.XPathNavigator.MoveToNextAttribute" />
         <altmember cref="M:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute" />
@@ -2103,6 +2192,7 @@ nav.Evaluate(expr);
       <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNavigator.HasChildren" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property HasChildren As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool HasChildren { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.HasChildren : bool" Usage="System.Xml.XPath.XPathNavigator.HasChildren" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -2110,6 +2200,8 @@ nav.Evaluate(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2126,7 +2218,7 @@ nav.Evaluate(expr);
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets a value indicating whether the current node has any child nodes.</summary>
+        <summary>Gets a value that indicates whether the current node has any child nodes.</summary>
         <value>
           <see langword="true" /> if the current node has any child nodes; otherwise, <see langword="false" />.</value>
         <remarks>
@@ -2156,6 +2248,7 @@ nav.Evaluate(expr);
       <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNavigator.InnerXml" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property InnerXml As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ InnerXml { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.InnerXml : string with get, set" Usage="System.Xml.XPath.XPathNavigator.InnerXml" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -2163,6 +2256,7 @@ nav.Evaluate(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2251,6 +2345,7 @@ nav.Evaluate(expr);
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.InsertAfter" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function InsertAfter () As XmlWriter" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Xml::XmlWriter ^ InsertAfter();" />
+      <MemberSignature Language="F#" Value="abstract member InsertAfter : unit -&gt; System.Xml.XmlWriter&#xA;override this.InsertAfter : unit -&gt; System.Xml.XmlWriter" Usage="xPathNavigator.InsertAfter " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -2258,6 +2353,7 @@ nav.Evaluate(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2343,6 +2439,7 @@ nav.Evaluate(expr);
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.InsertAfter(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub InsertAfter (newSibling As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void InsertAfter(System::String ^ newSibling);" />
+      <MemberSignature Language="F#" Value="abstract member InsertAfter : string -&gt; unit&#xA;override this.InsertAfter : string -&gt; unit" Usage="xPathNavigator.InsertAfter newSibling" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -2350,6 +2447,7 @@ nav.Evaluate(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2439,6 +2537,7 @@ nav.Evaluate(expr);
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.InsertAfter(System.Xml.XmlReader)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub InsertAfter (newSibling As XmlReader)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void InsertAfter(System::Xml::XmlReader ^ newSibling);" />
+      <MemberSignature Language="F#" Value="abstract member InsertAfter : System.Xml.XmlReader -&gt; unit&#xA;override this.InsertAfter : System.Xml.XmlReader -&gt; unit" Usage="xPathNavigator.InsertAfter newSibling" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -2446,6 +2545,7 @@ nav.Evaluate(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2536,6 +2636,7 @@ nav.Evaluate(expr);
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.InsertAfter(System.Xml.XPath.XPathNavigator)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub InsertAfter (newSibling As XPathNavigator)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void InsertAfter(System::Xml::XPath::XPathNavigator ^ newSibling);" />
+      <MemberSignature Language="F#" Value="abstract member InsertAfter : System.Xml.XPath.XPathNavigator -&gt; unit&#xA;override this.InsertAfter : System.Xml.XPath.XPathNavigator -&gt; unit" Usage="xPathNavigator.InsertAfter newSibling" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -2543,6 +2644,7 @@ nav.Evaluate(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2640,6 +2742,7 @@ nav.Evaluate(expr);
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.InsertBefore" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function InsertBefore () As XmlWriter" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Xml::XmlWriter ^ InsertBefore();" />
+      <MemberSignature Language="F#" Value="abstract member InsertBefore : unit -&gt; System.Xml.XmlWriter&#xA;override this.InsertBefore : unit -&gt; System.Xml.XmlWriter" Usage="xPathNavigator.InsertBefore " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -2647,6 +2750,7 @@ nav.Evaluate(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2732,6 +2836,7 @@ nav.Evaluate(expr);
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.InsertBefore(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub InsertBefore (newSibling As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void InsertBefore(System::String ^ newSibling);" />
+      <MemberSignature Language="F#" Value="abstract member InsertBefore : string -&gt; unit&#xA;override this.InsertBefore : string -&gt; unit" Usage="xPathNavigator.InsertBefore newSibling" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -2739,6 +2844,7 @@ nav.Evaluate(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2828,6 +2934,7 @@ nav.Evaluate(expr);
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.InsertBefore(System.Xml.XmlReader)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub InsertBefore (newSibling As XmlReader)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void InsertBefore(System::Xml::XmlReader ^ newSibling);" />
+      <MemberSignature Language="F#" Value="abstract member InsertBefore : System.Xml.XmlReader -&gt; unit&#xA;override this.InsertBefore : System.Xml.XmlReader -&gt; unit" Usage="xPathNavigator.InsertBefore newSibling" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -2835,6 +2942,7 @@ nav.Evaluate(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2925,6 +3033,7 @@ nav.Evaluate(expr);
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.InsertBefore(System.Xml.XPath.XPathNavigator)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub InsertBefore (newSibling As XPathNavigator)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void InsertBefore(System::Xml::XPath::XPathNavigator ^ newSibling);" />
+      <MemberSignature Language="F#" Value="abstract member InsertBefore : System.Xml.XPath.XPathNavigator -&gt; unit&#xA;override this.InsertBefore : System.Xml.XPath.XPathNavigator -&gt; unit" Usage="xPathNavigator.InsertBefore newSibling" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -2932,6 +3041,7 @@ nav.Evaluate(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -3020,6 +3130,7 @@ nav.Evaluate(expr);
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.InsertElementAfter(System.String,System.String,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub InsertElementAfter (prefix As String, localName As String, namespaceURI As String, value As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void InsertElementAfter(System::String ^ prefix, System::String ^ localName, System::String ^ namespaceURI, System::String ^ value);" />
+      <MemberSignature Language="F#" Value="abstract member InsertElementAfter : string * string * string * string -&gt; unit&#xA;override this.InsertElementAfter : string * string * string * string -&gt; unit" Usage="xPathNavigator.InsertElementAfter (prefix, localName, namespaceURI, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -3027,6 +3138,7 @@ nav.Evaluate(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -3060,7 +3172,7 @@ nav.Evaluate(expr);
 ## Remarks  
  Namespace prefix and URI values can be obtained using the <xref:System.Xml.XPath.XPathNavigator.LookupPrefix%2A> or <xref:System.Xml.XPath.XPathNavigator.LookupNamespace%2A> method. For example, the following syntax inserts a sibling element by using the in-scope namespace `xmlns:bk="http://www.contoso.com/books"`:  
   
-```  
+```csharp  
 navigator.InsertElementAfter(navigator.Prefix, "pages", LookupNamespaceURI(navigator.Prefix), String.Empty)  
 ```  
   
@@ -3128,6 +3240,7 @@ navigator.InsertElementAfter(navigator.Prefix, "pages", LookupNamespaceURI(navig
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.InsertElementBefore(System.String,System.String,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub InsertElementBefore (prefix As String, localName As String, namespaceURI As String, value As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void InsertElementBefore(System::String ^ prefix, System::String ^ localName, System::String ^ namespaceURI, System::String ^ value);" />
+      <MemberSignature Language="F#" Value="abstract member InsertElementBefore : string * string * string * string -&gt; unit&#xA;override this.InsertElementBefore : string * string * string * string -&gt; unit" Usage="xPathNavigator.InsertElementBefore (prefix, localName, namespaceURI, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -3135,6 +3248,7 @@ navigator.InsertElementAfter(navigator.Prefix, "pages", LookupNamespaceURI(navig
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -3168,7 +3282,7 @@ navigator.InsertElementAfter(navigator.Prefix, "pages", LookupNamespaceURI(navig
 ## Remarks  
  Namespace prefix and URI values can be obtained using the <xref:System.Xml.XPath.XPathNavigator.LookupPrefix%2A> or <xref:System.Xml.XPath.XPathNavigator.LookupNamespace%2A> method. For example, the following syntax inserts a sibling element by using the in-scope namespace `xmlns:bk="http://www.contoso.com/books"`:  
   
-```  
+```csharp  
 navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navigator.Prefix), String.Empty)  
 ```  
   
@@ -3236,6 +3350,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.IsDescendant(System.Xml.XPath.XPathNavigator)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function IsDescendant (nav As XPathNavigator) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool IsDescendant(System::Xml::XPath::XPathNavigator ^ nav);" />
+      <MemberSignature Language="F#" Value="abstract member IsDescendant : System.Xml.XPath.XPathNavigator -&gt; bool&#xA;override this.IsDescendant : System.Xml.XPath.XPathNavigator -&gt; bool" Usage="xPathNavigator.IsDescendant nav" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -3243,6 +3358,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -3292,6 +3409,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNavigator.IsEmptyElement" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property IsEmptyElement As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool IsEmptyElement { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsEmptyElement : bool" Usage="System.Xml.XPath.XPathNavigator.IsEmptyElement" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -3299,6 +3417,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -3315,7 +3435,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>When overridden in a derived class, gets a value indicating whether the current node is an empty element without an end element tag.</summary>
+        <summary>When overridden in a derived class, gets a value that indicates whether the current node is an empty element without an end element tag.</summary>
         <value>
           <see langword="true" /> if the current node is an empty element; otherwise, <see langword="false" />.</value>
         <remarks>
@@ -3340,6 +3460,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNavigator.IsNode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides NotOverridable ReadOnly Property IsNode As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsNode { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsNode : bool" Usage="System.Xml.XPath.XPathNavigator.IsNode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -3347,6 +3468,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -3363,7 +3485,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets a value indicating if the current node represents an XPath node.</summary>
+        <summary>Gets a value that indicates if the current node represents an XPath node.</summary>
         <value>Always returns <see langword="true" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3374,6 +3496,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.IsSamePosition(System.Xml.XPath.XPathNavigator)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function IsSamePosition (other As XPathNavigator) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract bool IsSamePosition(System::Xml::XPath::XPathNavigator ^ other);" />
+      <MemberSignature Language="F#" Value="abstract member IsSamePosition : System.Xml.XPath.XPathNavigator -&gt; bool" Usage="xPathNavigator.IsSamePosition other" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -3381,6 +3504,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -3427,6 +3552,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNavigator.LocalName" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property LocalName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ LocalName { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.LocalName : string" Usage="System.Xml.XPath.XPathNavigator.LocalName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -3434,6 +3560,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -3522,6 +3650,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.LookupNamespace(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function LookupNamespace (prefix As String) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::String ^ LookupNamespace(System::String ^ prefix);" />
+      <MemberSignature Language="F#" Value="abstract member LookupNamespace : string -&gt; string&#xA;override this.LookupNamespace : string -&gt; string" Usage="xPathNavigator.LookupNamespace prefix" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Xml.IXmlNamespaceResolver.LookupNamespace(System.String)</InterfaceMember>
@@ -3532,6 +3661,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -3578,6 +3708,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.LookupPrefix(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function LookupPrefix (namespaceURI As String) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::String ^ LookupPrefix(System::String ^ namespaceURI);" />
+      <MemberSignature Language="F#" Value="abstract member LookupPrefix : string -&gt; string&#xA;override this.LookupPrefix : string -&gt; string" Usage="xPathNavigator.LookupPrefix namespaceURI" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Xml.IXmlNamespaceResolver.LookupPrefix(System.String)</InterfaceMember>
@@ -3588,6 +3719,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -3638,6 +3770,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.Matches(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function Matches (xpath As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Matches(System::String ^ xpath);" />
+      <MemberSignature Language="F#" Value="abstract member Matches : string -&gt; bool&#xA;override this.Matches : string -&gt; bool" Usage="xPathNavigator.Matches xpath" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -3645,6 +3778,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -3691,6 +3826,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.Matches(System.Xml.XPath.XPathExpression)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function Matches (expr As XPathExpression) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Matches(System::Xml::XPath::XPathExpression ^ expr);" />
+      <MemberSignature Language="F#" Value="abstract member Matches : System.Xml.XPath.XPathExpression -&gt; bool&#xA;override this.Matches : System.Xml.XPath.XPathExpression -&gt; bool" Usage="xPathNavigator.Matches expr" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -3698,6 +3834,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -3781,6 +3919,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.MoveTo(System.Xml.XPath.XPathNavigator)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function MoveTo (other As XPathNavigator) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract bool MoveTo(System::Xml::XPath::XPathNavigator ^ other);" />
+      <MemberSignature Language="F#" Value="abstract member MoveTo : System.Xml.XPath.XPathNavigator -&gt; bool" Usage="xPathNavigator.MoveTo other" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -3788,6 +3927,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -3809,7 +3950,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <Docs>
         <param name="other">The <see cref="T:System.Xml.XPath.XPathNavigator" /> positioned on the node that you want to move to.</param>
         <summary>When overridden in a derived class, moves the <see cref="T:System.Xml.XPath.XPathNavigator" /> to the same position as the specified <see cref="T:System.Xml.XPath.XPathNavigator" />.</summary>
-        <returns>Returns <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the same position as the specified <see cref="T:System.Xml.XPath.XPathNavigator" />; otherwise, <see langword="false" />. If <see langword="false" />, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
+        <returns>
+          <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the same position as the specified <see cref="T:System.Xml.XPath.XPathNavigator" />; otherwise, <see langword="false" />. If <see langword="false" />, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -3828,6 +3970,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.MoveToAttribute(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function MoveToAttribute (localName As String, namespaceURI As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool MoveToAttribute(System::String ^ localName, System::String ^ namespaceURI);" />
+      <MemberSignature Language="F#" Value="abstract member MoveToAttribute : string * string -&gt; bool&#xA;override this.MoveToAttribute : string * string -&gt; bool" Usage="xPathNavigator.MoveToAttribute (localName, namespaceURI)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -3835,6 +3978,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -3858,7 +4003,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
         <param name="localName">The local name of the attribute.</param>
         <param name="namespaceURI">The namespace URI of the attribute; <see langword="null" /> for an empty namespace.</param>
         <summary>Moves the <see cref="T:System.Xml.XPath.XPathNavigator" /> to the attribute with the matching local name and namespace URI.</summary>
-        <returns>Returns <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the attribute; otherwise, <see langword="false" />. If <see langword="false" />, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
+        <returns>
+          <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the attribute; otherwise, <see langword="false" />. If <see langword="false" />, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -3891,6 +4037,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.MoveToChild(System.Xml.XPath.XPathNodeType)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function MoveToChild (type As XPathNodeType) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool MoveToChild(System::Xml::XPath::XPathNodeType type);" />
+      <MemberSignature Language="F#" Value="abstract member MoveToChild : System.Xml.XPath.XPathNodeType -&gt; bool&#xA;override this.MoveToChild : System.Xml.XPath.XPathNodeType -&gt; bool" Usage="xPathNavigator.MoveToChild type" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -3898,6 +4045,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -3919,7 +4067,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <Docs>
         <param name="type">The <see cref="T:System.Xml.XPath.XPathNodeType" /> of the child node to move to.</param>
         <summary>Moves the <see cref="T:System.Xml.XPath.XPathNavigator" /> to the child node of the <see cref="T:System.Xml.XPath.XPathNodeType" /> specified.</summary>
-        <returns>Returns <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the child node; otherwise, <see langword="false" />. If <see langword="false" />, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
+        <returns>
+          <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the child node; otherwise, <see langword="false" />. If <see langword="false" />, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -3944,6 +4093,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.MoveToChild(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function MoveToChild (localName As String, namespaceURI As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool MoveToChild(System::String ^ localName, System::String ^ namespaceURI);" />
+      <MemberSignature Language="F#" Value="abstract member MoveToChild : string * string -&gt; bool&#xA;override this.MoveToChild : string * string -&gt; bool" Usage="xPathNavigator.MoveToChild (localName, namespaceURI)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -3951,6 +4101,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -3974,7 +4125,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
         <param name="localName">The local name of the child node to move to.</param>
         <param name="namespaceURI">The namespace URI of the child node to move to.</param>
         <summary>Moves the <see cref="T:System.Xml.XPath.XPathNavigator" /> to the child node with the local name and namespace URI specified.</summary>
-        <returns>Returns <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the child node; otherwise, <see langword="false" />. If <see langword="false" />, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
+        <returns>
+          <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the child node; otherwise, <see langword="false" />. If <see langword="false" />, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -3991,6 +4143,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.MoveToFirst" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function MoveToFirst () As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool MoveToFirst();" />
+      <MemberSignature Language="F#" Value="abstract member MoveToFirst : unit -&gt; bool&#xA;override this.MoveToFirst : unit -&gt; bool" Usage="xPathNavigator.MoveToFirst " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -3998,6 +4151,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4016,7 +4171,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <Parameters />
       <Docs>
         <summary>Moves the <see cref="T:System.Xml.XPath.XPathNavigator" /> to the first sibling node of the current node.</summary>
-        <returns>Returns <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the first sibling node of the current node; <see langword="false" /> if there is no first sibling, or if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is currently positioned on an attribute node. If the <see cref="T:System.Xml.XPath.XPathNavigator" /> is already positioned on the first sibling, <see cref="T:System.Xml.XPath.XPathNavigator" /> will return <see langword="true" /> and will not move its position.  
+        <returns>
+          <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the first sibling node of the current node; <see langword="false" /> if there is no first sibling, or if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is currently positioned on an attribute node. If the <see cref="T:System.Xml.XPath.XPathNavigator" /> is already positioned on the first sibling, <see cref="T:System.Xml.XPath.XPathNavigator" /> will return <see langword="true" /> and will not move its position.  
   
  If <see cref="M:System.Xml.XPath.XPathNavigator.MoveToFirst" /> returns <see langword="false" /> because there is no first sibling, or if <see cref="T:System.Xml.XPath.XPathNavigator" /> is currently positioned on an attribute, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
         <remarks>To be added.</remarks>
@@ -4030,6 +4186,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function MoveToFirstAttribute () As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract bool MoveToFirstAttribute();" />
+      <MemberSignature Language="F#" Value="abstract member MoveToFirstAttribute : unit -&gt; bool" Usage="xPathNavigator.MoveToFirstAttribute " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -4037,6 +4194,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4055,7 +4214,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <Parameters />
       <Docs>
         <summary>When overridden in a derived class, moves the <see cref="T:System.Xml.XPath.XPathNavigator" /> to the first attribute of the current node.</summary>
-        <returns>Returns <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the first attribute of the current node; otherwise, <see langword="false" />. If <see langword="false" />, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
+        <returns>
+          <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the first attribute of the current node; otherwise, <see langword="false" />. If <see langword="false" />, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -4122,6 +4282,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.MoveToFirstChild" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function MoveToFirstChild () As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract bool MoveToFirstChild();" />
+      <MemberSignature Language="F#" Value="abstract member MoveToFirstChild : unit -&gt; bool" Usage="xPathNavigator.MoveToFirstChild " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -4129,6 +4290,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4147,7 +4310,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <Parameters />
       <Docs>
         <summary>When overridden in a derived class, moves the <see cref="T:System.Xml.XPath.XPathNavigator" /> to the first child node of the current node.</summary>
-        <returns>Returns <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the first child node of the current node; otherwise, <see langword="false" />. If <see langword="false" />, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
+        <returns>
+          <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the first child node of the current node; otherwise, <see langword="false" />. If <see langword="false" />, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -4182,6 +4346,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace" />
       <MemberSignature Language="VB.NET" Value="Public Function MoveToFirstNamespace () As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool MoveToFirstNamespace();" />
+      <MemberSignature Language="F#" Value="member this.MoveToFirstNamespace : unit -&gt; bool" Usage="xPathNavigator.MoveToFirstNamespace " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -4189,6 +4354,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4201,13 +4368,19 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
         <summary>Moves the <see cref="T:System.Xml.XPath.XPathNavigator" /> to first namespace node of the current node.</summary>
-        <returns>Returns <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the first namespace node; otherwise, <see langword="false" />. If <see langword="false" />, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
+        <returns>
+          <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the first namespace node; otherwise, <see langword="false" />. If <see langword="false" />, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -4220,7 +4393,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
   
  After the <xref:System.Xml.XPath.XPathNavigator> is positioned on an namespace node, call <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A> to move back to the element node.  
   
- For a definition of namespace nodes, see section 5.4 of the W3C XML Path Language (XPath) recommendation located at http://www.w3.org/TR/xpath#data-model.  
+ For a definition of namespace nodes, see section 5.4 of the W3C [XML Path Language (XPath)](https://www.w3.org/TR/xpath/all/#data-model) recommendation.
   
  ]]></format>
         </remarks>
@@ -4235,6 +4408,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace(System.Xml.XPath.XPathNamespaceScope)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function MoveToFirstNamespace (namespaceScope As XPathNamespaceScope) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract bool MoveToFirstNamespace(System::Xml::XPath::XPathNamespaceScope namespaceScope);" />
+      <MemberSignature Language="F#" Value="abstract member MoveToFirstNamespace : System.Xml.XPath.XPathNamespaceScope -&gt; bool" Usage="xPathNavigator.MoveToFirstNamespace namespaceScope" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -4242,6 +4416,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4263,7 +4439,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <Docs>
         <param name="namespaceScope">An <see cref="T:System.Xml.XPath.XPathNamespaceScope" /> value describing the namespace scope.</param>
         <summary>When overridden in a derived class, moves the <see cref="T:System.Xml.XPath.XPathNavigator" /> to the first namespace node that matches the <see cref="T:System.Xml.XPath.XPathNamespaceScope" /> specified.</summary>
-        <returns>Returns <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the first namespace node; otherwise, <see langword="false" />. If <see langword="false" />, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
+        <returns>
+          <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the first namespace node; otherwise, <see langword="false" />. If <see langword="false" />, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -4278,7 +4455,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
   
 -   `MoveToFirstNamespace(XPathNamespaceScope.Local)` moves to the `xmlns:c='C'` node.  
   
-```  
+```xml  
 <root xmlns='urn:default' xmlns:a='A1' xmlns:b='B'>  
     <item xmlns='' xmlns:a='A2'>  
         <data xmlns:c='C' />  
@@ -4292,7 +4469,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
   
  After the <xref:System.Xml.XPath.XPathNavigator> is positioned on an namespace node, call <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A> to move back to the element node.  
   
- For a definition of namespace nodes, see section 5.4 of the W3C XML Path Language (XPath) recommendation located at http://www.w3.org/TR/xpath#data-model.  
+ For a definition of namespace nodes, see section 5.4 of the W3C [XML Path Language (XPath)](https://www.w3.org/TR/xpath/all/#data-model) recommendation.
   
  ]]></format>
         </remarks>
@@ -4316,6 +4493,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.MoveToFollowing(System.Xml.XPath.XPathNodeType)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function MoveToFollowing (type As XPathNodeType) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool MoveToFollowing(System::Xml::XPath::XPathNodeType type);" />
+      <MemberSignature Language="F#" Value="abstract member MoveToFollowing : System.Xml.XPath.XPathNodeType -&gt; bool&#xA;override this.MoveToFollowing : System.Xml.XPath.XPathNodeType -&gt; bool" Usage="xPathNavigator.MoveToFollowing type" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -4323,6 +4501,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4335,6 +4514,11 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -4345,7 +4529,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
         <param name="type">The <see cref="T:System.Xml.XPath.XPathNodeType" /> of the element. The <see cref="T:System.Xml.XPath.XPathNodeType" /> cannot be <see cref="F:System.Xml.XPath.XPathNodeType.Attribute" /> or <see cref="F:System.Xml.XPath.XPathNodeType.Namespace" />.</param>
         <summary>Moves the <see cref="T:System.Xml.XPath.XPathNavigator" /> to the following element of the <see cref="T:System.Xml.XPath.XPathNodeType" /> specified in document order.</summary>
         <returns>
-          <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> moved successfully; otherwise <see langword="false" />.</returns>
+          <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> moved successfully; otherwise, <see langword="false" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -4407,6 +4591,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.MoveToFollowing(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function MoveToFollowing (localName As String, namespaceURI As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool MoveToFollowing(System::String ^ localName, System::String ^ namespaceURI);" />
+      <MemberSignature Language="F#" Value="abstract member MoveToFollowing : string * string -&gt; bool&#xA;override this.MoveToFollowing : string * string -&gt; bool" Usage="xPathNavigator.MoveToFollowing (localName, namespaceURI)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -4414,6 +4599,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4426,6 +4612,11 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -4438,7 +4629,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
         <param name="namespaceURI">The namespace URI of the element.</param>
         <summary>Moves the <see cref="T:System.Xml.XPath.XPathNavigator" /> to the element with the local name and namespace URI specified in document order.</summary>
         <returns>
-          <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> moved successfully; otherwise <see langword="false" />.</returns>
+          <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> moved successfully; otherwise, <see langword="false" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -4497,6 +4688,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.MoveToFollowing(System.Xml.XPath.XPathNodeType,System.Xml.XPath.XPathNavigator)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function MoveToFollowing (type As XPathNodeType, end As XPathNavigator) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool MoveToFollowing(System::Xml::XPath::XPathNodeType type, System::Xml::XPath::XPathNavigator ^ end);" />
+      <MemberSignature Language="F#" Value="abstract member MoveToFollowing : System.Xml.XPath.XPathNodeType * System.Xml.XPath.XPathNavigator -&gt; bool&#xA;override this.MoveToFollowing : System.Xml.XPath.XPathNodeType * System.Xml.XPath.XPathNavigator -&gt; bool" Usage="xPathNavigator.MoveToFollowing (type, end)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -4504,6 +4696,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4528,7 +4721,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
         <param name="end">The <see cref="T:System.Xml.XPath.XPathNavigator" /> object positioned on the element boundary which the current <see cref="T:System.Xml.XPath.XPathNavigator" /> will not move past while searching for the following element.</param>
         <summary>Moves the <see cref="T:System.Xml.XPath.XPathNavigator" /> to the following element of the <see cref="T:System.Xml.XPath.XPathNodeType" /> specified, to the boundary specified, in document order.</summary>
         <returns>
-          <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> moved successfully; otherwise <see langword="false" />.</returns>
+          <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> moved successfully; otherwise, <see langword="false" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -4596,6 +4789,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.MoveToFollowing(System.String,System.String,System.Xml.XPath.XPathNavigator)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function MoveToFollowing (localName As String, namespaceURI As String, end As XPathNavigator) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool MoveToFollowing(System::String ^ localName, System::String ^ namespaceURI, System::Xml::XPath::XPathNavigator ^ end);" />
+      <MemberSignature Language="F#" Value="abstract member MoveToFollowing : string * string * System.Xml.XPath.XPathNavigator -&gt; bool&#xA;override this.MoveToFollowing : string * string * System.Xml.XPath.XPathNavigator -&gt; bool" Usage="xPathNavigator.MoveToFollowing (localName, namespaceURI, end)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -4603,6 +4797,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4629,7 +4824,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
         <param name="end">The <see cref="T:System.Xml.XPath.XPathNavigator" /> object positioned on the element boundary which the current <see cref="T:System.Xml.XPath.XPathNavigator" /> will not move past while searching for the following element.</param>
         <summary>Moves the <see cref="T:System.Xml.XPath.XPathNavigator" /> to the element with the local name and namespace URI specified, to the boundary specified, in document order.</summary>
         <returns>
-          <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> moved successfully; otherwise <see langword="false" />.</returns>
+          <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> moved successfully; otherwise, <see langword="false" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -4695,6 +4890,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.MoveToId(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function MoveToId (id As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract bool MoveToId(System::String ^ id);" />
+      <MemberSignature Language="F#" Value="abstract member MoveToId : string -&gt; bool" Usage="xPathNavigator.MoveToId id" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -4702,6 +4898,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4745,6 +4943,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.MoveToNamespace(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function MoveToNamespace (name As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool MoveToNamespace(System::String ^ name);" />
+      <MemberSignature Language="F#" Value="abstract member MoveToNamespace : string -&gt; bool&#xA;override this.MoveToNamespace : string -&gt; bool" Usage="xPathNavigator.MoveToNamespace name" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -4752,6 +4951,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4785,7 +4986,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
   
  After the <xref:System.Xml.XPath.XPathNavigator> is positioned on a namespace node, you can call <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A> to move back to the element node.  
   
- For a definition of namespace nodes, see section 5.4 of the W3C XML Path Language (XPath) recommendation located at http://www.w3.org/TR/xpath#data-model.  
+ For a definition of namespace nodes, see section 5.4 of the W3C [XML Path Language (XPath)](https://www.w3.org/TR/xpath/all/#data-model) recommendation.
   
  ]]></format>
         </remarks>
@@ -4809,6 +5010,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.MoveToNext" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function MoveToNext () As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract bool MoveToNext();" />
+      <MemberSignature Language="F#" Value="abstract member MoveToNext : unit -&gt; bool" Usage="xPathNavigator.MoveToNext " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -4816,6 +5018,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4891,6 +5095,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.MoveToNext(System.Xml.XPath.XPathNodeType)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function MoveToNext (type As XPathNodeType) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool MoveToNext(System::Xml::XPath::XPathNodeType type);" />
+      <MemberSignature Language="F#" Value="abstract member MoveToNext : System.Xml.XPath.XPathNodeType -&gt; bool&#xA;override this.MoveToNext : System.Xml.XPath.XPathNodeType -&gt; bool" Usage="xPathNavigator.MoveToNext type" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -4898,6 +5103,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4947,6 +5153,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.MoveToNext(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function MoveToNext (localName As String, namespaceURI As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool MoveToNext(System::String ^ localName, System::String ^ namespaceURI);" />
+      <MemberSignature Language="F#" Value="abstract member MoveToNext : string * string -&gt; bool&#xA;override this.MoveToNext : string * string -&gt; bool" Usage="xPathNavigator.MoveToNext (localName, namespaceURI)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -4954,6 +5161,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4977,7 +5185,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
         <param name="localName">The local name of the next sibling node to move to.</param>
         <param name="namespaceURI">The namespace URI of the next sibling node to move to.</param>
         <summary>Moves the <see cref="T:System.Xml.XPath.XPathNavigator" /> to the next sibling node with the local name and namespace URI specified.</summary>
-        <returns>Returns <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the next sibling node; <see langword="false" /> if there are no more siblings, or if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is currently positioned on an attribute node. If <see langword="false" />, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
+        <returns>
+          <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the next sibling node; <see langword="false" /> if there are no more siblings, or if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is currently positioned on an attribute node. If <see langword="false" />, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -4987,6 +5196,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.MoveToNextAttribute" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function MoveToNextAttribute () As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract bool MoveToNextAttribute();" />
+      <MemberSignature Language="F#" Value="abstract member MoveToNextAttribute : unit -&gt; bool" Usage="xPathNavigator.MoveToNextAttribute " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -4994,6 +5204,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -5012,7 +5224,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <Parameters />
       <Docs>
         <summary>When overridden in a derived class, moves the <see cref="T:System.Xml.XPath.XPathNavigator" /> to the next attribute.</summary>
-        <returns>Returns <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the next attribute; <see langword="false" /> if there are no more attributes. If <see langword="false" />, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
+        <returns>
+          <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the next attribute; <see langword="false" /> if there are no more attributes. If <see langword="false" />, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -5088,6 +5301,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.MoveToNextNamespace" />
       <MemberSignature Language="VB.NET" Value="Public Function MoveToNextNamespace () As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool MoveToNextNamespace();" />
+      <MemberSignature Language="F#" Value="member this.MoveToNextNamespace : unit -&gt; bool" Usage="xPathNavigator.MoveToNextNamespace " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -5095,6 +5309,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -5107,13 +5323,19 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
         <summary>Moves the <see cref="T:System.Xml.XPath.XPathNavigator" /> to the next namespace node.</summary>
-        <returns>Returns <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the next namespace node; otherwise, <see langword="false" />. If <see langword="false" />, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
+        <returns>
+          <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the next namespace node; otherwise, <see langword="false" />. If <see langword="false" />, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -5126,7 +5348,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
   
  After the <xref:System.Xml.XPath.XPathNavigator> is positioned on an namespace node, call <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A> to move back to the element node.  
   
- For a definition of namespace nodes, see section 5.4 of the W3C XML Path Language (XPath) recommendation located at http://www.w3.org/TR/xpath#data-model.  
+ For a definition of namespace nodes, see section 5.4 of the W3C [XML Path Language (XPath)](https://www.w3.org/TR/xpath/all/#data-model) recommendation.
   
  ]]></format>
         </remarks>
@@ -5141,6 +5363,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.MoveToNextNamespace(System.Xml.XPath.XPathNamespaceScope)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function MoveToNextNamespace (namespaceScope As XPathNamespaceScope) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract bool MoveToNextNamespace(System::Xml::XPath::XPathNamespaceScope namespaceScope);" />
+      <MemberSignature Language="F#" Value="abstract member MoveToNextNamespace : System.Xml.XPath.XPathNamespaceScope -&gt; bool" Usage="xPathNavigator.MoveToNextNamespace namespaceScope" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -5148,6 +5371,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -5169,7 +5394,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <Docs>
         <param name="namespaceScope">An <see cref="T:System.Xml.XPath.XPathNamespaceScope" /> value describing the namespace scope.</param>
         <summary>When overridden in a derived class, moves the <see cref="T:System.Xml.XPath.XPathNavigator" /> to the next namespace node matching the <see cref="T:System.Xml.XPath.XPathNamespaceScope" /> specified.</summary>
-        <returns>Returns <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the next namespace node; otherwise, <see langword="false" />. If <see langword="false" />, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
+        <returns>
+          <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the next namespace node; otherwise, <see langword="false" />. If <see langword="false" />, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -5182,7 +5408,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
   
  After the <xref:System.Xml.XPath.XPathNavigator> is positioned on an namespace node, call <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A> to move back to the element node.  
   
- For a definition of namespace nodes, see section 5.4 of the W3C XML Path Language (XPath) recommendation located at http://www.w3.org/TR/xpath#data-model.  
+ For a definition of namespace nodes, see section 5.4 of the W3C [XML Path Language (XPath)](https://www.w3.org/TR/xpath/all/#data-model) recommendation.
   
  ]]></format>
         </remarks>
@@ -5197,6 +5423,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.MoveToParent" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function MoveToParent () As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract bool MoveToParent();" />
+      <MemberSignature Language="F#" Value="abstract member MoveToParent : unit -&gt; bool" Usage="xPathNavigator.MoveToParent " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -5204,6 +5431,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -5222,7 +5451,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <Parameters />
       <Docs>
         <summary>When overridden in a derived class, moves the <see cref="T:System.Xml.XPath.XPathNavigator" /> to the parent node of the current node.</summary>
-        <returns>Returns <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the parent node of the current node; otherwise, <see langword="false" />. If <see langword="false" />, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
+        <returns>
+          <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the parent node of the current node; otherwise, <see langword="false" />. If <see langword="false" />, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -5258,6 +5488,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.MoveToPrevious" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function MoveToPrevious () As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract bool MoveToPrevious();" />
+      <MemberSignature Language="F#" Value="abstract member MoveToPrevious : unit -&gt; bool" Usage="xPathNavigator.MoveToPrevious " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -5265,6 +5496,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -5283,7 +5516,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <Parameters />
       <Docs>
         <summary>When overridden in a derived class, moves the <see cref="T:System.Xml.XPath.XPathNavigator" /> to the previous sibling node of the current node.</summary>
-        <returns>Returns <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the previous sibling node; otherwise, <see langword="false" /> if there is no previous sibling node or if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is currently positioned on an attribute node. If <see langword="false" />, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
+        <returns>
+          <see langword="true" /> if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is successful moving to the previous sibling node; otherwise, <see langword="false" /> if there is no previous sibling node or if the <see cref="T:System.Xml.XPath.XPathNavigator" /> is currently positioned on an attribute node. If <see langword="false" />, the position of the <see cref="T:System.Xml.XPath.XPathNavigator" /> is unchanged.</returns>
         <remarks>To be added.</remarks>
         <altmember cref="M:System.Xml.XPath.XPathNavigator.MoveToNext" />
         <altmember cref="M:System.Xml.XPath.XPathNavigator.MoveToFirst" />
@@ -5295,6 +5529,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.MoveToRoot" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub MoveToRoot ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void MoveToRoot();" />
+      <MemberSignature Language="F#" Value="abstract member MoveToRoot : unit -&gt; unit&#xA;override this.MoveToRoot : unit -&gt; unit" Usage="xPathNavigator.MoveToRoot " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -5302,6 +5537,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -5341,6 +5578,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNavigator.Name" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Name { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="System.Xml.XPath.XPathNavigator.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -5348,6 +5586,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -5436,6 +5676,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNavigator.NamespaceURI" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property NamespaceURI As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ NamespaceURI { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.NamespaceURI : string" Usage="System.Xml.XPath.XPathNavigator.NamespaceURI" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -5443,6 +5684,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -5525,6 +5768,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNavigator.NameTable" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property NameTable As XmlNameTable" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Xml::XmlNameTable ^ NameTable { System::Xml::XmlNameTable ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.NameTable : System.Xml.XmlNameTable" Usage="System.Xml.XPath.XPathNavigator.NameTable" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -5532,6 +5776,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -5567,6 +5813,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNavigator.NavigatorComparer" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property NavigatorComparer As IEqualityComparer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::Collections::IEqualityComparer ^ NavigatorComparer { System::Collections::IEqualityComparer ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.NavigatorComparer : System.Collections.IEqualityComparer" Usage="System.Xml.XPath.XPathNavigator.NavigatorComparer" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -5574,6 +5821,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -5586,6 +5834,11 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Collections.IEqualityComparer</ReturnType>
       </ReturnValue>
@@ -5650,6 +5903,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNavigator.NodeType" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property NodeType As XPathNodeType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Xml::XPath::XPathNodeType NodeType { System::Xml::XPath::XPathNodeType get(); };" />
+      <MemberSignature Language="F#" Value="member this.NodeType : System.Xml.XPath.XPathNodeType" Usage="System.Xml.XPath.XPathNavigator.NodeType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -5657,6 +5911,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -5728,6 +5984,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNavigator.OuterXml" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property OuterXml As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ OuterXml { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.OuterXml : string with get, set" Usage="System.Xml.XPath.XPathNavigator.OuterXml" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -5735,6 +5992,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -5747,6 +6005,11 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -5813,6 +6076,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNavigator.Prefix" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Prefix As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Prefix { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Prefix : string" Usage="System.Xml.XPath.XPathNavigator.Prefix" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -5820,6 +6084,8 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -5905,6 +6171,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.PrependChild" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function PrependChild () As XmlWriter" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Xml::XmlWriter ^ PrependChild();" />
+      <MemberSignature Language="F#" Value="abstract member PrependChild : unit -&gt; System.Xml.XmlWriter&#xA;override this.PrependChild : unit -&gt; System.Xml.XmlWriter" Usage="xPathNavigator.PrependChild " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -5912,6 +6179,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -5956,7 +6224,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
   
  The example takes the `contosoBooks.xml` file as an input.  
   
-```  
+```xml  
   
 <?xml version="1.0" encoding="utf-8" ?>  
 <bookstore xmlns="http://www.contoso.com/books">  
@@ -5999,6 +6267,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.PrependChild(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub PrependChild (newChild As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void PrependChild(System::String ^ newChild);" />
+      <MemberSignature Language="F#" Value="abstract member PrependChild : string -&gt; unit&#xA;override this.PrependChild : string -&gt; unit" Usage="xPathNavigator.PrependChild newChild" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -6006,6 +6275,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -6052,7 +6322,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
   
  The example takes the `contosoBooks.xml` file as an input.  
   
-```  
+```xml  
   
 <?xml version="1.0" encoding="utf-8" ?>  
 <bookstore xmlns="http://www.contoso.com/books">  
@@ -6097,6 +6367,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.PrependChild(System.Xml.XmlReader)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub PrependChild (newChild As XmlReader)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void PrependChild(System::Xml::XmlReader ^ newChild);" />
+      <MemberSignature Language="F#" Value="abstract member PrependChild : System.Xml.XmlReader -&gt; unit&#xA;override this.PrependChild : System.Xml.XmlReader -&gt; unit" Usage="xPathNavigator.PrependChild newChild" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -6104,6 +6375,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -6150,7 +6422,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
   
  The example takes the `contosoBooks.xml` file as an input.  
   
-```  
+```xml  
   
 <?xml version="1.0" encoding="utf-8" ?>  
 <bookstore xmlns="http://www.contoso.com/books">  
@@ -6196,6 +6468,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.PrependChild(System.Xml.XPath.XPathNavigator)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub PrependChild (newChild As XPathNavigator)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void PrependChild(System::Xml::XPath::XPathNavigator ^ newChild);" />
+      <MemberSignature Language="F#" Value="abstract member PrependChild : System.Xml.XPath.XPathNavigator -&gt; unit&#xA;override this.PrependChild : System.Xml.XPath.XPathNavigator -&gt; unit" Usage="xPathNavigator.PrependChild newChild" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -6203,6 +6476,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -6249,7 +6523,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
   
  The example takes the `contosoBooks.xml` file as an input.  
   
-```  
+```xml  
   
 <?xml version="1.0" encoding="utf-8" ?>  
 <bookstore xmlns="http://www.contoso.com/books">  
@@ -6293,6 +6567,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.PrependChildElement(System.String,System.String,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub PrependChildElement (prefix As String, localName As String, namespaceURI As String, value As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void PrependChildElement(System::String ^ prefix, System::String ^ localName, System::String ^ namespaceURI, System::String ^ value);" />
+      <MemberSignature Language="F#" Value="abstract member PrependChildElement : string * string * string * string -&gt; unit&#xA;override this.PrependChildElement : string * string * string * string -&gt; unit" Usage="xPathNavigator.PrependChildElement (prefix, localName, namespaceURI, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -6300,6 +6575,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -6335,7 +6611,7 @@ navigator.InsertElementBefore(navigator.Prefix, "pages", LookupNamespaceURI(navi
   
  Namespace prefix and URI values can be obtained by using the <xref:System.Xml.XPath.XPathNavigator.LookupPrefix%2A> or <xref:System.Xml.XPath.XPathNavigator.LookupNamespace%2A> method. For example, the following syntax prepends a child element by using the in-scope namespace `xmlns:bk="http://www.contoso.com/books"`:  
   
-```  
+```csharp  
 navigator.PrependChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navigator.Prefix), String.Empty)  
 ```  
   
@@ -6403,6 +6679,7 @@ navigator.PrependChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.ReadSubtree" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function ReadSubtree () As XmlReader" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Xml::XmlReader ^ ReadSubtree();" />
+      <MemberSignature Language="F#" Value="abstract member ReadSubtree : unit -&gt; System.Xml.XmlReader&#xA;override this.ReadSubtree : unit -&gt; System.Xml.XmlReader" Usage="xPathNavigator.ReadSubtree " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -6410,6 +6687,7 @@ navigator.PrependChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -6500,6 +6778,7 @@ navigator.PrependChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.ReplaceRange(System.Xml.XPath.XPathNavigator)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function ReplaceRange (lastSiblingToReplace As XPathNavigator) As XmlWriter" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Xml::XmlWriter ^ ReplaceRange(System::Xml::XPath::XPathNavigator ^ lastSiblingToReplace);" />
+      <MemberSignature Language="F#" Value="abstract member ReplaceRange : System.Xml.XPath.XPathNavigator -&gt; System.Xml.XmlWriter&#xA;override this.ReplaceRange : System.Xml.XPath.XPathNavigator -&gt; System.Xml.XmlWriter" Usage="xPathNavigator.ReplaceRange lastSiblingToReplace" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -6507,6 +6786,7 @@ navigator.PrependChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -6602,6 +6882,7 @@ navigator.PrependChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.ReplaceSelf(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub ReplaceSelf (newNode As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void ReplaceSelf(System::String ^ newNode);" />
+      <MemberSignature Language="F#" Value="abstract member ReplaceSelf : string -&gt; unit&#xA;override this.ReplaceSelf : string -&gt; unit" Usage="xPathNavigator.ReplaceSelf newNode" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -6609,6 +6890,7 @@ navigator.PrependChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -6700,6 +6982,7 @@ navigator.PrependChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.ReplaceSelf(System.Xml.XmlReader)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub ReplaceSelf (newNode As XmlReader)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void ReplaceSelf(System::Xml::XmlReader ^ newNode);" />
+      <MemberSignature Language="F#" Value="abstract member ReplaceSelf : System.Xml.XmlReader -&gt; unit&#xA;override this.ReplaceSelf : System.Xml.XmlReader -&gt; unit" Usage="xPathNavigator.ReplaceSelf newNode" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -6707,6 +6990,7 @@ navigator.PrependChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -6799,6 +7083,7 @@ navigator.PrependChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.ReplaceSelf(System.Xml.XPath.XPathNavigator)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub ReplaceSelf (newNode As XPathNavigator)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void ReplaceSelf(System::Xml::XPath::XPathNavigator ^ newNode);" />
+      <MemberSignature Language="F#" Value="abstract member ReplaceSelf : System.Xml.XPath.XPathNavigator -&gt; unit&#xA;override this.ReplaceSelf : System.Xml.XPath.XPathNavigator -&gt; unit" Usage="xPathNavigator.ReplaceSelf newNode" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -6806,6 +7091,7 @@ navigator.PrependChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -6897,9 +7183,11 @@ navigator.PrependChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNavigator.SchemaInfo" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property SchemaInfo As IXmlSchemaInfo" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Xml::Schema::IXmlSchemaInfo ^ SchemaInfo { System::Xml::Schema::IXmlSchemaInfo ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SchemaInfo : System.Xml.Schema.IXmlSchemaInfo" Usage="System.Xml.XPath.XPathNavigator.SchemaInfo" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -6911,6 +7199,9 @@ navigator.PrependChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navi
         <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Xml.Schema.IXmlSchemaInfo</ReturnType>
@@ -6943,6 +7234,7 @@ navigator.PrependChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navi
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.Select(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function Select (xpath As String) As XPathNodeIterator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Xml::XPath::XPathNodeIterator ^ Select(System::String ^ xpath);" />
+      <MemberSignature Language="F#" Value="abstract member Select : string -&gt; System.Xml.XPath.XPathNodeIterator&#xA;override this.Select : string -&gt; System.Xml.XPath.XPathNodeIterator" Usage="xPathNavigator.Select xpath" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -6950,6 +7242,8 @@ navigator.PrependChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navi
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -6980,7 +7274,7 @@ navigator.PrependChildElement(navigator.Prefix, "pages", LookupNamespaceURI(navi
   
  The following C# code iterates over the selected set of nodes.  
   
-```  
+```csharp  
 XPathNodeIterator iterator = nav.Select("/bookstore/book");  
 while (iterator.MoveNext())  
 {  
@@ -7057,6 +7351,7 @@ while (iterator.MoveNext())
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.Select(System.Xml.XPath.XPathExpression)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function Select (expr As XPathExpression) As XPathNodeIterator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Xml::XPath::XPathNodeIterator ^ Select(System::Xml::XPath::XPathExpression ^ expr);" />
+      <MemberSignature Language="F#" Value="abstract member Select : System.Xml.XPath.XPathExpression -&gt; System.Xml.XPath.XPathNodeIterator&#xA;override this.Select : System.Xml.XPath.XPathExpression -&gt; System.Xml.XPath.XPathNodeIterator" Usage="xPathNavigator.Select expr" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -7064,6 +7359,8 @@ while (iterator.MoveNext())
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -7094,7 +7391,7 @@ while (iterator.MoveNext())
   
  The following C# code iterates over the selected set of nodes.  
   
-```  
+```csharp  
 XPathNodeIterator ni = nav.Select(expr);  
 while (ni.MoveNext())  
 {  
@@ -7112,7 +7409,7 @@ while (ni.MoveNext())
   
  For example, suppose the document contains the following XML nodes.  
   
-```  
+```xml  
 <bookstore xmlns:bk='urn:samples'>  
     <book bk:ISBN='1-325-0980'>  
         <title>Pride And Prejudice</title>  
@@ -7122,7 +7419,7 @@ while (ni.MoveNext())
   
  In this case, the following C# code selects the `bk:ISBN` node.  
   
-```  
+```csharp  
 XPathExpression expr = nav.Compile("book/@bk:ISBN");  
 XmlNamespaceManager mngr = new XmlNamespaceManager(new NameTable());  
 mngr.AddNamespace("bk","urn:samples");  
@@ -7135,7 +7432,7 @@ XPathNodeIterator ni = nav.Select(expr);
   
  For example, suppose you have the following XML.  
   
-```  
+```xml  
 <bookstore xmlns="http://www.lucernepublishing.com">  
     <book>  
         <title>Pride And Prejudice</title>  
@@ -7145,7 +7442,7 @@ XPathNodeIterator ni = nav.Select(expr);
   
  In this case, the following C# code selects all book nodes:  
   
-```  
+```csharp  
 XmlNamespaceManager nsmgr = new XmlNamespaceManager(nav.NameTable);  
 nsmgr.AddNamespace("ab", "http://www.lucernepublishing.com");  
 XPathExpression expr;  
@@ -7215,6 +7512,7 @@ XPathNodeIterator ni = nav.Select(expr);
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.Select(System.String,System.Xml.IXmlNamespaceResolver)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function Select (xpath As String, resolver As IXmlNamespaceResolver) As XPathNodeIterator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Xml::XPath::XPathNodeIterator ^ Select(System::String ^ xpath, System::Xml::IXmlNamespaceResolver ^ resolver);" />
+      <MemberSignature Language="F#" Value="abstract member Select : string * System.Xml.IXmlNamespaceResolver -&gt; System.Xml.XPath.XPathNodeIterator&#xA;override this.Select : string * System.Xml.IXmlNamespaceResolver -&gt; System.Xml.XPath.XPathNodeIterator" Usage="xPathNavigator.Select (xpath, resolver)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -7222,6 +7520,7 @@ XPathNodeIterator ni = nav.Select(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -7310,6 +7609,7 @@ XPathNodeIterator ni = nav.Select(expr);
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.SelectAncestors(System.Xml.XPath.XPathNodeType,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function SelectAncestors (type As XPathNodeType, matchSelf As Boolean) As XPathNodeIterator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Xml::XPath::XPathNodeIterator ^ SelectAncestors(System::Xml::XPath::XPathNodeType type, bool matchSelf);" />
+      <MemberSignature Language="F#" Value="abstract member SelectAncestors : System.Xml.XPath.XPathNodeType * bool -&gt; System.Xml.XPath.XPathNodeIterator&#xA;override this.SelectAncestors : System.Xml.XPath.XPathNodeType * bool -&gt; System.Xml.XPath.XPathNodeIterator" Usage="xPathNavigator.SelectAncestors (type, matchSelf)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -7317,6 +7617,8 @@ XPathNodeIterator ni = nav.Select(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -7365,6 +7667,7 @@ XPathNodeIterator ni = nav.Select(expr);
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.SelectAncestors(System.String,System.String,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function SelectAncestors (name As String, namespaceURI As String, matchSelf As Boolean) As XPathNodeIterator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Xml::XPath::XPathNodeIterator ^ SelectAncestors(System::String ^ name, System::String ^ namespaceURI, bool matchSelf);" />
+      <MemberSignature Language="F#" Value="abstract member SelectAncestors : string * string * bool -&gt; System.Xml.XPath.XPathNodeIterator&#xA;override this.SelectAncestors : string * string * bool -&gt; System.Xml.XPath.XPathNodeIterator" Usage="xPathNavigator.SelectAncestors (name, namespaceURI, matchSelf)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -7372,6 +7675,8 @@ XPathNodeIterator ni = nav.Select(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -7472,6 +7777,7 @@ XPathNodeIterator ni = nav.Select(expr);
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.SelectChildren(System.Xml.XPath.XPathNodeType)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function SelectChildren (type As XPathNodeType) As XPathNodeIterator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Xml::XPath::XPathNodeIterator ^ SelectChildren(System::Xml::XPath::XPathNodeType type);" />
+      <MemberSignature Language="F#" Value="abstract member SelectChildren : System.Xml.XPath.XPathNodeType -&gt; System.Xml.XPath.XPathNodeIterator&#xA;override this.SelectChildren : System.Xml.XPath.XPathNodeType -&gt; System.Xml.XPath.XPathNodeIterator" Usage="xPathNavigator.SelectChildren type" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -7479,6 +7785,8 @@ XPathNodeIterator ni = nav.Select(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -7525,6 +7833,7 @@ XPathNodeIterator ni = nav.Select(expr);
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.SelectChildren(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function SelectChildren (name As String, namespaceURI As String) As XPathNodeIterator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Xml::XPath::XPathNodeIterator ^ SelectChildren(System::String ^ name, System::String ^ namespaceURI);" />
+      <MemberSignature Language="F#" Value="abstract member SelectChildren : string * string -&gt; System.Xml.XPath.XPathNodeIterator&#xA;override this.SelectChildren : string * string -&gt; System.Xml.XPath.XPathNodeIterator" Usage="xPathNavigator.SelectChildren (name, namespaceURI)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -7532,6 +7841,8 @@ XPathNodeIterator ni = nav.Select(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -7593,6 +7904,7 @@ XPathNodeIterator ni = nav.Select(expr);
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.SelectDescendants(System.Xml.XPath.XPathNodeType,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function SelectDescendants (type As XPathNodeType, matchSelf As Boolean) As XPathNodeIterator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Xml::XPath::XPathNodeIterator ^ SelectDescendants(System::Xml::XPath::XPathNodeType type, bool matchSelf);" />
+      <MemberSignature Language="F#" Value="abstract member SelectDescendants : System.Xml.XPath.XPathNodeType * bool -&gt; System.Xml.XPath.XPathNodeIterator&#xA;override this.SelectDescendants : System.Xml.XPath.XPathNodeType * bool -&gt; System.Xml.XPath.XPathNodeIterator" Usage="xPathNavigator.SelectDescendants (type, matchSelf)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -7600,6 +7912,8 @@ XPathNodeIterator ni = nav.Select(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -7649,6 +7963,7 @@ XPathNodeIterator ni = nav.Select(expr);
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.SelectDescendants(System.String,System.String,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function SelectDescendants (name As String, namespaceURI As String, matchSelf As Boolean) As XPathNodeIterator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Xml::XPath::XPathNodeIterator ^ SelectDescendants(System::String ^ name, System::String ^ namespaceURI, bool matchSelf);" />
+      <MemberSignature Language="F#" Value="abstract member SelectDescendants : string * string * bool -&gt; System.Xml.XPath.XPathNodeIterator&#xA;override this.SelectDescendants : string * string * bool -&gt; System.Xml.XPath.XPathNodeIterator" Usage="xPathNavigator.SelectDescendants (name, namespaceURI, matchSelf)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -7656,6 +7971,8 @@ XPathNodeIterator ni = nav.Select(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -7722,6 +8039,7 @@ XPathNodeIterator ni = nav.Select(expr);
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.SelectSingleNode(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function SelectSingleNode (xpath As String) As XPathNavigator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Xml::XPath::XPathNavigator ^ SelectSingleNode(System::String ^ xpath);" />
+      <MemberSignature Language="F#" Value="abstract member SelectSingleNode : string -&gt; System.Xml.XPath.XPathNavigator&#xA;override this.SelectSingleNode : string -&gt; System.Xml.XPath.XPathNavigator" Usage="xPathNavigator.SelectSingleNode xpath" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -7729,6 +8047,7 @@ XPathNodeIterator ni = nav.Select(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -7811,6 +8130,7 @@ XPathNodeIterator ni = nav.Select(expr);
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.SelectSingleNode(System.Xml.XPath.XPathExpression)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function SelectSingleNode (expression As XPathExpression) As XPathNavigator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Xml::XPath::XPathNavigator ^ SelectSingleNode(System::Xml::XPath::XPathExpression ^ expression);" />
+      <MemberSignature Language="F#" Value="abstract member SelectSingleNode : System.Xml.XPath.XPathExpression -&gt; System.Xml.XPath.XPathNavigator&#xA;override this.SelectSingleNode : System.Xml.XPath.XPathExpression -&gt; System.Xml.XPath.XPathNavigator" Usage="xPathNavigator.SelectSingleNode expression" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -7818,6 +8138,7 @@ XPathNodeIterator ni = nav.Select(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -7900,6 +8221,7 @@ XPathNodeIterator ni = nav.Select(expr);
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.SelectSingleNode(System.String,System.Xml.IXmlNamespaceResolver)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function SelectSingleNode (xpath As String, resolver As IXmlNamespaceResolver) As XPathNavigator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Xml::XPath::XPathNavigator ^ SelectSingleNode(System::String ^ xpath, System::Xml::IXmlNamespaceResolver ^ resolver);" />
+      <MemberSignature Language="F#" Value="abstract member SelectSingleNode : string * System.Xml.IXmlNamespaceResolver -&gt; System.Xml.XPath.XPathNavigator&#xA;override this.SelectSingleNode : string * System.Xml.IXmlNamespaceResolver -&gt; System.Xml.XPath.XPathNavigator" Usage="xPathNavigator.SelectSingleNode (xpath, resolver)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -7907,6 +8229,7 @@ XPathNodeIterator ni = nav.Select(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -7994,6 +8317,7 @@ XPathNodeIterator ni = nav.Select(expr);
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.SetTypedValue(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub SetTypedValue (typedValue As Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void SetTypedValue(System::Object ^ typedValue);" />
+      <MemberSignature Language="F#" Value="abstract member SetTypedValue : obj -&gt; unit&#xA;override this.SetTypedValue : obj -&gt; unit" Usage="xPathNavigator.SetTypedValue typedValue" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -8001,6 +8325,7 @@ XPathNodeIterator ni = nav.Select(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -8086,6 +8411,7 @@ XPathNodeIterator ni = nav.Select(expr);
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.SetValue(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub SetValue (value As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void SetValue(System::String ^ value);" />
+      <MemberSignature Language="F#" Value="abstract member SetValue : string -&gt; unit&#xA;override this.SetValue : string -&gt; unit" Usage="xPathNavigator.SetValue value" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -8093,6 +8419,7 @@ XPathNodeIterator ni = nav.Select(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -8184,6 +8511,8 @@ XPathNodeIterator ni = nav.Select(expr);
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -8196,6 +8525,14 @@ XPathNodeIterator ni = nav.Select(expr);
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
@@ -8221,6 +8558,7 @@ XPathNodeIterator ni = nav.Select(expr);
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="xPathNavigator.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -8228,6 +8566,8 @@ XPathNodeIterator ni = nav.Select(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -8274,6 +8614,7 @@ XPathNodeIterator ni = nav.Select(expr);
       <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNavigator.TypedValue" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property TypedValue As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Object ^ TypedValue { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.TypedValue : obj" Usage="System.Xml.XPath.XPathNavigator.TypedValue" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -8281,6 +8622,7 @@ XPathNodeIterator ni = nav.Select(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -8330,6 +8672,7 @@ XPathNodeIterator ni = nav.Select(expr);
       <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNavigator.UnderlyingObject" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property UnderlyingObject As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Object ^ UnderlyingObject { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.UnderlyingObject : obj" Usage="System.Xml.XPath.XPathNavigator.UnderlyingObject" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -8337,6 +8680,7 @@ XPathNodeIterator ni = nav.Select(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -8372,12 +8716,43 @@ XPathNodeIterator ni = nav.Select(expr);
         </remarks>
       </Docs>
     </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public abstract string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNavigator.Value" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Value As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Value { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Value : string" Usage="System.Xml.XPath.XPathNavigator.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ValueAs">
       <MemberSignature Language="C#" Value="public override object ValueAs (Type returnType, System.Xml.IXmlNamespaceResolver nsResolver);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ValueAs(class System.Type returnType, class System.Xml.IXmlNamespaceResolver nsResolver) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.ValueAs(System.Type,System.Xml.IXmlNamespaceResolver)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ValueAs (returnType As Type, nsResolver As IXmlNamespaceResolver) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::Object ^ ValueAs(Type ^ returnType, System::Xml::IXmlNamespaceResolver ^ nsResolver);" />
+      <MemberSignature Language="F#" Value="override this.ValueAs : Type * System.Xml.IXmlNamespaceResolver -&gt; obj" Usage="xPathNavigator.ValueAs (returnType, nsResolver)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -8385,6 +8760,7 @@ XPathNodeIterator ni = nav.Select(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -8429,6 +8805,7 @@ XPathNodeIterator ni = nav.Select(expr);
       <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNavigator.ValueAsBoolean" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ValueAsBoolean As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool ValueAsBoolean { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.ValueAsBoolean : bool" Usage="System.Xml.XPath.XPathNavigator.ValueAsBoolean" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -8436,6 +8813,7 @@ XPathNodeIterator ni = nav.Select(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -8473,7 +8851,7 @@ XPathNodeIterator ni = nav.Select(expr);
   
  The example takes the `valueas.xml` file as an input.  
   
-```  
+```xml  
 <root>  
     <booleanElement>true</booleanElement>  
     <dateTimeElement>2004-04-20T12:00:00</dateTimeElement>  
@@ -8494,6 +8872,7 @@ XPathNodeIterator ni = nav.Select(expr);
       <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNavigator.ValueAsDateTime" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ValueAsDateTime As DateTime" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property DateTime ValueAsDateTime { DateTime get(); };" />
+      <MemberSignature Language="F#" Value="member this.ValueAsDateTime : DateTime" Usage="System.Xml.XPath.XPathNavigator.ValueAsDateTime" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -8501,6 +8880,7 @@ XPathNodeIterator ni = nav.Select(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -8544,6 +8924,7 @@ XPathNodeIterator ni = nav.Select(expr);
       <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNavigator.ValueAsDouble" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ValueAsDouble As Double" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property double ValueAsDouble { double get(); };" />
+      <MemberSignature Language="F#" Value="member this.ValueAsDouble : double" Usage="System.Xml.XPath.XPathNavigator.ValueAsDouble" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -8551,6 +8932,7 @@ XPathNodeIterator ni = nav.Select(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -8594,6 +8976,7 @@ XPathNodeIterator ni = nav.Select(expr);
       <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNavigator.ValueAsInt" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ValueAsInt As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property int ValueAsInt { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.ValueAsInt : int" Usage="System.Xml.XPath.XPathNavigator.ValueAsInt" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -8601,6 +8984,7 @@ XPathNodeIterator ni = nav.Select(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -8644,6 +9028,7 @@ XPathNodeIterator ni = nav.Select(expr);
       <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNavigator.ValueAsLong" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ValueAsLong As Long" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property long ValueAsLong { long get(); };" />
+      <MemberSignature Language="F#" Value="member this.ValueAsLong : int64" Usage="System.Xml.XPath.XPathNavigator.ValueAsLong" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -8651,6 +9036,7 @@ XPathNodeIterator ni = nav.Select(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -8694,6 +9080,7 @@ XPathNodeIterator ni = nav.Select(expr);
       <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNavigator.ValueType" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ValueType As Type" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Type ^ ValueType { Type ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ValueType : Type" Usage="System.Xml.XPath.XPathNavigator.ValueType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -8701,6 +9088,7 @@ XPathNodeIterator ni = nav.Select(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -8817,6 +9205,7 @@ XPathNodeIterator ni = nav.Select(expr);
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XPathNavigator.WriteSubtree(System.Xml.XmlWriter)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub WriteSubtree (writer As XmlWriter)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void WriteSubtree(System::Xml::XmlWriter ^ writer);" />
+      <MemberSignature Language="F#" Value="abstract member WriteSubtree : System.Xml.XmlWriter -&gt; unit&#xA;override this.WriteSubtree : System.Xml.XmlWriter -&gt; unit" Usage="xPathNavigator.WriteSubtree writer" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -8824,6 +9213,7 @@ XPathNodeIterator ni = nav.Select(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -8853,7 +9243,7 @@ XPathNodeIterator ni = nav.Select(expr);
   
  For example, if the <xref:System.Xml.XPath.XPathNavigator.WriteSubtree%2A> method is called on the first `book` element of the `books.xml` file, the `http://www.contoso.com/books` namespace declaration made at the top of the XML document will appear in the XML streamed to the <xref:System.Xml.XmlWriter> object specified as shown in the following example.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <book genre="autobiography" publicationdate="1981" ISBN="1-861003-11-0" xmlns="http://www.contoso.com/books">  
     <title>The Autobiography of Benjamin Franklin</title>  
@@ -8920,6 +9310,7 @@ XPathNodeIterator ni = nav.Select(expr);
       <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNavigator.XmlLang" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property XmlLang As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ XmlLang { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.XmlLang : string" Usage="System.Xml.XPath.XPathNavigator.XmlLang" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath</AssemblyName>
@@ -8927,6 +9318,8 @@ XPathNodeIterator ni = nav.Select(expr);
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -8951,7 +9344,7 @@ XPathNodeIterator ni = nav.Select(expr);
 ## Remarks  
  In the example XML below, when the <xref:System.Xml.XPath.XPathNavigator> is positioned on the `name` element, the <xref:System.Xml.XPath.XPathNavigator.XmlLang%2A> property returns a scope of `en-us` indicating that the node is in the scope of a `xml:lang="en-us"` attribute.  
   
-```  
+```xml  
 <root xml:lang="en-us">  
     <name>Name</name>  
 </root>  
@@ -8967,9 +9360,11 @@ XPathNodeIterator ni = nav.Select(expr);
       <MemberSignature Language="DocId" Value="P:System.Xml.XPath.XPathNavigator.XmlType" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property XmlType As XmlSchemaType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Xml::Schema::XmlSchemaType ^ XmlType { System::Xml::Schema::XmlSchemaType ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.XmlType : System.Xml.Schema.XmlSchemaType" Usage="System.Xml.XPath.XPathNavigator.XmlType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -8981,6 +9376,9 @@ XPathNodeIterator ni = nav.Select(expr);
         <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XPath</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Xml.Schema.XmlSchemaType</ReturnType>

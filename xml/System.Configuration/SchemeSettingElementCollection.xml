@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Configuration.SchemeSettingElementCollection" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class SchemeSettingElementCollection&#xA;Inherits ConfigurationElementCollection" />
   <TypeSignature Language="C++ CLI" Value="public ref class SchemeSettingElementCollection sealed : System::Configuration::ConfigurationElementCollection" />
+  <TypeSignature Language="F#" Value="type SchemeSettingElementCollection = class&#xA;    inherit ConfigurationElementCollection" />
   <AssemblyInfo>
     <AssemblyName>System</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -11,14 +12,18 @@
   <AssemblyInfo>
     <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Configuration.ConfigurationElementCollection</BaseTypeName>
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute>
+    <Attribute FrameworkAlternate="netcore-2.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netcore-2.1;netframework-4.8;dotnet-plat-ext-2.1;netcore-2.2;dotnet-plat-ext-2.2">
       <AttributeName>System.Configuration.ConfigurationCollection(typeof(System.Configuration.SchemeSettingElement), AddItemName="add", ClearItemsName="clear", CollectionType=System.Configuration.ConfigurationElementCollectionType.AddRemoveClearMap, RemoveItemName="remove")</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netframework-4.0">
+      <AttributeName>System.Configuration.ConfigurationCollection(typeof(System.Configuration.SchemeSettingElementCollection), AddItemName="add", ClearItemsName="clear", CollectionType=System.Configuration.ConfigurationElementCollectionType.AddRemoveClearMap, RemoveItemName="remove")</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -52,6 +57,7 @@
     <altmember cref="P:System.Configuration.UriSection.SchemeSettings" />
     <altmember cref="T:System.GenericUriParserOptions" />
     <altmember cref="T:System.Uri" />
+    <related type="Article" href="~/docs/framework/configure-apps/file-schema/network/index.md">Network Settings Schema</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -68,6 +74,7 @@
       <AssemblyInfo>
         <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -84,6 +91,7 @@
       <MemberSignature Language="DocId" Value="P:System.Configuration.SchemeSettingElementCollection.CollectionType" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property CollectionType As ConfigurationElementCollectionType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Configuration::ConfigurationElementCollectionType CollectionType { System::Configuration::ConfigurationElementCollectionType get(); };" />
+      <MemberSignature Language="F#" Value="member this.CollectionType : System.Configuration.ConfigurationElementCollectionType" Usage="System.Configuration.SchemeSettingElementCollection.CollectionType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -92,6 +100,7 @@
       <AssemblyInfo>
         <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Configuration.ConfigurationElementCollectionType</ReturnType>
@@ -118,6 +127,7 @@
       <MemberSignature Language="DocId" Value="M:System.Configuration.SchemeSettingElementCollection.CreateNewElement" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateNewElement () As ConfigurationElement" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Configuration::ConfigurationElement ^ CreateNewElement();" />
+      <MemberSignature Language="F#" Value="override this.CreateNewElement : unit -&gt; System.Configuration.ConfigurationElement" Usage="schemeSettingElementCollection.CreateNewElement " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -126,6 +136,7 @@
       <AssemblyInfo>
         <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
@@ -143,6 +154,7 @@
       <MemberSignature Language="DocId" Value="M:System.Configuration.SchemeSettingElementCollection.GetElementKey(System.Configuration.ConfigurationElement)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetElementKey (element As ConfigurationElement) As Object" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Object ^ GetElementKey(System::Configuration::ConfigurationElement ^ element);" />
+      <MemberSignature Language="F#" Value="override this.GetElementKey : System.Configuration.ConfigurationElement -&gt; obj" Usage="schemeSettingElementCollection.GetElementKey element" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -151,6 +163,7 @@
       <AssemblyInfo>
         <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -171,6 +184,7 @@
       <MemberSignature Language="DocId" Value="M:System.Configuration.SchemeSettingElementCollection.IndexOf(System.Configuration.SchemeSettingElement)" />
       <MemberSignature Language="VB.NET" Value="Public Function IndexOf (element As SchemeSettingElement) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; int IndexOf(System::Configuration::SchemeSettingElement ^ element);" />
+      <MemberSignature Language="F#" Value="member this.IndexOf : System.Configuration.SchemeSettingElement -&gt; int" Usage="schemeSettingElementCollection.IndexOf element" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -179,6 +193,7 @@
       <AssemblyInfo>
         <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -214,6 +229,7 @@
       <MemberSignature Language="DocId" Value="P:System.Configuration.SchemeSettingElementCollection.Item(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(index As Integer) As SchemeSettingElement" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Configuration::SchemeSettingElement ^ default[int] { System::Configuration::SchemeSettingElement ^ get(int index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : System.Configuration.SchemeSettingElement" Usage="System.Configuration.SchemeSettingElementCollection.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -222,6 +238,7 @@
       <AssemblyInfo>
         <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Configuration.SchemeSettingElement</ReturnType>
@@ -257,6 +274,7 @@
       <MemberSignature Language="DocId" Value="P:System.Configuration.SchemeSettingElementCollection.Item(System.String)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(name As String) As SchemeSettingElement" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Configuration::SchemeSettingElement ^ default[System::String ^] { System::Configuration::SchemeSettingElement ^ get(System::String ^ name); };" />
+      <MemberSignature Language="F#" Value="member this.Item(string) : System.Configuration.SchemeSettingElement" Usage="System.Configuration.SchemeSettingElementCollection.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -265,6 +283,7 @@
       <AssemblyInfo>
         <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Configuration.SchemeSettingElement</ReturnType>

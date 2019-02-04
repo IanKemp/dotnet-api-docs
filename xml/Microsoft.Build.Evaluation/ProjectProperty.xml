@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Evaluation.ProjectProperty" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class ProjectProperty&#xA;Implements IEquatable(Of ProjectProperty)" />
   <TypeSignature Language="C++ CLI" Value="public ref class ProjectProperty abstract : IEquatable&lt;Microsoft::Build::Evaluation::ProjectProperty ^&gt;" />
+  <TypeSignature Language="F#" Value="type ProjectProperty = class&#xA;    interface IEquatable&lt;ProjectProperty&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -17,8 +18,11 @@
     </Interface>
   </Interfaces>
   <Attributes>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
       <AttributeName>System.Diagnostics.DebuggerDisplay("{Name}={EvaluatedValue} [{UnevaluatedValue}]")</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netframework-4.0">
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{name}={EvaluatedValue} [{xml.Value}]")</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -32,6 +36,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectProperty.EvaluatedValue" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EvaluatedValue As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ EvaluatedValue { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.EvaluatedValue : string" Usage="Microsoft.Build.Evaluation.ProjectProperty.EvaluatedValue" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Build.Evaluation.IProperty.EvaluatedValue</InterfaceMember>
@@ -50,7 +55,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets the evaluated property value.</summary>
-        <value>Returns the evaluated property value, which is never null.</value>
+        <value>The evaluated property value, which is never <see langword="null" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -67,13 +72,14 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectProperty.IsEnvironmentProperty" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property IsEnvironmentProperty As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool IsEnvironmentProperty { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsEnvironmentProperty : bool" Usage="Microsoft.Build.Evaluation.ProjectProperty.IsEnvironmentProperty" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
         </Attribute>
       </Attributes>
@@ -82,7 +88,8 @@
       </ReturnValue>
       <Docs>
         <summary>Determines whether the property originated from the environment variables.</summary>
-        <value>True if the property originated from an environment variable; false otherwise.</value>
+        <value>
+          <see langword="true" /> if the property originated from an environment variable; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -92,6 +99,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectProperty.IsGlobalProperty" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property IsGlobalProperty As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool IsGlobalProperty { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsGlobalProperty : bool" Usage="Microsoft.Build.Evaluation.ProjectProperty.IsGlobalProperty" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -107,7 +115,8 @@
       </ReturnValue>
       <Docs>
         <summary>Determines whether the property is a global property.</summary>
-        <value>True if the property is a global property; false otherwise.</value>
+        <value>
+          <see langword="true" /> if the property is a global property; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -117,6 +126,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectProperty.IsImported" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property IsImported As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool IsImported { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsImported : bool" Usage="Microsoft.Build.Evaluation.ProjectProperty.IsImported" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -127,7 +137,8 @@
       </ReturnValue>
       <Docs>
         <summary>Determines whether the property originates from an imported file.</summary>
-        <value>Returns true if the property originates from an imported file and not from an environment variable, a global property, or a reserved property. Returns false otherwise.</value>
+        <value>
+          <see langword="true" /> if the property originates from an imported file and not from an environment variable, a global property, or a reserved property; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -137,6 +148,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectProperty.IsReservedProperty" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property IsReservedProperty As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool IsReservedProperty { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsReservedProperty : bool" Usage="Microsoft.Build.Evaluation.ProjectProperty.IsReservedProperty" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -152,7 +164,8 @@
       </ReturnValue>
       <Docs>
         <summary>Determines whether the property is a reserved property, for example 'MSBuildProjectFile'.</summary>
-        <value>Returns true if the property is a reserved property; false otherwise.</value>
+        <value>
+          <see langword="true" /> if the property is a reserved property; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -162,6 +175,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectProperty.Name" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Name { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Build.Evaluation.ProjectProperty.Name" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Build.Evaluation.IProperty.Name</InterfaceMember>
@@ -172,10 +186,13 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerBrowsable</AttributeName>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+          <AttributeName>System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -183,7 +200,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets the name of the property.</summary>
-        <value>Returns the name of the property.</value>
+        <value>The name of the property.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -193,6 +210,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectProperty.Predecessor" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Predecessor As ProjectProperty" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Build::Evaluation::ProjectProperty ^ Predecessor { Microsoft::Build::Evaluation::ProjectProperty ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Predecessor : Microsoft.Build.Evaluation.ProjectProperty" Usage="Microsoft.Build.Evaluation.ProjectProperty.Predecessor" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -202,13 +220,16 @@
         <Attribute>
           <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Build.Evaluation.ProjectProperty</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets the last property that was overridden by this property during evaluation.</summary>
-        <value>Returns the last property whose value was overridden by this property during evaluation. Returns null if the property has not been overridden.</value>
+        <value>The last property whose value was overridden by this property during evaluation, or <see langword="null" /> if the property has not been overridden.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -227,6 +248,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectProperty.Project" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Project As Project" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Evaluation::Project ^ Project { Microsoft::Build::Evaluation::Project ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Project : Microsoft.Build.Evaluation.Project" Usage="Microsoft.Build.Evaluation.ProjectProperty.Project" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -234,10 +256,13 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerBrowsable</AttributeName>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+          <AttributeName>System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -245,7 +270,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets the project that contains this property.</summary>
-        <value>Returns the project that contains this property, which is never null.</value>
+        <value>The project that contains this property, which is never <see langword="null" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -272,7 +297,8 @@
       <Docs>
         <param name="other">The project property to be compared to</param>
         <summary>Compares this project property with the given project property for equality.</summary>
-        <returns>Returns true if the project properties are equal; false otherwise.</returns>
+        <returns>
+          <see langword="true" /> if the project properties are equal; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -282,6 +308,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectProperty.UnevaluatedValue" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Property UnevaluatedValue As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ UnevaluatedValue { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.UnevaluatedValue : string with get, set" Usage="Microsoft.Build.Evaluation.ProjectProperty.UnevaluatedValue" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -297,7 +324,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the unevaluated property value.</summary>
-        <value>Returns the unevaluated property value.</value>
+        <value>The unevaluated property value.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -316,6 +343,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Evaluation.ProjectProperty.Xml" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Xml As ProjectPropertyElement" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Build::Construction::ProjectPropertyElement ^ Xml { Microsoft::Build::Construction::ProjectPropertyElement ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Xml : Microsoft.Build.Construction.ProjectPropertyElement" Usage="Microsoft.Build.Evaluation.ProjectProperty.Xml" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -323,10 +351,13 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerBrowsable</AttributeName>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+          <AttributeName>System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -334,7 +365,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets the associated property element. Backing XML property. Null only if this is a global, environment, or built-in property.</summary>
-        <value>Returns the associated property element. Return null if this is a global or reserved property, or originates from an environment variable.</value>
+        <value>The associated property element, or <see langword="null" /> if this is a global or reserved property, or originates from an environment variable.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

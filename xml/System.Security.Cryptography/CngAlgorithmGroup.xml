@@ -4,14 +4,17 @@
   <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.CngAlgorithmGroup" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class CngAlgorithmGroup&#xA;Implements IEquatable(Of CngAlgorithmGroup)" />
   <TypeSignature Language="C++ CLI" Value="public ref class CngAlgorithmGroup sealed : IEquatable&lt;System::Security::Cryptography::CngAlgorithmGroup ^&gt;" />
+  <TypeSignature Language="F#" Value="type CngAlgorithmGroup = class&#xA;    interface IEquatable&lt;CngAlgorithmGroup&gt;" />
   <AssemblyInfo>
     <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
     <AssemblyVersion>4.2.0.0</AssemblyVersion>
     <AssemblyVersion>4.3.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.1.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System.Core</AssemblyName>
     <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
@@ -26,6 +29,11 @@
       <InterfaceName>System.IEquatable&lt;System.Security.Cryptography.CngAlgorithmGroup&gt;</InterfaceName>
     </Interface>
   </Interfaces>
+  <Attributes>
+    <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
+      <AttributeName>System.Serializable</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>Encapsulates the name of an encryption algorithm group.</summary>
     <remarks>
@@ -52,15 +60,18 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngAlgorithmGroup.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (algorithmGroup As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; CngAlgorithmGroup(System::String ^ algorithmGroup);" />
+      <MemberSignature Language="F#" Value="new System.Security.Cryptography.CngAlgorithmGroup : string -&gt; System.Security.Cryptography.CngAlgorithmGroup" Usage="new System.Security.Cryptography.CngAlgorithmGroup algorithmGroup" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
@@ -93,21 +104,29 @@
       <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngAlgorithmGroup.AlgorithmGroup" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AlgorithmGroup As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ AlgorithmGroup { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.AlgorithmGroup : string" Usage="System.Security.Cryptography.CngAlgorithmGroup.AlgorithmGroup" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -123,15 +142,18 @@
       <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngAlgorithmGroup.DiffieHellman" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property DiffieHellman As CngAlgorithmGroup" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::Security::Cryptography::CngAlgorithmGroup ^ DiffieHellman { System::Security::Cryptography::CngAlgorithmGroup ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DiffieHellman : System.Security.Cryptography.CngAlgorithmGroup" Usage="System.Security.Cryptography.CngAlgorithmGroup.DiffieHellman" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
@@ -153,15 +175,18 @@
       <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngAlgorithmGroup.Dsa" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Dsa As CngAlgorithmGroup" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::Security::Cryptography::CngAlgorithmGroup ^ Dsa { System::Security::Cryptography::CngAlgorithmGroup ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Dsa : System.Security.Cryptography.CngAlgorithmGroup" Usage="System.Security.Cryptography.CngAlgorithmGroup.Dsa" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
@@ -183,15 +208,18 @@
       <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngAlgorithmGroup.ECDiffieHellman" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property ECDiffieHellman As CngAlgorithmGroup" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::Security::Cryptography::CngAlgorithmGroup ^ ECDiffieHellman { System::Security::Cryptography::CngAlgorithmGroup ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ECDiffieHellman : System.Security.Cryptography.CngAlgorithmGroup" Usage="System.Security.Cryptography.CngAlgorithmGroup.ECDiffieHellman" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
@@ -213,15 +241,18 @@
       <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngAlgorithmGroup.ECDsa" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property ECDsa As CngAlgorithmGroup" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::Security::Cryptography::CngAlgorithmGroup ^ ECDsa { System::Security::Cryptography::CngAlgorithmGroup ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ECDsa : System.Security.Cryptography.CngAlgorithmGroup" Usage="System.Security.Cryptography.CngAlgorithmGroup.ECDsa" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
@@ -253,15 +284,18 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngAlgorithmGroup.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="cngAlgorithmGroup.Equals obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
@@ -288,6 +322,7 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngAlgorithmGroup.Equals(System.Security.Cryptography.CngAlgorithmGroup)" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (other As CngAlgorithmGroup) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Equals(System::Security::Cryptography::CngAlgorithmGroup ^ other);" />
+      <MemberSignature Language="F#" Value="override this.Equals : System.Security.Cryptography.CngAlgorithmGroup -&gt; bool" Usage="cngAlgorithmGroup.Equals other" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
@@ -296,10 +331,12 @@
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
@@ -326,15 +363,18 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngAlgorithmGroup.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="cngAlgorithmGroup.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
@@ -357,15 +397,18 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngAlgorithmGroup.op_Equality(System.Security.Cryptography.CngAlgorithmGroup,System.Security.Cryptography.CngAlgorithmGroup)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As CngAlgorithmGroup, right As CngAlgorithmGroup) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator ==(System::Security::Cryptography::CngAlgorithmGroup ^ left, System::Security::Cryptography::CngAlgorithmGroup ^ right);" />
+      <MemberSignature Language="F#" Value="static member ( = ) : System.Security.Cryptography.CngAlgorithmGroup * System.Security.Cryptography.CngAlgorithmGroup -&gt; bool" Usage="left = right" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
@@ -381,7 +424,7 @@
       </Parameters>
       <Docs>
         <param name="left">An object that specifies an algorithm group.</param>
-        <param name="right">A second object, to be compared to the object that is identified by the <c>left</c> parameter.</param>
+        <param name="right">A second object, to be compared to the object that is identified by the <paramref name="left" /> parameter.</param>
         <summary>Determines whether two <see cref="T:System.Security.Cryptography.CngAlgorithmGroup" /> objects specify the same algorithm group.</summary>
         <returns>
           <see langword="true" /> if the two objects specify the same algorithm group; otherwise, <see langword="false" />.</returns>
@@ -394,15 +437,18 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngAlgorithmGroup.op_Inequality(System.Security.Cryptography.CngAlgorithmGroup,System.Security.Cryptography.CngAlgorithmGroup)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As CngAlgorithmGroup, right As CngAlgorithmGroup) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator !=(System::Security::Cryptography::CngAlgorithmGroup ^ left, System::Security::Cryptography::CngAlgorithmGroup ^ right);" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : System.Security.Cryptography.CngAlgorithmGroup * System.Security.Cryptography.CngAlgorithmGroup -&gt; bool" Usage="System.Security.Cryptography.CngAlgorithmGroup.op_Inequality (left, right)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
@@ -418,7 +464,7 @@
       </Parameters>
       <Docs>
         <param name="left">An object that specifies an algorithm group.</param>
-        <param name="right">A second object, to be compared to the object that is identified by the <c>left</c> parameter.</param>
+        <param name="right">A second object, to be compared to the object that is identified by the <paramref name="left" /> parameter.</param>
         <summary>Determines whether two <see cref="T:System.Security.Cryptography.CngAlgorithmGroup" /> objects do not specify the same algorithm group.</summary>
         <returns>
           <see langword="true" /> if the two objects do not specify the same algorithm group; otherwise, <see langword="false" />.</returns>
@@ -431,15 +477,18 @@
       <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngAlgorithmGroup.Rsa" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Rsa As CngAlgorithmGroup" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::Security::Cryptography::CngAlgorithmGroup ^ Rsa { System::Security::Cryptography::CngAlgorithmGroup ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Rsa : System.Security.Cryptography.CngAlgorithmGroup" Usage="System.Security.Cryptography.CngAlgorithmGroup.Rsa" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
@@ -461,15 +510,18 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngAlgorithmGroup.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="cngAlgorithmGroup.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>

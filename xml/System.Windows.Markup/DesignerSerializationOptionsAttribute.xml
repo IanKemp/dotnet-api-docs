@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Markup.DesignerSerializationOptionsAttribute" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class DesignerSerializationOptionsAttribute&#xA;Inherits Attribute" />
   <TypeSignature Language="C++ CLI" Value="public ref class DesignerSerializationOptionsAttribute sealed : Attribute" />
+  <TypeSignature Language="F#" Value="type DesignerSerializationOptionsAttribute = class&#xA;    inherit Attribute" />
   <AssemblyInfo>
     <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -14,7 +16,7 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>System.AttributeUsage(System.AttributeTargets.Field | System.AttributeTargets.Method | System.AttributeTargets.Property, AllowMultiple=false)</AttributeName>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method | System.AttributeTargets.Property | System.AttributeTargets.Field, AllowMultiple=false)</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -27,7 +29,7 @@
   
  Attribute usage for <xref:System.Windows.Markup.DesignerSerializationOptionsAttribute> supports assigning to a method. This enables you to declare serialization options for a XAML attached property, by assigning <xref:System.Windows.Markup.DesignerSerializationOptionsAttribute> on the `Get` accessor method that supports the attached property usage pattern. An example of this in the WPF types is <xref:System.Windows.Markup.XmlAttributeProperties.XmlSpace%2A> and its `Get` accessor <xref:System.Windows.Markup.XmlAttributeProperties.GetXmlSpace%2A>.  
   
- Note that <xref:System.Windows.Markup.DesignerSerializationOptionsAttribute> hints the desired serialization form, not whether the property is or is not serialized. If you want to influence other aspects of property serialization, you can use <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>, or can implement `ShouldSerialize` pattern methods on the owner class. For more information on the general .NET serialization patterns for design time, see [Designer Serialization Overview](http://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a).  
+ Note that <xref:System.Windows.Markup.DesignerSerializationOptionsAttribute> hints the desired serialization form, not whether the property is or is not serialized. If you want to influence other aspects of property serialization, you can use <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>, or can implement `ShouldSerialize` pattern methods on the owner class. For more information on the general .NET serialization patterns for design time, see [Designer Serialization Overview](https://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a).  
   
  ]]></format>
     </remarks>
@@ -38,9 +40,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Markup.DesignerSerializationOptions designerSerializationOptions) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Windows.Markup.DesignerSerializationOptionsAttribute.#ctor(System.Windows.Markup.DesignerSerializationOptions)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DesignerSerializationOptionsAttribute(System::Windows::Markup::DesignerSerializationOptions designerSerializationOptions);" />
+      <MemberSignature Language="F#" Value="new System.Windows.Markup.DesignerSerializationOptionsAttribute : System.Windows.Markup.DesignerSerializationOptions -&gt; System.Windows.Markup.DesignerSerializationOptionsAttribute" Usage="new System.Windows.Markup.DesignerSerializationOptionsAttribute designerSerializationOptions" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
@@ -60,11 +64,18 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Markup.DesignerSerializationOptionsAttribute.DesignerSerializationOptions" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DesignerSerializationOptions As DesignerSerializationOptions" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Markup::DesignerSerializationOptions DesignerSerializationOptions { System::Windows::Markup::DesignerSerializationOptions get(); };" />
+      <MemberSignature Language="F#" Value="member this.DesignerSerializationOptions : System.Windows.Markup.DesignerSerializationOptions" Usage="System.Windows.Markup.DesignerSerializationOptionsAttribute.DesignerSerializationOptions" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Windows.Markup.DesignerSerializationOptions</ReturnType>
       </ReturnValue>

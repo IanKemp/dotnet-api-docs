@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.NamedImage" />
   <TypeSignature Language="VB.NET" Value="Public Class NamedImage&#xA;Inherits ChartNamedElement" />
   <TypeSignature Language="C++ CLI" Value="public ref class NamedImage : System::Windows::Forms::DataVisualization::Charting::ChartNamedElement" />
+  <TypeSignature Language="F#" Value="type NamedImage = class&#xA;    inherit ChartNamedElement" />
   <AssemblyInfo>
     <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -64,6 +65,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Drawing.Image image) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.NamedImage.#ctor(System.String,System.Drawing.Image)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; NamedImage(System::String ^ name, System::Drawing::Image ^ image);" />
+      <MemberSignature Language="F#" Value="new System.Windows.Forms.DataVisualization.Charting.NamedImage : string * System.Drawing.Image -&gt; System.Windows.Forms.DataVisualization.Charting.NamedImage" Usage="new System.Windows.Forms.DataVisualization.Charting.NamedImage (name, image)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -86,6 +88,7 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.NamedImage.Dispose(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub Dispose (disposing As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void Dispose(bool disposing);" />
+      <MemberSignature Language="F#" Value="override this.Dispose : bool -&gt; unit" Usage="namedImage.Dispose disposing" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -110,6 +113,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.NamedImage.Image" />
       <MemberSignature Language="VB.NET" Value="Public Property Image As Image" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Drawing::Image ^ Image { System::Drawing::Image ^ get(); void set(System::Drawing::Image ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Image : System.Drawing.Image with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.NamedImage.Image" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -118,6 +122,12 @@
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -144,6 +154,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.NamedImage.Name" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Name { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.NamedImage.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -152,6 +163,12 @@
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -170,7 +187,7 @@
   
  This <xref:System.Windows.Forms.DataVisualization.Charting.NamedImage.Name%2A> property value is used when you set a chart image property to a <xref:System.Windows.Forms.DataVisualization.Charting.NamedImage> object.  
   
- When one of the image properties of the <xref:System.Windows.Forms.DataVisualization.Charting.Chart> control is set by specifying a `string` value, the <xref:System.Windows.Forms.DataVisualization.Charting.Chart.Images%2A> collection property—of type <xref:System.Windows.Forms.DataVisualization.Charting.NamedImagesCollection>—is first checked to determine whether an image with the specified name exists. If a matching <xref:System.Windows.Forms.DataVisualization.Charting.NamedImage> object is found, this image is used. If a matching <xref:System.Windows.Forms.DataVisualization.Charting.NamedImage> object is not located, the `string` value is treated as a URL, an image resource name, or an image path.  
+ When one of the image properties of the <xref:System.Windows.Forms.DataVisualization.Charting.Chart> control is set by specifying a `string` value, the <xref:System.Windows.Forms.DataVisualization.Charting.Chart.Images%2A> collection property - of type <xref:System.Windows.Forms.DataVisualization.Charting.NamedImagesCollection> - is first checked to determine whether an image with the specified name exists. If a matching <xref:System.Windows.Forms.DataVisualization.Charting.NamedImage> object is found, this image is used. If a matching <xref:System.Windows.Forms.DataVisualization.Charting.NamedImage> object is not located, the `string` value is treated as a URL, an image resource name, or an image path.  
   
  ]]></format>
         </remarks>

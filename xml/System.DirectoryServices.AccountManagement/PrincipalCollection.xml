@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.DirectoryServices.AccountManagement.PrincipalCollection" />
   <TypeSignature Language="VB.NET" Value="Public Class PrincipalCollection&#xA;Implements ICollection, ICollection(Of Principal), IEnumerable(Of Principal)" />
   <TypeSignature Language="C++ CLI" Value="public ref class PrincipalCollection : System::Collections::Generic::ICollection&lt;System::DirectoryServices::AccountManagement::Principal ^&gt;, System::Collections::Generic::IEnumerable&lt;System::DirectoryServices::AccountManagement::Principal ^&gt;, System::Collections::ICollection" />
+  <TypeSignature Language="F#" Value="type PrincipalCollection = class&#xA;    interface ICollection&lt;Principal&gt;&#xA;    interface seq&lt;Principal&gt;&#xA;    interface IEnumerable&#xA;    interface ICollection" />
   <AssemblyInfo>
     <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.1.0.0</AssemblyVersion>
   </AssemblyInfo>
@@ -20,13 +22,18 @@
       <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.DirectoryServices.AccountManagement.Principal&gt;</InterfaceName>
     </Interface>
     <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
     </Interface>
   </Interfaces>
   <Docs>
-    <summary>A mutable collection of objects derived from the <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> class.  This class is designed to be used for multi-valued properties that contain Principals.  Manipulating the contents of this collection changes the contents of the corresponding store property, which is made permanent when <see cref="M:System.DirectoryServices.AccountManagement.Principal.Save" /> is called on the corresponding principal object.</summary>
+    <summary>A mutable collection of objects derived from the <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> class. This class is designed to be used for multi-valued properties that contain <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> objects. Manipulating the contents of this collection changes the contents of the corresponding store property, which is made permanent when <see cref="M:System.DirectoryServices.AccountManagement.Principal.Save" /> is called on the corresponding principal object.</summary>
     <remarks>To be added.</remarks>
-    <altmember cref="N:System.DirectoryServices.AccountManagement" />
   </Docs>
   <Members>
     <MemberGroup MemberName="Add">
@@ -40,11 +47,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- As with <xref:System.DirectoryServices.AccountManagement.PrincipalCollection.Remove%2A> and <xref:System.DirectoryServices.AccountManagement.PrincipalCollection.Contains%2A>, There are four overloads to this function, but they all do the same thing.  The extra overloads are only implemented to improve usability, so that developers using Intellisense see overloads that take a <xref:System.DirectoryServices.AccountManagement.UserPrincipal>, <xref:System.DirectoryServices.AccountManagement.GroupPrincipal>, or <xref:System.DirectoryServices.AccountManagement.ComputerPrincipal> object.  Calling any one of the User, Group, or Computer overloads is exactly equivalent to calling the <xref:System.DirectoryServices.AccountManagement.Principal> overload.  
+ As with <xref:System.DirectoryServices.AccountManagement.PrincipalCollection.Remove%2A> and <xref:System.DirectoryServices.AccountManagement.PrincipalCollection.Contains%2A>, There are four overloads to this function, but they all do the same thing. The extra overloads are only implemented to improve usability, so that developers using IntelliSense see overloads that take a <xref:System.DirectoryServices.AccountManagement.UserPrincipal>, <xref:System.DirectoryServices.AccountManagement.GroupPrincipal>, or <xref:System.DirectoryServices.AccountManagement.ComputerPrincipal> object. Calling any one of the User, Group, or Computer overloads is exactly equivalent to calling the <xref:System.DirectoryServices.AccountManagement.Principal> overload.  
   
  ]]></format>
         </remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </MemberGroup>
     <Member MemberName="Add">
@@ -53,15 +59,20 @@
       <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Add(System.DirectoryServices.AccountManagement.ComputerPrincipal)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Add (computer As ComputerPrincipal)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Add(System::DirectoryServices::AccountManagement::ComputerPrincipal ^ computer);" />
+      <MemberSignature Language="F#" Value="member this.Add : System.DirectoryServices.AccountManagement.ComputerPrincipal -&gt; unit" Usage="principalCollection.Add computer" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -85,7 +96,6 @@
   
  ]]></format>
         </remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </Member>
     <Member MemberName="Add">
@@ -94,15 +104,20 @@
       <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Add(System.DirectoryServices.AccountManagement.GroupPrincipal)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Add (group As GroupPrincipal)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Add(System::DirectoryServices::AccountManagement::GroupPrincipal ^ group);" />
+      <MemberSignature Language="F#" Value="member this.Add : System.DirectoryServices.AccountManagement.GroupPrincipal -&gt; unit" Usage="principalCollection.Add group" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -126,7 +141,6 @@
   
  ]]></format>
         </remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </Member>
     <Member MemberName="Add">
@@ -134,17 +148,19 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(class System.DirectoryServices.AccountManagement.Principal principal) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Add(System.DirectoryServices.AccountManagement.Principal)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Add(System::DirectoryServices::AccountManagement::Principal ^ principal);" />
+      <MemberSignature Language="F#" Value="abstract member Add : System.DirectoryServices.AccountManagement.Principal -&gt; unit&#xA;override this.Add : System.DirectoryServices.AccountManagement.Principal -&gt; unit" Usage="principalCollection.Add principal" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.Generic.ICollection`1.Add(`0)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Security.SecurityCritical</AttributeName>
         </Attribute>
       </Attributes>
@@ -169,7 +185,6 @@
   
  ]]></format>
         </remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </Member>
     <Member MemberName="Add">
@@ -178,15 +193,20 @@
       <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Add(System.DirectoryServices.AccountManagement.UserPrincipal)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Add (user As UserPrincipal)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Add(System::DirectoryServices::AccountManagement::UserPrincipal ^ user);" />
+      <MemberSignature Language="F#" Value="member this.Add : System.DirectoryServices.AccountManagement.UserPrincipal -&gt; unit" Usage="principalCollection.Add user" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -210,7 +230,6 @@
   
  ]]></format>
         </remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </Member>
     <Member MemberName="Add">
@@ -218,14 +237,16 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.DirectoryServices.AccountManagement.PrincipalContext context, valuetype System.DirectoryServices.AccountManagement.IdentityType identityType, string identityValue) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Add(System.DirectoryServices.AccountManagement.PrincipalContext,System.DirectoryServices.AccountManagement.IdentityType,System.String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Add(System::DirectoryServices::AccountManagement::PrincipalContext ^ context, System::DirectoryServices::AccountManagement::IdentityType identityType, System::String ^ identityValue);" />
+      <MemberSignature Language="F#" Value="member this.Add : System.DirectoryServices.AccountManagement.PrincipalContext * System.DirectoryServices.AccountManagement.IdentityType * string -&gt; unit" Usage="principalCollection.Add (context, identityType, identityValue)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Security.SecurityCritical</AttributeName>
         </Attribute>
       </Attributes>
@@ -239,8 +260,8 @@
       </Parameters>
       <Docs>
         <param name="context">The <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> object for the principal to be added to the collection.</param>
-        <param name="identityType">An <see cref="T:System.DirectoryServices.AccountManagement.IdentityType" /> object that specifies the format of <c>identityValue</c></param>
-        <param name="identityValue">A string that identifies the principal, in the format specified by <c>identityType</c></param>
+        <param name="identityType">An <see cref="T:System.DirectoryServices.AccountManagement.IdentityType" /> object that specifies the format of <paramref name="identityValue" /></param>
+        <param name="identityValue">A string that identifies the principal, in the format specified by <paramref name="identityType" /></param>
         <summary>Searches for a <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> object that matches the parameters, and adds it to the end of the collection.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -253,11 +274,10 @@
 |<xref:System.DirectoryServices.AccountManagement.PrincipalExistsException>|The principal matching these parameters already exists in the collection.|  
 |<xref:System.DirectoryServices.AccountManagement.NoMatchingPrincipalException>|No principal matching the specified parameters was found.|  
 |<xref:System.DirectoryServices.AccountManagement.MultipleMatchesException>|More than one principal matches the specified parameters.|  
-|<xref:System.ArgumentException>|Thrown when `identityType` is an empty string|  
+|<xref:System.ArgumentException>|`identityType` is an empty string|  
   
  ]]></format>
         </remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </Member>
     <Member MemberName="Clear">
@@ -266,17 +286,19 @@
       <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Clear" />
       <MemberSignature Language="VB.NET" Value="Public Sub Clear ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Clear();" />
+      <MemberSignature Language="F#" Value="abstract member Clear : unit -&gt; unit&#xA;override this.Clear : unit -&gt; unit" Usage="principalCollection.Clear " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.Generic.ICollection`1.Clear</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Security.SecurityCritical</AttributeName>
         </Attribute>
       </Attributes>
@@ -285,7 +307,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Removes all Principals from the collection.</summary>
+        <summary>Removes all <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> objects from the collection.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -294,11 +316,10 @@
   
 |Exception|Description|  
 |---------------|-----------------|  
-|<xref:System.InvalidOperationException>|If this method is called on the <xref:System.DirectoryServices.AccountManagement.GroupPrincipal.Members> PrincipalCollection, the  <xref:System.DirectoryServices.AccountManagement.GroupPrincipal.Members> property cannot be cleared because one or more of the group's members have this group as their primary group|  
+|<xref:System.InvalidOperationException>|If this method is called on the <xref:System.DirectoryServices.AccountManagement.GroupPrincipal.Members> PrincipalCollection, the <xref:System.DirectoryServices.AccountManagement.GroupPrincipal.Members> property cannot be cleared because one or more of the group's members have this group as their primary group.|  
   
  ]]></format>
         </remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </Member>
     <MemberGroup MemberName="Contains">
@@ -307,16 +328,15 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Docs>
-        <summary>Returns true if the specified Principal is a member of the PrincipalCollection, false otherwise.  The Principal can be specified in the same manner as in the <see cref="Overload:System.DirectoryServices.AccountManagement.PrincipalCollection.Add" />.methods.</summary>
+        <summary>Returns a value that indicates whether the specified <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> is a member of the <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" />. The <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> can be specified in the same manner as in the <see cref="Overload:System.DirectoryServices.AccountManagement.PrincipalCollection.Add" /> methods.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- As with <xref:System.DirectoryServices.AccountManagement.PrincipalCollection.Add%2A>, and <xref:System.DirectoryServices.AccountManagement.PrincipalCollection.Remove%2A> there are four overloads to this function, but they all do the same thing.  The extra overloads are only implemented to improve usability, so that developers using Intellisense see overloads that take a <xref:System.DirectoryServices.AccountManagement.UserPrincipal>, <xref:System.DirectoryServices.AccountManagement.GroupPrincipal>, or <xref:System.DirectoryServices.AccountManagement.ComputerPrincipal> object.  Calling any one of the User, Group, or Computer overloads is exactly equivalent to calling the <xref:System.DirectoryServices.AccountManagement.Principal> overload.  
+ As with <xref:System.DirectoryServices.AccountManagement.PrincipalCollection.Add%2A>, and <xref:System.DirectoryServices.AccountManagement.PrincipalCollection.Remove%2A> there are four overloads to this function, but they all do the same thing. The extra overloads are only implemented to improve usability, so that developers using IntelliSense see overloads that take a <xref:System.DirectoryServices.AccountManagement.UserPrincipal>, <xref:System.DirectoryServices.AccountManagement.GroupPrincipal>, or <xref:System.DirectoryServices.AccountManagement.ComputerPrincipal> object. Calling any one of the User, Group, or Computer overloads is exactly equivalent to calling the <xref:System.DirectoryServices.AccountManagement.Principal> overload.  
   
  ]]></format>
         </remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </MemberGroup>
     <Member MemberName="Contains">
@@ -325,15 +345,20 @@
       <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Contains(System.DirectoryServices.AccountManagement.ComputerPrincipal)" />
       <MemberSignature Language="VB.NET" Value="Public Function Contains (computer As ComputerPrincipal) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Contains(System::DirectoryServices::AccountManagement::ComputerPrincipal ^ computer);" />
+      <MemberSignature Language="F#" Value="member this.Contains : System.DirectoryServices.AccountManagement.ComputerPrincipal -&gt; bool" Usage="principalCollection.Contains computer" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -344,10 +369,10 @@
       </Parameters>
       <Docs>
         <param name="computer">A <see cref="T:System.DirectoryServices.AccountManagement.ComputerPrincipal" /> object.</param>
-        <summary>Returns true if the collection contains the specified <see cref="T:System.DirectoryServices.AccountManagement.ComputerPrincipal" /> object.</summary>
-        <returns>Returns a <see langword="bool" />.</returns>
+        <summary>Returns a value indicating whether the collection contains the specified <see cref="T:System.DirectoryServices.AccountManagement.ComputerPrincipal" /> object.</summary>
+        <returns>
+          <see langword="true" /> if the collection contains the specified object; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </Member>
     <Member MemberName="Contains">
@@ -356,15 +381,20 @@
       <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Contains(System.DirectoryServices.AccountManagement.GroupPrincipal)" />
       <MemberSignature Language="VB.NET" Value="Public Function Contains (group As GroupPrincipal) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Contains(System::DirectoryServices::AccountManagement::GroupPrincipal ^ group);" />
+      <MemberSignature Language="F#" Value="member this.Contains : System.DirectoryServices.AccountManagement.GroupPrincipal -&gt; bool" Usage="principalCollection.Contains group" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -375,10 +405,10 @@
       </Parameters>
       <Docs>
         <param name="group">A <see cref="T:System.DirectoryServices.AccountManagement.GroupPrincipal" /> object</param>
-        <summary>Returns true if the collection contains the specified <see cref="T:System.DirectoryServices.AccountManagement.GroupPrincipal" /> object.</summary>
-        <returns>Returns a <see langword="bool" />.</returns>
+        <summary>Returns a value indicating whether the collection contains the specified <see cref="T:System.DirectoryServices.AccountManagement.GroupPrincipal" /> object.</summary>
+        <returns>
+          <see langword="true" /> if the collection contains the specified object; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </Member>
     <Member MemberName="Contains">
@@ -386,17 +416,19 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(class System.DirectoryServices.AccountManagement.Principal principal) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Contains(System.DirectoryServices.AccountManagement.Principal)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Contains(System::DirectoryServices::AccountManagement::Principal ^ principal);" />
+      <MemberSignature Language="F#" Value="abstract member Contains : System.DirectoryServices.AccountManagement.Principal -&gt; bool&#xA;override this.Contains : System.DirectoryServices.AccountManagement.Principal -&gt; bool" Usage="principalCollection.Contains principal" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.Generic.ICollection`1.Contains(`0)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Security.SecurityCritical</AttributeName>
         </Attribute>
       </Attributes>
@@ -408,10 +440,10 @@
       </Parameters>
       <Docs>
         <param name="principal">A <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> object</param>
-        <summary>Returns true if the collection contains the specified <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> object.</summary>
-        <returns>Returns a <see langword="bool" />.</returns>
+        <summary>Returns a value indicating whether the collection contains the specified <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> object.</summary>
+        <returns>
+          <see langword="true" /> if the collection contains the specified object; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </Member>
     <Member MemberName="Contains">
@@ -420,15 +452,20 @@
       <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Contains(System.DirectoryServices.AccountManagement.UserPrincipal)" />
       <MemberSignature Language="VB.NET" Value="Public Function Contains (user As UserPrincipal) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Contains(System::DirectoryServices::AccountManagement::UserPrincipal ^ user);" />
+      <MemberSignature Language="F#" Value="member this.Contains : System.DirectoryServices.AccountManagement.UserPrincipal -&gt; bool" Usage="principalCollection.Contains user" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -439,10 +476,10 @@
       </Parameters>
       <Docs>
         <param name="user">A <see cref="T:System.DirectoryServices.AccountManagement.UserPrincipal" /> object.</param>
-        <summary>Returns true if the collection contains the specified <see cref="T:System.DirectoryServices.AccountManagement.UserPrincipal" /> object.</summary>
-        <returns>Returns a <see langword="bool" />.</returns>
+        <summary>Returns a value indicating whether the collection contains the specified <see cref="T:System.DirectoryServices.AccountManagement.UserPrincipal" /> object.</summary>
+        <returns>
+          <see langword="true" /> if the collection contains the specified object; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </Member>
     <Member MemberName="Contains">
@@ -450,14 +487,16 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.DirectoryServices.AccountManagement.PrincipalContext context, valuetype System.DirectoryServices.AccountManagement.IdentityType identityType, string identityValue) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Contains(System.DirectoryServices.AccountManagement.PrincipalContext,System.DirectoryServices.AccountManagement.IdentityType,System.String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Contains(System::DirectoryServices::AccountManagement::PrincipalContext ^ context, System::DirectoryServices::AccountManagement::IdentityType identityType, System::String ^ identityValue);" />
+      <MemberSignature Language="F#" Value="member this.Contains : System.DirectoryServices.AccountManagement.PrincipalContext * System.DirectoryServices.AccountManagement.IdentityType * string -&gt; bool" Usage="principalCollection.Contains (context, identityType, identityValue)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Security.SecurityCritical</AttributeName>
         </Attribute>
       </Attributes>
@@ -471,10 +510,11 @@
       </Parameters>
       <Docs>
         <param name="context">The <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> object of the principal.</param>
-        <param name="identityType">An <see cref="T:System.DirectoryServices.AccountManagement.IdentityType" /> object that specifies the format of <c>identityValue</c></param>
-        <param name="identityValue">A string that identifies the principal, in the format specified by <c>identityType</c></param>
-        <summary>Returns true if the <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> object matching the <paramref name="indentityType" />/<paramref name="idendityValue" /> pair is in the collection</summary>
-        <returns>Returns a <see langword="bool" />.</returns>
+        <param name="identityType">An <see cref="T:System.DirectoryServices.AccountManagement.IdentityType" /> object that specifies the format of <paramref name="identityValue" /></param>
+        <param name="identityValue">A string that identifies the principal, in the format specified by <paramref name="identityType" /></param>
+        <summary>Returns a value indicating whether the <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> object matching the <paramref name="identityType" />/<paramref name="identityValue" /> pair is in the collection. </summary>
+        <returns>
+          <see langword="true" /> if an object matching the <paramref name="identityType" />/<paramref name="identityValue" /> pair is in the collection; otherwise, <see langword="false" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -488,7 +528,6 @@
   
  ]]></format>
         </remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </Member>
     <Member MemberName="CopyTo">
@@ -497,9 +536,11 @@
       <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.CopyTo(System.DirectoryServices.AccountManagement.Principal[],System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub CopyTo (array As Principal(), index As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void CopyTo(cli::array &lt;System::DirectoryServices::AccountManagement::Principal ^&gt; ^ array, int index);" />
+      <MemberSignature Language="F#" Value="abstract member CopyTo : System.DirectoryServices.AccountManagement.Principal[] * int -&gt; unit&#xA;override this.CopyTo : System.DirectoryServices.AccountManagement.Principal[] * int -&gt; unit" Usage="principalCollection.CopyTo (array, index)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -512,17 +553,16 @@
       </Parameters>
       <Docs>
         <param name="array">The <see cref="T:System.Array" /> that should be populated with <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> objects.</param>
-        <param name="index">The position in <c>array</c> into which the first principal object in the collection should be copied.</param>
+        <param name="index">The position in <paramref name="array" /> into which the first principal object in the collection should be copied.</param>
         <summary>Copies the <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> objects from this <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" /> into the specified array, starting at the specified position index in array.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- `array` must be one-dimensional.  If it is not, an <xref:System.ArgumentException> is thrown.  Further exceptions are thrown if the number of elements to copy is greater than the available space from `index` to the end of `array`, if `array` is `null`, or if `index` is less than 0.  
+ `array` must be one-dimensional. If it is not, an <xref:System.ArgumentException> is thrown. Further exceptions are thrown if the number of elements to copy is greater than the available space from `index` to the end of `array`, if `array` is `null`, or if `index` is less than 0.  
   
  ]]></format>
         </remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </Member>
     <Member MemberName="Count">
@@ -531,6 +571,7 @@
       <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.PrincipalCollection.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="System.DirectoryServices.AccountManagement.PrincipalCollection.Count" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.Generic.ICollection`1.Count</InterfaceMember>
@@ -538,11 +579,12 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>get: System.Security.SecurityCritical</AttributeName>
         </Attribute>
       </Attributes>
@@ -550,10 +592,9 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Returns the count of Principal objects in this collection.</summary>
+        <summary>Returns the count of <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> objects in this collection.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -562,17 +603,19 @@
       <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator(Of Principal)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Collections::Generic::IEnumerator&lt;System::DirectoryServices::AccountManagement::Principal ^&gt; ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.Generic.IEnumerator&lt;System.DirectoryServices.AccountManagement.Principal&gt;&#xA;override this.GetEnumerator : unit -&gt; System.Collections.Generic.IEnumerator&lt;System.DirectoryServices.AccountManagement.Principal&gt;" Usage="principalCollection.GetEnumerator " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.Generic.IEnumerable`1.GetEnumerator</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Security.SecurityCritical</AttributeName>
         </Attribute>
       </Attributes>
@@ -587,11 +630,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Conceptually, each instance of <xref:System.DirectoryServices.AccountManagement.PrincipalCollection> has a single enumerator associated with it.  Although multiple calls to <xref:System.DirectoryServices.AccountManagement.PrincipalCollection.System%23Collections%23IEnumerable%23GetEnumerator%2A> return distinct <xref:System.Collections.IEnumerator> objects, they share the same internal state.  
+ Conceptually, each instance of <xref:System.DirectoryServices.AccountManagement.PrincipalCollection> has a single enumerator associated with it. Although multiple calls to <xref:System.DirectoryServices.AccountManagement.PrincipalCollection.System%23Collections%23IEnumerable%23GetEnumerator%2A> return distinct <xref:System.Collections.IEnumerator> objects, they share the same internal state.  
   
  ]]></format>
         </remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </Member>
     <Member MemberName="IsReadOnly">
@@ -600,12 +642,14 @@
       <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.PrincipalCollection.IsReadOnly" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsReadOnly As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsReadOnly { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsReadOnly : bool" Usage="System.DirectoryServices.AccountManagement.PrincipalCollection.IsReadOnly" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.Generic.ICollection`1.IsReadOnly</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -613,10 +657,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Returns false.  This is not a read-only collection.</summary>
-        <value>Returns a <see langword="bool" />.</value>
+        <summary>Returns <see langword="false" />. This is not a read-only collection.</summary>
+        <value>Always <see langword="false" />.</value>
         <remarks>To be added.</remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </Member>
     <Member MemberName="IsSynchronized">
@@ -625,12 +668,14 @@
       <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.PrincipalCollection.IsSynchronized" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsSynchronized As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsSynchronized { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsSynchronized : bool" Usage="System.DirectoryServices.AccountManagement.PrincipalCollection.IsSynchronized" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.ICollection.IsSynchronized</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -638,10 +683,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Returns false.  It is up to the application to serialize access to this collection.</summary>
-        <value>Returns a <see langword="bool" />.</value>
+        <summary>Returns <see langword="false" />. It is up to the application to serialize access to this collection.</summary>
+        <value>Always <see langword="false" />.</value>
         <remarks>To be added.</remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </Member>
     <MemberGroup MemberName="Remove">
@@ -655,11 +699,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- As with <xref:System.DirectoryServices.AccountManagement.PrincipalCollection.Add%2A>, and <xref:System.DirectoryServices.AccountManagement.PrincipalCollection.Contains%2A> there are four overloads to this function, but they all do the same thing.  The extra overloads are only implemented to improve usability, so that developers using Intellisense see overloads that take a <xref:System.DirectoryServices.AccountManagement.UserPrincipal>, <xref:System.DirectoryServices.AccountManagement.GroupPrincipal>, or <xref:System.DirectoryServices.AccountManagement.ComputerPrincipal> object.  Calling any one of the User, Group, or Computer overloads is exactly equivalent to calling the <xref:System.DirectoryServices.AccountManagement.Principal> overload.  
+ As with <xref:System.DirectoryServices.AccountManagement.PrincipalCollection.Add%2A>, and <xref:System.DirectoryServices.AccountManagement.PrincipalCollection.Contains%2A> there are four overloads to this function, but they all do the same thing. The extra overloads are only implemented to improve usability, so that developers using IntelliSense see overloads that take a <xref:System.DirectoryServices.AccountManagement.UserPrincipal>, <xref:System.DirectoryServices.AccountManagement.GroupPrincipal>, or <xref:System.DirectoryServices.AccountManagement.ComputerPrincipal> object. Calling any one of the User, Group, or Computer overloads is exactly equivalent to calling the <xref:System.DirectoryServices.AccountManagement.Principal> overload.  
   
  ]]></format>
         </remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </MemberGroup>
     <Member MemberName="Remove">
@@ -668,15 +711,20 @@
       <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Remove(System.DirectoryServices.AccountManagement.ComputerPrincipal)" />
       <MemberSignature Language="VB.NET" Value="Public Function Remove (computer As ComputerPrincipal) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Remove(System::DirectoryServices::AccountManagement::ComputerPrincipal ^ computer);" />
+      <MemberSignature Language="F#" Value="member this.Remove : System.DirectoryServices.AccountManagement.ComputerPrincipal -&gt; bool" Usage="principalCollection.Remove computer" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -688,7 +736,8 @@
       <Docs>
         <param name="computer">A <see cref="T:System.DirectoryServices.AccountManagement.ComputerPrincipal" /> object.</param>
         <summary>Removes the specified <see cref="T:System.DirectoryServices.AccountManagement.ComputerPrincipal" /> object from the collection, and returns <see langword="true" /> if the <see cref="T:System.DirectoryServices.AccountManagement.ComputerPrincipal" /> was a member of this <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" />, and <see langword="false" /> otherwise (in which case the method performs no operation).</summary>
-        <returns>Returns a <see langword="bool" />.</returns>
+        <returns>
+          <see langword="true" /> if the <see cref="T:System.DirectoryServices.AccountManagement.ComputerPrincipal" /> was a member of this <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" />; otherwise, <see langword="false" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -701,7 +750,6 @@
   
  ]]></format>
         </remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </Member>
     <Member MemberName="Remove">
@@ -710,15 +758,20 @@
       <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Remove(System.DirectoryServices.AccountManagement.GroupPrincipal)" />
       <MemberSignature Language="VB.NET" Value="Public Function Remove (group As GroupPrincipal) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Remove(System::DirectoryServices::AccountManagement::GroupPrincipal ^ group);" />
+      <MemberSignature Language="F#" Value="member this.Remove : System.DirectoryServices.AccountManagement.GroupPrincipal -&gt; bool" Usage="principalCollection.Remove group" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -730,7 +783,8 @@
       <Docs>
         <param name="group">A <see cref="T:System.DirectoryServices.AccountManagement.GroupPrincipal" /> object.</param>
         <summary>Removes the specified <see cref="T:System.DirectoryServices.AccountManagement.GroupPrincipal" /> object from the collection, and returns <see langword="true" /> if the <see cref="T:System.DirectoryServices.AccountManagement.GroupPrincipal" /> was a member of this <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" />, and <see langword="false" /> otherwise (in which case the method performs no operation).</summary>
-        <returns>Returns a <see langword="bool" />.</returns>
+        <returns>
+          <see langword="true" /> if the <see cref="T:System.DirectoryServices.AccountManagement.GroupPrincipal" /> was a member of this <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" />; otherwise, <see langword="false" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -743,7 +797,6 @@
   
  ]]></format>
         </remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </Member>
     <Member MemberName="Remove">
@@ -751,17 +804,19 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(class System.DirectoryServices.AccountManagement.Principal principal) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Remove(System.DirectoryServices.AccountManagement.Principal)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Remove(System::DirectoryServices::AccountManagement::Principal ^ principal);" />
+      <MemberSignature Language="F#" Value="abstract member Remove : System.DirectoryServices.AccountManagement.Principal -&gt; bool&#xA;override this.Remove : System.DirectoryServices.AccountManagement.Principal -&gt; bool" Usage="principalCollection.Remove principal" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.Generic.ICollection`1.Remove(`0)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Security.SecurityCritical</AttributeName>
         </Attribute>
       </Attributes>
@@ -774,7 +829,8 @@
       <Docs>
         <param name="principal">A <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> object.</param>
         <summary>Removes the specified <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> object from the collection, and returns <see langword="true" /> if the <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> was a member of this <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" />, and <see langword="false" /> otherwise (in which case the method performs no operation).</summary>
-        <returns>Returns a <see langword="bool" />.</returns>
+        <returns>
+          <see langword="true" /> if the <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> was a member of this <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" />; otherwise, <see langword="false" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -787,7 +843,6 @@
   
  ]]></format>
         </remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </Member>
     <Member MemberName="Remove">
@@ -796,15 +851,20 @@
       <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Remove(System.DirectoryServices.AccountManagement.UserPrincipal)" />
       <MemberSignature Language="VB.NET" Value="Public Function Remove (user As UserPrincipal) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Remove(System::DirectoryServices::AccountManagement::UserPrincipal ^ user);" />
+      <MemberSignature Language="F#" Value="member this.Remove : System.DirectoryServices.AccountManagement.UserPrincipal -&gt; bool" Usage="principalCollection.Remove user" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -816,7 +876,8 @@
       <Docs>
         <param name="user">A <see cref="T:System.DirectoryServices.AccountManagement.UserPrincipal" /> object.</param>
         <summary>Removes the specified <see cref="T:System.DirectoryServices.AccountManagement.UserPrincipal" /> object from the collection, and returns <see langword="true" /> if the <see cref="T:System.DirectoryServices.AccountManagement.UserPrincipal" /> was a member of this <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" />, and <see langword="false" /> otherwise (in which case the method performs no operation).</summary>
-        <returns>Returns a <see langword="bool" />.</returns>
+        <returns>
+          <see langword="true" /> if the <see cref="T:System.DirectoryServices.AccountManagement.UserPrincipal" /> was a member of this <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" />; otherwise, <see langword="false" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -829,7 +890,6 @@
   
  ]]></format>
         </remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </Member>
     <Member MemberName="Remove">
@@ -837,14 +897,16 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Remove(class System.DirectoryServices.AccountManagement.PrincipalContext context, valuetype System.DirectoryServices.AccountManagement.IdentityType identityType, string identityValue) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalCollection.Remove(System.DirectoryServices.AccountManagement.PrincipalContext,System.DirectoryServices.AccountManagement.IdentityType,System.String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Remove(System::DirectoryServices::AccountManagement::PrincipalContext ^ context, System::DirectoryServices::AccountManagement::IdentityType identityType, System::String ^ identityValue);" />
+      <MemberSignature Language="F#" Value="member this.Remove : System.DirectoryServices.AccountManagement.PrincipalContext * System.DirectoryServices.AccountManagement.IdentityType * string -&gt; bool" Usage="principalCollection.Remove (context, identityType, identityValue)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Security.SecurityCritical</AttributeName>
         </Attribute>
       </Attributes>
@@ -858,10 +920,11 @@
       </Parameters>
       <Docs>
         <param name="context">A <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> object.</param>
-        <param name="identityType">An <see cref="T:System.DirectoryServices.AccountManagement.IdentityType" /> that identifies the format of <c>identityValue</c>.</param>
+        <param name="identityType">An <see cref="T:System.DirectoryServices.AccountManagement.IdentityType" /> that identifies the format of <paramref name="identityValue" />.</param>
         <param name="identityValue">A string.</param>
         <summary>Finds the <see cref="T:System.DirectoryServices.AccountManagement.UserPrincipal" /> object specified by the given <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> and <paramref name="identityType" />/<paramref name="identityValue" /> pair from the collection, and returns <see langword="true" /> if the identified <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> was a member of this <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" />, and <see langword="false" /> otherwise (in which case the method performs no operation).</summary>
-        <returns>Returns a <see langword="bool" />.</returns>
+        <returns>
+          <see langword="true" /> if the identified <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> was a member of this <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" />; otherwise, <see langword="false" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -872,12 +935,11 @@
 |---------------|-----------------|  
 |<xref:System.InvalidOperationException>|This method was called on the <xref:System.DirectoryServices.AccountManagement.GroupPrincipal.Members> collection for a domain group, and the domain principal to be removed is a member of the group by virtue of its `primaryGroupId` attribute.|  
 |<xref:System.DirectoryServices.AccountManagement.NoMatchingPrincipalException>|No principal matching the specified parameters was found.|  
-|<xref:System.DirectoryServices.AccountManagement.MultipleMatchesException>|More than one principal matches the specified parameters.  In theory, this should never happen, because <xref:System.DirectoryServices.AccountManagement.PrincipalCollection.Add%2A> throws an exception when there is an attempt to add duplicate principals to the collection.  However, it is possible that another API created the duplicate.|  
-|<xref:System.ArgumentException>|Thrown when `identityType` is an empty string.|  
+|<xref:System.DirectoryServices.AccountManagement.MultipleMatchesException>|More than one principal matches the specified parameters. In theory, this should never happen, because <xref:System.DirectoryServices.AccountManagement.PrincipalCollection.Add%2A> throws an exception when there is an attempt to add duplicate principals to the collection. However, it is possible that another API created the duplicate.|  
+|<xref:System.ArgumentException>|`identityType` is an empty string.|  
   
  ]]></format>
         </remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </Member>
     <Member MemberName="SyncRoot">
@@ -886,12 +948,14 @@
       <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.PrincipalCollection.SyncRoot" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SyncRoot As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ SyncRoot { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SyncRoot : obj" Usage="System.DirectoryServices.AccountManagement.PrincipalCollection.SyncRoot" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.ICollection.SyncRoot</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -902,7 +966,6 @@
         <summary>Returns a synchronization object that can be used to synchronize access to this collection.</summary>
         <value>Returns the <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" /> object itself.</value>
         <remarks>To be added.</remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </Member>
     <Member MemberName="System.Collections.ICollection.CopyTo">
@@ -916,11 +979,12 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Security.SecurityCritical</AttributeName>
         </Attribute>
       </Attributes>
@@ -933,17 +997,16 @@
       </Parameters>
       <Docs>
         <param name="array">The T:System.Array that should be populated with <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> objects.</param>
-        <param name="index">The position in <c>array</c> to which the first <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> object should be copied to.</param>
+        <param name="index">The position in <paramref name="array" /> to which the first <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> object should be copied to.</param>
         <summary>Copies the <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> objects from this <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" /> into the specified array, starting at the specified position index in array.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- `array` must be one-dimensional.  If it is not, an <xref:System.ArgumentException> is thrown.  Further exceptions are thrown if the number of elements to copy is greater than the available space from `index` to the end of `array`, if `array` is `null`, or if `index` is less than 0.  
+ `array` must be one-dimensional. If it is not, an <xref:System.ArgumentException> is thrown. Further exceptions are thrown if the number of elements to copy is greater than the available space from `index` to the end of `array`, if `array` is `null`, or if `index` is less than 0.  
   
  ]]></format>
         </remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </Member>
     <Member MemberName="System.Collections.ICollection.Count">
@@ -951,29 +1014,33 @@
       <MemberSignature Language="ILAsm" Value=".property instance int32 System.Collections.ICollection.Count" />
       <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.PrincipalCollection.System#Collections#ICollection#Count" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property Count As Integer Implements ICollection.Count" />
-      <MemberSignature Language="C++ CLI" Value="property int System.Collections.ICollection.Count { int get(); };" />
+      <MemberSignature Language="C++ CLI" Value="property int System::Collections::ICollection::Count { int get(); };" />
+      <MemberSignature Language="F#" Usage="System.Collections.ICollection.Count" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.ICollection.Count</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Returns the count of Principal objects in this collection.</summary>
-        <value>Returns an <see langword="integer" />.</value>
+        <summary>Returns the count of <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> objects in this collection.</summary>
+        <value>The count of <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> objects in this collection.</value>
         <remarks>To be added.</remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </Member>
     <Member MemberName="System.Collections.ICollection.IsSynchronized">
@@ -981,36 +1048,33 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
       <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.PrincipalCollection.System#Collections#ICollection#IsSynchronized" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property IsSynchronized As Boolean Implements ICollection.IsSynchronized" />
-      <MemberSignature Language="C++ CLI" Value="property bool System.Collections.ICollection.IsSynchronized { bool get(); };" />
+      <MemberSignature Language="C++ CLI" Value="property bool System::Collections::ICollection::IsSynchronized { bool get(); };" />
+      <MemberSignature Language="F#" Usage="System.Collections.ICollection.IsSynchronized" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.ICollection.IsSynchronized</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Always returns <see langword="false" />.  It is up to the application to synchronize access to this collection.</summary>
-        <value>Returns a <see langword="bool" />.</value>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Always returns `false`.  
-  
- ]]></format>
-        </remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
+        <summary>Always returns <see langword="false" />. It is up to the application to synchronize access to this collection.</summary>
+        <value>Always <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="System.Collections.ICollection.SyncRoot">
@@ -1018,29 +1082,33 @@
       <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
       <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.PrincipalCollection.System#Collections#ICollection#SyncRoot" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property SyncRoot As Object Implements ICollection.SyncRoot" />
-      <MemberSignature Language="C++ CLI" Value="property System::Object ^ System.Collections.ICollection.SyncRoot { System::Object ^ get(); };" />
+      <MemberSignature Language="C++ CLI" Value="property System::Object ^ System::Collections::ICollection::SyncRoot { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Usage="System.Collections.ICollection.SyncRoot" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.ICollection.SyncRoot</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Returns a synchronization object that can be used to synchronize access to this collection.  Returns the <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" /> object itself.</summary>
+        <summary>Returns a synchronization object that can be used to synchronize access to this collection. Returns the <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" /> object itself.</summary>
         <value>The <see cref="T:System.DirectoryServices.AccountManagement.PrincipalCollection" /> object.</value>
         <remarks>To be added.</remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </Member>
     <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
@@ -1055,12 +1123,16 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1074,11 +1146,10 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Conceptually, each instance of <xref:System.DirectoryServices.AccountManagement.PrincipalCollection> has a single enumerator associated with it.  Although multiple calls to <xref:System.DirectoryServices.AccountManagement.PrincipalCollection.System%23Collections%23IEnumerable%23GetEnumerator%2A> return distinct <xref:System.Collections.IEnumerator> objects, they share the same internal state.  
+ Conceptually, each instance of <xref:System.DirectoryServices.AccountManagement.PrincipalCollection> has a single enumerator associated with it. Although multiple calls to <xref:System.DirectoryServices.AccountManagement.PrincipalCollection.System%23Collections%23IEnumerable%23GetEnumerator%2A> return distinct <xref:System.Collections.IEnumerator> objects, they share the same internal state.  
   
  ]]></format>
         </remarks>
-        <altmember cref="N:System.DirectoryServices.AccountManagement" />
       </Docs>
     </Member>
   </Members>

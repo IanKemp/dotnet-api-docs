@@ -4,13 +4,17 @@
   <TypeSignature Language="DocId" Value="T:System.Data.SqlClient.SortOrder" />
   <TypeSignature Language="VB.NET" Value="Public Enum SortOrder" />
   <TypeSignature Language="C++ CLI" Value="public enum class SortOrder" />
+  <TypeSignature Language="F#" Value="type SortOrder = " />
   <AssemblyInfo>
     <AssemblyName>System.Data.SqlClient</AssemblyName>
     <AssemblyVersion>4.1.0.0</AssemblyVersion>
     <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.4.0.0</AssemblyVersion>
+    <AssemblyVersion>4.5.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.0.5.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
@@ -24,6 +28,7 @@
   <Docs>
     <summary>Specifies how rows of data are sorted.</summary>
     <remarks>To be added.</remarks>
+    <related type="Article" href="~/docs/framework/data/adonet/ado-net-overview.md">ADO.NET Overview</related>
   </Docs>
   <Members>
     <Member MemberName="Ascending">
@@ -32,14 +37,18 @@
       <MemberSignature Language="DocId" Value="F:System.Data.SqlClient.SortOrder.Ascending" />
       <MemberSignature Language="VB.NET" Value="Ascending" />
       <MemberSignature Language="C++ CLI" Value="Ascending" />
+      <MemberSignature Language="F#" Value="Ascending = 0" Usage="System.Data.SqlClient.SortOrder.Ascending" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -53,6 +62,7 @@
       <MemberValue>0</MemberValue>
       <Docs>
         <summary>Rows are sorted in ascending order.</summary>
+        <related type="Article" href="~/docs/framework/data/adonet/ado-net-overview.md">ADO.NET Overview</related>
       </Docs>
     </Member>
     <Member MemberName="Descending">
@@ -61,14 +71,18 @@
       <MemberSignature Language="DocId" Value="F:System.Data.SqlClient.SortOrder.Descending" />
       <MemberSignature Language="VB.NET" Value="Descending" />
       <MemberSignature Language="C++ CLI" Value="Descending" />
+      <MemberSignature Language="F#" Value="Descending = 1" Usage="System.Data.SqlClient.SortOrder.Descending" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -82,6 +96,7 @@
       <MemberValue>1</MemberValue>
       <Docs>
         <summary>Rows are sorted in descending order.</summary>
+        <related type="Article" href="~/docs/framework/data/adonet/ado-net-overview.md">ADO.NET Overview</related>
       </Docs>
     </Member>
     <Member MemberName="Unspecified">
@@ -90,14 +105,18 @@
       <MemberSignature Language="DocId" Value="F:System.Data.SqlClient.SortOrder.Unspecified" />
       <MemberSignature Language="VB.NET" Value="Unspecified" />
       <MemberSignature Language="C++ CLI" Value="Unspecified" />
+      <MemberSignature Language="F#" Value="Unspecified = -1" Usage="System.Data.SqlClient.SortOrder.Unspecified" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.SqlClient</AssemblyName>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.4.0.0</AssemblyVersion>
+        <AssemblyVersion>4.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -111,6 +130,7 @@
       <MemberValue>-1</MemberValue>
       <Docs>
         <summary>The default. No sort order is specified.</summary>
+        <related type="Article" href="~/docs/framework/data/adonet/ado-net-overview.md">ADO.NET Overview</related>
       </Docs>
     </Member>
   </Members>

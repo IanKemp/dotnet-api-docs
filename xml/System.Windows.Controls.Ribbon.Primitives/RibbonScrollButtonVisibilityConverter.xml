@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Ribbon.Primitives.RibbonScrollButtonVisibilityConverter" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class RibbonScrollButtonVisibilityConverter&#xA;Implements IMultiValueConverter" />
   <TypeSignature Language="C++ CLI" Value="public ref class RibbonScrollButtonVisibilityConverter sealed : System::Windows::Data::IMultiValueConverter" />
+  <TypeSignature Language="F#" Value="type RibbonScrollButtonVisibilityConverter = class&#xA;    interface IMultiValueConverter" />
   <AssemblyInfo>
     <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -53,6 +54,7 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Primitives.RibbonScrollButtonVisibilityConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)" />
       <MemberSignature Language="VB.NET" Value="Public Function Convert (values As Object(), targetType As Type, parameter As Object, culture As CultureInfo) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Object ^ Convert(cli::array &lt;System::Object ^&gt; ^ values, Type ^ targetType, System::Object ^ parameter, System::Globalization::CultureInfo ^ culture);" />
+      <MemberSignature Language="F#" Value="abstract member Convert : obj[] * Type * obj * System.Globalization.CultureInfo -&gt; obj&#xA;override this.Convert : obj[] * Type * obj * System.Globalization.CultureInfo -&gt; obj" Usage="ribbonScrollButtonVisibilityConverter.Convert (values, targetType, parameter, culture)" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Windows.Data.IMultiValueConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)</InterfaceMember>
@@ -81,7 +83,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The three <xref:System.Double> values that represent the scroll bar position are the <xref:System.Windows.Controls.Ribbon.Primitives.RibbonTabsPanel.HorizontalOffset%2A>, <xref:System.Windows.Controls.Ribbon.Primitives.RibbonTabsPanel.ExtentWidth%2A>, and <xref:System.Windows.Controls.Ribbon.Primitives.RibbonTabsPanel.ViewportWidth%2A> property values of the <xref:System.Windows.Controls.Ribbon.Primitives.RibbonTabsPanel> or <xref:System.Windows.Controls.Ribbon.Primitives.RibbonTabHeadersPanel>. These properties contain values from the panel’s internal <xref:System.Windows.Controls.ScrollViewer>.  
+ The three <xref:System.Double> values that represent the scroll bar position are the <xref:System.Windows.Controls.Ribbon.Primitives.RibbonTabsPanel.HorizontalOffset%2A>, <xref:System.Windows.Controls.Ribbon.Primitives.RibbonTabsPanel.ExtentWidth%2A>, and <xref:System.Windows.Controls.Ribbon.Primitives.RibbonTabsPanel.ViewportWidth%2A> property values of the <xref:System.Windows.Controls.Ribbon.Primitives.RibbonTabsPanel> or <xref:System.Windows.Controls.Ribbon.Primitives.RibbonTabHeadersPanel>. These properties contain values from the panel's internal <xref:System.Windows.Controls.ScrollViewer>.  
   
  The `parameter` value represents the desired percentage that the ribbon is scrolled to the right before the scroll button is hidden. By default, the left scroll button passes 0 as the parameter, and it is hidden when the ribbon is scrolled 0 percent to the right. The right scroll button passes 100 as the parameter, and it is hidden when the ribbon is scrolled 100 percent to the right.  
   
@@ -97,6 +99,7 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Primitives.RibbonScrollButtonVisibilityConverter.ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.CultureInfo)" />
       <MemberSignature Language="VB.NET" Value="Public Function ConvertBack (value As Object, targetTypes As Type(), parameter As Object, culture As CultureInfo) As Object()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual cli::array &lt;System::Object ^&gt; ^ ConvertBack(System::Object ^ value, cli::array &lt;Type ^&gt; ^ targetTypes, System::Object ^ parameter, System::Globalization::CultureInfo ^ culture);" />
+      <MemberSignature Language="F#" Value="abstract member ConvertBack : obj * Type[] * obj * System.Globalization.CultureInfo -&gt; obj[]&#xA;override this.ConvertBack : obj * Type[] * obj * System.Globalization.CultureInfo -&gt; obj[]" Usage="ribbonScrollButtonVisibilityConverter.ConvertBack (value, targetTypes, parameter, culture)" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Windows.Data.IMultiValueConverter.ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.CultureInfo)</InterfaceMember>

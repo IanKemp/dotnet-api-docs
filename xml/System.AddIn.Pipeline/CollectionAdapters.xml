@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.AddIn.Pipeline.CollectionAdapters" />
   <TypeSignature Language="VB.NET" Value="Public Class CollectionAdapters" />
   <TypeSignature Language="C++ CLI" Value="public ref class CollectionAdapters abstract sealed" />
+  <TypeSignature Language="F#" Value="type CollectionAdapters = class" />
   <AssemblyInfo>
     <AssemblyName>System.AddIn</AssemblyName>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -20,10 +22,11 @@
 ## Remarks  
  This class provides methods that enable an <xref:System.Collections.Generic.IList%601> collection to be converted to a <xref:System.AddIn.Contract.IListContract%601> collection. The <xref:System.AddIn.Contract.IListContract%601> collection is passed across the isolation boundary and converted back to an <xref:System.Collections.Generic.IList%601> collection that the add-in or the host application can use.  
   
- Objects in collections must be remotable. For more information about the object types that you can pass, see [Contracts, Views, and Adapters](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c).  
+ Objects in collections must be remotable. For more information about the object types that you can pass, see [Contracts, Views, and Adapters](https://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c).  
   
  ]]></format>
     </remarks>
+    <related type="Article" href="https://msdn.microsoft.com/library/8dd45b02-7218-40f9-857d-40d7b98b850b">Add-Ins and Extensibility</related>
   </Docs>
   <Members>
     <Member MemberName="ToIList&lt;T&gt;">
@@ -32,9 +35,11 @@
       <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.CollectionAdapters.ToIList``1(System.AddIn.Contract.IListContract{``0})" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function ToIList(Of T) (collection As IListContract(Of T)) As IList(Of T)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; static System::Collections::Generic::IList&lt;T&gt; ^ ToIList(System::AddIn::Contract::IListContract&lt;T&gt; ^ collection);" />
+      <MemberSignature Language="F#" Value="static member ToIList : System.AddIn.Contract.IListContract&lt;'T&gt; -&gt; System.Collections.Generic.IList&lt;'T&gt;" Usage="System.AddIn.Pipeline.CollectionAdapters.ToIList collection" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -47,7 +52,7 @@
         <Parameter Name="collection" Type="System.AddIn.Contract.IListContract&lt;T&gt;" />
       </Parameters>
       <Docs>
-        <typeparam name="T">The type of objects that are contained in the list. <c>T</c> must be serializable.</typeparam>
+        <typeparam name="T">The type of objects that are contained in the list. <paramref name="T" /> must be serializable.</typeparam>
         <param name="collection">The collection from the other side of the pipeline.</param>
         <summary>Converts the specified <see cref="T:System.AddIn.Contract.IListContract`1" /> collection to an <see cref="T:System.Collections.Generic.IList`1" /> collection.</summary>
         <returns>The converted collection.</returns>
@@ -62,7 +67,7 @@
    
   
 ## Examples  
- The following example implements a host-side adapter pipeline segment as described [Walkthrough: Passing Collections Between Hosts and Add-Ins](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5). The example adapts the custom `ProcessBooks` method by taking the <xref:System.AddIn.Contract.IListContract%601> collection passed from the add-in and converting it to an <xref:System.Collections.Generic.IList%601> collection, which the host application can then use.  
+ The following example implements a host-side adapter pipeline segment as described [Walkthrough: Passing Collections Between Hosts and Add-Ins](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5). The example adapts the custom `ProcessBooks` method by taking the <xref:System.AddIn.Contract.IListContract%601> collection passed from the add-in and converting it to an <xref:System.Collections.Generic.IList%601> collection, which the host application can then use.  
   
  [!code-csharp[AddInCollectionPipelineAddInSideAdapter#3](~/samples/snippets/csharp/VS_Snippets_CLR/AddInCollectionPipelineAddInSideAdapter/cs/LibraryManagerViewToContractAddInAdapter.cs#3)]
  [!code-vb[AddInCollectionPipelineAddInSideAdapter#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/AddInCollectionPipelineAddInSideAdapter/vb/LibraryManagerViewToContractAddInAdapter.vb#3)]  
@@ -77,9 +82,11 @@
       <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.CollectionAdapters.ToIList``2(System.AddIn.Contract.IListContract{``0},System.Converter{``0,``1},System.Converter{``1,``0})" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function ToIList(Of TContract, TView) (collection As IListContract(Of TContract), contractViewAdapter As Converter(Of TContract, TView), viewContractAdapter As Converter(Of TView, TContract)) As IList(Of TView)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TContract, typename TView&gt;&#xA; static System::Collections::Generic::IList&lt;TView&gt; ^ ToIList(System::AddIn::Contract::IListContract&lt;TContract&gt; ^ collection, Converter&lt;TContract, TView&gt; ^ contractViewAdapter, Converter&lt;TView, TContract&gt; ^ viewContractAdapter);" />
+      <MemberSignature Language="F#" Value="static member ToIList : System.AddIn.Contract.IListContract&lt;'Contract&gt; * Converter&lt;'Contract, 'View&gt; * Converter&lt;'View, 'Contract&gt; -&gt; System.Collections.Generic.IList&lt;'View&gt;" Usage="System.AddIn.Pipeline.CollectionAdapters.ToIList (collection, contractViewAdapter, viewContractAdapter)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -95,7 +102,7 @@
         <Parameter Name="viewContractAdapter" Type="System.Converter&lt;TView,TContract&gt;" />
       </Parameters>
       <Docs>
-        <typeparam name="TContract">The type that defines the contract for passing objects of type <c>TView</c> across the isolation boundary.</typeparam>
+        <typeparam name="TContract">The type that defines the contract for passing objects of type <paramref name="TView" /> across the isolation boundary.</typeparam>
         <typeparam name="TView">The type that defines the view of the objects in the list.</typeparam>
         <param name="collection">The collection to pass to the other side of the pipeline.</param>
         <param name="contractViewAdapter">A converter that adapts the data from the type defined in the contract to the type expected in the view.</param>
@@ -118,9 +125,11 @@
       <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.CollectionAdapters.ToIListContract``1(System.Collections.Generic.IList{``0})" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function ToIListContract(Of T) (collection As IList(Of T)) As IListContract(Of T)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; static System::AddIn::Contract::IListContract&lt;T&gt; ^ ToIListContract(System::Collections::Generic::IList&lt;T&gt; ^ collection);" />
+      <MemberSignature Language="F#" Value="static member ToIListContract : System.Collections.Generic.IList&lt;'T&gt; -&gt; System.AddIn.Contract.IListContract&lt;'T&gt;" Usage="System.AddIn.Pipeline.CollectionAdapters.ToIListContract collection" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -133,7 +142,7 @@
         <Parameter Name="collection" Type="System.Collections.Generic.IList&lt;T&gt;" />
       </Parameters>
       <Docs>
-        <typeparam name="T">The type of objects that are contained in the list. <c>T</c> must be serializable.</typeparam>
+        <typeparam name="T">The type of objects that are contained in the list. <paramref name="T" /> must be serializable.</typeparam>
         <param name="collection">The collection to convert.</param>
         <summary>Converts a specified <see cref="T:System.Collections.Generic.IList`1" /> collection to an <see cref="T:System.AddIn.Contract.IListContract`1" /> collection.</summary>
         <returns>The converted collection.</returns>
@@ -163,9 +172,11 @@
       <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.CollectionAdapters.ToIListContract``2(System.Collections.Generic.IList{``0},System.Converter{``0,``1},System.Converter{``1,``0})" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function ToIListContract(Of TView, TContract) (collection As IList(Of TView), viewContractAdapter As Converter(Of TView, TContract), contractViewAdapter As Converter(Of TContract, TView)) As IListContract(Of TContract)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TView, typename TContract&gt;&#xA; static System::AddIn::Contract::IListContract&lt;TContract&gt; ^ ToIListContract(System::Collections::Generic::IList&lt;TView&gt; ^ collection, Converter&lt;TView, TContract&gt; ^ viewContractAdapter, Converter&lt;TContract, TView&gt; ^ contractViewAdapter);" />
+      <MemberSignature Language="F#" Value="static member ToIListContract : System.Collections.Generic.IList&lt;'View&gt; * Converter&lt;'View, 'Contract&gt; * Converter&lt;'Contract, 'View&gt; -&gt; System.AddIn.Contract.IListContract&lt;'Contract&gt;" Usage="System.AddIn.Pipeline.CollectionAdapters.ToIListContract (collection, viewContractAdapter, contractViewAdapter)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -182,7 +193,7 @@
       </Parameters>
       <Docs>
         <typeparam name="TView">The type that defines the view of the objects in the list.</typeparam>
-        <typeparam name="TContract">The type that defines the contract for passing objects of type <c>TView</c> across the isolation boundary.</typeparam>
+        <typeparam name="TContract">The type that defines the contract for passing objects of type <paramref name="TView" /> across the isolation boundary.</typeparam>
         <param name="collection">The collection to convert.</param>
         <param name="viewContractAdapter">A converter that adapts the data from the type defined in the view to the type expected by the contract.</param>
         <param name="contractViewAdapter">A converter that adapts the data from the type defined in the contract to the type expected in the view.</param>

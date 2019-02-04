@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Web.UI.UpdatePanelControlTrigger" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class UpdatePanelControlTrigger&#xA;Inherits UpdatePanelTrigger" />
   <TypeSignature Language="C++ CLI" Value="public ref class UpdatePanelControlTrigger abstract : System::Web::UI::UpdatePanelTrigger" />
+  <TypeSignature Language="F#" Value="type UpdatePanelControlTrigger = class&#xA;    inherit UpdatePanelTrigger" />
   <AssemblyInfo>
     <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -26,8 +28,14 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.Web.UI.UpdatePanelControlTrigger" /> class.</summary>
@@ -40,9 +48,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.UpdatePanelControlTrigger.ControlID" />
       <MemberSignature Language="VB.NET" Value="Public Property ControlID As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ControlID { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ControlID : string with get, set" Usage="System.Web.UI.UpdatePanelControlTrigger.ControlID" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -54,6 +64,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.IDReferenceProperty</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -81,9 +94,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdatePanelControlTrigger.FindTargetControl(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Function FindTargetControl (searchNamingContainers As Boolean) As Control" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; System::Web::UI::Control ^ FindTargetControl(bool searchNamingContainers);" />
+      <MemberSignature Language="F#" Value="member this.FindTargetControl : bool -&gt; System.Web.UI.Control" Usage="updatePanelControlTrigger.FindTargetControl searchNamingContainers" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -99,7 +114,7 @@
         <remarks>To be added.</remarks>
         <exception cref="T:System.InvalidOperationException">The <see cref="P:System.Web.UI.UpdatePanelControlTrigger.ControlID" /> property of the <see cref="T:System.Web.UI.UpdatePanelControlTrigger" /> is <see langword="null" /> or empty.  
   
- \- or -  
+-or-
   
  The control with the specified  <see cref="P:System.Web.UI.UpdatePanelControlTrigger.ControlID" /> was not found.</exception>
       </Docs>

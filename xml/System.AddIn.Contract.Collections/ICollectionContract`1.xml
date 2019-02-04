@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.AddIn.Contract.Collections.ICollectionContract`1" />
   <TypeSignature Language="VB.NET" Value="Public Interface ICollectionContract(Of C)&#xA;Implements IEnumerableContract(Of C)" />
   <TypeSignature Language="C++ CLI" Value="generic &lt;typename C&gt;&#xA; where C : IContractpublic interface class ICollectionContract : System::AddIn::Contract::Collections::IEnumerableContract&lt;C&gt;" />
+  <TypeSignature Language="F#" Value="type ICollectionContract&lt;'C (requires 'C :&gt; IContract)&gt; = interface&#xA;    interface IEnumerableContract&lt;'C (requires 'C :&gt; IContract)&gt;&#xA;    interface IContract" />
   <AssemblyInfo>
     <AssemblyName>System.AddIn.Contract</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <TypeParameters>
@@ -19,9 +21,12 @@
     <Interface>
       <InterfaceName>System.AddIn.Contract.Collections.IEnumerableContract&lt;C&gt;</InterfaceName>
     </Interface>
+    <Interface>
+      <InterfaceName>System.AddIn.Contract.IContract</InterfaceName>
+    </Interface>
   </Interfaces>
   <Docs>
-    <typeparam name="C">The type of elements in the collection. <c>C</c> must implement the <see cref="T:System.AddIn.Contract.IContract" /> interface.</typeparam>
+    <typeparam name="C">The type of elements in the collection. <paramref name="C" /> must implement the <see cref="T:System.AddIn.Contract.IContract" /> interface.</typeparam>
     <summary>Represents a generic collection of <see cref="T:System.AddIn.Contract.IContract" /> objects.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
@@ -39,9 +44,11 @@
       <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.ICollectionContract`1.Add(`0)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Add (item As C)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Add(C item);" />
+      <MemberSignature Language="F#" Value="abstract member Add : 'C -&gt; unit" Usage="iCollectionContract.Add item" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -70,9 +77,11 @@
       <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.ICollectionContract`1.Clear" />
       <MemberSignature Language="VB.NET" Value="Public Sub Clear ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Clear();" />
+      <MemberSignature Language="F#" Value="abstract member Clear : unit -&gt; unit" Usage="iCollectionContract.Clear " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -98,9 +107,11 @@
       <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.ICollectionContract`1.Contains(`0)" />
       <MemberSignature Language="VB.NET" Value="Public Function Contains (item As C) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Contains(C item);" />
+      <MemberSignature Language="F#" Value="abstract member Contains : 'C -&gt; bool" Usage="iCollectionContract.Contains item" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -123,9 +134,11 @@
       <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.ICollectionContract`1.CopyTo(`0[],System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub CopyTo (array As C(), arrayIndex As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void CopyTo(cli::array &lt;C&gt; ^ array, int arrayIndex);" />
+      <MemberSignature Language="F#" Value="abstract member CopyTo : 'C[] * int -&gt; unit" Usage="iCollectionContract.CopyTo (array, arrayIndex)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -137,7 +150,7 @@
       </Parameters>
       <Docs>
         <param name="array">The one-dimensional array that is the destination of the elements copied from the <see cref="T:System.AddIn.Contract.Collections.ICollectionContract`1" />.</param>
-        <param name="arrayIndex">The zero-based index in <c>array</c> at which copying begins.</param>
+        <param name="arrayIndex">The zero-based index in <paramref name="array" /> at which copying begins.</param>
         <summary>Copies the entire <see cref="T:System.AddIn.Contract.Collections.ICollectionContract`1" /> to a compatible one-dimensional array, starting at the specified index of the target array.</summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -162,9 +175,11 @@
       <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.ICollectionContract`1.GetCount" />
       <MemberSignature Language="VB.NET" Value="Public Function GetCount () As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; int GetCount();" />
+      <MemberSignature Language="F#" Value="abstract member GetCount : unit -&gt; int" Usage="iCollectionContract.GetCount " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -183,9 +198,11 @@
       <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.ICollectionContract`1.GetIsReadOnly" />
       <MemberSignature Language="VB.NET" Value="Public Function GetIsReadOnly () As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool GetIsReadOnly();" />
+      <MemberSignature Language="F#" Value="abstract member GetIsReadOnly : unit -&gt; bool" Usage="iCollectionContract.GetIsReadOnly " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -205,9 +222,11 @@
       <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Collections.ICollectionContract`1.Remove(`0)" />
       <MemberSignature Language="VB.NET" Value="Public Function Remove (item As C) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Remove(C item);" />
+      <MemberSignature Language="F#" Value="abstract member Remove : 'C -&gt; bool" Usage="iCollectionContract.Remove item" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

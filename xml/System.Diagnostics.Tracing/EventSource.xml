@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Diagnostics.Tracing.EventSource" />
   <TypeSignature Language="VB.NET" Value="Public Class EventSource&#xA;Implements IDisposable" />
   <TypeSignature Language="C++ CLI" Value="public ref class EventSource : IDisposable" />
+  <TypeSignature Language="F#" Value="type EventSource = class&#xA;    interface IDisposable" />
   <AssemblyInfo>
     <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -119,6 +120,7 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.#ctor(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (throwOnEventWriteErrors As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; EventSource(bool throwOnEventWriteErrors);" />
+      <MemberSignature Language="F#" Value="new System.Diagnostics.Tracing.EventSource : bool -&gt; System.Diagnostics.Tracing.EventSource" Usage="new System.Diagnostics.Tracing.EventSource throwOnEventWriteErrors" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -154,6 +156,7 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.#ctor(System.Diagnostics.Tracing.EventSourceSettings)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (settings As EventSourceSettings)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; EventSource(System::Diagnostics::Tracing::EventSourceSettings settings);" />
+      <MemberSignature Language="F#" Value="new System.Diagnostics.Tracing.EventSource : System.Diagnostics.Tracing.EventSourceSettings -&gt; System.Diagnostics.Tracing.EventSource" Usage="new System.Diagnostics.Tracing.EventSource settings" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -193,6 +196,7 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (eventSourceName As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; EventSource(System::String ^ eventSourceName);" />
+      <MemberSignature Language="F#" Value="new System.Diagnostics.Tracing.EventSource : string -&gt; System.Diagnostics.Tracing.EventSource" Usage="new System.Diagnostics.Tracing.EventSource eventSourceName" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -227,6 +231,7 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.#ctor(System.Diagnostics.Tracing.EventSourceSettings,System.String[])" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (settings As EventSourceSettings, ParamArray traits As String())" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; EventSource(System::Diagnostics::Tracing::EventSourceSettings settings, ... cli::array &lt;System::String ^&gt; ^ traits);" />
+      <MemberSignature Language="F#" Value="new System.Diagnostics.Tracing.EventSource : System.Diagnostics.Tracing.EventSourceSettings * string[] -&gt; System.Diagnostics.Tracing.EventSource" Usage="new System.Diagnostics.Tracing.EventSource (settings, traits)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -279,6 +284,7 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.#ctor(System.String,System.Diagnostics.Tracing.EventSourceSettings)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (eventSourceName As String, config As EventSourceSettings)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; EventSource(System::String ^ eventSourceName, System::Diagnostics::Tracing::EventSourceSettings config);" />
+      <MemberSignature Language="F#" Value="new System.Diagnostics.Tracing.EventSource : string * System.Diagnostics.Tracing.EventSourceSettings -&gt; System.Diagnostics.Tracing.EventSource" Usage="new System.Diagnostics.Tracing.EventSource (eventSourceName, config)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -322,6 +328,7 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.#ctor(System.String,System.Diagnostics.Tracing.EventSourceSettings,System.String[])" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (eventSourceName As String, config As EventSourceSettings, ParamArray traits As String())" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; EventSource(System::String ^ eventSourceName, System::Diagnostics::Tracing::EventSourceSettings config, ... cli::array &lt;System::String ^&gt; ^ traits);" />
+      <MemberSignature Language="F#" Value="new System.Diagnostics.Tracing.EventSource : string * System.Diagnostics.Tracing.EventSourceSettings * string[] -&gt; System.Diagnostics.Tracing.EventSource" Usage="new System.Diagnostics.Tracing.EventSource (eventSourceName, config, traits)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -378,6 +385,7 @@
       <MemberSignature Language="DocId" Value="P:System.Diagnostics.Tracing.EventSource.ConstructionException" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConstructionException As Exception" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Exception ^ ConstructionException { Exception ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ConstructionException : Exception" Usage="System.Diagnostics.Tracing.EventSource.ConstructionException" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -400,9 +408,7 @@
         <ReturnType>System.Exception</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>[Supported in the .NET Framework 4.5.1 and later versions]  
-  
- Gets any exception that was thrown during the construction of the event source.</summary>
+        <summary>Gets any exception that was thrown during the construction of the event source.</summary>
         <value>The exception that was thrown during the construction of the event source, or <see langword="null" /> if no exception was thrown.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -420,6 +426,7 @@
       <MemberSignature Language="DocId" Value="P:System.Diagnostics.Tracing.EventSource.CurrentThreadActivityId" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property CurrentThreadActivityId As Guid" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Guid CurrentThreadActivityId { Guid get(); };" />
+      <MemberSignature Language="F#" Value="member this.CurrentThreadActivityId : Guid" Usage="System.Diagnostics.Tracing.EventSource.CurrentThreadActivityId" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -438,13 +445,19 @@
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netcore-1.0;netcore-1.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.5;netstandard-1.6;netframework-4.8;netcore-2.0">
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netstandard-1.2;netstandard-1.3;netstandard-1.4">
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Guid</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>[Supported in the .NET Framework 4.5.1 and later versions]  
-  
- Gets the activity ID of the current thread.</summary>
+        <summary>Gets the activity ID of the current thread.</summary>
         <value>The activity ID of the current thread.</value>
         <remarks>To be added.</remarks>
         <altmember cref="M:System.Diagnostics.Tracing.EventSource.SetCurrentThreadActivityId(System.Guid)" />
@@ -469,6 +482,7 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.Dispose" />
       <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Dispose();" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="eventSource.Dispose " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
@@ -518,6 +532,7 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.Dispose(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void Dispose(bool disposing);" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="eventSource.Dispose disposing" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -571,6 +586,7 @@
       <MemberSignature Language="DocId" Value="E:System.Diagnostics.Tracing.EventSource.EventCommandExecuted" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event EventCommandExecuted As EventHandler(Of EventCommandEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Diagnostics::Tracing::EventCommandEventArgs ^&gt; ^ EventCommandExecuted;" />
+      <MemberSignature Language="F#" Value="member this.EventCommandExecuted : EventHandler&lt;System.Diagnostics.Tracing.EventCommandEventArgs&gt; " Usage="member this.EventCommandExecuted : System.EventHandler&lt;System.Diagnostics.Tracing.EventCommandEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -587,6 +603,11 @@
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netstandard-2.0">
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.EventHandler&lt;System.Diagnostics.Tracing.EventCommandEventArgs&gt;</ReturnType>
       </ReturnValue>
@@ -601,6 +622,7 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.Finalize" />
       <MemberSignature Language="VB.NET" Value="Finalize ()" />
       <MemberSignature Language="C++ CLI" Value="!EventSource ()" />
+      <MemberSignature Language="F#" Value="override this.Finalize : unit -&gt; unit" Usage="eventSource.Finalize " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -648,6 +670,7 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.GenerateManifest(System.Type,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GenerateManifest (eventSourceType As Type, assemblyPathToIncludeInManifest As String) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ GenerateManifest(Type ^ eventSourceType, System::String ^ assemblyPathToIncludeInManifest);" />
+      <MemberSignature Language="F#" Value="static member GenerateManifest : Type * string -&gt; string" Usage="System.Diagnostics.Tracing.EventSource.GenerateManifest (eventSourceType, assemblyPathToIncludeInManifest)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -676,14 +699,14 @@
       </Parameters>
       <Docs>
         <param name="eventSourceType">The type of the event source.</param>
-        <param name="assemblyPathToIncludeInManifest">The path to the assembly file (.dll) to include in the [provider](http://msdn.microsoft.com/library/windows/desktop/aa384022\(v=vs.85\).aspx) element of the manifest.</param>
+        <param name="assemblyPathToIncludeInManifest">The path to the assembly file (.dll) to include in the [provider](https://msdn.microsoft.com/library/windows/desktop/aa384022\(v=vs.85\).aspx) element of the manifest.</param>
         <summary>Returns a string of the XML manifest that is associated with the current event source.</summary>
         <returns>The XML data string.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The information about the XML schema for the event manifest, see [Event Manifest Schema](http://go.microsoft.com/fwlink/?LinkId=228077) in the MSDN Library.  
+ The information about the XML schema for the event manifest, see [Event Manifest Schema](https://go.microsoft.com/fwlink/?LinkId=228077) in the MSDN Library.  
   
  ]]></format>
         </remarks>
@@ -695,6 +718,7 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.GenerateManifest(System.Type,System.String,System.Diagnostics.Tracing.EventManifestOptions)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GenerateManifest (eventSourceType As Type, assemblyPathToIncludeInManifest As String, flags As EventManifestOptions) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ GenerateManifest(Type ^ eventSourceType, System::String ^ assemblyPathToIncludeInManifest, System::Diagnostics::Tracing::EventManifestOptions flags);" />
+      <MemberSignature Language="F#" Value="static member GenerateManifest : Type * string * System.Diagnostics.Tracing.EventManifestOptions -&gt; string" Usage="System.Diagnostics.Tracing.EventSource.GenerateManifest (eventSourceType, assemblyPathToIncludeInManifest, flags)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -722,7 +746,7 @@
       </Parameters>
       <Docs>
         <param name="eventSourceType">The type of the event source.</param>
-        <param name="assemblyPathToIncludeInManifest">The path to the assembly file (.dll) file to include in the [provider](http://msdn.microsoft.com/library/windows/desktop/aa384022\(v=vs.85\).aspx) element of the manifest.</param>
+        <param name="assemblyPathToIncludeInManifest">The path to the assembly file (.dll) file to include in the [provider](https://msdn.microsoft.com/library/windows/desktop/aa384022\(v=vs.85\).aspx) element of the manifest.</param>
         <param name="flags">A bitwise combination of the enumeration values that specify how the manifest is generated.</param>
         <summary>Returns a string of the XML manifest that is associated with the current event source.</summary>
         <returns>The XML data string or <see langword="null" />.</returns>
@@ -742,6 +766,7 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.GetGuid(System.Type)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetGuid (eventSourceType As Type) As Guid" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static Guid GetGuid(Type ^ eventSourceType);" />
+      <MemberSignature Language="F#" Value="static member GetGuid : Type -&gt; Guid" Usage="System.Diagnostics.Tracing.EventSource.GetGuid eventSourceType" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -780,6 +805,7 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.GetName(System.Type)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetName (eventSourceType As Type) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ GetName(Type ^ eventSourceType);" />
+      <MemberSignature Language="F#" Value="static member GetName : Type -&gt; string" Usage="System.Diagnostics.Tracing.EventSource.GetName eventSourceType" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -818,6 +844,7 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.GetSources" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetSources () As IEnumerable(Of EventSource)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Collections::Generic::IEnumerable&lt;System::Diagnostics::Tracing::EventSource ^&gt; ^ GetSources();" />
+      <MemberSignature Language="F#" Value="static member GetSources : unit -&gt; seq&lt;System.Diagnostics.Tracing.EventSource&gt;" Usage="System.Diagnostics.Tracing.EventSource.GetSources " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -853,6 +880,7 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.GetTrait(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetTrait (key As String) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ GetTrait(System::String ^ key);" />
+      <MemberSignature Language="F#" Value="member this.GetTrait : string -&gt; string" Usage="eventSource.GetTrait key" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -896,6 +924,7 @@
       <MemberSignature Language="DocId" Value="P:System.Diagnostics.Tracing.EventSource.Guid" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Guid As Guid" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Guid Guid { Guid get(); };" />
+      <MemberSignature Language="F#" Value="member this.Guid : Guid" Usage="System.Diagnostics.Tracing.EventSource.Guid" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -943,6 +972,7 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.IsEnabled" />
       <MemberSignature Language="VB.NET" Value="Public Function IsEnabled () As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool IsEnabled();" />
+      <MemberSignature Language="F#" Value="member this.IsEnabled : unit -&gt; bool" Usage="eventSource.IsEnabled " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -962,6 +992,11 @@
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -979,6 +1014,7 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.IsEnabled(System.Diagnostics.Tracing.EventLevel,System.Diagnostics.Tracing.EventKeywords)" />
       <MemberSignature Language="VB.NET" Value="Public Function IsEnabled (level As EventLevel, keywords As EventKeywords) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool IsEnabled(System::Diagnostics::Tracing::EventLevel level, System::Diagnostics::Tracing::EventKeywords keywords);" />
+      <MemberSignature Language="F#" Value="member this.IsEnabled : System.Diagnostics.Tracing.EventLevel * System.Diagnostics.Tracing.EventKeywords -&gt; bool" Usage="eventSource.IsEnabled (level, keywords)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -1027,6 +1063,7 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.IsEnabled(System.Diagnostics.Tracing.EventLevel,System.Diagnostics.Tracing.EventKeywords,System.Diagnostics.Tracing.EventChannel)" />
       <MemberSignature Language="VB.NET" Value="Public Function IsEnabled (level As EventLevel, keywords As EventKeywords, channel As EventChannel) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool IsEnabled(System::Diagnostics::Tracing::EventLevel level, System::Diagnostics::Tracing::EventKeywords keywords, System::Diagnostics::Tracing::EventChannel channel);" />
+      <MemberSignature Language="F#" Value="member this.IsEnabled : System.Diagnostics.Tracing.EventLevel * System.Diagnostics.Tracing.EventKeywords * System.Diagnostics.Tracing.EventChannel -&gt; bool" Usage="eventSource.IsEnabled (level, keywords, channel)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -1053,14 +1090,14 @@
         <Parameter Name="channel" Type="System.Diagnostics.Tracing.EventChannel" />
       </Parameters>
       <Docs>
-        <param name="level">The event level to check. An event source will be considered enabled when its level is greater than or equal to <c>level</c>.</param>
+        <param name="level">The event level to check. An event source will be considered enabled when its level is greater than or equal to <paramref name="level" />.</param>
         <param name="keywords">The event keywords to check.</param>
         <param name="channel">The event channel to check.</param>
         <summary>Determines whether the current event source is enabled for events with the specified level, keywords and channel.</summary>
         <returns>
           <see langword="true" /> if the event source is enabled for the specified event level, keywords and channel; otherwise, <see langword="false" />.  
   
- The result of this method is only an approximation of whether a particular event is active.  Use it to avoid expensive computation for logging when logging is disabled.   Event sources may have additional filtering that determines their activity..</returns>
+ The result of this method is only an approximation of whether a particular event is active.  Use it to avoid expensive computation for logging when logging is disabled. Event sources may have additional filtering that determines their activity.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1077,6 +1114,7 @@
       <MemberSignature Language="DocId" Value="P:System.Diagnostics.Tracing.EventSource.Name" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="System.Diagnostics.Tracing.EventSource.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -1111,6 +1149,7 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.OnEventCommand(System.Diagnostics.Tracing.EventCommandEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnEventCommand (command As EventCommandEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnEventCommand(System::Diagnostics::Tracing::EventCommandEventArgs ^ command);" />
+      <MemberSignature Language="F#" Value="abstract member OnEventCommand : System.Diagnostics.Tracing.EventCommandEventArgs -&gt; unit&#xA;override this.OnEventCommand : System.Diagnostics.Tracing.EventCommandEventArgs -&gt; unit" Usage="eventSource.OnEventCommand command" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -1147,6 +1186,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SendCommand(class System.Diagnostics.Tracing.EventSource eventSource, valuetype System.Diagnostics.Tracing.EventCommand command, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; commandArguments) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.SendCommand(System.Diagnostics.Tracing.EventSource,System.Diagnostics.Tracing.EventCommand,System.Collections.Generic.IDictionary{System.String,System.String})" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void SendCommand(System::Diagnostics::Tracing::EventSource ^ eventSource, System::Diagnostics::Tracing::EventCommand command, System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ commandArguments);" />
+      <MemberSignature Language="F#" Value="static member SendCommand : System.Diagnostics.Tracing.EventSource * System.Diagnostics.Tracing.EventCommand * System.Collections.Generic.IDictionary&lt;string, string&gt; -&gt; unit" Usage="System.Diagnostics.Tracing.EventSource.SendCommand (eventSource, command, commandArguments)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -1198,9 +1238,7 @@
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Docs>
-        <summary>[Supported in the .NET Framework 4.5.1 and later versions]  
-  
- Sets the activity ID on the current thread.</summary>
+        <summary>Sets the activity ID on the current thread.</summary>
       </Docs>
     </MemberGroup>
     <Member MemberName="SetCurrentThreadActivityId">
@@ -1209,6 +1247,7 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.SetCurrentThreadActivityId(System.Guid)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub SetCurrentThreadActivityId (activityId As Guid)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void SetCurrentThreadActivityId(Guid activityId);" />
+      <MemberSignature Language="F#" Value="static member SetCurrentThreadActivityId : Guid -&gt; unit" Usage="System.Diagnostics.Tracing.EventSource.SetCurrentThreadActivityId activityId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -1227,6 +1266,11 @@
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -1235,9 +1279,7 @@
       </Parameters>
       <Docs>
         <param name="activityId">The current thread's new activity ID, or <see cref="F:System.Guid.Empty" /> to indicate that work on the current thread is not associated with any activity.</param>
-        <summary>[Supported in the .NET Framework 4.5.1 and later versions]  
-  
- Sets the activity ID on the current thread.</summary>
+        <summary>Sets the activity ID on the current thread.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1256,6 +1298,7 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.SetCurrentThreadActivityId(System.Guid,System.Guid@)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub SetCurrentThreadActivityId (activityId As Guid, ByRef oldActivityThatWillContinue As Guid)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void SetCurrentThreadActivityId(Guid activityId, [Runtime::InteropServices::Out] Guid % oldActivityThatWillContinue);" />
+      <MemberSignature Language="F#" Value="static member SetCurrentThreadActivityId : Guid *  -&gt; unit" Usage="System.Diagnostics.Tracing.EventSource.SetCurrentThreadActivityId (activityId, oldActivityThatWillContinue)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -1274,19 +1317,22 @@
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="activityId" Type="System.Guid" />
-        <Parameter Name="oldActivityThatWillContinue" Type="System.Guid&amp;" RefType="out" />
+        <Parameter Name="oldActivityThatWillContinue" Type="System.Guid" RefType="out" />
       </Parameters>
       <Docs>
         <param name="activityId">The current thread's new activity ID, or <see cref="F:System.Guid.Empty" /> to indicate that work on the current thread is not associated with any activity.</param>
         <param name="oldActivityThatWillContinue">When this method returns, contains the previous activity ID on the current thread.</param>
-        <summary>[Supported in the .NET Framework 4.5.1 and later versions]  
-  
- Sets the activity ID on the current thread, and returns the previous activity ID.</summary>
+        <summary>Sets the activity ID on the current thread, and returns the previous activity ID.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1303,6 +1349,7 @@
       <MemberSignature Language="DocId" Value="P:System.Diagnostics.Tracing.EventSource.Settings" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Settings As EventSourceSettings" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Diagnostics::Tracing::EventSourceSettings Settings { System::Diagnostics::Tracing::EventSourceSettings get(); };" />
+      <MemberSignature Language="F#" Value="member this.Settings : System.Diagnostics.Tracing.EventSourceSettings" Usage="System.Diagnostics.Tracing.EventSource.Settings" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -1335,6 +1382,7 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="eventSource.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -1380,6 +1428,7 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.Write(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Write (eventName As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Write(System::String ^ eventName);" />
+      <MemberSignature Language="F#" Value="member this.Write : string -&gt; unit" Usage="eventSource.Write eventName" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -1397,6 +1446,11 @@
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -1417,6 +1471,7 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.Write(System.String,System.Diagnostics.Tracing.EventSourceOptions)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Write (eventName As String, options As EventSourceOptions)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Write(System::String ^ eventName, System::Diagnostics::Tracing::EventSourceOptions options);" />
+      <MemberSignature Language="F#" Value="member this.Write : string * System.Diagnostics.Tracing.EventSourceOptions -&gt; unit" Usage="eventSource.Write (eventName, options)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -1434,6 +1489,11 @@
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -1456,6 +1516,7 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.Write``1(System.String,``0)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Write(Of T) (eventName As String, data As T)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; void Write(System::String ^ eventName, T data);" />
+      <MemberSignature Language="F#" Value="member this.Write : string * 'T -&gt; unit" Usage="eventSource.Write (eventName, data)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -1473,6 +1534,11 @@
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -1492,7 +1558,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- If `eventName` is `null`, the event name is automatically derived from the type T’s event data (<xref:System.Diagnostics.Tracing.EventDataAttribute.Name%2A>) or determined based on the name of type `T`. The public instance properties of `data` will be written recursively to create the event fields.  
+ If `eventName` is `null`, the event name is automatically derived from the type T's event data (<xref:System.Diagnostics.Tracing.EventDataAttribute.Name%2A>) or determined based on the name of type `T`. The public instance properties of `data` will be written recursively to create the event fields.  
   
  ]]></format>
         </remarks>
@@ -1504,6 +1570,7 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.Write``1(System.String,System.Diagnostics.Tracing.EventSourceOptions,``0)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Write(Of T) (eventName As String, options As EventSourceOptions, data As T)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; void Write(System::String ^ eventName, System::Diagnostics::Tracing::EventSourceOptions options, T data);" />
+      <MemberSignature Language="F#" Value="member this.Write : string * System.Diagnostics.Tracing.EventSourceOptions * 'T -&gt; unit" Usage="eventSource.Write (eventName, options, data)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -1521,6 +1588,11 @@
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -1542,7 +1614,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- If `eventName` is `null`, the event name is automatically derived from the type T’s event data (<xref:System.Diagnostics.Tracing.EventDataAttribute.Name%2A>) or determined based on the name of type `T`. The public instance properties of `data` will be written recursively to create the event fields.  
+ If `eventName` is `null`, the event name is automatically derived from the type T's event data (<xref:System.Diagnostics.Tracing.EventDataAttribute.Name%2A>) or determined based on the name of type `T`. The public instance properties of `data` will be written recursively to create the event fields.  
   
  ]]></format>
         </remarks>
@@ -1554,6 +1626,7 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.Write``1(System.String,System.Diagnostics.Tracing.EventSourceOptions@,``0@)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Write(Of T) (eventName As String, ByRef options As EventSourceOptions, ByRef data As T)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; void Write(System::String ^ eventName, System::Diagnostics::Tracing::EventSourceOptions % options, T % data);" />
+      <MemberSignature Language="F#" Value="member this.Write : string *  *  -&gt; unit" Usage="eventSource.Write (eventName, options, data)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -1571,6 +1644,11 @@
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -1579,8 +1657,8 @@
       </TypeParameters>
       <Parameters>
         <Parameter Name="eventName" Type="System.String" />
-        <Parameter Name="options" Type="System.Diagnostics.Tracing.EventSourceOptions&amp;" RefType="ref" />
-        <Parameter Name="data" Type="T&amp;" RefType="ref" />
+        <Parameter Name="options" Type="System.Diagnostics.Tracing.EventSourceOptions" RefType="ref" />
+        <Parameter Name="data" Type="T" RefType="ref" />
       </Parameters>
       <Docs>
         <typeparam name="T">The type that defines the event and its associated data. This type must be an anonymous type or marked with the <see cref="T:System.Diagnostics.Tracing.EventSourceAttribute" /> attribute.</typeparam>
@@ -1592,7 +1670,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- If `eventName` is `null`, the event name is automatically derived from the type T’s event data (<xref:System.Diagnostics.Tracing.EventDataAttribute.Name%2A>) or determined based on the name of type `T`. The public instance properties of `data` will be written recursively to create the event fields.  
+ If `eventName` is `null`, the event name is automatically derived from the type T's event data (<xref:System.Diagnostics.Tracing.EventDataAttribute.Name%2A>) or determined based on the name of type `T`. The public instance properties of `data` will be written recursively to create the event fields.  
   
  ]]></format>
         </remarks>
@@ -1604,6 +1682,7 @@
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.Write``1(System.String,System.Diagnostics.Tracing.EventSourceOptions@,System.Guid@,System.Guid@,``0@)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Write(Of T) (eventName As String, ByRef options As EventSourceOptions, ByRef activityId As Guid, ByRef relatedActivityId As Guid, ByRef data As T)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; void Write(System::String ^ eventName, System::Diagnostics::Tracing::EventSourceOptions % options, Guid % activityId, Guid % relatedActivityId, T % data);" />
+      <MemberSignature Language="F#" Value="member this.Write : string *  *  *  *  -&gt; unit" Usage="eventSource.Write (eventName, options, activityId, relatedActivityId, data)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -1621,6 +1700,11 @@
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -1629,10 +1713,10 @@
       </TypeParameters>
       <Parameters>
         <Parameter Name="eventName" Type="System.String" />
-        <Parameter Name="options" Type="System.Diagnostics.Tracing.EventSourceOptions&amp;" RefType="ref" />
-        <Parameter Name="activityId" Type="System.Guid&amp;" RefType="ref" />
-        <Parameter Name="relatedActivityId" Type="System.Guid&amp;" RefType="ref" />
-        <Parameter Name="data" Type="T&amp;" RefType="ref" />
+        <Parameter Name="options" Type="System.Diagnostics.Tracing.EventSourceOptions" RefType="ref" />
+        <Parameter Name="activityId" Type="System.Guid" RefType="ref" />
+        <Parameter Name="relatedActivityId" Type="System.Guid" RefType="ref" />
+        <Parameter Name="data" Type="T" RefType="ref" />
       </Parameters>
       <Docs>
         <typeparam name="T">The type that defines the event and its associated data. This type must be an anonymous type or marked with the <see cref="T:System.Diagnostics.Tracing.EventSourceAttribute" /> attribute.</typeparam>
@@ -1646,7 +1730,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- If `eventName` is `null`, the event name is automatically derived from the type T’s event data (<xref:System.Diagnostics.Tracing.EventDataAttribute.Name%2A>) or determined based on the name of type `T`. The public instance properties of `data` will be written recursively to create the event fields.  
+ If `eventName` is `null`, the event name is automatically derived from the type T's event data (<xref:System.Diagnostics.Tracing.EventDataAttribute.Name%2A>) or determined based on the name of type `T`. The public instance properties of `data` will be written recursively to create the event fields.  
   
  ]]></format>
         </remarks>
@@ -1672,7 +1756,7 @@
   
  When you implement a method that is identified as an ETW event in an <xref:System.Diagnostics.Tracing.EventSource>-derived class. You must call the base class <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> method passing the <xref:System.Diagnostics.Tracing.EventAttribute.EventId%2A> and the same arguments as the implemented method similar to the following example.  
   
-```  
+```csharp  
 [Event(2, Level = EventLevel.Informational)]  
 public void Info1(string arg1)  
 {  
@@ -1692,6 +1776,7 @@ public void Info1(string arg1)
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.WriteEvent(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub WriteEvent (eventId As Integer)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void WriteEvent(int eventId);" />
+      <MemberSignature Language="F#" Value="member this.WriteEvent : int -&gt; unit" Usage="eventSource.WriteEvent eventId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -1711,6 +1796,11 @@ public void Info1(string arg1)
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.1;netstandard-1.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -1728,7 +1818,7 @@ public void Info1(string arg1)
   
  When you implement a method that is identified as an ETW event in an <xref:System.Diagnostics.Tracing.EventSource>-derived class. You must call the base class <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> method passing the <xref:System.Diagnostics.Tracing.EventAttribute.EventId%2A> and the same arguments as the implemented method similar to the following example.  
   
-```  
+```csharp  
 [Event(2, Level = EventLevel.Informational)]  
 public void Info1(string arg1)  
 {  
@@ -1754,6 +1844,7 @@ public void Info1(string arg1)
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.WriteEvent(System.Int32,System.Byte[])" />
       <MemberSignature Language="VB.NET" Value="Protected Sub WriteEvent (eventId As Integer, arg1 As Byte())" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void WriteEvent(int eventId, cli::array &lt;System::Byte&gt; ^ arg1);" />
+      <MemberSignature Language="F#" Value="member this.WriteEvent : int * byte[] -&gt; unit" Usage="eventSource.WriteEvent (eventId, arg1)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -1771,6 +1862,11 @@ public void Info1(string arg1)
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -1790,7 +1886,7 @@ public void Info1(string arg1)
   
  When you implement a method that is identified as an ETW event in an <xref:System.Diagnostics.Tracing.EventSource>-derived class. You must call the base class <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> method passing the <xref:System.Diagnostics.Tracing.EventAttribute.EventId%2A> and the same arguments as the implemented method similar to the following example.  
   
-```  
+```csharp  
 [Event(2, Level = EventLevel.Informational)]  
 public void Info1(byte[] arg1)  
 {  
@@ -1808,6 +1904,7 @@ public void Info1(byte[] arg1)
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.WriteEvent(System.Int32,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub WriteEvent (eventId As Integer, arg1 As Integer)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void WriteEvent(int eventId, int arg1);" />
+      <MemberSignature Language="F#" Value="member this.WriteEvent : int * int -&gt; unit" Usage="eventSource.WriteEvent (eventId, arg1)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -1827,6 +1924,11 @@ public void Info1(byte[] arg1)
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.1;netstandard-1.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -1846,7 +1948,7 @@ public void Info1(byte[] arg1)
   
  When you implement a method that is identified as an ETW event in an <xref:System.Diagnostics.Tracing.EventSource>-derived class. You must call the base class <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> method passing the <xref:System.Diagnostics.Tracing.EventAttribute.EventId%2A> and the same arguments as the implemented method similar to the following example.  
   
-```  
+```csharp  
 [Event(2, Level = EventLevel.Informational)]  
 public void Info1(int  arg1)  
 {  
@@ -1872,6 +1974,7 @@ public void Info1(int  arg1)
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.WriteEvent(System.Int32,System.Int64)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub WriteEvent (eventId As Integer, arg1 As Long)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void WriteEvent(int eventId, long arg1);" />
+      <MemberSignature Language="F#" Value="member this.WriteEvent : int * int64 -&gt; unit" Usage="eventSource.WriteEvent (eventId, arg1)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -1891,6 +1994,11 @@ public void Info1(int  arg1)
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.1;netstandard-1.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -1910,7 +2018,7 @@ public void Info1(int  arg1)
   
  When you implement a method that is identified as an ETW event in an <xref:System.Diagnostics.Tracing.EventSource>-derived class. You must call the base class <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> method passing the <xref:System.Diagnostics.Tracing.EventAttribute.EventId%2A> and the same arguments as the implemented method similar to the following example.  
   
-```  
+```csharp  
 [Event(2, Level = EventLevel.Informational)]  
 public void Info1(string arg1)  
 {  
@@ -1928,6 +2036,7 @@ public void Info1(string arg1)
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.WriteEvent(System.Int32,System.Object[])" />
       <MemberSignature Language="VB.NET" Value="Protected Sub WriteEvent (eventId As Integer, ParamArray args As Object())" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void WriteEvent(int eventId, ... cli::array &lt;System::Object ^&gt; ^ args);" />
+      <MemberSignature Language="F#" Value="member this.WriteEvent : int * obj[] -&gt; unit" Usage="eventSource.WriteEvent (eventId, args)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -1947,6 +2056,11 @@ public void Info1(string arg1)
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.1;netstandard-1.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -1984,7 +2098,7 @@ public void Info1(string arg1)
   
  When you implement a method that is identified as an ETW event in an <xref:System.Diagnostics.Tracing.EventSource>-derived class. You must call the base class <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> method passing the <xref:System.Diagnostics.Tracing.EventAttribute.EventId%2A> and the same arguments as the implemented method similar to the following example.  
   
-```  
+```csharp  
 [Event(2, Level = EventLevel.Informational)]  
 public void Info1(string arg1)  
 {  
@@ -2002,6 +2116,7 @@ public void Info1(string arg1)
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.WriteEvent(System.Int32,System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub WriteEvent (eventId As Integer, arg1 As String)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void WriteEvent(int eventId, System::String ^ arg1);" />
+      <MemberSignature Language="F#" Value="member this.WriteEvent : int * string -&gt; unit" Usage="eventSource.WriteEvent (eventId, arg1)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -2021,6 +2136,11 @@ public void Info1(string arg1)
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.1;netstandard-1.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -2040,7 +2160,7 @@ public void Info1(string arg1)
   
  When you implement a method that is identified as an ETW event in an <xref:System.Diagnostics.Tracing.EventSource>-derived class. You must call the base class <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> method passing the <xref:System.Diagnostics.Tracing.EventAttribute.EventId%2A> and the same arguments as the implemented method similar to the following example.  
   
-```  
+```csharp  
 [Event(2, Level = EventLevel.Informational)]  
 public void Info1(string arg1)  
 {  
@@ -2066,6 +2186,7 @@ public void Info1(string arg1)
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.WriteEvent(System.Int32,System.Int32,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub WriteEvent (eventId As Integer, arg1 As Integer, arg2 As Integer)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void WriteEvent(int eventId, int arg1, int arg2);" />
+      <MemberSignature Language="F#" Value="member this.WriteEvent : int * int * int -&gt; unit" Usage="eventSource.WriteEvent (eventId, arg1, arg2)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -2085,6 +2206,11 @@ public void Info1(string arg1)
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.1;netstandard-1.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -2124,6 +2250,7 @@ public void Info1(int arg1, int arg2, int arg3)
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.WriteEvent(System.Int32,System.Int32,System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub WriteEvent (eventId As Integer, arg1 As Integer, arg2 As String)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void WriteEvent(int eventId, int arg1, System::String ^ arg2);" />
+      <MemberSignature Language="F#" Value="member this.WriteEvent : int * int * string -&gt; unit" Usage="eventSource.WriteEvent (eventId, arg1, arg2)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -2141,6 +2268,11 @@ public void Info1(int arg1, int arg2, int arg3)
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -2163,6 +2295,7 @@ public void Info1(int arg1, int arg2, int arg3)
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.WriteEvent(System.Int32,System.Int64,System.Byte[])" />
       <MemberSignature Language="VB.NET" Value="Protected Sub WriteEvent (eventId As Integer, arg1 As Long, arg2 As Byte())" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void WriteEvent(int eventId, long arg1, cli::array &lt;System::Byte&gt; ^ arg2);" />
+      <MemberSignature Language="F#" Value="member this.WriteEvent : int * int64 * byte[] -&gt; unit" Usage="eventSource.WriteEvent (eventId, arg1, arg2)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -2180,6 +2313,11 @@ public void Info1(int arg1, int arg2, int arg3)
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -2201,7 +2339,7 @@ public void Info1(int arg1, int arg2, int arg3)
   
  When you implement a method that is identified as an ETW event in an <xref:System.Diagnostics.Tracing.EventSource>-derived class. You must call the base class <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> method passing the <xref:System.Diagnostics.Tracing.EventAttribute.EventId%2A> and the same arguments as the implemented method similar to the following example.  
   
-```  
+```csharp  
 [Event(2, Level = EventLevel.Informational)]  
 public void Info1(Int64 arg1, Byte[] arg2)  
 {  
@@ -2219,6 +2357,7 @@ public void Info1(Int64 arg1, Byte[] arg2)
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.WriteEvent(System.Int32,System.Int64,System.Int64)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub WriteEvent (eventId As Integer, arg1 As Long, arg2 As Long)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void WriteEvent(int eventId, long arg1, long arg2);" />
+      <MemberSignature Language="F#" Value="member this.WriteEvent : int * int64 * int64 -&gt; unit" Usage="eventSource.WriteEvent (eventId, arg1, arg2)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -2238,6 +2377,11 @@ public void Info1(Int64 arg1, Byte[] arg2)
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.1;netstandard-1.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -2259,7 +2403,7 @@ public void Info1(Int64 arg1, Byte[] arg2)
   
  When you implement a method that is identified as an ETW event in an <xref:System.Diagnostics.Tracing.EventSource>-derived class. You must call the base class <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> method passing the <xref:System.Diagnostics.Tracing.EventAttribute.EventId%2A> and the same arguments as the implemented method similar to the following example.  
   
-```  
+```csharp  
 [Event(2, Level = EventLevel.Informational)]  
 public void Info1(string arg1)  
 {  
@@ -2277,6 +2421,7 @@ public void Info1(string arg1)
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.WriteEvent(System.Int32,System.Int64,System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub WriteEvent (eventId As Integer, arg1 As Long, arg2 As String)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void WriteEvent(int eventId, long arg1, System::String ^ arg2);" />
+      <MemberSignature Language="F#" Value="member this.WriteEvent : int * int64 * string -&gt; unit" Usage="eventSource.WriteEvent (eventId, arg1, arg2)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -2294,6 +2439,11 @@ public void Info1(string arg1)
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -2333,6 +2483,7 @@ public void Info1(Int64 arg1, string arg2)
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.WriteEvent(System.Int32,System.String,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub WriteEvent (eventId As Integer, arg1 As String, arg2 As Integer)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void WriteEvent(int eventId, System::String ^ arg1, int arg2);" />
+      <MemberSignature Language="F#" Value="member this.WriteEvent : int * string * int -&gt; unit" Usage="eventSource.WriteEvent (eventId, arg1, arg2)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -2352,6 +2503,11 @@ public void Info1(Int64 arg1, string arg2)
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.1;netstandard-1.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -2373,7 +2529,7 @@ public void Info1(Int64 arg1, string arg2)
   
  When you implement a method that is identified as an ETW event in an <xref:System.Diagnostics.Tracing.EventSource>-derived class. You must call the base class <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> method passing the <xref:System.Diagnostics.Tracing.EventAttribute.EventId%2A> and the same arguments as the implemented method similar to the following example.  
   
-```  
+```csharp  
 [Event(2, Level = EventLevel.Informational)]  
 public void Info1(string arg1)  
 {  
@@ -2391,6 +2547,7 @@ public void Info1(string arg1)
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.WriteEvent(System.Int32,System.String,System.Int64)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub WriteEvent (eventId As Integer, arg1 As String, arg2 As Long)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void WriteEvent(int eventId, System::String ^ arg1, long arg2);" />
+      <MemberSignature Language="F#" Value="member this.WriteEvent : int * string * int64 -&gt; unit" Usage="eventSource.WriteEvent (eventId, arg1, arg2)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -2410,6 +2567,11 @@ public void Info1(string arg1)
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.1;netstandard-1.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -2431,7 +2593,7 @@ public void Info1(string arg1)
   
  When you implement a method that is identified as an ETW event in an <xref:System.Diagnostics.Tracing.EventSource>-derived class. You must call the base class <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> method passing the <xref:System.Diagnostics.Tracing.EventAttribute.EventId%2A> and the same arguments as the implemented method similar to the following example.  
   
-```  
+```csharp  
 [Event(2, Level = EventLevel.Informational)]  
 public void Info1(string arg1)  
 {  
@@ -2449,6 +2611,7 @@ public void Info1(string arg1)
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.WriteEvent(System.Int32,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub WriteEvent (eventId As Integer, arg1 As String, arg2 As String)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void WriteEvent(int eventId, System::String ^ arg1, System::String ^ arg2);" />
+      <MemberSignature Language="F#" Value="member this.WriteEvent : int * string * string -&gt; unit" Usage="eventSource.WriteEvent (eventId, arg1, arg2)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -2468,6 +2631,11 @@ public void Info1(string arg1)
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.1;netstandard-1.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -2489,7 +2657,7 @@ public void Info1(string arg1)
   
  When you implement a method that is identified as an ETW event in an <xref:System.Diagnostics.Tracing.EventSource>-derived class. You must call the base class <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> method passing the <xref:System.Diagnostics.Tracing.EventAttribute.EventId%2A> and the same arguments as the implemented method similar to the following example.  
   
-```  
+```csharp  
 [Event(2, Level = EventLevel.Informational)]  
 public void Info1(string arg1)  
 {  
@@ -2507,6 +2675,7 @@ public void Info1(string arg1)
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.WriteEvent(System.Int32,System.Int32,System.Int32,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub WriteEvent (eventId As Integer, arg1 As Integer, arg2 As Integer, arg3 As Integer)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void WriteEvent(int eventId, int arg1, int arg2, int arg3);" />
+      <MemberSignature Language="F#" Value="member this.WriteEvent : int * int * int * int -&gt; unit" Usage="eventSource.WriteEvent (eventId, arg1, arg2, arg3)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -2526,6 +2695,11 @@ public void Info1(string arg1)
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.1;netstandard-1.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -2549,7 +2723,7 @@ public void Info1(string arg1)
   
  When you implement a method that is identified as an ETW event in an <xref:System.Diagnostics.Tracing.EventSource>-derived class. You must call the base class <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> method passing the <xref:System.Diagnostics.Tracing.EventAttribute.EventId%2A> and the same arguments as the implemented method similar to the following example.  
   
-```  
+```csharp  
 [Event(2, Level = EventLevel.Informational)]  
 public void Info1(string arg1)  
 {  
@@ -2567,6 +2741,7 @@ public void Info1(string arg1)
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.WriteEvent(System.Int32,System.Int64,System.Int64,System.Int64)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub WriteEvent (eventId As Integer, arg1 As Long, arg2 As Long, arg3 As Long)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void WriteEvent(int eventId, long arg1, long arg2, long arg3);" />
+      <MemberSignature Language="F#" Value="member this.WriteEvent : int * int64 * int64 * int64 -&gt; unit" Usage="eventSource.WriteEvent (eventId, arg1, arg2, arg3)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -2586,6 +2761,11 @@ public void Info1(string arg1)
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.1;netstandard-1.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -2609,7 +2789,7 @@ public void Info1(string arg1)
   
  When you implement a method that is identified as an ETW event in an <xref:System.Diagnostics.Tracing.EventSource>-derived class. You must call the base class <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> method passing the <xref:System.Diagnostics.Tracing.EventAttribute.EventId%2A> and the same arguments as the implemented method similar to the following example.  
   
-```  
+```csharp  
 [Event(2, Level = EventLevel.Informational)]  
 public void Info1(string arg1)  
 {  
@@ -2627,6 +2807,7 @@ public void Info1(string arg1)
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.WriteEvent(System.Int32,System.String,System.Int32,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub WriteEvent (eventId As Integer, arg1 As String, arg2 As Integer, arg3 As Integer)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void WriteEvent(int eventId, System::String ^ arg1, int arg2, int arg3);" />
+      <MemberSignature Language="F#" Value="member this.WriteEvent : int * string * int * int -&gt; unit" Usage="eventSource.WriteEvent (eventId, arg1, arg2, arg3)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -2646,6 +2827,11 @@ public void Info1(string arg1)
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.1;netstandard-1.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -2669,7 +2855,7 @@ public void Info1(string arg1)
   
  When you implement a method that is identified as an ETW event in an <xref:System.Diagnostics.Tracing.EventSource>-derived class. You must call the base class <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> method passing the <xref:System.Diagnostics.Tracing.EventAttribute.EventId%2A> and the same arguments as the implemented method similar to the following example.  
   
-```  
+```csharp  
 [Event(2, Level = EventLevel.Informational)]  
 public void Info1(string arg1)  
 {  
@@ -2687,6 +2873,7 @@ public void Info1(string arg1)
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.WriteEvent(System.Int32,System.String,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub WriteEvent (eventId As Integer, arg1 As String, arg2 As String, arg3 As String)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void WriteEvent(int eventId, System::String ^ arg1, System::String ^ arg2, System::String ^ arg3);" />
+      <MemberSignature Language="F#" Value="member this.WriteEvent : int * string * string * string -&gt; unit" Usage="eventSource.WriteEvent (eventId, arg1, arg2, arg3)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -2706,6 +2893,11 @@ public void Info1(string arg1)
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.1;netstandard-1.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -2729,7 +2921,7 @@ public void Info1(string arg1)
   
  When you implement a method that is identified as an ETW event in an <xref:System.Diagnostics.Tracing.EventSource>-derived class. You must call the base class <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> method passing the <xref:System.Diagnostics.Tracing.EventAttribute.EventId%2A> and the same arguments as the implemented method similar to the following example.  
   
-```  
+```csharp  
 [Event(2, Level = EventLevel.Informational)]  
 public void Info1(string arg1)  
 {  
@@ -2746,6 +2938,7 @@ public void Info1(string arg1)
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void WriteEventCore(int32 eventId, int32 eventDataCount, valuetype System.Diagnostics.Tracing.EventSource/EventData* data) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.WriteEventCore(System.Int32,System.Int32,System.Diagnostics.Tracing.EventSource.EventData*)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void WriteEventCore(int eventId, int eventDataCount, System::Diagnostics::Tracing::EventSource::EventData* data);" />
+      <MemberSignature Language="F#" Value="member this.WriteEventCore : int * int * nativeptr&lt;System.Diagnostics.Tracing.EventSource.EventData&gt; -&gt; unit" Usage="eventSource.WriteEventCore (eventId, eventDataCount, data)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -2766,8 +2959,11 @@ public void Info1(string arg1)
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2">
           <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netcore-1.0;netcore-1.1;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netframework-4.8;netcore-2.0">
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -2840,15 +3036,16 @@ class AnotherEventSource : EventSource {
       </Docs>
     </Member>
     <Member MemberName="WriteEventWithRelatedActivityId">
-      <MemberSignature Language="C#" Value="protected void WriteEventWithRelatedActivityId (int eventId, Guid relatedActivityId, params object[] args);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netframework-4.5;netcore-2.1;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0" />
-      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void WriteEventWithRelatedActivityId(int32 eventId, valuetype System.Guid relatedActivityId, object[] args) cil managed" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netframework-4.5;netcore-2.1;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0" />
-      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId(System.Int32,System.Guid,System.Object[])" FrameworkAlternate="netframework-4.5;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0" />
-      <MemberSignature Language="VB.NET" Value="Protected Sub WriteEventWithRelatedActivityId (eventId As Integer, relatedActivityId As Guid, ParamArray args As Object())" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netframework-4.5;netcore-2.1;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0" />
-      <MemberSignature Language="C++ CLI" Value="protected:&#xA; void WriteEventWithRelatedActivityId(int eventId, Guid relatedActivityId, ... cli::array &lt;System::Object ^&gt; ^ args);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netframework-4.5;netcore-2.1;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0" />
+      <MemberSignature Language="C#" Value="protected void WriteEventWithRelatedActivityId (int eventId, Guid relatedActivityId, params object[] args);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netframework-4.5;netcore-2.1;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void WriteEventWithRelatedActivityId(int32 eventId, valuetype System.Guid relatedActivityId, object[] args) cil managed" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netframework-4.5;netcore-2.1;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId(System.Int32,System.Guid,System.Object[])" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub WriteEventWithRelatedActivityId (eventId As Integer, relatedActivityId As Guid, ParamArray args As Object())" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netframework-4.5;netcore-2.1;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; void WriteEventWithRelatedActivityId(int eventId, Guid relatedActivityId, ... cli::array &lt;System::Object ^&gt; ^ args);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netframework-4.5;netcore-2.1;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2" />
       <MemberSignature Language="C#" Value="protected void WriteEventWithRelatedActivityId (int eventId, Guid childActivityID, params object[] args);" FrameworkAlternate="netframework-4.5.1;netframework-4.5.2;netstandard-1.2" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void WriteEventWithRelatedActivityId(int32 eventId, valuetype System.Guid childActivityID, object[] args) cil managed" FrameworkAlternate="netframework-4.5.1;netframework-4.5.2;netstandard-1.2" />
       <MemberSignature Language="VB.NET" Value="Protected Sub WriteEventWithRelatedActivityId (eventId As Integer, childActivityID As Guid, ParamArray args As Object())" FrameworkAlternate="netframework-4.5.1;netframework-4.5.2;netstandard-1.2" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void WriteEventWithRelatedActivityId(int eventId, Guid childActivityID, ... cli::array &lt;System::Object ^&gt; ^ args);" FrameworkAlternate="netframework-4.5.1;netframework-4.5.2;netstandard-1.2" />
+      <MemberSignature Language="F#" Value="member this.WriteEventWithRelatedActivityId : int * Guid * obj[] -&gt; unit" Usage="eventSource.WriteEventWithRelatedActivityId (eventId, relatedActivityId, args)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -2867,14 +3064,19 @@ class AnotherEventSource : EventSource {
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="eventId" Type="System.Int32" Index="0" />
-        <Parameter Name="relatedActivityId" Type="System.Guid" Index="1" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netframework-4.5;netcore-2.1;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0" />
+        <Parameter Name="eventId" Type="System.Int32" Index="0" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0" />
+        <Parameter Name="relatedActivityId" Type="System.Guid" Index="1" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netframework-4.5;netcore-2.1;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2" />
         <Parameter Name="childActivityID" Type="System.Guid" Index="1" FrameworkAlternate="netframework-4.5.1;netframework-4.5.2;netstandard-1.2" />
-        <Parameter Name="args" Type="System.Object[]" Index="2">
+        <Parameter Name="args" Type="System.Object[]" Index="2" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
           <Attributes>
             <Attribute>
               <AttributeName>System.ParamArray</AttributeName>
@@ -2885,11 +3087,9 @@ class AnotherEventSource : EventSource {
       <Docs>
         <param name="eventId">An identifier that uniquely identifies this event within the <see cref="T:System.Diagnostics.Tracing.EventSource" />.</param>
         <param name="relatedActivityId">The related activity identifier.</param>
-        <param name="childActivityID">To be added.</param>
+        <param name="childActivityID">The related activity identifier.</param>
         <param name="args">An array of objects that contain data about the event.</param>
-        <summary>[Supported in the .NET Framework 4.5.1 and later versions]  
-  
- Writes an event that indicates that the current activity is related to another activity.</summary>
+        <summary>Writes an event that indicates that the current activity is related to another activity.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2920,13 +3120,14 @@ class AnotherEventSource : EventSource {
       </Docs>
     </Member>
     <Member MemberName="WriteEventWithRelatedActivityIdCore">
-      <MemberSignature Language="C#" Value="protected void WriteEventWithRelatedActivityIdCore (int eventId, Guid* relatedActivityId, int eventDataCount, System.Diagnostics.Tracing.EventSource.EventData* data);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netframework-4.5;netcore-2.1;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0" />
-      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void WriteEventWithRelatedActivityIdCore(int32 eventId, valuetype System.Guid* relatedActivityId, int32 eventDataCount, valuetype System.Diagnostics.Tracing.EventSource/EventData* data) cil managed" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netframework-4.5;netcore-2.1;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0" />
-      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore(System.Int32,System.Guid*,System.Int32,System.Diagnostics.Tracing.EventSource.EventData*)" FrameworkAlternate="netframework-4.5;netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0" />
-      <MemberSignature Language="C++ CLI" Value="protected:&#xA; void WriteEventWithRelatedActivityIdCore(int eventId, Guid* relatedActivityId, int eventDataCount, System::Diagnostics::Tracing::EventSource::EventData* data);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netframework-4.5;netcore-2.1;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0" />
+      <MemberSignature Language="C#" Value="protected void WriteEventWithRelatedActivityIdCore (int eventId, Guid* relatedActivityId, int eventDataCount, System.Diagnostics.Tracing.EventSource.EventData* data);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netframework-4.5;netcore-2.1;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void WriteEventWithRelatedActivityIdCore(int32 eventId, valuetype System.Guid* relatedActivityId, int32 eventDataCount, valuetype System.Diagnostics.Tracing.EventSource/EventData* data) cil managed" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netframework-4.5;netcore-2.1;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore(System.Int32,System.Guid*,System.Int32,System.Diagnostics.Tracing.EventSource.EventData*)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; void WriteEventWithRelatedActivityIdCore(int eventId, Guid* relatedActivityId, int eventDataCount, System::Diagnostics::Tracing::EventSource::EventData* data);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netframework-4.5;netcore-2.1;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2" />
       <MemberSignature Language="C#" Value="protected void WriteEventWithRelatedActivityIdCore (int eventId, Guid* childActivityID, int eventDataCount, System.Diagnostics.Tracing.EventSource.EventData* data);" FrameworkAlternate="netframework-4.5.1;netframework-4.5.2;netstandard-1.2" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void WriteEventWithRelatedActivityIdCore(int32 eventId, valuetype System.Guid* childActivityID, int32 eventDataCount, valuetype System.Diagnostics.Tracing.EventSource/EventData* data) cil managed" FrameworkAlternate="netframework-4.5.1;netframework-4.5.2;netstandard-1.2" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void WriteEventWithRelatedActivityIdCore(int eventId, Guid* childActivityID, int eventDataCount, System::Diagnostics::Tracing::EventSource::EventData* data);" FrameworkAlternate="netframework-4.5.1;netframework-4.5.2;netstandard-1.2" />
+      <MemberSignature Language="F#" Value="member this.WriteEventWithRelatedActivityIdCore : int * nativeptr&lt;Guid&gt; * int * nativeptr&lt;System.Diagnostics.Tracing.EventSource.EventData&gt; -&gt; unit" Usage="eventSource.WriteEventWithRelatedActivityIdCore (eventId, relatedActivityId, eventDataCount, data)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
@@ -2946,29 +3147,30 @@ class AnotherEventSource : EventSource {
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2">
           <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netcore-1.0;netcore-1.1;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netframework-4.8;netcore-2.0">
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="eventId" Type="System.Int32" Index="0" />
-        <Parameter Name="relatedActivityId" Type="System.Guid*" Index="1" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netframework-4.5;netcore-2.1;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0" />
+        <Parameter Name="eventId" Type="System.Int32" Index="0" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0" />
+        <Parameter Name="relatedActivityId" Type="System.Guid*" Index="1" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netframework-4.5;netcore-2.1;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2" />
         <Parameter Name="childActivityID" Type="System.Guid*" Index="1" FrameworkAlternate="netframework-4.5.1;netframework-4.5.2;netstandard-1.2" />
-        <Parameter Name="eventDataCount" Type="System.Int32" Index="2" />
-        <Parameter Name="data" Type="System.Diagnostics.Tracing.EventSource+EventData*" Index="3" />
+        <Parameter Name="eventDataCount" Type="System.Int32" Index="2" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0" />
+        <Parameter Name="data" Type="System.Diagnostics.Tracing.EventSource+EventData*" Index="3" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netcore-2.2;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0" />
       </Parameters>
       <Docs>
         <param name="eventId">An identifier that uniquely identifies this event within the <see cref="T:System.Diagnostics.Tracing.EventSource" />.</param>
         <param name="relatedActivityId">A pointer to the GUID of the related activity ID.</param>
-        <param name="childActivityID">To be added.</param>
-        <param name="eventDataCount">The number of items in the <c>data</c> field.</param>
+        <param name="childActivityID">A pointer to the GUID of the related activity ID.</param>
+        <param name="eventDataCount">The number of items in the <paramref name="data" /> field.</param>
         <param name="data">A pointer to the first item in the event data field.</param>
-        <summary>[Supported in the .NET Framework 4.5.1 and later versions]  
-  
- Writes an event that indicates that the current activity is related to another activity.</summary>
+        <summary>Writes an event that indicates that the current activity is related to another activity.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   

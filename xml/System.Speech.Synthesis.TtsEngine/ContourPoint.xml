@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.TtsEngine.ContourPoint" />
   <TypeSignature Language="VB.NET" Value="Public Structure ContourPoint&#xA;Implements IEquatable(Of ContourPoint)" />
   <TypeSignature Language="C++ CLI" Value="public value class ContourPoint : IEquatable&lt;System::Speech::Synthesis::TtsEngine::ContourPoint&gt;" />
+  <TypeSignature Language="F#" Value="type ContourPoint = struct" />
   <AssemblyInfo>
     <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -41,11 +43,18 @@
       <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.ContourPoint.#ctor(System.Single,System.Single,System.Speech.Synthesis.TtsEngine.ContourPointChangeType)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (start As Single, change As Single, changeType As ContourPointChangeType)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ContourPoint(float start, float change, System::Speech::Synthesis::TtsEngine::ContourPointChangeType changeType);" />
+      <MemberSignature Language="F#" Value="new System.Speech.Synthesis.TtsEngine.ContourPoint : single * single * System.Speech.Synthesis.TtsEngine.ContourPointChangeType -&gt; System.Speech.Synthesis.TtsEngine.ContourPoint" Usage="new System.Speech.Synthesis.TtsEngine.ContourPoint (start, change, changeType)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters>
         <Parameter Name="start" Type="System.Single" />
         <Parameter Name="change" Type="System.Single" />
@@ -54,7 +63,7 @@
       <Docs>
         <param name="start">A <see cref="T:System.Single" /> that specifies the point at which to apply the pitch change in the <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" />. This is expressed as the elapsed percentage of the duration of the <see cref="T:System.Speech.Synthesis.TtsEngine.TextFragment" /> at that point.</param>
         <param name="change">A <see cref="T:System.Single" /> that specifies the amount to raise or lower the pitch.</param>
-        <param name="changeType">A member of <see cref="P:System.Speech.Synthesis.TtsEngine.ContourPoint.ChangeType" /> that specifies the unit to use for the number specified in the <c>change</c> parameter.</param>
+        <param name="changeType">A member of <see cref="P:System.Speech.Synthesis.TtsEngine.ContourPoint.ChangeType" /> that specifies the unit to use for the number specified in the <paramref name="change" /> parameter.</param>
         <summary>Creates a new instance of the <see cref="T:System.Speech.Synthesis.TtsEngine.ContourPoint" /> class.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -65,11 +74,18 @@
       <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.ContourPoint.Change" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Change As Single" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property float Change { float get(); };" />
+      <MemberSignature Language="F#" Value="member this.Change : single" Usage="System.Speech.Synthesis.TtsEngine.ContourPoint.Change" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
@@ -94,11 +110,18 @@
       <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.ContourPoint.ChangeType" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ChangeType As ContourPointChangeType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Speech::Synthesis::TtsEngine::ContourPointChangeType ChangeType { System::Speech::Synthesis::TtsEngine::ContourPointChangeType get(); };" />
+      <MemberSignature Language="F#" Value="member this.ChangeType : System.Speech.Synthesis.TtsEngine.ContourPointChangeType" Usage="System.Speech.Synthesis.TtsEngine.ContourPoint.ChangeType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Speech.Synthesis.TtsEngine.ContourPointChangeType</ReturnType>
       </ReturnValue>
@@ -130,9 +153,11 @@
       <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.ContourPoint.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="contourPoint.Equals obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -161,12 +186,14 @@
       <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.ContourPoint.Equals(System.Speech.Synthesis.TtsEngine.ContourPoint)" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (other As ContourPoint) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Equals(System::Speech::Synthesis::TtsEngine::ContourPoint other);" />
+      <MemberSignature Language="F#" Value="override this.Equals : System.Speech.Synthesis.TtsEngine.ContourPoint -&gt; bool" Usage="contourPoint.Equals other" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -188,9 +215,11 @@
       <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.ContourPoint.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="contourPoint.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -216,9 +245,11 @@
       <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.ContourPoint.op_Equality(System.Speech.Synthesis.TtsEngine.ContourPoint,System.Speech.Synthesis.TtsEngine.ContourPoint)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator == (point1 As ContourPoint, point2 As ContourPoint) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator ==(System::Speech::Synthesis::TtsEngine::ContourPoint point1, System::Speech::Synthesis::TtsEngine::ContourPoint point2);" />
+      <MemberSignature Language="F#" Value="static member ( = ) : System.Speech.Synthesis.TtsEngine.ContourPoint * System.Speech.Synthesis.TtsEngine.ContourPoint -&gt; bool" Usage="point1 = point2" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -229,8 +260,8 @@
         <Parameter Name="point2" Type="System.Speech.Synthesis.TtsEngine.ContourPoint" />
       </Parameters>
       <Docs>
-        <param name="point1">An instance of <see cref="T:System.Speech.Synthesis.TtsEngine.ContourPoint" /> to compare against the instance of <see cref="T:System.Speech.Synthesis.TtsEngine.ContourPoint" /> provided by the <c>point2</c> argument.</param>
-        <param name="point2">An instance of <see cref="T:System.Speech.Synthesis.TtsEngine.ContourPoint" /> to compare against the instance of <see cref="T:System.Speech.Synthesis.TtsEngine.ContourPoint" /> provided by the <c>point1</c> argument.</param>
+        <param name="point1">An instance of <see cref="T:System.Speech.Synthesis.TtsEngine.ContourPoint" /> to compare against the instance of <see cref="T:System.Speech.Synthesis.TtsEngine.ContourPoint" /> provided by the <paramref name="point2" /> argument.</param>
+        <param name="point2">An instance of <see cref="T:System.Speech.Synthesis.TtsEngine.ContourPoint" /> to compare against the instance of <see cref="T:System.Speech.Synthesis.TtsEngine.ContourPoint" /> provided by the <paramref name="point1" /> argument.</param>
         <summary>Determines if two instances of <see cref="T:System.Speech.Synthesis.TtsEngine.ContourPoint" /> are equal.</summary>
         <returns>Returns <see langword="true" /> if the <see cref="T:System.Speech.Synthesis.TtsEngine.ContourPoint" /> instances referenced by <paramref name="point1" /> and <paramref name="point2" /> are equal, otherwise returns <see langword="false" />.</returns>
         <remarks>
@@ -244,9 +275,11 @@
       <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.ContourPoint.op_Inequality(System.Speech.Synthesis.TtsEngine.ContourPoint,System.Speech.Synthesis.TtsEngine.ContourPoint)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator != (point1 As ContourPoint, point2 As ContourPoint) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator !=(System::Speech::Synthesis::TtsEngine::ContourPoint point1, System::Speech::Synthesis::TtsEngine::ContourPoint point2);" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : System.Speech.Synthesis.TtsEngine.ContourPoint * System.Speech.Synthesis.TtsEngine.ContourPoint -&gt; bool" Usage="System.Speech.Synthesis.TtsEngine.ContourPoint.op_Inequality (point1, point2)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -257,8 +290,8 @@
         <Parameter Name="point2" Type="System.Speech.Synthesis.TtsEngine.ContourPoint" />
       </Parameters>
       <Docs>
-        <param name="point1">An instance of <see cref="T:System.Speech.Synthesis.TtsEngine.ContourPoint" /> to compare against the instance of <see cref="T:System.Speech.Synthesis.TtsEngine.ContourPoint" /> provided by the <c>point2</c> argument.</param>
-        <param name="point2">An instance of <see cref="T:System.Speech.Synthesis.TtsEngine.ContourPoint" /> to compare against the instance of <see cref="T:System.Speech.Synthesis.TtsEngine.ContourPoint" /> provided by the <c>point1</c> argument.</param>
+        <param name="point1">An instance of <see cref="T:System.Speech.Synthesis.TtsEngine.ContourPoint" /> to compare against the instance of <see cref="T:System.Speech.Synthesis.TtsEngine.ContourPoint" /> provided by the <paramref name="point2" /> argument.</param>
+        <param name="point2">An instance of <see cref="T:System.Speech.Synthesis.TtsEngine.ContourPoint" /> to compare against the instance of <see cref="T:System.Speech.Synthesis.TtsEngine.ContourPoint" /> provided by the <paramref name="point1" /> argument.</param>
         <summary>Determines if two instances of <see cref="T:System.Speech.Synthesis.TtsEngine.ContourPoint" /> are NOT equal.</summary>
         <returns>Returns <see langword="true" /> if the <see cref="T:System.Speech.Synthesis.TtsEngine.ContourPoint" /> instances referenced by <paramref name="point1" /> and <paramref name="point2" /> are NOT equal, otherwise returns <see langword="false" />.</returns>
         <remarks>
@@ -272,11 +305,18 @@
       <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.ContourPoint.Start" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Start As Single" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property float Start { float get(); };" />
+      <MemberSignature Language="F#" Value="member this.Start : single" Usage="System.Speech.Synthesis.TtsEngine.ContourPoint.Start" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>

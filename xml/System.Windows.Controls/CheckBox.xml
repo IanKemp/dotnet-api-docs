@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Controls.CheckBox" />
   <TypeSignature Language="VB.NET" Value="Public Class CheckBox&#xA;Inherits ToggleButton" />
   <TypeSignature Language="C++ CLI" Value="public ref class CheckBox : System::Windows::Controls::Primitives::ToggleButton" />
+  <TypeSignature Language="F#" Value="type CheckBox = class&#xA;    inherit ToggleButton" />
   <AssemblyInfo>
     <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -33,12 +35,9 @@
 ## Customizing the CheckBox Control  
  To apply the same property settings to multiple <xref:System.Windows.Controls.CheckBox> controls, use the <xref:System.Windows.FrameworkElement.Style%2A> property. You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance. For more information about creating a <xref:System.Windows.Controls.ControlTemplate>, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  To see the parts and states that are specific to the <xref:System.Windows.Controls.CheckBox>, see [CheckBox Styles and Templates](~/docs/framework/wpf/controls/checkbox-styles-and-templates.md).  
   
- Dependency properties for this control might be set by the control’s default style.  If a property is set by a default style, the property might change from its default value when the control appears in the application. The default style is determined by which desktop theme is used when the application is running.  For more information, see [Default WPF Themes](http://go.microsoft.com/fwlink/?LinkID=158252).  
+ Dependency properties for this control might be set by the control's default style.  If a property is set by a default style, the property might change from its default value when the control appears in the application. The default style is determined by which desktop theme is used when the application is running.  For more information, see [Default WPF Themes](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
-> [!NOTE]
->  Setting a visual property will only have an effect if that property is both present in <xref:System.Windows.Controls.CheckBox> control's default template and is set by using a . You can find a list of visual properties in the "Changing the Visual Structure of a Control" section in [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
-  
-   
+[!INCLUDE[setting-a-visual-property](~/includes/visual-property-note.md)]  
   
 ## Examples  
  The following example creates a <xref:System.Windows.Controls.CheckBox> and handles the <xref:System.Windows.Controls.Primitives.ToggleButton.Checked>, <xref:System.Windows.Controls.Primitives.ToggleButton.Unchecked>, and <xref:System.Windows.Controls.Primitives.ToggleButton.Indeterminate> events.  
@@ -50,6 +49,7 @@
   
  ]]></format>
     </remarks>
+    <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkID=160053">WPF Controls Gallery Sample</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -61,8 +61,14 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.Windows.Controls.CheckBox" /> class.</summary>
@@ -75,9 +81,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Controls.CheckBox.OnAccessKey(System.Windows.Input.AccessKeyEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub OnAccessKey (e As AccessKeyEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void OnAccessKey(System::Windows::Input::AccessKeyEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="override this.OnAccessKey : System.Windows.Input.AccessKeyEventArgs -&gt; unit" Usage="checkBox.OnAccessKey e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -98,9 +106,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Controls.CheckBox.OnCreateAutomationPeer" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function OnCreateAutomationPeer () As AutomationPeer" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Windows::Automation::Peers::AutomationPeer ^ OnCreateAutomationPeer();" />
+      <MemberSignature Language="F#" Value="override this.OnCreateAutomationPeer : unit -&gt; System.Windows.Automation.Peers.AutomationPeer" Usage="checkBox.OnCreateAutomationPeer " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -119,9 +129,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Controls.CheckBox.OnKeyDown(System.Windows.Input.KeyEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub OnKeyDown (e As KeyEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void OnKeyDown(System::Windows::Input::KeyEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="override this.OnKeyDown : System.Windows.Input.KeyEventArgs -&gt; unit" Usage="checkBox.OnKeyDown e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

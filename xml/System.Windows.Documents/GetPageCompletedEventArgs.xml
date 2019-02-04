@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Documents.GetPageCompletedEventArgs" />
   <TypeSignature Language="VB.NET" Value="Public Class GetPageCompletedEventArgs&#xA;Inherits AsyncCompletedEventArgs" />
   <TypeSignature Language="C++ CLI" Value="public ref class GetPageCompletedEventArgs : System::ComponentModel::AsyncCompletedEventArgs" />
+  <TypeSignature Language="F#" Value="type GetPageCompletedEventArgs = class&#xA;    inherit AsyncCompletedEventArgs" />
   <AssemblyInfo>
     <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -24,11 +26,18 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Documents.GetPageCompletedEventArgs.#ctor(System.Windows.Documents.DocumentPage,System.Int32,System.Exception,System.Boolean,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (page As DocumentPage, pageNumber As Integer, error As Exception, cancelled As Boolean, userState As Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; GetPageCompletedEventArgs(System::Windows::Documents::DocumentPage ^ page, int pageNumber, Exception ^ error, bool cancelled, System::Object ^ userState);" />
+      <MemberSignature Language="F#" Value="new System.Windows.Documents.GetPageCompletedEventArgs : System.Windows.Documents.DocumentPage * int * Exception * bool * obj -&gt; System.Windows.Documents.GetPageCompletedEventArgs" Usage="new System.Windows.Documents.GetPageCompletedEventArgs (page, pageNumber, error, cancelled, userState)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters>
         <Parameter Name="page" Type="System.Windows.Documents.DocumentPage" />
         <Parameter Name="pageNumber" Type="System.Int32" />
@@ -37,12 +46,12 @@
         <Parameter Name="userState" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="page">The <see cref="T:System.Windows.Documents.DocumentPage" /> for the requested <c>pageNumber</c>.</param>
-        <param name="pageNumber">The <c>pageNumber</c> parameter passed to <see cref="M:System.Windows.Documents.DocumentPaginator.GetPageAsync(System.Int32,System.Object)" />.</param>
+        <param name="page">The <see cref="T:System.Windows.Documents.DocumentPage" /> for the requested <paramref name="pageNumber" />.</param>
+        <param name="pageNumber">The <paramref name="pageNumber" /> parameter passed to <see cref="M:System.Windows.Documents.DocumentPaginator.GetPageAsync(System.Int32,System.Object)" />.</param>
         <param name="error">The exception that occurred during the asynchronous operation; or NULL if there were no errors.</param>
         <param name="cancelled">
           <see langword="true" /> if the asynchronous operation was canceled; otherwise, <see langword="false" />.</param>
-        <param name="userState">The unique <c>userState</c> parameter passed to <see cref="M:System.Windows.Documents.DocumentPaginator.GetPageAsync(System.Int32,System.Object)" />.</param>
+        <param name="userState">The unique <paramref name="userState" /> parameter passed to <see cref="M:System.Windows.Documents.DocumentPaginator.GetPageAsync(System.Int32,System.Object)" />.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Windows.Documents.GetPageCompletedEventArgs" /> class.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -62,9 +71,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Documents.GetPageCompletedEventArgs.DocumentPage" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DocumentPage As DocumentPage" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Documents::DocumentPage ^ DocumentPage { System::Windows::Documents::DocumentPage ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DocumentPage : System.Windows.Documents.DocumentPage" Usage="System.Windows.Documents.GetPageCompletedEventArgs.DocumentPage" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -91,9 +102,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Documents.GetPageCompletedEventArgs.PageNumber" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PageNumber As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int PageNumber { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.PageNumber : int" Usage="System.Windows.Documents.GetPageCompletedEventArgs.PageNumber" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Web.Hosting.ISuspendibleRegisteredObject" />
   <TypeSignature Language="VB.NET" Value="Public Interface ISuspendibleRegisteredObject&#xA;Implements IRegisteredObject" />
   <TypeSignature Language="C++ CLI" Value="public interface class ISuspendibleRegisteredObject : System::Web::Hosting::IRegisteredObject" />
+  <TypeSignature Language="F#" Value="type ISuspendibleRegisteredObject = interface&#xA;    interface IRegisteredObject" />
   <AssemblyInfo>
     <AssemblyName>System.Web</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -14,9 +15,7 @@
     </Interface>
   </Interfaces>
   <Docs>
-    <summary>[Supported in the .NET Framework 4.5.1 and later versions]  
-  
- Listens for suspend and resume notifications.</summary>
+    <summary>Listens for suspend and resume notifications.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -34,6 +33,7 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Hosting.ISuspendibleRegisteredObject.Suspend" />
       <MemberSignature Language="VB.NET" Value="Public Function Suspend () As Action" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Action ^ Suspend();" />
+      <MemberSignature Language="F#" Value="abstract member Suspend : unit -&gt; Action" Usage="iSuspendibleRegisteredObject.Suspend " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
@@ -44,9 +44,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>[Supported in the .NET Framework 4.5.1 and later versions]  
-  
- Called when ASP.NET notifies an application that a process is being suspended.</summary>
+        <summary>Called when ASP.NET notifies an application that a process is being suspended.</summary>
         <returns>To be added.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  

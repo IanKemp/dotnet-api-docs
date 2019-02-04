@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.ConditionalWeakTable`2" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ConditionalWeakTable(Of TKey, TValue)" />
   <TypeSignature Language="C++ CLI" Value="generic &lt;typename TKey, typename TValue&gt;&#xA; where TKey : class where TValue : classpublic ref class ConditionalWeakTable sealed" />
+  <TypeSignature Language="F#" Value="type ConditionalWeakTable&lt;'Key, 'Value (requires 'Key : null and 'Value : null)&gt; = class" />
   <AssemblyInfo>
     <AssemblyName>System.Runtime</AssemblyName>
     <AssemblyVersion>4.0.20.0</AssemblyVersion>
@@ -19,6 +20,9 @@
   <AssemblyInfo>
     <AssemblyName>netstandard</AssemblyName>
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Dynamic.Runtime</AssemblyName>
   </AssemblyInfo>
   <TypeParameters>
     <TypeParameter Name="TKey">
@@ -36,6 +40,11 @@
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces></Interfaces>
+  <Attributes>
+    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <typeparam name="TKey">The reference type to which the field is attached.</typeparam>
     <typeparam name="TValue">The field's type. This must be a reference type.</typeparam>
@@ -97,6 +106,14 @@
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.Runtime.CompilerServices.ConditionalWeakTable`2" /> class.</summary>
@@ -118,6 +135,7 @@
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.ConditionalWeakTable`2.Add(`0,`1)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Add (key As TKey, value As TValue)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Add(TKey key, TValue value);" />
+      <MemberSignature Language="F#" Value="member this.Add : 'Key * 'Value -&gt; unit" Usage="conditionalWeakTable.Add (key, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -135,6 +153,14 @@
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -143,7 +169,7 @@
         <Parameter Name="value" Type="TValue" />
       </Parameters>
       <Docs>
-        <param name="key">The key to add. <c>key</c> represents the object to which the property is attached.</param>
+        <param name="key">The key to add. <paramref name="key" /> represents the object to which the property is attached.</param>
         <param name="value">The key's property value.</param>
         <summary>Adds a key to the table.</summary>
         <remarks>
@@ -178,11 +204,21 @@
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.ConditionalWeakTable`2.AddOrUpdate(`0,`1)" />
       <MemberSignature Language="VB.NET" Value="Public Sub AddOrUpdate (key As TKey, value As TValue)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void AddOrUpdate(TKey key, TValue value);" />
+      <MemberSignature Language="F#" Value="member this.AddOrUpdate : 'Key * 'Value -&gt; unit" Usage="conditionalWeakTable.AddOrUpdate (key, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -204,11 +240,21 @@
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.ConditionalWeakTable`2.Clear" />
       <MemberSignature Language="VB.NET" Value="Public Sub Clear ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Clear();" />
+      <MemberSignature Language="F#" Value="member this.Clear : unit -&gt; unit" Usage="conditionalWeakTable.Clear " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -220,11 +266,12 @@
       </Docs>
     </Member>
     <Member MemberName="Finalize">
-      <MemberSignature Language="C#" Value="~ConditionalWeakTable`2 ();" />
+      <MemberSignature Language="C#" Value="~ConditionalWeakTable ();" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.ConditionalWeakTable`2.Finalize" />
       <MemberSignature Language="VB.NET" Value="Finalize ()" />
       <MemberSignature Language="C++ CLI" Value="!ConditionalWeakTable`2 ()" />
+      <MemberSignature Language="F#" Value="override this.Finalize : unit -&gt; unit" Usage="conditionalWeakTable.Finalize " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -238,6 +285,17 @@
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -261,6 +319,7 @@
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.ConditionalWeakTable`2.GetOrCreateValue(`0)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetOrCreateValue (key As TKey) As TValue" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; TValue GetOrCreateValue(TKey key);" />
+      <MemberSignature Language="F#" Value="member this.GetOrCreateValue : 'Key -&gt; 'Value" Usage="conditionalWeakTable.GetOrCreateValue key" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -278,6 +337,9 @@
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>TValue</ReturnType>
       </ReturnValue>
@@ -285,7 +347,7 @@
         <Parameter Name="key" Type="TKey" />
       </Parameters>
       <Docs>
-        <param name="key">The key to search for. <c>key</c> represents the object to which the property is attached.</param>
+        <param name="key">The key to search for. <paramref name="key" /> represents the object to which the property is attached.</param>
         <summary>Atomically searches for a specified key in the table and returns the corresponding value. If the key does not exist in the table, the method invokes the default constructor of the class that represents the table's value to create a value that is bound to the specified key.</summary>
         <returns>The value that corresponds to <paramref name="key" />, if <paramref name="key" /> already exists in the table; otherwise, a new value created by the default constructor of the class defined by the <paramref name="TValue" /> generic type parameter.</returns>
         <remarks>
@@ -313,7 +375,7 @@
         <exception cref="T:System.MissingMethodException">
           <block subset="none" type="note">
             <para>  
- In the [.NET for Windows Store apps](http://go.microsoft.com/fwlink/?LinkID=247912) or the [Portable Class Library](~/docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md), catch the base class exception, <see cref="T:System.MissingMemberException" />, instead.  
+ In the <see href="https://go.microsoft.com/fwlink/?LinkID=247912">.NET for Windows Store apps</see> or the <see href="https://docs.microsoft.com/dotnet/standard/cross-platform/cross-platform-development-with-the-portable-class-library">Portable Class Library</see>, catch the base class exception, <see cref="T:System.MissingMemberException" />, instead.  
   
 </para>
           </block>  
@@ -328,6 +390,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !TValue GetValue(!TKey key, class System.Runtime.CompilerServices.ConditionalWeakTable`2/CreateValueCallback&lt;!TKey, !TValue&gt; createValueCallback) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.ConditionalWeakTable`2.GetValue(`0,System.Runtime.CompilerServices.ConditionalWeakTable`2.CreateValueCallback{`0,`1})" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; TValue GetValue(TKey key, System::Runtime::CompilerServices::ConditionalWeakTable&lt;TKey, TValue&gt;::CreateValueCallback ^ createValueCallback);" />
+      <MemberSignature Language="F#" Value="member this.GetValue : 'Key * System.Runtime.CompilerServices.ConditionalWeakTable&lt;'Key, 'Value (requires 'Key : null and 'Value : null)&gt;.CreateValueCallback -&gt; 'Value" Usage="conditionalWeakTable.GetValue (key, createValueCallback)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -345,6 +408,14 @@
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>TValue</ReturnType>
       </ReturnValue>
@@ -353,8 +424,8 @@
         <Parameter Name="createValueCallback" Type="System.Runtime.CompilerServices.ConditionalWeakTable&lt;TKey,TValue&gt;+CreateValueCallback" />
       </Parameters>
       <Docs>
-        <param name="key">The key to search for. <c>key</c> represents the object to which the property is attached.</param>
-        <param name="createValueCallback">A delegate to a method that can create a value for the given <c>key</c>. It has a single parameter of type <c>TKey</c>, and returns a value of type <c>TValue</c>.</param>
+        <param name="key">The key to search for. <paramref name="key" /> represents the object to which the property is attached.</param>
+        <param name="createValueCallback">A delegate to a method that can create a value for the given <paramref name="key" />. It has a single parameter of type <c>TKey</c>, and returns a value of type <c>TValue</c>.</param>
         <summary>Atomically searches for a specified key in the table and returns the corresponding value. If the key does not exist in the table, the method invokes a callback method to create a value that is bound to the specified key.</summary>
         <returns>The value attached to <paramref name="key" />, if <paramref name="key" /> already exists in the table; otherwise, the new value returned by the <paramref name="createValueCallback" /> delegate.</returns>
         <remarks>
@@ -391,6 +462,7 @@
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.ConditionalWeakTable`2.Remove(`0)" />
       <MemberSignature Language="VB.NET" Value="Public Function Remove (key As TKey) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Remove(TKey key);" />
+      <MemberSignature Language="F#" Value="member this.Remove : 'Key -&gt; bool" Usage="conditionalWeakTable.Remove key" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -408,6 +480,14 @@
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -447,6 +527,15 @@
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;</ReturnType>
       </ReturnValue>
@@ -472,6 +561,15 @@
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.IEnumerator</ReturnType>
       </ReturnValue>
@@ -488,6 +586,7 @@
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.ConditionalWeakTable`2.TryGetValue(`0,`1@)" />
       <MemberSignature Language="VB.NET" Value="Public Function TryGetValue (key As TKey, ByRef value As TValue) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryGetValue(TKey key, [Runtime::InteropServices::Out] TValue % value);" />
+      <MemberSignature Language="F#" Value="member this.TryGetValue : 'Key *  -&gt; bool" Usage="conditionalWeakTable.TryGetValue (key, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -505,16 +604,24 @@
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="key" Type="TKey" />
-        <Parameter Name="value" Type="TValue&amp;" RefType="out" />
+        <Parameter Name="value" Type="TValue" RefType="out" />
       </Parameters>
       <Docs>
         <param name="key">The key that represents an object with an attached property.</param>
-        <param name="value">When this method returns, contains the attached property value. If <c>key</c> is not found, <c>value</c> contains the default value.</param>
+        <param name="value">When this method returns, contains the attached property value. If <paramref name="key" /> is not found, <paramref name="value" /> contains the default value.</param>
         <summary>Gets the value of the specified key.</summary>
         <returns>
           <see langword="true" /> if <paramref name="key" /> is found; otherwise, <see langword="false" />.</returns>

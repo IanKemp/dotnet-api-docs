@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.Legend" />
   <TypeSignature Language="VB.NET" Value="Public Class Legend&#xA;Inherits ChartNamedElement" />
   <TypeSignature Language="C++ CLI" Value="public ref class Legend : System::Web::UI::DataVisualization::Charting::ChartNamedElement" />
+  <TypeSignature Language="F#" Value="type Legend = class&#xA;    inherit ChartNamedElement" />
   <AssemblyInfo>
     <AssemblyName>System.Web.DataVisualization</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -105,6 +106,7 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.Legend.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (name As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Legend(System::String ^ name);" />
+      <MemberSignature Language="F#" Value="new System.Web.UI.DataVisualization.Charting.Legend : string -&gt; System.Web.UI.DataVisualization.Charting.Legend" Usage="new System.Web.UI.DataVisualization.Charting.Legend name" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -125,6 +127,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.Alignment" />
       <MemberSignature Language="VB.NET" Value="Public Property Alignment As StringAlignment" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Drawing::StringAlignment Alignment { System::Drawing::StringAlignment get(); void set(System::Drawing::StringAlignment value); };" />
+      <MemberSignature Language="F#" Value="member this.Alignment : System.Drawing.StringAlignment with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.Alignment" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -135,13 +138,16 @@
           <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DefaultValue</AttributeName>
-        </Attribute>
-        <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -172,6 +178,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.AutoFitMinFontSize" />
       <MemberSignature Language="VB.NET" Value="Public Property AutoFitMinFontSize As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int AutoFitMinFontSize { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.AutoFitMinFontSize : int with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.AutoFitMinFontSize" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -180,6 +187,9 @@
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(7)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -197,6 +207,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.BackColor" />
       <MemberSignature Language="VB.NET" Value="Public Property BackColor As Color" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Drawing::Color BackColor { System::Drawing::Color get(); void set(System::Drawing::Color value); };" />
+      <MemberSignature Language="F#" Value="member this.BackColor : System.Drawing.Color with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.BackColor" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -209,7 +220,7 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
         </Attribute>
         <Attribute>
@@ -218,8 +229,14 @@
         <Attribute>
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -236,7 +253,7 @@
   
  The <xref:System.Web.UI.DataVisualization.Charting.Legend.BackColor%2A> value will be the first color used if you have specified gradient colors for the background.  
   
- The alpha value controls the opacity of a color. If you set this color to "transparent"—that is, if you use an alpha value of 0—no color will be assigned to the background of the legend. As a result, the background will be transparent.  
+ The alpha value controls the opacity of a color. If you set this color to "transparent" - that is, if you use an alpha value of 0 - no color will be assigned to the background of the legend. As a result, the background will be transparent.  
   
  ]]></format>
         </remarks>
@@ -248,6 +265,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.BackGradientStyle" />
       <MemberSignature Language="VB.NET" Value="Public Property BackGradientStyle As GradientStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::DataVisualization::Charting::GradientStyle BackGradientStyle { System::Web::UI::DataVisualization::Charting::GradientStyle get(); void set(System::Web::UI::DataVisualization::Charting::GradientStyle value); };" />
+      <MemberSignature Language="F#" Value="member this.BackGradientStyle : System.Web.UI.DataVisualization.Charting.GradientStyle with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.BackGradientStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -260,14 +278,20 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.GradientEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.GradientEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -302,6 +326,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.BackHatchStyle" />
       <MemberSignature Language="VB.NET" Value="Public Property BackHatchStyle As ChartHatchStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::DataVisualization::Charting::ChartHatchStyle BackHatchStyle { System::Web::UI::DataVisualization::Charting::ChartHatchStyle get(); void set(System::Web::UI::DataVisualization::Charting::ChartHatchStyle value); };" />
+      <MemberSignature Language="F#" Value="member this.BackHatchStyle : System.Web.UI.DataVisualization.Charting.ChartHatchStyle with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.BackHatchStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -314,14 +339,20 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.HatchStyleEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.HatchStyleEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -350,6 +381,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.BackImage" />
       <MemberSignature Language="VB.NET" Value="Public Property BackImage As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ BackImage { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.BackImage : string with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.BackImage" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -362,14 +394,20 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ImageValueEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ImageValueEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -402,6 +440,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.BackImageAlignment" />
       <MemberSignature Language="VB.NET" Value="Public Property BackImageAlignment As ChartImageAlignmentStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::DataVisualization::Charting::ChartImageAlignmentStyle BackImageAlignment { System::Web::UI::DataVisualization::Charting::ChartImageAlignmentStyle get(); void set(System::Web::UI::DataVisualization::Charting::ChartImageAlignmentStyle value); };" />
+      <MemberSignature Language="F#" Value="member this.BackImageAlignment : System.Web.UI.DataVisualization.Charting.ChartImageAlignmentStyle with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.BackImageAlignment" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -417,8 +456,11 @@
         <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -443,6 +485,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.BackImageTransparentColor" />
       <MemberSignature Language="VB.NET" Value="Public Property BackImageTransparentColor As Color" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Drawing::Color BackImageTransparentColor { System::Drawing::Color get(); void set(System::Drawing::Color value); };" />
+      <MemberSignature Language="F#" Value="member this.BackImageTransparentColor : System.Drawing.Color with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.BackImageTransparentColor" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -455,7 +498,7 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
         </Attribute>
         <Attribute>
@@ -464,8 +507,14 @@
         <Attribute>
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -483,6 +532,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.BackImageWrapMode" />
       <MemberSignature Language="VB.NET" Value="Public Property BackImageWrapMode As ChartImageWrapMode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::DataVisualization::Charting::ChartImageWrapMode BackImageWrapMode { System::Web::UI::DataVisualization::Charting::ChartImageWrapMode get(); void set(System::Web::UI::DataVisualization::Charting::ChartImageWrapMode value); };" />
+      <MemberSignature Language="F#" Value="member this.BackImageWrapMode : System.Web.UI.DataVisualization.Charting.ChartImageWrapMode with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.BackImageWrapMode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -498,8 +548,11 @@
         <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -530,6 +583,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.BackSecondaryColor" />
       <MemberSignature Language="VB.NET" Value="Public Property BackSecondaryColor As Color" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Drawing::Color BackSecondaryColor { System::Drawing::Color get(); void set(System::Drawing::Color value); };" />
+      <MemberSignature Language="F#" Value="member this.BackSecondaryColor : System.Drawing.Color with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.BackSecondaryColor" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -542,7 +596,7 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
         </Attribute>
         <Attribute>
@@ -551,8 +605,14 @@
         <Attribute>
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -589,6 +649,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.BorderColor" />
       <MemberSignature Language="VB.NET" Value="Public Property BorderColor As Color" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Drawing::Color BorderColor { System::Drawing::Color get(); void set(System::Drawing::Color value); };" />
+      <MemberSignature Language="F#" Value="member this.BorderColor : System.Drawing.Color with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.BorderColor" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -601,7 +662,7 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
         </Attribute>
         <Attribute>
@@ -610,8 +671,14 @@
         <Attribute>
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -636,6 +703,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.BorderDashStyle" />
       <MemberSignature Language="VB.NET" Value="Public Property BorderDashStyle As ChartDashStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::DataVisualization::Charting::ChartDashStyle BorderDashStyle { System::Web::UI::DataVisualization::Charting::ChartDashStyle get(); void set(System::Web::UI::DataVisualization::Charting::ChartDashStyle value); };" />
+      <MemberSignature Language="F#" Value="member this.BorderDashStyle : System.Web.UI.DataVisualization.Charting.ChartDashStyle with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.BorderDashStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -651,8 +719,11 @@
         <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -679,6 +750,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.BorderWidth" />
       <MemberSignature Language="VB.NET" Value="Public Property BorderWidth As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int BorderWidth { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.BorderWidth : int with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.BorderWidth" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -694,8 +766,11 @@
         <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -720,17 +795,24 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.CellColumns" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CellColumns As LegendCellColumnCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::DataVisualization::Charting::LegendCellColumnCollection ^ CellColumns { System::Web::UI::DataVisualization::Charting::LegendCellColumnCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CellColumns : System.Web.UI.DataVisualization.Charting.LegendCellColumnCollection" Usage="System.Web.UI.DataVisualization.Charting.Legend.CellColumns" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.LegendCellColumnCollectionEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.LegendCellColumnCollectionEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -748,6 +830,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.CustomItems" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CustomItems As LegendItemsCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::DataVisualization::Charting::LegendItemsCollection ^ CustomItems { System::Web::UI::DataVisualization::Charting::LegendItemsCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CustomItems : System.Web.UI.DataVisualization.Charting.LegendItemsCollection" Usage="System.Web.UI.DataVisualization.Charting.Legend.CustomItems" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -757,14 +840,20 @@
         <Attribute>
           <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.LegendItemCollectionEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.LegendItemCollectionEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -793,6 +882,7 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.Legend.Dispose(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub Dispose (disposing As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void Dispose(bool disposing);" />
+      <MemberSignature Language="F#" Value="override this.Dispose : bool -&gt; unit" Usage="legend.Dispose disposing" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -817,6 +907,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.DockedToChartArea" />
       <MemberSignature Language="VB.NET" Value="Public Property DockedToChartArea As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DockedToChartArea { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DockedToChartArea : string with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.DockedToChartArea" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -835,8 +926,11 @@
         <Attribute>
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.LegendAreaNameConverter))</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -854,6 +948,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.Docking" />
       <MemberSignature Language="VB.NET" Value="Public Property Docking As Docking" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::DataVisualization::Charting::Docking Docking { System::Web::UI::DataVisualization::Charting::Docking get(); void set(System::Web::UI::DataVisualization::Charting::Docking value); };" />
+      <MemberSignature Language="F#" Value="member this.Docking : System.Web.UI.DataVisualization.Charting.Docking with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.Docking" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -869,8 +964,11 @@
         <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -897,6 +995,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.Enabled" />
       <MemberSignature Language="VB.NET" Value="Public Property Enabled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Enabled { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Enabled : bool with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.Enabled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -915,8 +1014,11 @@
         <Attribute>
           <AttributeName>System.ComponentModel.ParenthesizePropertyName(true)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -942,6 +1044,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.Font" />
       <MemberSignature Language="VB.NET" Value="Public Property Font As Font" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Drawing::Font ^ Font { System::Drawing::Font ^ get(); void set(System::Drawing::Font ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Font : System.Drawing.Font with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.Font" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -957,8 +1060,11 @@
         <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -986,6 +1092,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.ForeColor" />
       <MemberSignature Language="VB.NET" Value="Public Property ForeColor As Color" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Drawing::Color ForeColor { System::Drawing::Color get(); void set(System::Drawing::Color value); };" />
+      <MemberSignature Language="F#" Value="member this.ForeColor : System.Drawing.Color with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.ForeColor" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -998,7 +1105,7 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Black")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
         </Attribute>
         <Attribute>
@@ -1007,8 +1114,14 @@
         <Attribute>
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1033,6 +1146,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.HeaderSeparator" />
       <MemberSignature Language="VB.NET" Value="Public Property HeaderSeparator As LegendSeparatorStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::DataVisualization::Charting::LegendSeparatorStyle HeaderSeparator { System::Web::UI::DataVisualization::Charting::LegendSeparatorStyle get(); void set(System::Web::UI::DataVisualization::Charting::LegendSeparatorStyle value); };" />
+      <MemberSignature Language="F#" Value="member this.HeaderSeparator : System.Web.UI.DataVisualization.Charting.LegendSeparatorStyle with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.HeaderSeparator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -1041,6 +1155,9 @@
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Web.UI.DataVisualization.Charting.LegendSeparatorStyle), "None")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1058,6 +1175,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.HeaderSeparatorColor" />
       <MemberSignature Language="VB.NET" Value="Public Property HeaderSeparatorColor As Color" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Drawing::Color HeaderSeparatorColor { System::Drawing::Color get(); void set(System::Drawing::Color value); };" />
+      <MemberSignature Language="F#" Value="member this.HeaderSeparatorColor : System.Drawing.Color with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.HeaderSeparatorColor" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -1067,11 +1185,17 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Black")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1089,6 +1213,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.InsideChartArea" />
       <MemberSignature Language="VB.NET" Value="Public Property InsideChartArea As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ InsideChartArea { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.InsideChartArea : string with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.InsideChartArea" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -1105,16 +1230,16 @@
           <AttributeName>System.ComponentModel.DefaultValue("NotSet")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
-        </Attribute>
-        <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
-        </Attribute>
-        <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.LegendAreaNameConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1132,6 +1257,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.InterlacedRows" />
       <MemberSignature Language="VB.NET" Value="Public Property InterlacedRows As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool InterlacedRows { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.InterlacedRows : bool with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.InterlacedRows" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -1140,6 +1266,9 @@
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1164,6 +1293,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.InterlacedRowsColor" />
       <MemberSignature Language="VB.NET" Value="Public Property InterlacedRowsColor As Color" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Drawing::Color InterlacedRowsColor { System::Drawing::Color get(); void set(System::Drawing::Color value); };" />
+      <MemberSignature Language="F#" Value="member this.InterlacedRowsColor : System.Drawing.Color with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.InterlacedRowsColor" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -1173,11 +1303,17 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1202,6 +1338,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.IsDockedInsideChartArea" />
       <MemberSignature Language="VB.NET" Value="Public Property IsDockedInsideChartArea As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsDockedInsideChartArea { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsDockedInsideChartArea : bool with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.IsDockedInsideChartArea" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -1217,8 +1354,11 @@
         <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1247,6 +1387,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.IsEquallySpacedItems" />
       <MemberSignature Language="VB.NET" Value="Public Property IsEquallySpacedItems As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsEquallySpacedItems { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsEquallySpacedItems : bool with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.IsEquallySpacedItems" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -1262,8 +1403,11 @@
         <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1282,6 +1426,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.IsTextAutoFit" />
       <MemberSignature Language="VB.NET" Value="Public Property IsTextAutoFit As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsTextAutoFit { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsTextAutoFit : bool with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.IsTextAutoFit" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -1297,8 +1442,11 @@
         <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1317,6 +1465,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.ItemColumnSeparator" />
       <MemberSignature Language="VB.NET" Value="Public Property ItemColumnSeparator As LegendSeparatorStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::DataVisualization::Charting::LegendSeparatorStyle ItemColumnSeparator { System::Web::UI::DataVisualization::Charting::LegendSeparatorStyle get(); void set(System::Web::UI::DataVisualization::Charting::LegendSeparatorStyle value); };" />
+      <MemberSignature Language="F#" Value="member this.ItemColumnSeparator : System.Web.UI.DataVisualization.Charting.LegendSeparatorStyle with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.ItemColumnSeparator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -1325,6 +1474,9 @@
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Web.UI.DataVisualization.Charting.LegendSeparatorStyle), "None")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1342,6 +1494,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.ItemColumnSeparatorColor" />
       <MemberSignature Language="VB.NET" Value="Public Property ItemColumnSeparatorColor As Color" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Drawing::Color ItemColumnSeparatorColor { System::Drawing::Color get(); void set(System::Drawing::Color value); };" />
+      <MemberSignature Language="F#" Value="member this.ItemColumnSeparatorColor : System.Drawing.Color with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.ItemColumnSeparatorColor" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -1351,11 +1504,17 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Black")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1373,6 +1532,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.ItemColumnSpacing" />
       <MemberSignature Language="VB.NET" Value="Public Property ItemColumnSpacing As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ItemColumnSpacing { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.ItemColumnSpacing : int with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.ItemColumnSpacing" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -1381,6 +1541,9 @@
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(50)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1405,6 +1568,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.LegendItemOrder" />
       <MemberSignature Language="VB.NET" Value="Public Property LegendItemOrder As LegendItemOrder" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::DataVisualization::Charting::LegendItemOrder LegendItemOrder { System::Web::UI::DataVisualization::Charting::LegendItemOrder get(); void set(System::Web::UI::DataVisualization::Charting::LegendItemOrder value); };" />
+      <MemberSignature Language="F#" Value="member this.LegendItemOrder : System.Web.UI.DataVisualization.Charting.LegendItemOrder with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.LegendItemOrder" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -1413,6 +1577,9 @@
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1437,6 +1604,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.LegendStyle" />
       <MemberSignature Language="VB.NET" Value="Public Property LegendStyle As LegendStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::DataVisualization::Charting::LegendStyle LegendStyle { System::Web::UI::DataVisualization::Charting::LegendStyle get(); void set(System::Web::UI::DataVisualization::Charting::LegendStyle value); };" />
+      <MemberSignature Language="F#" Value="member this.LegendStyle : System.Web.UI.DataVisualization.Charting.LegendStyle with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.LegendStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -1455,8 +1623,11 @@
         <Attribute>
           <AttributeName>System.ComponentModel.ParenthesizePropertyName(true)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1489,6 +1660,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.MaximumAutoSize" />
       <MemberSignature Language="VB.NET" Value="Public Property MaximumAutoSize As Single" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property float MaximumAutoSize { float get(); void set(float value); };" />
+      <MemberSignature Language="F#" Value="member this.MaximumAutoSize : single with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.MaximumAutoSize" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -1497,6 +1669,9 @@
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(50)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1521,6 +1696,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.Name" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Name { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -1534,7 +1710,7 @@
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1552,6 +1728,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.Position" />
       <MemberSignature Language="VB.NET" Value="Public Property Position As ElementPosition" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::DataVisualization::Charting::ElementPosition ^ Position { System::Web::UI::DataVisualization::Charting::ElementPosition ^ get(); void set(System::Web::UI::DataVisualization::Charting::ElementPosition ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Position : System.Web.UI.DataVisualization.Charting.ElementPosition with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.Position" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -1568,7 +1745,7 @@
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.ElementPositionConverter))</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1595,6 +1772,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.ShadowColor" />
       <MemberSignature Language="VB.NET" Value="Public Property ShadowColor As Color" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Drawing::Color ShadowColor { System::Drawing::Color get(); void set(System::Drawing::Color value); };" />
+      <MemberSignature Language="F#" Value="member this.ShadowColor : System.Drawing.Color with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.ShadowColor" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -1607,7 +1785,7 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "128, 0, 0, 0")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
         </Attribute>
         <Attribute>
@@ -1616,8 +1794,14 @@
         <Attribute>
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1646,6 +1830,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.ShadowOffset" />
       <MemberSignature Language="VB.NET" Value="Public Property ShadowOffset As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ShadowOffset { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.ShadowOffset : int with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.ShadowOffset" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -1661,8 +1846,11 @@
         <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1687,6 +1875,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.TableStyle" />
       <MemberSignature Language="VB.NET" Value="Public Property TableStyle As LegendTableStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::DataVisualization::Charting::LegendTableStyle TableStyle { System::Web::UI::DataVisualization::Charting::LegendTableStyle get(); void set(System::Web::UI::DataVisualization::Charting::LegendTableStyle value); };" />
+      <MemberSignature Language="F#" Value="member this.TableStyle : System.Web.UI.DataVisualization.Charting.LegendTableStyle with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.TableStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -1705,8 +1894,11 @@
         <Attribute>
           <AttributeName>System.ComponentModel.ParenthesizePropertyName(true)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1731,6 +1923,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.TextWrapThreshold" />
       <MemberSignature Language="VB.NET" Value="Public Property TextWrapThreshold As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int TextWrapThreshold { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.TextWrapThreshold : int with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.TextWrapThreshold" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -1739,6 +1932,9 @@
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(25)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1751,7 +1947,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- When the legend text exceeds the value specified by this property, text will be automatically wrapped when the next whitespace character is encountered. Text will not be wrapped if there are no whitespace characters in the text.  
+ When the legend text exceeds the value specified by this property, text will be automatically wrapped when the next white-space character is encountered. Text will not be wrapped if there are no white-space characters in the text.  
   
  Set the <xref:System.Web.UI.DataVisualization.Charting.Legend.TextWrapThreshold%2A> property to zero to disable the feature.  
   
@@ -1765,6 +1961,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.Title" />
       <MemberSignature Language="VB.NET" Value="Public Property Title As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Title { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Title : string with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.Title" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -1773,6 +1970,9 @@
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1790,6 +1990,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.TitleAlignment" />
       <MemberSignature Language="VB.NET" Value="Public Property TitleAlignment As StringAlignment" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Drawing::StringAlignment TitleAlignment { System::Drawing::StringAlignment get(); void set(System::Drawing::StringAlignment value); };" />
+      <MemberSignature Language="F#" Value="member this.TitleAlignment : System.Drawing.StringAlignment with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.TitleAlignment" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -1798,6 +1999,9 @@
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.StringAlignment), "Center")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1815,6 +2019,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.TitleBackColor" />
       <MemberSignature Language="VB.NET" Value="Public Property TitleBackColor As Color" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Drawing::Color TitleBackColor { System::Drawing::Color get(); void set(System::Drawing::Color value); };" />
+      <MemberSignature Language="F#" Value="member this.TitleBackColor : System.Drawing.Color with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.TitleBackColor" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -1824,11 +2029,17 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1846,6 +2057,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.TitleFont" />
       <MemberSignature Language="VB.NET" Value="Public Property TitleFont As Font" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Drawing::Font ^ TitleFont { System::Drawing::Font ^ get(); void set(System::Drawing::Font ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.TitleFont : System.Drawing.Font with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.TitleFont" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -1854,6 +2066,9 @@
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Font), "Microsoft Sans Serif, 8pt, style=Bold")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1880,6 +2095,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.TitleForeColor" />
       <MemberSignature Language="VB.NET" Value="Public Property TitleForeColor As Color" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Drawing::Color TitleForeColor { System::Drawing::Color get(); void set(System::Drawing::Color value); };" />
+      <MemberSignature Language="F#" Value="member this.TitleForeColor : System.Drawing.Color with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.TitleForeColor" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -1889,11 +2105,17 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Black")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1911,6 +2133,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.TitleSeparator" />
       <MemberSignature Language="VB.NET" Value="Public Property TitleSeparator As LegendSeparatorStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::DataVisualization::Charting::LegendSeparatorStyle TitleSeparator { System::Web::UI::DataVisualization::Charting::LegendSeparatorStyle get(); void set(System::Web::UI::DataVisualization::Charting::LegendSeparatorStyle value); };" />
+      <MemberSignature Language="F#" Value="member this.TitleSeparator : System.Web.UI.DataVisualization.Charting.LegendSeparatorStyle with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.TitleSeparator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -1919,6 +2142,9 @@
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Web.UI.DataVisualization.Charting.LegendSeparatorStyle), "None")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1936,6 +2162,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Legend.TitleSeparatorColor" />
       <MemberSignature Language="VB.NET" Value="Public Property TitleSeparatorColor As Color" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Drawing::Color TitleSeparatorColor { System::Drawing::Color get(); void set(System::Drawing::Color value); };" />
+      <MemberSignature Language="F#" Value="member this.TitleSeparatorColor : System.Drawing.Color with get, set" Usage="System.Web.UI.DataVisualization.Charting.Legend.TitleSeparatorColor" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -1945,11 +2172,17 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Black")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

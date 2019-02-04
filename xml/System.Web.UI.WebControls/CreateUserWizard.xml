@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.CreateUserWizard" />
   <TypeSignature Language="VB.NET" Value="Public Class CreateUserWizard&#xA;Inherits Wizard" />
   <TypeSignature Language="C++ CLI" Value="public ref class CreateUserWizard : System::Web::UI::WebControls::Wizard" />
+  <TypeSignature Language="F#" Value="type CreateUserWizard = class&#xA;    inherit Wizard" />
   <AssemblyInfo>
     <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -19,11 +21,14 @@
     <Attribute>
       <AttributeName>System.ComponentModel.DefaultEvent("CreatedUser")</AttributeName>
     </Attribute>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
       <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.CreateUserWizardDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
     </Attribute>
     <Attribute>
       <AttributeName>System.Web.UI.ToolboxData("&lt;{0}:CreateUserWizard runat="server"&gt; &lt;WizardSteps&gt; &lt;asp:CreateUserWizardStep runat="server"/&gt; &lt;asp:CompleteWizardStep runat="server"/&gt; &lt;/WizardSteps&gt; &lt;/{0}:CreateUserWizard&gt;")</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.CreateUserWizardDesigner, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -53,7 +58,7 @@
  The <xref:System.Web.UI.WebControls.CreateUserWizard> control provides the user interface for the <xref:System.Web.Security.MembershipProvider> object that communicates with your Web site's user data store to create new user accounts in the data store. The <xref:System.Web.UI.WebControls.CreateUserWizard> relies on the <xref:System.Web.Security.MembershipProvider> to create the user and disable them if necessary.  
   
 > [!NOTE]
->  If you are not familiar with ASP.NET login controls, you might find it helpful to read [ASP.NET Login Controls Overview](http://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d) before continuing. For a list of other topics related to login controls and membership, see [Managing Users by Using Membership](http://msdn.microsoft.com/library/824c3a24-f0af-427c-a652-0d2d1e9397cd).  
+>  If you are not familiar with ASP.NET login controls, you might find it helpful to read [ASP.NET Login Controls Overview](https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)) before continuing. For a list of other topics related to login controls and membership, see [Managing Users by Using Membership](https://msdn.microsoft.com/library/824c3a24-f0af-427c-a652-0d2d1e9397cd).  
   
  By default, the <xref:System.Web.UI.WebControls.CreateUserWizard> control will accept a user name and password from the Web site visitor. Based on the requirements of the site's <xref:System.Web.Security.MembershipProvider> object, the <xref:System.Web.UI.WebControls.CreateUserWizard> control will optionally accept an email address, represented by the <xref:System.Web.UI.WebControls.CreateUserWizard.Email%2A> property, and a password recovery confirmation question and answer, represented by <xref:System.Web.UI.WebControls.CreateUserWizard.Question%2A> and <xref:System.Web.UI.WebControls.CreateUserWizard.Answer%2A>. For a table showing all required and optional controls for <xref:System.Web.UI.WebControls.CreateUserWizard>, see <xref:System.Web.UI.WebControls.CreateUserWizard.CreateUserStep%2A>.  
   
@@ -119,7 +124,7 @@
   
 <a name="Accessibility"></a>   
 ## Accessibility  
- For information about how to configure this control so that it generates markup that conforms to accessibility standards, see [Accessibility in Visual Studio and ASP.NET](http://msdn.microsoft.com/library/7e3ce9c4-6b7d-4fb1-94b5-72cf2a44fe13) and [ASP.NET Controls and Accessibility](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+ For information about how to configure this control so that it generates markup that conforms to accessibility standards, see [Accessibility in Visual Studio and ASP.NET](https://msdn.microsoft.com/library/7e3ce9c4-6b7d-4fb1-94b5-72cf2a44fe13) and [ASP.NET Controls and Accessibility](https://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
   
 <a name="DeclarativeSyntax"></a>   
 ## Declarative Syntax  
@@ -370,7 +375,7 @@
  The second code example shows how to use the <xref:System.Web.UI.WebControls.CreateUserWizard> control with the default templates.  
   
 > [!IMPORTANT]
->  This example has a text box that accepts user input, which is a potential security threat. By default, ASP.NET Web pages validate that user input does not include script or HTML elements. For more information, see [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+>  This example has a text box that accepts user input, which is a potential security threat. By default, ASP.NET Web pages validate that user input does not include script or HTML elements. For more information, see [Script Exploits Overview](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
   
  [!code-aspx-csharp[CreateUserWizardFullTemplate#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CreateUserWizardFullTemplate/CS/createuserwizardfulltemplatecs.aspx#1)]
  [!code-aspx-vb[CreateUserWizardFullTemplate#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CreateUserWizardFullTemplate/VB/createuserwizardfulltemplatevb.aspx#1)]  
@@ -396,7 +401,7 @@
  `</configuration>`  
   
 > [!IMPORTANT]
->  This example has a text box that accepts user input, which is a potential security threat. By default, ASP.NET Web pages validate that user input does not include script or HTML elements. For more information, see [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+>  This example has a text box that accepts user input, which is a potential security threat. By default, ASP.NET Web pages validate that user input does not include script or HTML elements. For more information, see [Script Exploits Overview](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
   
  [!code-aspx-csharp[CreateUserWizardCreatedUser#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CreateUserWizardCreatedUser/CS/createuserwizardcreatedusercs.aspx#1)]
  [!code-aspx-vb[CreateUserWizardCreatedUser#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CreateUserWizardCreatedUser/VB/createuserwizardcreateduservb.aspx#1)]  
@@ -406,6 +411,10 @@
     <altmember cref="T:System.Web.UI.WebControls.Wizard" />
     <altmember cref="T:System.Web.UI.WebControls.CreateUserWizardStep" />
     <altmember cref="T:System.Web.UI.WebControls.WizardStep" />
+    <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">ASP.NET Login Controls Overview</related>
+    <related type="Article" href="https://msdn.microsoft.com/library/d85075bc-9c1a-4453-8a0c-539b10853c9c">Securing Login Controls</related>
+    <related type="Article" href="https://msdn.microsoft.com/library/c0cc4b96-8d75-41f7-977a-4d75098d7a9e">Wizard Web Server Control Overview</related>
+    <related type="Article" href="https://msdn.microsoft.com/library/824c3a24-f0af-427c-a652-0d2d1e9397cd">Managing Users By Using Membership</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -417,12 +426,14 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.Web.UI.WebControls.CreateUserWizard" /> class.</summary>
         <remarks>To be added.</remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="ActiveStepIndex">
@@ -431,9 +442,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.ActiveStepIndex" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Property ActiveStepIndex As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property int ActiveStepIndex { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.ActiveStepIndex : int with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.ActiveStepIndex" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -455,6 +468,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="Answer">
@@ -463,9 +477,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.Answer" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property Answer As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Answer { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Answer : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.Answer" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -477,6 +493,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -493,9 +512,9 @@
   
  If an answer is required by the membership provider specified in the <xref:System.Web.UI.WebControls.CreateUserWizard.MembershipProvider%2A> property, then the answer text box will appear on the <xref:System.Web.UI.WebControls.CreateUserWizard> control. Each text box displayed on the <xref:System.Web.UI.WebControls.CreateUserWizard> control has a <xref:System.Web.UI.WebControls.RequiredFieldValidator> object associated with it.  
   
- This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+ This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](https://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
   
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
    
   
@@ -516,6 +535,7 @@
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.AnswerLabelText" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.AnswerRequiredErrorMessage" />
         <altmember cref="E:System.Web.UI.WebControls.CreateUserWizard.SendingMail" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="AnswerLabelText">
@@ -524,9 +544,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.AnswerLabelText" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property AnswerLabelText As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ AnswerLabelText { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.AnswerLabelText : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.AnswerLabelText" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -544,11 +566,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
  ]]></format>
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.Answer" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="AnswerRequiredErrorMessage">
@@ -557,9 +580,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.AnswerRequiredErrorMessage" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property AnswerRequiredErrorMessage As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ AnswerRequiredErrorMessage { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.AnswerRequiredErrorMessage : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.AnswerRequiredErrorMessage" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -577,11 +602,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
  ]]></format>
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.Answer" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="AutoGeneratePassword">
@@ -590,9 +616,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.AutoGeneratePassword" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property AutoGeneratePassword As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool AutoGeneratePassword { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.AutoGeneratePassword : bool with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.AutoGeneratePassword" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -611,7 +639,7 @@
         <value>
           <see langword="true" /> to automatically generate a password for the new user account; otherwise, <see langword="false" />. The default value is <see langword="false" />.  
   
- This property cannot be set by themes or style sheet themes. For more information, see <see cref="T:System.Web.UI.ThemeableAttribute" /> and [ASP.NET Themes and Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).</value>
+ This property cannot be set by themes or style sheet themes. For more information, see <see cref="T:System.Web.UI.ThemeableAttribute" /> and [ASP.NET Themes and Skins](https://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -623,6 +651,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="CompleteStep">
@@ -631,9 +660,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.CompleteStep" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CompleteStep As CompleteWizardStep" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::CompleteWizardStep ^ CompleteStep { System::Web::UI::WebControls::CompleteWizardStep ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CompleteStep : System.Web.UI.WebControls.CompleteWizardStep" Usage="System.Web.UI.WebControls.CreateUserWizard.CompleteStep" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -641,7 +672,7 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -659,6 +690,8 @@
  ]]></format>
         </remarks>
         <altmember cref="T:System.Web.UI.WebControls.CompleteWizardStep" />
+        <related type="Article" href="https://msdn.microsoft.com/library/c0cc4b96-8d75-41f7-977a-4d75098d7a9e">Wizard Web Server Control Overview</related>
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="CompleteSuccessText">
@@ -667,9 +700,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.CompleteSuccessText" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property CompleteSuccessText As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ CompleteSuccessText { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.CompleteSuccessText : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.CompleteSuccessText" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -689,7 +724,7 @@
 ## Remarks  
  Use the <xref:System.Web.UI.WebControls.CreateUserWizard.CompleteSuccessText%2A> property to change the message that is displayed when a user account is successfully created.  
   
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
    
   
@@ -701,6 +736,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="CompleteSuccessTextStyle">
@@ -709,9 +745,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.CompleteSuccessTextStyle" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CompleteSuccessTextStyle As TableItemStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::TableItemStyle ^ CompleteSuccessTextStyle { System::Web::UI::WebControls::TableItemStyle ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CompleteSuccessTextStyle : System.Web.UI.WebControls.TableItemStyle" Usage="System.Web.UI.WebControls.CreateUserWizard.CompleteSuccessTextStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -719,13 +757,13 @@
           <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
-        </Attribute>
-        <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -766,6 +804,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="ConfirmPassword">
@@ -774,9 +813,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.ConfirmPassword" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property ConfirmPassword As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ ConfirmPassword { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ConfirmPassword : string" Usage="System.Web.UI.WebControls.CreateUserWizard.ConfirmPassword" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -784,7 +825,7 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -802,6 +843,7 @@
  ]]></format>
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.Password" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="ConfirmPasswordCompareErrorMessage">
@@ -810,9 +852,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.ConfirmPasswordCompareErrorMessage" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property ConfirmPasswordCompareErrorMessage As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ ConfirmPasswordCompareErrorMessage { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ConfirmPasswordCompareErrorMessage : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.ConfirmPasswordCompareErrorMessage" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -830,12 +874,13 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
  ]]></format>
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.Password" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.ConfirmPassword" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="ConfirmPasswordLabelText">
@@ -844,9 +889,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.ConfirmPasswordLabelText" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property ConfirmPasswordLabelText As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ ConfirmPasswordLabelText { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ConfirmPasswordLabelText : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.ConfirmPasswordLabelText" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -864,11 +911,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
  ]]></format>
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.ConfirmPassword" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="ConfirmPasswordRequiredErrorMessage">
@@ -877,9 +925,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.ConfirmPasswordRequiredErrorMessage" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property ConfirmPasswordRequiredErrorMessage As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ ConfirmPasswordRequiredErrorMessage { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ConfirmPasswordRequiredErrorMessage : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.ConfirmPasswordRequiredErrorMessage" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -897,11 +947,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
  ]]></format>
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.ConfirmPassword" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="ContinueButtonClick">
@@ -910,9 +961,11 @@
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.CreateUserWizard.ContinueButtonClick" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ContinueButtonClick As EventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ ContinueButtonClick;" />
+      <MemberSignature Language="F#" Value="member this.ContinueButtonClick : EventHandler " Usage="member this.ContinueButtonClick : System.EventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -926,11 +979,12 @@
 ## Remarks  
  The <xref:System.Web.UI.WebControls.CreateUserWizard.ContinueButtonClick> event is raised when the **Continue** button on the <xref:System.Web.UI.WebControls.CreateUserWizard> control is clicked. Use the <xref:System.Web.UI.WebControls.CreateUserWizard.ContinueButtonClick> event to provide additional processing when the **Continue** button is clicked.  
   
- For more information about handling events, see [NIB: Consuming Events](http://msdn.microsoft.com/library/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+ For more information about how to handle events, see [Handling and Raising Events](~/docs/standard/events/index.md).  
   
  ]]></format>
         </remarks>
         <altmember cref="M:System.Web.UI.WebControls.CreateUserWizard.OnContinueButtonClick(System.EventArgs)" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="ContinueButtonCommandName">
@@ -939,9 +993,11 @@
       <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.CreateUserWizard.ContinueButtonCommandName" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly ContinueButtonCommandName As String " />
       <MemberSignature Language="C++ CLI" Value="public: static initonly System::String ^ ContinueButtonCommandName;" />
+      <MemberSignature Language="F#" Value=" staticval mutable ContinueButtonCommandName : string" Usage="System.Web.UI.WebControls.CreateUserWizard.ContinueButtonCommandName" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -961,6 +1017,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="ContinueButtonImageUrl">
@@ -969,20 +1026,25 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.ContinueButtonImageUrl" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property ContinueButtonImageUrl As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ ContinueButtonImageUrl { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ContinueButtonImageUrl : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.ContinueButtonImageUrl" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1002,6 +1064,7 @@
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.ContinueButtonText" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.ContinueButtonType" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.ContinueButtonStyle" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="ContinueButtonStyle">
@@ -1010,9 +1073,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.ContinueButtonStyle" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContinueButtonStyle As Style" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::Style ^ ContinueButtonStyle { System::Web::UI::WebControls::Style ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ContinueButtonStyle : System.Web.UI.WebControls.Style" Usage="System.Web.UI.WebControls.CreateUserWizard.ContinueButtonStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1020,13 +1085,13 @@
           <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
-        </Attribute>
-        <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1070,6 +1135,7 @@
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.ContinueButtonText" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.ContinueButtonType" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.ContinueButtonImageUrl" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="ContinueButtonText">
@@ -1078,9 +1144,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.ContinueButtonText" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property ContinueButtonText As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ ContinueButtonText { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ContinueButtonText : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.ContinueButtonText" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1109,13 +1177,14 @@
  <xref:System.Web.UI.WebControls.ButtonType.Link>  
  Text appears as a link.  
   
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
  ]]></format>
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.ContinueButtonType" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.ContinueButtonStyle" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.ContinueButtonImageUrl" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="ContinueButtonType">
@@ -1124,9 +1193,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.ContinueButtonType" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property ContinueButtonType As ButtonType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Web::UI::WebControls::ButtonType ContinueButtonType { System::Web::UI::WebControls::ButtonType get(); void set(System::Web::UI::WebControls::ButtonType value); };" />
+      <MemberSignature Language="F#" Value="member this.ContinueButtonType : System.Web.UI.WebControls.ButtonType with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.ContinueButtonType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1145,6 +1216,7 @@
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.ContinueButtonText" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.ContinueButtonStyle" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.ContinueButtonImageUrl" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="ContinueDestinationPageUrl">
@@ -1153,16 +1225,18 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.ContinueDestinationPageUrl" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property ContinueDestinationPageUrl As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ ContinueDestinationPageUrl { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ContinueDestinationPageUrl : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.ContinueDestinationPageUrl" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.UrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
         <Attribute>
@@ -1170,6 +1244,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.UrlEditor, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1186,7 +1263,7 @@
   
  When the <xref:System.Web.UI.WebControls.CreateUserWizard.ContinueDestinationPageUrl%2A> property is <xref:System.String.Empty> and the user clicks the **Continue** button, the page is refreshed and any values on the form are cleared.  
   
- This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+ This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](https://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
   
    
   
@@ -1198,6 +1275,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="CreateChildControls">
@@ -1206,9 +1284,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CreateUserWizard.CreateChildControls" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub CreateChildControls ()" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void CreateChildControls();" />
+      <MemberSignature Language="F#" Value="override this.CreateChildControls : unit -&gt; unit" Usage="createUserWizard.CreateChildControls " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1220,15 +1300,40 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="CreateControlHierarchy">
+      <MemberSignature Language="C#" Value="protected override void CreateControlHierarchy ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CreateControlHierarchy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CreateUserWizard.CreateControlHierarchy" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub CreateControlHierarchy ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void CreateControlHierarchy();" />
+      <MemberSignature Language="F#" Value="override this.CreateControlHierarchy : unit -&gt; unit" Usage="createUserWizard.CreateControlHierarchy " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>This member overrides <see cref="M:System.Web.UI.WebControls.Wizard.CreateControlHierarchy" />, and more complete documentation might be available in that topic.
+
+Creates the hierarchy of child controls that make up the control.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="CreatedUser">
       <MemberSignature Language="C#" Value="public event EventHandler CreatedUser;" />
       <MemberSignature Language="ILAsm" Value=".event class System.EventHandler CreatedUser" />
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.CreateUserWizard.CreatedUser" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event CreatedUser As EventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ CreatedUser;" />
+      <MemberSignature Language="F#" Value="member this.CreatedUser : EventHandler " Usage="member this.CreatedUser : System.EventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1277,11 +1382,12 @@
  [!code-aspx-vb[CreateUserWizardCreatedUser#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CreateUserWizardCreatedUser/VB/createuserwizardcreateduservb.aspx#1)]  
   
 > [!IMPORTANT]
->  This example has a text box that accepts user input, which is a potential security threat. By default, ASP.NET Web pages validate that user input does not include script or HTML elements. For more information, see [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+>  This example has a text box that accepts user input, which is a potential security threat. By default, ASP.NET Web pages validate that user input does not include script or HTML elements. For more information, see [Script Exploits Overview](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
   
  ]]></format>
         </remarks>
         <altmember cref="M:System.Web.UI.WebControls.CreateUserWizard.OnCreatedUser(System.EventArgs)" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="CreateUserButtonImageUrl">
@@ -1290,20 +1396,25 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.CreateUserButtonImageUrl" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property CreateUserButtonImageUrl As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ CreateUserButtonImageUrl { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.CreateUserButtonImageUrl : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.CreateUserButtonImageUrl" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1323,6 +1434,7 @@
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.CreateUserButtonStyle" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.CreateUserButtonText" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.CreateUserButtonType" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="CreateUserButtonStyle">
@@ -1331,9 +1443,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.CreateUserButtonStyle" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CreateUserButtonStyle As Style" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::Style ^ CreateUserButtonStyle { System::Web::UI::WebControls::Style ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CreateUserButtonStyle : System.Web.UI.WebControls.Style" Usage="System.Web.UI.WebControls.CreateUserWizard.CreateUserButtonStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1341,13 +1455,13 @@
           <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
-        </Attribute>
-        <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1391,6 +1505,7 @@
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.CreateUserButtonText" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.CreateUserButtonType" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.CreateUserButtonImageUrl" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="CreateUserButtonText">
@@ -1399,9 +1514,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.CreateUserButtonText" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property CreateUserButtonText As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ CreateUserButtonText { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.CreateUserButtonText : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.CreateUserButtonText" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1430,7 +1547,7 @@
  <xref:System.Web.UI.WebControls.ButtonType.Link>  
  Text appears as a link.  
   
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
  ]]></format>
         </remarks>
@@ -1438,6 +1555,7 @@
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.CreateUserButtonType" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.CreateUserButtonStyle" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.CreateUserButtonImageUrl" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="CreateUserButtonType">
@@ -1446,9 +1564,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.CreateUserButtonType" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property CreateUserButtonType As ButtonType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Web::UI::WebControls::ButtonType CreateUserButtonType { System::Web::UI::WebControls::ButtonType get(); void set(System::Web::UI::WebControls::ButtonType value); };" />
+      <MemberSignature Language="F#" Value="member this.CreateUserButtonType : System.Web.UI.WebControls.ButtonType with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.CreateUserButtonType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1467,6 +1587,7 @@
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.CreateUserButtonText" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.CreateUserButtonStyle" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.CreateUserButtonImageUrl" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="CreateUserError">
@@ -1475,9 +1596,11 @@
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.CreateUserWizard.CreateUserError" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event CreateUserError As CreateUserErrorEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Web::UI::WebControls::CreateUserErrorEventHandler ^ CreateUserError;" />
+      <MemberSignature Language="F#" Value="member this.CreateUserError : System.Web.UI.WebControls.CreateUserErrorEventHandler " Usage="member this.CreateUserError : System.Web.UI.WebControls.CreateUserErrorEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1493,13 +1616,14 @@
   
  The error handler is passed a <xref:System.Web.Security.MembershipCreateStatus> object that contains the details of the failure from the membership provider. For a list of the possible error conditions, see <xref:System.Web.Security.MembershipCreateStatus>.  
   
- For more information about handling events, see [NIB: Consuming Events](http://msdn.microsoft.com/library/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+ For more information about how to handle events, see [Handling and Raising Events](~/docs/standard/events/index.md).  
   
  ]]></format>
         </remarks>
         <altmember cref="M:System.Web.UI.WebControls.CreateUserWizard.OnCreateUserError(System.Web.UI.WebControls.CreateUserErrorEventArgs)" />
         <altmember cref="T:System.Web.Security.MembershipCreateStatus" />
         <altmember cref="T:System.Web.UI.WebControls.CreateUserErrorEventHandler" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="CreateUserStep">
@@ -1508,9 +1632,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.CreateUserStep" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CreateUserStep As CreateUserWizardStep" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::CreateUserWizardStep ^ CreateUserStep { System::Web::UI::WebControls::CreateUserWizardStep ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CreateUserStep : System.Web.UI.WebControls.CreateUserWizardStep" Usage="System.Web.UI.WebControls.CreateUserWizard.CreateUserStep" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1518,7 +1644,7 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1554,6 +1680,7 @@
  ]]></format>
         </remarks>
         <altmember cref="T:System.Web.UI.WebControls.CreateUserWizardStep" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="CreatingUser">
@@ -1562,9 +1689,11 @@
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.CreateUserWizard.CreatingUser" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event CreatingUser As LoginCancelEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Web::UI::WebControls::LoginCancelEventHandler ^ CreatingUser;" />
+      <MemberSignature Language="F#" Value="member this.CreatingUser : System.Web.UI.WebControls.LoginCancelEventHandler " Usage="member this.CreatingUser : System.Web.UI.WebControls.LoginCancelEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1580,7 +1709,7 @@
   
  Use the <xref:System.Web.UI.WebControls.CreateUserWizard.CreatingUser> event to establish defaults or modify the information entered by the user before passing the information to the membership provider.  
   
- For more information about handling events, see [NIB: Consuming Events](http://msdn.microsoft.com/library/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+ For more information about how to handle events, see [Handling and Raising Events](~/docs/standard/events/index.md).  
   
    
   
@@ -1593,6 +1722,7 @@
  ]]></format>
         </remarks>
         <altmember cref="M:System.Web.UI.WebControls.CreateUserWizard.OnCreatingUser(System.Web.UI.WebControls.LoginCancelEventArgs)" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="DisableCreatedUser">
@@ -1601,9 +1731,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.DisableCreatedUser" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property DisableCreatedUser As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool DisableCreatedUser { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.DisableCreatedUser : bool with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.DisableCreatedUser" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1629,11 +1761,12 @@
   
  When <xref:System.Web.UI.WebControls.CreateUserWizard.DisableCreatedUser%2A> is `true`, you should set the <xref:System.Web.UI.WebControls.CreateUserWizard.LoginCreatedUser%2A> property to `false` so that the <xref:System.Web.UI.WebControls.CreateUserWizard> does not attempt to log on the new user.  
   
- This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+ This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](https://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
   
  ]]></format>
         </remarks>
         <altmember cref="P:System.Web.Security.MembershipUser.IsApproved" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="DisplaySideBar">
@@ -1642,9 +1775,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.DisplaySideBar" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Property DisplaySideBar As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool DisplaySideBar { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.DisplaySideBar : bool with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.DisplaySideBar" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1660,6 +1795,7 @@
         <value>
           <see langword="true" /> if the sidebar area should be displayed for the <see cref="T:System.Web.UI.WebControls.CreateUserWizard" /> control; otherwise, <see langword="false" />. The default value is <see langword="false" />.</value>
         <remarks>To be added.</remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="DuplicateEmailErrorMessage">
@@ -1668,9 +1804,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.DuplicateEmailErrorMessage" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property DuplicateEmailErrorMessage As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ DuplicateEmailErrorMessage { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DuplicateEmailErrorMessage : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.DuplicateEmailErrorMessage" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1688,11 +1826,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
  ]]></format>
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.DuplicateUserNameErrorMessage" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="DuplicateUserNameErrorMessage">
@@ -1701,9 +1840,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.DuplicateUserNameErrorMessage" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property DuplicateUserNameErrorMessage As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ DuplicateUserNameErrorMessage { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DuplicateUserNameErrorMessage : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.DuplicateUserNameErrorMessage" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1721,11 +1862,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
  ]]></format>
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.DuplicateEmailErrorMessage" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="EditProfileIconUrl">
@@ -1734,20 +1876,25 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.EditProfileIconUrl" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property EditProfileIconUrl As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ EditProfileIconUrl { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.EditProfileIconUrl : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.EditProfileIconUrl" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1759,6 +1906,7 @@
         <remarks>To be added.</remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.EditProfileText" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.EditProfileUrl" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="EditProfileText">
@@ -1767,9 +1915,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.EditProfileText" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property EditProfileText As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ EditProfileText { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.EditProfileText : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.EditProfileText" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1790,12 +1940,13 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
  ]]></format>
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.EditProfileIconUrl" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.EditProfileUrl" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="EditProfileUrl">
@@ -1804,20 +1955,25 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.EditProfileUrl" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property EditProfileUrl As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ EditProfileUrl { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.EditProfileUrl : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.EditProfileUrl" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.UrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.UrlEditor, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1829,6 +1985,7 @@
         <remarks>To be added.</remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.EditProfileIconUrl" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.EditProfileText" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="Email">
@@ -1837,9 +1994,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.Email" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property Email As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Email { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Email : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.Email" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1864,6 +2023,7 @@
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.EmailLabelText" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.EmailRegularExpression" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.MembershipProvider" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="EmailLabelText">
@@ -1872,9 +2032,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.EmailLabelText" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property EmailLabelText As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ EmailLabelText { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.EmailLabelText : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.EmailLabelText" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1892,11 +2054,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
  ]]></format>
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.Email" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="EmailRegularExpression">
@@ -1905,9 +2068,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.EmailRegularExpression" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property EmailRegularExpression As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ EmailRegularExpression { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.EmailRegularExpression : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.EmailRegularExpression" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1929,7 +2094,7 @@
    
   
 ## Examples  
- The following code example assigns a regular expression to the <xref:System.Web.UI.WebControls.CreateUserWizard.EmailRegularExpression%2A> property to make sure that the user entered their email address in a valid format, such as **username@contoso.com**.  
+ The following code example assigns a regular expression to the <xref:System.Web.UI.WebControls.CreateUserWizard.EmailRegularExpression%2A> property to make sure that the user entered their email address in a valid format, such as **username\@contoso.com**.  
   
  [!code-aspx-csharp[CreateUserWizardEmailRegex#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CreateUserWizardEmailRegex/CS/createuserwizardemailregexcs.aspx#1)]
  [!code-aspx-vb[CreateUserWizardEmailRegex#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CreateUserWizardEmailRegex/VB/createuserwizardemailregexvb.aspx#1)]  
@@ -1937,6 +2102,8 @@
  ]]></format>
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.EmailRegularExpressionErrorMessage" />
+        <related type="Article" href="~/docs/standard/base-types/regular-expressions.md">.NET Framework Regular Expressions</related>
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="EmailRegularExpressionErrorMessage">
@@ -1945,9 +2112,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.EmailRegularExpressionErrorMessage" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property EmailRegularExpressionErrorMessage As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ EmailRegularExpressionErrorMessage { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.EmailRegularExpressionErrorMessage : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.EmailRegularExpressionErrorMessage" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1973,6 +2142,7 @@
  ]]></format>
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.EmailRegularExpression" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="EmailRequiredErrorMessage">
@@ -1981,9 +2151,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.EmailRequiredErrorMessage" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property EmailRequiredErrorMessage As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ EmailRequiredErrorMessage { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.EmailRequiredErrorMessage : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.EmailRequiredErrorMessage" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2001,11 +2173,12 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
  ]]></format>
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.Email" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="ErrorMessageStyle">
@@ -2014,9 +2187,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.ErrorMessageStyle" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ErrorMessageStyle As TableItemStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::TableItemStyle ^ ErrorMessageStyle { System::Web::UI::WebControls::TableItemStyle ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ErrorMessageStyle : System.Web.UI.WebControls.TableItemStyle" Usage="System.Web.UI.WebControls.CreateUserWizard.ErrorMessageStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2024,13 +2199,13 @@
           <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
-        </Attribute>
-        <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -2088,6 +2263,7 @@
         <altmember cref="M:System.Web.Security.MembershipProvider.CreateUser(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Object,System.Web.Security.MembershipCreateStatus@)" />
         <altmember cref="M:System.Web.UI.WebControls.CreateUserWizard.OnCreateUserError(System.Web.UI.WebControls.CreateUserErrorEventArgs)" />
         <altmember cref="T:System.Web.Security.MembershipCreateStatus" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="GetDesignModeState">
@@ -2096,9 +2272,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CreateUserWizard.GetDesignModeState" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetDesignModeState () As IDictionary" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Collections::IDictionary ^ GetDesignModeState();" />
+      <MemberSignature Language="F#" Value="override this.GetDesignModeState : unit -&gt; System.Collections.IDictionary" Usage="createUserWizard.GetDesignModeState " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2117,20 +2295,25 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.HelpPageIconUrl" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property HelpPageIconUrl As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ HelpPageIconUrl { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.HelpPageIconUrl : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.HelpPageIconUrl" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -2142,6 +2325,7 @@
         <remarks>To be added.</remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.HelpPageUrl" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.HelpPageText" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="HelpPageText">
@@ -2150,9 +2334,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.HelpPageText" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property HelpPageText As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ HelpPageText { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.HelpPageText : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.HelpPageText" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2173,12 +2359,13 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
  ]]></format>
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.HelpPageIconUrl" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.HelpPageUrl" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="HelpPageUrl">
@@ -2187,20 +2374,25 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.HelpPageUrl" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property HelpPageUrl As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ HelpPageUrl { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.HelpPageUrl : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.HelpPageUrl" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.UrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.UrlEditor, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -2212,6 +2404,7 @@
         <remarks>To be added.</remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.HelpPageIconUrl" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.HelpPageText" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="HyperLinkStyle">
@@ -2220,9 +2413,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.HyperLinkStyle" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HyperLinkStyle As TableItemStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::TableItemStyle ^ HyperLinkStyle { System::Web::UI::WebControls::TableItemStyle ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.HyperLinkStyle : System.Web.UI.WebControls.TableItemStyle" Usage="System.Web.UI.WebControls.CreateUserWizard.HyperLinkStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2230,13 +2425,13 @@
           <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
-        </Attribute>
-        <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -2277,6 +2472,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="InstructionText">
@@ -2285,9 +2481,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.InstructionText" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property InstructionText As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ InstructionText { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.InstructionText : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.InstructionText" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2312,11 +2510,12 @@
   
  If the <xref:System.Web.UI.WebControls.CreateUserWizard.InstructionText%2A> property is set to an empty string (""), no instruction text is displayed to the user.  
   
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
  ]]></format>
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.InstructionTextStyle" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="InstructionTextStyle">
@@ -2325,9 +2524,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.InstructionTextStyle" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InstructionTextStyle As TableItemStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::TableItemStyle ^ InstructionTextStyle { System::Web::UI::WebControls::TableItemStyle ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.InstructionTextStyle : System.Web.UI.WebControls.TableItemStyle" Usage="System.Web.UI.WebControls.CreateUserWizard.InstructionTextStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2335,13 +2536,13 @@
           <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
-        </Attribute>
-        <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -2383,6 +2584,7 @@
  ]]></format>
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.InstructionText" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="InvalidAnswerErrorMessage">
@@ -2391,9 +2593,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.InvalidAnswerErrorMessage" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property InvalidAnswerErrorMessage As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ InvalidAnswerErrorMessage { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.InvalidAnswerErrorMessage : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.InvalidAnswerErrorMessage" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2413,7 +2617,7 @@
 ## Remarks  
  The <xref:System.Web.Security.Membership> class membership provider specified in the <xref:System.Web.UI.WebControls.CreateUserWizard.MembershipProvider%2A> property can support a question and answer for retrieving or resetting the user's password. The <xref:System.Web.UI.WebControls.CreateUserWizard.InvalidAnswerErrorMessage%2A> property is displayed when the answer entered by the user does not meet the requirements for the answer set by the membership provider. The actual requirements for the answer are determined by the membership provider, and might be different for different providers.  
   
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
    
   
@@ -2425,6 +2629,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="InvalidEmailErrorMessage">
@@ -2433,9 +2638,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.InvalidEmailErrorMessage" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property InvalidEmailErrorMessage As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ InvalidEmailErrorMessage { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.InvalidEmailErrorMessage : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.InvalidEmailErrorMessage" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2455,10 +2662,11 @@
 ## Remarks  
  The <xref:System.Web.Security.Membership> class membership provider specified in the <xref:System.Web.UI.WebControls.CreateUserWizard.MembershipProvider%2A> property can restrict the email addresses that it will accept. The <xref:System.Web.UI.WebControls.CreateUserWizard.InvalidEmailErrorMessage%2A> property is displayed when the email address entered by the user does not meet the requirements for the email address set by the membership provider. The actual requirements for the email address are determined by the membership provider, and might be different for different providers.  
   
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="InvalidPasswordErrorMessage">
@@ -2467,9 +2675,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.InvalidPasswordErrorMessage" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property InvalidPasswordErrorMessage As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ InvalidPasswordErrorMessage { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.InvalidPasswordErrorMessage : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.InvalidPasswordErrorMessage" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2489,7 +2699,7 @@
 ## Remarks  
  The <xref:System.Web.Security.Membership> class membership provider specified in the <xref:System.Web.UI.WebControls.CreateUserWizard.MembershipProvider%2A> property can restrict the passwords that it will accept. The <xref:System.Web.UI.WebControls.CreateUserWizard.InvalidPasswordErrorMessage%2A> property is displayed when the password entered by the user does not meet the requirements for a password set by the membership provider. The actual requirements for the password are determined by the membership provider, and might be different for different providers.  
   
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
    
   
@@ -2501,6 +2711,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="InvalidQuestionErrorMessage">
@@ -2509,9 +2720,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.InvalidQuestionErrorMessage" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property InvalidQuestionErrorMessage As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ InvalidQuestionErrorMessage { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.InvalidQuestionErrorMessage : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.InvalidQuestionErrorMessage" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2531,7 +2744,7 @@
 ## Remarks  
  The <xref:System.Web.Security.Membership> class membership provider specified in the <xref:System.Web.UI.WebControls.CreateUserWizard.MembershipProvider%2A> property can restrict the password retrieval questions that it will accept. The <xref:System.Web.UI.WebControls.CreateUserWizard.InvalidQuestionErrorMessage%2A> property is displayed when the question entered by the user does not meet the requirements for the question set by the membership provider. The actual requirements for the question are determined by the membership provider, and might be different for different providers.  
   
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
    
   
@@ -2543,6 +2756,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="LabelStyle">
@@ -2551,9 +2765,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.LabelStyle" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LabelStyle As TableItemStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::TableItemStyle ^ LabelStyle { System::Web::UI::WebControls::TableItemStyle ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.LabelStyle : System.Web.UI.WebControls.TableItemStyle" Usage="System.Web.UI.WebControls.CreateUserWizard.LabelStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2561,13 +2777,13 @@
           <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
-        </Attribute>
-        <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -2620,6 +2836,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="LoadViewState">
@@ -2628,9 +2845,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CreateUserWizard.LoadViewState(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub LoadViewState (savedState As Object)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void LoadViewState(System::Object ^ savedState);" />
+      <MemberSignature Language="F#" Value="override this.LoadViewState : obj -&gt; unit" Usage="createUserWizard.LoadViewState savedState" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2653,9 +2872,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.LoginCreatedUser" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property LoginCreatedUser As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool LoginCreatedUser { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.LoginCreatedUser : bool with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.LoginCreatedUser" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2682,11 +2903,12 @@
 > [!NOTE]
 >  When the <xref:System.Web.UI.WebControls.CreateUserWizard.LoginCreatedUser%2A> property is set to `true`, the user will be created and logged in at the end of the <xref:System.Web.UI.WebControls.CreateUserWizard.CreateUserStep%2A> step. If you want the user to be logged in after all the steps have been completed, you can set the <xref:System.Web.UI.WebControls.CreateUserWizard.DisableCreatedUser%2A> property to `false` until all of the steps of the <xref:System.Web.UI.WebControls.CreateUserWizard> control are completed.  
   
- This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+ This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](https://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
   
  ]]></format>
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.DisableCreatedUser" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="MailDefinition">
@@ -2695,15 +2917,14 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.MailDefinition" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MailDefinition As MailDefinition" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::MailDefinition ^ MailDefinition { System::Web::UI::WebControls::MailDefinition ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.MailDefinition : System.Web.UI.WebControls.MailDefinition" Usage="System.Web.UI.WebControls.CreateUserWizard.MailDefinition" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
-        </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
@@ -2712,6 +2933,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -2741,7 +2965,7 @@
   
  You can use the <xref:System.Web.UI.WebControls.CreateUserWizard.OnSendingMail%2A> method to modify the <xref:System.Web.Mail.MailMessage> created by the <xref:System.Web.UI.WebControls.MailDefinition> object.  
   
- This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+ This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](https://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
   
 > [!NOTE]
 >  It is not possible to guarantee that a user will receive or view an email message. To verify that a user has received a notification by email, consider providing a confirmation link in the email message that enables the user to confirm that the notification was received.  
@@ -2775,6 +2999,7 @@ Thank you for creating an account with our Web site.
         <altmember cref="T:System.Web.UI.WebControls.MailDefinition" />
         <altmember cref="T:System.Web.Mail.MailMessage" />
         <altmember cref="M:System.Web.UI.WebControls.CreateUserWizard.OnSendingMail(System.Web.UI.WebControls.MailMessageEventArgs)" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="MembershipProvider">
@@ -2783,9 +3008,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.MembershipProvider" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property MembershipProvider As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ MembershipProvider { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.MembershipProvider : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.MembershipProvider" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2810,7 +3037,7 @@ Thank you for creating an account with our Web site.
   
  Membership providers are defined in the Web.config file in the `<membership>` section.  
   
- This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+ This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](https://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
   
    
   
@@ -2945,6 +3172,8 @@ Thank you for creating an account with our Web site.
  ]]></format>
         </remarks>
         <exception cref="T:System.Web.HttpException">The specified membership provider is not defined in the Web.config file.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/824c3a24-f0af-427c-a652-0d2d1e9397cd">Managing Users By Using Membership</related>
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="OnBubbleEvent">
@@ -2953,9 +3182,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CreateUserWizard.OnBubbleEvent(System.Object,System.EventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function OnBubbleEvent (source As Object, e As EventArgs) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override bool OnBubbleEvent(System::Object ^ source, EventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="override this.OnBubbleEvent : obj * EventArgs -&gt; bool" Usage="createUserWizard.OnBubbleEvent (source, e)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2979,9 +3210,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CreateUserWizard.OnContinueButtonClick(System.EventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnContinueButtonClick (e As EventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnContinueButtonClick(EventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member OnContinueButtonClick : EventArgs -&gt; unit&#xA;override this.OnContinueButtonClick : EventArgs -&gt; unit" Usage="createUserWizard.OnContinueButtonClick e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -3009,6 +3242,7 @@ Thank you for creating an account with our Web site.
           <para>When overriding <see cref="M:System.Web.UI.WebControls.CreateUserWizard.OnContinueButtonClick(System.EventArgs)" /> in a derived class, be sure to call the base class's <see cref="M:System.Web.UI.WebControls.CreateUserWizard.OnContinueButtonClick(System.EventArgs)" /> method so that registered delegates receive the event.</para>
         </block>
         <altmember cref="E:System.Web.UI.WebControls.CreateUserWizard.ContinueButtonClick" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="OnCreatedUser">
@@ -3017,9 +3251,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CreateUserWizard.OnCreatedUser(System.EventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnCreatedUser (e As EventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnCreatedUser(EventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member OnCreatedUser : EventArgs -&gt; unit&#xA;override this.OnCreatedUser : EventArgs -&gt; unit" Usage="createUserWizard.OnCreatedUser e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -3046,9 +3282,10 @@ Thank you for creating an account with our Web site.
  ]]></format>
         </remarks>
         <block subset="none" type="overrides">
-          <para>When overriding <see cref="M:System.Web.UI.WebControls.CreateUserWizard.OnCreatedUser(System.EventArgs)" /> in a derived class, be sure to call the base class’s <see cref="M:System.Web.UI.WebControls.CreateUserWizard.OnCreatedUser(System.EventArgs)" /> method so that registered delegates receive the event.</para>
+          <para>When overriding <see cref="M:System.Web.UI.WebControls.CreateUserWizard.OnCreatedUser(System.EventArgs)" /> in a derived class, be sure to call the base class' <see cref="M:System.Web.UI.WebControls.CreateUserWizard.OnCreatedUser(System.EventArgs)" /> method so that registered delegates receive the event.</para>
         </block>
         <altmember cref="E:System.Web.UI.WebControls.CreateUserWizard.CreatedUser" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="OnCreateUserError">
@@ -3057,9 +3294,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CreateUserWizard.OnCreateUserError(System.Web.UI.WebControls.CreateUserErrorEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnCreateUserError (e As CreateUserErrorEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnCreateUserError(System::Web::UI::WebControls::CreateUserErrorEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member OnCreateUserError : System.Web.UI.WebControls.CreateUserErrorEventArgs -&gt; unit&#xA;override this.OnCreateUserError : System.Web.UI.WebControls.CreateUserErrorEventArgs -&gt; unit" Usage="createUserWizard.OnCreateUserError e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -3084,10 +3323,11 @@ Thank you for creating an account with our Web site.
  ]]></format>
         </remarks>
         <block subset="none" type="overrides">
-          <para>When overriding <see cref="M:System.Web.UI.WebControls.CreateUserWizard.OnCreateUserError(System.Web.UI.WebControls.CreateUserErrorEventArgs)" /> in a derived class, be sure to call the base class’s <see cref="M:System.Web.UI.WebControls.CreateUserWizard.OnCreateUserError(System.Web.UI.WebControls.CreateUserErrorEventArgs)" /> method so that registered delegates receive the event.</para>
+          <para>When overriding <see cref="M:System.Web.UI.WebControls.CreateUserWizard.OnCreateUserError(System.Web.UI.WebControls.CreateUserErrorEventArgs)" /> in a derived class, be sure to call the base class' <see cref="M:System.Web.UI.WebControls.CreateUserWizard.OnCreateUserError(System.Web.UI.WebControls.CreateUserErrorEventArgs)" /> method so that registered delegates receive the event.</para>
         </block>
         <altmember cref="E:System.Web.UI.WebControls.CreateUserWizard.CreateUserError" />
         <altmember cref="T:System.Web.Security.MembershipCreateStatus" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="OnCreatingUser">
@@ -3096,9 +3336,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CreateUserWizard.OnCreatingUser(System.Web.UI.WebControls.LoginCancelEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnCreatingUser (e As LoginCancelEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnCreatingUser(System::Web::UI::WebControls::LoginCancelEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member OnCreatingUser : System.Web.UI.WebControls.LoginCancelEventArgs -&gt; unit&#xA;override this.OnCreatingUser : System.Web.UI.WebControls.LoginCancelEventArgs -&gt; unit" Usage="createUserWizard.OnCreatingUser e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -3138,9 +3380,10 @@ Thank you for creating an account with our Web site.
  ]]></format>
         </remarks>
         <block subset="none" type="overrides">
-          <para>When overriding <see cref="M:System.Web.UI.WebControls.CreateUserWizard.OnCreatingUser(System.Web.UI.WebControls.LoginCancelEventArgs)" /> in a derived class, be sure to call the base class’s <see cref="M:System.Web.UI.WebControls.CreateUserWizard.OnCreatingUser(System.Web.UI.WebControls.LoginCancelEventArgs)" /> method so that registered delegates receive the event.</para>
+          <para>When overriding <see cref="M:System.Web.UI.WebControls.CreateUserWizard.OnCreatingUser(System.Web.UI.WebControls.LoginCancelEventArgs)" /> in a derived class, be sure to call the base class' <see cref="M:System.Web.UI.WebControls.CreateUserWizard.OnCreatingUser(System.Web.UI.WebControls.LoginCancelEventArgs)" /> method so that registered delegates receive the event.</para>
         </block>
         <altmember cref="E:System.Web.UI.WebControls.CreateUserWizard.CreatingUser" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="OnNextButtonClick">
@@ -3149,9 +3392,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CreateUserWizard.OnNextButtonClick(System.Web.UI.WebControls.WizardNavigationEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub OnNextButtonClick (e As WizardNavigationEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void OnNextButtonClick(System::Web::UI::WebControls::WizardNavigationEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="override this.OnNextButtonClick : System.Web.UI.WebControls.WizardNavigationEventArgs -&gt; unit" Usage="createUserWizard.OnNextButtonClick e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -3173,9 +3418,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CreateUserWizard.OnPreRender(System.EventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub OnPreRender (e As EventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void OnPreRender(EventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="override this.OnPreRender : EventArgs -&gt; unit" Usage="createUserWizard.OnPreRender e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -3198,9 +3445,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CreateUserWizard.OnSendingMail(System.Web.UI.WebControls.MailMessageEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnSendingMail (e As MailMessageEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnSendingMail(System::Web::UI::WebControls::MailMessageEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member OnSendingMail : System.Web.UI.WebControls.MailMessageEventArgs -&gt; unit&#xA;override this.OnSendingMail : System.Web.UI.WebControls.MailMessageEventArgs -&gt; unit" Usage="createUserWizard.OnSendingMail e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -3248,11 +3497,12 @@ Thank you for creating an account with our Web site.
  ]]></format>
         </remarks>
         <block subset="none" type="overrides">
-          <para>When overriding <see cref="M:System.Web.UI.WebControls.CreateUserWizard.OnSendingMail(System.Web.UI.WebControls.MailMessageEventArgs)" /> in a derived class, be sure to call the base class’s <see cref="M:System.Web.UI.WebControls.CreateUserWizard.OnSendingMail(System.Web.UI.WebControls.MailMessageEventArgs)" /> method so that registered delegates receive the event.</para>
+          <para>When overriding <see cref="M:System.Web.UI.WebControls.CreateUserWizard.OnSendingMail(System.Web.UI.WebControls.MailMessageEventArgs)" /> in a derived class, be sure to call the base class' <see cref="M:System.Web.UI.WebControls.CreateUserWizard.OnSendingMail(System.Web.UI.WebControls.MailMessageEventArgs)" /> method so that registered delegates receive the event.</para>
         </block>
         <altmember cref="E:System.Web.UI.WebControls.CreateUserWizard.SendingMail" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.MailDefinition" />
         <altmember cref="T:System.Web.Mail.MailMessage" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="OnSendMailError">
@@ -3261,9 +3511,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CreateUserWizard.OnSendMailError(System.Web.UI.WebControls.SendMailErrorEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnSendMailError (e As SendMailErrorEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnSendMailError(System::Web::UI::WebControls::SendMailErrorEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member OnSendMailError : System.Web.UI.WebControls.SendMailErrorEventArgs -&gt; unit&#xA;override this.OnSendMailError : System.Web.UI.WebControls.SendMailErrorEventArgs -&gt; unit" Usage="createUserWizard.OnSendMailError e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -3305,9 +3557,10 @@ Thank you for creating an account with our Web site.
  ]]></format>
         </remarks>
         <block subset="none" type="overrides">
-          <para>When overriding <see cref="M:System.Web.UI.WebControls.CreateUserWizard.OnSendMailError(System.Web.UI.WebControls.SendMailErrorEventArgs)" /> in a derived class, be sure to call the base class’s <see cref="M:System.Web.UI.WebControls.CreateUserWizard.OnSendMailError(System.Web.UI.WebControls.SendMailErrorEventArgs)" /> method so that registered delegates receive the event.</para>
+          <para>When overriding <see cref="M:System.Web.UI.WebControls.CreateUserWizard.OnSendMailError(System.Web.UI.WebControls.SendMailErrorEventArgs)" /> in a derived class, be sure to call the base class' <see cref="M:System.Web.UI.WebControls.CreateUserWizard.OnSendMailError(System.Web.UI.WebControls.SendMailErrorEventArgs)" /> method so that registered delegates receive the event.</para>
         </block>
         <altmember cref="E:System.Web.UI.WebControls.CreateUserWizard.SendMailError" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="Password">
@@ -3316,9 +3569,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.Password" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Password As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Password { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Password : string" Usage="System.Web.UI.WebControls.CreateUserWizard.Password" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -3326,7 +3581,7 @@ Thank you for creating an account with our Web site.
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -3344,6 +3599,7 @@ Thank you for creating an account with our Web site.
  ]]></format>
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.ConfirmPassword" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="PasswordHintStyle">
@@ -3352,9 +3608,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.PasswordHintStyle" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PasswordHintStyle As TableItemStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::TableItemStyle ^ PasswordHintStyle { System::Web::UI::WebControls::TableItemStyle ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.PasswordHintStyle : System.Web.UI.WebControls.TableItemStyle" Usage="System.Web.UI.WebControls.CreateUserWizard.PasswordHintStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -3362,13 +3620,13 @@ Thank you for creating an account with our Web site.
           <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
-        </Attribute>
-        <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -3409,6 +3667,7 @@ Thank you for creating an account with our Web site.
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="PasswordHintText">
@@ -3417,9 +3676,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.PasswordHintText" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property PasswordHintText As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ PasswordHintText { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.PasswordHintText : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.PasswordHintText" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -3439,12 +3700,13 @@ Thank you for creating an account with our Web site.
 ## Remarks  
  You can use the <xref:System.Web.UI.WebControls.CreateUserWizard.PasswordHintText%2A> property to provide guidelines and requirements for the user on how to create a password. For example, you could set the <xref:System.Web.UI.WebControls.CreateUserWizard.PasswordHintText%2A> property to "Your password must be at least six characters long." You can then use the <xref:System.Web.UI.WebControls.CreateUserWizard.PasswordRegularExpression%2A> property to validate that the user entered a password that conforms to the guidelines.  
   
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
  ]]></format>
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.PasswordRegularExpression" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.Password" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="PasswordLabelText">
@@ -3453,9 +3715,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.PasswordLabelText" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property PasswordLabelText As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ PasswordLabelText { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.PasswordLabelText : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.PasswordLabelText" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -3473,11 +3737,12 @@ Thank you for creating an account with our Web site.
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
  ]]></format>
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.Password" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="PasswordRegularExpression">
@@ -3486,9 +3751,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.PasswordRegularExpression" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property PasswordRegularExpression As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ PasswordRegularExpression { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.PasswordRegularExpression : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.PasswordRegularExpression" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -3524,6 +3791,8 @@ Thank you for creating an account with our Web site.
  ]]></format>
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.PasswordRegularExpressionErrorMessage" />
+        <related type="Article" href="~/docs/standard/base-types/regular-expressions.md">.NET Framework Regular Expressions</related>
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="PasswordRegularExpressionErrorMessage">
@@ -3532,9 +3801,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.PasswordRegularExpressionErrorMessage" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property PasswordRegularExpressionErrorMessage As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ PasswordRegularExpressionErrorMessage { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.PasswordRegularExpressionErrorMessage : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.PasswordRegularExpressionErrorMessage" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -3566,6 +3837,7 @@ Thank you for creating an account with our Web site.
  ]]></format>
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.PasswordRegularExpression" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="PasswordRequiredErrorMessage">
@@ -3574,9 +3846,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.PasswordRequiredErrorMessage" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property PasswordRequiredErrorMessage As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ PasswordRequiredErrorMessage { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.PasswordRequiredErrorMessage : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.PasswordRequiredErrorMessage" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -3594,11 +3868,12 @@ Thank you for creating an account with our Web site.
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
  ]]></format>
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.Password" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="Question">
@@ -3607,9 +3882,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.Question" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property Question As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Question { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Question : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.Question" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -3635,9 +3912,9 @@ Thank you for creating an account with our Web site.
 ## Remarks  
  The membership provider specified in the <xref:System.Web.UI.WebControls.CreateUserWizard.MembershipProvider%2A> property will determine whether the <xref:System.Web.UI.WebControls.CreateUserWizard.Question%2A> and <xref:System.Web.UI.WebControls.CreateUserWizard.Answer%2A> text boxes are displayed at run time. Each text box displayed on the <xref:System.Web.UI.WebControls.CreateUserWizard> control has a <xref:System.Web.UI.WebControls.RequiredFieldValidator> associated with it.  
   
- This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+ This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](https://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
   
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
    
   
@@ -3653,6 +3930,7 @@ Thank you for creating an account with our Web site.
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.MembershipProvider" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.Answer" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="QuestionAndAnswerRequired">
@@ -3661,9 +3939,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.QuestionAndAnswerRequired" />
       <MemberSignature Language="VB.NET" Value="Protected Friend ReadOnly Property QuestionAndAnswerRequired As Boolean" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; property bool QuestionAndAnswerRequired { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.QuestionAndAnswerRequired : bool" Usage="System.Web.UI.WebControls.CreateUserWizard.QuestionAndAnswerRequired" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -3690,6 +3970,7 @@ Thank you for creating an account with our Web site.
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.Question" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.Answer" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="QuestionLabelText">
@@ -3698,9 +3979,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.QuestionLabelText" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property QuestionLabelText As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ QuestionLabelText { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.QuestionLabelText : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.QuestionLabelText" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -3718,11 +4001,12 @@ Thank you for creating an account with our Web site.
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
  ]]></format>
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.Question" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="QuestionRequiredErrorMessage">
@@ -3731,9 +4015,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.QuestionRequiredErrorMessage" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property QuestionRequiredErrorMessage As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ QuestionRequiredErrorMessage { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.QuestionRequiredErrorMessage : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.QuestionRequiredErrorMessage" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -3751,10 +4037,11 @@ Thank you for creating an account with our Web site.
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="RequireEmail">
@@ -3763,9 +4050,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.RequireEmail" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property RequireEmail As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool RequireEmail { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.RequireEmail : bool with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.RequireEmail" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -3794,10 +4083,11 @@ Thank you for creating an account with our Web site.
 > [!NOTE]
 >  If the membership provider specified in the <xref:System.Web.UI.WebControls.CreateUserWizard.MembershipProvider%2A> property requires a unique email address for new users, you must set the <xref:System.Web.UI.WebControls.CreateUserWizard.RequireEmail%2A> property to `true` so that the UI for entering an email address is displayed. Otherwise, the user will see the <xref:System.Web.UI.WebControls.CreateUserWizard.EmailRequiredErrorMessage%2A> but have no way to enter an email address.  
   
- This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+ This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](https://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="SaveViewState">
@@ -3806,9 +4096,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CreateUserWizard.SaveViewState" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function SaveViewState () As Object" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Object ^ SaveViewState();" />
+      <MemberSignature Language="F#" Value="override this.SaveViewState : unit -&gt; obj" Usage="createUserWizard.SaveViewState " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -3828,9 +4120,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.CreateUserWizard.SendingMail" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event SendingMail As MailMessageEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Web::UI::WebControls::MailMessageEventHandler ^ SendingMail;" />
+      <MemberSignature Language="F#" Value="member this.SendingMail : System.Web.UI.WebControls.MailMessageEventHandler " Usage="member this.SendingMail : System.Web.UI.WebControls.MailMessageEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -3846,7 +4140,7 @@ Thank you for creating an account with our Web site.
   
  Because the email message only has automatic replacement fields for the user name and password fields, you can use the <xref:System.Web.UI.WebControls.CreateUserWizard.SendingMail> event to modify the email message before it is sent to the new user.  
   
- For more information about handling events, see [NIB: Consuming Events](http://msdn.microsoft.com/library/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+ For more information about how to handle events, see [Handling and Raising Events](~/docs/standard/events/index.md).  
   
    
   
@@ -3874,6 +4168,7 @@ Thank you for creating an account with our Web site.
         <altmember cref="M:System.Web.UI.WebControls.CreateUserWizard.OnSendingMail(System.Web.UI.WebControls.MailMessageEventArgs)" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.MailDefinition" />
         <altmember cref="E:System.Web.UI.WebControls.CreateUserWizard.SendMailError" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="SendMailError">
@@ -3882,9 +4177,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.CreateUserWizard.SendMailError" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event SendMailError As SendMailErrorEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Web::UI::WebControls::SendMailErrorEventHandler ^ SendMailError;" />
+      <MemberSignature Language="F#" Value="member this.SendMailError : System.Web.UI.WebControls.SendMailErrorEventHandler " Usage="member this.SendMailError : System.Web.UI.WebControls.SendMailErrorEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -3900,7 +4197,7 @@ Thank you for creating an account with our Web site.
   
  The default <xref:System.Web.UI.WebControls.CreateUserWizard.SendMailError> event handler does not catch or handle the SMTP error from the email system. Your <xref:System.Web.UI.WebControls.CreateUserWizard.SendMailError> event handler must set the <xref:System.Web.UI.WebControls.SendMailErrorEventArgs.Handled%2A> property of the <xref:System.Web.UI.WebControls.SendMailErrorEventArgs> object to `true` in order to stop the error from appearing to the Web site user.  
   
- For more information about handling events, see [NIB: Consuming Events](http://msdn.microsoft.com/library/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+ For more information about how to handle events, see [Handling and Raising Events](~/docs/standard/events/index.md).  
   
    
   
@@ -3915,6 +4212,7 @@ Thank you for creating an account with our Web site.
         <altmember cref="M:System.Web.UI.WebControls.CreateUserWizard.OnSendMailError(System.Web.UI.WebControls.SendMailErrorEventArgs)" />
         <altmember cref="E:System.Web.UI.WebControls.CreateUserWizard.SendingMail" />
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.MailDefinition" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="SetDesignModeState">
@@ -3923,9 +4221,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CreateUserWizard.SetDesignModeState(System.Collections.IDictionary)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub SetDesignModeState (data As IDictionary)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void SetDesignModeState(System::Collections::IDictionary ^ data);" />
+      <MemberSignature Language="F#" Value="override this.SetDesignModeState : System.Collections.IDictionary -&gt; unit" Usage="createUserWizard.SetDesignModeState data" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -3947,9 +4247,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.SkipLinkText" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Property SkipLinkText As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ SkipLinkText { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.SkipLinkText : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.SkipLinkText" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -3974,6 +4276,8 @@ Thank you for creating an account with our Web site.
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0">ASP.NET Controls and Accessibility</related>
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="TextBoxStyle">
@@ -3982,9 +4286,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.TextBoxStyle" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TextBoxStyle As Style" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::Style ^ TextBoxStyle { System::Web::UI::WebControls::Style ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.TextBoxStyle : System.Web.UI.WebControls.Style" Usage="System.Web.UI.WebControls.CreateUserWizard.TextBoxStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -3992,13 +4298,13 @@ Thank you for creating an account with our Web site.
           <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
-        </Attribute>
-        <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -4049,6 +4355,7 @@ Thank you for creating an account with our Web site.
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="TitleTextStyle">
@@ -4057,9 +4364,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.TitleTextStyle" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TitleTextStyle As TableItemStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::TableItemStyle ^ TitleTextStyle { System::Web::UI::WebControls::TableItemStyle ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.TitleTextStyle : System.Web.UI.WebControls.TableItemStyle" Usage="System.Web.UI.WebControls.CreateUserWizard.TitleTextStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -4067,13 +4376,13 @@ Thank you for creating an account with our Web site.
           <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
-        </Attribute>
-        <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -4114,6 +4423,7 @@ Thank you for creating an account with our Web site.
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="TrackViewState">
@@ -4122,9 +4432,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CreateUserWizard.TrackViewState" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub TrackViewState ()" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void TrackViewState();" />
+      <MemberSignature Language="F#" Value="override this.TrackViewState : unit -&gt; unit" Usage="createUserWizard.TrackViewState " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -4142,9 +4454,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.UnknownErrorMessage" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property UnknownErrorMessage As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ UnknownErrorMessage { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.UnknownErrorMessage : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.UnknownErrorMessage" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -4162,12 +4476,13 @@ Thank you for creating an account with our Web site.
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
  ]]></format>
         </remarks>
         <altmember cref="M:System.Web.UI.WebControls.CreateUserWizard.OnCreateUserError(System.Web.UI.WebControls.CreateUserErrorEventArgs)" />
         <altmember cref="T:System.Web.Security.MembershipCreateStatus" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="UserName">
@@ -4176,9 +4491,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.UserName" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property UserName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ UserName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.UserName : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.UserName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -4208,6 +4525,7 @@ Thank you for creating an account with our Web site.
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="UserNameLabelText">
@@ -4216,9 +4534,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.UserNameLabelText" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property UserNameLabelText As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ UserNameLabelText { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.UserNameLabelText : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.UserNameLabelText" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -4236,11 +4556,12 @@ Thank you for creating an account with our Web site.
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
  ]]></format>
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.CreateUserWizard.UserName" />
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="UserNameRequiredErrorMessage">
@@ -4249,9 +4570,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.UserNameRequiredErrorMessage" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property UserNameRequiredErrorMessage As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ UserNameRequiredErrorMessage { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.UserNameRequiredErrorMessage : string with get, set" Usage="System.Web.UI.WebControls.CreateUserWizard.UserNameRequiredErrorMessage" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -4269,10 +4592,11 @@ Thank you for creating an account with our Web site.
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="ValidatorTextStyle">
@@ -4281,9 +4605,11 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.ValidatorTextStyle" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ValidatorTextStyle As Style" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::Style ^ ValidatorTextStyle { System::Web::UI::WebControls::Style ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ValidatorTextStyle : System.Web.UI.WebControls.Style" Usage="System.Web.UI.WebControls.CreateUserWizard.ValidatorTextStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -4291,13 +4617,13 @@ Thank you for creating an account with our Web site.
           <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
-        </Attribute>
-        <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -4354,6 +4680,7 @@ Thank you for creating an account with our Web site.
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
     <Member MemberName="WizardSteps">
@@ -4362,14 +4689,19 @@ Thank you for creating an account with our Web site.
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CreateUserWizard.WizardSteps" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property WizardSteps As WizardStepCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Web::UI::WebControls::WizardStepCollection ^ WizardSteps { System::Web::UI::WebControls::WizardStepCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.WizardSteps : System.Web.UI.WebControls.WizardStepCollection" Usage="System.Web.UI.WebControls.CreateUserWizard.WizardSteps" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.WebControls.CreateUserWizardStepCollectionEditor,System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.WebControls.CreateUserWizardStepCollectionEditor,System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -4388,6 +4720,8 @@ Thank you for creating an account with our Web site.
         </remarks>
         <altmember cref="T:System.Web.UI.WebControls.WizardStepCollection" />
         <altmember cref="T:System.Web.UI.WebControls.WizardStepBase" />
+        <related type="Article" href="https://msdn.microsoft.com/library/c0cc4b96-8d75-41f7-977a-4d75098d7a9e">Wizard Web Server Control Overview</related>
+        <related type="Article" href="https://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d(v=vs.100)">Login ASP.NET Controls</related>
       </Docs>
     </Member>
   </Members>

@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Web.Configuration.ProfilePropertySettings" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ProfilePropertySettings&#xA;Inherits ConfigurationElement" />
   <TypeSignature Language="C++ CLI" Value="public ref class ProfilePropertySettings sealed : System::Configuration::ConfigurationElement" />
+  <TypeSignature Language="F#" Value="type ProfilePropertySettings = class&#xA;    inherit ConfigurationElement" />
   <AssemblyInfo>
     <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -20,7 +22,7 @@
 ## Remarks  
  The <xref:System.Web.Configuration.ProfilePropertySettings> class provides a way to programmatically create, access, and modify the definition of an individual property added to the `properties` subsection of the `profile` section of a configuration file.  
   
- The `profile` section of the configuration file specifies a schema for user profiles. At run time, the ASP.NET compilation system uses the information specified in the `profile` section to generate a class called `ProfileCommon`, which is derived from <xref:System.Web.Profile.ProfileBase>. The `ProfileCommon` class definition is based on the properties defined in the `properties` subsection of the `profile` section of the configuration file. An instance of this class is created for each user profile, and you can access the individual profile values in your code through the <xref:System.Web.HttpContext.Profile%2A?displayProperty=nameWithType> property. For more information about profile properties, see [ASP.NET Profile Properties Overview](http://msdn.microsoft.com/library/89439440-92ea-48c3-a4bd-dea40307899d). For more information about the profile features added to [!INCLUDE[vstecasplong](~/includes/vstecasplong-md.md)], see [ASP.NET Profile Properties Overview](http://msdn.microsoft.com/library/89439440-92ea-48c3-a4bd-dea40307899d).  
+ The `profile` section of the configuration file specifies a schema for user profiles. At run time, the ASP.NET compilation system uses the information specified in the `profile` section to generate a class called `ProfileCommon`, which is derived from <xref:System.Web.Profile.ProfileBase>. The `ProfileCommon` class definition is based on the properties defined in the `properties` subsection of the `profile` section of the configuration file. An instance of this class is created for each user profile, and you can access the individual profile values in your code through the <xref:System.Web.HttpContext.Profile%2A?displayProperty=nameWithType> property. For more information about profile properties, see [ASP.NET Profile Properties Overview](https://msdn.microsoft.com/library/89439440-92ea-48c3-a4bd-dea40307899d). For more information about the profile features added to [!INCLUDE[vstecasplong](~/includes/vstecasplong-md.md)], see [ASP.NET Profile Properties Overview](https://msdn.microsoft.com/library/89439440-92ea-48c3-a4bd-dea40307899d).  
   
    
   
@@ -54,9 +56,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfilePropertySettings.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (name As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ProfilePropertySettings(System::String ^ name);" />
+      <MemberSignature Language="F#" Value="new System.Web.Configuration.ProfilePropertySettings : string -&gt; System.Web.Configuration.ProfilePropertySettings" Usage="new System.Web.Configuration.ProfilePropertySettings name" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
@@ -91,9 +95,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfilePropertySettings.#ctor(System.String,System.Boolean,System.Web.Configuration.SerializationMode,System.String,System.String,System.String,System.Boolean,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, readOnly As Boolean, serializeAs As SerializationMode, providerName As String, defaultValue As String, profileType As String, allowAnonymous As Boolean, customProviderData As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ProfilePropertySettings(System::String ^ name, bool readOnly, System::Web::Configuration::SerializationMode serializeAs, System::String ^ providerName, System::String ^ defaultValue, System::String ^ profileType, bool allowAnonymous, System::String ^ customProviderData);" />
+      <MemberSignature Language="F#" Value="new System.Web.Configuration.ProfilePropertySettings : string * bool * System.Web.Configuration.SerializationMode * string * string * string * bool * string -&gt; System.Web.Configuration.ProfilePropertySettings" Usage="new System.Web.Configuration.ProfilePropertySettings (name, readOnly, serializeAs, providerName, defaultValue, profileType, allowAnonymous, customProviderData)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
@@ -126,7 +132,7 @@
   
  The `ProfileCommon` class definition is based on the properties defined in the `properties` subsection of the `profile` section of the configuration file. The parameter values that you specify when you create an instance of the <xref:System.Web.Configuration.ProfilePropertySettings> class will be used to define an associated property in the `ProfileCommon` class.  
   
- For more information about profile properties, see [ASP.NET Profile Properties Overview](http://msdn.microsoft.com/library/89439440-92ea-48c3-a4bd-dea40307899d).  
+ For more information about profile properties, see [ASP.NET Profile Properties Overview](https://msdn.microsoft.com/library/89439440-92ea-48c3-a4bd-dea40307899d).  
   
  ]]></format>
         </remarks>
@@ -141,9 +147,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfilePropertySettings.AllowAnonymous" />
       <MemberSignature Language="VB.NET" Value="Public Property AllowAnonymous As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AllowAnonymous { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.AllowAnonymous : bool with get, set" Usage="System.Web.Configuration.ProfilePropertySettings.AllowAnonymous" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -187,9 +195,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfilePropertySettings.CustomProviderData" />
       <MemberSignature Language="VB.NET" Value="Public Property CustomProviderData As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ CustomProviderData { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.CustomProviderData : string with get, set" Usage="System.Web.Configuration.ProfilePropertySettings.CustomProviderData" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -212,9 +222,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfilePropertySettings.DefaultValue" />
       <MemberSignature Language="VB.NET" Value="Public Property DefaultValue As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DefaultValue { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DefaultValue : string with get, set" Usage="System.Web.Configuration.ProfilePropertySettings.DefaultValue" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -257,9 +269,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfilePropertySettings.Name" />
       <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="System.Web.Configuration.ProfilePropertySettings.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -300,11 +314,18 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfilePropertySettings.Properties" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property Properties As ConfigurationPropertyCollection" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property System::Configuration::ConfigurationPropertyCollection ^ Properties { System::Configuration::ConfigurationPropertyCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Properties : System.Configuration.ConfigurationPropertyCollection" Usage="System.Web.Configuration.ProfilePropertySettings.Properties" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
       </ReturnValue>
@@ -320,9 +341,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfilePropertySettings.Provider" />
       <MemberSignature Language="VB.NET" Value="Public Property Provider As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Provider { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Provider : string with get, set" Usage="System.Web.Configuration.ProfilePropertySettings.Provider" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -363,9 +386,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfilePropertySettings.ReadOnly" />
       <MemberSignature Language="VB.NET" Value="Public Property ReadOnly As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ReadOnly { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.ReadOnly : bool with get, set" Usage="System.Web.Configuration.ProfilePropertySettings.ReadOnly" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -407,9 +432,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfilePropertySettings.SerializeAs" />
       <MemberSignature Language="VB.NET" Value="Public Property SerializeAs As SerializationMode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::Configuration::SerializationMode SerializeAs { System::Web::Configuration::SerializationMode get(); void set(System::Web::Configuration::SerializationMode value); };" />
+      <MemberSignature Language="F#" Value="member this.SerializeAs : System.Web.Configuration.SerializationMode with get, set" Usage="System.Web.Configuration.ProfilePropertySettings.SerializeAs" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -427,7 +454,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- For more information about profile properties, see [ASP.NET Profile Properties Overview](http://msdn.microsoft.com/library/89439440-92ea-48c3-a4bd-dea40307899d).  
+ For more information about profile properties, see [ASP.NET Profile Properties Overview](https://msdn.microsoft.com/library/89439440-92ea-48c3-a4bd-dea40307899d).  
   
    
   
@@ -449,9 +476,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfilePropertySettings.Type" />
       <MemberSignature Language="VB.NET" Value="Public Property Type As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Type { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Type : string with get, set" Usage="System.Web.Configuration.ProfilePropertySettings.Type" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>

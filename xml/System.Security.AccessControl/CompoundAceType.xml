@@ -4,13 +4,17 @@
   <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.CompoundAceType" />
   <TypeSignature Language="VB.NET" Value="Public Enum CompoundAceType" />
   <TypeSignature Language="C++ CLI" Value="public enum class CompoundAceType" />
+  <TypeSignature Language="F#" Value="type CompoundAceType = " />
   <AssemblyInfo>
     <AssemblyName>System.Security.AccessControl</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
     <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.0.5.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
@@ -28,14 +32,18 @@
       <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.CompoundAceType.Impersonation" />
       <MemberSignature Language="VB.NET" Value="Impersonation" />
       <MemberSignature Language="C++ CLI" Value="Impersonation" />
+      <MemberSignature Language="F#" Value="Impersonation = 1" Usage="System.Security.AccessControl.CompoundAceType.Impersonation" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.AccessControl</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>

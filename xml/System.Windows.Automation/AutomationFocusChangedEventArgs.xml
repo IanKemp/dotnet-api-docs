@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Automation.AutomationFocusChangedEventArgs" />
   <TypeSignature Language="VB.NET" Value="Public Class AutomationFocusChangedEventArgs&#xA;Inherits AutomationEventArgs" />
   <TypeSignature Language="C++ CLI" Value="public ref class AutomationFocusChangedEventArgs : System::Windows::Automation::AutomationEventArgs" />
+  <TypeSignature Language="F#" Value="type AutomationFocusChangedEventArgs = class&#xA;    inherit AutomationEventArgs" />
   <AssemblyInfo>
     <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -18,6 +20,9 @@
     <altmember cref="F:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent" />
     <altmember cref="T:System.Windows.Automation.AutomationFocusChangedEventHandler" />
     <altmember cref="M:System.Windows.Automation.Automation.RemoveAutomationFocusChangedEventHandler(System.Windows.Automation.AutomationFocusChangedEventHandler)" />
+    <related type="Article" href="https://msdn.microsoft.com/library/b688effa-b3e8-4b05-944d-05ed89a245aa">Subscribe to UI Automation Events</related>
+    <related type="Article" href="https://msdn.microsoft.com/library/b909e388-3f24-4997-b6d4-bd9c35c2dc27">UI Automation Events for Clients</related>
+    <related type="Article" href="https://msdn.microsoft.com/library/69eebd8b-39ed-40e7-93cc-4457c4caf746">UI Automation Events Overview</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -26,9 +31,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Automation.AutomationFocusChangedEventArgs.#ctor(System.Int32,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (idObject As Integer, idChild As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; AutomationFocusChangedEventArgs(int idObject, int idChild);" />
+      <MemberSignature Language="F#" Value="new System.Windows.Automation.AutomationFocusChangedEventArgs : int * int -&gt; System.Windows.Automation.AutomationFocusChangedEventArgs" Usage="new System.Windows.Automation.AutomationFocusChangedEventArgs (idObject, idChild)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
@@ -55,11 +62,18 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationFocusChangedEventArgs.ChildId" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ChildId As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ChildId { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.ChildId : int" Usage="System.Windows.Automation.AutomationFocusChangedEventArgs.ChildId" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
@@ -82,17 +96,24 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationFocusChangedEventArgs.ObjectId" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ObjectId As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ObjectId { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.ObjectId : int" Usage="System.Windows.Automation.AutomationFocusChangedEventArgs.ObjectId" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets the [!INCLUDE[TLA#tla_id](~/includes/tlasharptla-id-md.md)] of the [!INCLUDE[TLA#tla_aa](~/includes/tlasharptla-aa-md.md)] object that generated the event.</summary>
-        <value>The ID of the [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] element that is receiving focus. For possible values, see [Object Identifiers](http://msdn.microsoft.com/library/default.asp?url=/library/msaa/msaaccrf_5q05.asp) in the Microsoft Active Accessibility documentation.</value>
+        <value>The ID of the [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] element that is receiving focus. For possible values, see [Object Identifiers](https://msdn.microsoft.com/library/default.asp?url=/library/msaa/msaaccrf_5q05.asp) in the Microsoft Active Accessibility documentation.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   

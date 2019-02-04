@@ -4,8 +4,11 @@
   <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.UrlBuilderOptions" />
   <TypeSignature Language="VB.NET" Value="Public Enum UrlBuilderOptions" />
   <TypeSignature Language="C++ CLI" Value="public enum class UrlBuilderOptions" />
+  <TypeSignature Language="F#" Value="type UrlBuilderOptions = " />
   <AssemblyInfo>
     <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -28,9 +31,12 @@
       <MemberSignature Language="DocId" Value="F:System.Web.UI.Design.UrlBuilderOptions.NoAbsolute" />
       <MemberSignature Language="VB.NET" Value="NoAbsolute" />
       <MemberSignature Language="C++ CLI" Value="NoAbsolute" />
+      <MemberSignature Language="F#" Value="NoAbsolute = 1" Usage="System.Web.UI.Design.UrlBuilderOptions.NoAbsolute" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -47,9 +53,12 @@
       <MemberSignature Language="DocId" Value="F:System.Web.UI.Design.UrlBuilderOptions.None" />
       <MemberSignature Language="VB.NET" Value="None" />
       <MemberSignature Language="C++ CLI" Value="None" />
+      <MemberSignature Language="F#" Value="None = 0" Usage="System.Web.UI.Design.UrlBuilderOptions.None" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

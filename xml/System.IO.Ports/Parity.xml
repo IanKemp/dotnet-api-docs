@@ -4,13 +4,16 @@
   <TypeSignature Language="DocId" Value="T:System.IO.Ports.Parity" />
   <TypeSignature Language="VB.NET" Value="Public Enum Parity" />
   <TypeSignature Language="C++ CLI" Value="public enum class Parity" />
+  <TypeSignature Language="F#" Value="type Parity = " />
   <AssemblyInfo>
     <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System.IO.Ports</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Enum</BaseTypeName>
@@ -23,7 +26,7 @@
 ## Remarks  
  Use this enumeration when setting the <xref:System.IO.Ports.SerialPort.Parity%2A> property for a serial port connection.  
   
- Parity is an error-checking procedure in which the number of 1s must always be the same—either even or odd—for each group of bits that is transmitted without error. In modem-to-modem communications, parity is often one of the parameters that must be agreed upon by sending parties and receiving parties before transmission can take place.  
+ Parity is an error-checking procedure in which the number of 1s must always be the same - either even or odd - for each group of bits that is transmitted without error. In modem-to-modem communications, parity is often one of the parameters that must be agreed upon by sending parties and receiving parties before transmission can take place.  
   
    
   
@@ -44,14 +47,17 @@
       <MemberSignature Language="DocId" Value="F:System.IO.Ports.Parity.Even" />
       <MemberSignature Language="VB.NET" Value="Even" />
       <MemberSignature Language="C++ CLI" Value="Even" />
+      <MemberSignature Language="F#" Value="Even = 2" Usage="System.IO.Ports.Parity.Even" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.IO.Ports</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IO.Ports.Parity</ReturnType>
@@ -67,14 +73,17 @@
       <MemberSignature Language="DocId" Value="F:System.IO.Ports.Parity.Mark" />
       <MemberSignature Language="VB.NET" Value="Mark" />
       <MemberSignature Language="C++ CLI" Value="Mark" />
+      <MemberSignature Language="F#" Value="Mark = 3" Usage="System.IO.Ports.Parity.Mark" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.IO.Ports</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IO.Ports.Parity</ReturnType>
@@ -90,14 +99,17 @@
       <MemberSignature Language="DocId" Value="F:System.IO.Ports.Parity.None" />
       <MemberSignature Language="VB.NET" Value="None" />
       <MemberSignature Language="C++ CLI" Value="None" />
+      <MemberSignature Language="F#" Value="None = 0" Usage="System.IO.Ports.Parity.None" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.IO.Ports</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IO.Ports.Parity</ReturnType>
@@ -113,14 +125,17 @@
       <MemberSignature Language="DocId" Value="F:System.IO.Ports.Parity.Odd" />
       <MemberSignature Language="VB.NET" Value="Odd" />
       <MemberSignature Language="C++ CLI" Value="Odd" />
+      <MemberSignature Language="F#" Value="Odd = 1" Usage="System.IO.Ports.Parity.Odd" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.IO.Ports</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IO.Ports.Parity</ReturnType>
@@ -136,14 +151,17 @@
       <MemberSignature Language="DocId" Value="F:System.IO.Ports.Parity.Space" />
       <MemberSignature Language="VB.NET" Value="Space" />
       <MemberSignature Language="C++ CLI" Value="Space" />
+      <MemberSignature Language="F#" Value="Space = 4" Usage="System.IO.Ports.Parity.Space" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.IO.Ports</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IO.Ports.Parity</ReturnType>

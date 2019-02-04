@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.WinMDExp" />
   <TypeSignature Language="VB.NET" Value="Public Class WinMDExp&#xA;Inherits ToolTaskExtension" />
   <TypeSignature Language="C++ CLI" Value="public ref class WinMDExp : Microsoft::Build::Tasks::ToolTaskExtension" />
+  <TypeSignature Language="F#" Value="type WinMDExp = class&#xA;    inherit ToolTaskExtension" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -40,6 +41,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.WinMDExp.AddCommandLineCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub AddCommandLineCommands (commandLine As CommandLineBuilderExtension)" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void AddCommandLineCommands(Microsoft::Build::Tasks::CommandLineBuilderExtension ^ commandLine);" />
+      <MemberSignature Language="F#" Value="override this.AddCommandLineCommands : Microsoft.Build.Tasks.CommandLineBuilderExtension -&gt; unit" Usage="winMDExp.AddCommandLineCommands commandLine" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
@@ -63,6 +65,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.DisabledWarnings" />
       <MemberSignature Language="VB.NET" Value="Public Property DisabledWarnings As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DisabledWarnings { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DisabledWarnings : string with get, set" Usage="Microsoft.Build.Tasks.WinMDExp.DisabledWarnings" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
@@ -73,7 +76,7 @@
       </ReturnValue>
       <Docs>
         <summary>Warning codes to disable</summary>
-        <value>Returns the warning codes to disable.</value>
+        <value>The warning codes to disable.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -83,6 +86,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.WinMDExp.GenerateFullPathToTool" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function GenerateFullPathToTool () As String" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::String ^ GenerateFullPathToTool();" />
+      <MemberSignature Language="F#" Value="override this.GenerateFullPathToTool : unit -&gt; string" Usage="winMDExp.GenerateFullPathToTool " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
@@ -93,8 +97,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>The full path of the tool to execute.</summary>
-        <returns>Returns the full path of the tool to execute.</returns>
+        <summary>Returns the full path of the tool to execute.</summary>
+        <returns>The full path of the tool to execute.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -104,6 +108,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.InputDocumentationFile" />
       <MemberSignature Language="VB.NET" Value="Public Property InputDocumentationFile As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ InputDocumentationFile { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.InputDocumentationFile : string with get, set" Usage="Microsoft.Build.Tasks.WinMDExp.InputDocumentationFile" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
@@ -113,8 +118,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Input documentation file</summary>
-        <value>Returns the input documentation file.</value>
+        <summary>Gets or sets the input documentation file.</summary>
+        <value>The input documentation file.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -124,6 +129,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.InputPDBFile" />
       <MemberSignature Language="VB.NET" Value="Public Property InputPDBFile As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ InputPDBFile { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.InputPDBFile : string with get, set" Usage="Microsoft.Build.Tasks.WinMDExp.InputPDBFile" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
@@ -133,8 +139,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Input PDB file</summary>
-        <value>Returns the input PDB file.</value>
+        <summary>Gets or sets the input PDB file.</summary>
+        <value>The input PDB file.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -144,6 +150,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.OutputDocumentationFile" />
       <MemberSignature Language="VB.NET" Value="Public Property OutputDocumentationFile As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OutputDocumentationFile { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.OutputDocumentationFile : string with get, set" Usage="Microsoft.Build.Tasks.WinMDExp.OutputDocumentationFile" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
@@ -153,8 +160,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Output documentation file</summary>
-        <value>Returns the output documentation file.</value>
+        <summary>Gets or sets the output documentation file.</summary>
+        <value>The output documentation file.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -164,6 +171,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.OutputPDBFile" />
       <MemberSignature Language="VB.NET" Value="Public Property OutputPDBFile As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OutputPDBFile { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.OutputPDBFile : string with get, set" Usage="Microsoft.Build.Tasks.WinMDExp.OutputPDBFile" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
@@ -173,8 +181,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Output PDB file</summary>
-        <value>Returns the output PDB file.</value>
+        <summary>Gets or sets the output PDB file.</summary>
+        <value>The output PDB file.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -184,6 +192,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.OutputWindowsMetadataFile" />
       <MemberSignature Language="VB.NET" Value="Public Property OutputWindowsMetadataFile As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OutputWindowsMetadataFile { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.OutputWindowsMetadataFile : string with get, set" Usage="Microsoft.Build.Tasks.WinMDExp.OutputWindowsMetadataFile" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
@@ -198,8 +207,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Output windows metadata file .winmd</summary>
-        <value>Returns the output windows metadata file.</value>
+        <summary>Gets or sets the output windows metadata file .winmd.</summary>
+        <value>The output windows metadata file.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -209,6 +218,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.References" />
       <MemberSignature Language="VB.NET" Value="Public Property References As ITaskItem()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ References { cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ get(); void set(cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.References : Microsoft.Build.Framework.ITaskItem[] with get, set" Usage="Microsoft.Build.Tasks.WinMDExp.References" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
@@ -223,8 +233,8 @@
         <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Set of references to pass to the winmdexp tool.</summary>
-        <value>Returnsthe set of references.</value>
+        <summary>Gets or sets a set of references to pass to the winmdexp tool.</summary>
+        <value>The set of references to pass to the winmdexp tool.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -234,6 +244,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.SdkToolsPath" />
       <MemberSignature Language="VB.NET" Value="Public Property SdkToolsPath As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ SdkToolsPath { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.SdkToolsPath : string with get, set" Usage="Microsoft.Build.Tasks.WinMDExp.SdkToolsPath" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
@@ -243,8 +254,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Path to the SDK directory which contains this tool</summary>
-        <value>Returns the SDK directory path.</value>
+        <summary>Gets or sets the path to the SDK directory which contains this tool</summary>
+        <value>The SDK directory path.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -254,6 +265,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.WinMDExp.SkipTaskExecution" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function SkipTaskExecution () As Boolean" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override bool SkipTaskExecution();" />
+      <MemberSignature Language="F#" Value="override this.SkipTaskExecution : unit -&gt; bool" Usage="winMDExp.SkipTaskExecution " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
@@ -264,8 +276,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Returns true if task execution is not necessary. Executed after ValidateParameters</summary>
-        <returns>Returns the flag indicating whether task execution is skipped.</returns>
+        <summary>Returns a value that indicates whether task execution is necessary. Executed after ValidateParameters.</summary>
+        <returns>
+          <see langword="true" /> to skip task execution; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -275,6 +288,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.StandardErrorEncoding" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property StandardErrorEncoding As Encoding" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property System::Text::Encoding ^ StandardErrorEncoding { System::Text::Encoding ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.StandardErrorEncoding : System.Text.Encoding" Usage="Microsoft.Build.Tasks.WinMDExp.StandardErrorEncoding" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
@@ -285,7 +299,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets the value which specifies the encoding of the captured task standard error stream.</summary>
-        <value>Returns the value specifying the error stream encoding.</value>
+        <value>The value specifying the error stream encoding.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -295,6 +309,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.StandardOutputEncoding" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property StandardOutputEncoding As Encoding" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property System::Text::Encoding ^ StandardOutputEncoding { System::Text::Encoding ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.StandardOutputEncoding : System.Text.Encoding" Usage="Microsoft.Build.Tasks.WinMDExp.StandardOutputEncoding" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
@@ -305,7 +320,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets the value which specifies the encoding of the captured task standard output stream.</summary>
-        <value>Returns the value specifying the output stream encoding.</value>
+        <value>The value specifying the output stream encoding.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -315,6 +330,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.ToolName" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property ToolName As String" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property System::String ^ ToolName { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ToolName : string" Usage="Microsoft.Build.Tasks.WinMDExp.ToolName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
@@ -324,8 +340,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>The name of the tool to execute.</summary>
-        <value>Returns the tool name.</value>
+        <summary>Gets the name of the tool to execute.</summary>
+        <value>The tool name.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -335,6 +351,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.TreatWarningsAsErrors" />
       <MemberSignature Language="VB.NET" Value="Public Property TreatWarningsAsErrors As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool TreatWarningsAsErrors { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.TreatWarningsAsErrors : bool with get, set" Usage="Microsoft.Build.Tasks.WinMDExp.TreatWarningsAsErrors" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
@@ -344,8 +361,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the flag indicating whether to treat warnings as errors.</summary>
-        <value>Returns the flag indicating whether to treat warnings as errors.</value>
+        <summary>Gets or sets a value that indicates whether to treat warnings as errors.</summary>
+        <value>
+          <see langword="true" /> if warnings should be treated as errors; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -355,6 +373,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.UTF8Output" />
       <MemberSignature Language="VB.NET" Value="Public Property UTF8Output As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool UTF8Output { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.UTF8Output : bool with get, set" Usage="Microsoft.Build.Tasks.WinMDExp.UTF8Output" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
@@ -364,8 +383,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the flag indicating whether to use UTF-8 output stream encoding.</summary>
-        <value>Returns the flag indicating UTF-8 output stream encoding.</value>
+        <summary>Gets or sets a value that indicates whether to use UTF-8 output stream encoding.</summary>
+        <value>
+          <see langword="true" /> if UTF-8 output stream encoding should be used; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -375,6 +395,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.WinMDExp.ValidateParameters" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function ValidateParameters () As Boolean" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override bool ValidateParameters();" />
+      <MemberSignature Language="F#" Value="override this.ValidateParameters : unit -&gt; bool" Usage="winMDExp.ValidateParameters " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
@@ -385,8 +406,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Validate parameters, log errors and warnings and return true if Execute should proceed.</summary>
-        <returns>Returns the flag indicating whether execute should proceed.</returns>
+        <summary>Validates parameters, logs errors and warnings, and returns <see langword="true" /> if Execute should proceed.</summary>
+        <returns>
+          <see langword="true" /> if execute should proceed; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -396,6 +418,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.WinMDExp.WinMDModule" />
       <MemberSignature Language="VB.NET" Value="Public Property WinMDModule As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ WinMDModule { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.WinMDModule : string with get, set" Usage="Microsoft.Build.Tasks.WinMDExp.WinMDModule" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
@@ -410,8 +433,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>WinMDModule to generate the WinMDFile for.</summary>
-        <value>Returns the WinMDModule.</value>
+        <summary>Gets or sets the WinMDModule to generate the WinMDFile for.</summary>
+        <value>The WinMDModule.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

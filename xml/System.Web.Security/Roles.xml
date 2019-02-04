@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Web.Security.Roles" />
   <TypeSignature Language="VB.NET" Value="Public Class Roles" />
   <TypeSignature Language="C++ CLI" Value="public ref class Roles abstract sealed" />
+  <TypeSignature Language="F#" Value="type Roles = class" />
   <AssemblyInfo>
     <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -22,7 +24,7 @@
   
  Users can belong to more than one role. For example, if your site is a discussion forum, some users might be in the role of both Members and Moderators. You might define each role to have different privileges on the site, and a user who is in both roles would then have both sets of privileges.  
   
- To enable role management for your ASP.NET application, use the  element of the `system.web` section in the Web.config file for your application, as shown in the following example.  
+ To enable role management for your ASP.NET application, use the [roleManager](https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/ms164660(v%3dvs.100)) element of the `system.web` section in the Web.config file for your application, as shown in the following example.  
   
 ```  
 <configuration>  
@@ -82,7 +84,7 @@
   
 -   You can store role information in a SQL Server database by using the <xref:System.Web.Security.SqlRoleProvider> class.  
   
--   If you have existing role information, or want to store role information in and retrieve role information from a data source other than Windows, an Authorization Store, or SQL Server, you can implement a custom role provider by creating a class that inherits the <xref:System.Web.Security.RoleProvider> abstract class. For more information, see [Implementing a Role Provider](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d).  
+-   If you have existing role information, or want to store role information in and retrieve role information from a data source other than Windows, an Authorization Store, or SQL Server, you can implement a custom role provider by creating a class that inherits the <xref:System.Web.Security.RoleProvider> abstract class. For more information, see [Implementing a Role Provider](https://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d).  
   
  If a user's browser accepts cookies, you can store role information for that user in a cookie on the user's computer. On each page request, ASP.NET reads the role information for that user from the cookie. This can improve application performance by reducing the amount of communication required with the data source to retrieve role information. If the role information for a user is too long to store in a cookie, ASP.NET stores just the most recently used role information in the cookie and then looks up additional role information in the data source as required. If the user's browser does not support cookies or cookies are disabled, role information is not cached in a cookie.  
   
@@ -144,6 +146,7 @@
   
  ]]></format>
     </remarks>
+    <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
   </Docs>
   <Members>
     <Member MemberName="AddUsersToRole">
@@ -152,9 +155,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Security.Roles.AddUsersToRole(System.String[],System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub AddUsersToRole (usernames As String(), roleName As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void AddUsersToRole(cli::array &lt;System::String ^&gt; ^ usernames, System::String ^ roleName);" />
+      <MemberSignature Language="F#" Value="static member AddUsersToRole : string[] * string -&gt; unit" Usage="System.Web.Security.Roles.AddUsersToRole (usernames, roleName)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -206,6 +211,7 @@
   
  <paramref name="usernames" /> contains a duplicate element.</exception>
         <exception cref="T:System.Configuration.Provider.ProviderException">Role management is not enabled.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="AddUsersToRoles">
@@ -214,9 +220,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Security.Roles.AddUsersToRoles(System.String[],System.String[])" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub AddUsersToRoles (usernames As String(), roleNames As String())" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void AddUsersToRoles(cli::array &lt;System::String ^&gt; ^ usernames, cli::array &lt;System::String ^&gt; ^ roleNames);" />
+      <MemberSignature Language="F#" Value="static member AddUsersToRoles : string[] * string[] -&gt; unit" Usage="System.Web.Security.Roles.AddUsersToRoles (usernames, roleNames)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -270,6 +278,7 @@
   
  <paramref name="usernames" /> contains a duplicate element.</exception>
         <exception cref="T:System.Configuration.Provider.ProviderException">Role management is not enabled.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="AddUserToRole">
@@ -278,9 +287,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Security.Roles.AddUserToRole(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub AddUserToRole (username As String, roleName As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void AddUserToRole(System::String ^ username, System::String ^ roleName);" />
+      <MemberSignature Language="F#" Value="static member AddUserToRole : string * string -&gt; unit" Usage="System.Web.Security.Roles.AddUserToRole (username, roleName)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -330,6 +341,7 @@
  -or-  
   
  User is already assigned to the specified role.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="AddUserToRoles">
@@ -338,9 +350,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Security.Roles.AddUserToRoles(System.String,System.String[])" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub AddUserToRoles (username As String, roleNames As String())" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void AddUserToRoles(System::String ^ username, cli::array &lt;System::String ^&gt; ^ roleNames);" />
+      <MemberSignature Language="F#" Value="static member AddUserToRoles : string * string[] -&gt; unit" Usage="System.Web.Security.Roles.AddUserToRoles (username, roleNames)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -390,6 +404,7 @@
   
  <paramref name="roleNames" /> contains a duplicate element.</exception>
         <exception cref="T:System.Configuration.Provider.ProviderException">Role management is not enabled.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="ApplicationName">
@@ -398,9 +413,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Security.Roles.ApplicationName" />
       <MemberSignature Language="VB.NET" Value="Public Shared Property ApplicationName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::String ^ ApplicationName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ApplicationName : string with get, set" Usage="System.Web.Security.Roles.ApplicationName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -423,7 +440,7 @@
    
   
 ## Examples  
- The following example shows the  element in the `system.web` section of the Web.config file for an ASP.NET application. It specifies that the application uses a <xref:System.Web.Security.SqlRoleProvider> instance and sets the `applicationName` attribute to `MyApplication`.  
+ The following example shows the [roleManager](https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/ms164660(v%3dvs.100)) element in the `system.web` section of the Web.config file for an ASP.NET application. It specifies that the application uses a <xref:System.Web.Security.SqlRoleProvider> instance and sets the `applicationName` attribute to `MyApplication`.  
   
 ```  
 <roleManager defaultProvider="SqlProvider"   
@@ -447,6 +464,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="CacheRolesInCookie">
@@ -455,9 +473,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Security.Roles.CacheRolesInCookie" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property CacheRolesInCookie As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property bool CacheRolesInCookie { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.CacheRolesInCookie : bool" Usage="System.Web.Security.Roles.CacheRolesInCookie" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -481,7 +501,7 @@
    
   
 ## Examples  
- The following example shows the  element in the `system.web` section of the Web.config file for an ASP.NET application. It specifies that the application uses a <xref:System.Web.Security.SqlRoleProvider> instance and sets the `cacheRolesInCookie` attribute to `true`.  
+ The following example shows the [roleManager](https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/ms164660(v%3dvs.100)) element in the `system.web` section of the Web.config file for an ASP.NET application. It specifies that the application uses a <xref:System.Web.Security.SqlRoleProvider> instance and sets the `cacheRolesInCookie` attribute to `true`.  
   
 ```  
 <roleManager defaultProvider="SqlProvider"   
@@ -505,6 +525,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="CookieName">
@@ -513,9 +534,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Security.Roles.CookieName" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property CookieName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::String ^ CookieName { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CookieName : string" Usage="System.Web.Security.Roles.CookieName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -533,7 +556,7 @@
    
   
 ## Examples  
- The following example shows the  element in the `system.web` section of the Web.config file for an ASP.NET application. It specifies that the application uses a <xref:System.Web.Security.SqlRoleProvider> instance and sets the `cookieName` attribute to .ASPROLES.  
+ The following example shows the [roleManager](https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/ms164660(v%3dvs.100)) element in the `system.web` section of the Web.config file for an ASP.NET application. It specifies that the application uses a <xref:System.Web.Security.SqlRoleProvider> instance and sets the `cookieName` attribute to .ASPROLES.  
   
 ```  
 <roleManager defaultProvider="SqlProvider"   
@@ -557,6 +580,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="CookiePath">
@@ -565,9 +589,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Security.Roles.CookiePath" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property CookiePath As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::String ^ CookiePath { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CookiePath : string" Usage="System.Web.Security.Roles.CookiePath" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -585,7 +611,7 @@
    
   
 ## Examples  
- The following example shows the  element in the `system.web` section of the Web.config file for an ASP.NET application. It specifies that the application uses a <xref:System.Web.Security.SqlRoleProvider> instance and sets the `cookiePath` attribute to /MyApplication.  
+ The following example shows the [roleManager](https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/ms164660(v%3dvs.100)) element in the `system.web` section of the Web.config file for an ASP.NET application. It specifies that the application uses a <xref:System.Web.Security.SqlRoleProvider> instance and sets the `cookiePath` attribute to /MyApplication.  
   
 ```  
 <roleManager defaultProvider="SqlProvider"   
@@ -609,6 +635,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="CookieProtectionValue">
@@ -617,9 +644,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Security.Roles.CookieProtectionValue" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property CookieProtectionValue As CookieProtection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::Web::Security::CookieProtection CookieProtectionValue { System::Web::Security::CookieProtection get(); };" />
+      <MemberSignature Language="F#" Value="member this.CookieProtectionValue : System.Web.Security.CookieProtection" Usage="System.Web.Security.Roles.CookieProtectionValue" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -637,7 +666,7 @@
    
   
 ## Examples  
- The following example shows the  element in the `system.web` section of the Web.config file for an ASP.NET application. It specifies that the application uses a <xref:System.Web.Security.SqlRoleProvider> instance and sets `cookieProtection` attribute to `Encrypted`.  
+ The following example shows the [roleManager](https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/ms164660(v%3dvs.100)) element in the `system.web` section of the Web.config file for an ASP.NET application. It specifies that the application uses a <xref:System.Web.Security.SqlRoleProvider> instance and sets `cookieProtection` attribute to `Encrypted`.  
   
 ```  
 <roleManager defaultProvider="SqlProvider"   
@@ -661,6 +690,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="CookieRequireSSL">
@@ -669,9 +699,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Security.Roles.CookieRequireSSL" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property CookieRequireSSL As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property bool CookieRequireSSL { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.CookieRequireSSL : bool" Usage="System.Web.Security.Roles.CookieRequireSSL" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -690,7 +722,7 @@
    
   
 ## Examples  
- The following example shows the  element in the `system.web` section of the Web.config file for an ASP.NET application. It specifies that the application uses a <xref:System.Web.Security.SqlRoleProvider> instance and sets `cookieRequireSSL` to `true`.  
+ The following example shows the [roleManager](https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/ms164660(v%3dvs.100)) element in the `system.web` section of the Web.config file for an ASP.NET application. It specifies that the application uses a <xref:System.Web.Security.SqlRoleProvider> instance and sets `cookieRequireSSL` to `true`.  
   
 ```  
 <roleManager defaultProvider="SqlProvider"   
@@ -714,6 +746,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="CookieSlidingExpiration">
@@ -722,9 +755,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Security.Roles.CookieSlidingExpiration" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property CookieSlidingExpiration As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property bool CookieSlidingExpiration { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.CookieSlidingExpiration : bool" Usage="System.Web.Security.Roles.CookieSlidingExpiration" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -743,7 +778,7 @@
    
   
 ## Examples  
- The following example shows the  element in the `system.web` section of the Web.config file for an ASP.NET application. It specifies that the application uses a <xref:System.Web.Security.SqlRoleProvider> instance and sets the <xref:System.Web.Security.Roles.CookieSlidingExpiration%2A> property to `false`.  
+ The following example shows the [roleManager](https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/ms164660(v%3dvs.100)) element in the `system.web` section of the Web.config file for an ASP.NET application. It specifies that the application uses a <xref:System.Web.Security.SqlRoleProvider> instance and sets the <xref:System.Web.Security.Roles.CookieSlidingExpiration%2A> property to `false`.  
   
 ```  
 <roleManager defaultProvider="SqlProvider"   
@@ -767,6 +802,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="CookieTimeout">
@@ -775,9 +811,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Security.Roles.CookieTimeout" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property CookieTimeout As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property int CookieTimeout { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.CookieTimeout : int" Usage="System.Web.Security.Roles.CookieTimeout" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -790,14 +828,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The <xref:System.Web.Security.Roles.CookieTimeout%2A> property is used when the <xref:System.Web.Security.Roles.CookieSlidingExpiration%2A> property is `true` and specifies the time-to-live in minutes for the roles cookie. To set the <xref:System.Web.Security.Roles.CookieTimeout%2A> value, add the `cookieTimeout` attribute to the  element in the Web.config file for the ASP.NET application and specify an integer value.  
+ The <xref:System.Web.Security.Roles.CookieTimeout%2A> property is used when the <xref:System.Web.Security.Roles.CookieSlidingExpiration%2A> property is `true` and specifies the time-to-live in minutes for the roles cookie. To set the <xref:System.Web.Security.Roles.CookieTimeout%2A> value, add the `cookieTimeout` attribute to the [roleManager](https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/ms164660(v%3dvs.100)) element in the Web.config file for the ASP.NET application and specify an integer value.  
   
  If <xref:System.Web.Security.Roles.CookieSlidingExpiration%2A> is `false`, this property is ignored.  
   
    
   
 ## Examples  
- The following example shows the  element in the `system.web` section of the Web.config file for an ASP.NET application. It specifies that the application uses a <xref:System.Web.Security.SqlRoleProvider> instance and sets the <xref:System.Web.Security.Roles.CookieTimeout%2A> property to 30 minutes.  
+ The following example shows the [roleManager](https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/ms164660(v%3dvs.100)) element in the `system.web` section of the Web.config file for an ASP.NET application. It specifies that the application uses a <xref:System.Web.Security.SqlRoleProvider> instance and sets the <xref:System.Web.Security.Roles.CookieTimeout%2A> property to 30 minutes.  
   
 ```  
 <roleManager defaultProvider="SqlProvider"   
@@ -821,6 +859,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="CreatePersistentCookie">
@@ -829,9 +868,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Security.Roles.CreatePersistentCookie" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property CreatePersistentCookie As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property bool CreatePersistentCookie { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.CreatePersistentCookie : bool" Usage="System.Web.Security.Roles.CreatePersistentCookie" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -845,12 +886,13 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The <xref:System.Web.Security.Roles.CreatePersistentCookie%2A> property value is set in the configuration for an ASP.NET application using the `createPersistentCookie` attribute of the  configuration element.  
+ The <xref:System.Web.Security.Roles.CreatePersistentCookie%2A> property value is set in the configuration for an ASP.NET application using the `createPersistentCookie` attribute of the [roleManager](https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/ms164660(v%3dvs.100)) configuration element.  
   
  When `false`, the role-names cookie is a session cookie, that is, the cookie is lost when the browser is closed. When `true`, the role-names cookie is a persistent cookie that is available across multiple browser sessions. The persistent cookie expiration date and time are set to the current date and time plus the <xref:System.Web.Security.Roles.CookieTimeout%2A> value in minutes.  
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="CreateRole">
@@ -859,9 +901,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Security.Roles.CreateRole(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub CreateRole (roleName As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void CreateRole(System::String ^ roleName);" />
+      <MemberSignature Language="F#" Value="static member CreateRole : string -&gt; unit" Usage="System.Web.Security.Roles.CreateRole roleName" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -888,7 +932,7 @@
  The following code example creates a new role in the data source. For an example of a Web.config file that enables role management, see <xref:System.Web.Security.Roles>.  
   
 > [!IMPORTANT]
->  This example contains a text box that accepts user input, which is a potential security threat. By default, ASP.NET Web pages validate that user input does not include script or HTML elements. For more information, see [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+>  This example contains a text box that accepts user input, which is a potential security threat. By default, ASP.NET Web pages validate that user input does not include script or HTML elements. For more information, see [Script Exploits Overview](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
   
  [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/createrolecs.aspx#1)]
  [!code-aspx-vb[System.Web.Security.SqlRoleProvider#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/createrolevb.aspx#1)]  
@@ -904,6 +948,7 @@
   
  <paramref name="roleName" /> contains a comma.</exception>
         <exception cref="T:System.Configuration.Provider.ProviderException">Role management is not enabled.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="DeleteCookie">
@@ -912,9 +957,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Security.Roles.DeleteCookie" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub DeleteCookie ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void DeleteCookie();" />
+      <MemberSignature Language="F#" Value="static member DeleteCookie : unit -&gt; unit" Usage="System.Web.Security.Roles.DeleteCookie " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -935,7 +982,7 @@
  The following code example calls the <xref:System.Web.Security.Roles.DeleteCookie%2A> method to clear any cached role names when a user logs in. For an example of a Web.config file that enables role management, see <xref:System.Web.Security.Roles>.  
   
 > [!IMPORTANT]
->  This example contains a text box that accepts user input, which is a potential security threat. By default, ASP.NET Web pages validate that user input does not include script or HTML elements. For more information, see [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+>  This example contains a text box that accepts user input, which is a potential security threat. By default, ASP.NET Web pages validate that user input does not include script or HTML elements. For more information, see [Script Exploits Overview](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
   
  [!code-aspx-csharp[System.Web.Security.Roles#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.Roles/CS/logincs.aspx#5)]
  [!code-aspx-vb[System.Web.Security.Roles#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.Roles/VB/loginvb.aspx#5)]  
@@ -943,6 +990,7 @@
  ]]></format>
         </remarks>
         <exception cref="T:System.Configuration.Provider.ProviderException">Role management is not enabled.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <MemberGroup MemberName="DeleteRole">
@@ -952,6 +1000,7 @@
       </AssemblyInfo>
       <Docs>
         <summary>Removes a role from the data source.</summary>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </MemberGroup>
     <Member MemberName="DeleteRole">
@@ -960,11 +1009,18 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Security.Roles.DeleteRole(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function DeleteRole (roleName As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool DeleteRole(System::String ^ roleName);" />
+      <MemberSignature Language="F#" Value="static member DeleteRole : string -&gt; bool" Usage="System.Web.Security.Roles.DeleteRole roleName" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -1004,6 +1060,7 @@
  -or-  
   
  Role management is not enabled.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="DeleteRole">
@@ -1012,9 +1069,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Security.Roles.DeleteRole(System.String,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function DeleteRole (roleName As String, throwOnPopulatedRole As Boolean) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool DeleteRole(System::String ^ roleName, bool throwOnPopulatedRole);" />
+      <MemberSignature Language="F#" Value="static member DeleteRole : string * bool -&gt; bool" Usage="System.Web.Security.Roles.DeleteRole (roleName, throwOnPopulatedRole)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1026,7 +1085,7 @@
       </Parameters>
       <Docs>
         <param name="roleName">The name of the role to delete.</param>
-        <param name="throwOnPopulatedRole">If <see langword="true" />, throws an exception if <c>roleName</c> has one or more members.</param>
+        <param name="throwOnPopulatedRole">If <see langword="true" />, throws an exception if <paramref name="roleName" /> has one or more members.</param>
         <summary>Removes a role from the data source.</summary>
         <returns>
           <see langword="true" /> if <paramref name="roleName" /> was deleted from the data source; otherwise; <see langword="false" />.</returns>
@@ -1058,6 +1117,7 @@
  -or-  
   
  Role management is not enabled.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="Domain">
@@ -1066,9 +1126,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Security.Roles.Domain" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Domain As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::String ^ Domain { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Domain : string" Usage="System.Web.Security.Roles.Domain" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1081,12 +1143,13 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The <xref:System.Web.Security.Roles.Domain%2A> property value is set in the configuration for an ASP.NET application using the `domain` attribute of the  configuration element.  
+ The <xref:System.Web.Security.Roles.Domain%2A> property value is set in the configuration for an ASP.NET application using the `domain` attribute of the [roleManager](https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/ms164660(v%3dvs.100)) configuration element.  
   
  If no value is specified in the configuration for the domain attribute, the <xref:System.Web.Security.Roles.Domain%2A> property returns `null` and the role-names cookie domain defaults to the behavior of the <xref:System.Web.HttpCookie><xref:System.Web.HttpCookie.Domain%2A> property.  
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="Enabled">
@@ -1095,9 +1158,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Security.Roles.Enabled" />
       <MemberSignature Language="VB.NET" Value="Public Shared Property Enabled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property bool Enabled { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Enabled : bool with get, set" Usage="System.Web.Security.Roles.Enabled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1111,7 +1176,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- The following example shows the  element in the `system.web` section of the Web.config file for an ASP.NET application. It specifies that the application uses a <xref:System.Web.Security.SqlRoleProvider> instance and sets the `enabled` attribute to `true`.  
+ The following example shows the [roleManager](https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/ms164660(v%3dvs.100)) element in the `system.web` section of the Web.config file for an ASP.NET application. It specifies that the application uses a <xref:System.Web.Security.SqlRoleProvider> instance and sets the `enabled` attribute to `true`.  
   
 ```  
 <roleManager defaultProvider="SqlProvider"   
@@ -1135,6 +1200,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="FindUsersInRole">
@@ -1143,9 +1209,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Security.Roles.FindUsersInRole(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function FindUsersInRole (roleName As String, usernameToMatch As String) As String()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static cli::array &lt;System::String ^&gt; ^ FindUsersInRole(System::String ^ roleName, System::String ^ usernameToMatch);" />
+      <MemberSignature Language="F#" Value="static member FindUsersInRole : string * string -&gt; string[]" Usage="System.Web.Security.Roles.FindUsersInRole (roleName, usernameToMatch)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1174,7 +1242,7 @@
  The following code example uses the <xref:System.Web.Security.Roles.FindUsersInRole%2A> method to display role membership based on user input. For an example of a Web.config file that enables role management, see <xref:System.Web.Security.Roles>.  
   
 > [!IMPORTANT]
->  This example contains a text box that accepts user input, which is a potential security threat. By default, ASP.NET Web pages validate that user input does not include script or HTML elements. For more information, see [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+>  This example contains a text box that accepts user input, which is a potential security threat. By default, ASP.NET Web pages validate that user input does not include script or HTML elements. For more information, see [Script Exploits Overview](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
   
  [!code-aspx-csharp[System.Web.Security.Roles#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.Roles/CS/FindUsersInRolecs.aspx#11)]
  [!code-aspx-vb[System.Web.Security.Roles#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.Roles/VB/FindUsersInRolevb.aspx#11)]  
@@ -1202,9 +1270,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Security.Roles.GetAllRoles" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetAllRoles () As String()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static cli::array &lt;System::String ^&gt; ^ GetAllRoles();" />
+      <MemberSignature Language="F#" Value="static member GetAllRoles : unit -&gt; string[]" Usage="System.Web.Security.Roles.GetAllRoles " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1226,7 +1296,7 @@
  The following code example uses the <xref:System.Web.Security.Roles.GetAllRoles%2A> method to get the list of roles for an application and bind the results to a <xref:System.Web.UI.WebControls.GridView?displayProperty=nameWithType> control. For an example of a Web.config file that enables role management, see <xref:System.Web.Security.Roles>.  
   
 > [!IMPORTANT]
->  This example contains a text box that accepts user input, which is a potential security threat. By default, ASP.NET Web pages validate that user input does not include script or HTML elements. For more information, see [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+>  This example contains a text box that accepts user input, which is a potential security threat. By default, ASP.NET Web pages validate that user input does not include script or HTML elements. For more information, see [Script Exploits Overview](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
   
  [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/createrolecs.aspx#1)]
  [!code-aspx-vb[System.Web.Security.SqlRoleProvider#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/createrolevb.aspx#1)]  
@@ -1234,6 +1304,7 @@
  ]]></format>
         </remarks>
         <exception cref="T:System.Configuration.Provider.ProviderException">Role management is not enabled.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <MemberGroup MemberName="GetRolesForUser">
@@ -1243,6 +1314,7 @@
       </AssemblyInfo>
       <Docs>
         <summary>Gets a list of the roles that a user is in.</summary>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </MemberGroup>
     <Member MemberName="GetRolesForUser">
@@ -1251,9 +1323,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Security.Roles.GetRolesForUser" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetRolesForUser () As String()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static cli::array &lt;System::String ^&gt; ^ GetRolesForUser();" />
+      <MemberSignature Language="F#" Value="static member GetRolesForUser : unit -&gt; string[]" Usage="System.Web.Security.Roles.GetRolesForUser " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1283,6 +1357,7 @@
         </remarks>
         <exception cref="T:System.ArgumentNullException">There is no current logged-on user.</exception>
         <exception cref="T:System.Configuration.Provider.ProviderException">Role management is not enabled.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="GetRolesForUser">
@@ -1291,9 +1366,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Security.Roles.GetRolesForUser(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetRolesForUser (username As String) As String()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static cli::array &lt;System::String ^&gt; ^ GetRolesForUser(System::String ^ username);" />
+      <MemberSignature Language="F#" Value="static member GetRolesForUser : string -&gt; string[]" Usage="System.Web.Security.Roles.GetRolesForUser username" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1329,6 +1406,7 @@
         <exception cref="T:System.ArgumentException">
           <paramref name="username" /> contains a comma (,).</exception>
         <exception cref="T:System.Configuration.Provider.ProviderException">Role management is not enabled.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="GetUsersInRole">
@@ -1337,9 +1415,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Security.Roles.GetUsersInRole(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetUsersInRole (roleName As String) As String()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static cli::array &lt;System::String ^&gt; ^ GetUsersInRole(System::String ^ roleName);" />
+      <MemberSignature Language="F#" Value="static member GetUsersInRole : string -&gt; string[]" Usage="System.Web.Security.Roles.GetUsersInRole roleName" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1373,6 +1453,7 @@
         <exception cref="T:System.ArgumentException">
           <paramref name="roleName" /> is an empty string or contains a comma (,).</exception>
         <exception cref="T:System.Configuration.Provider.ProviderException">Role management is not enabled.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <MemberGroup MemberName="IsUserInRole">
@@ -1382,6 +1463,7 @@
       </AssemblyInfo>
       <Docs>
         <summary>Gets a value indicating whether a user is in the specified role.</summary>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </MemberGroup>
     <Member MemberName="IsUserInRole">
@@ -1390,9 +1472,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Security.Roles.IsUserInRole(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function IsUserInRole (roleName As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool IsUserInRole(System::String ^ roleName);" />
+      <MemberSignature Language="F#" Value="static member IsUserInRole : string -&gt; bool" Usage="System.Web.Security.Roles.IsUserInRole roleName" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1433,6 +1517,7 @@
         <exception cref="T:System.ArgumentException">
           <paramref name="roleName" /> is an empty string or contains a comma (,).</exception>
         <exception cref="T:System.Configuration.Provider.ProviderException">Role management is not enabled.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="IsUserInRole">
@@ -1441,9 +1526,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Security.Roles.IsUserInRole(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function IsUserInRole (username As String, roleName As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool IsUserInRole(System::String ^ username, System::String ^ roleName);" />
+      <MemberSignature Language="F#" Value="static member IsUserInRole : string * string -&gt; bool" Usage="System.Web.Security.Roles.IsUserInRole (username, roleName)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1490,6 +1577,7 @@
   
  <paramref name="username" /> contains a comma (,).</exception>
         <exception cref="T:System.Configuration.Provider.ProviderException">Role management is not enabled.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="MaxCachedResults">
@@ -1498,9 +1586,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Security.Roles.MaxCachedResults" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property MaxCachedResults As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property int MaxCachedResults { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.MaxCachedResults : int" Usage="System.Web.Security.Roles.MaxCachedResults" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1518,7 +1608,7 @@
    
   
 ## Examples  
- The following example shows the  element in the `system.web` section of the Web.config file for an ASP.NET application. It specifies that the application uses a <xref:System.Web.Security.SqlRoleProvider> instance and sets the `maxCachedResults` attribute to 10.  
+ The following example shows the [roleManager](https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/ms164660(v%3dvs.100)) element in the `system.web` section of the Web.config file for an ASP.NET application. It specifies that the application uses a <xref:System.Web.Security.SqlRoleProvider> instance and sets the `maxCachedResults` attribute to 10.  
   
 ```  
 <roleManager  
@@ -1535,6 +1625,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="Provider">
@@ -1543,9 +1634,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Security.Roles.Provider" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Provider As RoleProvider" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::Web::Security::RoleProvider ^ Provider { System::Web::Security::RoleProvider ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Provider : System.Web.Security.RoleProvider" Usage="System.Web.Security.Roles.Provider" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1575,6 +1668,7 @@
  ]]></format>
         </remarks>
         <exception cref="T:System.Configuration.Provider.ProviderException">Role management is not enabled.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="Providers">
@@ -1583,9 +1677,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Security.Roles.Providers" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Providers As RoleProviderCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::Web::Security::RoleProviderCollection ^ Providers { System::Web::Security::RoleProviderCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Providers : System.Web.Security.RoleProviderCollection" Usage="System.Web.Security.Roles.Providers" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1598,7 +1694,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The <xref:System.Web.Security.Roles.Providers%2A> property references all the role providers enabled for an application, including any providers added in the Web.config file. You can control which role providers are available for an application by using the `providers` element of the  section in the Web.config file for your application.  
+ The <xref:System.Web.Security.Roles.Providers%2A> property references all the role providers enabled for an application, including any providers added in the Web.config file. You can control which role providers are available for an application by using the `providers` element of the [roleManager](https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/ms164660(v%3dvs.100)) section in the Web.config file for your application.  
   
  The following example shows a  section that removes any existing providers (such as those specified in the Machine.config file) and adds a <xref:System.Web.Security.SqlRoleProvider> instance as the role provider for the application.  
   
@@ -1648,6 +1744,7 @@
  ]]></format>
         </remarks>
         <exception cref="T:System.Configuration.Provider.ProviderException">Role management is not enabled.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="RemoveUserFromRole">
@@ -1656,9 +1753,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Security.Roles.RemoveUserFromRole(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub RemoveUserFromRole (username As String, roleName As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void RemoveUserFromRole(System::String ^ username, System::String ^ roleName);" />
+      <MemberSignature Language="F#" Value="static member RemoveUserFromRole : string * string -&gt; unit" Usage="System.Web.Security.Roles.RemoveUserFromRole (username, roleName)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1699,6 +1798,7 @@
   
  <paramref name="username" /> is an empty string or contains a comma (,).</exception>
         <exception cref="T:System.Configuration.Provider.ProviderException">Role management is not enabled.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="RemoveUserFromRoles">
@@ -1707,9 +1807,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Security.Roles.RemoveUserFromRoles(System.String,System.String[])" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub RemoveUserFromRoles (username As String, roleNames As String())" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void RemoveUserFromRoles(System::String ^ username, cli::array &lt;System::String ^&gt; ^ roleNames);" />
+      <MemberSignature Language="F#" Value="static member RemoveUserFromRoles : string * string[] -&gt; unit" Usage="System.Web.Security.Roles.RemoveUserFromRoles (username, roleNames)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1756,6 +1858,7 @@
   
  <paramref name="roleNames" /> contains a duplicate element.</exception>
         <exception cref="T:System.Configuration.Provider.ProviderException">Role management is not enabled.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="RemoveUsersFromRole">
@@ -1764,9 +1867,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Security.Roles.RemoveUsersFromRole(System.String[],System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub RemoveUsersFromRole (usernames As String(), roleName As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void RemoveUsersFromRole(cli::array &lt;System::String ^&gt; ^ usernames, System::String ^ roleName);" />
+      <MemberSignature Language="F#" Value="static member RemoveUsersFromRole : string[] * string -&gt; unit" Usage="System.Web.Security.Roles.RemoveUsersFromRole (usernames, roleName)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1815,6 +1920,7 @@
   
  <paramref name="usernames" /> contains a duplicate element.</exception>
         <exception cref="T:System.Configuration.Provider.ProviderException">Role management is not enabled.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="RemoveUsersFromRoles">
@@ -1823,9 +1929,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Security.Roles.RemoveUsersFromRoles(System.String[],System.String[])" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub RemoveUsersFromRoles (usernames As String(), roleNames As String())" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void RemoveUsersFromRoles(cli::array &lt;System::String ^&gt; ^ usernames, cli::array &lt;System::String ^&gt; ^ roleNames);" />
+      <MemberSignature Language="F#" Value="static member RemoveUsersFromRoles : string[] * string[] -&gt; unit" Usage="System.Web.Security.Roles.RemoveUsersFromRoles (usernames, roleNames)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1876,6 +1984,7 @@
   
  <paramref name="usernames" /> contains a duplicate element.</exception>
         <exception cref="T:System.Configuration.Provider.ProviderException">Role management is not enabled.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
     <Member MemberName="RoleExists">
@@ -1884,9 +1993,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Security.Roles.RoleExists(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function RoleExists (roleName As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool RoleExists(System::String ^ roleName);" />
+      <MemberSignature Language="F#" Value="static member RoleExists : string -&gt; bool" Usage="System.Web.Security.Roles.RoleExists roleName" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1912,7 +2023,7 @@
  The following code example uses the <xref:System.Web.Security.Roles.RoleExists%2A> method to determine whether a role name already exists before creating the role. For an example of a Web.config file that enables role management, see <xref:System.Web.Security.Roles>.  
   
 > [!IMPORTANT]
->  This example contains a text box that accepts user input, which is a potential security threat. By default, ASP.NET Web pages validate that user input does not include script or HTML elements. For more information, see [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+>  This example contains a text box that accepts user input, which is a potential security threat. By default, ASP.NET Web pages validate that user input does not include script or HTML elements. For more information, see [Script Exploits Overview](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
   
  [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/createrolecs.aspx#1)]
  [!code-aspx-vb[System.Web.Security.SqlRoleProvider#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/createrolevb.aspx#1)]  
@@ -1924,6 +2035,7 @@
         <exception cref="T:System.ArgumentException">
           <paramref name="roleName" /> is an empty string or contains a comma (,).</exception>
         <exception cref="T:System.Configuration.Provider.ProviderException">Role management is not enabled.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6">Understanding ASP.NET Role Management</related>
       </Docs>
     </Member>
   </Members>

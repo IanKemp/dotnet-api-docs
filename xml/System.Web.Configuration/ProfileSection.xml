@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Web.Configuration.ProfileSection" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ProfileSection&#xA;Inherits ConfigurationSection" />
   <TypeSignature Language="C++ CLI" Value="public ref class ProfileSection sealed : System::Configuration::ConfigurationSection" />
+  <TypeSignature Language="F#" Value="type ProfileSection = class&#xA;    inherit ConfigurationSection" />
   <AssemblyInfo>
     <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -18,7 +20,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The <xref:System.Web.Configuration.ProfileSection> class provides a way to programmatically access and modify the content of the configuration file `profile` section. The `profile` section of the configuration file specifies a schema for user profiles. At run time, the ASP.NET compilation system uses the information specified in the `profile` section to generate a class called `ProfileCommon`, which is derived from <xref:System.Web.Profile.ProfileBase>. The `ProfileCommon` class definition is based on the properties defined in the `profile` section of the configuration file. The class allows you to access and modify the values for individual profiles. An instance of this class is created for each user profile, and you can access the individual profile values in your code through the <xref:System.Web.HttpContext.Profile%2A?displayProperty=nameWithType> property. For more information about the profile features added to [!INCLUDE[vstecasplong](~/includes/vstecasplong-md.md)], see [ASP.NET Profile Properties Overview](http://msdn.microsoft.com/library/89439440-92ea-48c3-a4bd-dea40307899d).  
+ The <xref:System.Web.Configuration.ProfileSection> class provides a way to programmatically access and modify the content of the configuration file `profile` section. The `profile` section of the configuration file specifies a schema for user profiles. At run time, the ASP.NET compilation system uses the information specified in the `profile` section to generate a class called `ProfileCommon`, which is derived from <xref:System.Web.Profile.ProfileBase>. The `ProfileCommon` class definition is based on the properties defined in the `profile` section of the configuration file. The class allows you to access and modify the values for individual profiles. An instance of this class is created for each user profile, and you can access the individual profile values in your code through the <xref:System.Web.HttpContext.Profile%2A?displayProperty=nameWithType> property. For more information about the profile features added to [!INCLUDE[vstecasplong](~/includes/vstecasplong-md.md)], see [ASP.NET Profile Properties Overview](https://msdn.microsoft.com/library/89439440-92ea-48c3-a4bd-dea40307899d).  
   
    
   
@@ -82,8 +84,14 @@ local Microsoft SQL Server database" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.Web.Configuration.ProfileSection" /> class using default settings.</summary>
@@ -112,9 +120,11 @@ local Microsoft SQL Server database" />
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfileSection.AutomaticSaveEnabled" />
       <MemberSignature Language="VB.NET" Value="Public Property AutomaticSaveEnabled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AutomaticSaveEnabled { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.AutomaticSaveEnabled : bool with get, set" Usage="System.Web.Configuration.ProfileSection.AutomaticSaveEnabled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -155,9 +165,11 @@ local Microsoft SQL Server database" />
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfileSection.DefaultProvider" />
       <MemberSignature Language="VB.NET" Value="Public Property DefaultProvider As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DefaultProvider { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DefaultProvider : string with get, set" Usage="System.Web.Configuration.ProfileSection.DefaultProvider" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -200,9 +212,11 @@ local Microsoft SQL Server database" />
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfileSection.Enabled" />
       <MemberSignature Language="VB.NET" Value="Public Property Enabled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Enabled { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Enabled : bool with get, set" Usage="System.Web.Configuration.ProfileSection.Enabled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -244,9 +258,11 @@ local Microsoft SQL Server database" />
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfileSection.Inherits" />
       <MemberSignature Language="VB.NET" Value="Public Property Inherits As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Inherits { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Inherits : string with get, set" Usage="System.Web.Configuration.ProfileSection.Inherits" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -269,7 +285,7 @@ local Microsoft SQL Server database" />
 > [!NOTE]
 >  If you provide a type reference in the <xref:System.Web.Configuration.ProfileSection.Inherits%2A> property, you can define properties in your custom types that are not defined with a `property` element.  
   
- For more information about the profile features added to [!INCLUDE[vstecasplong](~/includes/vstecasplong-md.md)], see [ASP.NET Profile Properties Overview](http://msdn.microsoft.com/library/89439440-92ea-48c3-a4bd-dea40307899d).  
+ For more information about the profile features added to [!INCLUDE[vstecasplong](~/includes/vstecasplong-md.md)], see [ASP.NET Profile Properties Overview](https://msdn.microsoft.com/library/89439440-92ea-48c3-a4bd-dea40307899d).  
   
    
   
@@ -283,6 +299,7 @@ local Microsoft SQL Server database" />
         </remarks>
         <altmember cref="T:System.Web.Profile.ProfileModule" />
         <altmember cref="P:System.Type.AssemblyQualifiedName" />
+        <related type="Article" href="https://msdn.microsoft.com/library/8f8c2c90-f15d-400e-87e7-a757e4f04d0e">Assembly Names</related>
       </Docs>
     </Member>
     <Member MemberName="Properties">
@@ -291,11 +308,18 @@ local Microsoft SQL Server database" />
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfileSection.Properties" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property Properties As ConfigurationPropertyCollection" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property System::Configuration::ConfigurationPropertyCollection ^ Properties { System::Configuration::ConfigurationPropertyCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Properties : System.Configuration.ConfigurationPropertyCollection" Usage="System.Web.Configuration.ProfileSection.Properties" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
       </ReturnValue>
@@ -311,9 +335,11 @@ local Microsoft SQL Server database" />
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfileSection.PropertySettings" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PropertySettings As RootProfilePropertySettingsCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::Configuration::RootProfilePropertySettingsCollection ^ PropertySettings { System::Web::Configuration::RootProfilePropertySettingsCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.PropertySettings : System.Web.Configuration.RootProfilePropertySettingsCollection" Usage="System.Web.Configuration.ProfileSection.PropertySettings" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -355,9 +381,11 @@ local Microsoft SQL Server database" />
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfileSection.Providers" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Providers As ProviderSettingsCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Configuration::ProviderSettingsCollection ^ Providers { System::Configuration::ProviderSettingsCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Providers : System.Configuration.ProviderSettingsCollection" Usage="System.Web.Configuration.ProfileSection.Providers" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>

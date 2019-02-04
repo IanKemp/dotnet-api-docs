@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.ApplicationServices.UnhandledExceptionEventArgs" />
   <TypeSignature Language="VB.NET" Value="Public Class UnhandledExceptionEventArgs&#xA;Inherits ThreadExceptionEventArgs" />
   <TypeSignature Language="C++ CLI" Value="public ref class UnhandledExceptionEventArgs : System::Threading::ThreadExceptionEventArgs" />
+  <TypeSignature Language="F#" Value="type UnhandledExceptionEventArgs = class&#xA;    inherit ThreadExceptionEventArgs" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>10.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -14,10 +16,10 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -33,6 +35,7 @@
  ]]></format>
     </remarks>
     <altmember cref="E:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException" />
+    <related type="Article" href="~/docs/visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md">Overview of the Visual Basic Application Model</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -40,11 +43,18 @@
       <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor(bool exitApplication, class System.Exception exception) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.ApplicationServices.UnhandledExceptionEventArgs.#ctor(System.Boolean,System.Exception)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; UnhandledExceptionEventArgs(bool exitApplication, Exception ^ exception);" />
+      <MemberSignature Language="F#" Value="new Microsoft.VisualBasic.ApplicationServices.UnhandledExceptionEventArgs : bool * Exception -&gt; Microsoft.VisualBasic.ApplicationServices.UnhandledExceptionEventArgs" Usage="new Microsoft.VisualBasic.ApplicationServices.UnhandledExceptionEventArgs (exitApplication, exception)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters>
         <Parameter Name="exitApplication" Type="System.Boolean" />
         <Parameter Name="exception" Type="System.Exception" />
@@ -64,6 +74,7 @@
  ]]></format>
         </remarks>
         <altmember cref="E:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException" />
+        <related type="Article" href="~/docs/visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md">Overview of the Visual Basic Application Model</related>
       </Docs>
     </Member>
     <Member MemberName="ExitApplication">
@@ -72,11 +83,21 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.ApplicationServices.UnhandledExceptionEventArgs.ExitApplication" />
       <MemberSignature Language="VB.NET" Value="Public Property ExitApplication As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ExitApplication { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.ExitApplication : bool with get, set" Usage="Microsoft.VisualBasic.ApplicationServices.UnhandledExceptionEventArgs.ExitApplication" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -92,6 +113,7 @@
  ]]></format>
         </remarks>
         <altmember cref="E:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException" />
+        <related type="Article" href="~/docs/visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md">Overview of the Visual Basic Application Model</related>
       </Docs>
     </Member>
   </Members>

@@ -4,13 +4,16 @@
   <TypeSignature Language="DocId" Value="T:System.Configuration.SettingsProvider" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class SettingsProvider&#xA;Inherits ProviderBase" />
   <TypeSignature Language="C++ CLI" Value="public ref class SettingsProvider abstract : System::Configuration::Provider::ProviderBase" />
+  <TypeSignature Language="F#" Value="type SettingsProvider = class&#xA;    inherit ProviderBase" />
   <AssemblyInfo>
     <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Configuration.Provider.ProviderBase</BaseTypeName>
@@ -30,7 +33,7 @@
   
  Typically, you should design settings providers to be single-instanced to avoid storage resource contention. Providers should also be thread-safe because they can be called simultaneously from multiple wrapper instances in a single application domain or from multiple applications in different domains.  
   
- At minimum, a settings provider must recognize three attributes—<xref:System.Configuration.ApplicationScopedSettingAttribute>, <xref:System.Configuration.UserScopedSettingAttribute>, and <xref:System.Configuration.DefaultSettingValueAttribute>. For a full listing of attributes that can be applied to application settings, see [Application Settings Attributes](~/docs/framework/winforms/advanced/application-settings-attributes.md). A custom setting provider should resolve attributes applied to settings properties in the following manner:  
+ At minimum, a settings provider must recognize three attributes - <xref:System.Configuration.ApplicationScopedSettingAttribute>, <xref:System.Configuration.UserScopedSettingAttribute>, and <xref:System.Configuration.DefaultSettingValueAttribute>. For a full listing of attributes that can be applied to application settings, see [Application Settings Attributes](~/docs/framework/winforms/advanced/application-settings-attributes.md). A custom setting provider should resolve attributes applied to settings properties in the following manner:  
   
 1.  If the provider can fulfill the request implied by the attribute, obviously it should do so.  
   
@@ -45,6 +48,8 @@
     <altmember cref="T:System.Configuration.SettingsProviderAttribute" />
     <altmember cref="T:System.Configuration.ApplicationSettingsBase" />
     <altmember cref="T:System.Configuration.ConfigurationException" />
+    <related type="Article" href="https://msdn.microsoft.com/library/c8eb2ad0-fac6-4ea2-9140-675a4a44d562">Application Settings Architecture</related>
+    <related type="Article" href="https://msdn.microsoft.com/library/53caa66c-a9fb-43a5-953c-ad092590098d">Application Settings Attributes</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -56,12 +61,19 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Initializes an instance of the <see cref="T:System.Configuration.SettingsProvider" /> class.</summary>
@@ -90,14 +102,17 @@
       <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsProvider.ApplicationName" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Property ApplicationName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ ApplicationName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ApplicationName : string with get, set" Usage="System.Configuration.SettingsProvider.ApplicationName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -122,14 +137,17 @@
       <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsProvider.GetPropertyValues(System.Configuration.SettingsContext,System.Configuration.SettingsPropertyCollection)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetPropertyValues (context As SettingsContext, collection As SettingsPropertyCollection) As SettingsPropertyValueCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Configuration::SettingsPropertyValueCollection ^ GetPropertyValues(System::Configuration::SettingsContext ^ context, System::Configuration::SettingsPropertyCollection ^ collection);" />
+      <MemberSignature Language="F#" Value="abstract member GetPropertyValues : System.Configuration.SettingsContext * System.Configuration.SettingsPropertyCollection -&gt; System.Configuration.SettingsPropertyValueCollection" Usage="settingsProvider.GetPropertyValues (context, collection)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Configuration.SettingsPropertyValueCollection</ReturnType>
@@ -161,14 +179,17 @@
       <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsProvider.SetPropertyValues(System.Configuration.SettingsContext,System.Configuration.SettingsPropertyValueCollection)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SetPropertyValues (context As SettingsContext, collection As SettingsPropertyValueCollection)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SetPropertyValues(System::Configuration::SettingsContext ^ context, System::Configuration::SettingsPropertyValueCollection ^ collection);" />
+      <MemberSignature Language="F#" Value="abstract member SetPropertyValues : System.Configuration.SettingsContext * System.Configuration.SettingsPropertyValueCollection -&gt; unit" Usage="settingsProvider.SetPropertyValues (context, collection)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

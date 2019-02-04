@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Input.InputManager" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class InputManager&#xA;Inherits DispatcherObject" />
   <TypeSignature Language="C++ CLI" Value="public ref class InputManager sealed : System::Windows::Threading::DispatcherObject" />
+  <TypeSignature Language="F#" Value="type InputManager = class&#xA;    inherit DispatcherObject" />
   <AssemblyInfo>
     <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -52,14 +54,19 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Input.InputManager.Current" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Current As InputManager" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::Windows::Input::InputManager ^ Current { System::Windows::Input::InputManager ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Current : System.Windows.Input.InputManager" Usage="System.Windows.Input.InputManager.Current" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -85,6 +92,7 @@
       <MemberSignature Language="DocId" Value="E:System.Windows.Input.InputManager.EnterMenuMode" />
       <MemberSignature Language="VB.NET" Value="Public Event EnterMenuMode As EventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ EnterMenuMode;" />
+      <MemberSignature Language="F#" Value="member this.EnterMenuMode : EventHandler " Usage="member this.EnterMenuMode : System.EventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
@@ -99,7 +107,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Components register delegates with this event to respond to a control entering the input manager’s menu mode.  
+ Components register delegates with this event to respond to a control entering the input manager's menu mode.  
   
  ]]></format>
         </remarks>
@@ -111,9 +119,11 @@
       <MemberSignature Language="DocId" Value="E:System.Windows.Input.InputManager.HitTestInvalidatedAsync" />
       <MemberSignature Language="VB.NET" Value="Public Event HitTestInvalidatedAsync As EventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ HitTestInvalidatedAsync;" />
+      <MemberSignature Language="F#" Value="member this.HitTestInvalidatedAsync : EventHandler " Usage="member this.HitTestInvalidatedAsync : System.EventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -130,9 +140,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Input.InputManager.InputProviders" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InputProviders As ICollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ICollection ^ InputProviders { System::Collections::ICollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.InputProviders : System.Collections.ICollection" Usage="System.Windows.Input.InputManager.InputProviders" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -156,6 +168,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Input.InputManager.IsInMenuMode" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsInMenuMode As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsInMenuMode { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsInMenuMode : bool" Usage="System.Windows.Input.InputManager.IsInMenuMode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
@@ -184,6 +197,7 @@
       <MemberSignature Language="DocId" Value="E:System.Windows.Input.InputManager.LeaveMenuMode" />
       <MemberSignature Language="VB.NET" Value="Public Event LeaveMenuMode As EventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ LeaveMenuMode;" />
+      <MemberSignature Language="F#" Value="member this.LeaveMenuMode : EventHandler " Usage="member this.LeaveMenuMode : System.EventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
@@ -198,7 +212,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Components register delegates with this event to respond to a control leaving the input manager’s menu mode.  
+ Components register delegates with this event to respond to a control leaving the input manager's menu mode.  
   
  ]]></format>
         </remarks>
@@ -210,11 +224,21 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Input.InputManager.MostRecentInputDevice" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MostRecentInputDevice As InputDevice" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Input::InputDevice ^ MostRecentInputDevice { System::Windows::Input::InputDevice ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.MostRecentInputDevice : System.Windows.Input.InputDevice" Usage="System.Windows.Input.InputManager.MostRecentInputDevice" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Windows.Input.InputDevice</ReturnType>
       </ReturnValue>
@@ -230,6 +254,7 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Input.InputManager.PopMenuMode(System.Windows.PresentationSource)" />
       <MemberSignature Language="VB.NET" Value="Public Sub PopMenuMode (menuSite As PresentationSource)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void PopMenuMode(System::Windows::PresentationSource ^ menuSite);" />
+      <MemberSignature Language="F#" Value="member this.PopMenuMode : System.Windows.PresentationSource -&gt; unit" Usage="inputManager.PopMenuMode menuSite" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
@@ -248,7 +273,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- A component calls this method to leave the input manager’s menu mode. The `menuSite` releases privileged access to window messages.  
+ A component calls this method to leave the input manager's menu mode. The `menuSite` releases privileged access to window messages.  
   
  Calling this method causes the internal count of open menus to decrement and sets the <xref:System.Windows.Input.InputManager.IsInMenuMode%2A> property to `false`, if this is the last menu to close.  
   
@@ -264,9 +289,11 @@
       <MemberSignature Language="DocId" Value="E:System.Windows.Input.InputManager.PostNotifyInput" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event PostNotifyInput As NotifyInputEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Input::NotifyInputEventHandler ^ PostNotifyInput;" />
+      <MemberSignature Language="F#" Value="member this.PostNotifyInput : System.Windows.Input.NotifyInputEventHandler " Usage="member this.PostNotifyInput : System.Windows.Input.NotifyInputEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -275,6 +302,12 @@
         </Attribute>
         <Attribute>
           <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>add: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>remove: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -314,9 +347,11 @@
       <MemberSignature Language="DocId" Value="E:System.Windows.Input.InputManager.PostProcessInput" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event PostProcessInput As ProcessInputEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Input::ProcessInputEventHandler ^ PostProcessInput;" />
+      <MemberSignature Language="F#" Value="member this.PostProcessInput : System.Windows.Input.ProcessInputEventHandler " Usage="member this.PostProcessInput : System.Windows.Input.ProcessInputEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -325,6 +360,12 @@
         </Attribute>
         <Attribute>
           <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>add: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>remove: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -364,9 +405,11 @@
       <MemberSignature Language="DocId" Value="E:System.Windows.Input.InputManager.PreNotifyInput" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event PreNotifyInput As NotifyInputEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Input::NotifyInputEventHandler ^ PreNotifyInput;" />
+      <MemberSignature Language="F#" Value="member this.PreNotifyInput : System.Windows.Input.NotifyInputEventHandler " Usage="member this.PreNotifyInput : System.Windows.Input.NotifyInputEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -375,6 +418,12 @@
         </Attribute>
         <Attribute>
           <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>add: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>remove: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -414,9 +463,11 @@
       <MemberSignature Language="DocId" Value="E:System.Windows.Input.InputManager.PreProcessInput" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event PreProcessInput As PreProcessInputEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Input::PreProcessInputEventHandler ^ PreProcessInput;" />
+      <MemberSignature Language="F#" Value="member this.PreProcessInput : System.Windows.Input.PreProcessInputEventHandler " Usage="member this.PreProcessInput : System.Windows.Input.PreProcessInputEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -425,6 +476,12 @@
         </Attribute>
         <Attribute>
           <AttributeName>remove: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>add: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>remove: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -466,11 +523,18 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Input.InputManager.PrimaryKeyboardDevice" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PrimaryKeyboardDevice As KeyboardDevice" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Input::KeyboardDevice ^ PrimaryKeyboardDevice { System::Windows::Input::KeyboardDevice ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.PrimaryKeyboardDevice : System.Windows.Input.KeyboardDevice" Usage="System.Windows.Input.InputManager.PrimaryKeyboardDevice" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Windows.Input.KeyboardDevice</ReturnType>
       </ReturnValue>
@@ -487,11 +551,18 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Input.InputManager.PrimaryMouseDevice" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PrimaryMouseDevice As MouseDevice" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Input::MouseDevice ^ PrimaryMouseDevice { System::Windows::Input::MouseDevice ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.PrimaryMouseDevice : System.Windows.Input.MouseDevice" Usage="System.Windows.Input.InputManager.PrimaryMouseDevice" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Windows.Input.MouseDevice</ReturnType>
       </ReturnValue>
@@ -508,9 +579,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Input.InputManager.ProcessInput(System.Windows.Input.InputEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Public Function ProcessInput (input As InputEventArgs) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool ProcessInput(System::Windows::Input::InputEventArgs ^ input);" />
+      <MemberSignature Language="F#" Value="member this.ProcessInput : System.Windows.Input.InputEventArgs -&gt; bool" Usage="inputManager.ProcessInput input" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -564,6 +637,7 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Input.InputManager.PushMenuMode(System.Windows.PresentationSource)" />
       <MemberSignature Language="VB.NET" Value="Public Sub PushMenuMode (menuSite As PresentationSource)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void PushMenuMode(System::Windows::PresentationSource ^ menuSite);" />
+      <MemberSignature Language="F#" Value="member this.PushMenuMode : System.Windows.PresentationSource -&gt; unit" Usage="inputManager.PushMenuMode menuSite" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
@@ -582,7 +656,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- A component calls this method to enter the input manager’s menu mode. The `menuSite` gets privileged access to window messages. Calling this method causes the internal count of open menus to increment and sets the <xref:System.Windows.Input.InputManager.IsInMenuMode%2A> property to `true`, if this is the first menu to open.  
+ A component calls this method to enter the input manager's menu mode. The `menuSite` gets privileged access to window messages. Calling this method causes the internal count of open menus to increment and sets the <xref:System.Windows.Input.InputManager.IsInMenuMode%2A> property to `true`, if this is the first menu to open.  
   
  ]]></format>
         </remarks>

@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolStripItemCollection" />
   <TypeSignature Language="VB.NET" Value="Public Class ToolStripItemCollection&#xA;Inherits ArrangedElementCollection&#xA;Implements IList" />
   <TypeSignature Language="C++ CLI" Value="public ref class ToolStripItemCollection : System::Windows::Forms::Layout::ArrangedElementCollection, System::Collections::IList" />
+  <TypeSignature Language="F#" Value="type ToolStripItemCollection = class&#xA;    inherit ArrangedElementCollection&#xA;    interface IList&#xA;    interface ICollection&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -13,15 +15,24 @@
   </Base>
   <Interfaces>
     <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>System.Collections.IList</InterfaceName>
     </Interface>
   </Interfaces>
   <Attributes>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
       <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.ToolStripCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
     </Attribute>
     <Attribute>
       <AttributeName>System.ComponentModel.ListBindable(false)</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">
+      <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.ToolStripCollectionEditor, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -44,9 +55,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripItemCollection.#ctor(System.Windows.Forms.ToolStrip,System.Windows.Forms.ToolStripItem[])" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (owner As ToolStrip, value As ToolStripItem())" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ToolStripItemCollection(System::Windows::Forms::ToolStrip ^ owner, cli::array &lt;System::Windows::Forms::ToolStripItem ^&gt; ^ value);" />
+      <MemberSignature Language="F#" Value="new System.Windows.Forms.ToolStripItemCollection : System.Windows.Forms.ToolStrip * System.Windows.Forms.ToolStripItem[] -&gt; System.Windows.Forms.ToolStripItemCollection" Usage="new System.Windows.Forms.ToolStripItemCollection (owner, value)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
@@ -75,11 +88,18 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.ToolStripItem Add(class System.Drawing.Image image) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripItemCollection.Add(System.Drawing.Image)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Windows::Forms::ToolStripItem ^ Add(System::Drawing::Image ^ image);" />
+      <MemberSignature Language="F#" Value="member this.Add : System.Drawing.Image -&gt; System.Windows.Forms.ToolStripItem" Usage="toolStripItemCollection.Add image" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.ToolStripItem</ReturnType>
       </ReturnValue>
@@ -99,11 +119,18 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripItemCollection.Add(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function Add (text As String) As ToolStripItem" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Windows::Forms::ToolStripItem ^ Add(System::String ^ text);" />
+      <MemberSignature Language="F#" Value="member this.Add : string -&gt; System.Windows.Forms.ToolStripItem" Usage="toolStripItemCollection.Add text" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.ToolStripItem</ReturnType>
       </ReturnValue>
@@ -123,9 +150,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripItemCollection.Add(System.Windows.Forms.ToolStripItem)" />
       <MemberSignature Language="VB.NET" Value="Public Function Add (value As ToolStripItem) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; int Add(System::Windows::Forms::ToolStripItem ^ value);" />
+      <MemberSignature Language="F#" Value="member this.Add : System.Windows.Forms.ToolStripItem -&gt; int" Usage="toolStripItemCollection.Add value" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -147,11 +176,18 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.ToolStripItem Add(string text, class System.Drawing.Image image) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripItemCollection.Add(System.String,System.Drawing.Image)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Windows::Forms::ToolStripItem ^ Add(System::String ^ text, System::Drawing::Image ^ image);" />
+      <MemberSignature Language="F#" Value="member this.Add : string * System.Drawing.Image -&gt; System.Windows.Forms.ToolStripItem" Usage="toolStripItemCollection.Add (text, image)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.ToolStripItem</ReturnType>
       </ReturnValue>
@@ -172,9 +208,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.ToolStripItem Add(string text, class System.Drawing.Image image, class System.EventHandler onClick) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripItemCollection.Add(System.String,System.Drawing.Image,System.EventHandler)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Windows::Forms::ToolStripItem ^ Add(System::String ^ text, System::Drawing::Image ^ image, EventHandler ^ onClick);" />
+      <MemberSignature Language="F#" Value="member this.Add : string * System.Drawing.Image * EventHandler -&gt; System.Windows.Forms.ToolStripItem" Usage="toolStripItemCollection.Add (text, image, onClick)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -209,9 +247,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripItemCollection.AddRange(System.Windows.Forms.ToolStripItem[])" />
       <MemberSignature Language="VB.NET" Value="Public Sub AddRange (toolStripItems As ToolStripItem())" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void AddRange(cli::array &lt;System::Windows::Forms::ToolStripItem ^&gt; ^ toolStripItems);" />
+      <MemberSignature Language="F#" Value="member this.AddRange : System.Windows.Forms.ToolStripItem[] -&gt; unit" Usage="toolStripItemCollection.AddRange toolStripItems" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -241,9 +281,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripItemCollection.AddRange(System.Windows.Forms.ToolStripItemCollection)" />
       <MemberSignature Language="VB.NET" Value="Public Sub AddRange (toolStripItems As ToolStripItemCollection)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void AddRange(System::Windows::Forms::ToolStripItemCollection ^ toolStripItems);" />
+      <MemberSignature Language="F#" Value="member this.AddRange : System.Windows.Forms.ToolStripItemCollection -&gt; unit" Usage="toolStripItemCollection.AddRange toolStripItems" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -275,12 +317,14 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripItemCollection.Clear" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub Clear ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Clear();" />
+      <MemberSignature Language="F#" Value="abstract member Clear : unit -&gt; unit&#xA;override this.Clear : unit -&gt; unit" Usage="toolStripItemCollection.Clear " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IList.Clear</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -313,9 +357,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripItemCollection.Contains(System.Windows.Forms.ToolStripItem)" />
       <MemberSignature Language="VB.NET" Value="Public Function Contains (value As ToolStripItem) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Contains(System::Windows::Forms::ToolStripItem ^ value);" />
+      <MemberSignature Language="F#" Value="member this.Contains : System.Windows.Forms.ToolStripItem -&gt; bool" Usage="toolStripItemCollection.Contains value" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -338,9 +384,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripItemCollection.ContainsKey(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function ContainsKey (key As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool ContainsKey(System::String ^ key);" />
+      <MemberSignature Language="F#" Value="abstract member ContainsKey : string -&gt; bool&#xA;override this.ContainsKey : string -&gt; bool" Usage="toolStripItemCollection.ContainsKey key" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -370,9 +418,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripItemCollection.CopyTo(System.Windows.Forms.ToolStripItem[],System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub CopyTo (array As ToolStripItem(), index As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void CopyTo(cli::array &lt;System::Windows::Forms::ToolStripItem ^&gt; ^ array, int index);" />
+      <MemberSignature Language="F#" Value="override this.CopyTo : System.Windows.Forms.ToolStripItem[] * int -&gt; unit" Usage="toolStripItemCollection.CopyTo (array, index)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -395,9 +445,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripItemCollection.Find(System.String,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function Find (key As String, searchAllChildren As Boolean) As ToolStripItem()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; cli::array &lt;System::Windows::Forms::ToolStripItem ^&gt; ^ Find(System::String ^ key, bool searchAllChildren);" />
+      <MemberSignature Language="F#" Value="member this.Find : string * bool -&gt; System.Windows.Forms.ToolStripItem[]" Usage="toolStripItemCollection.Find (key, searchAllChildren)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -410,7 +462,7 @@
       <Docs>
         <param name="key">The item name to search the <see cref="T:System.Windows.Forms.ToolStripItemCollection" /> for.</param>
         <param name="searchAllChildren">
-          <see langword="true" /> to search child items of the <see cref="T:System.Windows.Forms.ToolStripItem" /> specified by the <c>key</c> parameter; otherwise, <see langword="false" />.</param>
+          <see langword="true" /> to search child items of the <see cref="T:System.Windows.Forms.ToolStripItem" /> specified by the <paramref name="key" /> parameter; otherwise, <see langword="false" />.</param>
         <summary>Searches for items by their name and returns an array of all matching controls.</summary>
         <returns>A <see cref="T:System.Windows.Forms.ToolStripItem" /> array of the search results.</returns>
         <remarks>To be added.</remarks>
@@ -423,9 +475,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripItemCollection.IndexOf(System.Windows.Forms.ToolStripItem)" />
       <MemberSignature Language="VB.NET" Value="Public Function IndexOf (value As ToolStripItem) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; int IndexOf(System::Windows::Forms::ToolStripItem ^ value);" />
+      <MemberSignature Language="F#" Value="member this.IndexOf : System.Windows.Forms.ToolStripItem -&gt; int" Usage="toolStripItemCollection.IndexOf value" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -447,9 +501,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripItemCollection.IndexOfKey(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function IndexOfKey (key As String) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual int IndexOfKey(System::String ^ key);" />
+      <MemberSignature Language="F#" Value="abstract member IndexOfKey : string -&gt; int&#xA;override this.IndexOfKey : string -&gt; int" Usage="toolStripItemCollection.IndexOfKey key" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -480,9 +536,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripItemCollection.Insert(System.Int32,System.Windows.Forms.ToolStripItem)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Insert (index As Integer, value As ToolStripItem)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Insert(int index, System::Windows::Forms::ToolStripItem ^ value);" />
+      <MemberSignature Language="F#" Value="member this.Insert : int * System.Windows.Forms.ToolStripItem -&gt; unit" Usage="toolStripItemCollection.Insert (index, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -506,14 +564,21 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripItemCollection.IsReadOnly" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property IsReadOnly As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool IsReadOnly { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsReadOnly : bool" Usage="System.Windows.Forms.ToolStripItemCollection.IsReadOnly" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.IList.IsReadOnly</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -539,11 +604,18 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripItemCollection.Item(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Default Public Overridable ReadOnly Property Item(index As Integer) As ToolStripItem" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Windows::Forms::ToolStripItem ^ default[int] { System::Windows::Forms::ToolStripItem ^ get(int index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : System.Windows.Forms.ToolStripItem" Usage="System.Windows.Forms.ToolStripItemCollection.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Windows.Forms.ToolStripItem</ReturnType>
       </ReturnValue>
@@ -563,9 +635,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripItemCollection.Item(System.String)" />
       <MemberSignature Language="VB.NET" Value="Default Public Overridable ReadOnly Property Item(key As String) As ToolStripItem" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Windows::Forms::ToolStripItem ^ default[System::String ^] { System::Windows::Forms::ToolStripItem ^ get(System::String ^ key); };" />
+      <MemberSignature Language="F#" Value="member this.Item(string) : System.Windows.Forms.ToolStripItem" Usage="System.Windows.Forms.ToolStripItemCollection.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -587,9 +661,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripItemCollection.Remove(System.Windows.Forms.ToolStripItem)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Remove (value As ToolStripItem)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Remove(System::Windows::Forms::ToolStripItem ^ value);" />
+      <MemberSignature Language="F#" Value="member this.Remove : System.Windows.Forms.ToolStripItem -&gt; unit" Usage="toolStripItemCollection.Remove value" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -622,12 +698,14 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripItemCollection.RemoveAt(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub RemoveAt (index As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void RemoveAt(int index);" />
+      <MemberSignature Language="F#" Value="member this.RemoveAt : int -&gt; unit" Usage="toolStripItemCollection.RemoveAt index" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IList.RemoveAt(System.Int32)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -660,9 +738,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripItemCollection.RemoveByKey(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub RemoveByKey (key As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void RemoveByKey(System::String ^ key);" />
+      <MemberSignature Language="F#" Value="abstract member RemoveByKey : string -&gt; unit&#xA;override this.RemoveByKey : string -&gt; unit" Usage="toolStripItemCollection.RemoveByKey key" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -697,6 +777,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -731,8 +812,14 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -761,6 +848,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -796,6 +884,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -830,6 +919,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -840,7 +930,7 @@
         <Parameter Name="value" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="index">The zero-based index at which to insert <c>value</c>.</param>
+        <param name="index">The zero-based index at which to insert <paramref name="value" />.</param>
         <param name="value">The item to insert into the collection.</param>
         <summary>Inserts an item into the collection at a specified index.</summary>
         <remarks>
@@ -858,13 +948,15 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripItemCollection.System#Collections#IList#IsFixedSize" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property IsFixedSize As Boolean Implements IList.IsFixedSize" />
-      <MemberSignature Language="C++ CLI" Value="property bool System.Collections.IList.IsFixedSize { bool get(); };" />
+      <MemberSignature Language="C++ CLI" Value="property bool System::Collections::IList::IsFixedSize { bool get(); };" />
+      <MemberSignature Language="F#" Usage="System.Collections.IList.IsFixedSize" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.IList.IsFixedSize</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -889,13 +981,15 @@
       <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripItemCollection.System#Collections#IList#Item(System.Int32)" />
       <MemberSignature Language="VB.NET" Value=" Property Item(index As Integer) As Object Implements IList.Item" />
-      <MemberSignature Language="C++ CLI" Value="property System::Object ^ System.Collections.IList.Item[int] { System::Object ^ get(int index); void set(int index, System::Object ^ value); };" />
+      <MemberSignature Language="C++ CLI" Value="property System::Object ^ System::Collections::IList::Item[int] { System::Object ^ get(int index); void set(int index, System::Object ^ value); };" />
+      <MemberSignature Language="F#" Usage="System.Collections.IList.Item" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.IList.Item(System.Int32)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -930,6 +1024,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -963,8 +1058,14 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>

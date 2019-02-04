@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Move" />
   <TypeSignature Language="VB.NET" Value="Public Class Move&#xA;Inherits TaskExtension&#xA;Implements ICancelableTask" />
   <TypeSignature Language="C++ CLI" Value="public ref class Move : Microsoft::Build::Tasks::TaskExtension, Microsoft::Build::Framework::ICancelableTask" />
+  <TypeSignature Language="F#" Value="type Move = class&#xA;    inherit TaskExtension&#xA;    interface ICancelableTask&#xA;    interface ITask" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -14,6 +15,9 @@
   <Interfaces>
     <Interface>
       <InterfaceName>Microsoft.Build.Framework.ICancelableTask</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.ITask</InterfaceName>
     </Interface>
   </Interfaces>
   <Docs>
@@ -39,6 +43,11 @@
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Creates a task to move one or more files.</summary>
@@ -51,6 +60,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Move.Cancel" />
       <MemberSignature Language="VB.NET" Value="Public Sub Cancel ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Cancel();" />
+      <MemberSignature Language="F#" Value="abstract member Cancel : unit -&gt; unit&#xA;override this.Cancel : unit -&gt; unit" Usage="move.Cancel " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Build.Framework.ICancelableTask.Cancel</InterfaceMember>
@@ -74,6 +84,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Move.DestinationFiles" />
       <MemberSignature Language="VB.NET" Value="Public Property DestinationFiles As ITaskItem()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ DestinationFiles { cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ get(); void set(cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DestinationFiles : Microsoft.Build.Framework.ITaskItem[] with get, set" Usage="Microsoft.Build.Tasks.Move.DestinationFiles" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
@@ -83,13 +94,19 @@
         <Attribute>
           <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the destination files that represent the destination of the matching source files.</summary>
-        <value>Returns an item that represents the destination files.</value>
+        <value>An item that represents the destination files.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -99,17 +116,26 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Move.DestinationFolder" />
       <MemberSignature Language="VB.NET" Value="Public Property DestinationFolder As ITaskItem" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Framework::ITaskItem ^ DestinationFolder { Microsoft::Build::Framework::ITaskItem ^ get(); void set(Microsoft::Build::Framework::ITaskItem ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DestinationFolder : Microsoft.Build.Framework.ITaskItem with get, set" Usage="Microsoft.Build.Tasks.Move.DestinationFolder" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Build.Framework.ITaskItem</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the destination folder for the source files.</summary>
-        <value>Returns an item representing the destination folder.</value>
+        <value>An item representing the destination folder.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -119,6 +145,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Move.Execute" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Execute () As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Execute();" />
+      <MemberSignature Language="F#" Value="override this.Execute : unit -&gt; bool" Usage="move.Execute " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Build.Framework.ITask.Execute</InterfaceMember>
@@ -133,7 +160,8 @@
       <Parameters />
       <Docs>
         <summary>Executes the move.</summary>
-        <returns>Returns true if the move is successful, false otherwise.</returns>
+        <returns>
+          <see langword="true" /> if the move is successful; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -143,6 +171,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Move.MovedFiles" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MovedFiles As ITaskItem()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ MovedFiles { cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.MovedFiles : Microsoft.Build.Framework.ITaskItem[]" Usage="Microsoft.Build.Tasks.Move.MovedFiles" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
@@ -152,13 +181,16 @@
         <Attribute>
           <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets an item representing the files that were successfully moved.</summary>
-        <value>Returns an item representing the files that were successfully moved.</value>
+        <value>An item representing the files that were successfully moved.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -168,17 +200,27 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Move.OverwriteReadOnlyFiles" />
       <MemberSignature Language="VB.NET" Value="Public Property OverwriteReadOnlyFiles As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool OverwriteReadOnlyFiles { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.OverwriteReadOnlyFiles : bool with get, set" Usage="Microsoft.Build.Tasks.Move.OverwriteReadOnlyFiles" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets or sets a switch that selects whether files in the destination folder that have the read-only attribute set can be overwritten.</summary>
-        <value>Returns true if the files can be overwritten, false otherwise.</value>
+        <value>
+          <see langword="true" /> if the files can be overwritten, otherwise, <see langword="false" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -195,6 +237,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Move.SourceFiles" />
       <MemberSignature Language="VB.NET" Value="Public Property SourceFiles As ITaskItem()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ SourceFiles { cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ get(); void set(cli::array &lt;Microsoft::Build::Framework::ITaskItem ^&gt; ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.SourceFiles : Microsoft.Build.Framework.ITaskItem[] with get, set" Usage="Microsoft.Build.Tasks.Move.SourceFiles" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
@@ -204,13 +247,19 @@
         <Attribute>
           <AttributeName>Microsoft.Build.Framework.Required</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets or sets an item representing the list of files to move.</summary>
-        <value>Returns an item representing the list of files to move.</value>
+        <value>An item representing the list of files to move.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

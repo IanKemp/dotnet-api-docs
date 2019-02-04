@@ -4,10 +4,12 @@
   <TypeSignature Language="DocId" Value="T:System.Composition.Hosting.CompositionHost" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class CompositionHost&#xA;Inherits CompositionContext&#xA;Implements IDisposable" />
   <TypeSignature Language="C++ CLI" Value="public ref class CompositionHost sealed : System::Composition::CompositionContext, IDisposable" />
+  <TypeSignature Language="F#" Value="type CompositionHost = class&#xA;    inherit CompositionContext&#xA;    interface IDisposable" />
   <AssemblyInfo>
     <AssemblyName>System.Composition.Hosting</AssemblyName>
     <AssemblyVersion>1.0.31.0</AssemblyVersion>
     <AssemblyVersion>1.0.32.0</AssemblyVersion>
+    <AssemblyVersion>1.0.33.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Composition.CompositionContext</BaseTypeName>
@@ -28,11 +30,13 @@
       <MemberSignature Language="DocId" Value="M:System.Composition.Hosting.CompositionHost.CreateCompositionHost(System.Collections.Generic.IEnumerable{System.Composition.Hosting.Core.ExportDescriptorProvider})" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function CreateCompositionHost (providers As IEnumerable(Of ExportDescriptorProvider)) As CompositionHost" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Composition::Hosting::CompositionHost ^ CreateCompositionHost(System::Collections::Generic::IEnumerable&lt;System::Composition::Hosting::Core::ExportDescriptorProvider ^&gt; ^ providers);" />
+      <MemberSignature Language="F#" Value="static member CreateCompositionHost : seq&lt;System.Composition.Hosting.Core.ExportDescriptorProvider&gt; -&gt; System.Composition.Hosting.CompositionHost" Usage="System.Composition.Hosting.CompositionHost.CreateCompositionHost providers" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Composition.Hosting</AssemblyName>
         <AssemblyVersion>1.0.31.0</AssemblyVersion>
         <AssemblyVersion>1.0.32.0</AssemblyVersion>
+        <AssemblyVersion>1.0.33.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Composition.Hosting.CompositionHost</ReturnType>
@@ -53,11 +57,13 @@
       <MemberSignature Language="DocId" Value="M:System.Composition.Hosting.CompositionHost.CreateCompositionHost(System.Composition.Hosting.Core.ExportDescriptorProvider[])" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function CreateCompositionHost (ParamArray providers As ExportDescriptorProvider()) As CompositionHost" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Composition::Hosting::CompositionHost ^ CreateCompositionHost(... cli::array &lt;System::Composition::Hosting::Core::ExportDescriptorProvider ^&gt; ^ providers);" />
+      <MemberSignature Language="F#" Value="static member CreateCompositionHost : System.Composition.Hosting.Core.ExportDescriptorProvider[] -&gt; System.Composition.Hosting.CompositionHost" Usage="System.Composition.Hosting.CompositionHost.CreateCompositionHost providers" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Composition.Hosting</AssemblyName>
         <AssemblyVersion>1.0.31.0</AssemblyVersion>
         <AssemblyVersion>1.0.32.0</AssemblyVersion>
+        <AssemblyVersion>1.0.33.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Composition.Hosting.CompositionHost</ReturnType>
@@ -65,7 +71,7 @@
       <Parameters>
         <Parameter Name="providers" Type="System.Composition.Hosting.Core.ExportDescriptorProvider[]">
           <Attributes>
-            <Attribute>
+            <Attribute FrameworkAlternate="dotnet-plat-ext-2.1">
               <AttributeName>System.ParamArray</AttributeName>
             </Attribute>
           </Attributes>
@@ -84,6 +90,7 @@
       <MemberSignature Language="DocId" Value="M:System.Composition.Hosting.CompositionHost.Dispose" />
       <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Dispose();" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="compositionHost.Dispose " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
@@ -92,6 +99,7 @@
         <AssemblyName>System.Composition.Hosting</AssemblyName>
         <AssemblyVersion>1.0.31.0</AssemblyVersion>
         <AssemblyVersion>1.0.32.0</AssemblyVersion>
+        <AssemblyVersion>1.0.33.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -108,18 +116,20 @@
       <MemberSignature Language="DocId" Value="M:System.Composition.Hosting.CompositionHost.TryGetExport(System.Composition.Hosting.Core.CompositionContract,System.Object@)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function TryGetExport (contract As CompositionContract, ByRef export As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool TryGetExport(System::Composition::Hosting::Core::CompositionContract ^ contract, [Runtime::InteropServices::Out] System::Object ^ % export);" />
+      <MemberSignature Language="F#" Value="override this.TryGetExport : System.Composition.Hosting.Core.CompositionContract *  -&gt; bool" Usage="compositionHost.TryGetExport (contract, export)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Composition.Hosting</AssemblyName>
         <AssemblyVersion>1.0.31.0</AssemblyVersion>
         <AssemblyVersion>1.0.32.0</AssemblyVersion>
+        <AssemblyVersion>1.0.33.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="contract" Type="System.Composition.Hosting.Core.CompositionContract" />
-        <Parameter Name="export" Type="System.Object&amp;" RefType="out" />
+        <Parameter Name="export" Type="System.Object" RefType="out" />
       </Parameters>
       <Docs>
         <param name="contract">The export to retrieve.</param>

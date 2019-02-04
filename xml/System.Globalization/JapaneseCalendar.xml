@@ -4,12 +4,15 @@
   <TypeSignature Language="DocId" Value="T:System.Globalization.JapaneseCalendar" />
   <TypeSignature Language="VB.NET" Value="Public Class JapaneseCalendar&#xA;Inherits Calendar" />
   <TypeSignature Language="C++ CLI" Value="public ref class JapaneseCalendar : System::Globalization::Calendar" />
+  <TypeSignature Language="F#" Value="type JapaneseCalendar = class&#xA;    inherit Calendar" />
   <AssemblyInfo>
     <AssemblyName>System.Globalization.Calendars</AssemblyName>
     <AssemblyVersion>4.0.1.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.0.5.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
@@ -27,8 +30,11 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8">
       <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
+      <AttributeName>System.Serializable</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -43,7 +49,9 @@
 >  For information about using the <xref:System.Globalization.JapaneseCalendar> class and the other calendar classes in the .NET Framework, see [Working with Calendars](~/docs/standard/datetime/working-with-calendars.md).  
   
  The Japanese calendar recognizes one era for every emperor's reign. The current era is the Heisei era, which began in the Gregorian calendar year 1989. The era name is typically displayed before the year. For example, the Gregorian calendar year 2001 is the Japanese calendar year Heisei 13. Note that the first year of an era is called "Gannen." Therefore, the Gregorian calendar year 1989 was the Japanese calendar year Heisei Gannen.  
-  
+
+[!INCLUDE[japanese-era-note](~/includes/calendar-era.md)]
+
  This class assigns numbers to the eras as follows:  
   
 |GetEra value|Era Name|Era Abbreviation|Gregorian Dates|  
@@ -88,6 +96,8 @@
     <altmember cref="T:System.Globalization.GregorianCalendar" />
     <altmember cref="P:System.Globalization.CultureInfo.Calendar" />
     <altmember cref="P:System.Globalization.CultureInfo.OptionalCalendars" />
+    <related type="Article" href="~/docs/standard/datetime/working-with-calendars.md">Working with Calendars</related>
+    <related type="ExternalDocumentation" href="https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a">Sample: Calendar Week Range Utility</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -103,6 +113,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -128,6 +140,7 @@
       <MemberSignature Language="DocId" Value="M:System.Globalization.JapaneseCalendar.AddMonths(System.DateTime,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function AddMonths (time As DateTime, months As Integer) As DateTime" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override DateTime AddMonths(DateTime time, int months);" />
+      <MemberSignature Language="F#" Value="override this.AddMonths : DateTime * int -&gt; DateTime" Usage="japaneseCalendar.AddMonths (time, months)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Globalization.Calendars</AssemblyName>
@@ -135,6 +148,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -208,6 +223,7 @@
       <MemberSignature Language="DocId" Value="M:System.Globalization.JapaneseCalendar.AddYears(System.DateTime,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function AddYears (time As DateTime, years As Integer) As DateTime" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override DateTime AddYears(DateTime time, int years);" />
+      <MemberSignature Language="F#" Value="override this.AddYears : DateTime * int -&gt; DateTime" Usage="japaneseCalendar.AddYears (time, years)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Globalization.Calendars</AssemblyName>
@@ -215,6 +231,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -288,9 +306,11 @@
       <MemberSignature Language="DocId" Value="P:System.Globalization.JapaneseCalendar.AlgorithmType" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property AlgorithmType As CalendarAlgorithmType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Globalization::CalendarAlgorithmType AlgorithmType { System::Globalization::CalendarAlgorithmType get(); };" />
+      <MemberSignature Language="F#" Value="member this.AlgorithmType : System.Globalization.CalendarAlgorithmType" Usage="System.Globalization.JapaneseCalendar.AlgorithmType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -303,8 +323,11 @@
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+      </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8">
           <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
         </Attribute>
       </Attributes>
@@ -333,6 +356,7 @@
       <MemberSignature Language="DocId" Value="P:System.Globalization.JapaneseCalendar.Eras" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Eras As Integer()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property cli::array &lt;int&gt; ^ Eras { cli::array &lt;int&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Eras : int[]" Usage="System.Globalization.JapaneseCalendar.Eras" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Globalization.Calendars</AssemblyName>
@@ -340,6 +364,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -363,7 +389,9 @@
   
 ## Remarks  
  The Japanese calendar recognizes one era for every emperor's reign. The current era is the Heisei era, which began in the Gregorian calendar year 1989. The era name is typically displayed before the year. For example, the Gregorian calendar year 2001 is the Japanese calendar year Heisei 13. Note that the first year of an era is called "Gannen." Therefore, the Gregorian calendar year 1989 was the Japanese calendar year Heisei Gannen.  
-  
+
+[!INCLUDE[japanese-era-note](~/includes/calendar-era.md)]
+
  This class assigns numbers to the eras as follows:  
   
 |GetEra value|Era Name|Era Abbreviation|Gregorian Dates|  
@@ -376,7 +404,7 @@
  This class handles dates from September 8 in the year Meiji 1 (January 1, 1868 of the Gregorian calendar). Although the Japanese calendar was switched from a lunar calendar to a solar calendar in the year Meiji 6 (1873 of the Gregorian calendar), this implementation is based on the solar calendar only.  
   
 > [!NOTE]
->  Should additional eras be added in the future, applications may encounter more than the expected four eras for the Japanese calendar. Applications should be tested to ensure that they continue to work in such an event; see [Era Handling for the Japanese Calendar](http://go.microsoft.com/fwlink/p/?LinkId=239618).  
+>  Should additional eras be added in the future, applications may encounter more than the expected four eras for the Japanese calendar. Applications should be tested to ensure that they continue to work in such an event; see [Era Handling for the Japanese Calendar](https://go.microsoft.com/fwlink/p/?LinkId=239618).  
   
    
   
@@ -398,6 +426,7 @@
       <MemberSignature Language="DocId" Value="M:System.Globalization.JapaneseCalendar.GetDayOfMonth(System.DateTime)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetDayOfMonth (time As DateTime) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetDayOfMonth(DateTime time);" />
+      <MemberSignature Language="F#" Value="override this.GetDayOfMonth : DateTime -&gt; int" Usage="japaneseCalendar.GetDayOfMonth time" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Globalization.Calendars</AssemblyName>
@@ -405,6 +434,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -454,6 +485,7 @@
       <MemberSignature Language="DocId" Value="M:System.Globalization.JapaneseCalendar.GetDayOfWeek(System.DateTime)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetDayOfWeek (time As DateTime) As DayOfWeek" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override DayOfWeek GetDayOfWeek(DateTime time);" />
+      <MemberSignature Language="F#" Value="override this.GetDayOfWeek : DateTime -&gt; DayOfWeek" Usage="japaneseCalendar.GetDayOfWeek time" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Globalization.Calendars</AssemblyName>
@@ -461,6 +493,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -526,6 +560,7 @@
       <MemberSignature Language="DocId" Value="M:System.Globalization.JapaneseCalendar.GetDayOfYear(System.DateTime)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetDayOfYear (time As DateTime) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetDayOfYear(DateTime time);" />
+      <MemberSignature Language="F#" Value="override this.GetDayOfYear : DateTime -&gt; int" Usage="japaneseCalendar.GetDayOfYear time" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Globalization.Calendars</AssemblyName>
@@ -533,6 +568,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -587,6 +624,7 @@
       <MemberSignature Language="DocId" Value="M:System.Globalization.JapaneseCalendar.GetDaysInMonth(System.Int32,System.Int32,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetDaysInMonth (year As Integer, month As Integer, era As Integer) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetDaysInMonth(int year, int month, int era);" />
+      <MemberSignature Language="F#" Value="override this.GetDaysInMonth : int * int * int -&gt; int" Usage="japaneseCalendar.GetDaysInMonth (year, month, era)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Globalization.Calendars</AssemblyName>
@@ -594,6 +632,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -659,6 +699,7 @@
       <MemberSignature Language="DocId" Value="M:System.Globalization.JapaneseCalendar.GetDaysInYear(System.Int32,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetDaysInYear (year As Integer, era As Integer) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetDaysInYear(int year, int era);" />
+      <MemberSignature Language="F#" Value="override this.GetDaysInYear : int * int -&gt; int" Usage="japaneseCalendar.GetDaysInYear (year, era)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Globalization.Calendars</AssemblyName>
@@ -666,6 +707,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -725,6 +768,7 @@
       <MemberSignature Language="DocId" Value="M:System.Globalization.JapaneseCalendar.GetEra(System.DateTime)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetEra (time As DateTime) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetEra(DateTime time);" />
+      <MemberSignature Language="F#" Value="override this.GetEra : DateTime -&gt; int" Usage="japaneseCalendar.GetEra time" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Globalization.Calendars</AssemblyName>
@@ -732,6 +776,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -759,7 +805,9 @@
   
 ## Remarks  
  The Japanese calendar recognizes one era for every emperor's reign. The current era is the Heisei era, which began in the Gregorian calendar year 1989. The era name is typically displayed before the year. For example, the Gregorian calendar year 2001 is the Japanese calendar year Heisei 13. Note that the first year of an era is called "Gannen." Therefore, the Gregorian calendar year 1989 was the Japanese calendar year Heisei Gannen.  
-  
+
+[!INCLUDE[japanese-era-note](~/includes/calendar-era.md)]
+
  This class assigns numbers to the eras as follows:  
   
 |GetEra value|Era Name|Era Abbreviation|Gregorian Dates|  
@@ -770,8 +818,6 @@
 |1|明治 (Meiji)|明 (M, m)|September 8, 1868 to July 29, 1912|  
   
  Ordinarily, the <xref:System.Globalization.JapaneseCalendar> class supports dates from September 8 in the year Meiji 1 (September 8, 1868 of the Gregorian calendar), which is the value of the <xref:System.Globalization.JapaneseCalendar.MinSupportedDateTime%2A> property. However, the <xref:System.Globalization.JapaneseCalendar.GetEra%2A> method successfully returns the era for dates from January 1 through September 7 in the year Meiji 1 (January 1, 1868 through September 7, 1868 in the Gregorian calendar). For dates earlier than January 1, 1868 in the Gregorian calendar, the method throws an <xref:System.ArgumentOutOfRangeException> exception.  
-  
-   
   
 ## Examples  
  The following example displays the values of several components of a <xref:System.DateTime> in terms of the Japanese calendar.  
@@ -804,6 +850,7 @@
       <MemberSignature Language="DocId" Value="M:System.Globalization.JapaneseCalendar.GetLeapMonth(System.Int32,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetLeapMonth (year As Integer, era As Integer) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetLeapMonth(int year, int era);" />
+      <MemberSignature Language="F#" Value="override this.GetLeapMonth : int * int -&gt; int" Usage="japaneseCalendar.GetLeapMonth (year, era)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Globalization.Calendars</AssemblyName>
@@ -811,6 +858,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -824,7 +872,7 @@
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8">
           <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
         </Attribute>
       </Attributes>
@@ -858,6 +906,7 @@
       <MemberSignature Language="DocId" Value="M:System.Globalization.JapaneseCalendar.GetMonth(System.DateTime)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetMonth (time As DateTime) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetMonth(DateTime time);" />
+      <MemberSignature Language="F#" Value="override this.GetMonth : DateTime -&gt; int" Usage="japaneseCalendar.GetMonth time" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Globalization.Calendars</AssemblyName>
@@ -865,6 +914,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -918,6 +969,7 @@
       <MemberSignature Language="DocId" Value="M:System.Globalization.JapaneseCalendar.GetMonthsInYear(System.Int32,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetMonthsInYear (year As Integer, era As Integer) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetMonthsInYear(int year, int era);" />
+      <MemberSignature Language="F#" Value="override this.GetMonthsInYear : int * int -&gt; int" Usage="japaneseCalendar.GetMonthsInYear (year, era)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Globalization.Calendars</AssemblyName>
@@ -925,6 +977,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -979,6 +1033,7 @@
       <MemberSignature Language="DocId" Value="M:System.Globalization.JapaneseCalendar.GetWeekOfYear(System.DateTime,System.Globalization.CalendarWeekRule,System.DayOfWeek)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetWeekOfYear (time As DateTime, rule As CalendarWeekRule, firstDayOfWeek As DayOfWeek) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetWeekOfYear(DateTime time, System::Globalization::CalendarWeekRule rule, DayOfWeek firstDayOfWeek);" />
+      <MemberSignature Language="F#" Value="override this.GetWeekOfYear : DateTime * System.Globalization.CalendarWeekRule * DayOfWeek -&gt; int" Usage="japaneseCalendar.GetWeekOfYear (time, rule, firstDayOfWeek)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Globalization.Calendars</AssemblyName>
@@ -986,6 +1041,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -999,7 +1055,7 @@
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8">
           <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
         </Attribute>
       </Attributes>
@@ -1056,6 +1112,7 @@
       <MemberSignature Language="DocId" Value="M:System.Globalization.JapaneseCalendar.GetYear(System.DateTime)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetYear (time As DateTime) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetYear(DateTime time);" />
+      <MemberSignature Language="F#" Value="override this.GetYear : DateTime -&gt; int" Usage="japaneseCalendar.GetYear time" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Globalization.Calendars</AssemblyName>
@@ -1063,6 +1120,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1116,6 +1175,7 @@
       <MemberSignature Language="DocId" Value="M:System.Globalization.JapaneseCalendar.IsLeapDay(System.Int32,System.Int32,System.Int32,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function IsLeapDay (year As Integer, month As Integer, day As Integer, era As Integer) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool IsLeapDay(int year, int month, int day, int era);" />
+      <MemberSignature Language="F#" Value="override this.IsLeapDay : int * int * int * int -&gt; bool" Usage="japaneseCalendar.IsLeapDay (year, month, day, era)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Globalization.Calendars</AssemblyName>
@@ -1123,6 +1183,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1199,6 +1261,7 @@
       <MemberSignature Language="DocId" Value="M:System.Globalization.JapaneseCalendar.IsLeapMonth(System.Int32,System.Int32,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function IsLeapMonth (year As Integer, month As Integer, era As Integer) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool IsLeapMonth(int year, int month, int era);" />
+      <MemberSignature Language="F#" Value="override this.IsLeapMonth : int * int * int -&gt; bool" Usage="japaneseCalendar.IsLeapMonth (year, month, era)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Globalization.Calendars</AssemblyName>
@@ -1206,6 +1269,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1274,6 +1339,7 @@
       <MemberSignature Language="DocId" Value="M:System.Globalization.JapaneseCalendar.IsLeapYear(System.Int32,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function IsLeapYear (year As Integer, era As Integer) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool IsLeapYear(int year, int era);" />
+      <MemberSignature Language="F#" Value="override this.IsLeapYear : int * int -&gt; bool" Usage="japaneseCalendar.IsLeapYear (year, era)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Globalization.Calendars</AssemblyName>
@@ -1281,6 +1347,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1341,6 +1409,7 @@
       <MemberSignature Language="DocId" Value="P:System.Globalization.JapaneseCalendar.MaxSupportedDateTime" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property MaxSupportedDateTime As DateTime" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property DateTime MaxSupportedDateTime { DateTime get(); };" />
+      <MemberSignature Language="F#" Value="member this.MaxSupportedDateTime : DateTime" Usage="System.Globalization.JapaneseCalendar.MaxSupportedDateTime" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Globalization.Calendars</AssemblyName>
@@ -1348,6 +1417,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1361,7 +1431,7 @@
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8">
           <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
         </Attribute>
       </Attributes>
@@ -1391,6 +1461,7 @@
       <MemberSignature Language="DocId" Value="P:System.Globalization.JapaneseCalendar.MinSupportedDateTime" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property MinSupportedDateTime As DateTime" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property DateTime MinSupportedDateTime { DateTime get(); };" />
+      <MemberSignature Language="F#" Value="member this.MinSupportedDateTime : DateTime" Usage="System.Globalization.JapaneseCalendar.MinSupportedDateTime" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Globalization.Calendars</AssemblyName>
@@ -1398,6 +1469,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1411,7 +1483,7 @@
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8">
           <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
         </Attribute>
       </Attributes>
@@ -1446,6 +1518,7 @@
       <MemberSignature Language="DocId" Value="M:System.Globalization.JapaneseCalendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToDateTime (year As Integer, month As Integer, day As Integer, hour As Integer, minute As Integer, second As Integer, millisecond As Integer, era As Integer) As DateTime" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override DateTime ToDateTime(int year, int month, int day, int hour, int minute, int second, int millisecond, int era);" />
+      <MemberSignature Language="F#" Value="override this.ToDateTime : int * int * int * int * int * int * int * int -&gt; DateTime" Usage="japaneseCalendar.ToDateTime (year, month, day, hour, minute, second, millisecond, era)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Globalization.Calendars</AssemblyName>
@@ -1453,6 +1526,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1540,6 +1615,7 @@
       <MemberSignature Language="DocId" Value="M:System.Globalization.JapaneseCalendar.ToFourDigitYear(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToFourDigitYear (year As Integer) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int ToFourDigitYear(int year);" />
+      <MemberSignature Language="F#" Value="override this.ToFourDigitYear : int -&gt; int" Usage="japaneseCalendar.ToFourDigitYear year" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Globalization.Calendars</AssemblyName>
@@ -1547,6 +1623,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1592,6 +1670,7 @@
       <MemberSignature Language="DocId" Value="P:System.Globalization.JapaneseCalendar.TwoDigitYearMax" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Property TwoDigitYearMax As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property int TwoDigitYearMax { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.TwoDigitYearMax : int with get, set" Usage="System.Globalization.JapaneseCalendar.TwoDigitYearMax" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Globalization.Calendars</AssemblyName>
@@ -1599,6 +1678,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>

@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.IO.Packaging.PackageStore" />
   <TypeSignature Language="VB.NET" Value="Public Class PackageStore" />
   <TypeSignature Language="C++ CLI" Value="public ref class PackageStore abstract sealed" />
+  <TypeSignature Language="F#" Value="type PackageStore = class" />
   <AssemblyInfo>
     <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -52,9 +54,11 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPackage(class System.Uri uri, class System.IO.Packaging.Package package) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackageStore.AddPackage(System.Uri,System.IO.Packaging.Package)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void AddPackage(Uri ^ uri, System::IO::Packaging::Package ^ package);" />
+      <MemberSignature Language="F#" Value="static member AddPackage : Uri * System.IO.Packaging.Package -&gt; unit" Usage="System.IO.Packaging.PackageStore.AddPackage (uri, package)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -65,7 +69,7 @@
         <Parameter Name="package" Type="System.IO.Packaging.Package" />
       </Parameters>
       <Docs>
-        <param name="uri">The key [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] of the <c>package</c> to compare in a <see cref="T:System.IO.Packaging.PackWebRequest" />.</param>
+        <param name="uri">The key [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] of the <paramref name="package" /> to compare in a <see cref="T:System.IO.Packaging.PackWebRequest" />.</param>
         <param name="package">The package to add to the store.</param>
         <summary>Adds a <see cref="T:System.IO.Packaging.Package" /> to the store.</summary>
         <remarks>
@@ -104,9 +108,11 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.Packaging.Package GetPackage(class System.Uri uri) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackageStore.GetPackage(System.Uri)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::IO::Packaging::Package ^ GetPackage(Uri ^ uri);" />
+      <MemberSignature Language="F#" Value="static member GetPackage : Uri -&gt; System.IO.Packaging.Package" Usage="System.IO.Packaging.PackageStore.GetPackage uri" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -150,9 +156,11 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePackage(class System.Uri uri) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackageStore.RemovePackage(System.Uri)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void RemovePackage(Uri ^ uri);" />
+      <MemberSignature Language="F#" Value="static member RemovePackage : Uri -&gt; unit" Usage="System.IO.Packaging.PackageStore.RemovePackage uri" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

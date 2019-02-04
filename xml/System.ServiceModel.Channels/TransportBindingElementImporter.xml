@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.TransportBindingElementImporter" />
   <TypeSignature Language="VB.NET" Value="Public Class TransportBindingElementImporter&#xA;Implements IPolicyImportExtension, IWsdlImportExtension" />
   <TypeSignature Language="C++ CLI" Value="public ref class TransportBindingElementImporter : System::ServiceModel::Description::IPolicyImportExtension, System::ServiceModel::Description::IWsdlImportExtension" />
+  <TypeSignature Language="F#" Value="type TransportBindingElementImporter = class&#xA;    interface IWsdlImportExtension&#xA;    interface IPolicyImportExtension" />
   <AssemblyInfo>
     <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -20,7 +22,7 @@
     </Interface>
   </Interfaces>
   <Docs>
-    <summary>Imports standard transport binding elements from [Web Services Description Language](http://go.microsoft.com/fwlink/?LinkId=96160) (WSDL) documents with attached policy expressions.</summary>
+    <summary>Imports standard transport binding elements from <see href="https://www.w3.org/TR/wsdl/">Web Services Description Language</see> (WSDL) documents with attached policy expressions.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -31,6 +33,7 @@
   
  ]]></format>
     </remarks>
+    <related type="Article" href="https://msdn.microsoft.com/library/78beb28f-408a-4c75-9c3c-caefe9595b1a">Importing Custom Metadata for a WCF Extension</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -42,8 +45,14 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.Channels.TransportBindingElementImporter" /> class.</summary>
@@ -62,6 +71,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -90,6 +100,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -127,6 +138,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -162,6 +174,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -184,7 +197,11 @@
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">
-          <paramref name="context" />.Endpoint.Binding is <see langword="null" />.</exception>
+          <paramref name="context" /> is <see langword="null" />.
+
+-or-
+
+<paramref name="context" />.Endpoint.Binding is <see langword="null" />.</exception>
       </Docs>
     </Member>
   </Members>

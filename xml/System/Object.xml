@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Object" />
   <TypeSignature Language="VB.NET" Value="Public Class Object" />
   <TypeSignature Language="C++ CLI" Value="public ref class Object" />
+  <TypeSignature Language="F#" Value="type obj = class" />
   <AssemblyInfo>
     <AssemblyName>System.Runtime</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -15,6 +16,8 @@
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.0.5.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
@@ -24,11 +27,14 @@
   </AssemblyInfo>
   <Interfaces />
   <Attributes>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8">
       <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDual)</AttributeName>
     </Attribute>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8">
       <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
+      <AttributeName>System.Serializable</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -90,6 +96,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -98,7 +106,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8">
           <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
         </Attribute>
       </Attributes>
@@ -134,6 +142,7 @@
       <MemberSignature Language="DocId" Value="M:System.Object.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Equals(System::Object ^ obj);" />
+      <MemberSignature Language="F#" Value="abstract member Equals : obj -&gt; bool&#xA;override this.Equals : obj -&gt; bool" Usage="obj.Equals obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -146,6 +155,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -153,6 +164,11 @@
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -190,7 +206,7 @@
  Because the <xref:System.Object> class is the base class for all types in the .NET Framework, the <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> method provides the default equality comparison for all other types. However, types often override the <xref:System.Object.Equals%2A> method to implement value equality. For more information, see the Notes for Callers and Notes for Inheritors sections.  
   
 ## Notes for the [!INCLUDE[wrt](~/includes/wrt-md.md)]  
- When you call the <xref:System.Object.Equals%28System.Object%29> method overload on a class in the [!INCLUDE[wrt](~/includes/wrt-md.md)], it provides the default behavior for classes that don’t override <xref:System.Object.Equals%28System.Object%29>. This is part of the support that the .NET Framework provides for the [!INCLUDE[wrt](~/includes/wrt-md.md)] (see [.NET Framework Support for Windows Store Apps and Windows Runtime](~/docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)). Classes in the [!INCLUDE[wrt](~/includes/wrt-md.md)] don’t inherit <xref:System.Object>, and currently don’t implement an <xref:System.Object.Equals%28System.Object%29> method. However, they appear to have <xref:System.Object.ToString%2A>, <xref:System.Object.Equals%28System.Object%29>, and <xref:System.Object.GetHashCode%2A> methods when you use them in your C# or Visual Basic code, and the .NET Framework provides the default behavior for these methods.  
+ When you call the <xref:System.Object.Equals%28System.Object%29> method overload on a class in the [!INCLUDE[wrt](~/includes/wrt-md.md)], it provides the default behavior for classes that don't override <xref:System.Object.Equals%28System.Object%29>. This is part of the support that the .NET Framework provides for the [!INCLUDE[wrt](~/includes/wrt-md.md)] (see [.NET Framework Support for Windows Store Apps and Windows Runtime](~/docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)). Classes in the [!INCLUDE[wrt](~/includes/wrt-md.md)] don't inherit <xref:System.Object>, and currently don't implement an <xref:System.Object.Equals%28System.Object%29> method. However, they appear to have <xref:System.Object.ToString%2A>, <xref:System.Object.Equals%28System.Object%29>, and <xref:System.Object.GetHashCode%2A> methods when you use them in your C# or Visual Basic code, and the .NET Framework provides the default behavior for these methods.  
   
 > [!NOTE]
 >  [!INCLUDE[wrt](~/includes/wrt-md.md)] classes that are written in C# or Visual Basic can override the <xref:System.Object.Equals%28System.Object%29> method overload.  
@@ -313,6 +329,7 @@
       <MemberSignature Language="DocId" Value="M:System.Object.Equals(System.Object,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Equals (objA As Object, objB As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool Equals(System::Object ^ objA, System::Object ^ objB);" />
+      <MemberSignature Language="F#" Value="static member Equals : obj * obj -&gt; bool" Usage="System.obj.Equals (objA, objB)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -325,6 +342,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -332,6 +351,11 @@
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -377,6 +401,7 @@
       <MemberSignature Language="DocId" Value="M:System.Object.Finalize" />
       <MemberSignature Language="VB.NET" Value="Finalize ()" />
       <MemberSignature Language="C++ CLI" Value="!Object ()" />
+      <MemberSignature Language="F#" Value="abstract member Finalize : unit -&gt; unit&#xA;override this.Finalize : unit -&gt; unit" Usage="obj.Finalize " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -389,6 +414,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -397,7 +424,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8">
           <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
         </Attribute>
       </Attributes>
@@ -429,7 +456,7 @@
   
 -   After the garbage collector has discovered that an object is inaccessible, unless the object has been exempted from finalization by a call to the <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType> method.  
   
--   During shutdown of an application domain, unless the object is exempt from finalization. During shutdown, even objects that are still accessible are finalized.  
+-   **On .NET Framework only**, during shutdown of an application domain, unless the object is exempt from finalization. During shutdown, even objects that are still accessible are finalized.  
   
  <xref:System.Object.Finalize%2A> is automatically called only once on a given instance, unless the object is re-registered by using a mechanism such as <xref:System.GC.ReRegisterForFinalize%2A?displayProperty=nameWithType> and the <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType> method has not been subsequently called.  
   
@@ -467,9 +494,10 @@ The scope of the <xref:System.Object.Finalize%2A?displayProperty=nameWithType> m
 > [!NOTE]
 >  The C# compiler does not allow you to override the <xref:System.Object.Finalize%2A> method. Instead, you provide a finalizer by implementing a [destructor](~/docs/csharp/programming-guide/classes-and-structs/destructors.md) for your class. A C# destructor automatically calls the destructor of its base class.  
 >   
->  Visual C++ also provides its own syntax for implementing the <xref:System.Object.Finalize%2A> method. For more information, see the "Destructors and finalizers" section of [How to: Define and Consume Classes and Structs (C++/CLI)](http://msdn.microsoft.com/library/1c03cb0d-1459-4b5e-af65-97d6b3094fd7).  
+>  Visual C++ also provides its own syntax for implementing the <xref:System.Object.Finalize%2A> method. For more information, see the "Destructors and finalizers" section of [How to: Define and Consume Classes and Structs (C++/CLI)](https://msdn.microsoft.com/library/1c03cb0d-1459-4b5e-af65-97d6b3094fd7).  
   
- Because garbage collection is non-deterministic, you do not know precisely when the garbage collector performs finalization. To release resources immediately, you can also choose to implement the [dispose pattern](~/docs/standard/design-guidelines/dispose-pattern.md) and the <xref:System.IDisposable> interface. The <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementation can be called by consumers of your class to free unmanaged resources, and you can use the <xref:System.Object.Finalize%2A> method to free unmanaged resources in the event that the <xref:System.IDisposable.Dispose%2A> method is not called.  
+ Because garbage collection is non-deterministic, you do not know precisely when the garbage collector performs finalization. To release resources immediately, you can also choose to implement the [dispose pattern](~/docs/standard/garbage-collection/implementing-dispose
+.md) and the <xref:System.IDisposable> interface. The <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementation can be called by consumers of your class to free unmanaged resources, and you can use the <xref:System.Object.Finalize%2A> method to free unmanaged resources in the event that the <xref:System.IDisposable.Dispose%2A> method is not called.  
   
  <xref:System.Object.Finalize%2A> can take almost any action, including resurrecting an object (that is, making the object accessible again) after it has been cleaned up during garbage collection. However, the object can only be resurrected once; <xref:System.Object.Finalize%2A> cannot be called on resurrected objects during garbage collection. There is one action that your implementation of <xref:System.Object.Finalize%2A> should never take: it should never throw an exception. If any exceptions thrown by methods called from the <xref:System.Object.Finalize%2A> method are unhandled by the <xref:System.Object.Finalize%2A> method, the runtime assumes that the <xref:System.Object.Finalize%2A> method returned and continues to call the <xref:System.Object.Finalize%2A> methods of other objects. 
   
@@ -491,7 +519,7 @@ The scope of the <xref:System.Object.Finalize%2A?displayProperty=nameWithType> m
   
 -   <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> is a wrapper class for a wait handle.  
   
- The following example uses the [dispose pattern](~/docs/standard/design-guidelines/dispose-pattern.md) with safe handles instead of overriding the <xref:System.Object.Finalize%2A> method. It defines a `FileAssociation` class that wraps registry information about the application that handles files with a particular file extension. The two registry handles returned as `out` parameters by Windows [RegOpenKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724897.aspx) function calls are passed to the <xref:Microsoft.Win32.SafeHandles.SafeRegistryHandle> constructor. The type's protected `Dispose` method then calls the `SafeRegistryHandle.Dispose` method  to free these two handles.  
+ The following example uses the [dispose pattern](~/docs/standard/garbage-collection/implementing-dispose.md) with safe handles instead of overriding the <xref:System.Object.Finalize%2A> method. It defines a `FileAssociation` class that wraps registry information about the application that handles files with a particular file extension. The two registry handles returned as `out` parameters by Windows [RegOpenKeyEx](https://msdn.microsoft.com/library/windows/desktop/ms724897.aspx) function calls are passed to the <xref:Microsoft.Win32.SafeHandles.SafeRegistryHandle> constructor. The type's protected `Dispose` method then calls the `SafeRegistryHandle.Dispose` method  to free these two handles.  
   
  [!code-csharp[System.Object.Finalize#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.object.finalize/cs/finalize_safe.cs#2)]
  [!code-vb[System.Object.Finalize#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.object.finalize/vb/finalize_safe.vb#2)]  
@@ -520,6 +548,7 @@ The scope of the <xref:System.Object.Finalize%2A?displayProperty=nameWithType> m
       <MemberSignature Language="DocId" Value="M:System.Object.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function GetHashCode () As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual int GetHashCode();" />
+      <MemberSignature Language="F#" Value="abstract member GetHashCode : unit -&gt; int&#xA;override this.GetHashCode : unit -&gt; int" Usage="obj.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -532,6 +561,8 @@ The scope of the <xref:System.Object.Finalize%2A?displayProperty=nameWithType> m
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -539,6 +570,11 @@ The scope of the <xref:System.Object.Finalize%2A?displayProperty=nameWithType> m
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
@@ -564,7 +600,7 @@ The scope of the <xref:System.Object.Finalize%2A?displayProperty=nameWithType> m
 > [!WARNING]
 >  A hash code is intended for efficient insertion and lookup in collections that are based on a hash table. A hash code is not a permanent value. For this reason:  
 >   
->  -   Do not serialize hash code values or store them in databases.  
+> -   Do not serialize hash code values or store them in databases.  
 > -   Do not use the hash code as the key to retrieve an object from a keyed collection.  
 > -   Do not send hash codes across application domains or processes. In some cases, hash codes may be computed on a per-process or per-application domain basis.  
 > -   Do not use the hash code instead of a value returned by a cryptographic hashing function if you need a cryptographically strong hash. For cryptographic hashes, use a class derived from the <xref:System.Security.Cryptography.HashAlgorithm?displayProperty=nameWithType> or <xref:System.Security.Cryptography.KeyedHashAlgorithm?displayProperty=nameWithType> class.  
@@ -578,7 +614,7 @@ The scope of the <xref:System.Object.Finalize%2A?displayProperty=nameWithType> m
  If an object that is used as a key in a hash table does not provide a useful implementation of <xref:System.Object.GetHashCode%2A>, you can specify a hash code provider by supplying an <xref:System.Collections.IEqualityComparer> implementation to one of the overloads of the <xref:System.Collections.Hashtable> class constructor.  
   
 ## Notes for the [!INCLUDE[wrt](~/includes/wrt-md.md)]  
- When you call the <xref:System.Object.GetHashCode%2A> method on a class in the [!INCLUDE[wrt](~/includes/wrt-md.md)], it provides the default behavior for classes that don’t override <xref:System.Object.GetHashCode%2A>. This is part of the support that the .NET Framework provides for the [!INCLUDE[wrt](~/includes/wrt-md.md)] (see [.NET Framework Support for Windows Store Apps and Windows Runtime](~/docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)). Classes in the [!INCLUDE[wrt](~/includes/wrt-md.md)] don’t inherit <xref:System.Object>, and currently don’t implement a <xref:System.Object.GetHashCode%2A>. However, they appear to have <xref:System.Object.ToString%2A>, <xref:System.Object.Equals%28System.Object%29>, and <xref:System.Object.GetHashCode%2A> methods when you use them in your C# or Visual Basic code, and the .NET Framework provides the default behavior for these methods.  
+ When you call the <xref:System.Object.GetHashCode%2A> method on a class in the [!INCLUDE[wrt](~/includes/wrt-md.md)], it provides the default behavior for classes that don't override <xref:System.Object.GetHashCode%2A>. This is part of the support that the .NET Framework provides for the [!INCLUDE[wrt](~/includes/wrt-md.md)] (see [.NET Framework Support for Windows Store Apps and Windows Runtime](~/docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)). Classes in the [!INCLUDE[wrt](~/includes/wrt-md.md)] don't inherit <xref:System.Object>, and currently don't implement a <xref:System.Object.GetHashCode%2A>. However, they appear to have <xref:System.Object.ToString%2A>, <xref:System.Object.Equals%28System.Object%29>, and <xref:System.Object.GetHashCode%2A> methods when you use them in your C# or Visual Basic code, and the .NET Framework provides the default behavior for these methods.  
   
 > [!NOTE]
 >  [!INCLUDE[wrt](~/includes/wrt-md.md)] classes that are written in C# or Visual Basic can override the <xref:System.Object.GetHashCode%2A> method.  
@@ -666,6 +702,7 @@ The scope of the <xref:System.Object.Finalize%2A?displayProperty=nameWithType> m
       <MemberSignature Language="DocId" Value="M:System.Object.GetType" />
       <MemberSignature Language="VB.NET" Value="Public Function GetType () As Type" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Type ^ GetType();" />
+      <MemberSignature Language="F#" Value="member this.GetType : unit -&gt; Type" Usage="obj.GetType " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -678,6 +715,8 @@ The scope of the <xref:System.Object.Finalize%2A?displayProperty=nameWithType> m
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -685,6 +724,11 @@ The scope of the <xref:System.Object.Finalize%2A?displayProperty=nameWithType> m
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.0;netstandard-1.1;netstandard-1.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Type</ReturnType>
       </ReturnValue>
@@ -743,6 +787,7 @@ The scope of the <xref:System.Object.Finalize%2A?displayProperty=nameWithType> m
       <MemberSignature Language="DocId" Value="M:System.Object.MemberwiseClone" />
       <MemberSignature Language="VB.NET" Value="Protected Function MemberwiseClone () As Object" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; System::Object ^ MemberwiseClone();" />
+      <MemberSignature Language="F#" Value="member this.MemberwiseClone : unit -&gt; obj" Usage="obj.MemberwiseClone " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -755,6 +800,8 @@ The scope of the <xref:System.Object.Finalize%2A?displayProperty=nameWithType> m
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -762,6 +809,11 @@ The scope of the <xref:System.Object.Finalize%2A?displayProperty=nameWithType> m
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.0;netstandard-1.1;netstandard-1.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
@@ -807,6 +859,7 @@ The scope of the <xref:System.Object.Finalize%2A?displayProperty=nameWithType> m
       <MemberSignature Language="DocId" Value="M:System.Object.ReferenceEquals(System.Object,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function ReferenceEquals (objA As Object, objB As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool ReferenceEquals(System::Object ^ objA, System::Object ^ objB);" />
+      <MemberSignature Language="F#" Value="static member ReferenceEquals : obj * obj -&gt; bool" Usage="System.obj.ReferenceEquals (objA, objB)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -819,6 +872,8 @@ The scope of the <xref:System.Object.Finalize%2A?displayProperty=nameWithType> m
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -827,8 +882,11 @@ The scope of the <xref:System.Object.Finalize%2A?displayProperty=nameWithType> m
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8">
           <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -886,6 +944,7 @@ The scope of the <xref:System.Object.Finalize%2A?displayProperty=nameWithType> m
       <MemberSignature Language="DocId" Value="M:System.Object.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function ToString () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::String ^ ToString();" />
+      <MemberSignature Language="F#" Value="abstract member ToString : unit -&gt; string&#xA;override this.ToString : unit -&gt; string" Usage="obj.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -898,6 +957,8 @@ The scope of the <xref:System.Object.Finalize%2A?displayProperty=nameWithType> m
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1012,24 +1073,24 @@ The scope of the <xref:System.Object.Finalize%2A?displayProperty=nameWithType> m
   
 <a name="WinRT"></a>   
 ## Notes for the [!INCLUDE[wrt](~/includes/wrt-md.md)]  
- When you call the <xref:System.Object.ToString%2A> method on a class in the [!INCLUDE[wrt](~/includes/wrt-md.md)], it provides the default behavior for classes that don’t override <xref:System.Object.ToString%2A>. This is part of the support that the .NET Framework provides for the [!INCLUDE[wrt](~/includes/wrt-md.md)] (see [.NET Framework Support for Windows Store Apps and Windows Runtime](~/docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)). Classes in the [!INCLUDE[wrt](~/includes/wrt-md.md)] don’t inherit <xref:System.Object>, and don’t always implement a <xref:System.Object.ToString%2A>. However, they always appear to have <xref:System.Object.ToString%2A>, <xref:System.Object.Equals%28System.Object%29>, and <xref:System.Object.GetHashCode%2A> methods when you use them in your C# or Visual Basic code, and the .NET Framework provides a default behavior for these methods.  
+ When you call the <xref:System.Object.ToString%2A> method on a class in the [!INCLUDE[wrt](~/includes/wrt-md.md)], it provides the default behavior for classes that don't override <xref:System.Object.ToString%2A>. This is part of the support that the .NET Framework provides for the [!INCLUDE[wrt](~/includes/wrt-md.md)] (see [.NET Framework Support for Windows Store Apps and Windows Runtime](~/docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)). Classes in the [!INCLUDE[wrt](~/includes/wrt-md.md)] don't inherit <xref:System.Object>, and don't always implement a <xref:System.Object.ToString%2A>. However, they always appear to have <xref:System.Object.ToString%2A>, <xref:System.Object.Equals%28System.Object%29>, and <xref:System.Object.GetHashCode%2A> methods when you use them in your C# or Visual Basic code, and the .NET Framework provides a default behavior for these methods.  
   
- Starting with the [!INCLUDE[net_v451](~/includes/net-v451-md.md)], the common language runtime will use [IStringable.ToString](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx) on a [!INCLUDE[wrt](~/includes/wrt-md.md)] object before falling back to the default implementation of <xref:System.Object.ToString%2A?displayProperty=nameWithType>.  
+ Starting with the [!INCLUDE[net_v451](~/includes/net-v451-md.md)], the common language runtime will use [IStringable.ToString](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx) on a [!INCLUDE[wrt](~/includes/wrt-md.md)] object before falling back to the default implementation of <xref:System.Object.ToString%2A?displayProperty=nameWithType>.  
   
 > [!NOTE]
 >  [!INCLUDE[wrt](~/includes/wrt-md.md)] classes that are written in C# or Visual Basic can override the <xref:System.Object.ToString%2A> method.  
   
 ### The [!INCLUDE[wrt](~/includes/wrt-md.md)] and the IStringable Interface  
- Starting with [!INCLUDE[win81](~/includes/win81-md.md)], the [!INCLUDE[wrt](~/includes/wrt-md.md)] includes an [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) interface whose single method, [IStringable.ToString](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx), provides basic formatting support comparable to that provided by <xref:System.Object.ToString%2A?displayProperty=nameWithType>. To prevent ambiguity, you should not implement [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) on managed types.  
+ Starting with [!INCLUDE[win81](~/includes/win81-md.md)], the [!INCLUDE[wrt](~/includes/wrt-md.md)] includes an [IStringable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) interface whose single method, [IStringable.ToString](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx), provides basic formatting support comparable to that provided by <xref:System.Object.ToString%2A?displayProperty=nameWithType>. To prevent ambiguity, you should not implement [IStringable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) on managed types.  
   
- When managed objects are called by native code or by code written in languages such as JavaScript or C++/CX, they appear to implement [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx). The common language runtime will automatically route calls from [IStringable.ToString](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx) to <xref:System.Object.ToString%2A?displayProperty=nameWithType> in the event [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) is not implemented on the managed object.  
+ When managed objects are called by native code or by code written in languages such as JavaScript or C++/CX, they appear to implement [IStringable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx). The common language runtime will automatically route calls from [IStringable.ToString](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx) to <xref:System.Object.ToString%2A?displayProperty=nameWithType> in the event [IStringable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) is not implemented on the managed object.  
   
 > [!WARNING]
->  Because the common language runtime auto-implements [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) for all managed types in [!INCLUDE[win8_appstore_long](~/includes/win8-appstore-long-md.md)] apps, we recommend that you do not provide your own [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) implementation. Implementing [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) may result in unintended behavior when calling `ToString` from the [!INCLUDE[wrt](~/includes/wrt-md.md)], C++/CX, or JavaScript.  
+>  Because the common language runtime auto-implements [IStringable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) for all managed types in [!INCLUDE[win8_appstore_long](~/includes/win8-appstore-long-md.md)] apps, we recommend that you do not provide your own [IStringable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) implementation. Implementing [IStringable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) may result in unintended behavior when calling `ToString` from the [!INCLUDE[wrt](~/includes/wrt-md.md)], C++/CX, or JavaScript.  
   
- If you do choose to implement [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) in a public managed type that is exported in a [!INCLUDE[wrt](~/includes/wrt-md.md)] component, the following restrictions apply:  
+ If you do choose to implement [IStringable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) in a public managed type that is exported in a [!INCLUDE[wrt](~/includes/wrt-md.md)] component, the following restrictions apply:  
   
--   You can define the [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) interface only in a "class implements" relationship, such as  
+-   You can define the [IStringable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) interface only in a "class implements" relationship, such as  
   
     ```csharp  
     public class NewClass : IStringable  
@@ -1043,13 +1104,13 @@ The scope of the <xref:System.Object.Finalize%2A?displayProperty=nameWithType> m
   
      in Visual Basic.  
   
--   You cannot implement [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) on an interface.  
+-   You cannot implement [IStringable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) on an interface.  
   
--   You cannot declare a parameter to be of type [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx).  
+-   You cannot declare a parameter to be of type [IStringable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx).  
   
--   [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) cannot be the return type of a method, property, or field.  
+-   [IStringable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) cannot be the return type of a method, property, or field.  
   
--   You cannot hide your [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) implementation from base classes by using a method definition such as the following:  
+-   You cannot hide your [IStringable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) implementation from base classes by using a method definition such as the following:  
   
     ```csharp  
   
@@ -1063,9 +1124,9 @@ The scope of the <xref:System.Object.Finalize%2A?displayProperty=nameWithType> m
   
     ```  
   
-     Instead, the [IStringable.ToString](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx) implementation must always override the base class implementation. You can hide a `ToString` implementation only by invoking it on a strongly typed class instance.  
+     Instead, the [IStringable.ToString](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx) implementation must always override the base class implementation. You can hide a `ToString` implementation only by invoking it on a strongly typed class instance.  
   
- Note that under a variety of conditions, calls from native code to a managed type that implements [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) or hides its [ToString](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx) implementation can produce unexpected behavior.  
+ Note that under a variety of conditions, calls from native code to a managed type that implements [IStringable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) or hides its [ToString](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx) implementation can produce unexpected behavior.  
   
  ]]></format>
         </remarks>
@@ -1092,6 +1153,7 @@ The scope of the <xref:System.Object.Finalize%2A?displayProperty=nameWithType> m
   
 -   If your type implements a parsing method (or <see langword="Parse" /> or <see langword="TryParse" /> method, a constructor, or some other static method that instantiates an instance of the type from a string), you should ensure that the string returned by the <see cref="M:System.Object.ToString" /> method can be converted to an object instance.</para>
         </block>
+        <related type="Article" href="~/docs/standard/base-types/formatting-types.md">Formatting Types in .NET</related>
       </Docs>
     </Member>
   </Members>

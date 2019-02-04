@@ -4,8 +4,11 @@
   <TypeSignature Language="DocId" Value="T:System.Management.PropertyData" />
   <TypeSignature Language="VB.NET" Value="Public Class PropertyData" />
   <TypeSignature Language="C++ CLI" Value="public ref class PropertyData" />
+  <TypeSignature Language="F#" Value="type PropertyData = class" />
   <AssemblyInfo>
     <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -18,7 +21,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- The following example lists information about the **Win32_OperatingSystem** class using the <xref:System.Management.PropertyData> class. For more information about **Win32_OperatingSystem**, see the Windows Management Instrumentation documentation in the MSDN Library at http://msdn.microsoft.com/library.  
+ The following example lists information about the **Win32_OperatingSystem** class using the <xref:System.Management.PropertyData> class. For more information about **Win32_OperatingSystem**, see the [Windows Management Instrumentation](/windows/desktop/wmisdk/wmi-start-page) documentation.  
   
  [!code-csharp[wminet_PropertyData#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_PropertyData/cs/PropertyData.cs#1)]
  [!code-vb[wminet_PropertyData#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_PropertyData/vb/PropertyData.vb#1)]  
@@ -33,9 +36,12 @@
       <MemberSignature Language="DocId" Value="P:System.Management.PropertyData.IsArray" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsArray As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsArray { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsArray : bool" Usage="System.Management.PropertyData.IsArray" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -65,9 +71,12 @@
       <MemberSignature Language="DocId" Value="P:System.Management.PropertyData.IsLocal" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsLocal As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsLocal { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsLocal : bool" Usage="System.Management.PropertyData.IsLocal" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -97,9 +106,12 @@
       <MemberSignature Language="DocId" Value="P:System.Management.PropertyData.Name" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="System.Management.PropertyData.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -122,7 +134,7 @@
    
   
 ## Examples  
- The following example lists information about the **Win32_OperatingSystem** class using the <xref:System.Management.PropertyData> class. For more information about **Win32_OperatingSystem**, see the Windows Management Instrumentation documentation in the MSDN Library at http://msdn.microsoft.com/library.  
+ The following example lists information about the **Win32_OperatingSystem** class using the <xref:System.Management.PropertyData> class. For more information about **Win32_OperatingSystem**, see the [Windows Management Instrumentation](/windows/desktop/wmisdk/wmi-start-page) documentation.  
   
  [!code-csharp[wminet_PropertyData_Name#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_PropertyData_Name/cs/PropertyData_Name.cs#1)]
  [!code-vb[wminet_PropertyData_Name#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_PropertyData_Name/vb/PropertyData_Name.vb#1)]  
@@ -137,9 +149,12 @@
       <MemberSignature Language="DocId" Value="P:System.Management.PropertyData.Origin" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Origin As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Origin { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Origin : string" Usage="System.Management.PropertyData.Origin" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -169,9 +184,12 @@
       <MemberSignature Language="DocId" Value="P:System.Management.PropertyData.Qualifiers" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Qualifiers As QualifierDataCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Management::QualifierDataCollection ^ Qualifiers { System::Management::QualifierDataCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Qualifiers : System.Management.QualifierDataCollection" Usage="System.Management.PropertyData.Qualifiers" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -194,7 +212,7 @@
    
   
 ## Examples  
- The following example lists information about the **Win32_OperatingSystem** class using the <xref:System.Management.PropertyData> class. For more information about **Win32_OperatingSystem**, see the Windows Management Instrumentation documentation in the MSDN Library at http://msdn.microsoft.com/library.  
+ The following example lists information about the **Win32_OperatingSystem** class using the <xref:System.Management.PropertyData> class. For more information about **Win32_OperatingSystem**, see the [Windows Management Instrumentation](/windows/desktop/wmisdk/wmi-start-page) documentation.  
   
  [!code-csharp[wminet_PropertyData_Qualifiers#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_PropertyData_Qualifiers/cs/PropertyData_Qualifiers.cs#1)]
  [!code-vb[wminet_PropertyData_Qualifiers#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_PropertyData_Qualifiers/vb/PropertyData_Qualifiers.vb#1)]  
@@ -209,9 +227,12 @@
       <MemberSignature Language="DocId" Value="P:System.Management.PropertyData.Type" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Type As CimType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Management::CimType Type { System::Management::CimType get(); };" />
+      <MemberSignature Language="F#" Value="member this.Type : System.Management.CimType" Usage="System.Management.PropertyData.Type" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -234,7 +255,7 @@
    
   
 ## Examples  
- The following example lists information about the **Win32_OperatingSystem** class using the <xref:System.Management.PropertyData> class. For more information about **Win32_OperatingSystem**, see the Windows Management Instrumentation documentation in the MSDN Library at http://msdn.microsoft.com/library.  
+ The following example lists information about the **Win32_OperatingSystem** class using the <xref:System.Management.PropertyData> class. For more information about **Win32_OperatingSystem**, see the [Windows Management Instrumentation](/windows/desktop/wmisdk/wmi-start-page) documentation.  
   
  [!code-csharp[wminet_PropertyData_Type#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_PropertyData_Type/cs/PropertyData_Type.cs#1)]
  [!code-vb[wminet_PropertyData_Type#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_PropertyData_Type/vb/PropertyData_Type.vb#1)]  
@@ -249,9 +270,12 @@
       <MemberSignature Language="DocId" Value="P:System.Management.PropertyData.Value" />
       <MemberSignature Language="VB.NET" Value="Public Property Value As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Value { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Value : obj with get, set" Usage="System.Management.PropertyData.Value" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -274,7 +298,7 @@
    
   
 ## Examples  
- The following example lists information about the **Win32_OperatingSystem** class using the <xref:System.Management.PropertyData> class. For more information about **Win32_OperatingSystem**, see the Windows Management Instrumentation documentation in the MSDN Library at http://msdn.microsoft.com/library.  
+ The following example lists information about the **Win32_OperatingSystem** class using the <xref:System.Management.PropertyData> class. For more information about **Win32_OperatingSystem**, see the [Windows Management Instrumentation](/windows/desktop/wmisdk/wmi-start-page) documentation.  
   
  [!code-csharp[wminet_PropertyData_Value#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_PropertyData_Value/cs/PropertyData_Value.cs#1)]
  [!code-vb[wminet_PropertyData_Value#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_PropertyData_Value/vb/PropertyData_Value.vb#1)]  

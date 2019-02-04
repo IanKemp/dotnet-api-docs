@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.DpapiDataProtector" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class DpapiDataProtector&#xA;Inherits DataProtector" />
   <TypeSignature Language="C++ CLI" Value="public ref class DpapiDataProtector sealed : System::Security::Cryptography::DataProtector" />
+  <TypeSignature Language="F#" Value="type DpapiDataProtector = class&#xA;    inherit DataProtector" />
   <AssemblyInfo>
     <AssemblyName>System.Security</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -20,7 +21,7 @@
 ## Remarks  
  The <xref:System.Security.Cryptography.DpapiDataProtector> class provides a structured way to protect data by using the <xref:System.Security.Cryptography.ProtectedData> class. The class constructor has purpose parameters that serve like a password to identify the protected data. All three parameters are hashed and included as part of the encrypted data string. You must know the purpose parameters to unprotect the data. The <xref:System.Security.Cryptography.ProtectedData.Protect%2A?displayProperty=nameWithType> method that is called to encrypt the data has an `optionalEntropy` parameter that allows you to add qualifying information to encrypt the data more securely. The hash of the purpose parameters is used for optional entropy. Because you do not need a key to decrypt the data, carefully choosing the purpose data adds another level of security to data protection.  
   
- If you use a <xref:System.Security.Cryptography.DpapiDataProtector.Scope%2A> setting of <xref:System.Security.Cryptography.DataProtectionScope.CurrentUser>, only a user with logon credentials that match those of the user who encrypted the data can decrypt the data. In addition, decryption usually can be done only on the computer where the data was encrypted. The Windows function that encrypts the data creates a session key to perform the encryption. The session key is derived again when the data is to be decrypted. For a detailed description of how data is protected by using session keys, see [Windows Data Protection](http://go.microsoft.com/fwlink/?LinkId=224686).  
+ If you use a <xref:System.Security.Cryptography.DpapiDataProtector.Scope%2A> setting of <xref:System.Security.Cryptography.DataProtectionScope.CurrentUser>, only a user with logon credentials that match those of the user who encrypted the data can decrypt the data. In addition, decryption usually can be done only on the computer where the data was encrypted. The Windows function that encrypts the data creates a session key to perform the encryption. The session key is derived again when the data is to be decrypted. For a detailed description of how data is protected by using session keys, see [Windows Data Protection](https://go.microsoft.com/fwlink/?LinkId=224686).  
   
  If you use a <xref:System.Security.Cryptography.DpapiDataProtector.Scope%2A> setting of <xref:System.Security.Cryptography.DataProtectionScope.LocalMachine> when protecting the data and do not carefully identify the purpose parameters, any other application on that computer that knows the purposes can access and unprotect the data.  
   
@@ -34,6 +35,7 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DpapiDataProtector.#ctor(System.String,System.String,System.String[])" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (appName As String, primaryPurpose As String, ParamArray specificPurpose As String())" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DpapiDataProtector(System::String ^ appName, System::String ^ primaryPurpose, ... cli::array &lt;System::String ^&gt; ^ specificPurpose);" />
+      <MemberSignature Language="F#" Value="new System.Security.Cryptography.DpapiDataProtector : string * string * string[] -&gt; System.Security.Cryptography.DpapiDataProtector" Usage="new System.Security.Cryptography.DpapiDataProtector (appName, primaryPurpose, specificPurpose)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security</AssemblyName>
@@ -87,6 +89,7 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DpapiDataProtector.IsReprotectRequired(System.Byte[])" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function IsReprotectRequired (encryptedData As Byte()) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool IsReprotectRequired(cli::array &lt;System::Byte&gt; ^ encryptedData);" />
+      <MemberSignature Language="F#" Value="override this.IsReprotectRequired : byte[] -&gt; bool" Usage="dpapiDataProtector.IsReprotectRequired encryptedData" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security</AssemblyName>
@@ -119,6 +122,7 @@
       <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.DpapiDataProtector.PrependHashedPurposeToPlaintext" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property PrependHashedPurposeToPlaintext As Boolean" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property bool PrependHashedPurposeToPlaintext { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.PrependHashedPurposeToPlaintext : bool" Usage="System.Security.Cryptography.DpapiDataProtector.PrependHashedPurposeToPlaintext" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security</AssemblyName>
@@ -139,6 +143,7 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DpapiDataProtector.ProviderProtect(System.Byte[])" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function ProviderProtect (userData As Byte()) As Byte()" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override cli::array &lt;System::Byte&gt; ^ ProviderProtect(cli::array &lt;System::Byte&gt; ^ userData);" />
+      <MemberSignature Language="F#" Value="override this.ProviderProtect : byte[] -&gt; byte[]" Usage="dpapiDataProtector.ProviderProtect userData" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security</AssemblyName>
@@ -168,6 +173,7 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DpapiDataProtector.ProviderUnprotect(System.Byte[])" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function ProviderUnprotect (encryptedData As Byte()) As Byte()" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override cli::array &lt;System::Byte&gt; ^ ProviderUnprotect(cli::array &lt;System::Byte&gt; ^ encryptedData);" />
+      <MemberSignature Language="F#" Value="override this.ProviderUnprotect : byte[] -&gt; byte[]" Usage="dpapiDataProtector.ProviderUnprotect encryptedData" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security</AssemblyName>
@@ -197,6 +203,7 @@
       <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.DpapiDataProtector.Scope" />
       <MemberSignature Language="VB.NET" Value="Public Property Scope As DataProtectionScope" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Security::Cryptography::DataProtectionScope Scope { System::Security::Cryptography::DataProtectionScope get(); void set(System::Security::Cryptography::DataProtectionScope value); };" />
+      <MemberSignature Language="F#" Value="member this.Scope : System.Security.Cryptography.DataProtectionScope with get, set" Usage="System.Security.Cryptography.DpapiDataProtector.Scope" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security</AssemblyName>

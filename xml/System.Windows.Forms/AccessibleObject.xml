@@ -4,12 +4,16 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Forms.AccessibleObject" />
   <TypeSignature Language="VB.NET" Value="Public Class AccessibleObject&#xA;Inherits StandardOleMarshalObject&#xA;Implements IAccessible, IReflect" />
   <TypeSignature Language="C++ CLI" Value="public ref class AccessibleObject : System::Runtime::InteropServices::StandardOleMarshalObject, Accessibility::IAccessible, System::Reflection::IReflect" />
+  <TypeSignature Language="F#" Value="type AccessibleObject = class&#xA;    inherit StandardOleMarshalObject&#xA;    interface IReflect&#xA;    interface IAccessible" />
   <AssemblyInfo>
     <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Runtime.InteropServices.StandardOleMarshalObject</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-1.1">System.MarshalByRefObject</BaseTypeName>
   </Base>
   <Interfaces>
     <Interface>
@@ -72,6 +76,8 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
@@ -92,13 +98,15 @@
       <MemberSignature Language="ILAsm" Value=".property instance int32 Accessibility.IAccessible.accChildCount" />
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.AccessibleObject.Accessibility#IAccessible#accChildCount" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property accChildCount As Integer Implements IAccessible.accChildCount" />
-      <MemberSignature Language="C++ CLI" Value="property int Accessibility.IAccessible.accChildCount { int get(); };" />
+      <MemberSignature Language="C++ CLI" Value="property int Accessibility::IAccessible::accChildCount { int get(); };" />
+      <MemberSignature Language="F#" Usage="Accessibility.IAccessible.accChildCount" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Accessibility.IAccessible.accChildCount</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -129,6 +137,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -155,13 +165,15 @@
       <MemberSignature Language="ILAsm" Value=".property instance object Accessibility.IAccessible.accFocus" />
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.AccessibleObject.Accessibility#IAccessible#accFocus" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property accFocus As Object Implements IAccessible.accFocus" />
-      <MemberSignature Language="C++ CLI" Value="property System::Object ^ Accessibility.IAccessible.accFocus { System::Object ^ get(); };" />
+      <MemberSignature Language="C++ CLI" Value="property System::Object ^ Accessibility::IAccessible::accFocus { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Usage="Accessibility.IAccessible.accFocus" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Accessibility.IAccessible.accFocus</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -200,6 +212,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -223,7 +237,7 @@
 |Type|Description|  
 |----------|-----------------|  
 |<xref:Accessibility.IAccessible>|The accessible object at the specified direction.|  
-|integer|0 if the point specified is either the current object or outside the object’s boundaries; otherwise, the child ID that identifies the accessible object at the specified direction.|  
+|integer|0 if the point specified is either the current object or outside the object's boundaries; otherwise, the child ID that identifies the accessible object at the specified direction.|  
   
  This member is an explicit interface member implementation. It can be used only when the <xref:System.Windows.Forms.AccessibleObject> instance is cast to an <xref:Accessibility.IAccessible> interface.  
   
@@ -243,21 +257,23 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="pxLeft" Type="System.Int32&amp;" RefType="out" />
-        <Parameter Name="pyTop" Type="System.Int32&amp;" RefType="out" />
-        <Parameter Name="pcxWidth" Type="System.Int32&amp;" RefType="out" />
-        <Parameter Name="pcyHeight" Type="System.Int32&amp;" RefType="out" />
+        <Parameter Name="pxLeft" Type="System.Int32" RefType="out" />
+        <Parameter Name="pyTop" Type="System.Int32" RefType="out" />
+        <Parameter Name="pcxWidth" Type="System.Int32" RefType="out" />
+        <Parameter Name="pcyHeight" Type="System.Int32" RefType="out" />
         <Parameter Name="childID" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="pxLeft">When this method returns, contains the x-coordinate of the object’s left edge. This parameter is passed uninitialized.</param>
-        <param name="pyTop">When this method returns, contains the y-coordinate of the object’s top edge. This parameter is passed uninitialized.</param>
+        <param name="pxLeft">When this method returns, contains the x-coordinate of the object's left edge. This parameter is passed uninitialized.</param>
+        <param name="pyTop">When this method returns, contains the y-coordinate of the object's top edge. This parameter is passed uninitialized.</param>
         <param name="pcxWidth">When this method returns, contains the width of the object. This parameter is passed uninitialized.</param>
         <param name="pcyHeight">When this method returns, contains the height of the object. This parameter is passed uninitialized.</param>
         <param name="childID">The ID number of the accessible object. This parameter is 0 to get the location of the object, or a child ID to get the location of one of the object's child objects.</param>
@@ -284,6 +300,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -321,13 +339,15 @@
       <MemberSignature Language="ILAsm" Value=".property instance object Accessibility.IAccessible.accParent" />
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.AccessibleObject.Accessibility#IAccessible#accParent" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property accParent As Object Implements IAccessible.accParent" />
-      <MemberSignature Language="C++ CLI" Value="property System::Object ^ Accessibility.IAccessible.accParent { System::Object ^ get(); };" />
+      <MemberSignature Language="C++ CLI" Value="property System::Object ^ Accessibility::IAccessible::accParent { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Usage="Accessibility.IAccessible.accParent" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Accessibility.IAccessible.accParent</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -340,7 +360,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- This member is an explicit interface member implementation. It can be used only when the <xref:System.Windows.Forms.AccessibleObject> instance is cast to an <xref:Accessibility.IAccessible> interface..  
+ This member is an explicit interface member implementation. It can be used only when the <xref:System.Windows.Forms.AccessibleObject> instance is cast to an <xref:Accessibility.IAccessible> interface. 
   
  ]]></format>
         </remarks>
@@ -358,6 +378,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -397,13 +419,15 @@
       <MemberSignature Language="ILAsm" Value=".property instance object Accessibility.IAccessible.accSelection" />
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.AccessibleObject.Accessibility#IAccessible#accSelection" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property accSelection As Object Implements IAccessible.accSelection" />
-      <MemberSignature Language="C++ CLI" Value="property System::Object ^ Accessibility.IAccessible.accSelection { System::Object ^ get(); };" />
+      <MemberSignature Language="C++ CLI" Value="property System::Object ^ Accessibility::IAccessible::accSelection { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Usage="Accessibility.IAccessible.accSelection" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Accessibility.IAccessible.accSelection</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -443,6 +467,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -470,6 +496,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -497,6 +525,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -524,6 +554,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -551,13 +583,15 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="pszHelpFile" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="pszHelpFile" Type="System.String" RefType="out" />
         <Parameter Name="childID" Type="System.Object" />
       </Parameters>
       <Docs>
@@ -580,8 +614,15 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -607,8 +648,15 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -634,6 +682,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -661,6 +711,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -688,6 +740,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -715,6 +769,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -743,6 +799,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -765,9 +823,12 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.AccessibleObject.Bounds" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Bounds As Rectangle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Drawing::Rectangle Bounds { System::Drawing::Rectangle get(); };" />
+      <MemberSignature Language="F#" Value="member this.Bounds : System.Drawing.Rectangle" Usage="System.Windows.Forms.AccessibleObject.Bounds" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -816,9 +877,12 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.AccessibleObject.DefaultAction" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property DefaultAction As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ DefaultAction { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DefaultAction : string" Usage="System.Windows.Forms.AccessibleObject.DefaultAction" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -856,9 +920,12 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.AccessibleObject.Description" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Description As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Description { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Description : string" Usage="System.Windows.Forms.AccessibleObject.Description" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -896,9 +963,12 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.AccessibleObject.DoDefaultAction" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub DoDefaultAction ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void DoDefaultAction();" />
+      <MemberSignature Language="F#" Value="abstract member DoDefaultAction : unit -&gt; unit&#xA;override this.DoDefaultAction : unit -&gt; unit" Usage="accessibleObject.DoDefaultAction " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -927,9 +997,12 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.AccessibleObject.GetChild(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function GetChild (index As Integer) As AccessibleObject" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Windows::Forms::AccessibleObject ^ GetChild(int index);" />
+      <MemberSignature Language="F#" Value="abstract member GetChild : int -&gt; System.Windows.Forms.AccessibleObject&#xA;override this.GetChild : int -&gt; System.Windows.Forms.AccessibleObject" Usage="accessibleObject.GetChild index" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -967,9 +1040,12 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.AccessibleObject.GetChildCount" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function GetChildCount () As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual int GetChildCount();" />
+      <MemberSignature Language="F#" Value="abstract member GetChildCount : unit -&gt; int&#xA;override this.GetChildCount : unit -&gt; int" Usage="accessibleObject.GetChildCount " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1004,9 +1080,12 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.AccessibleObject.GetFocused" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function GetFocused () As AccessibleObject" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Windows::Forms::AccessibleObject ^ GetFocused();" />
+      <MemberSignature Language="F#" Value="abstract member GetFocused : unit -&gt; System.Windows.Forms.AccessibleObject&#xA;override this.GetFocused : unit -&gt; System.Windows.Forms.AccessibleObject" Usage="accessibleObject.GetFocused " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1039,16 +1118,19 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.AccessibleObject.GetHelpTopic(System.String@)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function GetHelpTopic (ByRef fileName As String) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual int GetHelpTopic([Runtime::InteropServices::Out] System::String ^ % fileName);" />
+      <MemberSignature Language="F#" Value="abstract member GetHelpTopic :  -&gt; int&#xA;override this.GetHelpTopic :  -&gt; int" Usage="accessibleObject.GetHelpTopic fileName" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="fileName" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="fileName" Type="System.String" RefType="out" />
       </Parameters>
       <Docs>
         <param name="fileName">On return, this property contains the path to the Help file associated with this accessible object.</param>
@@ -1076,9 +1158,12 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.AccessibleObject.GetSelected" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function GetSelected () As AccessibleObject" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Windows::Forms::AccessibleObject ^ GetSelected();" />
+      <MemberSignature Language="F#" Value="abstract member GetSelected : unit -&gt; System.Windows.Forms.AccessibleObject&#xA;override this.GetSelected : unit -&gt; System.Windows.Forms.AccessibleObject" Usage="accessibleObject.GetSelected " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1101,9 +1186,12 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.AccessibleObject.Help" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Help As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Help { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Help : string" Usage="System.Windows.Forms.AccessibleObject.Help" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1134,9 +1222,12 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.AccessibleObject.HitTest(System.Int32,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function HitTest (x As Integer, y As Integer) As AccessibleObject" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Windows::Forms::AccessibleObject ^ HitTest(int x, int y);" />
+      <MemberSignature Language="F#" Value="abstract member HitTest : int * int -&gt; System.Windows.Forms.AccessibleObject&#xA;override this.HitTest : int * int -&gt; System.Windows.Forms.AccessibleObject" Usage="accessibleObject.HitTest (x, y)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1171,9 +1262,12 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.AccessibleObject.KeyboardShortcut" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property KeyboardShortcut As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ KeyboardShortcut { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.KeyboardShortcut : string" Usage="System.Windows.Forms.AccessibleObject.KeyboardShortcut" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1211,9 +1305,12 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.AccessibleObject.Name" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Name { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="System.Windows.Forms.AccessibleObject.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1264,9 +1361,12 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.AccessibleObject.Navigate(System.Windows.Forms.AccessibleNavigation)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function Navigate (navdir As AccessibleNavigation) As AccessibleObject" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Windows::Forms::AccessibleObject ^ Navigate(System::Windows::Forms::AccessibleNavigation navdir);" />
+      <MemberSignature Language="F#" Value="abstract member Navigate : System.Windows.Forms.AccessibleNavigation -&gt; System.Windows.Forms.AccessibleObject&#xA;override this.Navigate : System.Windows.Forms.AccessibleNavigation -&gt; System.Windows.Forms.AccessibleObject" Usage="accessibleObject.Navigate navdir" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1310,9 +1410,12 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.AccessibleObject.Parent" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Parent As AccessibleObject" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Windows::Forms::AccessibleObject ^ Parent { System::Windows::Forms::AccessibleObject ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : System.Windows.Forms.AccessibleObject" Usage="System.Windows.Forms.AccessibleObject.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1349,15 +1452,88 @@
         <altmember cref="P:System.Windows.Forms.AccessibleObject.Value" />
       </Docs>
     </Member>
+    <Member MemberName="RaiseAutomationNotification">
+      <MemberSignature Language="C#" Value="public bool RaiseAutomationNotification (System.Windows.Forms.Automation.AutomationNotificationKind notificationKind, System.Windows.Forms.Automation.AutomationNotificationProcessing notificationProcessing, string notificationText);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RaiseAutomationNotification(valuetype System.Windows.Forms.Automation.AutomationNotificationKind notificationKind, valuetype System.Windows.Forms.Automation.AutomationNotificationProcessing notificationProcessing, string notificationText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.AccessibleObject.RaiseAutomationNotification(System.Windows.Forms.Automation.AutomationNotificationKind,System.Windows.Forms.Automation.AutomationNotificationProcessing,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function RaiseAutomationNotification (notificationKind As AutomationNotificationKind, notificationProcessing As AutomationNotificationProcessing, notificationText As String) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool RaiseAutomationNotification(System::Windows::Forms::Automation::AutomationNotificationKind notificationKind, System::Windows::Forms::Automation::AutomationNotificationProcessing notificationProcessing, System::String ^ notificationText);" />
+      <MemberSignature Language="F#" Value="member this.RaiseAutomationNotification : System.Windows.Forms.Automation.AutomationNotificationKind * System.Windows.Forms.Automation.AutomationNotificationProcessing * string -&gt; bool" Usage="accessibleObject.RaiseAutomationNotification (notificationKind, notificationProcessing, notificationText)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="notificationKind" Type="System.Windows.Forms.Automation.AutomationNotificationKind" />
+        <Parameter Name="notificationProcessing" Type="System.Windows.Forms.Automation.AutomationNotificationProcessing" />
+        <Parameter Name="notificationText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="notificationKind">The type of notification.</param>
+        <param name="notificationProcessing">An indicator of how to process notifications.</param>
+        <param name="notificationText">The text of the notification.</param>
+        <summary>Raises the UI automation notification event.</summary>
+        <returns>
+          <see langword="true" /> if the operation succeeds; <see langword="false" /> if the underlying Windows infrastucture is not available or the operation failed. Call <see cref="M:System.Runtime.InteropServices.Marshal.GetLastWin32Error" /> for details. </returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks
+
+This event is available starting with Windows 10, version 1709.
+  
+       ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseLiveRegionChanged">
+      <MemberSignature Language="C#" Value="public virtual bool RaiseLiveRegionChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool RaiseLiveRegionChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.AccessibleObject.RaiseLiveRegionChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function RaiseLiveRegionChanged () As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool RaiseLiveRegionChanged();" />
+      <MemberSignature Language="F#" Value="abstract member RaiseLiveRegionChanged : unit -&gt; bool&#xA;override this.RaiseLiveRegionChanged : unit -&gt; bool" Usage="accessibleObject.RaiseLiveRegionChanged " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Raises the LiveRegionChanged UI automation event.</summary>
+        <returns>
+          <see langword="true" /> if the operation succeeds; <see langword="False" /> otherwise.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks
+
+This method must be overridden in derived classes that support the UI automation live region feature.
+  
+     ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Accessibility object live regions are not supported. </exception>
+      </Docs>
+    </Member>
     <Member MemberName="Role">
       <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.AccessibleRole Role { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AccessibleRole Role" />
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.AccessibleObject.Role" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Role As AccessibleRole" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Windows::Forms::AccessibleRole Role { System::Windows::Forms::AccessibleRole get(); };" />
+      <MemberSignature Language="F#" Value="member this.Role : System.Windows.Forms.AccessibleRole" Usage="System.Windows.Forms.AccessibleObject.Role" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1405,9 +1581,12 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.AccessibleObject.Select(System.Windows.Forms.AccessibleSelection)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub Select (flags As AccessibleSelection)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Select(System::Windows::Forms::AccessibleSelection flags);" />
+      <MemberSignature Language="F#" Value="abstract member Select : System.Windows.Forms.AccessibleSelection -&gt; unit&#xA;override this.Select : System.Windows.Forms.AccessibleSelection -&gt; unit" Usage="accessibleObject.Select flags" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1461,9 +1640,12 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.AccessibleObject.State" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property State As AccessibleStates" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Windows::Forms::AccessibleStates State { System::Windows::Forms::AccessibleStates get(); };" />
+      <MemberSignature Language="F#" Value="member this.State : System.Windows.Forms.AccessibleStates" Usage="System.Windows.Forms.AccessibleObject.State" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1512,6 +1694,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1549,6 +1733,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1585,6 +1771,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1621,6 +1809,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1655,6 +1845,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1691,6 +1883,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1736,6 +1930,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1770,6 +1966,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1804,6 +2002,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1840,6 +2040,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1883,6 +2085,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1921,7 +2125,27 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentException">More than one argument is specified for a field set operation.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="invokeAttr" /> is <see cref="F:System.Reflection.BindingFlags.CreateInstance" /> and another bit flag is also set.
+
+-or-
+<paramref name="invokeAttr" /> is not <see cref="F:System.Reflection.BindingFlags.CreateInstance" /> and name is <see langword="null" />.
+
+-or-
+
+<paramref name="invokeAttr" /> is not an invocation attribute from <see cref="T:System.Reflection.BindingFlags" />.
+
+-or-
+
+<paramref name="invokeAttr" /> specifies both get and set for a property or field.
+
+-or-
+
+<paramref name="invokeAttr" /> specifies both a field set and an Invoke method.<paramref name="args" /> is provided for a field get operation.
+
+-or-
+
+More than one argument is specified for a field set operation.</exception>
         <exception cref="T:System.MissingFieldException">The field or property cannot be found.</exception>
         <exception cref="T:System.MissingMethodException">The method cannot be found.</exception>
         <exception cref="T:System.Security.SecurityException">A private member is invoked without the necessary <see cref="T:System.Security.Permissions.ReflectionPermission" />.</exception>
@@ -1932,13 +2156,15 @@
       <MemberSignature Language="ILAsm" Value=".property instance class System.Type System.Reflection.IReflect.UnderlyingSystemType" />
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.AccessibleObject.System#Reflection#IReflect#UnderlyingSystemType" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property UnderlyingSystemType As Type Implements IReflect.UnderlyingSystemType" />
-      <MemberSignature Language="C++ CLI" Value="property Type ^ System.Reflection.IReflect.UnderlyingSystemType { Type ^ get(); };" />
+      <MemberSignature Language="C++ CLI" Value="property Type ^ System::Reflection::IReflect::UnderlyingSystemType { Type ^ get(); };" />
+      <MemberSignature Language="F#" Usage="System.Reflection.IReflect.UnderlyingSystemType" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Reflection.IReflect.UnderlyingSystemType</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1972,9 +2198,12 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.AccessibleObject.UseStdAccessibleObjects(System.IntPtr)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub UseStdAccessibleObjects (handle As IntPtr)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void UseStdAccessibleObjects(IntPtr handle);" />
+      <MemberSignature Language="F#" Value="member this.UseStdAccessibleObjects : nativeint -&gt; unit" Usage="accessibleObject.UseStdAccessibleObjects handle" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2004,9 +2233,12 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.AccessibleObject.UseStdAccessibleObjects(System.IntPtr,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub UseStdAccessibleObjects (handle As IntPtr, objid As Integer)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void UseStdAccessibleObjects(IntPtr handle, int objid);" />
+      <MemberSignature Language="F#" Value="member this.UseStdAccessibleObjects : nativeint * int -&gt; unit" Usage="accessibleObject.UseStdAccessibleObjects (handle, objid)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2018,7 +2250,7 @@
       </Parameters>
       <Docs>
         <param name="handle">An <see cref="T:System.IntPtr" /> that contains the handle of the object.</param>
-        <param name="objid">An Int that defines the type of object that the <c>handle</c> parameter refers to.</param>
+        <param name="objid">An Int that defines the type of object that the <paramref name="handle" /> parameter refers to.</param>
         <summary>Associates an object with an instance of an <see cref="T:System.Windows.Forms.AccessibleObject" /> based on the handle and the object id of the object.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -2055,9 +2287,12 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.AccessibleObject.Value" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property Value As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Value { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Value : string with get, set" Usage="System.Windows.Forms.AccessibleObject.Value" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Web.Configuration.TagPrefixInfo" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class TagPrefixInfo&#xA;Inherits ConfigurationElement" />
   <TypeSignature Language="C++ CLI" Value="public ref class TagPrefixInfo sealed : System::Configuration::ConfigurationElement" />
+  <TypeSignature Language="F#" Value="type TagPrefixInfo = class&#xA;    inherit ConfigurationElement" />
   <AssemblyInfo>
     <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -41,7 +43,7 @@
 <system.web>  
   <pages>  
     <controls>  
-      <!—- Searches all linked assemblies for the namespace -->  
+      <!-- Searches all linked assemblies for the namespace -->  
       <add tagPrefix="MyTags1" namespace=" MyNameSpace "/>  
       <!-- Uses a specified assembly -->  
       <add tagPrefix="MyTags2" namespace="MyNameSpace"   
@@ -70,9 +72,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TagPrefixInfo.#ctor(System.String,System.String,System.String,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (tagPrefix As String, nameSpace As String, assembly As String, tagName As String, source As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; TagPrefixInfo(System::String ^ tagPrefix, System::String ^ nameSpace, System::String ^ assembly, System::String ^ tagName, System::String ^ source);" />
+      <MemberSignature Language="F#" Value="new System.Web.Configuration.TagPrefixInfo : string * string * string * string * string -&gt; System.Web.Configuration.TagPrefixInfo" Usage="new System.Web.Configuration.TagPrefixInfo (tagPrefix, nameSpace, assembly, tagName, source)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
@@ -118,9 +122,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TagPrefixInfo.Assembly" />
       <MemberSignature Language="VB.NET" Value="Public Property Assembly As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Assembly { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Assembly : string with get, set" Usage="System.Web.Configuration.TagPrefixInfo.Assembly" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -160,11 +166,18 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TagPrefixInfo.ElementProperty" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property ElementProperty As ConfigurationElementProperty" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property System::Configuration::ConfigurationElementProperty ^ ElementProperty { System::Configuration::ConfigurationElementProperty ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ElementProperty : System.Configuration.ConfigurationElementProperty" Usage="System.Web.Configuration.TagPrefixInfo.ElementProperty" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Configuration.ConfigurationElementProperty</ReturnType>
       </ReturnValue>
@@ -180,9 +193,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TagPrefixInfo.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (prefix As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ prefix);" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="tagPrefixInfo.Equals prefix" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -206,9 +221,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TagPrefixInfo.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="tagPrefixInfo.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -228,9 +245,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TagPrefixInfo.Namespace" />
       <MemberSignature Language="VB.NET" Value="Public Property Namespace As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Namespace { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Namespace : string with get, set" Usage="System.Web.Configuration.TagPrefixInfo.Namespace" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -270,11 +289,18 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TagPrefixInfo.Properties" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property Properties As ConfigurationPropertyCollection" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property System::Configuration::ConfigurationPropertyCollection ^ Properties { System::Configuration::ConfigurationPropertyCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Properties : System.Configuration.ConfigurationPropertyCollection" Usage="System.Web.Configuration.TagPrefixInfo.Properties" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
       </ReturnValue>
@@ -290,9 +316,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TagPrefixInfo.Source" />
       <MemberSignature Language="VB.NET" Value="Public Property Source As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Source { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Source : string with get, set" Usage="System.Web.Configuration.TagPrefixInfo.Source" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -335,9 +363,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TagPrefixInfo.TagName" />
       <MemberSignature Language="VB.NET" Value="Public Property TagName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TagName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.TagName : string with get, set" Usage="System.Web.Configuration.TagPrefixInfo.TagName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -377,9 +407,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TagPrefixInfo.TagPrefix" />
       <MemberSignature Language="VB.NET" Value="Public Property TagPrefix As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TagPrefix { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.TagPrefix : string with get, set" Usage="System.Web.Configuration.TagPrefixInfo.TagPrefix" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>

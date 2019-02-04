@@ -4,13 +4,16 @@
   <TypeSignature Language="DocId" Value="T:System.Configuration.ProtectedConfigurationProviderCollection" />
   <TypeSignature Language="VB.NET" Value="Public Class ProtectedConfigurationProviderCollection&#xA;Inherits ProviderCollection" />
   <TypeSignature Language="C++ CLI" Value="public ref class ProtectedConfigurationProviderCollection : System::Configuration::Provider::ProviderCollection" />
+  <TypeSignature Language="F#" Value="type ProtectedConfigurationProviderCollection = class&#xA;    inherit ProviderCollection" />
   <AssemblyInfo>
     <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Configuration.Provider.ProviderCollection</BaseTypeName>
@@ -30,12 +33,13 @@
   
  You might have a requirement to encrypt sensitive information using an algorithm other than the RSA or DPAPI providers. In this case, you can build your own custom protected-configuration provider. The <xref:System.Configuration.ProtectedConfigurationProvider> class is an abstract base class that you must inherit from to create your own protected-configuration provider.  
   
- For more information about protected configuration, see [Encrypting Configuration Information Using Protected Configuration](http://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1).  
+ For more information about protected configuration, see [Encrypting Configuration Information Using Protected Configuration](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1).  
   
  ]]></format>
     </remarks>
     <altmember cref="T:System.Configuration.ProtectedConfiguration" />
     <altmember cref="T:System.Configuration.ProtectedConfigurationProvider" />
+    <related type="Article" href="https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1">Encrypting Configuration Information Using Protected Configuration</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -47,11 +51,13 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -73,14 +79,17 @@
       <MemberSignature Language="DocId" Value="M:System.Configuration.ProtectedConfigurationProviderCollection.Add(System.Configuration.Provider.ProviderBase)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub Add (provider As ProviderBase)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void Add(System::Configuration::Provider::ProviderBase ^ provider);" />
+      <MemberSignature Language="F#" Value="override this.Add : System.Configuration.Provider.ProviderBase -&gt; unit" Usage="protectedConfigurationProviderCollection.Add provider" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -98,7 +107,7 @@
           <paramref name="provider" /> is not a <see cref="T:System.Configuration.ProtectedConfigurationProvider" /> object.</exception>
         <exception cref="T:System.Configuration.ConfigurationException">The <see cref="T:System.Configuration.ProtectedConfigurationProvider" /> object to add already exists in the collection.  
   
- \- or -  
+-or-
   
  The collection is read-only.</exception>
         <altmember cref="T:System.Configuration.ProtectedConfigurationProvider" />
@@ -110,14 +119,17 @@
       <MemberSignature Language="DocId" Value="P:System.Configuration.ProtectedConfigurationProviderCollection.Item(System.String)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(name As String) As ProtectedConfigurationProvider" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Configuration::ProtectedConfigurationProvider ^ default[System::String ^] { System::Configuration::ProtectedConfigurationProvider ^ get(System::String ^ name); };" />
+      <MemberSignature Language="F#" Value="member this.Item(string) : System.Configuration.ProtectedConfigurationProvider" Usage="System.Configuration.ProtectedConfigurationProviderCollection.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Configuration.ProtectedConfigurationProvider</ReturnType>

@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Forms.WebBrowser" />
   <TypeSignature Language="VB.NET" Value="Public Class WebBrowser&#xA;Inherits WebBrowserBase" />
   <TypeSignature Language="C++ CLI" Value="public ref class WebBrowser : System::Windows::Forms::WebBrowserBase" />
+  <TypeSignature Language="F#" Value="type WebBrowser = class&#xA;    inherit WebBrowserBase" />
   <AssemblyInfo>
     <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -19,17 +21,20 @@
     <Attribute>
       <AttributeName>System.ComponentModel.DefaultProperty("Url")</AttributeName>
     </Attribute>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
       <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.WebBrowserDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
-    </Attribute>
-    <Attribute>
-      <AttributeName>System.Runtime.InteropServices.ClassInterface</AttributeName>
     </Attribute>
     <Attribute>
       <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
     </Attribute>
     <Attribute>
       <AttributeName>System.Windows.Forms.Docking(System.Windows.Forms.DockingBehavior.AutoDock)</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.WebBrowserDesigner, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -67,10 +72,10 @@
   
  You can also manipulate the contents of a Web page through the <xref:System.Windows.Forms.WebBrowser.Document%2A> property, which contains an <xref:System.Windows.Forms.HtmlDocument> object that provides managed access to the HTML document object model (DOM) for the current page. This property is useful, when used in combination with the <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> property, to implement two-way communication between your application code and dynamic HTML (DHTML) code in a Web page, letting you combine Web-based controls and Windows Forms controls in a single user interface. You can use the <xref:System.Windows.Forms.WebBrowser.Document%2A> property to call scripting code methods from your application. Your scripting code can access your application through the `window.external` object, which is a built-in DOM object provided for host access, and which maps to the object that you specify for the <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> property.  
   
- The <xref:System.Windows.Forms.WebBrowser> control is a managed wrapper for the ActiveX [WebBrowser control](http://go.microsoft.com/fwlink/?LinkId=198812), and uses whichever version of the control is installed on the user's computer.  
+ The <xref:System.Windows.Forms.WebBrowser> control is a managed wrapper for the ActiveX [WebBrowser control](https://go.microsoft.com/fwlink/?LinkId=198812), and uses whichever version of the control is installed on the user's computer.  
   
 > [!NOTE]
->  This class makes security demands at the class level. A <xref:System.Security.SecurityException> is thrown when a derived class or any caller in the call stack does not have full trust permission. For details about security demands, see [Link Demands](~/docs/framework/misc/link-demands.md) and [Inheritance Demands](http://msdn.microsoft.com/library/28b9adbb-8f08-4f10-b856-dbf59eb932d9).  
+>  This class makes security demands at the class level. A <xref:System.Security.SecurityException> is thrown when a derived class or any caller in the call stack does not have full trust permission. For details about security demands, see [Link Demands](~/docs/framework/misc/link-demands.md) and [Inheritance Demands](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x4yx82e6(v=vs.100)).  
   
 > [!NOTE]
 >  The <xref:System.Windows.Forms.WebBrowser> class can only be used in threads set to single thread apartment (STA) mode. To use this class, ensure that your `Main` method is marked with the <xref:System.STAThreadAttribute> attribute.  
@@ -88,7 +93,10 @@
   
  ]]></format>
     </remarks>
-    <permission cref="T:System.Security.Permissions.SecurityPermission">for derived classes to inherit this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">for derived classes to inherit this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+    <related type="Article" href="https://msdn.microsoft.com/library/12667861-5b5b-46bc-8fb5-675e25264c9f">WebBrowser Control (Windows Forms)</related>
+    <related type="Article" href="https://msdn.microsoft.com/library/dd66cd4c-b087-415f-9c3e-94e3a1835f74">Using Libraries from Partially Trusted Code</related>
+    <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151478">WebBrowser Control</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -100,6 +108,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
@@ -122,7 +131,7 @@
  ]]></format>
         </remarks>
         <exception cref="T:System.NotSupportedException">The <see cref="T:System.Windows.Forms.WebBrowser" /> control is hosted inside Internet Explorer.</exception>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
       </Docs>
     </Member>
     <Member MemberName="AllowNavigation">
@@ -131,9 +140,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.WebBrowser.AllowNavigation" />
       <MemberSignature Language="VB.NET" Value="Public Property AllowNavigation As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AllowNavigation { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.AllowNavigation : bool with get, set" Usage="System.Windows.Forms.WebBrowser.AllowNavigation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -156,7 +167,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
       </Docs>
     </Member>
     <Member MemberName="AllowWebBrowserDrop">
@@ -165,9 +176,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop" />
       <MemberSignature Language="VB.NET" Value="Public Property AllowWebBrowserDrop As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AllowWebBrowserDrop { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.AllowWebBrowserDrop : bool with get, set" Usage="System.Windows.Forms.WebBrowser.AllowWebBrowserDrop" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -205,9 +218,11 @@
         </remarks>
         <exception cref="T:System.ObjectDisposedException">This <see cref="T:System.Windows.Forms.WebBrowser" /> instance is no longer valid.</exception>
         <exception cref="T:System.InvalidOperationException">A reference to an implementation of the <see langword="IWebBrowser2" /> interface could not be retrieved from the underlying ActiveX <see langword="WebBrowser" /> control.</exception>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="P:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled" />
         <altmember cref="P:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop" />
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151478">WebBrowser Control</related>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151479">IWebBrowser2 Interface</related>
       </Docs>
     </Member>
     <Member MemberName="AttachInterfaces">
@@ -216,9 +231,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.AttachInterfaces(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub AttachInterfaces (nativeActiveXObject As Object)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void AttachInterfaces(System::Object ^ nativeActiveXObject);" />
+      <MemberSignature Language="F#" Value="override this.AttachInterfaces : obj -&gt; unit" Usage="webBrowser.AttachInterfaces nativeActiveXObject" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -231,7 +248,7 @@
         <param name="nativeActiveXObject">An object that represents the underlying ActiveX control.</param>
         <summary>Called by the control when the underlying ActiveX control is created.</summary>
         <remarks>To be added.</remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <block subset="none" type="overrides">
           <para>Derived classes can override this method to cast the underlying ActiveX object to an appropriate interface and cache it in a member variable. This value must then be released in an override of the <see cref="M:System.Windows.Forms.WebBrowserBase.DetachInterfaces" /> method.</para>
         </block>
@@ -243,9 +260,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.WebBrowser.CanGoBack" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CanGoBack As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool CanGoBack { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.CanGoBack : bool" Usage="System.Windows.Forms.WebBrowser.CanGoBack" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -253,7 +272,10 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -284,7 +306,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="E:System.Windows.Forms.WebBrowser.CanGoBackChanged" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoBack" />
       </Docs>
@@ -295,9 +317,11 @@
       <MemberSignature Language="DocId" Value="E:System.Windows.Forms.WebBrowser.CanGoBackChanged" />
       <MemberSignature Language="VB.NET" Value="Public Event CanGoBackChanged As EventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ CanGoBackChanged;" />
+      <MemberSignature Language="F#" Value="member this.CanGoBackChanged : EventHandler " Usage="member this.CanGoBackChanged : System.EventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -331,7 +355,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="P:System.Windows.Forms.WebBrowser.CanGoBack" />
         <altmember cref="T:System.EventArgs" />
         <altmember cref="T:System.EventHandler" />
@@ -344,9 +368,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.WebBrowser.CanGoForward" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CanGoForward As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool CanGoForward { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.CanGoForward : bool" Usage="System.Windows.Forms.WebBrowser.CanGoForward" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -354,7 +380,10 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -387,7 +416,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="E:System.Windows.Forms.WebBrowser.CanGoForwardChanged" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoForward" />
       </Docs>
@@ -398,9 +427,11 @@
       <MemberSignature Language="DocId" Value="E:System.Windows.Forms.WebBrowser.CanGoForwardChanged" />
       <MemberSignature Language="VB.NET" Value="Public Event CanGoForwardChanged As EventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ CanGoForwardChanged;" />
+      <MemberSignature Language="F#" Value="member this.CanGoForwardChanged : EventHandler " Usage="member this.CanGoForwardChanged : System.EventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -434,7 +465,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="P:System.Windows.Forms.WebBrowser.CanGoForward" />
         <altmember cref="T:System.EventArgs" />
         <altmember cref="T:System.EventHandler" />
@@ -447,9 +478,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.CreateSink" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub CreateSink ()" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void CreateSink();" />
+      <MemberSignature Language="F#" Value="override this.CreateSink : unit -&gt; unit" Usage="webBrowser.CreateSink " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -474,8 +507,10 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="M:System.Windows.Forms.WebBrowser.DetachSink" />
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151478">WebBrowser Control</related>
+        <related type="ExternalDocumentation" href="https://msdn.microsoft.com/library/aa768283.aspx">DWebBrowserEvents2 Interface</related>
       </Docs>
     </Member>
     <Member MemberName="CreateWebBrowserSiteBase">
@@ -484,9 +519,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.CreateWebBrowserSiteBase" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateWebBrowserSiteBase () As WebBrowserSiteBase" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Windows::Forms::WebBrowserSiteBase ^ CreateWebBrowserSiteBase();" />
+      <MemberSignature Language="F#" Value="override this.CreateWebBrowserSiteBase : unit -&gt; System.Windows.Forms.WebBrowserSiteBase" Usage="webBrowser.CreateWebBrowserSiteBase " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -509,8 +546,10 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="T:System.Windows.Forms.WebBrowser.WebBrowserSite" />
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151478">WebBrowser Control</related>
+        <related type="ExternalDocumentation" href="https://msdn.microsoft.com/library/aa753260.aspx">IDocHostUIHandler Interface</related>
       </Docs>
     </Member>
     <Member MemberName="DefaultSize">
@@ -519,9 +558,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.WebBrowser.DefaultSize" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property DefaultSize As Size" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property System::Drawing::Size DefaultSize { System::Drawing::Size get(); };" />
+      <MemberSignature Language="F#" Value="member this.DefaultSize : System.Drawing.Size" Usage="System.Windows.Forms.WebBrowser.DefaultSize" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -539,9 +580,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.DetachInterfaces" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub DetachInterfaces ()" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void DetachInterfaces();" />
+      <MemberSignature Language="F#" Value="override this.DetachInterfaces : unit -&gt; unit" Usage="webBrowser.DetachInterfaces " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -551,7 +594,7 @@
       <Docs>
         <summary>Called by the control when the underlying ActiveX control is discarded.</summary>
         <remarks>To be added.</remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <block subset="none" type="overrides">
           <para>Derived classes can override this method to release a reference to the underlying ActiveX object that was cached in an override of the <see cref="M:System.Windows.Forms.WebBrowserBase.AttachInterfaces(System.Object)" /> method.</para>
         </block>
@@ -563,9 +606,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.DetachSink" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub DetachSink ()" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void DetachSink();" />
+      <MemberSignature Language="F#" Value="override this.DetachSink : unit -&gt; unit" Usage="webBrowser.DetachSink " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -592,8 +637,10 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="M:System.Windows.Forms.WebBrowser.CreateSink" />
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151478">WebBrowser Control</related>
+        <related type="ExternalDocumentation" href="https://msdn.microsoft.com/library/aa768283.aspx">DWebBrowserEvents2 Interface</related>
       </Docs>
     </Member>
     <Member MemberName="Dispose">
@@ -602,9 +649,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.Dispose(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub Dispose (disposing As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void Dispose(bool disposing);" />
+      <MemberSignature Language="F#" Value="override this.Dispose : bool -&gt; unit" Usage="webBrowser.Dispose disposing" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -626,9 +675,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.WebBrowser.Document" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Document As HtmlDocument" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Forms::HtmlDocument ^ Document { System::Windows::Forms::HtmlDocument ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Document : System.Windows.Forms.HtmlDocument" Usage="System.Windows.Forms.WebBrowser.Document" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -636,7 +687,7 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -669,12 +720,14 @@
         </remarks>
         <exception cref="T:System.ObjectDisposedException">This <see cref="T:System.Windows.Forms.WebBrowser" /> instance is no longer valid.</exception>
         <exception cref="T:System.InvalidOperationException">A reference to an implementation of the <see langword="IWebBrowser2" /> interface could not be retrieved from the underlying ActiveX <see langword="WebBrowser" /> control.</exception>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="P:System.Windows.Forms.WebBrowser.DocumentStream" />
         <altmember cref="P:System.Windows.Forms.WebBrowser.DocumentText" />
         <altmember cref="T:System.Windows.Forms.HtmlDocument" />
         <altmember cref="M:System.Windows.Forms.HtmlDocument.InvokeScript(System.String,System.Object[])" />
         <altmember cref="P:System.Windows.Forms.WebBrowser.ObjectForScripting" />
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151478">WebBrowser Control</related>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151479">IWebBrowser2 Interface</related>
       </Docs>
     </Member>
     <Member MemberName="DocumentCompleted">
@@ -683,9 +736,11 @@
       <MemberSignature Language="DocId" Value="E:System.Windows.Forms.WebBrowser.DocumentCompleted" />
       <MemberSignature Language="VB.NET" Value="Public Event DocumentCompleted As WebBrowserDocumentCompletedEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Forms::WebBrowserDocumentCompletedEventHandler ^ DocumentCompleted;" />
+      <MemberSignature Language="F#" Value="member this.DocumentCompleted : System.Windows.Forms.WebBrowserDocumentCompletedEventHandler " Usage="member this.DocumentCompleted : System.Windows.Forms.WebBrowserDocumentCompletedEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -731,7 +786,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="P:System.Windows.Forms.WebBrowser.DocumentStream" />
         <altmember cref="P:System.Windows.Forms.WebBrowser.DocumentText" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoBack" />
@@ -752,9 +807,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.WebBrowser.DocumentStream" />
       <MemberSignature Language="VB.NET" Value="Public Property DocumentStream As Stream" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::IO::Stream ^ DocumentStream { System::IO::Stream ^ get(); void set(System::IO::Stream ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DocumentStream : System.IO.Stream with get, set" Usage="System.Windows.Forms.WebBrowser.DocumentStream" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -762,7 +819,7 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -786,10 +843,12 @@
         </remarks>
         <exception cref="T:System.ObjectDisposedException">This <see cref="T:System.Windows.Forms.WebBrowser" /> instance is no longer valid.</exception>
         <exception cref="T:System.InvalidOperationException">A reference to an implementation of the <see langword="IWebBrowser2" /> interface could not be retrieved from the underlying ActiveX <see langword="WebBrowser" /> control.</exception>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="P:System.Windows.Forms.WebBrowser.Document" />
         <altmember cref="P:System.Windows.Forms.WebBrowser.DocumentText" />
         <altmember cref="T:System.IO.Stream" />
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151478">WebBrowser Control</related>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151479">IWebBrowser2 Interface</related>
       </Docs>
     </Member>
     <Member MemberName="DocumentText">
@@ -798,9 +857,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.WebBrowser.DocumentText" />
       <MemberSignature Language="VB.NET" Value="Public Property DocumentText As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DocumentText { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DocumentText : string with get, set" Usage="System.Windows.Forms.WebBrowser.DocumentText" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -808,7 +869,7 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -840,10 +901,12 @@
         </remarks>
         <exception cref="T:System.ObjectDisposedException">This <see cref="T:System.Windows.Forms.WebBrowser" /> instance is no longer valid.</exception>
         <exception cref="T:System.InvalidOperationException">A reference to an implementation of the <see langword="IWebBrowser2" /> interface could not be retrieved from the underlying ActiveX <see langword="WebBrowser" /> control.</exception>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="P:System.Windows.Forms.WebBrowser.Document" />
         <altmember cref="P:System.Windows.Forms.WebBrowser.DocumentStream" />
         <altmember cref="E:System.Windows.Forms.WebBrowser.DocumentCompleted" />
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151478">WebBrowser Control</related>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151479">IWebBrowser2 Interface</related>
       </Docs>
     </Member>
     <Member MemberName="DocumentTitle">
@@ -852,9 +915,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.WebBrowser.DocumentTitle" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DocumentTitle As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DocumentTitle { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DocumentTitle : string" Usage="System.Windows.Forms.WebBrowser.DocumentTitle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -862,7 +927,7 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -894,8 +959,10 @@
         </remarks>
         <exception cref="T:System.ObjectDisposedException">This <see cref="T:System.Windows.Forms.WebBrowser" /> instance is no longer valid.</exception>
         <exception cref="T:System.InvalidOperationException">A reference to an implementation of the <see langword="IWebBrowser2" /> interface could not be retrieved from the underlying ActiveX <see langword="WebBrowser" /> control.</exception>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="E:System.Windows.Forms.WebBrowser.DocumentTitleChanged" />
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151478">WebBrowser Control</related>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151479">IWebBrowser2 Interface</related>
       </Docs>
     </Member>
     <Member MemberName="DocumentTitleChanged">
@@ -904,9 +971,11 @@
       <MemberSignature Language="DocId" Value="E:System.Windows.Forms.WebBrowser.DocumentTitleChanged" />
       <MemberSignature Language="VB.NET" Value="Public Event DocumentTitleChanged As EventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ DocumentTitleChanged;" />
+      <MemberSignature Language="F#" Value="member this.DocumentTitleChanged : EventHandler " Usage="member this.DocumentTitleChanged : System.EventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -940,7 +1009,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="P:System.Windows.Forms.WebBrowser.DocumentTitle" />
         <altmember cref="T:System.EventArgs" />
         <altmember cref="T:System.EventHandler" />
@@ -952,9 +1021,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.WebBrowser.DocumentType" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DocumentType As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DocumentType { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DocumentType : string" Usage="System.Windows.Forms.WebBrowser.DocumentType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -962,7 +1033,7 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -981,7 +1052,9 @@
         </remarks>
         <exception cref="T:System.ObjectDisposedException">This <see cref="T:System.Windows.Forms.WebBrowser" /> instance is no longer valid.</exception>
         <exception cref="T:System.InvalidOperationException">A reference to an implementation of the <see langword="IWebBrowser2" /> interface could not be retrieved from the underlying ActiveX <see langword="WebBrowser" /> control.</exception>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151478">WebBrowser Control</related>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151479">IWebBrowser2 Interface</related>
       </Docs>
     </Member>
     <Member MemberName="EncryptionLevel">
@@ -990,9 +1063,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.WebBrowser.EncryptionLevel" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EncryptionLevel As WebBrowserEncryptionLevel" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Forms::WebBrowserEncryptionLevel EncryptionLevel { System::Windows::Forms::WebBrowserEncryptionLevel get(); };" />
+      <MemberSignature Language="F#" Value="member this.EncryptionLevel : System.Windows.Forms.WebBrowserEncryptionLevel" Usage="System.Windows.Forms.WebBrowser.EncryptionLevel" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1000,7 +1075,7 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1019,9 +1094,11 @@
         </remarks>
         <exception cref="T:System.ObjectDisposedException">This <see cref="T:System.Windows.Forms.WebBrowser" /> instance is no longer valid.</exception>
         <exception cref="T:System.InvalidOperationException">A reference to an implementation of the <see langword="IWebBrowser2" /> interface could not be retrieved from the underlying ActiveX <see langword="WebBrowser" /> control.</exception>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="E:System.Windows.Forms.WebBrowser.EncryptionLevelChanged" />
         <altmember cref="T:System.Windows.Forms.WebBrowserEncryptionLevel" />
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151478">WebBrowser Control</related>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151479">IWebBrowser2 Interface</related>
       </Docs>
     </Member>
     <Member MemberName="EncryptionLevelChanged">
@@ -1030,9 +1107,11 @@
       <MemberSignature Language="DocId" Value="E:System.Windows.Forms.WebBrowser.EncryptionLevelChanged" />
       <MemberSignature Language="VB.NET" Value="Public Event EncryptionLevelChanged As EventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ EncryptionLevelChanged;" />
+      <MemberSignature Language="F#" Value="member this.EncryptionLevelChanged : EventHandler " Usage="member this.EncryptionLevelChanged : System.EventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1065,7 +1144,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="P:System.Windows.Forms.WebBrowser.EncryptionLevel" />
         <altmember cref="T:System.EventArgs" />
         <altmember cref="T:System.EventHandler" />
@@ -1077,9 +1156,11 @@
       <MemberSignature Language="DocId" Value="E:System.Windows.Forms.WebBrowser.FileDownload" />
       <MemberSignature Language="VB.NET" Value="Public Event FileDownload As EventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ FileDownload;" />
+      <MemberSignature Language="F#" Value="member this.FileDownload : EventHandler " Usage="member this.FileDownload : System.EventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1105,7 +1186,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="T:System.ComponentModel.CancelEventArgs" />
         <altmember cref="T:System.ComponentModel.CancelEventHandler" />
       </Docs>
@@ -1116,9 +1197,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.WebBrowser.Focused" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Focused As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool Focused { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.Focused : bool" Usage="System.Windows.Forms.WebBrowser.Focused" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1129,7 +1212,7 @@
         <value>
           <see langword="true" /> if the control or any of its child windows has input focus; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <block subset="none" type="overrides">
           <para>When overriding the <see cref="P:System.Windows.Forms.WebBrowser.Focused" /> property in a derived class, use the base class's <see cref="P:System.Windows.Forms.WebBrowser.Focused" /> property to extend the base implementation. Otherwise, you must provide all the implementation.</para>
         </block>
@@ -1141,9 +1224,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.GoBack" />
       <MemberSignature Language="VB.NET" Value="Public Function GoBack () As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool GoBack();" />
+      <MemberSignature Language="F#" Value="member this.GoBack : unit -&gt; bool" Usage="webBrowser.GoBack " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1175,7 +1260,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="P:System.Windows.Forms.WebBrowser.CanGoBack" />
         <altmember cref="E:System.Windows.Forms.WebBrowser.CanGoBackChanged" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoForward" />
@@ -1191,9 +1276,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.GoForward" />
       <MemberSignature Language="VB.NET" Value="Public Function GoForward () As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool GoForward();" />
+      <MemberSignature Language="F#" Value="member this.GoForward : unit -&gt; bool" Usage="webBrowser.GoForward " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1225,7 +1312,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="P:System.Windows.Forms.WebBrowser.CanGoForward" />
         <altmember cref="E:System.Windows.Forms.WebBrowser.CanGoForwardChanged" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoBack" />
@@ -1241,9 +1328,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.GoHome" />
       <MemberSignature Language="VB.NET" Value="Public Sub GoHome ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void GoHome();" />
+      <MemberSignature Language="F#" Value="member this.GoHome : unit -&gt; unit" Usage="webBrowser.GoHome " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1273,12 +1362,14 @@
         </remarks>
         <exception cref="T:System.ObjectDisposedException">This <see cref="T:System.Windows.Forms.WebBrowser" /> instance is no longer valid.</exception>
         <exception cref="T:System.InvalidOperationException">A reference to an implementation of the <see langword="IWebBrowser2" /> interface could not be retrieved from the underlying ActiveX <see langword="WebBrowser" /> control.</exception>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoBack" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoForward" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoSearch" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.Refresh" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.Stop" />
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151478">WebBrowser Control</related>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151479">IWebBrowser2 Interface</related>
       </Docs>
     </Member>
     <Member MemberName="GoSearch">
@@ -1287,9 +1378,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.GoSearch" />
       <MemberSignature Language="VB.NET" Value="Public Sub GoSearch ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void GoSearch();" />
+      <MemberSignature Language="F#" Value="member this.GoSearch : unit -&gt; unit" Usage="webBrowser.GoSearch " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1321,7 +1414,7 @@
         </remarks>
         <exception cref="T:System.ObjectDisposedException">This <see cref="T:System.Windows.Forms.WebBrowser" /> instance is no longer valid.</exception>
         <exception cref="T:System.InvalidOperationException">A reference to an implementation of the <see langword="IWebBrowser2" /> interface could not be retrieved from the underlying ActiveX <see langword="WebBrowser" /> control.</exception>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoBack" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoForward" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoHome" />
@@ -1329,6 +1422,8 @@
         <altmember cref="M:System.Windows.Forms.WebBrowser.Refresh" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.Stop" />
         <altmember cref="P:System.Windows.Forms.WebBrowser.Url" />
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151478">WebBrowser Control</related>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151479">IWebBrowser2 Interface</related>
       </Docs>
     </Member>
     <Member MemberName="IsBusy">
@@ -1337,9 +1432,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.WebBrowser.IsBusy" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsBusy As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsBusy { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsBusy : bool" Usage="System.Windows.Forms.WebBrowser.IsBusy" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1347,7 +1444,7 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1367,9 +1464,11 @@
         </remarks>
         <exception cref="T:System.ObjectDisposedException">This <see cref="T:System.Windows.Forms.WebBrowser" /> instance is no longer valid.</exception>
         <exception cref="T:System.InvalidOperationException">A reference to an implementation of the <see langword="IWebBrowser2" /> interface could not be retrieved from the underlying ActiveX <see langword="WebBrowser" /> control.</exception>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="P:System.Windows.Forms.WebBrowser.ReadyState" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.Stop" />
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151478">WebBrowser Control</related>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151479">IWebBrowser2 Interface</related>
       </Docs>
     </Member>
     <Member MemberName="IsOffline">
@@ -1378,9 +1477,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.WebBrowser.IsOffline" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsOffline As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsOffline { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsOffline : bool" Usage="System.Windows.Forms.WebBrowser.IsOffline" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1388,7 +1489,7 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1408,7 +1509,9 @@
         </remarks>
         <exception cref="T:System.ObjectDisposedException">This <see cref="T:System.Windows.Forms.WebBrowser" /> instance is no longer valid.</exception>
         <exception cref="T:System.InvalidOperationException">A reference to an implementation of the <see langword="IWebBrowser2" /> interface could not be retrieved from the underlying ActiveX <see langword="WebBrowser" /> control.</exception>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151478">WebBrowser Control</related>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151479">IWebBrowser2 Interface</related>
       </Docs>
     </Member>
     <Member MemberName="IsWebBrowserContextMenuEnabled">
@@ -1417,9 +1520,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled" />
       <MemberSignature Language="VB.NET" Value="Public Property IsWebBrowserContextMenuEnabled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsWebBrowserContextMenuEnabled { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsWebBrowserContextMenuEnabled : bool with get, set" Usage="System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1452,7 +1557,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="P:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop" />
         <altmember cref="P:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled" />
       </Docs>
@@ -1472,9 +1577,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.Navigate(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Navigate (urlString As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Navigate(System::String ^ urlString);" />
+      <MemberSignature Language="F#" Value="member this.Navigate : string -&gt; unit" Usage="webBrowser.Navigate urlString" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1500,10 +1607,12 @@
         </remarks>
         <exception cref="T:System.ObjectDisposedException">This <see cref="T:System.Windows.Forms.WebBrowser" /> instance is no longer valid.</exception>
         <exception cref="T:System.InvalidOperationException">A reference to an implementation of the <see langword="IWebBrowser2" /> interface could not be retrieved from the underlying ActiveX <see langword="WebBrowser" /> control.</exception>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoBack" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoForward" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.Refresh" />
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151478">WebBrowser Control</related>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151479">IWebBrowser2 Interface</related>
       </Docs>
     </Member>
     <Member MemberName="Navigate">
@@ -1512,11 +1621,18 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.Navigate(System.Uri)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Navigate (url As Uri)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Navigate(Uri ^ url);" />
+      <MemberSignature Language="F#" Value="member this.Navigate : Uri -&gt; unit" Usage="webBrowser.Navigate url" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -1552,10 +1668,12 @@
         <exception cref="T:System.ObjectDisposedException">This <see cref="T:System.Windows.Forms.WebBrowser" /> instance is no longer valid.</exception>
         <exception cref="T:System.InvalidOperationException">A reference to an implementation of the <see langword="IWebBrowser2" /> interface could not be retrieved from the underlying ActiveX <see langword="WebBrowser" /> control.</exception>
         <exception cref="T:System.ArgumentException">The <paramref name="url" /> parameter value does not represent an absolute URI. For more information, see <see cref="P:System.Uri.IsAbsoluteUri" />.</exception>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoBack" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoForward" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.Refresh" />
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151478">WebBrowser Control</related>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151479">IWebBrowser2 Interface</related>
       </Docs>
     </Member>
     <Member MemberName="Navigate">
@@ -1564,9 +1682,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.Navigate(System.String,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Navigate (urlString As String, newWindow As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Navigate(System::String ^ urlString, bool newWindow);" />
+      <MemberSignature Language="F#" Value="member this.Navigate : string * bool -&gt; unit" Usage="webBrowser.Navigate (urlString, newWindow)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1593,11 +1713,13 @@
         </remarks>
         <exception cref="T:System.ObjectDisposedException">This <see cref="T:System.Windows.Forms.WebBrowser" /> instance is no longer valid.</exception>
         <exception cref="T:System.InvalidOperationException">A reference to an implementation of the <see langword="IWebBrowser2" /> interface could not be retrieved from the underlying ActiveX <see langword="WebBrowser" /> control.</exception>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoBack" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoForward" />
         <altmember cref="E:System.Windows.Forms.WebBrowser.NewWindow" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.Refresh" />
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151478">WebBrowser Control</related>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151479">IWebBrowser2 Interface</related>
       </Docs>
     </Member>
     <Member MemberName="Navigate">
@@ -1606,9 +1728,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.Navigate(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Navigate (urlString As String, targetFrameName As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Navigate(System::String ^ urlString, System::String ^ targetFrameName);" />
+      <MemberSignature Language="F#" Value="member this.Navigate : string * string -&gt; unit" Usage="webBrowser.Navigate (urlString, targetFrameName)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1636,10 +1760,12 @@
         </remarks>
         <exception cref="T:System.ObjectDisposedException">This <see cref="T:System.Windows.Forms.WebBrowser" /> instance is no longer valid.</exception>
         <exception cref="T:System.InvalidOperationException">A reference to an implementation of the <see langword="IWebBrowser2" /> interface could not be retrieved from the underlying ActiveX <see langword="WebBrowser" /> control.</exception>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoBack" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoForward" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.Refresh" />
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151478">WebBrowser Control</related>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151479">IWebBrowser2 Interface</related>
       </Docs>
     </Member>
     <Member MemberName="Navigate">
@@ -1648,9 +1774,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.Navigate(System.Uri,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Navigate (url As Uri, newWindow As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Navigate(Uri ^ url, bool newWindow);" />
+      <MemberSignature Language="F#" Value="member this.Navigate : Uri * bool -&gt; unit" Usage="webBrowser.Navigate (url, newWindow)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1678,11 +1806,13 @@
         <exception cref="T:System.ObjectDisposedException">This <see cref="T:System.Windows.Forms.WebBrowser" /> instance is no longer valid.</exception>
         <exception cref="T:System.InvalidOperationException">A reference to an implementation of the <see langword="IWebBrowser2" /> interface could not be retrieved from the underlying ActiveX <see langword="WebBrowser" /> control.</exception>
         <exception cref="T:System.ArgumentException">The <paramref name="url" /> parameter value does not represent an absolute URI. For more information, see <see cref="P:System.Uri.IsAbsoluteUri" />.</exception>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoBack" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoForward" />
         <altmember cref="E:System.Windows.Forms.WebBrowser.NewWindow" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.Refresh" />
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151478">WebBrowser Control</related>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151479">IWebBrowser2 Interface</related>
       </Docs>
     </Member>
     <Member MemberName="Navigate">
@@ -1691,9 +1821,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.Navigate(System.Uri,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Navigate (url As Uri, targetFrameName As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Navigate(Uri ^ url, System::String ^ targetFrameName);" />
+      <MemberSignature Language="F#" Value="member this.Navigate : Uri * string -&gt; unit" Usage="webBrowser.Navigate (url, targetFrameName)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1722,10 +1854,12 @@
         <exception cref="T:System.ObjectDisposedException">This <see cref="T:System.Windows.Forms.WebBrowser" /> instance is no longer valid.</exception>
         <exception cref="T:System.InvalidOperationException">A reference to an implementation of the <see langword="IWebBrowser2" /> interface could not be retrieved from the underlying ActiveX <see langword="WebBrowser" /> control.</exception>
         <exception cref="T:System.ArgumentException">The <paramref name="url" /> parameter value does not represent an absolute URI. For more information, see <see cref="P:System.Uri.IsAbsoluteUri" />.</exception>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoBack" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoForward" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.Refresh" />
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151478">WebBrowser Control</related>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151479">IWebBrowser2 Interface</related>
       </Docs>
     </Member>
     <Member MemberName="Navigate">
@@ -1734,9 +1868,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.Navigate(System.String,System.String,System.Byte[],System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Navigate (urlString As String, targetFrameName As String, postData As Byte(), additionalHeaders As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Navigate(System::String ^ urlString, System::String ^ targetFrameName, cli::array &lt;System::Byte&gt; ^ postData, System::String ^ additionalHeaders);" />
+      <MemberSignature Language="F#" Value="member this.Navigate : string * string * byte[] * string -&gt; unit" Usage="webBrowser.Navigate (urlString, targetFrameName, postData, additionalHeaders)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1768,10 +1904,12 @@
         </remarks>
         <exception cref="T:System.ObjectDisposedException">This <see cref="T:System.Windows.Forms.WebBrowser" /> instance is no longer valid.</exception>
         <exception cref="T:System.InvalidOperationException">A reference to an implementation of the <see langword="IWebBrowser2" /> interface could not be retrieved from the underlying ActiveX <see langword="WebBrowser" /> control.</exception>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoBack" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoForward" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.Refresh" />
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151478">WebBrowser Control</related>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151479">IWebBrowser2 Interface</related>
       </Docs>
     </Member>
     <Member MemberName="Navigate">
@@ -1780,9 +1918,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.Navigate(System.Uri,System.String,System.Byte[],System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Navigate (url As Uri, targetFrameName As String, postData As Byte(), additionalHeaders As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Navigate(Uri ^ url, System::String ^ targetFrameName, cli::array &lt;System::Byte&gt; ^ postData, System::String ^ additionalHeaders);" />
+      <MemberSignature Language="F#" Value="member this.Navigate : Uri * string * byte[] * string -&gt; unit" Usage="webBrowser.Navigate (url, targetFrameName, postData, additionalHeaders)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1815,10 +1955,12 @@
         <exception cref="T:System.ObjectDisposedException">This <see cref="T:System.Windows.Forms.WebBrowser" /> instance is no longer valid.</exception>
         <exception cref="T:System.InvalidOperationException">A reference to an implementation of the <see langword="IWebBrowser2" /> interface could not be retrieved from the underlying ActiveX <see langword="WebBrowser" /> control.</exception>
         <exception cref="T:System.ArgumentException">The <paramref name="url" /> parameter value does not represent an absolute URI. For more information, see <see cref="P:System.Uri.IsAbsoluteUri" />.</exception>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoBack" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoForward" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.Refresh" />
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151478">WebBrowser Control</related>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151479">IWebBrowser2 Interface</related>
       </Docs>
     </Member>
     <Member MemberName="Navigated">
@@ -1827,9 +1969,11 @@
       <MemberSignature Language="DocId" Value="E:System.Windows.Forms.WebBrowser.Navigated" />
       <MemberSignature Language="VB.NET" Value="Public Event Navigated As WebBrowserNavigatedEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Forms::WebBrowserNavigatedEventHandler ^ Navigated;" />
+      <MemberSignature Language="F#" Value="member this.Navigated : System.Windows.Forms.WebBrowserNavigatedEventHandler " Usage="member this.Navigated : System.Windows.Forms.WebBrowserNavigatedEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1878,7 +2022,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="E:System.Windows.Forms.WebBrowser.DocumentCompleted" />
         <altmember cref="P:System.Windows.Forms.WebBrowser.DocumentStream" />
         <altmember cref="P:System.Windows.Forms.WebBrowser.DocumentText" />
@@ -1899,9 +2043,11 @@
       <MemberSignature Language="DocId" Value="E:System.Windows.Forms.WebBrowser.Navigating" />
       <MemberSignature Language="VB.NET" Value="Public Event Navigating As WebBrowserNavigatingEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Forms::WebBrowserNavigatingEventHandler ^ Navigating;" />
+      <MemberSignature Language="F#" Value="member this.Navigating : System.Windows.Forms.WebBrowserNavigatingEventHandler " Usage="member this.Navigating : System.Windows.Forms.WebBrowserNavigatingEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1951,7 +2097,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="E:System.Windows.Forms.WebBrowser.DocumentCompleted" />
         <altmember cref="P:System.Windows.Forms.WebBrowser.DocumentStream" />
         <altmember cref="P:System.Windows.Forms.WebBrowser.DocumentText" />
@@ -1972,9 +2118,11 @@
       <MemberSignature Language="DocId" Value="E:System.Windows.Forms.WebBrowser.NewWindow" />
       <MemberSignature Language="VB.NET" Value="Public Event NewWindow As CancelEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::ComponentModel::CancelEventHandler ^ NewWindow;" />
+      <MemberSignature Language="F#" Value="member this.NewWindow : System.ComponentModel.CancelEventHandler " Usage="member this.NewWindow : System.ComponentModel.CancelEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2004,7 +2152,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="T:System.ComponentModel.CancelEventArgs" />
         <altmember cref="T:System.ComponentModel.CancelEventHandler" />
         <altmember cref="P:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled" />
@@ -2017,9 +2165,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.WebBrowser.ObjectForScripting" />
       <MemberSignature Language="VB.NET" Value="Public Property ObjectForScripting As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ ObjectForScripting { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ObjectForScripting : obj with get, set" Usage="System.Windows.Forms.WebBrowser.ObjectForScripting" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2027,7 +2177,10 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -2061,7 +2214,7 @@
  -or-  
   
  The specified value when setting this property is an instance of a type that is not COM-visible. For more information, see <see cref="M:System.Runtime.InteropServices.Marshal.IsTypeVisibleFromCom(System.Type)" />.</exception>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="P:System.Windows.Forms.WebBrowser.Document" />
         <altmember cref="M:System.Windows.Forms.HtmlDocument.InvokeScript(System.String,System.Object[])" />
       </Docs>
@@ -2072,9 +2225,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.OnCanGoBackChanged(System.EventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnCanGoBackChanged (e As EventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnCanGoBackChanged(EventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member OnCanGoBackChanged : EventArgs -&gt; unit&#xA;override this.OnCanGoBackChanged : EventArgs -&gt; unit" Usage="webBrowser.OnCanGoBackChanged e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2096,7 +2251,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <block subset="none" type="overrides">
           <para>When overriding <see cref="M:System.Windows.Forms.WebBrowser.OnCanGoBackChanged(System.EventArgs)" /> in a derived class, be sure to call the base class's <see cref="M:System.Windows.Forms.WebBrowser.OnCanGoBackChanged(System.EventArgs)" /> method so that registered delegates receive the event.</para>
         </block>
@@ -2110,9 +2265,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.OnCanGoForwardChanged(System.EventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnCanGoForwardChanged (e As EventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnCanGoForwardChanged(EventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member OnCanGoForwardChanged : EventArgs -&gt; unit&#xA;override this.OnCanGoForwardChanged : EventArgs -&gt; unit" Usage="webBrowser.OnCanGoForwardChanged e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2134,7 +2291,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <block subset="none" type="overrides">
           <para>When overriding <see cref="M:System.Windows.Forms.WebBrowser.OnCanGoForwardChanged(System.EventArgs)" /> in a derived class, be sure to call the base class's <see cref="M:System.Windows.Forms.WebBrowser.OnCanGoForwardChanged(System.EventArgs)" /> method so that registered delegates receive the event.</para>
         </block>
@@ -2148,9 +2305,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.OnDocumentCompleted(System.Windows.Forms.WebBrowserDocumentCompletedEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnDocumentCompleted (e As WebBrowserDocumentCompletedEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnDocumentCompleted(System::Windows::Forms::WebBrowserDocumentCompletedEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member OnDocumentCompleted : System.Windows.Forms.WebBrowserDocumentCompletedEventArgs -&gt; unit&#xA;override this.OnDocumentCompleted : System.Windows.Forms.WebBrowserDocumentCompletedEventArgs -&gt; unit" Usage="webBrowser.OnDocumentCompleted e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2174,12 +2333,14 @@
         </remarks>
         <exception cref="T:System.ObjectDisposedException">This <see cref="T:System.Windows.Forms.WebBrowser" /> instance is no longer valid.</exception>
         <exception cref="T:System.InvalidOperationException">A reference to an implementation of the <see langword="IWebBrowser2" /> interface could not be retrieved from the underlying ActiveX <see langword="WebBrowser" /> control.</exception>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <block subset="none" type="overrides">
           <para>When overriding <see cref="M:System.Windows.Forms.WebBrowser.OnDocumentCompleted(System.Windows.Forms.WebBrowserDocumentCompletedEventArgs)" /> in a derived class, be sure to call the base class's <see cref="M:System.Windows.Forms.WebBrowser.OnDocumentCompleted(System.Windows.Forms.WebBrowserDocumentCompletedEventArgs)" /> method so that registered delegates receive the event.</para>
         </block>
         <altmember cref="E:System.Windows.Forms.WebBrowser.DocumentCompleted" />
         <altmember cref="T:System.Windows.Forms.WebBrowserDocumentCompletedEventArgs" />
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151478">WebBrowser Control</related>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151479">IWebBrowser2 Interface</related>
       </Docs>
     </Member>
     <Member MemberName="OnDocumentTitleChanged">
@@ -2188,9 +2349,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.OnDocumentTitleChanged(System.EventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnDocumentTitleChanged (e As EventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnDocumentTitleChanged(EventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member OnDocumentTitleChanged : EventArgs -&gt; unit&#xA;override this.OnDocumentTitleChanged : EventArgs -&gt; unit" Usage="webBrowser.OnDocumentTitleChanged e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2212,7 +2375,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <block subset="none" type="overrides">
           <para>When overriding <see cref="M:System.Windows.Forms.WebBrowser.OnDocumentTitleChanged(System.EventArgs)" /> in a derived class, be sure to call the base class's <see cref="M:System.Windows.Forms.WebBrowser.OnDocumentTitleChanged(System.EventArgs)" /> method so that registered delegates receive the event.</para>
         </block>
@@ -2226,9 +2389,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.OnEncryptionLevelChanged(System.EventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnEncryptionLevelChanged (e As EventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnEncryptionLevelChanged(EventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member OnEncryptionLevelChanged : EventArgs -&gt; unit&#xA;override this.OnEncryptionLevelChanged : EventArgs -&gt; unit" Usage="webBrowser.OnEncryptionLevelChanged e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2250,7 +2415,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <block subset="none" type="overrides">
           <para>When overriding <see cref="M:System.Windows.Forms.WebBrowser.OnEncryptionLevelChanged(System.EventArgs)" /> in a derived class, be sure to call the base class's <see cref="M:System.Windows.Forms.WebBrowser.OnEncryptionLevelChanged(System.EventArgs)" /> method so that registered delegates receive the event.</para>
         </block>
@@ -2264,9 +2429,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.OnFileDownload(System.EventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnFileDownload (e As EventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnFileDownload(EventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member OnFileDownload : EventArgs -&gt; unit&#xA;override this.OnFileDownload : EventArgs -&gt; unit" Usage="webBrowser.OnFileDownload e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2288,7 +2455,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <block subset="none" type="overrides">
           <para>When overriding <see cref="M:System.Windows.Forms.WebBrowser.OnFileDownload(System.EventArgs)" /> in a derived class, be sure to call the base class's <see cref="M:System.Windows.Forms.WebBrowser.OnFileDownload(System.EventArgs)" /> method so that registered delegates receive the event.</para>
         </block>
@@ -2301,9 +2468,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.OnNavigated(System.Windows.Forms.WebBrowserNavigatedEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnNavigated (e As WebBrowserNavigatedEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnNavigated(System::Windows::Forms::WebBrowserNavigatedEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member OnNavigated : System.Windows.Forms.WebBrowserNavigatedEventArgs -&gt; unit&#xA;override this.OnNavigated : System.Windows.Forms.WebBrowserNavigatedEventArgs -&gt; unit" Usage="webBrowser.OnNavigated e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2325,7 +2494,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <block subset="none" type="overrides">
           <para>When overriding <see cref="M:System.Windows.Forms.WebBrowser.OnNavigated(System.Windows.Forms.WebBrowserNavigatedEventArgs)" /> in a derived class, be sure to call the base class's <see cref="M:System.Windows.Forms.WebBrowser.OnNavigated(System.Windows.Forms.WebBrowserNavigatedEventArgs)" /> method so that registered delegates receive the event.</para>
         </block>
@@ -2339,9 +2508,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.OnNavigating(System.Windows.Forms.WebBrowserNavigatingEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnNavigating (e As WebBrowserNavigatingEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnNavigating(System::Windows::Forms::WebBrowserNavigatingEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member OnNavigating : System.Windows.Forms.WebBrowserNavigatingEventArgs -&gt; unit&#xA;override this.OnNavigating : System.Windows.Forms.WebBrowserNavigatingEventArgs -&gt; unit" Usage="webBrowser.OnNavigating e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2363,7 +2534,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <block subset="none" type="overrides">
           <para>When overriding <see cref="M:System.Windows.Forms.WebBrowser.OnNavigating(System.Windows.Forms.WebBrowserNavigatingEventArgs)" /> in a derived class, be sure to call the base class's <see cref="M:System.Windows.Forms.WebBrowser.OnNavigating(System.Windows.Forms.WebBrowserNavigatingEventArgs)" /> method so that registered delegates receive the event.</para>
         </block>
@@ -2377,9 +2548,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.OnNewWindow(System.ComponentModel.CancelEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnNewWindow (e As CancelEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnNewWindow(System::ComponentModel::CancelEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member OnNewWindow : System.ComponentModel.CancelEventArgs -&gt; unit&#xA;override this.OnNewWindow : System.ComponentModel.CancelEventArgs -&gt; unit" Usage="webBrowser.OnNewWindow e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2401,7 +2574,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <block subset="none" type="overrides">
           <para>When overriding <see cref="M:System.Windows.Forms.WebBrowser.OnNewWindow(System.ComponentModel.CancelEventArgs)" /> in a derived class, be sure to call the base class's <see cref="M:System.Windows.Forms.WebBrowser.OnNewWindow(System.ComponentModel.CancelEventArgs)" /> method so that registered delegates receive the event.</para>
         </block>
@@ -2414,9 +2587,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.OnProgressChanged(System.Windows.Forms.WebBrowserProgressChangedEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnProgressChanged (e As WebBrowserProgressChangedEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnProgressChanged(System::Windows::Forms::WebBrowserProgressChangedEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member OnProgressChanged : System.Windows.Forms.WebBrowserProgressChangedEventArgs -&gt; unit&#xA;override this.OnProgressChanged : System.Windows.Forms.WebBrowserProgressChangedEventArgs -&gt; unit" Usage="webBrowser.OnProgressChanged e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2438,7 +2613,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <block subset="none" type="overrides">
           <para>When overriding <see cref="M:System.Windows.Forms.WebBrowser.OnProgressChanged(System.Windows.Forms.WebBrowserProgressChangedEventArgs)" /> in a derived class, be sure to call the base class's <see cref="M:System.Windows.Forms.WebBrowser.OnProgressChanged(System.Windows.Forms.WebBrowserProgressChangedEventArgs)" /> method so that registered delegates receive the event.</para>
         </block>
@@ -2452,9 +2627,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.OnStatusTextChanged(System.EventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnStatusTextChanged (e As EventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnStatusTextChanged(EventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member OnStatusTextChanged : EventArgs -&gt; unit&#xA;override this.OnStatusTextChanged : EventArgs -&gt; unit" Usage="webBrowser.OnStatusTextChanged e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2476,7 +2653,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <block subset="none" type="overrides">
           <para>When overriding <see cref="M:System.Windows.Forms.WebBrowser.OnStatusTextChanged(System.EventArgs)" /> in a derived class, be sure to call the base class's <see cref="M:System.Windows.Forms.WebBrowser.OnStatusTextChanged(System.EventArgs)" /> method so that registered delegates receive the event.</para>
         </block>
@@ -2490,9 +2667,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.WebBrowser.Padding" />
       <MemberSignature Language="VB.NET" Value="Public Property Padding As Padding" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Forms::Padding Padding { System::Windows::Forms::Padding get(); void set(System::Windows::Forms::Padding value); };" />
+      <MemberSignature Language="F#" Value="member this.Padding : System.Windows.Forms.Padding with get, set" Usage="System.Windows.Forms.WebBrowser.Padding" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2500,7 +2679,7 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
@@ -2515,7 +2694,7 @@
           <see cref="F:System.Windows.Forms.Padding.Empty" />
         </value>
         <remarks>To be added.</remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
       </Docs>
     </Member>
     <Member MemberName="PaddingChanged">
@@ -2524,9 +2703,11 @@
       <MemberSignature Language="DocId" Value="E:System.Windows.Forms.WebBrowser.PaddingChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event PaddingChanged As EventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ PaddingChanged;" />
+      <MemberSignature Language="F#" Value="member this.PaddingChanged : EventHandler " Usage="member this.PaddingChanged : System.EventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2534,7 +2715,7 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
@@ -2553,7 +2734,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="P:System.Windows.Forms.WebBrowser.Padding" />
       </Docs>
     </Member>
@@ -2563,9 +2744,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.Print" />
       <MemberSignature Language="VB.NET" Value="Public Sub Print ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Print();" />
+      <MemberSignature Language="F#" Value="member this.Print : unit -&gt; unit" Usage="webBrowser.Print " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2591,7 +2774,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <permission cref="T:System.Drawing.Printing.PrintingPermission">to access the printer through this method. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Associated enumeration: <see cref="F:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting" />.</permission>
         <altmember cref="M:System.Windows.Forms.WebBrowser.ShowPageSetupDialog" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.ShowPrintDialog" />
@@ -2604,9 +2787,11 @@
       <MemberSignature Language="DocId" Value="E:System.Windows.Forms.WebBrowser.ProgressChanged" />
       <MemberSignature Language="VB.NET" Value="Public Event ProgressChanged As WebBrowserProgressChangedEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Forms::WebBrowserProgressChangedEventHandler ^ ProgressChanged;" />
+      <MemberSignature Language="F#" Value="member this.ProgressChanged : System.Windows.Forms.WebBrowserProgressChangedEventHandler " Usage="member this.ProgressChanged : System.Windows.Forms.WebBrowserProgressChangedEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2634,7 +2819,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="T:System.Windows.Forms.WebBrowserProgressChangedEventArgs" />
         <altmember cref="T:System.Windows.Forms.WebBrowserProgressChangedEventHandler" />
       </Docs>
@@ -2645,9 +2830,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.WebBrowser.ReadyState" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReadyState As WebBrowserReadyState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Forms::WebBrowserReadyState ReadyState { System::Windows::Forms::WebBrowserReadyState get(); };" />
+      <MemberSignature Language="F#" Value="member this.ReadyState : System.Windows.Forms.WebBrowserReadyState" Usage="System.Windows.Forms.WebBrowser.ReadyState" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2655,7 +2842,7 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -2676,9 +2863,11 @@
         </remarks>
         <exception cref="T:System.ObjectDisposedException">This <see cref="T:System.Windows.Forms.WebBrowser" /> instance is no longer valid.</exception>
         <exception cref="T:System.InvalidOperationException">A reference to an implementation of the <see langword="IWebBrowser2" /> interface could not be retrieved from the underlying ActiveX <see langword="WebBrowser" /> control.</exception>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="P:System.Windows.Forms.WebBrowser.IsBusy" />
         <altmember cref="T:System.Windows.Forms.WebBrowserReadyState" />
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151478">WebBrowser Control</related>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151479">IWebBrowser2 Interface</related>
       </Docs>
     </Member>
     <MemberGroup MemberName="Refresh">
@@ -2696,9 +2885,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.Refresh" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub Refresh ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void Refresh();" />
+      <MemberSignature Language="F#" Value="override this.Refresh : unit -&gt; unit" Usage="webBrowser.Refresh " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2729,7 +2920,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoBack" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoForward" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoHome" />
@@ -2743,9 +2934,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.Refresh(System.Windows.Forms.WebBrowserRefreshOption)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Refresh (opt As WebBrowserRefreshOption)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Refresh(System::Windows::Forms::WebBrowserRefreshOption opt);" />
+      <MemberSignature Language="F#" Value="override this.Refresh : System.Windows.Forms.WebBrowserRefreshOption -&gt; unit" Usage="webBrowser.Refresh opt" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2768,7 +2961,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoBack" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoForward" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoHome" />
@@ -2782,9 +2975,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.WebBrowser.ScriptErrorsSuppressed" />
       <MemberSignature Language="VB.NET" Value="Public Property ScriptErrorsSuppressed As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ScriptErrorsSuppressed { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.ScriptErrorsSuppressed : bool with get, set" Usage="System.Windows.Forms.WebBrowser.ScriptErrorsSuppressed" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2819,8 +3014,10 @@
  ]]></format>
         </remarks>
         <exception cref="T:System.ObjectDisposedException">This <see cref="T:System.Windows.Forms.WebBrowser" /> instance is no longer valid.</exception>
-        <exception cref="T:System.InvalidOperationException">A reference to an implementation of the [IWebBrowser2 interface](http://go.microsoft.com/fwlink/?LinkId=151479) could not be retrieved from the underlying ActiveX [WebBrowser control](http://go.microsoft.com/fwlink/?LinkId=151478).</exception>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <exception cref="T:System.InvalidOperationException">A reference to an implementation of the [IWebBrowser2 interface](https://go.microsoft.com/fwlink/?LinkId=151479) could not be retrieved from the underlying ActiveX [WebBrowser control](https://go.microsoft.com/fwlink/?LinkId=151478).</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151478">WebBrowser Control</related>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151479">IWebBrowser2 Interface</related>
       </Docs>
     </Member>
     <Member MemberName="ScrollBarsEnabled">
@@ -2829,9 +3026,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.WebBrowser.ScrollBarsEnabled" />
       <MemberSignature Language="VB.NET" Value="Public Property ScrollBarsEnabled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ScrollBarsEnabled { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.ScrollBarsEnabled : bool with get, set" Usage="System.Windows.Forms.WebBrowser.ScrollBarsEnabled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2854,7 +3053,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
       </Docs>
     </Member>
     <Member MemberName="ShowPageSetupDialog">
@@ -2863,9 +3062,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.ShowPageSetupDialog" />
       <MemberSignature Language="VB.NET" Value="Public Sub ShowPageSetupDialog ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void ShowPageSetupDialog();" />
+      <MemberSignature Language="F#" Value="member this.ShowPageSetupDialog : unit -&gt; unit" Usage="webBrowser.ShowPageSetupDialog " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2891,7 +3092,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <permission cref="T:System.Drawing.Printing.PrintingPermission">to access the printer through this method. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Associated enumeration: <see cref="F:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting" />.</permission>
         <altmember cref="M:System.Windows.Forms.WebBrowser.ShowPrintDialog" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.ShowPrintPreviewDialog" />
@@ -2903,9 +3104,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.ShowPrintDialog" />
       <MemberSignature Language="VB.NET" Value="Public Sub ShowPrintDialog ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void ShowPrintDialog();" />
+      <MemberSignature Language="F#" Value="member this.ShowPrintDialog : unit -&gt; unit" Usage="webBrowser.ShowPrintDialog " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2931,7 +3134,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <permission cref="T:System.Drawing.Printing.PrintingPermission">to access the printer through this method. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Associated enumeration: <see cref="F:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting" />.</permission>
         <altmember cref="M:System.Windows.Forms.WebBrowser.ShowPageSetupDialog" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.ShowPrintPreviewDialog" />
@@ -2943,9 +3146,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.ShowPrintPreviewDialog" />
       <MemberSignature Language="VB.NET" Value="Public Sub ShowPrintPreviewDialog ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void ShowPrintPreviewDialog();" />
+      <MemberSignature Language="F#" Value="member this.ShowPrintPreviewDialog : unit -&gt; unit" Usage="webBrowser.ShowPrintPreviewDialog " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2973,7 +3178,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <permission cref="T:System.Drawing.Printing.PrintingPermission">to access the printer through this method. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Associated enumeration: <see cref="F:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting" />.</permission>
         <altmember cref="M:System.Windows.Forms.WebBrowser.ShowPageSetupDialog" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.ShowPrintDialog" />
@@ -2985,9 +3190,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.ShowPropertiesDialog" />
       <MemberSignature Language="VB.NET" Value="Public Sub ShowPropertiesDialog ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void ShowPropertiesDialog();" />
+      <MemberSignature Language="F#" Value="member this.ShowPropertiesDialog : unit -&gt; unit" Usage="webBrowser.ShowPropertiesDialog " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -3013,7 +3220,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
       </Docs>
     </Member>
     <Member MemberName="ShowSaveAsDialog">
@@ -3022,9 +3229,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.ShowSaveAsDialog" />
       <MemberSignature Language="VB.NET" Value="Public Sub ShowSaveAsDialog ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void ShowSaveAsDialog();" />
+      <MemberSignature Language="F#" Value="member this.ShowSaveAsDialog : unit -&gt; unit" Usage="webBrowser.ShowSaveAsDialog " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -3053,7 +3262,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <permission cref="T:System.Drawing.Printing.PrintingPermission">to access the printer through this method. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Associated enumeration: <see cref="F:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting" />.</permission>
         <altmember cref="P:System.Windows.Forms.WebBrowser.Document" />
       </Docs>
@@ -3064,9 +3273,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.WebBrowser.StatusText" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property StatusText As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ StatusText { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.StatusText : string" Usage="System.Windows.Forms.WebBrowser.StatusText" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -3074,7 +3285,7 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -3104,8 +3315,10 @@
         </remarks>
         <exception cref="T:System.ObjectDisposedException">This <see cref="T:System.Windows.Forms.WebBrowser" /> instance is no longer valid.</exception>
         <exception cref="T:System.InvalidOperationException">A reference to an implementation of the <see langword="IWebBrowser2" /> interface could not be retrieved from the underlying ActiveX <see langword="WebBrowser" /> control.</exception>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="E:System.Windows.Forms.WebBrowser.StatusTextChanged" />
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151478">WebBrowser Control</related>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151479">IWebBrowser2 Interface</related>
       </Docs>
     </Member>
     <Member MemberName="StatusTextChanged">
@@ -3114,9 +3327,11 @@
       <MemberSignature Language="DocId" Value="E:System.Windows.Forms.WebBrowser.StatusTextChanged" />
       <MemberSignature Language="VB.NET" Value="Public Event StatusTextChanged As EventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ StatusTextChanged;" />
+      <MemberSignature Language="F#" Value="member this.StatusTextChanged : EventHandler " Usage="member this.StatusTextChanged : System.EventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -3150,7 +3365,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="T:System.EventArgs" />
         <altmember cref="T:System.EventHandler" />
         <altmember cref="P:System.Windows.Forms.WebBrowser.StatusText" />
@@ -3162,9 +3377,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.Stop" />
       <MemberSignature Language="VB.NET" Value="Public Sub Stop ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Stop();" />
+      <MemberSignature Language="F#" Value="member this.Stop : unit -&gt; unit" Usage="webBrowser.Stop " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -3192,7 +3409,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoBack" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoForward" />
         <altmember cref="M:System.Windows.Forms.WebBrowser.GoHome" />
@@ -3206,9 +3423,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.WebBrowser.Url" />
       <MemberSignature Language="VB.NET" Value="Public Property Url As Uri" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Uri ^ Url { Uri ^ get(); void set(Uri ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Url : Uri with get, set" Usage="System.Windows.Forms.WebBrowser.Url" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -3255,9 +3474,11 @@
         <exception cref="T:System.ObjectDisposedException">This <see cref="T:System.Windows.Forms.WebBrowser" /> instance is no longer valid.</exception>
         <exception cref="T:System.InvalidOperationException">A reference to an implementation of the <see langword="IWebBrowser2" /> interface could not be retrieved from the underlying ActiveX <see langword="WebBrowser" /> control.</exception>
         <exception cref="T:System.ArgumentException">The specified value when setting this property is not an absolute URI. For more information, see <see cref="P:System.Uri.IsAbsoluteUri" />.</exception>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="Overload:System.Windows.Forms.WebBrowser.Navigate" />
         <altmember cref="E:System.Windows.Forms.WebBrowser.DocumentCompleted" />
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151478">WebBrowser Control</related>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkId=151479">IWebBrowser2 Interface</related>
       </Docs>
     </Member>
     <Member MemberName="Version">
@@ -3266,9 +3487,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.WebBrowser.Version" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Version As Version" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Version ^ Version { Version ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Version : Version" Usage="System.Windows.Forms.WebBrowser.Version" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -3276,7 +3499,7 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -3293,7 +3516,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="T:System.Version" />
       </Docs>
     </Member>
@@ -3303,9 +3526,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled" />
       <MemberSignature Language="VB.NET" Value="Public Property WebBrowserShortcutsEnabled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool WebBrowserShortcutsEnabled { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.WebBrowserShortcutsEnabled : bool with get, set" Usage="System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -3338,7 +3563,7 @@
   
  ]]></format>
         </remarks>
-        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">for immediate callers to use this control. Demand value: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3): <see langword="FullTrust" />.</permission>
         <altmember cref="P:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop" />
         <altmember cref="P:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled" />
       </Docs>
@@ -3349,16 +3574,18 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowser.WndProc(System.Windows.Forms.Message@)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub WndProc (ByRef m As Message)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void WndProc(System::Windows::Forms::Message % m);" />
+      <MemberSignature Language="F#" Value="override this.WndProc :  -&gt; unit" Usage="webBrowser.WndProc m" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+        <Parameter Name="m" Type="System.Windows.Forms.Message" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="m">The Windows <see cref="T:System.Windows.Forms.Message" /> to process.</param>

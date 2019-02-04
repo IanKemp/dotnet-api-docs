@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.IRawElementProviderSimple" />
   <TypeSignature Language="VB.NET" Value="Public Interface IRawElementProviderSimple" />
   <TypeSignature Language="C++ CLI" Value="public interface class IRawElementProviderSimple" />
+  <TypeSignature Language="F#" Value="type IRawElementProviderSimple = interface" />
   <AssemblyInfo>
     <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
@@ -17,7 +19,7 @@
       <AttributeName>System.Runtime.InteropServices.Guid("d6dd68d1-86fd-4332-8666-9abedea2d24c")</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.InterfaceType</AttributeName>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -32,6 +34,10 @@
   
  ]]></format>
     </remarks>
+    <related type="Article" href="~/docs/framework/ui-automation/ui-automation-providers-overview.md">UI Automation Providers Overview</related>
+    <related type="Article" href="https://msdn.microsoft.com/library/6acc6d08-bd67-4e2e-915c-9c1d34eb86fe">Server-side UI Automation Provider Implementation</related>
+    <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771658(v=vs.90)">Simple Provider Sample</related>
+    <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771502(v=vs.90)">Fragment Provider Sample</related>
   </Docs>
   <Members>
     <Member MemberName="GetPatternProvider">
@@ -40,9 +46,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetPatternProvider (patternId As Integer) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Object ^ GetPatternProvider(int patternId);" />
+      <MemberSignature Language="F#" Value="abstract member GetPatternProvider : int -&gt; obj" Usage="iRawElementProviderSimple.GetPatternProvider patternId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -66,6 +74,8 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="~/docs/framework/ui-automation/ui-automation-providers-overview.md">UI Automation Providers Overview</related>
+        <related type="Article" href="https://msdn.microsoft.com/library/6acc6d08-bd67-4e2e-915c-9c1d34eb86fe">Server-side UI Automation Provider Implementation</related>
       </Docs>
     </Member>
     <Member MemberName="GetPropertyValue">
@@ -74,9 +84,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetPropertyValue (propertyId As Integer) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Object ^ GetPropertyValue(int propertyId);" />
+      <MemberSignature Language="F#" Value="abstract member GetPropertyValue : int -&gt; obj" Usage="iRawElementProviderSimple.GetPropertyValue propertyId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -105,6 +117,8 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="~/docs/framework/ui-automation/ui-automation-providers-overview.md">UI Automation Providers Overview</related>
+        <related type="Article" href="https://msdn.microsoft.com/library/6acc6d08-bd67-4e2e-915c-9c1d34eb86fe">Server-side UI Automation Provider Implementation</related>
       </Docs>
     </Member>
     <Member MemberName="HostRawElementProvider">
@@ -113,9 +127,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HostRawElementProvider As IRawElementProviderSimple" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Automation::Provider::IRawElementProviderSimple ^ HostRawElementProvider { System::Windows::Automation::Provider::IRawElementProviderSimple ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.HostRawElementProvider : System.Windows.Automation.Provider.IRawElementProviderSimple" Usage="System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -150,6 +166,8 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="~/docs/framework/ui-automation/ui-automation-providers-overview.md">UI Automation Providers Overview</related>
+        <related type="Article" href="https://msdn.microsoft.com/library/6acc6d08-bd67-4e2e-915c-9c1d34eb86fe">Server-side UI Automation Provider Implementation</related>
       </Docs>
     </Member>
     <Member MemberName="ProviderOptions">
@@ -158,9 +176,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IRawElementProviderSimple.ProviderOptions" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProviderOptions As ProviderOptions" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Automation::Provider::ProviderOptions ProviderOptions { System::Windows::Automation::Provider::ProviderOptions get(); };" />
+      <MemberSignature Language="F#" Value="member this.ProviderOptions : System.Windows.Automation.Provider.ProviderOptions" Usage="System.Windows.Automation.Provider.IRawElementProviderSimple.ProviderOptions" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -185,6 +205,8 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="~/docs/framework/ui-automation/ui-automation-providers-overview.md">UI Automation Providers Overview</related>
+        <related type="Article" href="https://msdn.microsoft.com/library/6acc6d08-bd67-4e2e-915c-9c1d34eb86fe">Server-side UI Automation Provider Implementation</related>
       </Docs>
     </Member>
   </Members>

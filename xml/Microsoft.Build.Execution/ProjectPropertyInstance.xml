@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Execution.ProjectPropertyInstance" />
   <TypeSignature Language="VB.NET" Value="Public Class ProjectPropertyInstance&#xA;Implements IEquatable(Of ProjectPropertyInstance)" />
   <TypeSignature Language="C++ CLI" Value="public ref class ProjectPropertyInstance : IEquatable&lt;Microsoft::Build::Execution::ProjectPropertyInstance ^&gt;" />
+  <TypeSignature Language="F#" Value="type ProjectPropertyInstance = class&#xA;    interface IEquatable&lt;ProjectPropertyInstance&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -32,6 +33,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectPropertyInstance.EvaluatedValue" />
       <MemberSignature Language="VB.NET" Value="Public Property EvaluatedValue As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ EvaluatedValue { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.EvaluatedValue : string with get, set" Usage="Microsoft.Build.Execution.ProjectPropertyInstance.EvaluatedValue" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -50,7 +52,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the evaluated value of this property.</summary>
-        <value>Returns the evaluated value of this property.</value>
+        <value>The evaluated value of this property.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -60,6 +62,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectPropertyInstance.IsImmutable" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property IsImmutable As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool IsImmutable { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsImmutable : bool" Usage="Microsoft.Build.Execution.ProjectPropertyInstance.IsImmutable" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -82,6 +85,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectPropertyInstance.Name" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Build.Execution.ProjectPropertyInstance.Name" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Build.Evaluation.IProperty.Name</InterfaceMember>
@@ -92,10 +96,13 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Diagnostics.DebuggerBrowsable</AttributeName>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+          <AttributeName>System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -103,7 +110,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets the name of this property.</summary>
-        <value>Returns the name of this property.</value>
+        <value>The name of this property.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -137,7 +144,8 @@
       <Docs>
         <param name="other">The project property to be compared to.</param>
         <summary>Compares this project property with the given project property for equality.</summary>
-        <returns>Returns true if the project property are equal; false otherwise.</returns>
+        <returns>
+          <see langword="true" /> if the project property are equal; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -147,6 +155,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.ProjectPropertyInstance.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="projectPropertyInstance.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -158,7 +167,7 @@
       <Parameters />
       <Docs>
         <summary>Gets a string representation for this property.</summary>
-        <returns>Returns a string representation for this property.</returns>
+        <returns>A string representation for this property.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

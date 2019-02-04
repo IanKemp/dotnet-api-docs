@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Web.UI.ScriptReferenceBase" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class ScriptReferenceBase" />
   <TypeSignature Language="C++ CLI" Value="public ref class ScriptReferenceBase abstract" />
+  <TypeSignature Language="F#" Value="type ScriptReferenceBase = class" />
   <AssemblyInfo>
     <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -31,6 +33,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
@@ -44,9 +47,11 @@
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance string GetUrl(class System.Web.UI.ScriptManager scriptManager, bool zip) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptReferenceBase.GetUrl(System.Web.UI.ScriptManager,System.Boolean)" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; abstract System::String ^ GetUrl(System::Web::UI::ScriptManager ^ scriptManager, bool zip);" />
+      <MemberSignature Language="F#" Value="abstract member GetUrl : System.Web.UI.ScriptManager * bool -&gt; string" Usage="scriptReferenceBase.GetUrl (scriptManager, zip)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -70,6 +75,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool IsAjaxFrameworkScript(class System.Web.UI.ScriptManager scriptManager) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptReferenceBase.IsAjaxFrameworkScript(System.Web.UI.ScriptManager)" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; virtual bool IsAjaxFrameworkScript(System::Web::UI::ScriptManager ^ scriptManager);" />
+      <MemberSignature Language="F#" Value="abstract member IsAjaxFrameworkScript : System.Web.UI.ScriptManager -&gt; bool&#xA;override this.IsAjaxFrameworkScript : System.Web.UI.ScriptManager -&gt; bool" Usage="scriptReferenceBase.IsAjaxFrameworkScript scriptManager" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
@@ -95,13 +101,15 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptReferenceBase.IsFromSystemWebExtensions" />
       <MemberSignature Language="VB.NET" Value="Protected Friend MustOverride Function IsFromSystemWebExtensions () As Boolean" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; abstract bool IsFromSystemWebExtensions();" />
+      <MemberSignature Language="F#" Value="abstract member IsFromSystemWebExtensions : unit -&gt; bool" Usage="scriptReferenceBase.IsFromSystemWebExtensions " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Obsolete("Use IsAjaxFrameworkScript(ScriptManager)")</AttributeName>
         </Attribute>
       </Attributes>
@@ -122,9 +130,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.ScriptReferenceBase.NotifyScriptLoaded" />
       <MemberSignature Language="VB.NET" Value="Public Property NotifyScriptLoaded As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool NotifyScriptLoaded { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.NotifyScriptLoaded : bool with get, set" Usage="System.Web.UI.ScriptReferenceBase.NotifyScriptLoaded" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -137,24 +147,30 @@
         <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Obsolete("NotifyScriptLoaded is no longer required in script references.")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets a value that indicates whether the <see cref="T:System.Web.Handlers.ScriptResourceHandler" /> object automatically adds code at the end of the ECMAScript (JavaScript) file to call the client <see cref="P:System.Web.UI.ScriptReferenceBase.NotifyScriptLoaded" /> method of the [Sys.Application](http://msdn.microsoft.com/library/cd901c0f-51e2-4c63-9963-158f4a88b008) class.</summary>
+        <summary>Gets or sets a value that indicates whether the <see cref="T:System.Web.Handlers.ScriptResourceHandler" /> object automatically adds code at the end of the ECMAScript (JavaScript) file to call the client <see cref="P:System.Web.UI.ScriptReferenceBase.NotifyScriptLoaded" /> method of the [Sys.Application](https://msdn.microsoft.com/library/cd901c0f-51e2-4c63-9963-158f4a88b008) class.</summary>
         <value>
-          <see langword="true" /> if the [Sys.Application.notifyScriptLoaded](http://msdn.microsoft.com/library/dd95aa94-34bb-45b6-ac06-1cb4031469c6) method is automatically called at the end of a JavaScript file, or <see langword="false" /> if user code calls the [Sys.Application.notifyScriptLoaded](http://msdn.microsoft.com/library/dd95aa94-34bb-45b6-ac06-1cb4031469c6) method that is already in the JavaScript file. The default value is <see langword="true" />.</value>
+          <see langword="true" /> if the [Sys.Application.notifyScriptLoaded](https://msdn.microsoft.com/library/dd95aa94-34bb-45b6-ac06-1cb4031469c6) method is automatically called at the end of a JavaScript file, or <see langword="false" /> if user code calls the [Sys.Application.notifyScriptLoaded](https://msdn.microsoft.com/library/dd95aa94-34bb-45b6-ac06-1cb4031469c6) method that is already in the JavaScript file. The default value is <see langword="true" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Set the <xref:System.Web.UI.ScriptReferenceBase.NotifyScriptLoaded%2A> property to `false` if you reference a script file in an assembly and the script file already contains code to call [Sys.Application.notifyScriptLoaded](http://msdn.microsoft.com/library/dd95aa94-34bb-45b6-ac06-1cb4031469c6). An error is thrown if [Sys.Application.notifyScriptLoaded](http://msdn.microsoft.com/library/dd95aa94-34bb-45b6-ac06-1cb4031469c6) method is called more than one time from a script file.  
+ Set the <xref:System.Web.UI.ScriptReferenceBase.NotifyScriptLoaded%2A> property to `false` if you reference a script file in an assembly and the script file already contains code to call [Sys.Application.notifyScriptLoaded](https://msdn.microsoft.com/library/dd95aa94-34bb-45b6-ac06-1cb4031469c6). An error is thrown if [Sys.Application.notifyScriptLoaded](https://msdn.microsoft.com/library/dd95aa94-34bb-45b6-ac06-1cb4031469c6) method is called more than one time from a script file.  
   
- If you reference a standalone script file that is not embedded in an assembly, you must include code at the end of the script file to call the [Sys.Application.notifyScriptLoaded](http://msdn.microsoft.com/library/dd95aa94-34bb-45b6-ac06-1cb4031469c6) method. The following example shows the code to include at the end of the script file.  
+ If you reference a standalone script file that is not embedded in an assembly, you must include code at the end of the script file to call the [Sys.Application.notifyScriptLoaded](https://msdn.microsoft.com/library/dd95aa94-34bb-45b6-ac06-1cb4031469c6) method. The following example shows the code to include at the end of the script file.  
   
 ```  
 if(typeof(Sys) !== "undefined) Sys.Application.notifyScriptLoaded();  
@@ -170,9 +186,11 @@ if(typeof(Sys) !== "undefined) Sys.Application.notifyScriptLoaded();
       <MemberSignature Language="DocId" Value="P:System.Web.UI.ScriptReferenceBase.Path" />
       <MemberSignature Language="VB.NET" Value="Public Property Path As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Path { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Path : string with get, set" Usage="System.Web.UI.ScriptReferenceBase.Path" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -187,6 +205,9 @@ if(typeof(Sys) !== "undefined) Sys.Application.notifyScriptLoaded();
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.UrlProperty("*.js")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -204,9 +225,11 @@ if(typeof(Sys) !== "undefined) Sys.Application.notifyScriptLoaded();
       <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptReferenceBase.ReplaceExtension(System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Shared Function ReplaceExtension (pathOrName As String) As String" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; static System::String ^ ReplaceExtension(System::String ^ pathOrName);" />
+      <MemberSignature Language="F#" Value="static member ReplaceExtension : string -&gt; string" Usage="System.Web.UI.ScriptReferenceBase.ReplaceExtension pathOrName" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -235,9 +258,11 @@ if(typeof(Sys) !== "undefined) Sys.Application.notifyScriptLoaded();
       <MemberSignature Language="DocId" Value="P:System.Web.UI.ScriptReferenceBase.ResourceUICultures" />
       <MemberSignature Language="VB.NET" Value="Public Property ResourceUICultures As String()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;System::String ^&gt; ^ ResourceUICultures { cli::array &lt;System::String ^&gt; ^ get(); void set(cli::array &lt;System::String ^&gt; ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ResourceUICultures : string[] with get, set" Usage="System.Web.UI.ScriptReferenceBase.ResourceUICultures" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -256,6 +281,12 @@ if(typeof(Sys) !== "undefined) Sys.Application.notifyScriptLoaded();
         <Attribute>
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.StringArrayConverter))</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.String[]</ReturnType>
@@ -272,9 +303,11 @@ if(typeof(Sys) !== "undefined) Sys.Application.notifyScriptLoaded();
       <MemberSignature Language="DocId" Value="P:System.Web.UI.ScriptReferenceBase.ScriptMode" />
       <MemberSignature Language="VB.NET" Value="Public Property ScriptMode As ScriptMode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::ScriptMode ScriptMode { System::Web::UI::ScriptMode get(); void set(System::Web::UI::ScriptMode value); };" />
+      <MemberSignature Language="F#" Value="member this.ScriptMode : System.Web.UI.ScriptMode with get, set" Usage="System.Web.UI.ScriptReferenceBase.ScriptMode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -286,6 +319,9 @@ if(typeof(Sys) !== "undefined) Sys.Application.notifyScriptLoaded();
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

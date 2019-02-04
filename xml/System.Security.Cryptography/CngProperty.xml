@@ -4,14 +4,17 @@
   <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.CngProperty" />
   <TypeSignature Language="VB.NET" Value="Public Structure CngProperty&#xA;Implements IEquatable(Of CngProperty)" />
   <TypeSignature Language="C++ CLI" Value="public value class CngProperty : IEquatable&lt;System::Security::Cryptography::CngProperty&gt;" />
+  <TypeSignature Language="F#" Value="type CngProperty = struct" />
   <AssemblyInfo>
     <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
     <AssemblyVersion>4.2.0.0</AssemblyVersion>
     <AssemblyVersion>4.3.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.1.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System.Core</AssemblyName>
     <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
@@ -46,15 +49,18 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngProperty.#ctor(System.String,System.Byte[],System.Security.Cryptography.CngPropertyOptions)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, value As Byte(), options As CngPropertyOptions)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; CngProperty(System::String ^ name, cli::array &lt;System::Byte&gt; ^ value, System::Security::Cryptography::CngPropertyOptions options);" />
+      <MemberSignature Language="F#" Value="new System.Security.Cryptography.CngProperty : string * byte[] * System.Security.Cryptography.CngPropertyOptions -&gt; System.Security.Cryptography.CngProperty" Usage="new System.Security.Cryptography.CngProperty (name, value, options)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
@@ -106,15 +112,18 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngProperty.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="cngProperty.Equals obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
@@ -148,6 +157,7 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngProperty.Equals(System.Security.Cryptography.CngProperty)" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (other As CngProperty) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Equals(System::Security::Cryptography::CngProperty other);" />
+      <MemberSignature Language="F#" Value="override this.Equals : System.Security.Cryptography.CngProperty -&gt; bool" Usage="cngProperty.Equals other" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
@@ -156,10 +166,12 @@
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
@@ -193,15 +205,18 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngProperty.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="cngProperty.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
@@ -224,15 +239,18 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngProperty.GetValue" />
       <MemberSignature Language="VB.NET" Value="Public Function GetValue () As Byte()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; cli::array &lt;System::Byte&gt; ^ GetValue();" />
+      <MemberSignature Language="F#" Value="member this.GetValue : unit -&gt; byte[]" Usage="cngProperty.GetValue " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
@@ -255,21 +273,29 @@
       <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngProperty.Name" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="System.Security.Cryptography.CngProperty.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -285,15 +311,18 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngProperty.op_Equality(System.Security.Cryptography.CngProperty,System.Security.Cryptography.CngProperty)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As CngProperty, right As CngProperty) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator ==(System::Security::Cryptography::CngProperty left, System::Security::Cryptography::CngProperty right);" />
+      <MemberSignature Language="F#" Value="static member ( = ) : System.Security.Cryptography.CngProperty * System.Security.Cryptography.CngProperty -&gt; bool" Usage="left = right" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
@@ -309,7 +338,7 @@
       </Parameters>
       <Docs>
         <param name="left">An object that specifies a property of a Cryptography Next Generation (CNG) key or provider.</param>
-        <param name="right">A second object, to be compared to the object that is identified by the <c>left</c> parameter.</param>
+        <param name="right">A second object, to be compared to the object that is identified by the <paramref name="left" /> parameter.</param>
         <summary>Determines whether two <see cref="T:System.Security.Cryptography.CngProperty" /> objects specify the same property name, value, and options.</summary>
         <returns>
           <see langword="true" /> if the two objects specify the same property; otherwise, <see langword="false" />.</returns>
@@ -329,15 +358,18 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngProperty.op_Inequality(System.Security.Cryptography.CngProperty,System.Security.Cryptography.CngProperty)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As CngProperty, right As CngProperty) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator !=(System::Security::Cryptography::CngProperty left, System::Security::Cryptography::CngProperty right);" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : System.Security.Cryptography.CngProperty * System.Security.Cryptography.CngProperty -&gt; bool" Usage="System.Security.Cryptography.CngProperty.op_Inequality (left, right)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
@@ -353,7 +385,7 @@
       </Parameters>
       <Docs>
         <param name="left">An object that specifies a property of a Cryptography Next Generation (CNG) key or provider.</param>
-        <param name="right">A second object, to be compared to the object that is identified by the <c>left</c> parameter.</param>
+        <param name="right">A second object, to be compared to the object that is identified by the <paramref name="left" /> parameter.</param>
         <summary>Determines whether two <see cref="T:System.Security.Cryptography.CngProperty" /> objects do not specify the same property name, value, and options.</summary>
         <returns>
           <see langword="true" /> if the two objects do not specify the same property; otherwise, <see langword="false" />.</returns>
@@ -373,21 +405,29 @@
       <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngProperty.Options" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Options As CngPropertyOptions" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Security::Cryptography::CngPropertyOptions Options { System::Security::Cryptography::CngPropertyOptions get(); };" />
+      <MemberSignature Language="F#" Value="member this.Options : System.Security.Cryptography.CngPropertyOptions" Usage="System.Security.Cryptography.CngProperty.Options" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.3.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Security.Cryptography.CngPropertyOptions</ReturnType>
       </ReturnValue>

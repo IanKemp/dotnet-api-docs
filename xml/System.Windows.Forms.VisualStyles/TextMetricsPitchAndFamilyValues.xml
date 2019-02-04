@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.TextMetricsPitchAndFamilyValues" />
   <TypeSignature Language="VB.NET" Value="Public Enum TextMetricsPitchAndFamilyValues" />
   <TypeSignature Language="C++ CLI" Value="public enum class TextMetricsPitchAndFamilyValues" />
+  <TypeSignature Language="F#" Value="type TextMetricsPitchAndFamilyValues = " />
   <AssemblyInfo>
     <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -34,9 +36,11 @@
       <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.TextMetricsPitchAndFamilyValues.Device" />
       <MemberSignature Language="VB.NET" Value="Device" />
       <MemberSignature Language="C++ CLI" Value="Device" />
+      <MemberSignature Language="F#" Value="Device = 8" Usage="System.Windows.Forms.VisualStyles.TextMetricsPitchAndFamilyValues.Device" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -53,9 +57,11 @@
       <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.TextMetricsPitchAndFamilyValues.FixedPitch" />
       <MemberSignature Language="VB.NET" Value="FixedPitch" />
       <MemberSignature Language="C++ CLI" Value="FixedPitch" />
+      <MemberSignature Language="F#" Value="FixedPitch = 1" Usage="System.Windows.Forms.VisualStyles.TextMetricsPitchAndFamilyValues.FixedPitch" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -72,9 +78,11 @@
       <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.TextMetricsPitchAndFamilyValues.TrueType" />
       <MemberSignature Language="VB.NET" Value="TrueType" />
       <MemberSignature Language="C++ CLI" Value="TrueType" />
+      <MemberSignature Language="F#" Value="TrueType = 4" Usage="System.Windows.Forms.VisualStyles.TextMetricsPitchAndFamilyValues.TrueType" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -91,9 +99,11 @@
       <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.TextMetricsPitchAndFamilyValues.Vector" />
       <MemberSignature Language="VB.NET" Value="Vector" />
       <MemberSignature Language="C++ CLI" Value="Vector" />
+      <MemberSignature Language="F#" Value="Vector = 2" Usage="System.Windows.Forms.VisualStyles.TextMetricsPitchAndFamilyValues.Vector" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

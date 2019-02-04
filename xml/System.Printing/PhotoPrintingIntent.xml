@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Printing.PhotoPrintingIntent" />
   <TypeSignature Language="VB.NET" Value="Public Enum PhotoPrintingIntent" />
   <TypeSignature Language="C++ CLI" Value="public enum class PhotoPrintingIntent" />
+  <TypeSignature Language="F#" Value="type PhotoPrintingIntent = " />
   <AssemblyInfo>
     <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -25,9 +27,9 @@
   
  The Unknown value is never used in properties of <xref:System.Printing.PrintCapabilities> objects.  
   
- You should never set a <xref:System.Printing.PrintTicket> property to Unknown. If some other <xref:System.Printing.PrintTicket> producing application has created a PrintTicket document that sets the photo printing intent feature to an unrecognized option (that is, an option that is not defined in the [Print Schema](http://go.microsoft.com/fwlink/?LinkId=186397)), then a <xref:System.Printing.PrintTicket> object in your application that is constructed with that document will have Unknown as the value of the <xref:System.Printing.PrintTicket.PhotoPrintingIntent%2A> property.  
+ You should never set a <xref:System.Printing.PrintTicket> property to Unknown. If some other <xref:System.Printing.PrintTicket> producing application has created a PrintTicket document that sets the photo printing intent feature to an unrecognized option (that is, an option that is not defined in the [Print Schema](https://go.microsoft.com/fwlink/?LinkId=186397)), then a <xref:System.Printing.PrintTicket> object in your application that is constructed with that document will have Unknown as the value of the <xref:System.Printing.PrintTicket.PhotoPrintingIntent%2A> property.  
   
- Although the <xref:System.Printing.PrintTicket> and <xref:System.Printing.PrintCapabilities> classes cannot be inherited, you can extend the [Print Schema](http://go.microsoft.com/fwlink/?LinkId=186397) to recognize print device features that are not accounted for in the <xref:System.Printing.PrintTicket.PhotoPrintingIntent%2A> or <xref:System.Printing.PrintCapabilities> classes. For more information, see [NOTINBUILD: How to: Extend the Print Schema and Create New Print System Classes](http://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885).  
+ Although the <xref:System.Printing.PrintTicket> and <xref:System.Printing.PrintCapabilities> classes cannot be inherited, you can extend the [Print Schema](https://go.microsoft.com/fwlink/?LinkId=186397) to recognize print device features that are not accounted for in the <xref:System.Printing.PrintTicket.PhotoPrintingIntent%2A> or <xref:System.Printing.PrintCapabilities> classes. For more information, see [NOTINBUILD: How to: Extend the Print Schema and Create New Print System Classes](https://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885).  
   
  ]]></format>
     </remarks>
@@ -39,9 +41,11 @@
       <MemberSignature Language="DocId" Value="F:System.Printing.PhotoPrintingIntent.None" />
       <MemberSignature Language="VB.NET" Value="None" />
       <MemberSignature Language="C++ CLI" Value="None" />
+      <MemberSignature Language="F#" Value="None = 1" Usage="System.Printing.PhotoPrintingIntent.None" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -58,9 +62,11 @@
       <MemberSignature Language="DocId" Value="F:System.Printing.PhotoPrintingIntent.PhotoBest" />
       <MemberSignature Language="VB.NET" Value="PhotoBest" />
       <MemberSignature Language="C++ CLI" Value="PhotoBest" />
+      <MemberSignature Language="F#" Value="PhotoBest = 2" Usage="System.Printing.PhotoPrintingIntent.PhotoBest" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -77,9 +83,11 @@
       <MemberSignature Language="DocId" Value="F:System.Printing.PhotoPrintingIntent.PhotoDraft" />
       <MemberSignature Language="VB.NET" Value="PhotoDraft" />
       <MemberSignature Language="C++ CLI" Value="PhotoDraft" />
+      <MemberSignature Language="F#" Value="PhotoDraft = 3" Usage="System.Printing.PhotoPrintingIntent.PhotoDraft" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -96,9 +104,11 @@
       <MemberSignature Language="DocId" Value="F:System.Printing.PhotoPrintingIntent.PhotoStandard" />
       <MemberSignature Language="VB.NET" Value="PhotoStandard" />
       <MemberSignature Language="C++ CLI" Value="PhotoStandard" />
+      <MemberSignature Language="F#" Value="PhotoStandard = 4" Usage="System.Printing.PhotoPrintingIntent.PhotoStandard" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -115,9 +125,11 @@
       <MemberSignature Language="DocId" Value="F:System.Printing.PhotoPrintingIntent.Unknown" />
       <MemberSignature Language="VB.NET" Value="Unknown" />
       <MemberSignature Language="C++ CLI" Value="Unknown" />
+      <MemberSignature Language="F#" Value="Unknown = 0" Usage="System.Printing.PhotoPrintingIntent.Unknown" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -125,7 +137,7 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>The feature (whose options are represented by this enumeration) is set to an option not defined in the [Print Schema](http://go.microsoft.com/fwlink/?LinkId=186397).</summary>
+        <summary>The feature (whose options are represented by this enumeration) is set to an option not defined in the <see href="https://docs.microsoft.com/windows/desktop/printdocs/printschema">Print Schema</see>.</summary>
       </Docs>
     </Member>
   </Members>

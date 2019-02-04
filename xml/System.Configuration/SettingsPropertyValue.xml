@@ -4,13 +4,16 @@
   <TypeSignature Language="DocId" Value="T:System.Configuration.SettingsPropertyValue" />
   <TypeSignature Language="VB.NET" Value="Public Class SettingsPropertyValue" />
   <TypeSignature Language="C++ CLI" Value="public ref class SettingsPropertyValue" />
+  <TypeSignature Language="F#" Value="type SettingsPropertyValue = class" />
   <AssemblyInfo>
     <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -34,14 +37,17 @@
       <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsPropertyValue.#ctor(System.Configuration.SettingsProperty)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (property As SettingsProperty)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SettingsPropertyValue(System::Configuration::SettingsProperty ^ property);" />
+      <MemberSignature Language="F#" Value="new System.Configuration.SettingsPropertyValue : System.Configuration.SettingsProperty -&gt; System.Configuration.SettingsPropertyValue" Usage="new System.Configuration.SettingsPropertyValue property" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="property" Type="System.Configuration.SettingsProperty" />
@@ -54,8 +60,7 @@
   
 ## Remarks  
   
-> [!IMPORTANT]
->  Calling this method with untrusted data is a security risk. Call this method only with trusted data. For more information, see [Data Validation](https://www.owasp.org/index.php/Data_Validation).  
+[!INCLUDE [untrusted-data-method-note](~/includes/untrusted-data-method-note.md)]
   
  The <xref:System.Configuration.SettingsProperty> object describes information about the value stored by the <xref:System.Configuration.SettingsPropertyValue> object.  
   
@@ -69,15 +74,26 @@
       <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsPropertyValue.Deserialized" />
       <MemberSignature Language="VB.NET" Value="Public Property Deserialized As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Deserialized { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Deserialized : bool with get, set" Usage="System.Configuration.SettingsPropertyValue.Deserialized" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -93,6 +109,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/287129c8-035a-4fea-b7b3-4790057ca076">How to: Deserialize an Object</related>
       </Docs>
     </Member>
     <Member MemberName="IsDirty">
@@ -101,15 +118,26 @@
       <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsPropertyValue.IsDirty" />
       <MemberSignature Language="VB.NET" Value="Public Property IsDirty As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsDirty { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsDirty : bool with get, set" Usage="System.Configuration.SettingsPropertyValue.IsDirty" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -137,14 +165,17 @@
       <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsPropertyValue.Name" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="System.Configuration.SettingsPropertyValue.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -161,15 +192,23 @@
       <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsPropertyValue.Property" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Property As SettingsProperty" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Configuration::SettingsProperty ^ Property { System::Configuration::SettingsProperty ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Property : System.Configuration.SettingsProperty" Usage="System.Configuration.SettingsPropertyValue.Property" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Configuration.SettingsProperty</ReturnType>
       </ReturnValue>
@@ -185,14 +224,17 @@
       <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsPropertyValue.PropertyValue" />
       <MemberSignature Language="VB.NET" Value="Public Property PropertyValue As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ PropertyValue { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.PropertyValue : obj with get, set" Usage="System.Configuration.SettingsPropertyValue.PropertyValue" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -205,7 +247,7 @@
   
  If this chain of events occurs in ASP.NET, and if an error occurs during the deserialization process, the error is logged using the health-monitoring feature of ASP.NET. By default, this means that deserialization errors will show up in the Application Event Log when running under ASP.NET. If this process occurs outside of ASP.NET, and if an error occurs during deserialization, the error is suppressed, and the remainder of the logic during deserialization occurs. If there is no serialized value to deserialize when the deserialization is attempted, then <see cref="T:System.Configuration.SettingsPropertyValue" /> object will instead attempt to return a default value if one was configured as defined on the associated <see cref="T:System.Configuration.SettingsProperty" /> instance. In this case, if the <see cref="P:System.Configuration.SettingsProperty.DefaultValue" /> property was set to either <see langword="null" />, or to the string "[null]", then the <see cref="T:System.Configuration.SettingsPropertyValue" /> object will initialize the <see cref="P:System.Configuration.SettingsPropertyValue.PropertyValue" /> property to either <see langword="null" /> for reference types, or to the default value for the associated value type.  On the other hand, if <see cref="P:System.Configuration.SettingsProperty.DefaultValue" /> property holds a valid object reference or string value (other than "[null]"), then the <see cref="P:System.Configuration.SettingsProperty.DefaultValue" /> property is returned instead.  
   
- If there is no serialized value to deserialize when the deserialization is attempted, and no default value was specified, then an empty string will be returned for string types. For all other types, a default instance will be returned by calling <see cref="M:System.Activator.CreateInstance(System.Type)" /> — for reference types this means an attempt will be made to create an object instance using the default constructor.  If this attempt fails, then <see langword="null" /> is returned.</value>
+ If there is no serialized value to deserialize when the deserialization is attempted, and no default value was specified, then an empty string will be returned for string types. For all other types, a default instance will be returned by calling <see cref="M:System.Activator.CreateInstance(System.Type)" /> - for reference types this means an attempt will be made to create an object instance using the default constructor.  If this attempt fails, then <see langword="null" /> is returned.</value>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentException">While attempting to use the default value from the <see cref="P:System.Configuration.SettingsProperty.DefaultValue" /> property, an error occurred.  Either the attempt to convert <see cref="P:System.Configuration.SettingsProperty.DefaultValue" /> property to a valid type failed, or the resulting value was not compatible with the type defined by <see cref="P:System.Configuration.SettingsProperty.PropertyType" />.</exception>
       </Docs>
@@ -216,14 +258,17 @@
       <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsPropertyValue.SerializedValue" />
       <MemberSignature Language="VB.NET" Value="Public Property SerializedValue As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ SerializedValue { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.SerializedValue : obj with get, set" Usage="System.Configuration.SettingsPropertyValue.SerializedValue" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -253,15 +298,23 @@
       <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsPropertyValue.UsingDefaultValue" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UsingDefaultValue As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool UsingDefaultValue { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.UsingDefaultValue : bool" Usage="System.Configuration.SettingsPropertyValue.UsingDefaultValue" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>

@@ -4,20 +4,23 @@
   <TypeSignature Language="DocId" Value="T:System.Configuration.PositiveTimeSpanValidatorAttribute" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class PositiveTimeSpanValidatorAttribute&#xA;Inherits ConfigurationValidatorAttribute" />
   <TypeSignature Language="C++ CLI" Value="public ref class PositiveTimeSpanValidatorAttribute sealed : System::Configuration::ConfigurationValidatorAttribute" />
+  <TypeSignature Language="F#" Value="type PositiveTimeSpanValidatorAttribute = class&#xA;    inherit ConfigurationValidatorAttribute" />
   <AssemblyInfo>
     <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Configuration.ConfigurationValidatorAttribute</BaseTypeName>
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute>
+    <Attribute FrameworkAlternate="netcore-2.0;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinmac-3.0;netcore-2.1;netframework-4.8;dotnet-plat-ext-2.1;netcore-2.2;dotnet-plat-ext-2.2">
       <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
     </Attribute>
   </Attributes>
@@ -48,11 +51,13 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -73,14 +78,17 @@
       <MemberSignature Language="DocId" Value="P:System.Configuration.PositiveTimeSpanValidatorAttribute.ValidatorInstance" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ValidatorInstance As ConfigurationValidatorBase" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Configuration::ConfigurationValidatorBase ^ ValidatorInstance { System::Configuration::ConfigurationValidatorBase ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ValidatorInstance : System.Configuration.ConfigurationValidatorBase" Usage="System.Configuration.PositiveTimeSpanValidatorAttribute.ValidatorInstance" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Configuration.ConfigurationValidatorBase</ReturnType>

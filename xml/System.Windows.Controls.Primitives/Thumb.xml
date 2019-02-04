@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.Thumb" />
   <TypeSignature Language="VB.NET" Value="Public Class Thumb&#xA;Inherits Control" />
   <TypeSignature Language="C++ CLI" Value="public ref class Thumb : System::Windows::Controls::Control" />
+  <TypeSignature Language="F#" Value="type Thumb = class&#xA;    inherit Control" />
   <AssemblyInfo>
     <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -43,16 +45,16 @@
 ## Customizing the Thumb Control  
  To apply the same property settings to multiple <xref:System.Windows.Controls.Primitives.Thumb> controls, use the <xref:System.Windows.FrameworkElement.Style%2A> property. You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance. For more information about creating a <xref:System.Windows.Controls.ControlTemplate>, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  To see the parts and states that are specific to the <xref:System.Windows.Controls.Primitives.Thumb>, see [Thumb Syles and Templates](~/docs/framework/wpf/controls/thumb-syles-and-templates.md).  
   
- Dependency properties for this control might be set by the control’s default style.  If a property is set by a default style, the property might change from its default value when the control appears in the application. The default style is determined by which desktop theme is used when the application is running.  For more information, see [Default WPF Themes](http://go.microsoft.com/fwlink/?LinkID=158252).  
+ Dependency properties for this control might be set by the control's default style.  If a property is set by a default style, the property might change from its default value when the control appears in the application. The default style is determined by which desktop theme is used when the application is running.  For more information, see [Default WPF Themes](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
-> [!NOTE]
->  Setting a visual property will only have an effect if that property is both present in Button control's default template and is set by using a . You can find a list of visual properties in the "Changing the Visual Structure of a Control" section in [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+[!INCLUDE[setting-a-visual-property](~/includes/visual-property-note.md)]  
   
  ]]></format>
     </remarks>
     <altmember cref="T:System.Windows.Controls.Slider" />
     <altmember cref="T:System.Windows.Controls.Primitives.Track" />
     <altmember cref="T:System.Windows.Controls.Primitives.ScrollBar" />
+    <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkID=160042">Thumb Drag Functionality Sample</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -64,8 +66,14 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.Windows.Controls.Primitives.Thumb" /> class.</summary>
@@ -78,9 +86,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Thumb.CancelDrag" />
       <MemberSignature Language="VB.NET" Value="Public Sub CancelDrag ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void CancelDrag();" />
+      <MemberSignature Language="F#" Value="member this.CancelDrag : unit -&gt; unit" Usage="thumb.CancelDrag " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -105,9 +115,11 @@
       <MemberSignature Language="DocId" Value="E:System.Windows.Controls.Primitives.Thumb.DragCompleted" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event DragCompleted As DragCompletedEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Controls::Primitives::DragCompletedEventHandler ^ DragCompleted;" />
+      <MemberSignature Language="F#" Value="member this.DragCompleted : System.Windows.Controls.Primitives.DragCompletedEventHandler " Usage="member this.DragCompleted : System.Windows.Controls.Primitives.DragCompletedEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -142,7 +154,7 @@
    
   
 ## Examples  
- The following example shows how to assign an event handler for the <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted> event to a <xref:System.Windows.Controls.Primitives.Thumb> control, and how to define the event handler. For the complete sample, see [Thumb Drag Functionality Sample](http://go.microsoft.com/fwlink/?LinkID=160042).  
+ The following example shows how to assign an event handler for the <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted> event to a <xref:System.Windows.Controls.Primitives.Thumb> control, and how to define the event handler. For the complete sample, see [Thumb Drag Functionality Sample](https://go.microsoft.com/fwlink/?LinkID=160042).  
   
  [!code-xaml[Thumb#Thumb](~/samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml#thumb)]  
   
@@ -164,9 +176,11 @@
       <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Thumb.DragCompletedEvent" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly DragCompletedEvent As RoutedEvent " />
       <MemberSignature Language="C++ CLI" Value="public: static initonly System::Windows::RoutedEvent ^ DragCompletedEvent;" />
+      <MemberSignature Language="F#" Value=" staticval mutable DragCompletedEvent : System.Windows.RoutedEvent" Usage="System.Windows.Controls.Primitives.Thumb.DragCompletedEvent" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -183,9 +197,11 @@
       <MemberSignature Language="DocId" Value="E:System.Windows.Controls.Primitives.Thumb.DragDelta" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event DragDelta As DragDeltaEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Controls::Primitives::DragDeltaEventHandler ^ DragDelta;" />
+      <MemberSignature Language="F#" Value="member this.DragDelta : System.Windows.Controls.Primitives.DragDeltaEventHandler " Usage="member this.DragDelta : System.Windows.Controls.Primitives.DragDeltaEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -218,7 +234,7 @@
    
   
 ## Examples  
- The following example shows how to assign an event handler for the <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> event to a <xref:System.Windows.Controls.Primitives.Thumb> control, and how to define the event handler. For the complete sample, see [Thumb Drag Functionality Sample](http://go.microsoft.com/fwlink/?LinkID=160042).  
+ The following example shows how to assign an event handler for the <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> event to a <xref:System.Windows.Controls.Primitives.Thumb> control, and how to define the event handler. For the complete sample, see [Thumb Drag Functionality Sample](https://go.microsoft.com/fwlink/?LinkID=160042).  
   
  [!code-xaml[Thumb#Thumb](~/samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml#thumb)]  
   
@@ -239,9 +255,11 @@
       <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Thumb.DragDeltaEvent" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly DragDeltaEvent As RoutedEvent " />
       <MemberSignature Language="C++ CLI" Value="public: static initonly System::Windows::RoutedEvent ^ DragDeltaEvent;" />
+      <MemberSignature Language="F#" Value=" staticval mutable DragDeltaEvent : System.Windows.RoutedEvent" Usage="System.Windows.Controls.Primitives.Thumb.DragDeltaEvent" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -258,9 +276,11 @@
       <MemberSignature Language="DocId" Value="E:System.Windows.Controls.Primitives.Thumb.DragStarted" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event DragStarted As DragStartedEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Windows::Controls::Primitives::DragStartedEventHandler ^ DragStarted;" />
+      <MemberSignature Language="F#" Value="member this.DragStarted : System.Windows.Controls.Primitives.DragStartedEventHandler " Usage="member this.DragStarted : System.Windows.Controls.Primitives.DragStartedEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -291,7 +311,7 @@
    
   
 ## Examples  
- The following example shows how to assign an event handler for the <xref:System.Windows.Controls.Primitives.Thumb.DragStarted> event to a <xref:System.Windows.Controls.Primitives.Thumb> control, and how to define the event handler. For the complete sample, see [Thumb Drag Functionality Sample](http://go.microsoft.com/fwlink/?LinkID=160042).  
+ The following example shows how to assign an event handler for the <xref:System.Windows.Controls.Primitives.Thumb.DragStarted> event to a <xref:System.Windows.Controls.Primitives.Thumb> control, and how to define the event handler. For the complete sample, see [Thumb Drag Functionality Sample](https://go.microsoft.com/fwlink/?LinkID=160042).  
   
  [!code-xaml[Thumb#Thumb](~/samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml#thumb)]  
   
@@ -313,9 +333,11 @@
       <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Thumb.DragStartedEvent" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly DragStartedEvent As RoutedEvent " />
       <MemberSignature Language="C++ CLI" Value="public: static initonly System::Windows::RoutedEvent ^ DragStartedEvent;" />
+      <MemberSignature Language="F#" Value=" staticval mutable DragStartedEvent : System.Windows.RoutedEvent" Usage="System.Windows.Controls.Primitives.Thumb.DragStartedEvent" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -332,9 +354,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.Thumb.IsDragging" />
       <MemberSignature Language="VB.NET" Value="Public Property IsDragging As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:  property bool IsDragging {  public:&#xA;bool get(); protected:&#xA; void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsDragging : bool with get, set" Usage="System.Windows.Controls.Primitives.Thumb.IsDragging" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -382,9 +406,11 @@
       <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.Thumb.IsDraggingProperty" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly IsDraggingProperty As DependencyProperty " />
       <MemberSignature Language="C++ CLI" Value="public: static initonly System::Windows::DependencyProperty ^ IsDraggingProperty;" />
+      <MemberSignature Language="F#" Value=" staticval mutable IsDraggingProperty : System.Windows.DependencyProperty" Usage="System.Windows.Controls.Primitives.Thumb.IsDraggingProperty" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -401,9 +427,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Thumb.OnCreateAutomationPeer" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function OnCreateAutomationPeer () As AutomationPeer" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Windows::Automation::Peers::AutomationPeer ^ OnCreateAutomationPeer();" />
+      <MemberSignature Language="F#" Value="override this.OnCreateAutomationPeer : unit -&gt; System.Windows.Automation.Peers.AutomationPeer" Usage="thumb.OnCreateAutomationPeer " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -422,9 +450,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Thumb.OnDraggingChanged(System.Windows.DependencyPropertyChangedEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnDraggingChanged (e As DependencyPropertyChangedEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnDraggingChanged(System::Windows::DependencyPropertyChangedEventArgs e);" />
+      <MemberSignature Language="F#" Value="abstract member OnDraggingChanged : System.Windows.DependencyPropertyChangedEventArgs -&gt; unit&#xA;override this.OnDraggingChanged : System.Windows.DependencyPropertyChangedEventArgs -&gt; unit" Usage="thumb.OnDraggingChanged e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -445,9 +475,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Thumb.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub OnMouseLeftButtonDown (e As MouseButtonEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void OnMouseLeftButtonDown(System::Windows::Input::MouseButtonEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="override this.OnMouseLeftButtonDown : System.Windows.Input.MouseButtonEventArgs -&gt; unit" Usage="thumb.OnMouseLeftButtonDown e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -475,9 +507,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Thumb.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub OnMouseLeftButtonUp (e As MouseButtonEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void OnMouseLeftButtonUp(System::Windows::Input::MouseButtonEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="override this.OnMouseLeftButtonUp : System.Windows.Input.MouseButtonEventArgs -&gt; unit" Usage="thumb.OnMouseLeftButtonUp e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -505,9 +539,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.Thumb.OnMouseMove(System.Windows.Input.MouseEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub OnMouseMove (e As MouseEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void OnMouseMove(System::Windows::Input::MouseEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="override this.OnMouseMove : System.Windows.Input.MouseEventArgs -&gt; unit" Usage="thumb.OnMouseMove e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

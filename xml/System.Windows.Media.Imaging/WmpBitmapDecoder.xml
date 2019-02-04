@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Media.Imaging.WmpBitmapDecoder" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class WmpBitmapDecoder&#xA;Inherits BitmapDecoder" />
   <TypeSignature Language="C++ CLI" Value="public ref class WmpBitmapDecoder sealed : System::Windows::Media::Imaging::BitmapDecoder" />
+  <TypeSignature Language="F#" Value="type WmpBitmapDecoder = class&#xA;    inherit BitmapDecoder" />
   <AssemblyInfo>
     <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -18,11 +20,12 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- [!INCLUDE[TLA#tla_wdp](~/includes/tlasharptla-wdp-md.md)] is a new codec that provides better image fidelity than JPEG with smaller file sizes and more features. [!INCLUDE[TLA2#tla_wdp](~/includes/tla2sharptla-wdp-md.md)] images achieve lossy and lossless compression by using a single algorithm. [!INCLUDE[TLA2#tla_wdp](~/includes/tla2sharptla-wdp-md.md)] images support existing metadata standards. For additional information about this format, see the [Windows Media Photo Specification](http://www.microsoft.com/whdc/xps/wmphoto.mspx).  
+ [!INCLUDE[TLA#tla_wdp](~/includes/tlasharptla-wdp-md.md)] is a new codec that provides better image fidelity than JPEG with smaller file sizes and more features. [!INCLUDE[TLA2#tla_wdp](~/includes/tla2sharptla-wdp-md.md)] images achieve lossy and lossless compression by using a single algorithm. [!INCLUDE[TLA2#tla_wdp](~/includes/tla2sharptla-wdp-md.md)] images support existing metadata standards. For additional information about this format, see the [Windows Media Photo Specification](https://www.microsoft.com/whdc/xps/wmphoto.mspx).  
   
  ]]></format>
     </remarks>
     <altmember cref="T:System.Windows.Media.Imaging.BitmapDecoder" />
+    <related type="ExternalDocumentation" href="https://www.microsoft.com/whdc/xps/wmphoto.mspx">Windows Media Photo Specification</related>
   </Docs>
   <Members>
     <MemberGroup MemberName=".ctor">
@@ -40,9 +43,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.WmpBitmapDecoder.#ctor(System.IO.Stream,System.Windows.Media.Imaging.BitmapCreateOptions,System.Windows.Media.Imaging.BitmapCacheOption)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (bitmapStream As Stream, createOptions As BitmapCreateOptions, cacheOption As BitmapCacheOption)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; WmpBitmapDecoder(System::IO::Stream ^ bitmapStream, System::Windows::Media::Imaging::BitmapCreateOptions createOptions, System::Windows::Media::Imaging::BitmapCacheOption cacheOption);" />
+      <MemberSignature Language="F#" Value="new System.Windows.Media.Imaging.WmpBitmapDecoder : System.IO.Stream * System.Windows.Media.Imaging.BitmapCreateOptions * System.Windows.Media.Imaging.BitmapCacheOption -&gt; System.Windows.Media.Imaging.WmpBitmapDecoder" Usage="new System.Windows.Media.Imaging.WmpBitmapDecoder (bitmapStream, createOptions, cacheOption)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -87,9 +92,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.WmpBitmapDecoder.#ctor(System.Uri,System.Windows.Media.Imaging.BitmapCreateOptions,System.Windows.Media.Imaging.BitmapCacheOption)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (bitmapUri As Uri, createOptions As BitmapCreateOptions, cacheOption As BitmapCacheOption)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; WmpBitmapDecoder(Uri ^ bitmapUri, System::Windows::Media::Imaging::BitmapCreateOptions createOptions, System::Windows::Media::Imaging::BitmapCacheOption cacheOption);" />
+      <MemberSignature Language="F#" Value="new System.Windows.Media.Imaging.WmpBitmapDecoder : Uri * System.Windows.Media.Imaging.BitmapCreateOptions * System.Windows.Media.Imaging.BitmapCacheOption -&gt; System.Windows.Media.Imaging.WmpBitmapDecoder" Usage="new System.Windows.Media.Imaging.WmpBitmapDecoder (bitmapUri, createOptions, cacheOption)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>

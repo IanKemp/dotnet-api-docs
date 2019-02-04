@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Expressions.OrderByExpression" />
   <TypeSignature Language="VB.NET" Value="Public Class OrderByExpression&#xA;Inherits DataSourceExpression" />
   <TypeSignature Language="C++ CLI" Value="public ref class OrderByExpression : System::Web::UI::WebControls::Expressions::DataSourceExpression" />
+  <TypeSignature Language="F#" Value="type OrderByExpression = class&#xA;    inherit DataSourceExpression" />
   <AssemblyInfo>
     <AssemblyName>System.Web.Extensions</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -37,7 +38,7 @@
 ## Examples  
  The following example shows how to search the Products table of the AdventureWorks database for products that have names that start with the string that is specified in the `SearchTextBox` text box. The <xref:System.Web.UI.WebControls.Expressions.OrderByExpression> object sorts the data by the ListPrice data field in descending order and then by the product ID field in ascending order. The result of the query that is returned from the <xref:System.Web.UI.WebControls.LinqDataSource> control is displayed in a <xref:System.Web.UI.WebControls.GridView> control.  
   
- This code example is part of a larger example that is provided in [Walkthrough: Filtering Data in a Web Page Using Declarative Syntax](http://msdn.microsoft.com/library/b305ae31-1a1b-4d07-a678-51457c17614f).  
+ This code example is part of a larger example that is provided in [Walkthrough: Filtering Data in a Web Page Using Declarative Syntax](https://msdn.microsoft.com/library/b305ae31-1a1b-4d07-a678-51457c17614f).  
   
   
   
@@ -45,6 +46,7 @@
     </remarks>
     <exception cref="T:System.InvalidOperationException">The <see cref="P:System.Web.UI.WebControls.Expressions.OrderByExpression.DataField" /> property is <see langword="null" />.</exception>
     <altmember cref="T:System.Web.UI.WebControls.QueryExtender" />
+    <related type="Article" href="https://msdn.microsoft.com/library/b93e32b9-af41-4539-a009-6cbbe809c702">QueryExtender Web Server Control Overview</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -58,6 +60,11 @@
         <AssemblyName>System.Web.Extensions</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.Web.UI.WebControls.Expressions.OrderByExpression" /> class.</summary>
@@ -70,6 +77,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Expressions.OrderByExpression.DataField" />
       <MemberSignature Language="VB.NET" Value="Public Property DataField As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DataField { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DataField : string with get, set" Usage="System.Web.UI.WebControls.Expressions.OrderByExpression.DataField" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
@@ -90,7 +98,7 @@
    
   
 ## Examples  
- The following example shows how to sort data by the ListPrice field in descending order and then by the product ID field in ascending order. This code example is part of a larger example that is provided in [Walkthrough: Filtering Data in a Web Page Using Declarative Syntax](http://msdn.microsoft.com/library/b305ae31-1a1b-4d07-a678-51457c17614f).  
+ The following example shows how to sort data by the ListPrice field in descending order and then by the product ID field in ascending order. This code example is part of a larger example that is provided in [Walkthrough: Filtering Data in a Web Page Using Declarative Syntax](https://msdn.microsoft.com/library/b305ae31-1a1b-4d07-a678-51457c17614f).  
   
 ```  
 <asp:OrderByExpression DataField="ListPrice"   
@@ -109,6 +117,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Expressions.OrderByExpression.Direction" />
       <MemberSignature Language="VB.NET" Value="Public Property Direction As SortDirection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::SortDirection Direction { System::Web::UI::WebControls::SortDirection get(); void set(System::Web::UI::WebControls::SortDirection value); };" />
+      <MemberSignature Language="F#" Value="member this.Direction : System.Web.UI.WebControls.SortDirection with get, set" Usage="System.Web.UI.WebControls.Expressions.OrderByExpression.Direction" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
@@ -118,7 +127,7 @@
         <ReturnType>System.Web.UI.WebControls.SortDirection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets and sets the sort direction of the <see cref="T:System.Linq.IQueryable" /> data source object.</summary>
+        <summary>Gets or sets the sort direction of the <see cref="T:System.Linq.IQueryable" /> data source object.</summary>
         <value>The sort direction of the data source object.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -129,7 +138,7 @@
    
   
 ## Examples  
- The following example shows how to sort data by the ListPrice field in descending order and then by the ProductID field in ascending order. This code example is part of a larger example provided in [Walkthrough: Filtering Data in a Web Page Using Declarative Syntax](http://msdn.microsoft.com/library/b305ae31-1a1b-4d07-a678-51457c17614f).  
+ The following example shows how to sort data by the ListPrice field in descending order and then by the ProductID field in ascending order. This code example is part of a larger example provided in [Walkthrough: Filtering Data in a Web Page Using Declarative Syntax](https://msdn.microsoft.com/library/b305ae31-1a1b-4d07-a678-51457c17614f).  
   
 ```  
 <asp:OrderByExpression DataField="ListPrice"   
@@ -148,6 +157,7 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.OrderByExpression.GetQueryable(System.Linq.IQueryable)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetQueryable (source As IQueryable) As IQueryable" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::Linq::IQueryable ^ GetQueryable(System::Linq::IQueryable ^ source);" />
+      <MemberSignature Language="F#" Value="override this.GetQueryable : System.Linq.IQueryable -&gt; System.Linq.IQueryable" Usage="orderByExpression.GetQueryable source" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
@@ -172,6 +182,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Expressions.OrderByExpression.ThenByExpressions" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ThenByExpressions As Collection(Of ThenBy)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;System::Web::UI::WebControls::Expressions::ThenBy ^&gt; ^ ThenByExpressions { System::Collections::ObjectModel::Collection&lt;System::Web::UI::WebControls::Expressions::ThenBy ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ThenByExpressions : System.Collections.ObjectModel.Collection&lt;System.Web.UI.WebControls.Expressions.ThenBy&gt;" Usage="System.Web.UI.WebControls.Expressions.OrderByExpression.ThenByExpressions" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
@@ -179,7 +190,7 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerDefaultProperty)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -197,7 +208,7 @@
    
   
 ## Examples  
- The following example shows how to sort data by the ListPrice field in descending order and then by the product ID field in ascending order using the <xref:System.Web.UI.WebControls.Expressions.OrderByExpression.ThenByExpressions%2A>. This code example is part of a larger example that is provided in [Walkthrough: Filtering Data in a Web Page Using Declarative Syntax](http://msdn.microsoft.com/library/b305ae31-1a1b-4d07-a678-51457c17614f).  
+ The following example shows how to sort data by the ListPrice field in descending order and then by the product ID field in ascending order using the <xref:System.Web.UI.WebControls.Expressions.OrderByExpression.ThenByExpressions%2A>. This code example is part of a larger example that is provided in [Walkthrough: Filtering Data in a Web Page Using Declarative Syntax](https://msdn.microsoft.com/library/b305ae31-1a1b-4d07-a678-51457c17614f).  
   
 ```  
 <asp:OrderByExpression DataField="ListPrice"   

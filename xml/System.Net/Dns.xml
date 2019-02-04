@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Net.Dns" />
   <TypeSignature Language="VB.NET" Value="Public Class Dns" />
   <TypeSignature Language="C++ CLI" Value="public ref class Dns abstract sealed" />
+  <TypeSignature Language="F#" Value="type Dns = class" />
   <AssemblyInfo>
     <AssemblyName>System.Net.NameResolution</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -12,6 +13,8 @@
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.0.5.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
@@ -52,9 +55,11 @@
       <MemberSignature Language="DocId" Value="M:System.Net.Dns.BeginGetHostAddresses(System.String,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function BeginGetHostAddresses (hostNameOrAddress As String, requestCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static IAsyncResult ^ BeginGetHostAddresses(System::String ^ hostNameOrAddress, AsyncCallback ^ requestCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="static member BeginGetHostAddresses : string * AsyncCallback * obj -&gt; IAsyncResult" Usage="System.Net.Dns.BeginGetHostAddresses (hostNameOrAddress, requestCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -78,7 +83,7 @@
       <Docs>
         <param name="hostNameOrAddress">The host name or IP address to resolve.</param>
         <param name="requestCallback">An <see cref="T:System.AsyncCallback" /> delegate that references the method to invoke when the operation is complete.</param>
-        <param name="state">A user-defined object that contains information about the operation. This object is passed to the <c>requestCallback</c> delegate when the operation is complete.</param>
+        <param name="state">A user-defined object that contains information about the operation. This object is passed to the <paramref name="requestCallback" /> delegate when the operation is complete.</param>
         <summary>Asynchronously returns the Internet Protocol (IP) addresses for the specified host.</summary>
         <returns>An <see cref="T:System.IAsyncResult" /> instance that references the asynchronous request.</returns>
         <remarks>
@@ -115,9 +120,12 @@
       <MemberSignature Language="DocId" Value="M:System.Net.Dns.BeginGetHostByName(System.String,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function BeginGetHostByName (hostName As String, requestCallback As AsyncCallback, stateObject As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static IAsyncResult ^ BeginGetHostByName(System::String ^ hostName, AsyncCallback ^ requestCallback, System::Object ^ stateObject);" />
+      <MemberSignature Language="F#" Value="static member BeginGetHostByName : string * AsyncCallback * obj -&gt; IAsyncResult" Usage="System.Net.Dns.BeginGetHostByName (hostName, requestCallback, stateObject)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -131,8 +139,11 @@
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
           <AttributeName>System.Obsolete("Use BeginGetHostEntry instead")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-2.0;netframework-4.8;netcore-2.2">
+          <AttributeName>System.Obsolete("BeginGetHostByName is obsoleted for this type, please use BeginGetHostEntry instead. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -146,7 +157,7 @@
       <Docs>
         <param name="hostName">The DNS name of the host.</param>
         <param name="requestCallback">An <see cref="T:System.AsyncCallback" /> delegate that references the method to invoke when the operation is complete.</param>
-        <param name="stateObject">A user-defined object that contains information about the operation. This object is passed to the <c>requestCallback</c> delegate when the operation is complete.</param>
+        <param name="stateObject">A user-defined object that contains information about the operation. This object is passed to the <paramref name="requestCallback" /> delegate when the operation is complete.</param>
         <summary>Begins an asynchronous request for <see cref="T:System.Net.IPHostEntry" /> information about the specified DNS host name.</summary>
         <returns>An <see cref="T:System.IAsyncResult" /> instance that references the asynchronous request.</returns>
         <remarks>
@@ -168,6 +179,7 @@
           <paramref name="hostName" /> is <see langword="null" />.</exception>
         <exception cref="T:System.Net.Sockets.SocketException">An error was encountered executing the DNS query.</exception>
         <permission cref="T:System.Net.DnsPermission">for accessing DNS information. Associated enumeration: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+        <related type="Article" href="https://msdn.microsoft.com/library/c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0">Asynchronous Programming Overview</related>
       </Docs>
     </Member>
     <MemberGroup MemberName="BeginGetHostEntry">
@@ -186,9 +198,11 @@
       <MemberSignature Language="DocId" Value="M:System.Net.Dns.BeginGetHostEntry(System.Net.IPAddress,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function BeginGetHostEntry (address As IPAddress, requestCallback As AsyncCallback, stateObject As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static IAsyncResult ^ BeginGetHostEntry(System::Net::IPAddress ^ address, AsyncCallback ^ requestCallback, System::Object ^ stateObject);" />
+      <MemberSignature Language="F#" Value="static member BeginGetHostEntry : System.Net.IPAddress * AsyncCallback * obj -&gt; IAsyncResult" Usage="System.Net.Dns.BeginGetHostEntry (address, requestCallback, stateObject)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -212,7 +226,7 @@
       <Docs>
         <param name="address">The IP address to resolve.</param>
         <param name="requestCallback">An <see cref="T:System.AsyncCallback" /> delegate that references the method to invoke when the operation is complete.</param>
-        <param name="stateObject">A user-defined object that contains information about the operation. This object is passed to the <c>requestCallback</c> delegate when the operation is complete.</param>
+        <param name="stateObject">A user-defined object that contains information about the operation. This object is passed to the <paramref name="requestCallback" /> delegate when the operation is complete.</param>
         <summary>Asynchronously resolves an IP address to an <see cref="T:System.Net.IPHostEntry" /> instance.</summary>
         <returns>An <see cref="T:System.IAsyncResult" /> instance that references the asynchronous request.</returns>
         <remarks>
@@ -254,9 +268,11 @@
       <MemberSignature Language="DocId" Value="M:System.Net.Dns.BeginGetHostEntry(System.String,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function BeginGetHostEntry (hostNameOrAddress As String, requestCallback As AsyncCallback, stateObject As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static IAsyncResult ^ BeginGetHostEntry(System::String ^ hostNameOrAddress, AsyncCallback ^ requestCallback, System::Object ^ stateObject);" />
+      <MemberSignature Language="F#" Value="static member BeginGetHostEntry : string * AsyncCallback * obj -&gt; IAsyncResult" Usage="System.Net.Dns.BeginGetHostEntry (hostNameOrAddress, requestCallback, stateObject)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -280,7 +296,7 @@
       <Docs>
         <param name="hostNameOrAddress">The host name or IP address to resolve.</param>
         <param name="requestCallback">An <see cref="T:System.AsyncCallback" /> delegate that references the method to invoke when the operation is complete.</param>
-        <param name="stateObject">A user-defined object that contains information about the operation. This object is passed to the <c>requestCallback</c> delegate when the operation is complete.</param>
+        <param name="stateObject">A user-defined object that contains information about the operation. This object is passed to the <paramref name="requestCallback" /> delegate when the operation is complete.</param>
         <summary>Asynchronously resolves a host name or IP address to an <see cref="T:System.Net.IPHostEntry" /> instance.</summary>
         <returns>An <see cref="T:System.IAsyncResult" /> instance that references the asynchronous request.</returns>
         <remarks>
@@ -323,9 +339,12 @@
       <MemberSignature Language="DocId" Value="M:System.Net.Dns.BeginResolve(System.String,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function BeginResolve (hostName As String, requestCallback As AsyncCallback, stateObject As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static IAsyncResult ^ BeginResolve(System::String ^ hostName, AsyncCallback ^ requestCallback, System::Object ^ stateObject);" />
+      <MemberSignature Language="F#" Value="static member BeginResolve : string * AsyncCallback * obj -&gt; IAsyncResult" Usage="System.Net.Dns.BeginResolve (hostName, requestCallback, stateObject)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -339,8 +358,11 @@
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
           <AttributeName>System.Obsolete("Use BeginGetHostEntry instead")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-2.0;netframework-4.8;netcore-2.2">
+          <AttributeName>System.Obsolete("BeginResolve is obsoleted for this type, please use BeginGetHostEntry instead. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -354,7 +376,7 @@
       <Docs>
         <param name="hostName">The DNS name of the host.</param>
         <param name="requestCallback">An <see cref="T:System.AsyncCallback" /> delegate that references the method to invoke when the operation is complete.</param>
-        <param name="stateObject">A user-defined object that contains information about the operation. This object is passed to the <c>requestCallback</c> delegate when the operation is complete.</param>
+        <param name="stateObject">A user-defined object that contains information about the operation. This object is passed to the <paramref name="requestCallback" /> delegate when the operation is complete.</param>
         <summary>Begins an asynchronous request to resolve a DNS host name or IP address to an <see cref="T:System.Net.IPAddress" /> instance.</summary>
         <returns>An <see cref="T:System.IAsyncResult" /> instance that references the asynchronous request.</returns>
         <remarks>
@@ -385,6 +407,7 @@
           <paramref name="hostName" /> is <see langword="null" />.</exception>
         <exception cref="T:System.Net.Sockets.SocketException">The caller does not have permission to access DNS information.</exception>
         <permission cref="T:System.Net.DnsPermission">for accessing DNS information. Associated enumeration: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+        <related type="Article" href="https://msdn.microsoft.com/library/c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0">Asynchronous Programming Overview</related>
       </Docs>
     </Member>
     <Member MemberName="EndGetHostAddresses">
@@ -393,9 +416,11 @@
       <MemberSignature Language="DocId" Value="M:System.Net.Dns.EndGetHostAddresses(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function EndGetHostAddresses (asyncResult As IAsyncResult) As IPAddress()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static cli::array &lt;System::Net::IPAddress ^&gt; ^ EndGetHostAddresses(IAsyncResult ^ asyncResult);" />
+      <MemberSignature Language="F#" Value="static member EndGetHostAddresses : IAsyncResult -&gt; System.Net.IPAddress[]" Usage="System.Net.Dns.EndGetHostAddresses asyncResult" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -439,9 +464,12 @@
       <MemberSignature Language="DocId" Value="M:System.Net.Dns.EndGetHostByName(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function EndGetHostByName (asyncResult As IAsyncResult) As IPHostEntry" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Net::IPHostEntry ^ EndGetHostByName(IAsyncResult ^ asyncResult);" />
+      <MemberSignature Language="F#" Value="static member EndGetHostByName : IAsyncResult -&gt; System.Net.IPHostEntry" Usage="System.Net.Dns.EndGetHostByName asyncResult" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -455,8 +483,11 @@
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
           <AttributeName>System.Obsolete("Use EndGetHostEntry instead")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-2.0;netframework-4.8;netcore-2.2">
+          <AttributeName>System.Obsolete("EndGetHostByName is obsoleted for this type, please use EndGetHostEntry instead. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -486,6 +517,7 @@
         </remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="asyncResult" /> is <see langword="null" />.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0">Asynchronous Programming Overview</related>
       </Docs>
     </Member>
     <Member MemberName="EndGetHostEntry">
@@ -494,9 +526,11 @@
       <MemberSignature Language="DocId" Value="M:System.Net.Dns.EndGetHostEntry(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function EndGetHostEntry (asyncResult As IAsyncResult) As IPHostEntry" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Net::IPHostEntry ^ EndGetHostEntry(IAsyncResult ^ asyncResult);" />
+      <MemberSignature Language="F#" Value="static member EndGetHostEntry : IAsyncResult -&gt; System.Net.IPHostEntry" Usage="System.Net.Dns.EndGetHostEntry asyncResult" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -544,9 +578,12 @@
       <MemberSignature Language="DocId" Value="M:System.Net.Dns.EndResolve(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function EndResolve (asyncResult As IAsyncResult) As IPHostEntry" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Net::IPHostEntry ^ EndResolve(IAsyncResult ^ asyncResult);" />
+      <MemberSignature Language="F#" Value="static member EndResolve : IAsyncResult -&gt; System.Net.IPHostEntry" Usage="System.Net.Dns.EndResolve asyncResult" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -560,8 +597,11 @@
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
           <AttributeName>System.Obsolete("Use EndGetHostEntry instead")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-2.0;netframework-4.8;netcore-2.2">
+          <AttributeName>System.Obsolete("EndResolve is obsoleted for this type, please use EndGetHostEntry instead. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -600,6 +640,7 @@
         </remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="asyncResult" /> is <see langword="null" />.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0">Asynchronous Programming Overview</related>
       </Docs>
     </Member>
     <Member MemberName="GetHostAddresses">
@@ -608,9 +649,11 @@
       <MemberSignature Language="DocId" Value="M:System.Net.Dns.GetHostAddresses(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetHostAddresses (hostNameOrAddress As String) As IPAddress()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static cli::array &lt;System::Net::IPAddress ^&gt; ^ GetHostAddresses(System::String ^ hostNameOrAddress);" />
+      <MemberSignature Language="F#" Value="static member GetHostAddresses : string -&gt; System.Net.IPAddress[]" Usage="System.Net.Dns.GetHostAddresses hostNameOrAddress" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -637,11 +680,11 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The <xref:System.Net.Dns.GetHostAddresses%2A> method queries a DNS server for the IP addresses associated with a host name. If `hostNameOrAddress` is an IP address, this address is returned without querying the DNS server.  
+ The <xref:System.Net.Dns.GetHostAddresses%2A> method queries the DNS subsystem for the IP addresses associated with a host name. If `hostNameOrAddress` is an IP address, this address is returned without querying the DNS server.
   
  If an empty string is passed as the `hostNameOrAddress` argument, then this method returns the IPv4 and IPv6 addresses of the local host.
   
- IPv6 addresses are filtered from the results of the <xref:System.Net.Dns.GetHostAddresses%2A> method if the local computer does not have IPv6 installed. As a result, it is possible to get back an empty <xref:System.Net.IPAddress> instance if only IPv6 results where available for the `hostNameOrAddress`.parameter.  
+ IPv6 addresses are filtered from the results of the <xref:System.Net.Dns.GetHostAddresses%2A> method if the local computer does not have IPv6 installed. As a result, it is possible to get back an empty <xref:System.Net.IPAddress> instance if only IPv6 results were available for the `hostNameOrAddress` parameter.  
   
 > [!NOTE]
 >  This member emits trace information when you enable network tracing in your application. For more information, see [Network Tracing in the .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
@@ -672,6 +715,7 @@
       <MemberSignature Language="DocId" Value="M:System.Net.Dns.GetHostAddressesAsync(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetHostAddressesAsync (hostNameOrAddress As String) As Task(Of IPAddress())" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Threading::Tasks::Task&lt;cli::array &lt;System::Net::IPAddress ^&gt; ^&gt; ^ GetHostAddressesAsync(System::String ^ hostNameOrAddress);" />
+      <MemberSignature Language="F#" Value="static member GetHostAddressesAsync : string -&gt; System.Threading.Tasks.Task&lt;System.Net.IPAddress[]&gt;" Usage="System.Net.Dns.GetHostAddressesAsync hostNameOrAddress" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.NameResolution</AssemblyName>
@@ -697,9 +741,7 @@
       <Docs>
         <param name="hostNameOrAddress">The host name or IP address to resolve.</param>
         <summary>Returns the Internet Protocol (IP) addresses for the specified host as an asynchronous operation.</summary>
-        <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.  
-  
- The task object representing the asynchronous operation. The <see cref="P:System.Threading.Tasks.Task`1.Result" /> property on the task object returns an array of type <see cref="T:System.Net.IPAddress" /> that holds the IP addresses for the host that is specified by the <paramref name="hostNameOrAddress" /> parameter.</returns>
+        <returns>The task object representing the asynchronous operation. The <see cref="P:System.Threading.Tasks.Task`1.Result" /> property on the task object returns an array of type <see cref="T:System.Net.IPAddress" /> that holds the IP addresses for the host that is specified by the <paramref name="hostNameOrAddress" /> parameter.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -734,9 +776,12 @@
       <MemberSignature Language="DocId" Value="M:System.Net.Dns.GetHostByAddress(System.Net.IPAddress)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetHostByAddress (address As IPAddress) As IPHostEntry" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Net::IPHostEntry ^ GetHostByAddress(System::Net::IPAddress ^ address);" />
+      <MemberSignature Language="F#" Value="static member GetHostByAddress : System.Net.IPAddress -&gt; System.Net.IPHostEntry" Usage="System.Net.Dns.GetHostByAddress address" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -750,8 +795,11 @@
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
           <AttributeName>System.Obsolete("Use GetHostEntry instead")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-2.0;netframework-4.8;netcore-2.2">
+          <AttributeName>System.Obsolete("GetHostByAddress is obsoleted for this type, please use GetHostEntry instead. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -763,9 +811,7 @@
       <Docs>
         <param name="address">An <see cref="T:System.Net.IPAddress" />.</param>
         <summary>Creates an <see cref="T:System.Net.IPHostEntry" /> instance from the specified <see cref="T:System.Net.IPAddress" />.</summary>
-        <returns>An <see cref="T:System.Net.IPHostEntry" />.  
-  
- An <see cref="T:System.Net.IPHostEntry" /> instance.</returns>
+        <returns>An <see cref="T:System.Net.IPHostEntry" /> instance.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -797,9 +843,12 @@
       <MemberSignature Language="DocId" Value="M:System.Net.Dns.GetHostByAddress(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetHostByAddress (address As String) As IPHostEntry" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Net::IPHostEntry ^ GetHostByAddress(System::String ^ address);" />
+      <MemberSignature Language="F#" Value="static member GetHostByAddress : string -&gt; System.Net.IPHostEntry" Usage="System.Net.Dns.GetHostByAddress address" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -813,8 +862,11 @@
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
           <AttributeName>System.Obsolete("Use GetHostEntry instead")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-2.0;netframework-4.8;netcore-2.2">
+          <AttributeName>System.Obsolete("GetHostByAddress is obsoleted for this type, please use GetHostEntry instead. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -851,9 +903,12 @@
       <MemberSignature Language="DocId" Value="M:System.Net.Dns.GetHostByName(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetHostByName (hostName As String) As IPHostEntry" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Net::IPHostEntry ^ GetHostByName(System::String ^ hostName);" />
+      <MemberSignature Language="F#" Value="static member GetHostByName : string -&gt; System.Net.IPHostEntry" Usage="System.Net.Dns.GetHostByName hostName" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -867,8 +922,11 @@
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
           <AttributeName>System.Obsolete("Use GetHostEntry instead")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-2.0;netframework-4.8;netcore-2.2">
+          <AttributeName>System.Obsolete("GetHostByName is obsoleted for this type, please use GetHostEntry instead. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -928,9 +986,11 @@
       <MemberSignature Language="DocId" Value="M:System.Net.Dns.GetHostEntry(System.Net.IPAddress)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetHostEntry (address As IPAddress) As IPHostEntry" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Net::IPHostEntry ^ GetHostEntry(System::Net::IPAddress ^ address);" />
+      <MemberSignature Language="F#" Value="static member GetHostEntry : System.Net.IPAddress -&gt; System.Net.IPHostEntry" Usage="System.Net.Dns.GetHostEntry address" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -989,9 +1049,11 @@
       <MemberSignature Language="DocId" Value="M:System.Net.Dns.GetHostEntry(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetHostEntry (hostNameOrAddress As String) As IPHostEntry" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Net::IPHostEntry ^ GetHostEntry(System::String ^ hostNameOrAddress);" />
+      <MemberSignature Language="F#" Value="static member GetHostEntry : string -&gt; System.Net.IPHostEntry" Usage="System.Net.Dns.GetHostEntry hostNameOrAddress" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1081,6 +1143,7 @@
       <MemberSignature Language="DocId" Value="M:System.Net.Dns.GetHostEntryAsync(System.Net.IPAddress)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetHostEntryAsync (address As IPAddress) As Task(Of IPHostEntry)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Threading::Tasks::Task&lt;System::Net::IPHostEntry ^&gt; ^ GetHostEntryAsync(System::Net::IPAddress ^ address);" />
+      <MemberSignature Language="F#" Value="static member GetHostEntryAsync : System.Net.IPAddress -&gt; System.Threading.Tasks.Task&lt;System.Net.IPHostEntry&gt;" Usage="System.Net.Dns.GetHostEntryAsync address" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.NameResolution</AssemblyName>
@@ -1106,9 +1169,7 @@
       <Docs>
         <param name="address">An IP address.</param>
         <summary>Resolves an IP address to an <see cref="T:System.Net.IPHostEntry" /> instance as an asynchronous operation.</summary>
-        <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.  
-  
- The task object representing the asynchronous operation. The <see cref="P:System.Threading.Tasks.Task`1.Result" /> property on the task object returns an <see cref="T:System.Net.IPHostEntry" /> instance that contains address information about the host specified in <paramref name="address" />.</returns>
+        <returns>The task object representing the asynchronous operation. The <see cref="P:System.Threading.Tasks.Task`1.Result" /> property on the task object returns an <see cref="T:System.Net.IPHostEntry" /> instance that contains address information about the host specified in <paramref name="address" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1139,6 +1200,7 @@
       <MemberSignature Language="DocId" Value="M:System.Net.Dns.GetHostEntryAsync(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetHostEntryAsync (hostNameOrAddress As String) As Task(Of IPHostEntry)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Threading::Tasks::Task&lt;System::Net::IPHostEntry ^&gt; ^ GetHostEntryAsync(System::String ^ hostNameOrAddress);" />
+      <MemberSignature Language="F#" Value="static member GetHostEntryAsync : string -&gt; System.Threading.Tasks.Task&lt;System.Net.IPHostEntry&gt;" Usage="System.Net.Dns.GetHostEntryAsync hostNameOrAddress" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.NameResolution</AssemblyName>
@@ -1164,9 +1226,7 @@
       <Docs>
         <param name="hostNameOrAddress">The host name or IP address to resolve.</param>
         <summary>Resolves a host name or IP address to an <see cref="T:System.Net.IPHostEntry" /> instance as an asynchronous operation.</summary>
-        <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.  
-  
- The task object representing the asynchronous operation. The <see cref="P:System.Threading.Tasks.Task`1.Result" /> property on the task object returns an <see cref="T:System.Net.IPHostEntry" /> instance that contains address information about the host specified in <paramref name="hostNameOrAddress" />.</returns>
+        <returns>The task object representing the asynchronous operation. The <see cref="P:System.Threading.Tasks.Task`1.Result" /> property on the task object returns an <see cref="T:System.Net.IPHostEntry" /> instance that contains address information about the host specified in <paramref name="hostNameOrAddress" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1216,6 +1276,7 @@
       <MemberSignature Language="DocId" Value="M:System.Net.Dns.GetHostName" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetHostName () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ GetHostName();" />
+      <MemberSignature Language="F#" Value="static member GetHostName : unit -&gt; string" Usage="System.Net.Dns.GetHostName " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.NameResolution</AssemblyName>
@@ -1225,6 +1286,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1261,9 +1324,12 @@
       <MemberSignature Language="DocId" Value="M:System.Net.Dns.Resolve(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Resolve (hostName As String) As IPHostEntry" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Net::IPHostEntry ^ Resolve(System::String ^ hostName);" />
+      <MemberSignature Language="F#" Value="static member Resolve : string -&gt; System.Net.IPHostEntry" Usage="System.Net.Dns.Resolve hostName" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1277,8 +1343,11 @@
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
           <AttributeName>System.Obsolete("Use GetHostEntry instead")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-2.0;netframework-4.8;netcore-2.2">
+          <AttributeName>System.Obsolete("Resolve is obsoleted for this type, please use GetHostEntry instead. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

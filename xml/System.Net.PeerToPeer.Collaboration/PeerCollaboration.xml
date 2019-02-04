@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.Collaboration.PeerCollaboration" />
   <TypeSignature Language="VB.NET" Value="Public Class PeerCollaboration" />
   <TypeSignature Language="C++ CLI" Value="public ref class PeerCollaboration abstract sealed" />
+  <TypeSignature Language="F#" Value="type PeerCollaboration = class" />
   <AssemblyInfo>
     <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -18,7 +20,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- This class is a static class – it is sealed, abstract and does not have a public constructor. It is used to contain and manage application, object, and presence information for peers that have accepted invitations to a collaboration session. In terms of peers, objects, and applications, the PeerCollaboration class provides three accessors, one for each collection, as an interface or point of connectivity for whatever else is happening on the machine.  This class cannot be inherited; a compile-time error will occur if this sealed class is specified as the base class.  
+ This class is a static class - it is sealed, abstract and does not have a public constructor. It is used to contain and manage application, object, and presence information for peers that have accepted invitations to a collaboration session. In terms of peers, objects, and applications, the PeerCollaboration class provides three accessors, one for each collection, as an interface or point of connectivity for whatever else is happening on the machine.  This class cannot be inherited; a compile-time error will occur if this sealed class is specified as the base class.  
   
  Methods and properties in this class can be used to:  
   
@@ -46,9 +48,11 @@
       <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerCollaboration.ApplicationLaunchInfo" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property ApplicationLaunchInfo As PeerApplicationLaunchInfo" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::Net::PeerToPeer::Collaboration::PeerApplicationLaunchInfo ^ ApplicationLaunchInfo { System::Net::PeerToPeer::Collaboration::PeerApplicationLaunchInfo ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ApplicationLaunchInfo : System.Net.PeerToPeer.Collaboration.PeerApplicationLaunchInfo" Usage="System.Net.PeerToPeer.Collaboration.PeerCollaboration.ApplicationLaunchInfo" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -84,9 +88,11 @@
       <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerCollaboration.ContactManager" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property ContactManager As ContactManager" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::Net::PeerToPeer::Collaboration::ContactManager ^ ContactManager { System::Net::PeerToPeer::Collaboration::ContactManager ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ContactManager : System.Net.PeerToPeer.Collaboration.ContactManager" Usage="System.Net.PeerToPeer.Collaboration.PeerCollaboration.ContactManager" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -111,9 +117,11 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DeleteObject(class System.Net.PeerToPeer.Collaboration.PeerObject peerObject) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerCollaboration.DeleteObject(System.Net.PeerToPeer.Collaboration.PeerObject)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void DeleteObject(System::Net::PeerToPeer::Collaboration::PeerObject ^ peerObject);" />
+      <MemberSignature Language="F#" Value="static member DeleteObject : System.Net.PeerToPeer.Collaboration.PeerObject -&gt; unit" Usage="System.Net.PeerToPeer.Collaboration.PeerCollaboration.DeleteObject peerObject" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -181,9 +189,11 @@
       <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerCollaboration.GetLocalRegisteredApplications" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetLocalRegisteredApplications () As PeerApplicationCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Net::PeerToPeer::Collaboration::PeerApplicationCollection ^ GetLocalRegisteredApplications();" />
+      <MemberSignature Language="F#" Value="static member GetLocalRegisteredApplications : unit -&gt; System.Net.PeerToPeer.Collaboration.PeerApplicationCollection" Usage="System.Net.PeerToPeer.Collaboration.PeerCollaboration.GetLocalRegisteredApplications " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -215,9 +225,11 @@
       <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerCollaboration.GetLocalRegisteredApplications(System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetLocalRegisteredApplications (type As PeerApplicationRegistrationType) As PeerApplicationCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Net::PeerToPeer::Collaboration::PeerApplicationCollection ^ GetLocalRegisteredApplications(System::Net::PeerToPeer::Collaboration::PeerApplicationRegistrationType type);" />
+      <MemberSignature Language="F#" Value="static member GetLocalRegisteredApplications : System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType -&gt; System.Net.PeerToPeer.Collaboration.PeerApplicationCollection" Usage="System.Net.PeerToPeer.Collaboration.PeerCollaboration.GetLocalRegisteredApplications type" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -258,9 +270,11 @@
       <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerCollaboration.GetLocalSetObjects" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetLocalSetObjects () As PeerObjectCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Net::PeerToPeer::Collaboration::PeerObjectCollection ^ GetLocalSetObjects();" />
+      <MemberSignature Language="F#" Value="static member GetLocalSetObjects : unit -&gt; System.Net.PeerToPeer.Collaboration.PeerObjectCollection" Usage="System.Net.PeerToPeer.Collaboration.PeerCollaboration.GetLocalSetObjects " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -296,9 +310,11 @@
       <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerCollaboration.GetPeersNearMe" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetPeersNearMe () As PeerNearMeCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Net::PeerToPeer::Collaboration::PeerNearMeCollection ^ GetPeersNearMe();" />
+      <MemberSignature Language="F#" Value="static member GetPeersNearMe : unit -&gt; System.Net.PeerToPeer.Collaboration.PeerNearMeCollection" Usage="System.Net.PeerToPeer.Collaboration.PeerCollaboration.GetPeersNearMe " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -342,9 +358,11 @@
       <MemberSignature Language="DocId" Value="E:System.Net.PeerToPeer.Collaboration.PeerCollaboration.LocalApplicationChanged" />
       <MemberSignature Language="VB.NET" Value="Public Shared Custom Event LocalApplicationChanged As EventHandler(Of ApplicationChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static event EventHandler&lt;System::Net::PeerToPeer::Collaboration::ApplicationChangedEventArgs ^&gt; ^ LocalApplicationChanged;" />
+      <MemberSignature Language="F#" Value="member this.LocalApplicationChanged : EventHandler&lt;System.Net.PeerToPeer.Collaboration.ApplicationChangedEventArgs&gt; " Usage="member this.LocalApplicationChanged : System.EventHandler&lt;System.Net.PeerToPeer.Collaboration.ApplicationChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -370,9 +388,11 @@
       <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerCollaboration.LocalEndPointName" />
       <MemberSignature Language="VB.NET" Value="Public Shared Property LocalEndPointName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::String ^ LocalEndPointName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.LocalEndPointName : string with get, set" Usage="System.Net.PeerToPeer.Collaboration.PeerCollaboration.LocalEndPointName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -411,9 +431,11 @@
       <MemberSignature Language="DocId" Value="E:System.Net.PeerToPeer.Collaboration.PeerCollaboration.LocalNameChanged" />
       <MemberSignature Language="VB.NET" Value="Public Shared Custom Event LocalNameChanged As EventHandler(Of NameChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static event EventHandler&lt;System::Net::PeerToPeer::Collaboration::NameChangedEventArgs ^&gt; ^ LocalNameChanged;" />
+      <MemberSignature Language="F#" Value="member this.LocalNameChanged : EventHandler&lt;System.Net.PeerToPeer.Collaboration.NameChangedEventArgs&gt; " Usage="member this.LocalNameChanged : System.EventHandler&lt;System.Net.PeerToPeer.Collaboration.NameChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -440,9 +462,11 @@
       <MemberSignature Language="DocId" Value="E:System.Net.PeerToPeer.Collaboration.PeerCollaboration.LocalObjectChanged" />
       <MemberSignature Language="VB.NET" Value="Public Shared Custom Event LocalObjectChanged As EventHandler(Of ObjectChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static event EventHandler&lt;System::Net::PeerToPeer::Collaboration::ObjectChangedEventArgs ^&gt; ^ LocalObjectChanged;" />
+      <MemberSignature Language="F#" Value="member this.LocalObjectChanged : EventHandler&lt;System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs&gt; " Usage="member this.LocalObjectChanged : System.EventHandler&lt;System.Net.PeerToPeer.Collaboration.ObjectChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -469,9 +493,11 @@
       <MemberSignature Language="DocId" Value="E:System.Net.PeerToPeer.Collaboration.PeerCollaboration.LocalPresenceChanged" />
       <MemberSignature Language="VB.NET" Value="Public Shared Custom Event LocalPresenceChanged As EventHandler(Of PresenceChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static event EventHandler&lt;System::Net::PeerToPeer::Collaboration::PresenceChangedEventArgs ^&gt; ^ LocalPresenceChanged;" />
+      <MemberSignature Language="F#" Value="member this.LocalPresenceChanged : EventHandler&lt;System.Net.PeerToPeer.Collaboration.PresenceChangedEventArgs&gt; " Usage="member this.LocalPresenceChanged : System.EventHandler&lt;System.Net.PeerToPeer.Collaboration.PresenceChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -498,9 +524,11 @@
       <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerCollaboration.LocalPresenceInfo" />
       <MemberSignature Language="VB.NET" Value="Public Shared Property LocalPresenceInfo As PeerPresenceInfo" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::Net::PeerToPeer::Collaboration::PeerPresenceInfo ^ LocalPresenceInfo { System::Net::PeerToPeer::Collaboration::PeerPresenceInfo ^ get(); void set(System::Net::PeerToPeer::Collaboration::PeerPresenceInfo ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.LocalPresenceInfo : System.Net.PeerToPeer.Collaboration.PeerPresenceInfo with get, set" Usage="System.Net.PeerToPeer.Collaboration.PeerCollaboration.LocalPresenceInfo" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -541,9 +569,11 @@
       <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerCollaboration.RegisterApplication(System.Net.PeerToPeer.Collaboration.PeerApplication,System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub RegisterApplication (application As PeerApplication, type As PeerApplicationRegistrationType)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void RegisterApplication(System::Net::PeerToPeer::Collaboration::PeerApplication ^ application, System::Net::PeerToPeer::Collaboration::PeerApplicationRegistrationType type);" />
+      <MemberSignature Language="F#" Value="static member RegisterApplication : System.Net.PeerToPeer.Collaboration.PeerApplication * System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType -&gt; unit" Usage="System.Net.PeerToPeer.Collaboration.PeerCollaboration.RegisterApplication (application, type)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -592,9 +622,11 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetObject(class System.Net.PeerToPeer.Collaboration.PeerObject peerObject) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerCollaboration.SetObject(System.Net.PeerToPeer.Collaboration.PeerObject)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void SetObject(System::Net::PeerToPeer::Collaboration::PeerObject ^ peerObject);" />
+      <MemberSignature Language="F#" Value="static member SetObject : System.Net.PeerToPeer.Collaboration.PeerObject -&gt; unit" Usage="System.Net.PeerToPeer.Collaboration.PeerCollaboration.SetObject peerObject" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -638,9 +670,11 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SignIn(valuetype System.Net.PeerToPeer.Collaboration.PeerScope peerScope) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerCollaboration.SignIn(System.Net.PeerToPeer.Collaboration.PeerScope)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void SignIn(System::Net::PeerToPeer::Collaboration::PeerScope peerScope);" />
+      <MemberSignature Language="F#" Value="static member SignIn : System.Net.PeerToPeer.Collaboration.PeerScope -&gt; unit" Usage="System.Net.PeerToPeer.Collaboration.PeerCollaboration.SignIn peerScope" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -691,9 +725,11 @@
       <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerCollaboration.SignInScope" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property SignInScope As PeerScope" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::Net::PeerToPeer::Collaboration::PeerScope SignInScope { System::Net::PeerToPeer::Collaboration::PeerScope get(); };" />
+      <MemberSignature Language="F#" Value="member this.SignInScope : System.Net.PeerToPeer.Collaboration.PeerScope" Usage="System.Net.PeerToPeer.Collaboration.PeerCollaboration.SignInScope" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -729,9 +765,11 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SignOut(valuetype System.Net.PeerToPeer.Collaboration.PeerScope peerScope) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerCollaboration.SignOut(System.Net.PeerToPeer.Collaboration.PeerScope)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void SignOut(System::Net::PeerToPeer::Collaboration::PeerScope peerScope);" />
+      <MemberSignature Language="F#" Value="static member SignOut : System.Net.PeerToPeer.Collaboration.PeerScope -&gt; unit" Usage="System.Net.PeerToPeer.Collaboration.PeerCollaboration.SignOut peerScope" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -773,9 +811,11 @@
       <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.PeerCollaboration.SynchronizingObject" />
       <MemberSignature Language="VB.NET" Value="Public Shared Property SynchronizingObject As ISynchronizeInvoke" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::ComponentModel::ISynchronizeInvoke ^ SynchronizingObject { System::ComponentModel::ISynchronizeInvoke ^ get(); void set(System::ComponentModel::ISynchronizeInvoke ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.SynchronizingObject : System.ComponentModel.ISynchronizeInvoke with get, set" Usage="System.Net.PeerToPeer.Collaboration.PeerCollaboration.SynchronizingObject" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -787,6 +827,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.Description("SynchronizingObject")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -809,9 +852,11 @@
       <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.PeerCollaboration.UnregisterApplication(System.Net.PeerToPeer.Collaboration.PeerApplication,System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub UnregisterApplication (application As PeerApplication, type As PeerApplicationRegistrationType)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void UnregisterApplication(System::Net::PeerToPeer::Collaboration::PeerApplication ^ application, System::Net::PeerToPeer::Collaboration::PeerApplicationRegistrationType type);" />
+      <MemberSignature Language="F#" Value="static member UnregisterApplication : System.Net.PeerToPeer.Collaboration.PeerApplication * System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType -&gt; unit" Usage="System.Net.PeerToPeer.Collaboration.PeerCollaboration.UnregisterApplication (application, type)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>

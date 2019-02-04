@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.IDataObject" />
   <TypeSignature Language="VB.NET" Value="Public Interface IDataObject" />
   <TypeSignature Language="C++ CLI" Value="public interface class IDataObject" />
+  <TypeSignature Language="F#" Value="type IDataObject = interface" />
   <AssemblyInfo>
     <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
@@ -23,6 +25,7 @@
   
  ]]></format>
     </remarks>
+    <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkID=160014">Load a Dropped File Sample</related>
   </Docs>
   <Members>
     <MemberGroup MemberName="GetData">
@@ -40,9 +43,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.IDataObject.GetData(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetData (format As String) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Object ^ GetData(System::String ^ format);" />
+      <MemberSignature Language="F#" Value="abstract member GetData : string -&gt; obj" Usage="iDataObject.GetData format" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -68,6 +73,7 @@
   
  ]]></format>
         </remarks>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkID=160014">Load a Dropped File Sample</related>
       </Docs>
     </Member>
     <Member MemberName="GetData">
@@ -76,9 +82,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.IDataObject.GetData(System.Type)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetData (format As Type) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Object ^ GetData(Type ^ format);" />
+      <MemberSignature Language="F#" Value="abstract member GetData : Type -&gt; obj" Usage="iDataObject.GetData format" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -104,6 +112,7 @@
   
  ]]></format>
         </remarks>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkID=160014">Load a Dropped File Sample</related>
       </Docs>
     </Member>
     <Member MemberName="GetData">
@@ -112,9 +121,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.IDataObject.GetData(System.String,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetData (format As String, autoConvert As Boolean) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Object ^ GetData(System::String ^ format, bool autoConvert);" />
+      <MemberSignature Language="F#" Value="abstract member GetData : string * bool -&gt; obj" Usage="iDataObject.GetData (format, autoConvert)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -145,6 +156,7 @@
   
  ]]></format>
         </remarks>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkID=160014">Load a Dropped File Sample</related>
       </Docs>
     </Member>
     <MemberGroup MemberName="GetDataPresent">
@@ -172,9 +184,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.IDataObject.GetDataPresent(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetDataPresent (format As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool GetDataPresent(System::String ^ format);" />
+      <MemberSignature Language="F#" Value="abstract member GetDataPresent : string -&gt; bool" Usage="iDataObject.GetDataPresent format" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -205,6 +219,7 @@
   
  ]]></format>
         </remarks>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkID=160014">Load a Dropped File Sample</related>
       </Docs>
     </Member>
     <Member MemberName="GetDataPresent">
@@ -213,9 +228,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.IDataObject.GetDataPresent(System.Type)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetDataPresent (format As Type) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool GetDataPresent(Type ^ format);" />
+      <MemberSignature Language="F#" Value="abstract member GetDataPresent : Type -&gt; bool" Usage="iDataObject.GetDataPresent format" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -246,6 +263,7 @@
   
  ]]></format>
         </remarks>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkID=160014">Load a Dropped File Sample</related>
       </Docs>
     </Member>
     <Member MemberName="GetDataPresent">
@@ -254,9 +272,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.IDataObject.GetDataPresent(System.String,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetDataPresent (format As String, autoConvert As Boolean) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool GetDataPresent(System::String ^ format, bool autoConvert);" />
+      <MemberSignature Language="F#" Value="abstract member GetDataPresent : string * bool -&gt; bool" Usage="iDataObject.GetDataPresent (format, autoConvert)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -288,20 +308,21 @@
   
  Call <xref:System.Windows.IDataObject.GetFormats%2A> to obtain a list of all the formats that are available in this data object.  
   
- This method returns **true** when:  
+ This method returns `true` when:  
   
--   The *autoConvert* parameter is **true** and the data is in the specified format, or it can be converted to the specified format.  
+-   The *autoConvert* parameter is `true` and the data is in the specified format, or it can be converted to the specified format.  
   
--   The *autoConvert* parameter is **false** and the data is in the specified format.  
+-   The *autoConvert* parameter is `false` and the data is in the specified format.  
   
- This method returns **false** when:  
+ This method returns `false` when:  
   
--   The *autoConvert* parameter is **true** and the data is not available in the specified format and cannot be converted to the specified format.  
+-   The *autoConvert* parameter is `true` and the data is not available in the specified format and cannot be converted to the specified format.  
   
--   The *autoConvert* parameter is **false**, and the data is not available in the specified format.  
+-   The *autoConvert* parameter is `false`, and the data is not available in the specified format.  
   
  ]]></format>
         </remarks>
+        <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkID=160014">Load a Dropped File Sample</related>
       </Docs>
     </Member>
     <MemberGroup MemberName="GetFormats">
@@ -319,9 +340,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.IDataObject.GetFormats" />
       <MemberSignature Language="VB.NET" Value="Public Function GetFormats () As String()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; cli::array &lt;System::String ^&gt; ^ GetFormats();" />
+      <MemberSignature Language="F#" Value="abstract member GetFormats : unit -&gt; string[]" Usage="iDataObject.GetFormats " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -352,9 +375,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.IDataObject.GetFormats(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetFormats (autoConvert As Boolean) As String()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; cli::array &lt;System::String ^&gt; ^ GetFormats(bool autoConvert);" />
+      <MemberSignature Language="F#" Value="abstract member GetFormats : bool -&gt; string[]" Usage="iDataObject.GetFormats autoConvert" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -398,9 +423,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.IDataObject.SetData(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SetData (data As Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetData(System::Object ^ data);" />
+      <MemberSignature Language="F#" Value="abstract member SetData : obj -&gt; unit" Usage="iDataObject.SetData data" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -433,9 +460,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.IDataObject.SetData(System.String,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SetData (format As String, data As Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetData(System::String ^ format, System::Object ^ data);" />
+      <MemberSignature Language="F#" Value="abstract member SetData : string * obj -&gt; unit" Usage="iDataObject.SetData (format, data)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -470,9 +499,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.IDataObject.SetData(System.Type,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SetData (format As Type, data As Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetData(Type ^ format, System::Object ^ data);" />
+      <MemberSignature Language="F#" Value="abstract member SetData : Type * obj -&gt; unit" Usage="iDataObject.SetData (format, data)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -507,9 +538,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.IDataObject.SetData(System.String,System.Object,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SetData (format As String, data As Object, autoConvert As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetData(System::String ^ format, System::Object ^ data, bool autoConvert);" />
+      <MemberSignature Language="F#" Value="abstract member SetData : string * obj * bool -&gt; unit" Usage="iDataObject.SetData (format, data, autoConvert)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>

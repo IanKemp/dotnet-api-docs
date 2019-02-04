@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.StateInitializationActivity" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class StateInitializationActivity&#xA;Inherits SequenceActivity" />
   <TypeSignature Language="C++ CLI" Value="public ref class StateInitializationActivity sealed : System::Workflow::Activities::SequenceActivity" />
+  <TypeSignature Language="F#" Value="type StateInitializationActivity = class&#xA;    inherit SequenceActivity" />
   <AssemblyInfo>
     <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -22,7 +24,7 @@
     <Attribute>
       <AttributeName>System.Drawing.ToolboxBitmap(typeof(System.Workflow.Activities.StateInitializationActivity), "Resources.StateInitializationActivity.png")</AttributeName>
     </Attribute>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
       <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
     </Attribute>
     <Attribute>
@@ -56,6 +58,7 @@
   
  ]]></format>
     </remarks>
+    <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734483(v=vs.90)">Using the StateInitialization Activity</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -67,6 +70,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
@@ -76,13 +80,14 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- The following example shows how to create a new instance of a <xref:System.Workflow.Activities.StateInitializationActivity> object. This example is from the State Initialization SDK sample. For more information, see [State Initialization Sample](http://msdn.microsoft.com/library/9053202f-2567-4428-a4a2-85423963646b).  
+ The following example shows how to create a new instance of a <xref:System.Workflow.Activities.StateInitializationActivity> object. This example is from the State Initialization SDK sample. For more information, see [State Initialization Sample](https://msdn.microsoft.com/library/9053202f-2567-4428-a4a2-85423963646b).  
   
  [!code-csharp[wf_samples#197](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets19.cs#197)]
  [!code-vb[wf_samples#197](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets19.vb#197)]  
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734483(v=vs.90)">Using the StateInitialization Activity</related>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -91,9 +96,11 @@
       <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.StateInitializationActivity.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (name As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; StateInitializationActivity(System::String ^ name);" />
+      <MemberSignature Language="F#" Value="new System.Workflow.Activities.StateInitializationActivity : string -&gt; System.Workflow.Activities.StateInitializationActivity" Usage="new System.Workflow.Activities.StateInitializationActivity name" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>

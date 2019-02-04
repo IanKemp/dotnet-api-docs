@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Hosting.IVbcHostObject4" />
   <TypeSignature Language="VB.NET" Value="Public Interface IVbcHostObject4&#xA;Implements ITaskHost, IVbcHostObject3" />
   <TypeSignature Language="C++ CLI" Value="public interface class IVbcHostObject4 : Microsoft::Build::Framework::ITaskHost, Microsoft::Build::Tasks::Hosting::IVbcHostObject3" />
+  <TypeSignature Language="F#" Value="type IVbcHostObject4 = interface&#xA;    interface IVbcHostObject3&#xA;    interface IVbcHostObject2&#xA;    interface IVbcHostObject&#xA;    interface ITaskHost" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -11,6 +12,12 @@
   <Interfaces>
     <Interface>
       <InterfaceName>Microsoft.Build.Framework.ITaskHost</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Tasks.Hosting.IVbcHostObject</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Tasks.Hosting.IVbcHostObject2</InterfaceName>
     </Interface>
     <Interface>
       <InterfaceName>Microsoft.Build.Tasks.Hosting.IVbcHostObject3</InterfaceName>
@@ -24,7 +31,7 @@
       <AttributeName>System.Runtime.InteropServices.Guid("2AE3233C-8AB3-48A0-9ED9-6E3545B3C566")</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.InterfaceType</AttributeName>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -38,6 +45,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject4.SetVBRuntime(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetVBRuntime (VBRuntime As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetVBRuntime(System::String ^ VBRuntime);" />
+      <MemberSignature Language="F#" Value="abstract member SetVBRuntime : string -&gt; bool" Usage="iVbcHostObject4.SetVBRuntime VBRuntime" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
@@ -52,7 +60,8 @@
       <Docs>
         <param name="VBRuntime">The name of the Visual Basic Runtime Library.</param>
         <summary>Defines an interface for the Vbc task to communicate with the IDE. In particular, the Vbc task will delegate the actual compilation to the IDE, rather than shelling out to the command line compiler.</summary>
-        <returns>Returns <see langword="true" /> if the method succeeds; otherwise, returns <see langword="false" />.</returns>
+        <returns>
+          <see langword="true" /> if the method succeeds; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

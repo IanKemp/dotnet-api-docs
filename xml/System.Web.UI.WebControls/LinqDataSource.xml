@@ -4,16 +4,22 @@
   <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.LinqDataSource" />
   <TypeSignature Language="VB.NET" Value="Public Class LinqDataSource&#xA;Inherits ContextDataSource&#xA;Implements IDynamicDataSource" />
   <TypeSignature Language="C++ CLI" Value="public ref class LinqDataSource : System::Web::UI::WebControls::ContextDataSource, System::Web::DynamicData::IDynamicDataSource" />
+  <TypeSignature Language="F#" Value="type LinqDataSource = class&#xA;    inherit ContextDataSource&#xA;    interface IDynamicDataSource&#xA;    interface IDataSource" />
   <AssemblyInfo>
     <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Web.UI.WebControls.ContextDataSource</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-3.5">System.Web.UI.DataSourceControl</BaseTypeName>
   </Base>
   <Interfaces>
     <Interface>
       <InterfaceName>System.Web.DynamicData.IDynamicDataSource</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IDataSource</InterfaceName>
     </Interface>
   </Interfaces>
   <Attributes>
@@ -23,10 +29,10 @@
     <Attribute>
       <AttributeName>System.ComponentModel.DefaultProperty("ContextTypeName")</AttributeName>
     </Attribute>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
       <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.LinqDataSourceDesigner, System.Web.Extensions.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
     </Attribute>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
       <AttributeName>System.Drawing.ToolboxBitmap(typeof(System.Web.UI.WebControls.LinqDataSource), "LinqDataSource.bmp")</AttributeName>
     </Attribute>
     <Attribute>
@@ -34,6 +40,15 @@
     </Attribute>
     <Attribute>
       <AttributeName>System.Web.UI.PersistChildren(false)</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netframework-3.5">
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.LinqDataSourceDesigner, System.Web.Extensions.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netframework-3.5">
+      <AttributeName>System.ComponentModel.ToolboxItemFilter("System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", System.ComponentModel.ToolboxItemFilterType.Require)</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netframework-3.5">
+      <AttributeName>System.Drawing.ToolboxBitmap(typeof(System.Web.UI.WebControls.LinqDataSource), "LinqDataSource.ico")</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -64,7 +79,7 @@
 ## Introduction  
  Language-Integrated Query (LINQ) is a query syntax that defines a set of query operators that enable traversal, filter, and projection operations to be expressed in a declarative way in any .NET-based programming language. The data object can be an in-memory data collection or an object that represents data from a database. You can retrieve or modify the data without having to write SQL commands for each operation.  
   
- The <xref:System.Web.UI.WebControls.LinqDataSource> control enables you to use LINQ in an ASP.NET Web page by setting properties in markup text. The <xref:System.Web.UI.WebControls.LinqDataSource> control uses LINQ to SQL to automatically generate the data commands. For more information about LINQ to SQL, see [LINQ to SQL](http://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655).  
+ The <xref:System.Web.UI.WebControls.LinqDataSource> control enables you to use LINQ in an ASP.NET Web page by setting properties in markup text. The <xref:System.Web.UI.WebControls.LinqDataSource> control uses LINQ to SQL to automatically generate the data commands. For more information about LINQ to SQL, see [LINQ to SQL](https://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655).  
   
  When you are retrieving data from an in-memory data collection, you set the <xref:System.Web.UI.WebControls.LinqDataSource.ContextTypeName%2A> property to the class that contains the data collection. You set the <xref:System.Web.UI.WebControls.LinqDataSource.TableName%2A> property to the property or field that returns the data collection. For example, you might have a class named `Person` that contains a property named `FavoriteCities` that returns an array of string values. In that case, you set the <xref:System.Web.UI.WebControls.LinqDataSource.ContextTypeName%2A> property to `Person` and set the <xref:System.Web.UI.WebControls.LinqDataSource.TableName%2A> property to `FavoriteCities`.  
   
@@ -131,7 +146,7 @@
   
 <a name="working_with_stored_procedures"></a>   
 ## Working with Stored Procedures  
- You use the <xref:System.Web.UI.WebControls.LinqDataSource> control to retrieve data from a stored procedure by creating an event handler for the <xref:System.Web.UI.WebControls.LinqDataSource.Selecting> event. In the event handler, you call the method in the data context class that represents the stored procedure and set the result to the <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Result%2A> property of the <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs> object. If you want to enable automatic update, insert, and delete operations for the data, the type that is returned from the method must match the type that is specified in the <xref:System.Web.UI.WebControls.LinqDataSource.TableName%2A> property. For more information about creating data context methods, see [How to: Create DataContext methods mapped to stored procedures and functions (O/R Designer)](http://msdn.microsoft.com/library/e7ca32f1-50b3-48af-ad92-ceafd749296a).  
+ You use the <xref:System.Web.UI.WebControls.LinqDataSource> control to retrieve data from a stored procedure by creating an event handler for the <xref:System.Web.UI.WebControls.LinqDataSource.Selecting> event. In the event handler, you call the method in the data context class that represents the stored procedure and set the result to the <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Result%2A> property of the <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs> object. If you want to enable automatic update, insert, and delete operations for the data, the type that is returned from the method must match the type that is specified in the <xref:System.Web.UI.WebControls.LinqDataSource.TableName%2A> property. For more information about creating data context methods, see [How to: Create DataContext methods mapped to stored procedures and functions (O/R Designer)](https://msdn.microsoft.com/library/e7ca32f1-50b3-48af-ad92-ceafd749296a).  
   
 <a name="declarative_syntax"></a>   
 ## Declarative Syntax  
@@ -214,6 +229,7 @@
   
  ]]></format>
     </remarks>
+    <related type="Article" href="https://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655">LINQ to SQL</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -225,8 +241,14 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> class.</summary>
@@ -239,9 +261,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.AutoGenerateOrderByClause" />
       <MemberSignature Language="VB.NET" Value="Public Property AutoGenerateOrderByClause As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AutoGenerateOrderByClause { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.AutoGenerateOrderByClause : bool with get, set" Usage="System.Web.UI.WebControls.LinqDataSource.AutoGenerateOrderByClause" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -285,12 +309,14 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.AutoGenerateWhereClause" />
       <MemberSignature Language="VB.NET" Value="Public Property AutoGenerateWhereClause As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AutoGenerateWhereClause { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.AutoGenerateWhereClause : bool with get, set" Usage="System.Web.UI.WebControls.LinqDataSource.AutoGenerateWhereClause" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Web.DynamicData.IDynamicDataSource.AutoGenerateWhereClause</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -336,9 +362,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.AutoPage" />
       <MemberSignature Language="VB.NET" Value="Public Property AutoPage As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AutoPage { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.AutoPage : bool with get, set" Usage="System.Web.UI.WebControls.LinqDataSource.AutoPage" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -380,9 +408,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.AutoSort" />
       <MemberSignature Language="VB.NET" Value="Public Property AutoSort As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AutoSort { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.AutoSort : bool with get, set" Usage="System.Web.UI.WebControls.LinqDataSource.AutoSort" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -428,9 +458,11 @@
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSource.ContextCreated" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ContextCreated As EventHandler(Of LinqDataSourceStatusEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Web::UI::WebControls::LinqDataSourceStatusEventArgs ^&gt; ^ ContextCreated;" />
+      <MemberSignature Language="F#" Value="member this.ContextCreated : EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; " Usage="member this.ContextCreated : System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -463,9 +495,11 @@
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSource.ContextCreating" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ContextCreating As EventHandler(Of LinqDataSourceContextEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Web::UI::WebControls::LinqDataSourceContextEventArgs ^&gt; ^ ContextCreating;" />
+      <MemberSignature Language="F#" Value="member this.ContextCreating : EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceContextEventArgs&gt; " Usage="member this.ContextCreating : System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceContextEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -506,9 +540,11 @@
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSource.ContextDisposing" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ContextDisposing As EventHandler(Of LinqDataSourceDisposeEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Web::UI::WebControls::LinqDataSourceDisposeEventArgs ^&gt; ^ ContextDisposing;" />
+      <MemberSignature Language="F#" Value="member this.ContextDisposing : EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceDisposeEventArgs&gt; " Usage="member this.ContextDisposing : System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceDisposeEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -537,9 +573,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.ContextTypeName" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Property ContextTypeName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ ContextTypeName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ContextTypeName : string with get, set" Usage="System.Web.UI.WebControls.LinqDataSource.ContextTypeName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -587,6 +625,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655">LINQ to SQL</related>
       </Docs>
     </Member>
     <Member MemberName="CreateQueryableView">
@@ -595,11 +634,17 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSource.CreateQueryableView" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateQueryableView () As QueryableDataSourceView" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Web::UI::WebControls::QueryableDataSourceView ^ CreateQueryableView();" />
+      <MemberSignature Language="F#" Value="override this.CreateQueryableView : unit -&gt; System.Web.UI.WebControls.QueryableDataSourceView" Usage="linqDataSource.CreateQueryableView " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Web.UI.WebControls.QueryableDataSourceView</ReturnType>
       </ReturnValue>
@@ -616,9 +661,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSource.CreateView" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function CreateView () As LinqDataSourceView" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual System::Web::UI::WebControls::LinqDataSourceView ^ CreateView();" />
+      <MemberSignature Language="F#" Value="abstract member CreateView : unit -&gt; System.Web.UI.WebControls.LinqDataSourceView&#xA;override this.CreateView : unit -&gt; System.Web.UI.WebControls.LinqDataSourceView" Usage="linqDataSource.CreateView " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -644,9 +691,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSource.Delete(System.Collections.IDictionary,System.Collections.IDictionary)" />
       <MemberSignature Language="VB.NET" Value="Public Function Delete (keys As IDictionary, oldValues As IDictionary) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; int Delete(System::Collections::IDictionary ^ keys, System::Collections::IDictionary ^ oldValues);" />
+      <MemberSignature Language="F#" Value="member this.Delete : System.Collections.IDictionary * System.Collections.IDictionary -&gt; int" Usage="linqDataSource.Delete (keys, oldValues)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -677,9 +726,11 @@
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSource.Deleted" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event Deleted As EventHandler(Of LinqDataSourceStatusEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Web::UI::WebControls::LinqDataSourceStatusEventArgs ^&gt; ^ Deleted;" />
+      <MemberSignature Language="F#" Value="member this.Deleted : EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; " Usage="member this.Deleted : System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -708,9 +759,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.DeleteParameters" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DeleteParameters As ParameterCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::ParameterCollection ^ DeleteParameters { System::Web::UI::WebControls::ParameterCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DeleteParameters : System.Web.UI.WebControls.ParameterCollection" Usage="System.Web.UI.WebControls.LinqDataSource.DeleteParameters" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -727,7 +780,7 @@
           <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -745,9 +798,11 @@
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSource.Deleting" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event Deleting As EventHandler(Of LinqDataSourceDeleteEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Web::UI::WebControls::LinqDataSourceDeleteEventArgs ^&gt; ^ Deleting;" />
+      <MemberSignature Language="F#" Value="member this.Deleting : EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceDeleteEventArgs&gt; " Usage="member this.Deleting : System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceDeleteEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -786,12 +841,14 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.EnableDelete" />
       <MemberSignature Language="VB.NET" Value="Public Property EnableDelete As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool EnableDelete { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.EnableDelete : bool with get, set" Usage="System.Web.UI.WebControls.LinqDataSource.EnableDelete" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Web.DynamicData.IDynamicDataSource.EnableDelete</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -827,6 +884,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655">LINQ to SQL</related>
       </Docs>
     </Member>
     <Member MemberName="EnableInsert">
@@ -835,12 +893,14 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.EnableInsert" />
       <MemberSignature Language="VB.NET" Value="Public Property EnableInsert As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool EnableInsert { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.EnableInsert : bool with get, set" Usage="System.Web.UI.WebControls.LinqDataSource.EnableInsert" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Web.DynamicData.IDynamicDataSource.EnableInsert</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -876,6 +936,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655">LINQ to SQL</related>
       </Docs>
     </Member>
     <Member MemberName="EnableObjectTracking">
@@ -884,9 +945,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.EnableObjectTracking" />
       <MemberSignature Language="VB.NET" Value="Public Property EnableObjectTracking As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool EnableObjectTracking { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.EnableObjectTracking : bool with get, set" Usage="System.Web.UI.WebControls.LinqDataSource.EnableObjectTracking" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -923,12 +986,14 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.EnableUpdate" />
       <MemberSignature Language="VB.NET" Value="Public Property EnableUpdate As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool EnableUpdate { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.EnableUpdate : bool with get, set" Usage="System.Web.UI.WebControls.LinqDataSource.EnableUpdate" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Web.DynamicData.IDynamicDataSource.EnableUpdate</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -966,15 +1031,91 @@
         </remarks>
       </Docs>
     </Member>
+    <Member MemberName="GetView">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.DataSourceView GetView (string viewName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.DataSourceView GetView(string viewName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSource.GetView(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetView (viewName As String) As DataSourceView" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Web::UI::DataSourceView ^ GetView(System::String ^ viewName);" />
+      <MemberSignature Language="F#" Value="override this.GetView : string -&gt; System.Web.UI.DataSourceView" Usage="linqDataSource.GetView viewName" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Web.UI.IDataSource.GetView(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="viewName">The name of the view to retrieve, which must be "DefaultView".</param>
+        <summary>Returns the data source view that is associated with the <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> object.</summary>
+        <returns>The data source view that is associated with the <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> object.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+
+## Remarks  
+The <xref:System.Web.UI.WebControls.LinqDataSource> control supports only one data source view. The <xref:System.Web.UI.WebControls.LinqDataSourceView> object has a default name of "DefaultView". The <xref:System.Web.UI.WebControls.LinqDataSourceView> object defines the data source control's capabilities, retrieves data from the underlying database, and performs operations such as sort, insert, delete, and update.
+
+]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <p>viewName is null (Nothing in Visual Basic) or something other than "DefaultView".</p>
+        </exception>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100)">LinqDataSource Web Server Control Overview</related>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/aspnet/ms178359(v=vs.110)">ASP.NET Data Access Overview</related>
+      </Docs>
+    </Member>
+    <Member MemberName="GetViewNames">
+      <MemberSignature Language="C#" Value="protected override System.Collections.ICollection GetViewNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.ICollection GetViewNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSource.GetViewNames" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetViewNames () As ICollection" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Collections::ICollection ^ GetViewNames();" />
+      <MemberSignature Language="F#" Value="override this.GetViewNames : unit -&gt; System.Collections.ICollection" Usage="linqDataSource.GetViewNames " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Web.UI.IDataSource.GetViewNames</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Returns a collection of names that represents the list of view objects that are associated with the <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> control.</summary>
+        <returns>A collection with one element that contains the name "DefaultView".</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+
+## Remarks  
+The <xref:System.Web.UI.WebControls.LinqDataSource> control supports only one view on its underlying data, which is named `DefaultView`. The `GetViewNames` method therefore returns a collection with only one element, which contains this view name.
+
+]]></format>
+        </remarks>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100)">LinqDataSource Web Server Control Overview</related>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/aspnet/ms178359(v=vs.110)">ASP.NET Data Access Overview</related>
+      </Docs>
+    </Member>
     <Member MemberName="GroupBy">
       <MemberSignature Language="C#" Value="public string GroupBy { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string GroupBy" />
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.GroupBy" />
       <MemberSignature Language="VB.NET" Value="Public Property GroupBy As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ GroupBy { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.GroupBy : string with get, set" Usage="System.Web.UI.WebControls.LinqDataSource.GroupBy" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1021,7 +1162,7 @@
   
 -   `All(` *condition* `)`  
   
- For more information, see [NIB: LinqDataSource Web Server Control Overview](http://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136) and [How to: Group and Aggregate Data Using the LinqDataSource Control](http://msdn.microsoft.com/library/b922cf69-251f-4158-b405-ea960993a1af).  
+ For more information, see [NIB: LinqDataSource Web Server Control Overview](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136) and [How to: Group and Aggregate Data Using the LinqDataSource Control](https://msdn.microsoft.com/library/b922cf69-251f-4158-b405-ea960993a1af).  
   
    
   
@@ -1051,9 +1192,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.GroupByParameters" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property GroupByParameters As ParameterCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::ParameterCollection ^ GroupByParameters { System::Web::UI::WebControls::ParameterCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.GroupByParameters : System.Web.UI.WebControls.ParameterCollection" Usage="System.Web.UI.WebControls.LinqDataSource.GroupByParameters" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1070,7 +1213,7 @@
           <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1101,9 +1244,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSource.Insert(System.Collections.IDictionary)" />
       <MemberSignature Language="VB.NET" Value="Public Function Insert (values As IDictionary) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; int Insert(System::Collections::IDictionary ^ values);" />
+      <MemberSignature Language="F#" Value="member this.Insert : System.Collections.IDictionary -&gt; int" Usage="linqDataSource.Insert values" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1145,9 +1290,11 @@
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSource.Inserted" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event Inserted As EventHandler(Of LinqDataSourceStatusEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Web::UI::WebControls::LinqDataSourceStatusEventArgs ^&gt; ^ Inserted;" />
+      <MemberSignature Language="F#" Value="member this.Inserted : EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; " Usage="member this.Inserted : System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1184,9 +1331,11 @@
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSource.Inserting" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event Inserting As EventHandler(Of LinqDataSourceInsertEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Web::UI::WebControls::LinqDataSourceInsertEventArgs ^&gt; ^ Inserting;" />
+      <MemberSignature Language="F#" Value="member this.Inserting : EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceInsertEventArgs&gt; " Usage="member this.Inserting : System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceInsertEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1280,9 +1429,11 @@ End Sub
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.InsertParameters" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InsertParameters As ParameterCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::ParameterCollection ^ InsertParameters { System::Web::UI::WebControls::ParameterCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.InsertParameters : System.Web.UI.WebControls.ParameterCollection" Usage="System.Web.UI.WebControls.LinqDataSource.InsertParameters" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1299,7 +1450,7 @@ End Sub
           <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1328,15 +1479,50 @@ End Sub
         </remarks>
       </Docs>
     </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSource.LoadViewState(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub LoadViewState (savedState As Object)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void LoadViewState(System::Object ^ savedState);" />
+      <MemberSignature Language="F#" Value="override this.LoadViewState : obj -&gt; unit" Usage="linqDataSource.LoadViewState savedState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">An object that represents the state of the <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> control.</param>
+        <summary>Loads the state of the values in the <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> control that must be persisted.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+
+## Remarks  
+The `LoadViewState` method is used to load the previously saved view state of the <xref:System.Web.UI.WebControls.LinqDataSource> control.
+
+]]></format>
+        </remarks>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100)">LinqDataSource Web Server Control Overview</related>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/aspnet/ms178359(v=vs.110)">ASP.NET Data Access Overview</related>
+      </Docs>
+    </Member>
     <Member MemberName="OnInit">
       <MemberSignature Language="C#" Value="protected internal override void OnInit (EventArgs e);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSource.OnInit(System.EventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub OnInit (e As EventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void OnInit(EventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="override this.OnInit : EventArgs -&gt; unit" Usage="linqDataSource.OnInit e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1357,9 +1543,11 @@ End Sub
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSource.OnUnload(System.EventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub OnUnload (e As EventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void OnUnload(EventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="override this.OnUnload : EventArgs -&gt; unit" Usage="linqDataSource.OnUnload e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1381,9 +1569,11 @@ End Sub
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.OrderBy" />
       <MemberSignature Language="VB.NET" Value="Public Property OrderBy As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OrderBy { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.OrderBy : string with get, set" Usage="System.Web.UI.WebControls.LinqDataSource.OrderBy" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1431,9 +1621,11 @@ End Sub
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.OrderByParameters" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OrderByParameters As ParameterCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::ParameterCollection ^ OrderByParameters { System::Web::UI::WebControls::ParameterCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.OrderByParameters : System.Web.UI.WebControls.ParameterCollection" Usage="System.Web.UI.WebControls.LinqDataSource.OrderByParameters" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1450,7 +1642,7 @@ End Sub
           <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1487,9 +1679,11 @@ End Sub
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.OrderGroupsBy" />
       <MemberSignature Language="VB.NET" Value="Public Property OrderGroupsBy As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OrderGroupsBy { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.OrderGroupsBy : string with get, set" Usage="System.Web.UI.WebControls.LinqDataSource.OrderGroupsBy" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1541,9 +1735,11 @@ End Sub
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.OrderGroupsByParameters" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OrderGroupsByParameters As ParameterCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::ParameterCollection ^ OrderGroupsByParameters { System::Web::UI::WebControls::ParameterCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.OrderGroupsByParameters : System.Web.UI.WebControls.ParameterCollection" Usage="System.Web.UI.WebControls.LinqDataSource.OrderGroupsByParameters" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1560,7 +1756,7 @@ End Sub
           <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1583,15 +1779,41 @@ End Sub
         </remarks>
       </Docs>
     </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected override object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSource.SaveViewState" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function SaveViewState () As Object" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Object ^ SaveViewState();" />
+      <MemberSignature Language="F#" Value="override this.SaveViewState : unit -&gt; obj" Usage="linqDataSource.SaveViewState " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Saves the current view state of the <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> control.</summary>
+        <returns>An object that contains the saved state of the <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> control.</returns>
+        <remarks>To be added.</remarks>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100)">LinqDataSource Web Server Control Overview</related>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/aspnet/ms178359(v=vs.110)">ASP.NET Data Access Overview</related>
+      </Docs>
+    </Member>
     <Member MemberName="Select">
       <MemberSignature Language="C#" Value="public string Select { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string Select" />
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.Select" />
       <MemberSignature Language="VB.NET" Value="Public Property Select As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Select { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Select : string with get, set" Usage="System.Web.UI.WebControls.LinqDataSource.Select" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1648,7 +1870,7 @@ End Sub
   
 -   `All(` *condition* `)`  
   
- For more information, see [NIB: LinqDataSource Web Server Control Overview](http://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136) and [How to: Group and Aggregate Data Using the LinqDataSource Control](http://msdn.microsoft.com/library/b922cf69-251f-4158-b405-ea960993a1af).  
+ For more information, see [NIB: LinqDataSource Web Server Control Overview](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136) and [How to: Group and Aggregate Data Using the LinqDataSource Control](https://msdn.microsoft.com/library/b922cf69-251f-4158-b405-ea960993a1af).  
   
  When you group data, you can include `Key` and `It`, which are dynamically created properties, in the <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> property. The `Key` property refers to the values in the property or properties that were used to group the data. For example, if you group by a property named `Category`, the `Key` property will contain each unique value in the `Category` property. The `It` property refers to a collection of individual records in a grouping of data. You can iterate over the `It` property to retrieve the individual records that have been consolidated in the grouping operation. For example, if you group by a property named `Category`, the `It` property contains all the individual records that share a common value in the `Category` property.  
   
@@ -1677,9 +1899,11 @@ End Sub
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSource.Selected" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event Selected As EventHandler(Of LinqDataSourceStatusEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Web::UI::WebControls::LinqDataSourceStatusEventArgs ^&gt; ^ Selected;" />
+      <MemberSignature Language="F#" Value="member this.Selected : EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; " Usage="member this.Selected : System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1708,9 +1932,11 @@ End Sub
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSource.Selecting" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event Selecting As EventHandler(Of LinqDataSourceSelectEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Web::UI::WebControls::LinqDataSourceSelectEventArgs ^&gt; ^ Selecting;" />
+      <MemberSignature Language="F#" Value="member this.Selecting : EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceSelectEventArgs&gt; " Usage="member this.Selecting : System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceSelectEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1782,9 +2008,11 @@ protected void LinqDataSource_Selecting(object sender,
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.SelectParameters" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SelectParameters As ParameterCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::ParameterCollection ^ SelectParameters { System::Web::UI::WebControls::ParameterCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SelectParameters : System.Web.UI.WebControls.ParameterCollection" Usage="System.Web.UI.WebControls.LinqDataSource.SelectParameters" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1801,7 +2029,7 @@ protected void LinqDataSource_Selecting(object sender,
           <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1840,9 +2068,11 @@ protected void LinqDataSource_Selecting(object sender,
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.StoreOriginalValuesInViewState" />
       <MemberSignature Language="VB.NET" Value="Public Property StoreOriginalValuesInViewState As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool StoreOriginalValuesInViewState { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.StoreOriginalValuesInViewState : bool with get, set" Usage="System.Web.UI.WebControls.LinqDataSource.StoreOriginalValuesInViewState" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1866,14 +2096,15 @@ protected void LinqDataSource_Selecting(object sender,
 ## Remarks  
  By default, when update and delete operations have been enabled, the <xref:System.Web.UI.WebControls.LinqDataSource> control stores the original values for all the records in view state. The <xref:System.Web.UI.WebControls.LinqDataSource> control stores values for all primary keys and all properties not marked with `UpdateCheck.Never` in the `Column` attribute. You set the `UpdateCheck` property of the `Column` attribute in the [!INCLUDE[vs_ordesigner_short](~/includes/vs-ordesigner-short-md.md)].  
   
- Before LINQ to SQL updates or deletes data, it checks the values in view state against the current values in the data source. If the values do not match, the data source record has changed. In that case, LINQ to SQL throws an exception and does not continue with the update or delete operation. For more information about LINQ to SQL, see [LINQ to SQL](http://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655).  
+ Before LINQ to SQL updates or deletes data, it checks the values in view state against the current values in the data source. If the values do not match, the data source record has changed. In that case, LINQ to SQL throws an exception and does not continue with the update or delete operation. For more information about LINQ to SQL, see [LINQ to SQL](https://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655).  
   
  Storing the original values in view state can cause the page size to become unnecessarily large and can expose sensitive data to a malicious user. You can disable storing values in view state by setting the <xref:System.Web.UI.WebControls.LinqDataSource.StoreOriginalValuesInViewState%2A> property to `false`. If you do this, you must provide your own way to make sure that the data has not changed. If you set the <xref:System.Web.UI.WebControls.LinqDataSource.StoreOriginalValuesInViewState%2A> property to `false`, the original values are not persisted in view state for the data-bound control. In that case, LINQ to SQL cannot verify the integrity of the data. LINQ to SQL will throw an exception that indicates a data conflict even if the data in the data source has not actually changed.  
   
- If the underlying data source contains a timestamp field that is automatically updated during an update, you can store only that value in view state. In that case, the timestamp property in the entity class is set to `IsVersion=true` and all the properties are set to `UpdateCheck.Never`. Because a timestamp field is automatically updated by the database every time that data in that record changes, LINQ to SQL determines from that value if data has changed. This helps reduce the size of view state, and no sensitive data is exposed. LINQ to SQL will check for data consistency by comparing the timestamp value in view state with the timestamp value in the database. For more information, see [Walkthrough: Using a Timestamp with the LinqDataSource Control to Check Data Integrity](http://msdn.microsoft.com/library/e7700162-4f05-4130-81f7-3be1361027fa).  
+ If the underlying data source contains a timestamp field that is automatically updated during an update, you can store only that value in view state. In that case, the timestamp property in the entity class is set to `IsVersion=true` and all the properties are set to `UpdateCheck.Never`. Because a timestamp field is automatically updated by the database every time that data in that record changes, LINQ to SQL determines from that value if data has changed. This helps reduce the size of view state, and no sensitive data is exposed. LINQ to SQL will check for data consistency by comparing the timestamp value in view state with the timestamp value in the database. For more information, see [Walkthrough: Using a Timestamp with the LinqDataSource Control to Check Data Integrity](https://msdn.microsoft.com/library/e7700162-4f05-4130-81f7-3be1361027fa).  
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655">LINQ to SQL</related>
       </Docs>
     </Member>
     <Member MemberName="System.Web.DynamicData.IDynamicDataSource.ContextType">
@@ -1881,13 +2112,15 @@ protected void LinqDataSource_Selecting(object sender,
       <MemberSignature Language="ILAsm" Value=".property instance class System.Type System.Web.DynamicData.IDynamicDataSource.ContextType" />
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.System#Web#DynamicData#IDynamicDataSource#ContextType" />
       <MemberSignature Language="VB.NET" Value=" Property ContextType As Type Implements IDynamicDataSource.ContextType" />
-      <MemberSignature Language="C++ CLI" Value="property Type ^ System.Web.DynamicData.IDynamicDataSource.ContextType { Type ^ get(); void set(Type ^ value); };" />
+      <MemberSignature Language="C++ CLI" Value="property Type ^ System::Web::DynamicData::IDynamicDataSource::ContextType { Type ^ get(); void set(Type ^ value); };" />
+      <MemberSignature Language="F#" Usage="System.Web.DynamicData.IDynamicDataSource.ContextType" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Web.DynamicData.IDynamicDataSource.ContextType</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1911,15 +2144,25 @@ protected void LinqDataSource_Selecting(object sender,
       <MemberSignature Language="ILAsm" Value=".property instance string System.Web.DynamicData.IDynamicDataSource.EntitySetName" />
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.System#Web#DynamicData#IDynamicDataSource#EntitySetName" />
       <MemberSignature Language="VB.NET" Value=" Property EntitySetName As String Implements IDynamicDataSource.EntitySetName" />
-      <MemberSignature Language="C++ CLI" Value="property System::String ^ System.Web.DynamicData.IDynamicDataSource.EntitySetName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="C++ CLI" Value="property System::String ^ System::Web::DynamicData::IDynamicDataSource::EntitySetName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Usage="System.Web.DynamicData.IDynamicDataSource.EntitySetName" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Web.DynamicData.IDynamicDataSource.EntitySetName</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -1947,14 +2190,22 @@ protected void LinqDataSource_Selecting(object sender,
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.EventHandler&lt;System.Web.DynamicData.DynamicValidatorEventArgs&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>For a description of this member, see <see cref="T:System.Web.DynamicData.IDynamicDataSource" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This member is an explicit interface member implementation. It can be used only when the <xref:System.Web.UI.WebControls.LinqDataSource> instance is cast to an <xref:System.Web.DynamicData.IDynamicDataSource> interface.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="TableName">
@@ -1963,9 +2214,11 @@ protected void LinqDataSource_Selecting(object sender,
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.TableName" />
       <MemberSignature Language="VB.NET" Value="Public Property TableName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TableName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.TableName : string with get, set" Usage="System.Web.UI.WebControls.LinqDataSource.TableName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2013,15 +2266,40 @@ protected void LinqDataSource_Selecting(object sender,
         </remarks>
       </Docs>
     </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected override void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSource.TrackViewState" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub TrackViewState ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void TrackViewState();" />
+      <MemberSignature Language="F#" Value="override this.TrackViewState : unit -&gt; unit" Usage="linqDataSource.TrackViewState " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Tracks view state changes to the <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> control so that the changes can be stored in the <see cref="T:System.Web.UI.StateBag" /> object for the control.</summary>
+        <remarks>To be added.</remarks>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100)">LinqDataSource Web Server Control Overview</related>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/aspnet/ms178359(v=vs.110)">ASP.NET Data Access Overview</related>
+      </Docs>
+    </Member>
     <Member MemberName="Update">
       <MemberSignature Language="C#" Value="public int Update (System.Collections.IDictionary keys, System.Collections.IDictionary values, System.Collections.IDictionary oldValues);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Update(class System.Collections.IDictionary keys, class System.Collections.IDictionary values, class System.Collections.IDictionary oldValues) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSource.Update(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary)" />
       <MemberSignature Language="VB.NET" Value="Public Function Update (keys As IDictionary, values As IDictionary, oldValues As IDictionary) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; int Update(System::Collections::IDictionary ^ keys, System::Collections::IDictionary ^ values, System::Collections::IDictionary ^ oldValues);" />
+      <MemberSignature Language="F#" Value="member this.Update : System.Collections.IDictionary * System.Collections.IDictionary * System.Collections.IDictionary -&gt; int" Usage="linqDataSource.Update (keys, values, oldValues)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2067,9 +2345,11 @@ protected void LinqDataSource_Selecting(object sender,
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSource.Updated" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event Updated As EventHandler(Of LinqDataSourceStatusEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Web::UI::WebControls::LinqDataSourceStatusEventArgs ^&gt; ^ Updated;" />
+      <MemberSignature Language="F#" Value="member this.Updated : EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; " Usage="member this.Updated : System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2098,9 +2378,11 @@ protected void LinqDataSource_Selecting(object sender,
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.UpdateParameters" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UpdateParameters As ParameterCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::ParameterCollection ^ UpdateParameters { System::Web::UI::WebControls::ParameterCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.UpdateParameters : System.Web.UI.WebControls.ParameterCollection" Usage="System.Web.UI.WebControls.LinqDataSource.UpdateParameters" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2117,7 +2399,7 @@ protected void LinqDataSource_Selecting(object sender,
           <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -2135,9 +2417,11 @@ protected void LinqDataSource_Selecting(object sender,
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSource.Updating" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event Updating As EventHandler(Of LinqDataSourceUpdateEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Web::UI::WebControls::LinqDataSourceUpdateEventArgs ^&gt; ^ Updating;" />
+      <MemberSignature Language="F#" Value="member this.Updating : EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceUpdateEventArgs&gt; " Usage="member this.Updating : System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceUpdateEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2231,12 +2515,14 @@ End Sub
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.Where" />
       <MemberSignature Language="VB.NET" Value="Public Property Where As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Where { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Where : string with get, set" Usage="System.Web.UI.WebControls.LinqDataSource.Where" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Web.DynamicData.IDynamicDataSource.Where</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2297,13 +2583,13 @@ LinqDataSource1.Where = "Category = \"Sports\"";
 <asp:LinqDataSource ... Where='Category.CompareTo("Sports") >= 0' ... >  
 ```  
   
- You can also use other methods of the <xref:System.String> class, such as <xref:System.String.StartsWith%2A>, <xref:System.String.EndsWith%2A>, and <xref:System.String.Contains%2A>. For more information about how to compare strings, see [Comparing Strings](~/docs/standard/base-types/comparing.md). For more information about Where clause syntax, see [C# Operators](http://msdn.microsoft.com/library/0301e31f-22ad-49af-ac3c-d5eae7f0ac43) and [where clause](~/docs/csharp/language-reference/keywords/where-clause.md).  
+ You can also use other methods of the <xref:System.String> class, such as <xref:System.String.StartsWith%2A>, <xref:System.String.EndsWith%2A>, and <xref:System.String.Contains%2A>. For more information about how to compare strings, see [Comparing Strings](~/docs/standard/base-types/comparing.md). For more information about Where clause syntax, see [C# Operators](https://msdn.microsoft.com/library/0301e31f-22ad-49af-ac3c-d5eae7f0ac43) and [where clause](~/docs/csharp/language-reference/keywords/where-clause.md).  
   
  In addition to filtering based on static values that you define when you create the Web page, you can filter based on dynamic values that are evaluated at run time. In that case, you include a named parameter in the <xref:System.Web.UI.WebControls.LinqDataSource.Where%2A> property that acts as a placeholder for the value. You then add a parameter that has the matching name to the <xref:System.Web.UI.WebControls.LinqDataSource.WhereParameters%2A> collection.  
   
  Alternatively, you can set the <xref:System.Web.UI.WebControls.LinqDataSource.AutoGenerateWhereClause%2A> property to `true` and define the parameters in the <xref:System.Web.UI.WebControls.LinqDataSource.WhereParameters%2A> collection. When the <xref:System.Web.UI.WebControls.LinqDataSource.AutoGenerateWhereClause%2A> property is `true`, you do not have to include the named parameters in the <xref:System.Web.UI.WebControls.LinqDataSource.Where%2A> property. Instead, the <xref:System.Web.UI.WebControls.LinqDataSource> control automatically generates the Where clause from the parameters in the <xref:System.Web.UI.WebControls.LinqDataSource.WhereParameters%2A> property.  
   
- For more information about how to filter data, see [Walkthrough: Selecting and Filtering a Subset of Data with the LinqDataSource and GridView Controls](http://msdn.microsoft.com/library/c1cca3e8-86e4-4e69-a29f-1c05b91f2205).  
+ For more information about how to filter data, see [Walkthrough: Selecting and Filtering a Subset of Data with the LinqDataSource and GridView Controls](https://msdn.microsoft.com/library/c1cca3e8-86e4-4e69-a29f-1c05b91f2205).  
   
    
   
@@ -2328,12 +2614,14 @@ LinqDataSource1.Where = "Category = \"Sports\"";
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.WhereParameters" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property WhereParameters As ParameterCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::ParameterCollection ^ WhereParameters { System::Web::UI::WebControls::ParameterCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.WhereParameters : System.Web.UI.WebControls.ParameterCollection" Usage="System.Web.UI.WebControls.LinqDataSource.WhereParameters" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Web.DynamicData.IDynamicDataSource.WhereParameters</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2350,7 +2638,7 @@ LinqDataSource1.Where = "Category = \"Sports\"";
           <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

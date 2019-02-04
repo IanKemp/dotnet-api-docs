@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Activities.NativeActivity" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class NativeActivity&#xA;Inherits Activity" />
   <TypeSignature Language="C++ CLI" Value="public ref class NativeActivity abstract : System::Activities::Activity" />
+  <TypeSignature Language="F#" Value="type NativeActivity = class&#xA;    inherit Activity" />
   <AssemblyInfo>
     <AssemblyName>System.Activities</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -13,7 +14,7 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>Abstract base class for custom activities that implement execution logic using the <see cref="M:System.Activities.NativeActivity.Execute(System.Activities.ActivityExecutionContext)" /> method, which has full access to the runtime’s features.</summary>
+    <summary>Abstract base class for custom activities that implement execution logic using the <see cref="M:System.Activities.NativeActivity.Execute(System.Activities.NativeActivityContext)" /> method, which has full access to the runtime's features.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -103,6 +104,11 @@ public sealed class MySequence : NativeActivity
         <AssemblyName>System.Activities</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>When implemented in a derived class, creates a new instance of the derived class.</summary>
@@ -124,6 +130,7 @@ public sealed class MySequence : NativeActivity
       <MemberSignature Language="DocId" Value="M:System.Activities.NativeActivity.Abort(System.Activities.NativeActivityAbortContext)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Abort (context As NativeActivityAbortContext)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void Abort(System::Activities::NativeActivityAbortContext ^ context);" />
+      <MemberSignature Language="F#" Value="abstract member Abort : System.Activities.NativeActivityAbortContext -&gt; unit&#xA;override this.Abort : System.Activities.NativeActivityAbortContext -&gt; unit" Usage="nativeActivity.Abort context" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Activities</AssemblyName>
@@ -147,7 +154,7 @@ public sealed class MySequence : NativeActivity
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Docs>
-        <summary>Creates and validates a description of the activity’s arguments, variables, child activities, and activity delegates.</summary>
+        <summary>Creates and validates a description of the activity's arguments, variables, child activities, and activity delegates.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -164,6 +171,7 @@ public sealed class MySequence : NativeActivity
       <MemberSignature Language="DocId" Value="M:System.Activities.NativeActivity.CacheMetadata(System.Activities.ActivityMetadata)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides NotOverridable Sub CacheMetadata (metadata As ActivityMetadata)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void CacheMetadata(System::Activities::ActivityMetadata metadata);" />
+      <MemberSignature Language="F#" Value="override this.CacheMetadata : System.Activities.ActivityMetadata -&gt; unit" Usage="nativeActivity.CacheMetadata metadata" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Activities</AssemblyName>
@@ -194,6 +202,7 @@ public sealed class MySequence : NativeActivity
       <MemberSignature Language="DocId" Value="M:System.Activities.NativeActivity.CacheMetadata(System.Activities.NativeActivityMetadata)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub CacheMetadata (metadata As NativeActivityMetadata)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void CacheMetadata(System::Activities::NativeActivityMetadata metadata);" />
+      <MemberSignature Language="F#" Value="override this.CacheMetadata : System.Activities.NativeActivityMetadata -&gt; unit" Usage="nativeActivity.CacheMetadata metadata" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Activities</AssemblyName>
@@ -206,13 +215,13 @@ public sealed class MySequence : NativeActivity
         <Parameter Name="metadata" Type="System.Activities.NativeActivityMetadata" />
       </Parameters>
       <Docs>
-        <param name="metadata">The activity’s metadata that encapsulates the activity’s arguments, variables, child activities, and activity delegates.</param>
-        <summary>Creates and validates a description of the activity’s arguments, variables, child activities, and activity delegates.</summary>
+        <param name="metadata">The activity's metadata that encapsulates the activity's arguments, variables, child activities, and activity delegates.</param>
+        <summary>Creates and validates a description of the activity's arguments, variables, child activities, and activity delegates.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The workflow runtime uses the default implementation of <xref:System.Activities.NativeActivity.CacheMetadata%2A> to ensure correct construction of a workflow as well as to manage run-time relationships and lifetime rules. The default implementation of <xref:System.Activities.NativeActivity.CacheMetadata%2A> examines the public members of the activity type using the type’s <xref:System.ComponentModel.TypeDescriptor>. These public members are of type <xref:System.Activities.Argument>, <xref:System.Activities.Variable>, [IEnumerable\<Variable>](xref:System.Collections.Generic.IEnumerable%601), <xref:System.Activities.Activity>, [IEnumerable\<Activity>](xref:System.Collections.Generic.IEnumerable%601), or <xref:System.Activities.ActivityDelegate>. You can override this method to customize the building of the activity’s run-time description and to provide custom validation logic. Any exceptions that are thrown from <xref:System.Activities.NativeActivity.CacheMetadata%2A> are not treated as validation errors. These exceptions will escape from the call to <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> and must be handled by the caller.  
+ The workflow runtime uses the default implementation of <xref:System.Activities.NativeActivity.CacheMetadata%2A> to ensure correct construction of a workflow as well as to manage run-time relationships and lifetime rules. The default implementation of <xref:System.Activities.NativeActivity.CacheMetadata%2A> examines the public members of the activity type using the type's <xref:System.ComponentModel.TypeDescriptor>. These public members are of type <xref:System.Activities.Argument>, <xref:System.Activities.Variable>, [IEnumerable\<Variable>](xref:System.Collections.Generic.IEnumerable%601), <xref:System.Activities.Activity>, [IEnumerable\<Activity>](xref:System.Collections.Generic.IEnumerable%601), or <xref:System.Activities.ActivityDelegate>. You can override this method to customize the building of the activity's run-time description and to provide custom validation logic. Any exceptions that are thrown from <xref:System.Activities.NativeActivity.CacheMetadata%2A> are not treated as validation errors. These exceptions will escape from the call to <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> and must be handled by the caller.  
   
    
   
@@ -231,6 +240,7 @@ public sealed class MySequence : NativeActivity
       <MemberSignature Language="DocId" Value="M:System.Activities.NativeActivity.Cancel(System.Activities.NativeActivityContext)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Cancel (context As NativeActivityContext)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void Cancel(System::Activities::NativeActivityContext ^ context);" />
+      <MemberSignature Language="F#" Value="abstract member Cancel : System.Activities.NativeActivityContext -&gt; unit&#xA;override this.Cancel : System.Activities.NativeActivityContext -&gt; unit" Usage="nativeActivity.Cancel context" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Activities</AssemblyName>
@@ -263,6 +273,7 @@ public sealed class MySequence : NativeActivity
       <MemberSignature Language="DocId" Value="P:System.Activities.NativeActivity.CanInduceIdle" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable ReadOnly Property CanInduceIdle As Boolean" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property bool CanInduceIdle { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.CanInduceIdle : bool" Usage="System.Activities.NativeActivity.CanInduceIdle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Activities</AssemblyName>
@@ -284,6 +295,7 @@ public sealed class MySequence : NativeActivity
       <MemberSignature Language="DocId" Value="M:System.Activities.NativeActivity.Execute(System.Activities.NativeActivityContext)" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Sub Execute (context As NativeActivityContext)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract void Execute(System::Activities::NativeActivityContext ^ context);" />
+      <MemberSignature Language="F#" Value="abstract member Execute : System.Activities.NativeActivityContext -&gt; unit" Usage="nativeActivity.Execute context" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Activities</AssemblyName>
@@ -297,7 +309,7 @@ public sealed class MySequence : NativeActivity
       </Parameters>
       <Docs>
         <param name="context">The execution context in which the activity executes.</param>
-        <summary>When implemented in a derived class, runs the activity’s execution logic.</summary>
+        <summary>When implemented in a derived class, runs the activity's execution logic.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -316,6 +328,7 @@ public sealed class MySequence : NativeActivity
       <MemberSignature Language="DocId" Value="P:System.Activities.NativeActivity.Implementation" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides NotOverridable Property Implementation As Func(Of Activity)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; property Func&lt;System::Activities::Activity ^&gt; ^ Implementation { Func&lt;System::Activities::Activity ^&gt; ^ get(); void set(Func&lt;System::Activities::Activity ^&gt; ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Implementation : Func&lt;System.Activities.Activity&gt; with get, set" Usage="System.Activities.NativeActivity.Implementation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Activities</AssemblyName>
@@ -341,6 +354,7 @@ public sealed class MySequence : NativeActivity
       <MemberSignature Language="DocId" Value="P:System.Activities.NativeActivity.ImplementationVersion" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides NotOverridable Property ImplementationVersion As Version" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; property Version ^ ImplementationVersion { Version ^ get(); void set(Version ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ImplementationVersion : Version with get, set" Usage="System.Activities.NativeActivity.ImplementationVersion" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Activities</AssemblyName>
@@ -370,6 +384,7 @@ public sealed class MySequence : NativeActivity
       <MemberSignature Language="DocId" Value="M:System.Activities.NativeActivity.OnCreateDynamicUpdateMap(System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata,System.Activities.Activity)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnCreateDynamicUpdateMap (metadata As NativeActivityUpdateMapMetadata, originalActivity As Activity)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnCreateDynamicUpdateMap(System::Activities::DynamicUpdate::NativeActivityUpdateMapMetadata ^ metadata, System::Activities::Activity ^ originalActivity);" />
+      <MemberSignature Language="F#" Value="override this.OnCreateDynamicUpdateMap : System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata * System.Activities.Activity -&gt; unit" Usage="nativeActivity.OnCreateDynamicUpdateMap (metadata, originalActivity)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Activities</AssemblyName>
@@ -395,6 +410,7 @@ public sealed class MySequence : NativeActivity
       <MemberSignature Language="DocId" Value="M:System.Activities.NativeActivity.OnCreateDynamicUpdateMap(System.Activities.DynamicUpdate.UpdateMapMetadata,System.Activities.Activity)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides NotOverridable Sub OnCreateDynamicUpdateMap (metadata As UpdateMapMetadata, originalActivity As Activity)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void OnCreateDynamicUpdateMap(System::Activities::DynamicUpdate::UpdateMapMetadata ^ metadata, System::Activities::Activity ^ originalActivity);" />
+      <MemberSignature Language="F#" Value="override this.OnCreateDynamicUpdateMap : System.Activities.DynamicUpdate.UpdateMapMetadata * System.Activities.Activity -&gt; unit" Usage="nativeActivity.OnCreateDynamicUpdateMap (metadata, originalActivity)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Activities</AssemblyName>
@@ -420,6 +436,7 @@ public sealed class MySequence : NativeActivity
       <MemberSignature Language="DocId" Value="M:System.Activities.NativeActivity.UpdateInstance(System.Activities.DynamicUpdate.NativeActivityUpdateContext)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub UpdateInstance (updateContext As NativeActivityUpdateContext)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void UpdateInstance(System::Activities::DynamicUpdate::NativeActivityUpdateContext ^ updateContext);" />
+      <MemberSignature Language="F#" Value="abstract member UpdateInstance : System.Activities.DynamicUpdate.NativeActivityUpdateContext -&gt; unit&#xA;override this.UpdateInstance : System.Activities.DynamicUpdate.NativeActivityUpdateContext -&gt; unit" Usage="nativeActivity.UpdateInstance updateContext" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Activities</AssemblyName>

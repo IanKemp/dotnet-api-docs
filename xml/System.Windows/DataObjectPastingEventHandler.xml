@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.DataObjectPastingEventHandler" />
   <TypeSignature Language="VB.NET" Value="Public Delegate Sub DataObjectPastingEventHandler(sender As Object, e As DataObjectPastingEventArgs)" />
   <TypeSignature Language="C++ CLI" Value="public delegate void DataObjectPastingEventHandler(System::Object ^ sender, DataObjectPastingEventArgs ^ e);" />
+  <TypeSignature Language="F#" Value="type DataObjectPastingEventHandler = delegate of obj * DataObjectPastingEventArgs -&gt; unit" />
   <AssemblyInfo>
     <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -38,7 +40,8 @@
   
 -   Cancel the paste operation by calling <xref:System.Windows.DataObjectEventArgs.CancelCommand%2A>.  
   
- **Important** If the paste format is changed, the handler method is responsible for ensuring that a newly selected paste format is consumable by the paste target.  
+ > [!IMPORTANT] 
+ > If the paste format is changed, the handler method is responsible for ensuring that a newly selected paste format is consumable by the paste target.  
   
  ]]></format>
     </remarks>

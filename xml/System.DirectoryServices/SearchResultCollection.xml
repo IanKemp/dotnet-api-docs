@@ -4,8 +4,11 @@
   <TypeSignature Language="DocId" Value="T:System.DirectoryServices.SearchResultCollection" />
   <TypeSignature Language="VB.NET" Value="Public Class SearchResultCollection&#xA;Inherits MarshalByRefObject&#xA;Implements ICollection, IDisposable" />
   <TypeSignature Language="C++ CLI" Value="public ref class SearchResultCollection : MarshalByRefObject, IDisposable, System::Collections::ICollection" />
+  <TypeSignature Language="F#" Value="type SearchResultCollection = class&#xA;    inherit MarshalByRefObject&#xA;    interface ICollection&#xA;    interface IEnumerable&#xA;    interface IDisposable" />
   <AssemblyInfo>
     <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.1.0.0</AssemblyVersion>
   </AssemblyInfo>
@@ -15,6 +18,9 @@
   <Interfaces>
     <Interface>
       <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
     </Interface>
     <Interface>
       <InterfaceName>System.IDisposable</InterfaceName>
@@ -41,9 +47,12 @@
       <MemberSignature Language="DocId" Value="M:System.DirectoryServices.SearchResultCollection.Contains(System.DirectoryServices.SearchResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function Contains (result As SearchResult) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Contains(System::DirectoryServices::SearchResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.Contains : System.DirectoryServices.SearchResult -&gt; bool" Usage="searchResultCollection.Contains result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -67,9 +76,12 @@
       <MemberSignature Language="DocId" Value="M:System.DirectoryServices.SearchResultCollection.CopyTo(System.DirectoryServices.SearchResult[],System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub CopyTo (results As SearchResult(), index As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void CopyTo(cli::array &lt;System::DirectoryServices::SearchResult ^&gt; ^ results, int index);" />
+      <MemberSignature Language="F#" Value="member this.CopyTo : System.DirectoryServices.SearchResult[] * int -&gt; unit" Usage="searchResultCollection.CopyTo (results, index)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -82,7 +94,7 @@
       </Parameters>
       <Docs>
         <param name="results">The array of <see cref="T:System.DirectoryServices.SearchResult" /> objects that receives the elements of this collection.</param>
-        <param name="index">The zero-based index in <c>results</c> where this method starts copying this collection.</param>
+        <param name="index">The zero-based index in <paramref name="results" /> where this method starts copying this collection.</param>
         <summary>Copies all <see cref="T:System.DirectoryServices.SearchResult" /> objects in this collection to the specific array, starting at the specified index in the target array.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -93,12 +105,15 @@
       <MemberSignature Language="DocId" Value="P:System.DirectoryServices.SearchResultCollection.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="System.DirectoryServices.SearchResultCollection.Count" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.ICollection.Count</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -127,12 +142,15 @@
       <MemberSignature Language="DocId" Value="M:System.DirectoryServices.SearchResultCollection.Dispose" />
       <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Dispose();" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="searchResultCollection.Dispose " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -160,9 +178,12 @@
       <MemberSignature Language="DocId" Value="M:System.DirectoryServices.SearchResultCollection.Dispose(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void Dispose(bool disposing);" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="searchResultCollection.Dispose disposing" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -188,7 +209,7 @@
   
  This method invokes the <xref:System.DirectoryServices.SearchResultCollection.Dispose%2A> method of each object in the collection.  
   
- For more information about <xref:System.DirectoryServices.SearchResultCollection.Dispose> and <xref:System.Object.Finalize%2A>, see [Cleaning Up Unmanaged Resources](~/docs/standard/garbage-collection/unmanaged.md) and [Overriding the Finalize Method](http://msdn.microsoft.com/library/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).  
+ For more information about <xref:System.DirectoryServices.SearchResultCollection.Dispose> and <xref:System.Object.Finalize%2A>, see [Cleaning Up Unmanaged Resources](~/docs/standard/garbage-collection/unmanaged.md) and [Overriding the Finalize Method](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ddae83kx(v=vs.100)).  
   
  ]]></format>
         </remarks>
@@ -203,9 +224,12 @@
       <MemberSignature Language="DocId" Value="M:System.DirectoryServices.SearchResultCollection.Finalize" />
       <MemberSignature Language="VB.NET" Value="Finalize ()" />
       <MemberSignature Language="C++ CLI" Value="!SearchResultCollection ()" />
+      <MemberSignature Language="F#" Value="override this.Finalize : unit -&gt; unit" Usage="searchResultCollection.Finalize " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -224,12 +248,15 @@
       <MemberSignature Language="DocId" Value="M:System.DirectoryServices.SearchResultCollection.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator&#xA;override this.GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="searchResultCollection.GetEnumerator " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -250,9 +277,12 @@
       <MemberSignature Language="DocId" Value="P:System.DirectoryServices.SearchResultCollection.Handle" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Handle As IntPtr" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property IntPtr Handle { IntPtr get(); };" />
+      <MemberSignature Language="F#" Value="member this.Handle : nativeint" Usage="System.DirectoryServices.SearchResultCollection.Handle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -260,15 +290,15 @@
         <ReturnType>System.IntPtr</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the handle that is returned by the [IDirectorySearch::ExecuteSearch](http://msdn.microsoft.com/library/default.asp?url=/library/adsi/adsi/idirectorysearch_executesearch.asp) method that performs the actual search. For more information, see the [IDirectorySearch::ExecuteSearch](http://msdn.microsoft.com/library/default.asp?url=/library/adsi/adsi/idirectorysearch_executesearch.asp) topic in the MSDN Library at [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).</summary>
+        <summary>Gets the handle that is returned by the <c>IDirectorySearch::ExecuteSearch</c> method that performs the actual search. For more information, see the <see href="/windows/desktop/api/iads/nf-iads-idirectorysearch-executesearch">IDirectorySearch::ExecuteSearch</see> article.</summary>
         <value>The ADS_SEARCH_HANDLE value that this collection uses.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The  <xref:System.DirectoryServices.DirectorySearcher> that created this collection calls the [IDirectorySearch::ExecuteSearch](http://msdn.microsoft.com/library/default.asp?url=/library/adsi/adsi/idirectorysearch_executesearch.asp) method, which makes the query results available to the T:System.DirectoryServices.SearchResultCollection object. For more information, see the [IDirectorySearch::ExecuteSearch](http://msdn.microsoft.com/library/default.asp?url=/library/adsi/adsi/idirectorysearch_executesearch.asp) topic in the MSDN Library at [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).  
+ The  <xref:System.DirectoryServices.DirectorySearcher> that created this collection calls the `IDirectorySearch::ExecuteSearch` method, which makes the query results available to the <xref:System.DirectoryServices.SearchResultCollection> object. For more information, see the [IDirectorySearch::ExecuteSearch](/windows/desktop/api/iads/nf-iads-idirectorysearch-executesearch) article.  
   
- Each time that a query is performed, a handle for the results of that query is associated with its  <xref:System.DirectoryServices.SearchResultCollection> object. This handle corresponds to the search handle in ADSI. This handle persists until you call the <xref:System.DirectoryServices.SearchResultCollection.Dispose> method on the <xref:System.DirectoryServices.SearchResultCollection> object, so you must call <xref:System.DirectoryServices.SearchResultCollection.Dispose> to prevent a memory leak. The garbage collector does not free memory for this particular object.  
+ Each time that a query is performed, a handle for the results of that query is associated with its <xref:System.DirectoryServices.SearchResultCollection> object. This handle corresponds to the search handle in ADSI. This handle persists until you call the <xref:System.DirectoryServices.SearchResultCollection.Dispose> method on the <xref:System.DirectoryServices.SearchResultCollection> object, so you must call <xref:System.DirectoryServices.SearchResultCollection.Dispose> to prevent a memory leak. The garbage collector does not free memory for this particular object.  
   
  ]]></format>
         </remarks>
@@ -280,9 +310,12 @@
       <MemberSignature Language="DocId" Value="M:System.DirectoryServices.SearchResultCollection.IndexOf(System.DirectoryServices.SearchResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function IndexOf (result As SearchResult) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; int IndexOf(System::DirectoryServices::SearchResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.IndexOf : System.DirectoryServices.SearchResult -&gt; int" Usage="searchResultCollection.IndexOf result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -305,9 +338,12 @@
       <MemberSignature Language="DocId" Value="P:System.DirectoryServices.SearchResultCollection.Item(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(index As Integer) As SearchResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::DirectoryServices::SearchResult ^ default[int] { System::DirectoryServices::SearchResult ^ get(int index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : System.DirectoryServices.SearchResult" Usage="System.DirectoryServices.SearchResultCollection.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -339,9 +375,12 @@
       <MemberSignature Language="DocId" Value="P:System.DirectoryServices.SearchResultCollection.PropertiesLoaded" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PropertiesLoaded As String()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;System::String ^&gt; ^ PropertiesLoaded { cli::array &lt;System::String ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.PropertiesLoaded : string[]" Usage="System.DirectoryServices.SearchResultCollection.PropertiesLoaded" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -365,6 +404,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -377,7 +418,7 @@
       </Parameters>
       <Docs>
         <param name="array">The one-dimensional <see cref="T:System.Array" /> that is the destination of the elements copied from <see cref="T:System.Collections.ICollection" />. The <see cref="T:System.Array" /> must have zero-based indexing.</param>
-        <param name="index">The zero-based index in <c>array</c> at which copying begins.</param>
+        <param name="index">The zero-based index in <paramref name="array" /> at which copying begins.</param>
         <summary>Copies the elements of the <see cref="T:System.Collections.ICollection" /> to an <see cref="T:System.Array" />, starting at a particular <see cref="T:System.Array" /> index.</summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -398,13 +439,15 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
       <MemberSignature Language="DocId" Value="P:System.DirectoryServices.SearchResultCollection.System#Collections#ICollection#IsSynchronized" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property IsSynchronized As Boolean Implements ICollection.IsSynchronized" />
-      <MemberSignature Language="C++ CLI" Value="property bool System.Collections.ICollection.IsSynchronized { bool get(); };" />
+      <MemberSignature Language="C++ CLI" Value="property bool System::Collections::ICollection::IsSynchronized { bool get(); };" />
+      <MemberSignature Language="F#" Usage="System.Collections.ICollection.IsSynchronized" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.ICollection.IsSynchronized</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -458,13 +501,15 @@ Dim myCollection As New ICollection()
       <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
       <MemberSignature Language="DocId" Value="P:System.DirectoryServices.SearchResultCollection.System#Collections#ICollection#SyncRoot" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property SyncRoot As Object Implements ICollection.SyncRoot" />
-      <MemberSignature Language="C++ CLI" Value="property System::Object ^ System.Collections.ICollection.SyncRoot { System::Object ^ get(); };" />
+      <MemberSignature Language="C++ CLI" Value="property System::Object ^ System::Collections::ICollection::SyncRoot { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Usage="System.Collections.ICollection.SyncRoot" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.ICollection.SyncRoot</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
       </AssemblyInfo>

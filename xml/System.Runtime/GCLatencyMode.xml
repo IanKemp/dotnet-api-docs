@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Runtime.GCLatencyMode" />
   <TypeSignature Language="VB.NET" Value="Public Enum GCLatencyMode" />
   <TypeSignature Language="C++ CLI" Value="public enum class GCLatencyMode" />
+  <TypeSignature Language="F#" Value="type GCLatencyMode = " />
   <AssemblyInfo>
     <AssemblyName>System.Runtime</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -15,6 +16,7 @@
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.0.5.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
@@ -25,18 +27,26 @@
   <Base>
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
+  <Attributes>
+    <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
+      <AttributeName>System.Serializable</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>Adjusts the time that the garbage collector intrudes in your application.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- You can adjust the intrusiveness of garbage collection in your application by setting the <xref:System.Runtime.GCSettings.LatencyMode%2A> property to any <xref:System.Runtime.GCLatencyMode> enumeration value except NoGCRegion. You can also determine the garbage collector's current latency mode by retrieving the <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> property value.  
+ You can adjust the intrusiveness of garbage collection in your application by setting the <xref:System.Runtime.GCSettings.LatencyMode%2A> property to any <xref:System.Runtime.GCLatencyMode> enumeration value except `GCLatencyMode.NoGCRegion`. You can also determine the garbage collector's current latency mode by retrieving the <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> property value.  
   
  See [Latency Modes](~/docs/standard/garbage-collection/latency.md) for a discussion of how the runtime configuration settings for garbage collection affect the default value for this enumeration.  
-  
+
+The <xref:System.Runtime.GCLatencyMode.Batch?displayProperty=nameWithType> mode overrides the [\<gcConcurrent>](~/docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) runtime configuration setting. If concurrent garbage collection is enabled by the [\<gcConcurrent>](~/docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) element, switching to Batch mode prevents any further concurrent collections.    
+
  ]]></format>
     </remarks>
+    <related type="Article" href="https://msdn.microsoft.com/library/96278bb7-6eab-4612-8594-ceebfc887d81">Latency Modes</related>
   </Docs>
   <Members>
     <Member MemberName="Batch">
@@ -45,6 +55,7 @@
       <MemberSignature Language="DocId" Value="F:System.Runtime.GCLatencyMode.Batch" />
       <MemberSignature Language="VB.NET" Value="Batch" />
       <MemberSignature Language="C++ CLI" Value="Batch" />
+      <MemberSignature Language="F#" Value="Batch = 0" Usage="System.Runtime.GCLatencyMode.Batch" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -57,6 +68,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -69,17 +81,7 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>Disables garbage collection concurrency and reclaims objects in a batch call. This is the most intrusive mode.</summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This mode is designed for maximum throughput at the expense of responsiveness.  
-  
- This mode overrides the  runtime configuration setting. If  is enabled, switching to Batch mode prevents any further concurrent collections.  
-  
- ]]></format>
-        </remarks>
+        <summary>Disables garbage collection concurrency and reclaims objects in a batch call. This is the most intrusive mode. This mode is designed for maximum throughput at the expense of responsiveness.</summary>
       </Docs>
     </Member>
     <Member MemberName="Interactive">
@@ -88,6 +90,7 @@
       <MemberSignature Language="DocId" Value="F:System.Runtime.GCLatencyMode.Interactive" />
       <MemberSignature Language="VB.NET" Value="Interactive" />
       <MemberSignature Language="C++ CLI" Value="Interactive" />
+      <MemberSignature Language="F#" Value="Interactive = 1" Usage="System.Runtime.GCLatencyMode.Interactive" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -100,6 +103,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -112,15 +116,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>Enables garbage collection concurrency and reclaims objects while the application is running. This is the default mode for garbage collection on a workstation and is less intrusive than <see cref="F:System.Runtime.GCLatencyMode.Batch" />. It balances responsiveness with throughput.</summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This mode is equivalent to garbage collection on a workstation that is concurrent.  
-  
- ]]></format>
-        </remarks>
+        <summary>Enables garbage collection concurrency and reclaims objects while the application is running. This is the default mode for garbage collection on a workstation and is less intrusive than <see cref="F:System.Runtime.GCLatencyMode.Batch" />. It balances responsiveness with throughput. This mode is equivalent to garbage collection on a workstation that is concurrent. </summary>
       </Docs>
     </Member>
     <Member MemberName="LowLatency">
@@ -129,6 +125,7 @@
       <MemberSignature Language="DocId" Value="F:System.Runtime.GCLatencyMode.LowLatency" />
       <MemberSignature Language="VB.NET" Value="LowLatency" />
       <MemberSignature Language="C++ CLI" Value="LowLatency" />
+      <MemberSignature Language="F#" Value="LowLatency = 2" Usage="System.Runtime.GCLatencyMode.LowLatency" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -141,6 +138,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -153,15 +151,7 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>Enables garbage collection that is more conservative in reclaiming objects. Full collections occur only if the system is under memory pressure, whereas generation 0 and generation 1 collections might occur more frequently</summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- This mode is not available for the server garbage collector.  
-  
- ]]></format>
-        </remarks>
+        <summary>Enables garbage collection that is more conservative in reclaiming objects. Full collections occur only if the system is under memory pressure, whereas generation 0 and generation 1 collections might occur more frequently. This mode is not available for the server garbage collector.</summary>
       </Docs>
     </Member>
     <Member MemberName="NoGCRegion">
@@ -170,6 +160,7 @@
       <MemberSignature Language="DocId" Value="F:System.Runtime.GCLatencyMode.NoGCRegion" />
       <MemberSignature Language="VB.NET" Value="NoGCRegion" />
       <MemberSignature Language="C++ CLI" Value="NoGCRegion" />
+      <MemberSignature Language="F#" Value="NoGCRegion = 4" Usage="System.Runtime.GCLatencyMode.NoGCRegion" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -201,6 +192,7 @@
       <MemberSignature Language="DocId" Value="F:System.Runtime.GCLatencyMode.SustainedLowLatency" />
       <MemberSignature Language="VB.NET" Value="SustainedLowLatency" />
       <MemberSignature Language="C++ CLI" Value="SustainedLowLatency" />
+      <MemberSignature Language="F#" Value="SustainedLowLatency = 3" Usage="System.Runtime.GCLatencyMode.SustainedLowLatency" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>

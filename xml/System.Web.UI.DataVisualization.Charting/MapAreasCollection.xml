@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.MapAreasCollection" />
   <TypeSignature Language="VB.NET" Value="Public Class MapAreasCollection&#xA;Inherits ChartElementCollection(Of MapArea)" />
   <TypeSignature Language="C++ CLI" Value="public ref class MapAreasCollection : System::Web::UI::DataVisualization::Charting::ChartElementCollection&lt;System::Web::UI::DataVisualization::Charting::MapArea ^&gt;" />
+  <TypeSignature Language="F#" Value="type MapAreasCollection = class&#xA;    inherit ChartElementCollection&lt;MapArea&gt;" />
   <AssemblyInfo>
     <AssemblyName>System.Web.DataVisualization</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -31,7 +32,8 @@
   
  A client-side image map will only be created at run time if the <xref:System.Web.UI.DataVisualization.Charting.Chart.IsMapEnabled%2A> property of the root <xref:System.Web.UI.DataVisualization.Charting.Chart> object is `true`. This is the default.  
   
- **Important** To create an image map using the previously described <xref:System.Web.UI.DataVisualization.Charting.MapArea> objects, the <xref:System.Web.UI.DataVisualization.Charting.Chart.RenderType%2A> property of the <xref:System.Web.UI.DataVisualization.Charting.Chart> object must be set to <xref:System.Web.UI.DataVisualization.Charting.RenderType.ImageTag>. It is possible to create an image map when using binary streaming, but a special technique must be used.  
+ > [!IMPORTANT] 
+ > To create an image map using the previously described <xref:System.Web.UI.DataVisualization.Charting.MapArea> objects, the <xref:System.Web.UI.DataVisualization.Charting.Chart.RenderType%2A> property of the <xref:System.Web.UI.DataVisualization.Charting.Chart> object must be set to <xref:System.Web.UI.DataVisualization.Charting.RenderType.ImageTag>. It is possible to create an image map when using binary streaming, but a special technique must be used.  
   
  ]]></format>
     </remarks>

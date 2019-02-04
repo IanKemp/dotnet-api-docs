@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Data.Design.TypedDataSetGenerator.GenerateOption" />
   <TypeSignature Language="VB.NET" Value="Public Enum TypedDataSetGenerator.GenerateOption" />
   <TypeSignature Language="C++ CLI" Value="public: enum class TypedDataSetGenerator::GenerateOption" />
+  <TypeSignature Language="F#" Value="type TypedDataSetGenerator.GenerateOption = " />
   <AssemblyInfo>
     <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -29,7 +31,7 @@
 > [!NOTE]
 >  LINQ to DataSet and hierarchical update are features that were added in [!INCLUDE[vs_orcas_long](~/includes/vs-orcas-long-md.md)].  
 >   
->  Also see [Hierarchical Update Overview](http://msdn.microsoft.com/library/c4f8e8b9-e4a5-4a02-8462-d03d1e8222d6).  
+>  Also see [Hierarchical Update Overview](https://msdn.microsoft.com/library/c4f8e8b9-e4a5-4a02-8462-d03d1e8222d6).  
   
  ]]></format>
     </remarks>
@@ -41,9 +43,11 @@
       <MemberSignature Language="DocId" Value="F:System.Data.Design.TypedDataSetGenerator.GenerateOption.HierarchicalUpdate" />
       <MemberSignature Language="VB.NET" Value="HierarchicalUpdate" />
       <MemberSignature Language="C++ CLI" Value="HierarchicalUpdate" />
+      <MemberSignature Language="F#" Value="HierarchicalUpdate = 1" Usage="System.Data.Design.TypedDataSetGenerator.GenerateOption.HierarchicalUpdate" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -60,9 +64,11 @@
       <MemberSignature Language="DocId" Value="F:System.Data.Design.TypedDataSetGenerator.GenerateOption.LinqOverTypedDatasets" />
       <MemberSignature Language="VB.NET" Value="LinqOverTypedDatasets" />
       <MemberSignature Language="C++ CLI" Value="LinqOverTypedDatasets" />
+      <MemberSignature Language="F#" Value="LinqOverTypedDatasets = 2" Usage="System.Data.Design.TypedDataSetGenerator.GenerateOption.LinqOverTypedDatasets" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -79,9 +85,11 @@
       <MemberSignature Language="DocId" Value="F:System.Data.Design.TypedDataSetGenerator.GenerateOption.None" />
       <MemberSignature Language="VB.NET" Value="None" />
       <MemberSignature Language="C++ CLI" Value="None" />
+      <MemberSignature Language="F#" Value="None = 0" Usage="System.Data.Design.TypedDataSetGenerator.GenerateOption.None" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

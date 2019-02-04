@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Interop.ComponentDispatcher" />
   <TypeSignature Language="VB.NET" Value="Public Class ComponentDispatcher" />
   <TypeSignature Language="C++ CLI" Value="public ref class ComponentDispatcher abstract sealed" />
+  <TypeSignature Language="F#" Value="type ComponentDispatcher = class" />
   <AssemblyInfo>
     <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -22,7 +24,7 @@
   
  The methods are static but they are backed by per-thread data structures.  The static methods allow singleton access but the <xref:System.Windows.Interop.ComponentDispatcher> is sorting out the appropriate per-thread operations.  
   
- The owner of the message pump is defined by the code that calls the [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] function  [GetMessage](http://msdn.microsoft.com/library/ms644936.aspx). The owner calls <xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A> for every keyboard message. This method raises the <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage> event with the messages contained in the event data. If that event is not handled, the owner raises the <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> event with the messages contained in the event argument.  
+ The owner of the message pump is defined by the code that calls the [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] function  [GetMessage](https://msdn.microsoft.com/library/ms644936.aspx). The owner calls <xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A> for every keyboard message. This method raises the <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage> event with the messages contained in the event data. If that event is not handled, the owner raises the <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> event with the messages contained in the event argument.  
   
 > [!NOTE]
 >  Only keyboard messages are supported.  
@@ -39,9 +41,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Interop.ComponentDispatcher.CurrentKeyboardMessage" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property CurrentKeyboardMessage As MSG" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::Windows::Interop::MSG CurrentKeyboardMessage { System::Windows::Interop::MSG get(); };" />
+      <MemberSignature Language="F#" Value="member this.CurrentKeyboardMessage : System.Windows.Interop.MSG" Usage="System.Windows.Interop.ComponentDispatcher.CurrentKeyboardMessage" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -66,9 +70,11 @@
       <MemberSignature Language="DocId" Value="E:System.Windows.Interop.ComponentDispatcher.EnterThreadModal" />
       <MemberSignature Language="VB.NET" Value="Public Shared Custom Event EnterThreadModal As EventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static event EventHandler ^ EnterThreadModal;" />
+      <MemberSignature Language="F#" Value="member this.EnterThreadModal : EventHandler " Usage="member this.EnterThreadModal : System.EventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -97,9 +103,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Interop.ComponentDispatcher.IsThreadModal" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property IsThreadModal As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property bool IsThreadModal { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsThreadModal : bool" Usage="System.Windows.Interop.ComponentDispatcher.IsThreadModal" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -127,9 +135,11 @@
       <MemberSignature Language="DocId" Value="E:System.Windows.Interop.ComponentDispatcher.LeaveThreadModal" />
       <MemberSignature Language="VB.NET" Value="Public Shared Custom Event LeaveThreadModal As EventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static event EventHandler ^ LeaveThreadModal;" />
+      <MemberSignature Language="F#" Value="member this.LeaveThreadModal : EventHandler " Usage="member this.LeaveThreadModal : System.EventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -158,9 +168,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Interop.ComponentDispatcher.PopModal" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub PopModal ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void PopModal();" />
+      <MemberSignature Language="F#" Value="static member PopModal : unit -&gt; unit" Usage="System.Windows.Interop.ComponentDispatcher.PopModal " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -187,9 +199,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Interop.ComponentDispatcher.PushModal" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub PushModal ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void PushModal();" />
+      <MemberSignature Language="F#" Value="static member PushModal : unit -&gt; unit" Usage="System.Windows.Interop.ComponentDispatcher.PushModal " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -216,9 +230,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Interop.ComponentDispatcher.RaiseIdle" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub RaiseIdle ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void RaiseIdle();" />
+      <MemberSignature Language="F#" Value="static member RaiseIdle : unit -&gt; unit" Usage="System.Windows.Interop.ComponentDispatcher.RaiseIdle " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -244,9 +260,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage(System.Windows.Interop.MSG@)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function RaiseThreadMessage (ByRef msg As MSG) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool RaiseThreadMessage(System::Windows::Interop::MSG % msg);" />
+      <MemberSignature Language="F#" Value="static member RaiseThreadMessage :  -&gt; bool" Usage="System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage msg" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -258,13 +276,13 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="msg" Type="System.Windows.Interop.MSG&amp;" RefType="ref" />
+        <Parameter Name="msg" Type="System.Windows.Interop.MSG" RefType="ref" />
       </Parameters>
       <Docs>
         <param name="msg">The message and its associated data.</param>
         <summary>Indicates that a new message is available for possible handling.</summary>
         <returns>
-          <see langword="true" />, if one of the modules listening to the message loop processed the message. The owner of the message loop should ignore the message. <see langword="false" />, if the message was not processed. In this case, the owner of the message pump should call the [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] function [TranslateMessage](http://msdn.microsoft.com/library/ms644955.aspx) followed by [DispatchMessage](http://msdn.microsoft.com/library/ms644934.aspx).</returns>
+          <see langword="true" />, if one of the modules listening to the message loop processed the message. The owner of the message loop should ignore the message. <see langword="false" />, if the message was not processed. In this case, the owner of the message pump should call the [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] function [TranslateMessage](https://msdn.microsoft.com/library/ms644955.aspx) followed by [DispatchMessage](https://msdn.microsoft.com/library/ms644934.aspx).</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -284,9 +302,11 @@
       <MemberSignature Language="DocId" Value="E:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage" />
       <MemberSignature Language="VB.NET" Value="Public Shared Custom Event ThreadFilterMessage As ThreadMessageEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static event System::Windows::Interop::ThreadMessageEventHandler ^ ThreadFilterMessage;" />
+      <MemberSignature Language="F#" Value="member this.ThreadFilterMessage : System.Windows.Interop.ThreadMessageEventHandler " Usage="member this.ThreadFilterMessage : System.Windows.Interop.ThreadMessageEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -315,9 +335,11 @@
       <MemberSignature Language="DocId" Value="E:System.Windows.Interop.ComponentDispatcher.ThreadIdle" />
       <MemberSignature Language="VB.NET" Value="Public Shared Custom Event ThreadIdle As EventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static event EventHandler ^ ThreadIdle;" />
+      <MemberSignature Language="F#" Value="member this.ThreadIdle : EventHandler " Usage="member this.ThreadIdle : System.EventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -352,9 +374,11 @@
       <MemberSignature Language="DocId" Value="E:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage" />
       <MemberSignature Language="VB.NET" Value="Public Shared Custom Event ThreadPreprocessMessage As ThreadMessageEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static event System::Windows::Interop::ThreadMessageEventHandler ^ ThreadPreprocessMessage;" />
+      <MemberSignature Language="F#" Value="member this.ThreadPreprocessMessage : System.Windows.Interop.ThreadMessageEventHandler " Usage="member this.ThreadPreprocessMessage : System.Windows.Interop.ThreadMessageEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>

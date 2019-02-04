@@ -4,8 +4,11 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.ErrObject" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ErrObject" />
   <TypeSignature Language="C++ CLI" Value="public ref class ErrObject sealed" />
+  <TypeSignature Language="F#" Value="type ErrObject = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>7.0.5000.0</AssemblyVersion>
+    <AssemblyVersion>8.0.0.0</AssemblyVersion>
     <AssemblyVersion>10.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -42,6 +45,10 @@ End If
  ]]></format>
     </remarks>
     <altmember cref="M:Microsoft.VisualBasic.Information.Err" />
+    <related type="Article" href="~/docs/visual-basic/language-reference/statements/on-error-statement.md">On Error Statement (Visual Basic)</related>
+    <related type="Article" href="~/docs/visual-basic/language-reference/statements/try-catch-finally-statement.md">Try...Catch...Finally Statement (Visual Basic)</related>
+    <related type="Article" href="~/docs/visual-basic/language-reference/keywords/index.md">Keywords (Visual Basic)</related>
+    <related type="Article" href="~/docs/visual-basic/language-reference/runtime-library-members.md">Visual Basic Run-Time Library Members</related>
   </Docs>
   <Members>
     <Member MemberName="Clear">
@@ -50,16 +57,19 @@ End If
       <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.ErrObject.Clear" />
       <MemberSignature Language="VB.NET" Value="Public Sub Clear ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Clear();" />
+      <MemberSignature Language="F#" Value="member this.Clear : unit -&gt; unit" Usage="errObject.Clear " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>7.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
         </Attribute>
       </Attributes>
@@ -97,6 +107,7 @@ End If
         </remarks>
         <altmember cref="M:Microsoft.VisualBasic.Information.Err" />
         <altmember cref="M:Microsoft.VisualBasic.Conversion.ErrorToString" />
+        <related type="Article" href="~/docs/visual-basic/language-reference/statements/on-error-statement.md">On Error Statement (Visual Basic)</related>
       </Docs>
     </Member>
     <Member MemberName="Description">
@@ -105,9 +116,12 @@ End If
       <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.ErrObject.Description" />
       <MemberSignature Language="VB.NET" Value="Public Property Description As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Description { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Description : string with get, set" Usage="Microsoft.VisualBasic.ErrObject.Description" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>7.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -141,17 +155,25 @@ End If
       <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.ErrObject.Erl" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Erl As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Erl { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Erl : int" Usage="Microsoft.VisualBasic.ErrObject.Erl" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>7.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Returns an integer indicating the line number of the last executed statement. Read-only.</summary>
-        <value>Returns an integer indicating the line number of the last executed statement. Read-only.</value>
+        <summary>Gets an integer indicating the line number of the last executed statement.</summary>
+        <value>The line number of the last executed statement.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -182,9 +204,12 @@ End If
       <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.ErrObject.GetException" />
       <MemberSignature Language="VB.NET" Value="Public Function GetException () As Exception" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Exception ^ GetException();" />
+      <MemberSignature Language="F#" Value="member this.GetException : unit -&gt; Exception" Usage="errObject.GetException " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>7.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -193,7 +218,7 @@ End If
       <Parameters />
       <Docs>
         <summary>Returns the exception representing the error that occurred.</summary>
-        <returns>Returns the exception representing the error that occurred.</returns>
+        <returns>The exception representing the error that occurred.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -219,9 +244,12 @@ End If
       <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.ErrObject.HelpContext" />
       <MemberSignature Language="VB.NET" Value="Public Property HelpContext As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int HelpContext { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.HelpContext : int with get, set" Usage="Microsoft.VisualBasic.ErrObject.HelpContext" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>7.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -258,9 +286,12 @@ End If
       <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.ErrObject.HelpFile" />
       <MemberSignature Language="VB.NET" Value="Public Property HelpFile As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ HelpFile { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.HelpFile : string with get, set" Usage="Microsoft.VisualBasic.ErrObject.HelpFile" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>7.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -297,13 +328,16 @@ End If
       <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.ErrObject.LastDllError" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LastDllError As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int LastDllError { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.LastDllError : int" Usage="Microsoft.VisualBasic.ErrObject.LastDllError" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>7.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>get: System.Security.SecurityCritical</AttributeName>
         </Attribute>
       </Attributes>
@@ -311,8 +345,8 @@ End If
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Returns a system error code produced by a call to a dynamic-link library (DLL). Read-only.</summary>
-        <value>Returns a system error code produced by a call to a dynamic-link library (DLL). Read-only.</value>
+        <summary>Gets a system error code produced by a call to a dynamic-link library (DLL).</summary>
+        <value>A system error code produced by a call to a dynamic-link library (DLL).</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -322,7 +356,7 @@ End If
 > [!NOTE]
 >  The <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A> property is protected by <xref:System.Security.Permissions.SecurityAction.LinkDemand>, which helps prevent it from being accessed from untrusted code. However, <xref:System.Security.Permissions.SecurityAction.LinkDemand> requires only the immediate caller to have <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A> permission. If your code can be called from partially trusted code, exposing the value of <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A> without validation is a security risk.  
 >   
->  For important limitations about how to use the <xref:System.Security.Permissions.SecurityAction.LinkDemand> member, see [Demand vs. LinkDemand](http://msdn.microsoft.com/library/1ab877f2-70f4-4e0d-8116-943999dfe8f5). For more information about permissions, see <xref:System.Security.Permissions.SecurityPermission> and [Code Access Permissions](http://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).  
+>  For important limitations about how to use the <xref:System.Security.Permissions.SecurityAction.LinkDemand> member, see [Demand vs. LinkDemand](https://msdn.microsoft.com/library/1ab877f2-70f4-4e0d-8116-943999dfe8f5). For more information about permissions, see <xref:System.Security.Permissions.SecurityPermission> and [Code Access Permissions](https://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).  
   
  Note   For smart devices this property always returns zero.  
   
@@ -349,9 +383,12 @@ End If
       <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.ErrObject.Number" />
       <MemberSignature Language="VB.NET" Value="Public Property Number As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Number { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.Number : int with get, set" Usage="Microsoft.VisualBasic.ErrObject.Number" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>7.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -396,9 +433,12 @@ End If
       <MemberSignature Language="ILAsm" Value=".method public instance void Raise(int32 Number, object Source, object Description, object HelpFile, object HelpContext) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.ErrObject.Raise(System.Int32,System.Object,System.Object,System.Object,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Raise (Number As Integer, Optional Source As Object = null, Optional Description As Object = null, Optional HelpFile As Object = null, Optional HelpContext As Object = null)" />
+      <MemberSignature Language="F#" Value="member this.Raise : int * obj * obj * obj * obj -&gt; unit" Usage="errObject.Raise (Number, Source, Description, HelpFile, HelpContext)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>7.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -412,11 +452,11 @@ End If
         <Parameter Name="HelpContext" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Number">Required. <see langword="Long" /> integer that identifies the nature of the error. Visual Basic errors are in the range 0–65535; the range 0–512 is reserved for system errors; the range 513–65535 is available for user-defined errors. When setting the <see langword="Number" /> property to your own error code in a class module, you add your error code number to the <see langword="vbObjectError" /> constant. For example, to generate the error number 513, assign <c>vbObjectError + 513</c> to the <see langword="Number" /> property.</param>
-        <param name="Source">Optional. <see langword="String" /> expression naming the object or application that generated the error. When setting this property for an object, use the form <c>project</c>.<c>class</c>. If <c>Source</c> is not specified, the process ID of the current Visual Basic project is used.</param>
+        <param name="Number">Required. <see langword="Long" /> integer that identifies the nature of the error. Visual Basic errors are in the range 0-65535; the range 0-512 is reserved for system errors; the range 513-65535 is available for user-defined errors. When setting the <see langword="Number" /> property to your own error code in a class module, you add your error code number to the <see langword="vbObjectError" /> constant. For example, to generate the error number 513, assign <c>vbObjectError + 513</c> to the <see langword="Number" /> property.</param>
+        <param name="Source">Optional. <see langword="String" /> expression naming the object or application that generated the error. When setting this property for an object, use the form <c>project</c>.<c>class</c>. If <paramref name="Source" /> is not specified, the process ID of the current Visual Basic project is used.</param>
         <param name="Description">Optional. <see langword="String" /> expression describing the error. If unspecified, the value in the <see langword="Number" /> property is examined. If it can be mapped to a Visual Basic run-time error code, the string that would be returned by the <see langword="Error" /> function is used as the <see langword="Description" /> property. If there is no Visual Basic error corresponding to the <see langword="Number" /> property, the "Application-defined or object-defined error" message is used.</param>
         <param name="HelpFile">Optional. The fully qualified path to the Help file in which help on this error can be found. If unspecified, Visual Basic uses the fully qualified drive, path, and file name of the Visual Basic Help file.</param>
-        <param name="HelpContext">Optional. The context ID identifying a topic within <c>HelpFile</c> that provides help for the error. If omitted, the Visual Basic Help-file context ID for the error corresponding to the <see langword="Number" /> property is used, if it exists.</param>
+        <param name="HelpContext">Optional. The context ID identifying a topic within <paramref name="HelpFile" /> that provides help for the error. If omitted, the Visual Basic Help-file context ID for the error corresponding to the <see langword="Number" /> property is used, if it exists.</param>
         <summary>Generates a run-time error; can be used instead of the <see langword="Error" /> statement.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -438,6 +478,8 @@ End If
         <altmember cref="M:Microsoft.VisualBasic.Information.Err" />
         <altmember cref="M:Microsoft.VisualBasic.Conversion.ErrorToString" />
         <altmember cref="T:System.ArgumentException" />
+        <related type="Article" href="~/docs/visual-basic/language-reference/statements/error-statement.md">Error Statement</related>
+        <related type="Article" href="~/docs/visual-basic/language-reference/statements/on-error-statement.md">On Error Statement (Visual Basic)</related>
       </Docs>
     </Member>
     <Member MemberName="Source">
@@ -446,9 +488,12 @@ End If
       <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.ErrObject.Source" />
       <MemberSignature Language="VB.NET" Value="Public Property Source As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Source { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Source : string with get, set" Usage="Microsoft.VisualBasic.ErrObject.Source" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>7.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>8.0.0.0</AssemblyVersion>
         <AssemblyVersion>10.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -476,6 +521,7 @@ End If
         </remarks>
         <altmember cref="M:Microsoft.VisualBasic.Information.Err" />
         <altmember cref="M:Microsoft.VisualBasic.Conversion.ErrorToString" />
+        <related type="Article" href="~/docs/visual-basic/language-reference/statements/on-error-statement.md">On Error Statement (Visual Basic)</related>
       </Docs>
     </Member>
   </Members>

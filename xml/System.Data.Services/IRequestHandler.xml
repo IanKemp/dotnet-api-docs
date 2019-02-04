@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Data.Services.IRequestHandler" />
   <TypeSignature Language="VB.NET" Value="Public Interface IRequestHandler" />
   <TypeSignature Language="C++ CLI" Value="public interface class IRequestHandler" />
+  <TypeSignature Language="F#" Value="type IRequestHandler = interface" />
   <AssemblyInfo>
     <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
@@ -25,9 +27,11 @@
       <MemberSignature Language="DocId" Value="M:System.Data.Services.IRequestHandler.ProcessRequestForMessage(System.IO.Stream)" />
       <MemberSignature Language="VB.NET" Value="Public Function ProcessRequestForMessage (messageBody As Stream) As Message" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::ServiceModel::Channels::Message ^ ProcessRequestForMessage(System::IO::Stream ^ messageBody);" />
+      <MemberSignature Language="F#" Value="abstract member ProcessRequestForMessage : System.IO.Stream -&gt; System.ServiceModel.Channels.Message" Usage="iRequestHandler.ProcessRequestForMessage messageBody" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>

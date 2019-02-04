@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Linq.IQueryable`1" />
   <TypeSignature Language="VB.NET" Value="Public Interface IQueryable(Of Out T)&#xA;Implements IEnumerable(Of Out T), IQueryable" />
   <TypeSignature Language="C++ CLI" Value="generic &lt;typename T&gt;&#xA;public interface class IQueryable : System::Collections::Generic::IEnumerable&lt;T&gt;, System::Linq::IQueryable" />
+  <TypeSignature Language="F#" Value="type IQueryable&lt;'T&gt; = interface&#xA;    interface seq&lt;'T&gt;&#xA;    interface IQueryable&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>System.Linq.Expressions</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -15,6 +16,7 @@
   <AssemblyInfo>
     <AssemblyName>System.Core</AssemblyName>
     <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
@@ -31,6 +33,9 @@
   <Interfaces>
     <Interface>
       <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
     </Interface>
     <Interface>
       <InterfaceName>System.Linq.IQueryable</InterfaceName>
@@ -53,7 +58,7 @@
   
  The `static` (`Shared` in Visual Basic) methods defined in the class <xref:System.Linq.Queryable> (except for <xref:System.Linq.Queryable.AsQueryable%2A>, <xref:System.Linq.Queryable.ThenBy%2A>, and <xref:System.Linq.Queryable.ThenByDescending%2A>) extend objects of types that implement the <xref:System.Linq.IQueryable%601> interface.  
   
- For more information about how to create your own LINQ provider, see [LINQ: Building an IQueryable Provider](http://go.microsoft.com/fwlink/?LinkID=112370) on MSDN Blogs.  
+ For more information about how to create your own LINQ provider, see [LINQ: Building an IQueryable Provider](https://go.microsoft.com/fwlink/?LinkID=112370) on MSDN Blogs.  
   
  ]]></format>
     </remarks>

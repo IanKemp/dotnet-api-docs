@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.XamlTypes.StringListProperty" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class StringListProperty&#xA;Inherits BaseProperty" />
   <TypeSignature Language="C++ CLI" Value="public ref class StringListProperty sealed : Microsoft::Build::Framework::XamlTypes::BaseProperty" />
+  <TypeSignature Language="F#" Value="type StringListProperty = class&#xA;    inherit BaseProperty" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Framework</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -47,17 +48,26 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.StringListProperty.CommandLineValueSeparator" />
       <MemberSignature Language="VB.NET" Value="Public Property CommandLineValueSeparator As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ CommandLineValueSeparator { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.CommandLineValueSeparator : string with get, set" Usage="Microsoft.Build.Framework.XamlTypes.StringListProperty.CommandLineValueSeparator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the separator to use in delineating individual values of this string list property</summary>
-        <value>Returns the separator.</value>
+        <value>The separator.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -74,17 +84,26 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.StringListProperty.RendererValueSeparator" />
       <MemberSignature Language="VB.NET" Value="Public Property RendererValueSeparator As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ RendererValueSeparator { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.RendererValueSeparator : string with get, set" Usage="Microsoft.Build.Framework.XamlTypes.StringListProperty.RendererValueSeparator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the UI rendering separator. This property is deprecated.</summary>
-        <value>Returns the UI rendering separator. This property is deprecated.</value>
+        <value>The UI rendering separator. This property is deprecated.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -94,17 +113,26 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.StringListProperty.Subtype" />
       <MemberSignature Language="VB.NET" Value="Public Property Subtype As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Subtype { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Subtype : string with get, set" Usage="Microsoft.Build.Framework.XamlTypes.StringListProperty.Subtype" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Framework</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Qualifies this string property to give it a more specific classification.</summary>
-        <value>Returns the property subtype.</value>
+        <value>The property subtype.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   

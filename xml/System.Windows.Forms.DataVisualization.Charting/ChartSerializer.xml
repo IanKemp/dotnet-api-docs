@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.ChartSerializer" />
   <TypeSignature Language="VB.NET" Value="Public Class ChartSerializer" />
   <TypeSignature Language="C++ CLI" Value="public ref class ChartSerializer" />
+  <TypeSignature Language="F#" Value="type ChartSerializer = class" />
   <AssemblyInfo>
     <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -58,6 +59,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content" />
       <MemberSignature Language="VB.NET" Value="Public Property Content As SerializationContents" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Forms::DataVisualization::Charting::SerializationContents Content { System::Windows::Forms::DataVisualization::Charting::SerializationContents get(); void set(System::Windows::Forms::DataVisualization::Charting::SerializationContents value); };" />
+      <MemberSignature Language="F#" Value="member this.Content : System.Windows.Forms.DataVisualization.Charting.SerializationContents with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -66,6 +68,9 @@
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Windows.Forms.DataVisualization.Charting.SerializationContents), "Default")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -80,7 +85,8 @@
 ## Remarks  
  By default, all chart properties will be serialized when any of the `Save` and `Load` methods are called. To provide more control over what is serialized, use the <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> property. Note that the <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> and <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.NonSerializableContent%2A> properties can also be used along with the <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> property.  
   
- **Important** The <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> property determines types of chart characteristics, such as "appearance", to be serialized, and is actually implemented internally as the <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> property. This means that setting the <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> property and then setting the <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> property will result in the <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> property value being overridden, unless <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> is concatenated. See the sample code below for an example of this procedure.  
+ > [!IMPORTANT] 
+ > The <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> property determines types of chart characteristics, such as "appearance", to be serialized, and is actually implemented internally as the <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> property. This means that setting the <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> property and then setting the <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> property will result in the <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> property value being overridden, unless <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent%2A> is concatenated. See the sample code below for an example of this procedure.  
   
  If you set the <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Content%2A> property, all <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea> and <xref:System.Windows.Forms.DataVisualization.Charting.Series> objects names will automatically be serialized; this means that serialized data that pertains to chart areas and series will be applied to existing objects when loaded.  
   
@@ -96,6 +102,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Format" />
       <MemberSignature Language="VB.NET" Value="Public Property Format As SerializationFormat" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Forms::DataVisualization::Charting::SerializationFormat Format { System::Windows::Forms::DataVisualization::Charting::SerializationFormat get(); void set(System::Windows::Forms::DataVisualization::Charting::SerializationFormat value); };" />
+      <MemberSignature Language="F#" Value="member this.Format : System.Windows.Forms.DataVisualization.Charting.SerializationFormat with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Format" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -104,6 +111,9 @@
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Windows.Forms.DataVisualization.Charting.SerializationFormat), "Xml")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -130,6 +140,7 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.GetContentString(System.Windows.Forms.DataVisualization.Charting.SerializationContents,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Function GetContentString (content As SerializationContents, serializable As Boolean) As String" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; System::String ^ GetContentString(System::Windows::Forms::DataVisualization::Charting::SerializationContents content, bool serializable);" />
+      <MemberSignature Language="F#" Value="member this.GetContentString : System.Windows.Forms.DataVisualization.Charting.SerializationContents * bool -&gt; string" Usage="chartSerializer.GetContentString (content, serializable)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -145,7 +156,7 @@
       <Docs>
         <param name="content">The serializable content.</param>
         <param name="serializable">
-          <see langword="True" /> to get a serializable string; <see langword="false" /> to get a non-serializable string.</param>
+          <see langword="true" /> to get a serializable string; <see langword="false" /> to get a non-serializable string.</param>
         <summary>Returns a serializable or non-serializable class and/or property names, depending on the specific flag value.</summary>
         <returns>A <see langword="string" /> value that represents the serializable or non-serializable class and/or property names.</returns>
         <remarks>To be added.</remarks>
@@ -157,6 +168,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.IsResetWhenLoading" />
       <MemberSignature Language="VB.NET" Value="Public Property IsResetWhenLoading As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsResetWhenLoading { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsResetWhenLoading : bool with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.ChartSerializer.IsResetWhenLoading" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -173,7 +185,7 @@
       <Docs>
         <summary>Gets or sets a flag that indicates whether object properties are reset to default values before loading.</summary>
         <value>
-          <see langword="True" /> if object properties are reset to default values before loading; otherwise, <see langword="False" />.</value>
+          <see langword="true" /> if object properties are reset to default values before loading; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -183,6 +195,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.IsTemplateMode" />
       <MemberSignature Language="VB.NET" Value="Public Property IsTemplateMode As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsTemplateMode { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsTemplateMode : bool with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.ChartSerializer.IsTemplateMode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -199,7 +212,7 @@
       <Docs>
         <summary>Gets or sets a flag that indicates whether the chart serializer is working in template-creation mode.</summary>
         <value>
-          <see langword="True" /> if the chart serializer is working in template-creation mode; otherwise, <see langword="False" />.</value>
+          <see langword="true" /> if the chart serializer is working in template-creation mode; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -209,6 +222,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.IsUnknownAttributeIgnored" />
       <MemberSignature Language="VB.NET" Value="Public Property IsUnknownAttributeIgnored As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsUnknownAttributeIgnored { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsUnknownAttributeIgnored : bool with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.ChartSerializer.IsUnknownAttributeIgnored" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -225,7 +239,7 @@
       <Docs>
         <summary>Gets or sets a flag that indicates whether unknown XML properties and elements will be ignored without throwing an exception.</summary>
         <value>
-          <see langword="True" /> if unknown XML properties and elements are ignored without throwing an exception; otherwise, <see langword="False" />.</value>
+          <see langword="true" /> if unknown XML properties and elements are ignored without throwing an exception; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -243,6 +257,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Load(class System.IO.Stream stream) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Load(System.IO.Stream)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Load(System::IO::Stream ^ stream);" />
+      <MemberSignature Language="F#" Value="member this.Load : System.IO.Stream -&gt; unit" Usage="chartSerializer.Load stream" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -279,6 +294,7 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Load(System.IO.TextReader)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Load (reader As TextReader)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Load(System::IO::TextReader ^ reader);" />
+      <MemberSignature Language="F#" Value="member this.Load : System.IO.TextReader -&gt; unit" Usage="chartSerializer.Load reader" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -315,6 +331,7 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Load(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Load (fileName As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Load(System::String ^ fileName);" />
+      <MemberSignature Language="F#" Value="member this.Load : string -&gt; unit" Usage="chartSerializer.Load fileName" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -351,6 +368,7 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Load(System.Xml.XmlReader)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Load (reader As XmlReader)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Load(System::Xml::XmlReader ^ reader);" />
+      <MemberSignature Language="F#" Value="member this.Load : System.Xml.XmlReader -&gt; unit" Usage="chartSerializer.Load reader" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -389,6 +407,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.NonSerializableContent" />
       <MemberSignature Language="VB.NET" Value="Public Property NonSerializableContent As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ NonSerializableContent { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.NonSerializableContent : string with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.ChartSerializer.NonSerializableContent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -429,6 +448,7 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Reset" />
       <MemberSignature Language="VB.NET" Value="Public Sub Reset ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Reset();" />
+      <MemberSignature Language="F#" Value="member this.Reset : unit -&gt; unit" Usage="chartSerializer.Reset " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -468,6 +488,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(class System.IO.Stream stream) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Save(System.IO.Stream)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Save(System::IO::Stream ^ stream);" />
+      <MemberSignature Language="F#" Value="member this.Save : System.IO.Stream -&gt; unit" Usage="chartSerializer.Save stream" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -506,6 +527,7 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Save(System.IO.TextWriter)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Save (writer As TextWriter)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Save(System::IO::TextWriter ^ writer);" />
+      <MemberSignature Language="F#" Value="member this.Save : System.IO.TextWriter -&gt; unit" Usage="chartSerializer.Save writer" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -538,6 +560,7 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Save(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Save (fileName As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Save(System::String ^ fileName);" />
+      <MemberSignature Language="F#" Value="member this.Save : string -&gt; unit" Usage="chartSerializer.Save fileName" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -580,6 +603,7 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Save(System.Xml.XmlWriter)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Save (writer As XmlWriter)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Save(System::Xml::XmlWriter ^ writer);" />
+      <MemberSignature Language="F#" Value="member this.Save : System.Xml.XmlWriter -&gt; unit" Usage="chartSerializer.Save writer" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -614,6 +638,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent" />
       <MemberSignature Language="VB.NET" Value="Public Property SerializableContent As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ SerializableContent { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.SerializableContent : string with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.ChartSerializer.SerializableContent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>

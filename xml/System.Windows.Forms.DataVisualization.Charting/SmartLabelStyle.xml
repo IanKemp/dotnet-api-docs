@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle" />
   <TypeSignature Language="VB.NET" Value="Public Class SmartLabelStyle" />
   <TypeSignature Language="C++ CLI" Value="public ref class SmartLabelStyle" />
+  <TypeSignature Language="F#" Value="type SmartLabelStyle = class" />
   <AssemblyInfo>
     <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -77,6 +78,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.AllowOutsidePlotArea" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property AllowOutsidePlotArea As LabelOutsidePlotAreaStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Windows::Forms::DataVisualization::Charting::LabelOutsidePlotAreaStyle AllowOutsidePlotArea { System::Windows::Forms::DataVisualization::Charting::LabelOutsidePlotAreaStyle get(); void set(System::Windows::Forms::DataVisualization::Charting::LabelOutsidePlotAreaStyle value); };" />
+      <MemberSignature Language="F#" Value="member this.AllowOutsidePlotArea : System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.AllowOutsidePlotArea" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -88,6 +90,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -105,6 +110,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.CalloutBackColor" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property CalloutBackColor As Color" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Drawing::Color CalloutBackColor { System::Drawing::Color get(); void set(System::Drawing::Color value); };" />
+      <MemberSignature Language="F#" Value="member this.CalloutBackColor : System.Drawing.Color with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.CalloutBackColor" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -117,11 +123,17 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Transparent")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -146,6 +158,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.CalloutLineAnchorCapStyle" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property CalloutLineAnchorCapStyle As LineAnchorCapStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Windows::Forms::DataVisualization::Charting::LineAnchorCapStyle CalloutLineAnchorCapStyle { System::Windows::Forms::DataVisualization::Charting::LineAnchorCapStyle get(); void set(System::Windows::Forms::DataVisualization::Charting::LineAnchorCapStyle value); };" />
+      <MemberSignature Language="F#" Value="member this.CalloutLineAnchorCapStyle : System.Windows.Forms.DataVisualization.Charting.LineAnchorCapStyle with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.CalloutLineAnchorCapStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -157,6 +170,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -174,6 +190,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.CalloutLineColor" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property CalloutLineColor As Color" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Drawing::Color CalloutLineColor { System::Drawing::Color get(); void set(System::Drawing::Color value); };" />
+      <MemberSignature Language="F#" Value="member this.CalloutLineColor : System.Drawing.Color with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.CalloutLineColor" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -186,11 +203,17 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Black")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -208,6 +231,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.CalloutLineDashStyle" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property CalloutLineDashStyle As ChartDashStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Windows::Forms::DataVisualization::Charting::ChartDashStyle CalloutLineDashStyle { System::Windows::Forms::DataVisualization::Charting::ChartDashStyle get(); void set(System::Windows::Forms::DataVisualization::Charting::ChartDashStyle value); };" />
+      <MemberSignature Language="F#" Value="member this.CalloutLineDashStyle : System.Windows.Forms.DataVisualization.Charting.ChartDashStyle with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.CalloutLineDashStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -219,6 +243,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -236,6 +263,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.CalloutLineWidth" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property CalloutLineWidth As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property int CalloutLineWidth { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.CalloutLineWidth : int with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.CalloutLineWidth" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -247,6 +275,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -264,6 +295,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.CalloutStyle" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property CalloutStyle As LabelCalloutStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Windows::Forms::DataVisualization::Charting::LabelCalloutStyle CalloutStyle { System::Windows::Forms::DataVisualization::Charting::LabelCalloutStyle get(); void set(System::Windows::Forms::DataVisualization::Charting::LabelCalloutStyle value); };" />
+      <MemberSignature Language="F#" Value="member this.CalloutStyle : System.Windows.Forms.DataVisualization.Charting.LabelCalloutStyle with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.CalloutStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -275,6 +307,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -292,6 +327,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.Enabled" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property Enabled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool Enabled { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Enabled : bool with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.Enabled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -307,6 +343,9 @@
         <Attribute>
           <AttributeName>System.ComponentModel.ParenthesizePropertyName(true)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -314,7 +353,7 @@
       <Docs>
         <summary>Gets or sets a flag that indicates whether a <see cref="T:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle" /> algorithm is enabled.</summary>
         <value>
-          <see langword="True" /> if an algorithm will be applied to prevent data point labels from overlapping. <see langword="False" /> if overlapping of data point labels will not be prevented. The default value is <see langword="True" />.</value>
+          <see langword="true" /> if an algorithm will be applied to prevent data point labels from overlapping. <see langword="False" /> if overlapping of data point labels will not be prevented. The default value is <see langword="true" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -324,6 +363,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.IsMarkerOverlappingAllowed" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property IsMarkerOverlappingAllowed As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool IsMarkerOverlappingAllowed { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsMarkerOverlappingAllowed : bool with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.IsMarkerOverlappingAllowed" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -336,6 +376,9 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -343,7 +386,7 @@
       <Docs>
         <summary>Gets or sets a flag that specifies whether the point labels are allowed to overlap a point marker.</summary>
         <value>
-          <see langword="True" /> if data point labels are permitted to overlap point markers. <see langword="False" /> if data point labels will be prevented from overlapping the point markers. The default value is <see langword="false" />.</value>
+          <see langword="true" /> if data point labels are permitted to overlap point markers. <see langword="False" /> if data point labels will be prevented from overlapping the point markers. The default value is <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -353,6 +396,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.IsOverlappedHidden" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property IsOverlappedHidden As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool IsOverlappedHidden { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsOverlappedHidden : bool with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.IsOverlappedHidden" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -365,6 +409,9 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -372,7 +419,7 @@
       <Docs>
         <summary>Gets or sets a flag that indicates whether overlapped labels that cannot be repositioned will be hidden.</summary>
         <value>
-          <see langword="True" /> if labels will be hidden if they overlap. <see langword="False" /> if overlapped labels will not be hidden. The default value is <see langword="True" />.</value>
+          <see langword="true" /> if labels will be hidden if they overlap. <see langword="false" /> if overlapped labels will not be hidden. The default value is <see langword="true" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -392,6 +439,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.MaxMovingDistance" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property MaxMovingDistance As Double" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property double MaxMovingDistance { double get(); void set(double value); };" />
+      <MemberSignature Language="F#" Value="member this.MaxMovingDistance : double with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.MaxMovingDistance" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -403,6 +451,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(30)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -427,6 +478,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.MinMovingDistance" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property MinMovingDistance As Double" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property double MinMovingDistance { double get(); void set(double value); };" />
+      <MemberSignature Language="F#" Value="member this.MinMovingDistance : double with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.MinMovingDistance" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -438,6 +490,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -462,6 +517,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.MovingDirection" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property MovingDirection As LabelAlignmentStyles" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Windows::Forms::DataVisualization::Charting::LabelAlignmentStyles MovingDirection { System::Windows::Forms::DataVisualization::Charting::LabelAlignmentStyles get(); void set(System::Windows::Forms::DataVisualization::Charting::LabelAlignmentStyles value); };" />
+      <MemberSignature Language="F#" Value="member this.MovingDirection : System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.MovingDirection" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -474,8 +530,14 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles), "Top, Bottom, Right, Left, TopLeft, TopRight, BottomLeft, BottomRight")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.FlagsEnumUITypeEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.FlagsEnumUITypeEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

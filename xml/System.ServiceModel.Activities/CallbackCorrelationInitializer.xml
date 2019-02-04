@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activities.CallbackCorrelationInitializer" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class CallbackCorrelationInitializer&#xA;Inherits CorrelationInitializer" />
   <TypeSignature Language="C++ CLI" Value="public ref class CallbackCorrelationInitializer sealed : System::ServiceModel::Activities::CorrelationInitializer" />
+  <TypeSignature Language="F#" Value="type CallbackCorrelationInitializer = class&#xA;    inherit CorrelationInitializer" />
   <AssemblyInfo>
     <AssemblyName>System.ServiceModel.Activities</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -18,7 +19,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- A callback correlation is based on the callback context exchange mechanism described in the [.NET Context Exchange Protocol Specification](http://go.microsoft.com/fwlink/?LinkId=163882). To use callback correlation, a context-based binding such as <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding>, or <xref:System.ServiceModel.NetTcpContextBinding> must be used.  
+ A callback correlation is based on the callback context exchange mechanism described in the [.NET Context Exchange Protocol Specification](https://go.microsoft.com/fwlink/?LinkId=163882). To use callback correlation, a context-based binding such as <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding>, or <xref:System.ServiceModel.NetTcpContextBinding> must be used.  
   
  ]]></format>
     </remarks>
@@ -35,6 +36,11 @@
         <AssemblyName>System.ServiceModel.Activities</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.Activities.CallbackCorrelationInitializer" /> class.</summary>

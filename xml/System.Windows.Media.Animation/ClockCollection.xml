@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.ClockCollection" />
   <TypeSignature Language="VB.NET" Value="Public Class ClockCollection&#xA;Implements ICollection(Of Clock), IEnumerable(Of Clock)" />
   <TypeSignature Language="C++ CLI" Value="public ref class ClockCollection : System::Collections::Generic::ICollection&lt;System::Windows::Media::Animation::Clock ^&gt;, System::Collections::Generic::IEnumerable&lt;System::Windows::Media::Animation::Clock ^&gt;" />
+  <TypeSignature Language="F#" Value="type ClockCollection = class&#xA;    interface ICollection&lt;Clock&gt;&#xA;    interface seq&lt;Clock&gt;&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -17,6 +19,12 @@
     </Interface>
     <Interface>
       <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Windows.Media.Animation.Clock&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
     </Interface>
   </Interfaces>
   <Docs>
@@ -30,12 +38,14 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockCollection.Add(System.Windows.Media.Animation.Clock)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Add (item As Clock)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Add(System::Windows::Media::Animation::Clock ^ item);" />
+      <MemberSignature Language="F#" Value="abstract member Add : System.Windows.Media.Animation.Clock -&gt; unit&#xA;override this.Add : System.Windows.Media.Animation.Clock -&gt; unit" Usage="clockCollection.Add item" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.Generic.ICollection`1.Add(`0)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -56,12 +66,14 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockCollection.Clear" />
       <MemberSignature Language="VB.NET" Value="Public Sub Clear ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Clear();" />
+      <MemberSignature Language="F#" Value="abstract member Clear : unit -&gt; unit&#xA;override this.Clear : unit -&gt; unit" Usage="clockCollection.Clear " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.Generic.ICollection`1.Clear</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -79,12 +91,14 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockCollection.Contains(System.Windows.Media.Animation.Clock)" />
       <MemberSignature Language="VB.NET" Value="Public Function Contains (item As Clock) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Contains(System::Windows::Media::Animation::Clock ^ item);" />
+      <MemberSignature Language="F#" Value="abstract member Contains : System.Windows.Media.Animation.Clock -&gt; bool&#xA;override this.Contains : System.Windows.Media.Animation.Clock -&gt; bool" Usage="clockCollection.Contains item" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.Generic.ICollection`1.Contains(`0)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -96,7 +110,8 @@
       <Docs>
         <param name="item">The object to locate.</param>
         <summary>Indicates whether the <see cref="T:System.Windows.Media.Animation.ClockCollection" /> contains the specified <see cref="T:System.Windows.Media.Animation.Clock" /> object.</summary>
-        <returns>**true** if <paramref name="item" /> is found; otherwise, **false**.</returns>
+        <returns>
+          <see langword="true" /> if <paramref name="item" /> is found; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -106,9 +121,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockCollection.CopyTo(System.Windows.Media.Animation.Clock[],System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub CopyTo (array As Clock(), index As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void CopyTo(cli::array &lt;System::Windows::Media::Animation::Clock ^&gt; ^ array, int index);" />
+      <MemberSignature Language="F#" Value="abstract member CopyTo : System.Windows.Media.Animation.Clock[] * int -&gt; unit&#xA;override this.CopyTo : System.Windows.Media.Animation.Clock[] * int -&gt; unit" Usage="clockCollection.CopyTo (array, index)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -131,12 +148,14 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.ClockCollection.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="System.Windows.Media.Animation.ClockCollection.Count" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.Generic.ICollection`1.Count</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -163,9 +182,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockCollection.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="clockCollection.Equals obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -177,7 +198,8 @@
       <Docs>
         <param name="obj">The object to compare with this instance.</param>
         <summary>Indicates whether this instance is equal to the specified object.</summary>
-        <returns>**true** if <paramref name="obj" /> is equal to this instance; otherwise **false**.</returns>
+        <returns>
+          <see langword="true" /> if <paramref name="obj" /> is equal to this instance; otherwise <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -187,11 +209,18 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockCollection.Equals(System.Windows.Media.Animation.ClockCollection,System.Windows.Media.Animation.ClockCollection)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Equals (objA As ClockCollection, objB As ClockCollection) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool Equals(System::Windows::Media::Animation::ClockCollection ^ objA, System::Windows::Media::Animation::ClockCollection ^ objB);" />
+      <MemberSignature Language="F#" Value="static member Equals : System.Windows.Media.Animation.ClockCollection * System.Windows.Media.Animation.ClockCollection -&gt; bool" Usage="System.Windows.Media.Animation.ClockCollection.Equals (objA, objB)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -214,9 +243,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockCollection.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="clockCollection.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -235,12 +266,14 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.ClockCollection.IsReadOnly" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsReadOnly As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsReadOnly { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsReadOnly : bool" Usage="System.Windows.Media.Animation.ClockCollection.IsReadOnly" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.Generic.ICollection`1.IsReadOnly</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -248,7 +281,8 @@
       </ReturnValue>
       <Docs>
         <summary>Gets a value indicating whether the <see cref="T:System.Windows.Media.Animation.ClockCollection" /> is read-only.</summary>
-        <value>**true** if this instance is read-only; otherwise **false**.</value>
+        <value>
+          <see langword="true" /> if this instance is read-only; otherwise <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -258,9 +292,11 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.ClockCollection.Item(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(index As Integer) As Clock" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Media::Animation::Clock ^ default[int] { System::Windows::Media::Animation::Clock ^ get(int index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : System.Windows.Media.Animation.Clock" Usage="System.Windows.Media.Animation.ClockCollection.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -282,9 +318,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockCollection.op_Equality(System.Windows.Media.Animation.ClockCollection,System.Windows.Media.Animation.ClockCollection)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator == (objA As ClockCollection, objB As ClockCollection) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator ==(System::Windows::Media::Animation::ClockCollection ^ objA, System::Windows::Media::Animation::ClockCollection ^ objB);" />
+      <MemberSignature Language="F#" Value="static member ( = ) : System.Windows.Media.Animation.ClockCollection * System.Windows.Media.Animation.ClockCollection -&gt; bool" Usage="objA = objB" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -298,7 +336,8 @@
         <param name="objA">The first object to compare.</param>
         <param name="objB">The second object to compare.</param>
         <summary>Overloaded operator that compares two <see cref="T:System.Windows.Media.Animation.ClockCollection" /> collections for equality.</summary>
-        <returns>**true** if <paramref name="objA" /> and <paramref name="objB" /> are equal; otherwise **false**.</returns>
+        <returns>
+          <see langword="true" /> if <paramref name="objA" /> and <paramref name="objB" /> are equal; otherwise <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -308,9 +347,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockCollection.op_Inequality(System.Windows.Media.Animation.ClockCollection,System.Windows.Media.Animation.ClockCollection)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator != (objA As ClockCollection, objB As ClockCollection) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator !=(System::Windows::Media::Animation::ClockCollection ^ objA, System::Windows::Media::Animation::ClockCollection ^ objB);" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : System.Windows.Media.Animation.ClockCollection * System.Windows.Media.Animation.ClockCollection -&gt; bool" Usage="System.Windows.Media.Animation.ClockCollection.op_Inequality (objA, objB)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -324,7 +365,8 @@
         <param name="objA">The first object to compare.</param>
         <param name="objB">The second object to compare.</param>
         <summary>Overloaded operator that compares two <see cref="T:System.Windows.Media.Animation.ClockCollection" /> collections for inequality.</summary>
-        <returns>**true** if <paramref name="objA" /> and <paramref name="objB" /> are not equal; otherwise **false**.</returns>
+        <returns>
+          <see langword="true" /> if <paramref name="objA" /> and <paramref name="objB" /> are not equal; otherwise <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -334,12 +376,14 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.ClockCollection.Remove(System.Windows.Media.Animation.Clock)" />
       <MemberSignature Language="VB.NET" Value="Public Function Remove (item As Clock) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Remove(System::Windows::Media::Animation::Clock ^ item);" />
+      <MemberSignature Language="F#" Value="abstract member Remove : System.Windows.Media.Animation.Clock -&gt; bool&#xA;override this.Remove : System.Windows.Media.Animation.Clock -&gt; bool" Usage="clockCollection.Remove item" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.Generic.ICollection`1.Remove(`0)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -351,7 +395,8 @@
       <Docs>
         <param name="item">The object to remove.</param>
         <summary>Removes the specified <see cref="T:System.Windows.Media.Animation.Clock" /> from the <see cref="T:System.Windows.Media.Animation.ClockCollection" />.</summary>
-        <returns>**true** if <paramref name="item" /> was successfully removed; otherwise, **false**.</returns>
+        <returns>
+          <see langword="true" /> if <paramref name="item" /> was successfully removed; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -367,6 +412,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -398,6 +444,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

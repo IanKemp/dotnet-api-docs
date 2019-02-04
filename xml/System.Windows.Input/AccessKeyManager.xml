@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Input.AccessKeyManager" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class AccessKeyManager" />
   <TypeSignature Language="C++ CLI" Value="public ref class AccessKeyManager sealed" />
+  <TypeSignature Language="F#" Value="type AccessKeyManager = class" />
   <AssemblyInfo>
     <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -38,14 +40,25 @@
       <MemberSignature Language="ILAsm" Value="see AddAccessKeyPressedHandler, and RemoveAccessKeyPressedHandler" />
       <MemberSignature Language="DocId" Value="E:System.Windows.Input.AccessKeyManager.AccessKeyPressed" />
       <MemberSignature Language="VB.NET" Value="see AddAccessKeyPressedHandler, and RemoveAccessKeyPressedHandler" />
+      <MemberSignature Language="F#" Value="see AddAccessKeyPressedHandler, and RemoveAccessKeyPressedHandler" Usage="see AddAccessKeyPressedHandler, and RemoveAccessKeyPressedHandler" />
       <MemberType>AttachedEvent</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Occurs when the access key is pressed.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ This event is used to identify elements that define a scope for access keys, such as menu keys and pop-up keys.  
+  
+ The event specified by the <xref:System.Windows.Input.AccessKeyManager.AccessKeyPressedEvent> field will never be raised; it is used to identify classes that define new scopes.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="AccessKeyPressedEvent">
@@ -54,9 +67,11 @@
       <MemberSignature Language="DocId" Value="F:System.Windows.Input.AccessKeyManager.AccessKeyPressedEvent" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly AccessKeyPressedEvent As RoutedEvent " />
       <MemberSignature Language="C++ CLI" Value="public: static initonly System::Windows::RoutedEvent ^ AccessKeyPressedEvent;" />
+      <MemberSignature Language="F#" Value=" staticval mutable AccessKeyPressedEvent : System.Windows.RoutedEvent" Usage="System.Windows.Input.AccessKeyManager.AccessKeyPressedEvent" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -73,9 +88,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Input.AccessKeyManager.AddAccessKeyPressedHandler(System.Windows.DependencyObject,System.Windows.Input.AccessKeyPressedEventHandler)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub AddAccessKeyPressedHandler (element As DependencyObject, handler As AccessKeyPressedEventHandler)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void AddAccessKeyPressedHandler(System::Windows::DependencyObject ^ element, System::Windows::Input::AccessKeyPressedEventHandler ^ handler);" />
+      <MemberSignature Language="F#" Value="static member AddAccessKeyPressedHandler : System.Windows.DependencyObject * System.Windows.Input.AccessKeyPressedEventHandler -&gt; unit" Usage="System.Windows.Input.AccessKeyManager.AddAccessKeyPressedHandler (element, handler)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -98,9 +115,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Input.AccessKeyManager.IsKeyRegistered(System.Object,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function IsKeyRegistered (scope As Object, key As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool IsKeyRegistered(System::Object ^ scope, System::String ^ key);" />
+      <MemberSignature Language="F#" Value="static member IsKeyRegistered : obj * string -&gt; bool" Usage="System.Windows.Input.AccessKeyManager.IsKeyRegistered (scope, key)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -111,7 +130,7 @@
         <Parameter Name="key" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="scope">The presentation source to query for <c>key</c>.</param>
+        <param name="scope">The presentation source to query for <paramref name="key" />.</param>
         <param name="key">The key to query.</param>
         <summary>Indicates whether the specified key is registered as an access keys in the specified scope.</summary>
         <returns>
@@ -125,9 +144,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Input.AccessKeyManager.ProcessKey(System.Object,System.String,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function ProcessKey (scope As Object, key As String, isMultiple As Boolean) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool ProcessKey(System::Object ^ scope, System::String ^ key, bool isMultiple);" />
+      <MemberSignature Language="F#" Value="static member ProcessKey : obj * string * bool -&gt; bool" Usage="System.Windows.Input.AccessKeyManager.ProcessKey (scope, key, isMultiple)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -146,7 +167,7 @@
       <Docs>
         <param name="scope">The scope for the access key.</param>
         <param name="key">The access key.</param>
-        <param name="isMultiple">Indicates if <c>key</c> has multiple matches.</param>
+        <param name="isMultiple">Indicates if <paramref name="key" /> has multiple matches.</param>
         <summary>Processes the specified access keys as if a <see cref="E:System.Windows.UIElement.KeyDown" /> event for the key was passed to the <see cref="T:System.Windows.Input.AccessKeyManager" />.</summary>
         <returns>
           <see langword="true" /> if there are more keys that match; otherwise, <see langword="false" />.</returns>
@@ -159,9 +180,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Input.AccessKeyManager.Register(System.String,System.Windows.IInputElement)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub Register (key As String, element As IInputElement)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void Register(System::String ^ key, System::Windows::IInputElement ^ element);" />
+      <MemberSignature Language="F#" Value="static member Register : string * System.Windows.IInputElement -&gt; unit" Usage="System.Windows.Input.AccessKeyManager.Register (key, element)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -173,7 +196,7 @@
       </Parameters>
       <Docs>
         <param name="key">The access key.</param>
-        <param name="element">The element to associate <c>key</c> with.</param>
+        <param name="element">The element to associate <paramref name="key" /> with.</param>
         <summary>Associates the specified access keys with the specified element.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -193,9 +216,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Input.AccessKeyManager.RemoveAccessKeyPressedHandler(System.Windows.DependencyObject,System.Windows.Input.AccessKeyPressedEventHandler)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub RemoveAccessKeyPressedHandler (element As DependencyObject, handler As AccessKeyPressedEventHandler)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void RemoveAccessKeyPressedHandler(System::Windows::DependencyObject ^ element, System::Windows::Input::AccessKeyPressedEventHandler ^ handler);" />
+      <MemberSignature Language="F#" Value="static member RemoveAccessKeyPressedHandler : System.Windows.DependencyObject * System.Windows.Input.AccessKeyPressedEventHandler -&gt; unit" Usage="System.Windows.Input.AccessKeyManager.RemoveAccessKeyPressedHandler (element, handler)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -218,9 +243,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Input.AccessKeyManager.Unregister(System.String,System.Windows.IInputElement)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub Unregister (key As String, element As IInputElement)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void Unregister(System::String ^ key, System::Windows::IInputElement ^ element);" />
+      <MemberSignature Language="F#" Value="static member Unregister : string * System.Windows.IInputElement -&gt; unit" Usage="System.Windows.Input.AccessKeyManager.Unregister (key, element)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -232,7 +259,7 @@
       </Parameters>
       <Docs>
         <param name="key">The access key.</param>
-        <param name="element">The element from which to disassociate <c>key</c>.</param>
+        <param name="element">The element from which to disassociate <paramref name="key" />.</param>
         <summary>Disassociates the specified access keys from the specified element.</summary>
         <remarks>To be added.</remarks>
       </Docs>

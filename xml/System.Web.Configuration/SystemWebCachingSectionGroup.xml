@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Web.Configuration.SystemWebCachingSectionGroup" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class SystemWebCachingSectionGroup&#xA;Inherits ConfigurationSectionGroup" />
   <TypeSignature Language="C++ CLI" Value="public ref class SystemWebCachingSectionGroup sealed : System::Configuration::ConfigurationSectionGroup" />
+  <TypeSignature Language="F#" Value="type SystemWebCachingSectionGroup = class&#xA;    inherit ConfigurationSectionGroup" />
   <AssemblyInfo>
     <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -22,7 +24,7 @@
   
  The <xref:System.Web.Configuration.SystemWebCachingSectionGroup> class and the `caching` section provide centralized control of the caching mechanism for a site or application. This makes it possible for caching to be deployed, modified, and disabled without modifying individual pages in the application.  
   
- The ASP.NET caching mechanism is implemented by the <xref:System.Web.Caching.Cache> class. For more information, see [ASP.NET Caching Overview](http://msdn.microsoft.com/library/5ec28012-4972-4dc3-b3e8-9d20401fe11d)  
+ The ASP.NET caching mechanism is implemented by the <xref:System.Web.Caching.Cache> class. For more information, see [ASP.NET Caching Overview](https://msdn.microsoft.com/library/5ec28012-4972-4dc3-b3e8-9d20401fe11d)  
   
  The following list describes the two types of caching ASP.NET provides.  
   
@@ -44,6 +46,7 @@
     <altmember cref="T:System.Web.Configuration.OutputCacheSection" />
     <altmember cref="T:System.Web.Configuration.OutputCacheSettingsSection" />
     <altmember cref="T:System.Web.Configuration.SqlCacheDependencySection" />
+    <related type="Article" href="https://msdn.microsoft.com/library/ac11c8ea-df5d-4de8-b315-9ccf1048b0ce">ASP.NET Caching Features</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -55,8 +58,14 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Creates a new instance of <see cref="T:System.Web.Configuration.SystemWebCachingSectionGroup" />.</summary>
@@ -76,9 +85,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SystemWebCachingSectionGroup.Cache" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Cache As CacheSection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::Configuration::CacheSection ^ Cache { System::Web::Configuration::CacheSection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Cache : System.Web.Configuration.CacheSection" Usage="System.Web.Configuration.SystemWebCachingSectionGroup.Cache" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -117,9 +128,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SystemWebCachingSectionGroup.OutputCache" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OutputCache As OutputCacheSection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::Configuration::OutputCacheSection ^ OutputCache { System::Web::Configuration::OutputCacheSection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.OutputCache : System.Web.Configuration.OutputCacheSection" Usage="System.Web.Configuration.SystemWebCachingSectionGroup.OutputCache" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -158,9 +171,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SystemWebCachingSectionGroup.OutputCacheSettings" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OutputCacheSettings As OutputCacheSettingsSection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::Configuration::OutputCacheSettingsSection ^ OutputCacheSettings { System::Web::Configuration::OutputCacheSettingsSection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.OutputCacheSettings : System.Web.Configuration.OutputCacheSettingsSection" Usage="System.Web.Configuration.SystemWebCachingSectionGroup.OutputCacheSettings" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -205,9 +220,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SystemWebCachingSectionGroup.SqlCacheDependency" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SqlCacheDependency As SqlCacheDependencySection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::Configuration::SqlCacheDependencySection ^ SqlCacheDependency { System::Web::Configuration::SqlCacheDependencySection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SqlCacheDependency : System.Web.Configuration.SqlCacheDependencySection" Usage="System.Web.Configuration.SystemWebCachingSectionGroup.SqlCacheDependency" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -240,6 +257,7 @@
  ]]></format>
         </remarks>
         <altmember cref="T:System.Web.Configuration.SqlCacheDependencySection" />
+        <related type="Article" href="https://msdn.microsoft.com/library/206f977d-7860-4d20-bdd5-c3b3d8479f3d(v=vs.100)">Caching Application Data</related>
       </Docs>
     </Member>
   </Members>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.JScript.Vsa.IJSVsaItem" />
   <TypeSignature Language="VB.NET" Value="Public Interface IJSVsaItem" />
   <TypeSignature Language="C++ CLI" Value="public interface class IJSVsaItem" />
+  <TypeSignature Language="F#" Value="type IJSVsaItem = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.JScript</AssemblyName>
     <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -20,7 +21,7 @@
       <AttributeName>System.Runtime.InteropServices.Guid("1F2377AC-8A09-417B-89DC-D146769F0B45")</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.InterfaceType</AttributeName>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -34,6 +35,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.JScript.Vsa.IJSVsaItem.GetOption(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetOption (name As String) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Object ^ GetOption(System::String ^ name);" />
+      <MemberSignature Language="F#" Value="abstract member GetOption : string -&gt; obj" Usage="iJSVsaItem.GetOption name" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.JScript</AssemblyName>
@@ -48,7 +50,7 @@
       <Docs>
         <param name="name">The name of the option to retrieve.</param>
         <summary>Gets implementation-specific options for a script engine.</summary>
-        <returns>Returns the value of the specified option.</returns>
+        <returns>The value of the specified option.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -58,6 +60,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaItem.IsDirty" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsDirty As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsDirty { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsDirty : bool" Usage="Microsoft.JScript.Vsa.IJSVsaItem.IsDirty" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.JScript</AssemblyName>
@@ -68,7 +71,8 @@
       </ReturnValue>
       <Docs>
         <summary>Returns a value indicating whether the current in-memory representation of the item differs from the persisted representation.</summary>
-        <value>Returns <see langword="true" /> if the item is dirty, and thus requires saving; returns <see langword="false" /> if the item is not dirty.</value>
+        <value>
+          <see langword="true" /> if the item is dirty, and thus requires saving; <see langword="false" /> if the item is not dirty.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -78,6 +82,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaItem.ItemType" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ItemType As JSVsaItemType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::JScript::Vsa::JSVsaItemType ItemType { Microsoft::JScript::Vsa::JSVsaItemType get(); };" />
+      <MemberSignature Language="F#" Value="member this.ItemType : Microsoft.JScript.Vsa.JSVsaItemType" Usage="Microsoft.JScript.Vsa.IJSVsaItem.ItemType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.JScript</AssemblyName>
@@ -98,6 +103,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaItem.Name" />
       <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="Microsoft.JScript.Vsa.IJSVsaItem.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.JScript</AssemblyName>
@@ -108,7 +114,7 @@
       </ReturnValue>
       <Docs>
         <summary>Sets or gets the name of the item.</summary>
-        <value>Returns the string literal name of the item.</value>
+        <value>The string literal name of the item.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -118,6 +124,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.JScript.Vsa.IJSVsaItem.SetOption(System.String,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SetOption (name As String, value As Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetOption(System::String ^ name, System::Object ^ value);" />
+      <MemberSignature Language="F#" Value="abstract member SetOption : string * obj -&gt; unit" Usage="iJSVsaItem.SetOption (name, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.JScript</AssemblyName>

@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.TreeView" />
   <TypeSignature Language="VB.NET" Value="Public Class TreeView&#xA;Inherits HierarchicalDataBoundControl&#xA;Implements ICallbackEventHandler, IPostBackDataHandler, IPostBackEventHandler" />
   <TypeSignature Language="C++ CLI" Value="public ref class TreeView : System::Web::UI::WebControls::HierarchicalDataBoundControl, System::Web::UI::ICallbackEventHandler, System::Web::UI::IPostBackDataHandler, System::Web::UI::IPostBackEventHandler" />
+  <TypeSignature Language="F#" Value="type TreeView = class&#xA;    inherit HierarchicalDataBoundControl&#xA;    interface IPostBackEventHandler&#xA;    interface IPostBackDataHandler&#xA;    interface ICallbackEventHandler" />
   <AssemblyInfo>
     <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -26,7 +28,7 @@
     <Attribute>
       <AttributeName>System.ComponentModel.DefaultEvent("SelectedNodeChanged")</AttributeName>
     </Attribute>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
       <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.TreeViewDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
     </Attribute>
     <Attribute>
@@ -34,6 +36,9 @@
     </Attribute>
     <Attribute>
       <AttributeName>System.Web.UI.SupportsEventValidation</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.TreeViewDesigner, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -83,7 +88,7 @@
 -   Customizable appearance through themes, user-defined images, and styles.  
   
     > [!NOTE]
-    >  The <xref:System.Web.UI.WebControls.TreeView> control is designed to be used inside an <xref:System.Web.UI.UpdatePanel> control only when <xref:System.Web.UI.WebControls.TreeView.EnableClientScript%2A> is set to `true`. <xref:System.Web.UI.UpdatePanel> controls are used to update selected regions of a page instead of updating the whole page with a postback. For more information, see [UpdatePanel Control Overview](http://msdn.microsoft.com/library/29a2265d-9674-4c19-b70e-e5560ee9689a) and [Partial-Page Rendering Overview](http://msdn.microsoft.com/library/5c12736d-d9e9-464a-9388-3fe0f9f49e49).  
+    >  The <xref:System.Web.UI.WebControls.TreeView> control is designed to be used inside an <xref:System.Web.UI.UpdatePanel> control only when <xref:System.Web.UI.WebControls.TreeView.EnableClientScript%2A> is set to `true`. <xref:System.Web.UI.UpdatePanel> controls are used to update selected regions of a page instead of updating the whole page with a postback. For more information, see [UpdatePanel Control Overview](https://msdn.microsoft.com/library/29a2265d-9674-4c19-b70e-e5560ee9689a) and [Partial-Page Rendering Overview](https://msdn.microsoft.com/library/5c12736d-d9e9-464a-9388-3fe0f9f49e49).  
   
 <a name="nodes"></a>   
 ## Nodes  
@@ -135,7 +140,7 @@
 ## Customizing the User Interface  
  There are many ways to customize the appearance of the <xref:System.Web.UI.WebControls.TreeView> control. First, you can specify a different style (such as font size and color) for each of the node types.  
   
- If you use cascading style sheets (CSS) to customize the appearance of the control, use either inline styles or a separate CSS file, but not both. Using both inline styles and a separate CSS file could cause unexpected results. For more information on using style sheets with controls, see [Web Server Controls and CSS Styles](http://msdn.microsoft.com/library/782c2db6-fc9b-4243-8df9-a8ffe2f4cc42).  
+ If you use cascading style sheets (CSS) to customize the appearance of the control, use either inline styles or a separate CSS file, but not both. Using both inline styles and a separate CSS file could cause unexpected results. For more information on using style sheets with controls, see [Web Server Controls and CSS Styles](https://msdn.microsoft.com/library/782c2db6-fc9b-4243-8df9-a8ffe2f4cc42).  
   
  The following table lists the available node styles.  
   
@@ -148,7 +153,7 @@
 |<xref:System.Web.UI.WebControls.TreeView.RootNodeStyle%2A>|The style settings for the root node.|  
 |<xref:System.Web.UI.WebControls.TreeView.SelectedNodeStyle%2A>|The style settings for a selected node.|  
   
- You can also control the style of nodes at specific depths within the tree by using the <xref:System.Web.UI.WebControls.TreeView.LevelStyles%2A> collection. The first style in the collection corresponds to the style of the nodes at the first level in the tree. The second style in the collection corresponds to the style of the nodes at the second level in the tree, and so on. This is most often used to generate table of contents–style navigation menus where nodes at a certain depth should have the same appearance, regardless of whether they have child nodes.  
+ You can also control the style of nodes at specific depths within the tree by using the <xref:System.Web.UI.WebControls.TreeView.LevelStyles%2A> collection. The first style in the collection corresponds to the style of the nodes at the first level in the tree. The second style in the collection corresponds to the style of the nodes at the second level in the tree, and so on. This is most often used to generate table of contents-style navigation menus where nodes at a certain depth should have the same appearance, regardless of whether they have child nodes.  
   
 > [!NOTE]
 >  If a style is defined for a certain depth level using the <xref:System.Web.UI.WebControls.TreeView.LevelStyles%2A> collection, that style overrides any root, parent, or leaf node style settings for the nodes at that depth.  
@@ -187,11 +192,11 @@
   
 <a name="scrolling"></a>   
 ## Scrolling  
- The <xref:System.Web.UI.WebControls.TreeView> control does not have built-in scrolling. To add scrolling, place the <xref:System.Web.UI.WebControls.TreeView> control in a <xref:System.Web.UI.WebControls.Panel> control and add scrollbars to the <xref:System.Web.UI.WebControls.Panel> control. For more information, see [Panel Web Server Control Overview](http://msdn.microsoft.com/library/127b61ed-87f2-46f4-92a3-785166e7245b).  
+ The <xref:System.Web.UI.WebControls.TreeView> control does not have built-in scrolling. To add scrolling, place the <xref:System.Web.UI.WebControls.TreeView> control in a <xref:System.Web.UI.WebControls.Panel> control and add scrollbars to the <xref:System.Web.UI.WebControls.Panel> control. For more information, see [Panel Web Server Control Overview](https://msdn.microsoft.com/library/127b61ed-87f2-46f4-92a3-785166e7245b).  
   
 <a name="accessibility"></a>   
 ## Accessibility  
- The markup rendered by default for this control might not conform to accessibility standards. For details about accessibility support for this control, see [ASP.NET Controls and Accessibility](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+ The markup rendered by default for this control might not conform to accessibility standards. For details about accessibility support for this control, see [ASP.NET Controls and Accessibility](https://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
   
 <a name="declarative_syntax"></a>   
 ## Declarative Syntax  
@@ -556,6 +561,7 @@
     <altmember cref="E:System.Web.UI.WebControls.TreeView.TreeNodeCollapsed" />
     <altmember cref="E:System.Web.UI.WebControls.TreeView.TreeNodePopulate" />
     <altmember cref="E:System.Web.UI.WebControls.TreeView.TreeNodeDataBound" />
+    <related type="Article" href="https://msdn.microsoft.com/library/6b85a558-1df8-44cf-bea6-62e61bcc8d20">ASP.NET Site Maps</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -567,8 +573,14 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.Web.UI.WebControls.TreeView" /> class.</summary>
@@ -617,9 +629,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub AddAttributesToRender (writer As HtmlTextWriter)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void AddAttributesToRender(System::Web::UI::HtmlTextWriter ^ writer);" />
+      <MemberSignature Language="F#" Value="override this.AddAttributesToRender : System.Web.UI.HtmlTextWriter -&gt; unit" Usage="treeView.AddAttributesToRender writer" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -648,9 +662,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.AutoGenerateDataBindings" />
       <MemberSignature Language="VB.NET" Value="Public Property AutoGenerateDataBindings As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AutoGenerateDataBindings { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.AutoGenerateDataBindings : bool with get, set" Usage="System.Web.UI.WebControls.TreeView.AutoGenerateDataBindings" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -717,9 +733,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.CheckedNodes" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CheckedNodes As TreeNodeCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::TreeNodeCollection ^ CheckedNodes { System::Web::UI::WebControls::TreeNodeCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CheckedNodes : System.Web.UI.WebControls.TreeNodeCollection" Usage="System.Web.UI.WebControls.TreeView.CheckedNodes" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -727,7 +745,7 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -768,9 +786,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.CollapseAll" />
       <MemberSignature Language="VB.NET" Value="Public Sub CollapseAll ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void CollapseAll();" />
+      <MemberSignature Language="F#" Value="member this.CollapseAll : unit -&gt; unit" Usage="treeView.CollapseAll " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -804,9 +824,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.CollapseImageToolTip" />
       <MemberSignature Language="VB.NET" Value="Public Property CollapseImageToolTip As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ CollapseImageToolTip { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.CollapseImageToolTip : string with get, set" Usage="System.Web.UI.WebControls.TreeView.CollapseImageToolTip" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -828,7 +850,7 @@
   
  The value of this property is stored in view state.  
   
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
    
   
@@ -852,20 +874,25 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.CollapseImageUrl" />
       <MemberSignature Language="VB.NET" Value="Public Property CollapseImageUrl As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ CollapseImageUrl { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.CollapseImageUrl : string with get, set" Usage="System.Web.UI.WebControls.TreeView.CollapseImageUrl" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -913,9 +940,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.CreateControlCollection" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateControlCollection () As ControlCollection" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Web::UI::ControlCollection ^ CreateControlCollection();" />
+      <MemberSignature Language="F#" Value="override this.CreateControlCollection : unit -&gt; System.Web.UI.ControlCollection" Usage="treeView.CreateControlCollection " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -942,9 +971,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.CreateNode" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overridable Function CreateNode () As TreeNode" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; virtual System::Web::UI::WebControls::TreeNode ^ CreateNode();" />
+      <MemberSignature Language="F#" Value="abstract member CreateNode : unit -&gt; System.Web.UI.WebControls.TreeNode&#xA;override this.CreateNode : unit -&gt; System.Web.UI.WebControls.TreeNode" Usage="treeView.CreateNode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -972,9 +1003,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.DataBind" />
       <MemberSignature Language="VB.NET" Value="Public Overrides NotOverridable Sub DataBind ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void DataBind();" />
+      <MemberSignature Language="F#" Value="override this.DataBind : unit -&gt; unit" Usage="treeView.DataBind " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1000,16 +1033,18 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.DataBindings" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DataBindings As TreeNodeBindingCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::TreeNodeBindingCollection ^ DataBindings { System::Web::UI::WebControls::TreeNodeBindingCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DataBindings : System.Web.UI.WebControls.TreeNodeBindingCollection" Usage="System.Web.UI.WebControls.TreeView.DataBindings" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.WebControls.TreeViewBindingsEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
         <Attribute>
@@ -1017,6 +1052,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.WebControls.TreeViewBindingsEditor, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1090,9 +1128,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.EnableClientScript" />
       <MemberSignature Language="VB.NET" Value="Public Property EnableClientScript As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool EnableClientScript { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.EnableClientScript : bool with get, set" Usage="System.Web.UI.WebControls.TreeView.EnableClientScript" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1123,7 +1163,7 @@
   
  The value of this property is stored in view state.  
   
- This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+ This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](https://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
   
    
   
@@ -1164,9 +1204,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.ExpandAll" />
       <MemberSignature Language="VB.NET" Value="Public Sub ExpandAll ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void ExpandAll();" />
+      <MemberSignature Language="F#" Value="member this.ExpandAll : unit -&gt; unit" Usage="treeView.ExpandAll " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1200,9 +1242,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.ExpandDepth" />
       <MemberSignature Language="VB.NET" Value="Public Property ExpandDepth As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ExpandDepth { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.ExpandDepth : int with get, set" Usage="System.Web.UI.WebControls.TreeView.ExpandDepth" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1238,9 +1282,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.ExpandImageToolTip" />
       <MemberSignature Language="VB.NET" Value="Public Property ExpandImageToolTip As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ExpandImageToolTip { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ExpandImageToolTip : string with get, set" Usage="System.Web.UI.WebControls.TreeView.ExpandImageToolTip" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1262,7 +1308,7 @@
   
  The value of this property is stored in view state.  
   
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
    
   
@@ -1286,20 +1332,25 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.ExpandImageUrl" />
       <MemberSignature Language="VB.NET" Value="Public Property ExpandImageUrl As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ExpandImageUrl { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ExpandImageUrl : string with get, set" Usage="System.Web.UI.WebControls.TreeView.ExpandImageUrl" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1349,9 +1400,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.FindNode(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function FindNode (valuePath As String) As TreeNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Web::UI::WebControls::TreeNode ^ FindNode(System::String ^ valuePath);" />
+      <MemberSignature Language="F#" Value="member this.FindNode : string -&gt; System.Web.UI.WebControls.TreeNode" Usage="treeView.FindNode valuePath" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1376,7 +1429,7 @@
  The following code example demonstrates how to use the <xref:System.Web.UI.WebControls.TreeView.FindNode%2A> method to retrieve a node from the <xref:System.Web.UI.WebControls.TreeView> control.  
   
 > [!IMPORTANT]
->  This example has a text box that accepts user input, which is a potential security threat. By default, ASP.NET Web pages validate that user input does not include script or HTML elements. For more information, see [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+>  This example has a text box that accepts user input, which is a potential security threat. By default, ASP.NET Web pages validate that user input does not include script or HTML elements. For more information, see [Script Exploits Overview](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
   
  [!code-aspx-csharp[TreeViewFindNode#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeViewFindNode/CS/treeviewfindnodecs.aspx#1)]
  [!code-aspx-vb[TreeViewFindNode#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeViewFindNode/VB/treeviewfindnodevb.aspx#1)]  
@@ -1394,12 +1447,14 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.GetCallbackResult" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function GetCallbackResult () As String" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual System::String ^ GetCallbackResult();" />
+      <MemberSignature Language="F#" Value="abstract member GetCallbackResult : unit -&gt; string&#xA;override this.GetCallbackResult : unit -&gt; string" Usage="treeView.GetCallbackResult " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Web.UI.ICallbackEventHandler.GetCallbackResult</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1425,9 +1480,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.HoverNodeStyle" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HoverNodeStyle As Style" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::Style ^ HoverNodeStyle { System::Web::UI::WebControls::Style ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.HoverNodeStyle : System.Web.UI.WebControls.Style" Usage="System.Web.UI.WebControls.TreeView.HoverNodeStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1435,13 +1492,13 @@
           <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
-        </Attribute>
-        <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1501,9 +1558,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.ImageSet" />
       <MemberSignature Language="VB.NET" Value="Public Property ImageSet As TreeViewImageSet" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::TreeViewImageSet ImageSet { System::Web::UI::WebControls::TreeViewImageSet get(); void set(System::Web::UI::WebControls::TreeViewImageSet value); };" />
+      <MemberSignature Language="F#" Value="member this.ImageSet : System.Web.UI.WebControls.TreeViewImageSet with get, set" Usage="System.Web.UI.WebControls.TreeView.ImageSet" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1583,9 +1642,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.LeafNodeStyle" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LeafNodeStyle As TreeNodeStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::TreeNodeStyle ^ LeafNodeStyle { System::Web::UI::WebControls::TreeNodeStyle ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.LeafNodeStyle : System.Web.UI.WebControls.TreeNodeStyle" Usage="System.Web.UI.WebControls.TreeView.LeafNodeStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1593,13 +1654,13 @@
           <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
-        </Attribute>
-        <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1622,7 +1683,7 @@
   
 4.  <xref:System.Web.UI.WebControls.TreeView.HoverNodeStyle%2A>.  
   
- If you need to generate table of contents–style navigation menus where nodes at a certain level should have the same appearance, regardless of whether they have child nodes, you might consider using the <xref:System.Web.UI.WebControls.TreeView.LevelStyles%2A> property instead of setting the individual style properties.  
+ If you need to generate table of contents-style navigation menus where nodes at a certain level should have the same appearance, regardless of whether they have child nodes, you might consider using the <xref:System.Web.UI.WebControls.TreeView.LevelStyles%2A> property instead of setting the individual style properties.  
   
    
   
@@ -1648,20 +1709,25 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.LevelStyles" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LevelStyles As TreeNodeStyleCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::TreeNodeStyleCollection ^ LevelStyles { System::Web::UI::WebControls::TreeNodeStyleCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.LevelStyles : System.Web.UI.WebControls.TreeNodeStyleCollection" Usage="System.Web.UI.WebControls.TreeView.LevelStyles" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.WebControls.TreeNodeStyleCollectionEditor,System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.WebControls.TreeNodeStyleCollectionEditor,System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1674,7 +1740,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Use the <xref:System.Web.UI.WebControls.TreeView.LevelStyles%2A> collection as an alternative to the individual style properties (such as the <xref:System.Web.UI.WebControls.TreeView.NodeStyle%2A> property) to control the style of nodes at the individual levels of the tree. The first style in the collection corresponds to the style of nodes in the first level of the tree. The second style in the collection corresponds to the style of nodes in the second level of the tree, and so on. This property is most often used to generate table of contents–style navigation menus where nodes at a certain level should have the same appearance, regardless of whether they have child nodes.  
+ Use the <xref:System.Web.UI.WebControls.TreeView.LevelStyles%2A> collection as an alternative to the individual style properties (such as the <xref:System.Web.UI.WebControls.TreeView.NodeStyle%2A> property) to control the style of nodes at the individual levels of the tree. The first style in the collection corresponds to the style of nodes in the first level of the tree. The second style in the collection corresponds to the style of nodes in the second level of the tree, and so on. This property is most often used to generate table of contents-style navigation menus where nodes at a certain level should have the same appearance, regardless of whether they have child nodes.  
   
  Style properties are applied in the following order:  
   
@@ -1713,9 +1779,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.LineImagesFolder" />
       <MemberSignature Language="VB.NET" Value="Public Property LineImagesFolder As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ LineImagesFolder { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.LineImagesFolder : string with get, set" Usage="System.Web.UI.WebControls.TreeView.LineImagesFolder" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1787,12 +1855,14 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function LoadPostData (postDataKey As String, postCollection As NameValueCollection) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual bool LoadPostData(System::String ^ postDataKey, System::Collections::Specialized::NameValueCollection ^ postCollection);" />
+      <MemberSignature Language="F#" Value="abstract member LoadPostData : string * System.Collections.Specialized.NameValueCollection -&gt; bool&#xA;override this.LoadPostData : string * System.Collections.Specialized.NameValueCollection -&gt; bool" Usage="treeView.LoadPostData (postDataKey, postCollection)" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Web.UI.IPostBackDataHandler.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1825,9 +1895,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.LoadViewState(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub LoadViewState (state As Object)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void LoadViewState(System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="override this.LoadViewState : obj -&gt; unit" Usage="treeView.LoadViewState state" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1848,9 +1920,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.MaxDataBindDepth" />
       <MemberSignature Language="VB.NET" Value="Public Property MaxDataBindDepth As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MaxDataBindDepth { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.MaxDataBindDepth : int with get, set" Usage="System.Web.UI.WebControls.TreeView.MaxDataBindDepth" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1914,9 +1988,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.NodeIndent" />
       <MemberSignature Language="VB.NET" Value="Public Property NodeIndent As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int NodeIndent { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.NodeIndent : int with get, set" Usage="System.Web.UI.WebControls.TreeView.NodeIndent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1967,16 +2043,18 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.Nodes" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Nodes As TreeNodeCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::TreeNodeCollection ^ Nodes { System::Web::UI::WebControls::TreeNodeCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Nodes : System.Web.UI.WebControls.TreeNodeCollection" Usage="System.Web.UI.WebControls.TreeView.Nodes" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.WebControls.TreeNodeCollectionEditor,System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
         <Attribute>
@@ -1984,6 +2062,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.WebControls.TreeNodeCollectionEditor,System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -2026,9 +2107,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.NodeStyle" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NodeStyle As TreeNodeStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::TreeNodeStyle ^ NodeStyle { System::Web::UI::WebControls::TreeNodeStyle ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.NodeStyle : System.Web.UI.WebControls.TreeNodeStyle" Usage="System.Web.UI.WebControls.TreeView.NodeStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2036,13 +2119,13 @@
           <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
-        </Attribute>
-        <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -2094,9 +2177,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.NodeWrap" />
       <MemberSignature Language="VB.NET" Value="Public Property NodeWrap As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool NodeWrap { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.NodeWrap : bool with get, set" Usage="System.Web.UI.WebControls.TreeView.NodeWrap" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2139,20 +2224,25 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.NoExpandImageUrl" />
       <MemberSignature Language="VB.NET" Value="Public Property NoExpandImageUrl As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ NoExpandImageUrl { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.NoExpandImageUrl : string with get, set" Usage="System.Web.UI.WebControls.TreeView.NoExpandImageUrl" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -2197,9 +2287,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.OnInit(System.EventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub OnInit (e As EventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void OnInit(EventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="override this.OnInit : EventArgs -&gt; unit" Usage="treeView.OnInit e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2235,9 +2327,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.OnPreRender(System.EventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub OnPreRender (e As EventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void OnPreRender(EventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="override this.OnPreRender : EventArgs -&gt; unit" Usage="treeView.OnPreRender e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2255,7 +2349,7 @@
 ## Remarks  
  The <xref:System.Web.UI.WebControls.TreeView.OnPreRender%2A> method is overridden to register for postback. If client script is enabled, it also renders the necessary script and hidden fields.  
   
- Raising an event invokes the event handler through a delegate. For more information, see [NIB: Consuming Events](http://msdn.microsoft.com/library/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+ Raising an event invokes the event handler through a delegate. For more information about how to handle events, see [Handling and Raising Events](~/docs/standard/events/index.md).  
   
  The <xref:System.Web.UI.WebControls.TreeView.OnPreRender%2A> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.  
   
@@ -2273,9 +2367,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.OnSelectedNodeChanged(System.EventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnSelectedNodeChanged (e As EventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnSelectedNodeChanged(EventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member OnSelectedNodeChanged : EventArgs -&gt; unit&#xA;override this.OnSelectedNodeChanged : EventArgs -&gt; unit" Usage="treeView.OnSelectedNodeChanged e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2298,7 +2394,7 @@
 > [!NOTE]
 >  The <xref:System.Web.UI.WebControls.TreeView.HoverNodeStyle%2A> is not rendered for a node with its <xref:System.Web.UI.WebControls.TreeNode.SelectAction%2A> property set to `TreeNodeSelectAction.None`.  
   
- Raising an event invokes the event handler through a delegate. For more information, see [NIB: Consuming Events](http://msdn.microsoft.com/library/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+ Raising an event invokes the event handler through a delegate. For more information about how to handle events, see [Handling and Raising Events](~/docs/standard/events/index.md).  
   
  The <xref:System.Web.UI.WebControls.TreeView.OnSelectedNodeChanged%2A> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.  
   
@@ -2316,9 +2412,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.OnTreeNodeCheckChanged(System.Web.UI.WebControls.TreeNodeEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnTreeNodeCheckChanged (e As TreeNodeEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnTreeNodeCheckChanged(System::Web::UI::WebControls::TreeNodeEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member OnTreeNodeCheckChanged : System.Web.UI.WebControls.TreeNodeEventArgs -&gt; unit&#xA;override this.OnTreeNodeCheckChanged : System.Web.UI.WebControls.TreeNodeEventArgs -&gt; unit" Usage="treeView.OnTreeNodeCheckChanged e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2336,7 +2434,7 @@
 ## Remarks  
  The <xref:System.Web.UI.WebControls.TreeView.TreeNodeCheckChanged> event is raised when a check box in the <xref:System.Web.UI.WebControls.TreeView> control changes state between posts to the server. This allows you to provide an event-handling method that performs a custom routine, such as updating a database or the displayed content, whenever this event occurs.  
   
- Raising an event invokes the event handler through a delegate. For more information, see [NIB: Consuming Events](http://msdn.microsoft.com/library/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+ Raising an event invokes the event handler through a delegate. For more information about how to handle events, see [Handling and Raising Events](~/docs/standard/events/index.md).  
   
  The <xref:System.Web.UI.WebControls.TreeView.OnTreeNodeCheckChanged%2A> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.  
   
@@ -2354,9 +2452,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.OnTreeNodeCollapsed(System.Web.UI.WebControls.TreeNodeEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnTreeNodeCollapsed (e As TreeNodeEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnTreeNodeCollapsed(System::Web::UI::WebControls::TreeNodeEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member OnTreeNodeCollapsed : System.Web.UI.WebControls.TreeNodeEventArgs -&gt; unit&#xA;override this.OnTreeNodeCollapsed : System.Web.UI.WebControls.TreeNodeEventArgs -&gt; unit" Usage="treeView.OnTreeNodeCollapsed e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2374,7 +2474,7 @@
 ## Remarks  
  The <xref:System.Web.UI.WebControls.TreeView.TreeNodeCollapsed> event is raised when a node is collapsed in the <xref:System.Web.UI.WebControls.TreeView> control. This allows you to provide an event-handling method that performs a custom routine whenever this event occurs.  
   
- Raising an event invokes the event handler through a delegate. For more information, see [NIB: Consuming Events](http://msdn.microsoft.com/library/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+ Raising an event invokes the event handler through a delegate. For more information about how to handle events, see [Handling and Raising Events](~/docs/standard/events/index.md).  
   
  The <xref:System.Web.UI.WebControls.TreeView.OnTreeNodeCollapsed%2A> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.  
   
@@ -2392,9 +2492,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.OnTreeNodeDataBound(System.Web.UI.WebControls.TreeNodeEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnTreeNodeDataBound (e As TreeNodeEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnTreeNodeDataBound(System::Web::UI::WebControls::TreeNodeEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member OnTreeNodeDataBound : System.Web.UI.WebControls.TreeNodeEventArgs -&gt; unit&#xA;override this.OnTreeNodeDataBound : System.Web.UI.WebControls.TreeNodeEventArgs -&gt; unit" Usage="treeView.OnTreeNodeDataBound e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2412,7 +2514,7 @@
 ## Remarks  
  The <xref:System.Web.UI.WebControls.TreeView.TreeNodeDataBound> event is raised when a data item is bound to a node in the <xref:System.Web.UI.WebControls.TreeView> control. This allows you to provide an event-handling method that performs a custom routine whenever this event occurs.  
   
- Raising an event invokes the event handler through a delegate. For more information, see [NIB: Consuming Events](http://msdn.microsoft.com/library/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+ Raising an event invokes the event handler through a delegate. For more information about how to handle events, see [Handling and Raising Events](~/docs/standard/events/index.md).  
   
  The <xref:System.Web.UI.WebControls.TreeView.OnTreeNodeDataBound%2A> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.  
   
@@ -2430,9 +2532,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.OnTreeNodeExpanded(System.Web.UI.WebControls.TreeNodeEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnTreeNodeExpanded (e As TreeNodeEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnTreeNodeExpanded(System::Web::UI::WebControls::TreeNodeEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member OnTreeNodeExpanded : System.Web.UI.WebControls.TreeNodeEventArgs -&gt; unit&#xA;override this.OnTreeNodeExpanded : System.Web.UI.WebControls.TreeNodeEventArgs -&gt; unit" Usage="treeView.OnTreeNodeExpanded e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2453,7 +2557,7 @@
 > [!NOTE]
 >  If the <xref:System.Web.UI.WebControls.TreeNode.SelectAction%2A> property for a node is set to <xref:System.Web.UI.WebControls.TreeNodeSelectAction.Expand> or <xref:System.Web.UI.WebControls.TreeNodeSelectAction.SelectExpand>, the <xref:System.Web.UI.WebControls.TreeView.TreeNodeExpanded> event is also raised when that node is clicked in the <xref:System.Web.UI.WebControls.TreeView> control.  
   
- Raising an event invokes the event handler through a delegate. For more information, see [NIB: Consuming Events](http://msdn.microsoft.com/library/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+ Raising an event invokes the event handler through a delegate. For more information about how to handle events, see [Handling and Raising Events](~/docs/standard/events/index.md).  
   
  The <xref:System.Web.UI.WebControls.TreeView.OnTreeNodeExpanded%2A> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.  
   
@@ -2472,9 +2576,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.OnTreeNodePopulate(System.Web.UI.WebControls.TreeNodeEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnTreeNodePopulate (e As TreeNodeEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnTreeNodePopulate(System::Web::UI::WebControls::TreeNodeEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member OnTreeNodePopulate : System.Web.UI.WebControls.TreeNodeEventArgs -&gt; unit&#xA;override this.OnTreeNodePopulate : System.Web.UI.WebControls.TreeNodeEventArgs -&gt; unit" Usage="treeView.OnTreeNodePopulate e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2499,7 +2605,7 @@
   
  Supported browsers (Microsoft Internet Explorer 4.0-compatible browsers and later) can also take advantage of client-side node population. When enabled, this allows the <xref:System.Web.UI.WebControls.TreeView> control to populate a node on the client dynamically when that node is expanded, which prevents the need to post back to the server. For more information on client-side node population, see <xref:System.Web.UI.WebControls.TreeView.PopulateNodesFromClient%2A>.  
   
- Raising an event invokes the event handler through a delegate. For more information, see [NIB: Consuming Events](http://msdn.microsoft.com/library/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+ Raising an event invokes the event handler through a delegate. For more information about how to handle events, see [Handling and Raising Events](~/docs/standard/events/index.md).  
   
  The <xref:System.Web.UI.WebControls.TreeView.OnTreeNodePopulate%2A> method also allows derived classes to handle the event without attaching a delegate. This is the preferred technique for handling the event in a derived class.  
   
@@ -2519,9 +2625,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.ParentNodeStyle" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ParentNodeStyle As TreeNodeStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::TreeNodeStyle ^ ParentNodeStyle { System::Web::UI::WebControls::TreeNodeStyle ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ParentNodeStyle : System.Web.UI.WebControls.TreeNodeStyle" Usage="System.Web.UI.WebControls.TreeView.ParentNodeStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2529,13 +2637,13 @@
           <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
-        </Attribute>
-        <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -2584,9 +2692,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.PathSeparator" />
       <MemberSignature Language="VB.NET" Value="Public Property PathSeparator As Char" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property char PathSeparator { char get(); void set(char value); };" />
+      <MemberSignature Language="F#" Value="member this.PathSeparator : char with get, set" Usage="System.Web.UI.WebControls.TreeView.PathSeparator" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2629,9 +2739,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.PerformDataBinding" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub PerformDataBinding ()" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void PerformDataBinding();" />
+      <MemberSignature Language="F#" Value="override this.PerformDataBinding : unit -&gt; unit" Usage="treeView.PerformDataBinding " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2659,9 +2771,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.PopulateNodesFromClient" />
       <MemberSignature Language="VB.NET" Value="Public Property PopulateNodesFromClient As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool PopulateNodesFromClient { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.PopulateNodesFromClient : bool with get, set" Usage="System.Web.UI.WebControls.TreeView.PopulateNodesFromClient" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2718,12 +2832,14 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.RaiseCallbackEvent(System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub RaiseCallbackEvent (eventArgument As String)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void RaiseCallbackEvent(System::String ^ eventArgument);" />
+      <MemberSignature Language="F#" Value="abstract member RaiseCallbackEvent : string -&gt; unit&#xA;override this.RaiseCallbackEvent : string -&gt; unit" Usage="treeView.RaiseCallbackEvent eventArgument" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent(System.String)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2752,12 +2868,14 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.RaisePostBackEvent(System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub RaisePostBackEvent (eventArgument As String)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void RaisePostBackEvent(System::String ^ eventArgument);" />
+      <MemberSignature Language="F#" Value="abstract member RaisePostBackEvent : string -&gt; unit&#xA;override this.RaisePostBackEvent : string -&gt; unit" Usage="treeView.RaisePostBackEvent eventArgument" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(System.String)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2788,12 +2906,14 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.RaisePostDataChangedEvent" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub RaisePostDataChangedEvent ()" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void RaisePostDataChangedEvent();" />
+      <MemberSignature Language="F#" Value="abstract member RaisePostDataChangedEvent : unit -&gt; unit&#xA;override this.RaisePostDataChangedEvent : unit -&gt; unit" Usage="treeView.RaisePostDataChangedEvent " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2819,9 +2939,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.RenderBeginTag(System.Web.UI.HtmlTextWriter)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub RenderBeginTag (writer As HtmlTextWriter)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void RenderBeginTag(System::Web::UI::HtmlTextWriter ^ writer);" />
+      <MemberSignature Language="F#" Value="override this.RenderBeginTag : System.Web.UI.HtmlTextWriter -&gt; unit" Usage="treeView.RenderBeginTag writer" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2851,9 +2973,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.RenderContents(System.Web.UI.HtmlTextWriter)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub RenderContents (writer As HtmlTextWriter)" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void RenderContents(System::Web::UI::HtmlTextWriter ^ writer);" />
+      <MemberSignature Language="F#" Value="override this.RenderContents : System.Web.UI.HtmlTextWriter -&gt; unit" Usage="treeView.RenderContents writer" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2882,9 +3006,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.RenderEndTag(System.Web.UI.HtmlTextWriter)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub RenderEndTag (writer As HtmlTextWriter)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void RenderEndTag(System::Web::UI::HtmlTextWriter ^ writer);" />
+      <MemberSignature Language="F#" Value="override this.RenderEndTag : System.Web.UI.HtmlTextWriter -&gt; unit" Usage="treeView.RenderEndTag writer" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -2914,9 +3040,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.RootNodeStyle" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RootNodeStyle As TreeNodeStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::TreeNodeStyle ^ RootNodeStyle { System::Web::UI::WebControls::TreeNodeStyle ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.RootNodeStyle : System.Web.UI.WebControls.TreeNodeStyle" Usage="System.Web.UI.WebControls.TreeView.RootNodeStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2924,13 +3052,13 @@
           <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
-        </Attribute>
-        <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -2979,9 +3107,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.SaveViewState" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function SaveViewState () As Object" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Object ^ SaveViewState();" />
+      <MemberSignature Language="F#" Value="override this.SaveViewState : unit -&gt; obj" Usage="treeView.SaveViewState " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -3000,9 +3130,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.SelectedNode" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SelectedNode As TreeNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::TreeNode ^ SelectedNode { System::Web::UI::WebControls::TreeNode ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SelectedNode : System.Web.UI.WebControls.TreeNode" Usage="System.Web.UI.WebControls.TreeView.SelectedNode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -3010,7 +3142,10 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -3066,9 +3201,11 @@
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.TreeView.SelectedNodeChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event SelectedNodeChanged As EventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ SelectedNodeChanged;" />
+      <MemberSignature Language="F#" Value="member this.SelectedNodeChanged : EventHandler " Usage="member this.SelectedNodeChanged : System.EventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -3096,7 +3233,7 @@
   
  The <xref:System.Web.UI.WebControls.TreeView.SelectedNodeChanged> event is fired only on post back when a user clicks a node. The event is not fired if the <xref:System.Web.UI.WebControls.TreeView.SelectedNode%2A> property is changed programmatically.  
   
- For more information about handling events, see [NIB: Consuming Events](http://msdn.microsoft.com/library/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+ For more information about how to handle events, see [Handling and Raising Events](~/docs/standard/events/index.md).  
   
    
   
@@ -3117,9 +3254,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.SelectedNodeStyle" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SelectedNodeStyle As TreeNodeStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::TreeNodeStyle ^ SelectedNodeStyle { System::Web::UI::WebControls::TreeNodeStyle ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SelectedNodeStyle : System.Web.UI.WebControls.TreeNodeStyle" Usage="System.Web.UI.WebControls.TreeView.SelectedNodeStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -3127,13 +3266,13 @@
           <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
-        </Attribute>
-        <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -3180,9 +3319,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.SelectedValue" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SelectedValue As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ SelectedValue { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SelectedValue : string" Usage="System.Web.UI.WebControls.TreeView.SelectedValue" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -3193,7 +3334,7 @@
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -3219,9 +3360,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.SetNodeDataBound(System.Web.UI.WebControls.TreeNode,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub SetNodeDataBound (node As TreeNode, dataBound As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void SetNodeDataBound(System::Web::UI::WebControls::TreeNode ^ node, bool dataBound);" />
+      <MemberSignature Language="F#" Value="member this.SetNodeDataBound : System.Web.UI.WebControls.TreeNode * bool -&gt; unit" Usage="treeView.SetNodeDataBound (node, dataBound)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -3257,9 +3400,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.SetNodeDataItem(System.Web.UI.WebControls.TreeNode,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub SetNodeDataItem (node As TreeNode, dataItem As Object)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void SetNodeDataItem(System::Web::UI::WebControls::TreeNode ^ node, System::Object ^ dataItem);" />
+      <MemberSignature Language="F#" Value="member this.SetNodeDataItem : System.Web.UI.WebControls.TreeNode * obj -&gt; unit" Usage="treeView.SetNodeDataItem (node, dataItem)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -3291,9 +3436,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.SetNodeDataPath(System.Web.UI.WebControls.TreeNode,System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub SetNodeDataPath (node As TreeNode, dataPath As String)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void SetNodeDataPath(System::Web::UI::WebControls::TreeNode ^ node, System::String ^ dataPath);" />
+      <MemberSignature Language="F#" Value="member this.SetNodeDataPath : System.Web.UI.WebControls.TreeNode * string -&gt; unit" Usage="treeView.SetNodeDataPath (node, dataPath)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -3325,9 +3472,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.ShowCheckBoxes" />
       <MemberSignature Language="VB.NET" Value="Public Property ShowCheckBoxes As TreeNodeTypes" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::TreeNodeTypes ShowCheckBoxes { System::Web::UI::WebControls::TreeNodeTypes get(); void set(System::Web::UI::WebControls::TreeNodeTypes value); };" />
+      <MemberSignature Language="F#" Value="member this.ShowCheckBoxes : System.Web.UI.WebControls.TreeNodeTypes with get, set" Usage="System.Web.UI.WebControls.TreeView.ShowCheckBoxes" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -3387,9 +3536,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.ShowExpandCollapse" />
       <MemberSignature Language="VB.NET" Value="Public Property ShowExpandCollapse As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ShowExpandCollapse { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.ShowExpandCollapse : bool with get, set" Usage="System.Web.UI.WebControls.TreeView.ShowExpandCollapse" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -3435,9 +3586,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.ShowLines" />
       <MemberSignature Language="VB.NET" Value="Public Property ShowLines As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ShowLines { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.ShowLines : bool with get, set" Usage="System.Web.UI.WebControls.TreeView.ShowLines" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -3482,9 +3635,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.SkipLinkText" />
       <MemberSignature Language="VB.NET" Value="Public Property SkipLinkText As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ SkipLinkText { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.SkipLinkText : string with get, set" Usage="System.Web.UI.WebControls.TreeView.SkipLinkText" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -3510,7 +3665,7 @@
   
  The value of this property is stored in view state.  
   
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
  ]]></format>
         </remarks>
@@ -3529,8 +3684,14 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -3560,8 +3721,14 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -3594,8 +3761,14 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -3632,8 +3805,14 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -3663,8 +3842,14 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -3690,9 +3875,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.TagKey" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property TagKey As HtmlTextWriterTag" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property System::Web::UI::HtmlTextWriterTag TagKey { System::Web::UI::HtmlTextWriterTag get(); };" />
+      <MemberSignature Language="F#" Value="member this.TagKey : System.Web.UI.HtmlTextWriterTag" Usage="System.Web.UI.WebControls.TreeView.TagKey" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -3721,9 +3908,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.Target" />
       <MemberSignature Language="VB.NET" Value="Public Property Target As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Target { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Target : string with get, set" Usage="System.Web.UI.WebControls.TreeView.Target" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -3765,9 +3954,9 @@
  Use the <xref:System.Web.UI.WebControls.TreeView.Target%2A> property to specify the window or frame in which to display the Web content that is linked to a node when that node is clicked.  
   
 > [!NOTE]
->  The <xref:System.Web.UI.WebControls.TreeView.Target%2A> property renders as a `target` attribute. The `target` attribute on `anchor` elements is not allowed in the XHTML 1.1 document type definition. Do not set the <xref:System.Web.UI.WebControls.TreeView.Target%2A> property, if the rendered output for the <xref:System.Web.UI.WebControls.TreeView> must be XHTML 1.1 compliant. For more information, see [XHTML Standards in Visual Studio and ASP.NET](http://msdn.microsoft.com/library/1b78d416-66bb-43a5-ac77-c703aab55b97).  
+>  The <xref:System.Web.UI.WebControls.TreeView.Target%2A> property renders as a `target` attribute. The `target` attribute on `anchor` elements is not allowed in the XHTML 1.1 document type definition. Do not set the <xref:System.Web.UI.WebControls.TreeView.Target%2A> property, if the rendered output for the <xref:System.Web.UI.WebControls.TreeView> must be XHTML 1.1 compliant. For more information, see [XHTML Standards in Visual Studio and ASP.NET](https://msdn.microsoft.com/library/1b78d416-66bb-43a5-ac77-c703aab55b97).  
 >   
->  When creating accessible Web pages, you should avoid using the <xref:System.Web.UI.WebControls.TreeView.Target%2A> property to target another window. For more information, see [ASP.NET Controls and Accessibility](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+>  When creating accessible Web pages, you should avoid using the <xref:System.Web.UI.WebControls.TreeView.Target%2A> property to target another window. For more information, see [ASP.NET Controls and Accessibility](https://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
   
  The value of this property is stored in view state.  
   
@@ -3790,9 +3979,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeView.TrackViewState" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub TrackViewState ()" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void TrackViewState();" />
+      <MemberSignature Language="F#" Value="override this.TrackViewState : unit -&gt; unit" Usage="treeView.TrackViewState " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -3819,9 +4010,11 @@
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.TreeView.TreeNodeCheckChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event TreeNodeCheckChanged As TreeNodeEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Web::UI::WebControls::TreeNodeEventHandler ^ TreeNodeCheckChanged;" />
+      <MemberSignature Language="F#" Value="member this.TreeNodeCheckChanged : System.Web.UI.WebControls.TreeNodeEventHandler " Usage="member this.TreeNodeCheckChanged : System.Web.UI.WebControls.TreeNodeEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -3837,7 +4030,7 @@
   
  Even though the <xref:System.Web.UI.WebControls.TreeView.TreeNodeCheckChanged> event is fired on post back, changing a check box does not cause a post back.  
   
- For more information about handling events, see [NIB: Consuming Events](http://msdn.microsoft.com/library/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+ For more information about how to handle events, see [Handling and Raising Events](~/docs/standard/events/index.md).  
   
    
   
@@ -3858,9 +4051,11 @@
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.TreeView.TreeNodeCollapsed" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event TreeNodeCollapsed As TreeNodeEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Web::UI::WebControls::TreeNodeEventHandler ^ TreeNodeCollapsed;" />
+      <MemberSignature Language="F#" Value="member this.TreeNodeCollapsed : System.Web.UI.WebControls.TreeNodeEventHandler " Usage="member this.TreeNodeCollapsed : System.Web.UI.WebControls.TreeNodeEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -3874,7 +4069,7 @@
 ## Remarks  
  The <xref:System.Web.UI.WebControls.TreeView.TreeNodeCollapsed> event is raised when a node is collapsed in the <xref:System.Web.UI.WebControls.TreeView> control. This allows you to provide an event-handling method that performs a custom routine whenever this event occurs.  
   
- For more information about handling events, see [NIB: Consuming Events](http://msdn.microsoft.com/library/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+ For more information about how to handle events, see [Handling and Raising Events](~/docs/standard/events/index.md).  
   
    
   
@@ -3895,9 +4090,11 @@
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.TreeView.TreeNodeDataBound" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event TreeNodeDataBound As TreeNodeEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Web::UI::WebControls::TreeNodeEventHandler ^ TreeNodeDataBound;" />
+      <MemberSignature Language="F#" Value="member this.TreeNodeDataBound : System.Web.UI.WebControls.TreeNodeEventHandler " Usage="member this.TreeNodeDataBound : System.Web.UI.WebControls.TreeNodeEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -3911,7 +4108,7 @@
 ## Remarks  
  The <xref:System.Web.UI.WebControls.TreeView.TreeNodeDataBound> event is raised when a data item is bound to a node in the <xref:System.Web.UI.WebControls.TreeView> control. This allows you to provide an event-handling method that performs a custom routine whenever this event occurs.  
   
- For more information about handling events, see [NIB: Consuming Events](http://msdn.microsoft.com/library/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+ For more information about how to handle events, see [Handling and Raising Events](~/docs/standard/events/index.md).  
   
    
   
@@ -3951,9 +4148,11 @@
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.TreeView.TreeNodeExpanded" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event TreeNodeExpanded As TreeNodeEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Web::UI::WebControls::TreeNodeEventHandler ^ TreeNodeExpanded;" />
+      <MemberSignature Language="F#" Value="member this.TreeNodeExpanded : System.Web.UI.WebControls.TreeNodeEventHandler " Usage="member this.TreeNodeExpanded : System.Web.UI.WebControls.TreeNodeEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -3970,7 +4169,7 @@
 > [!NOTE]
 >  If the <xref:System.Web.UI.WebControls.TreeNode.SelectAction%2A> property for a node is set to `TreeNodeSelectAction.Expand` or `TreeNodeSelectAction.SelectExpand`, the <xref:System.Web.UI.WebControls.TreeView.TreeNodeExpanded> event is also raised when that node is clicked in the <xref:System.Web.UI.WebControls.TreeView> control.  
   
- For more information about handling events, see [NIB: Consuming Events](http://msdn.microsoft.com/library/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+ For more information about how to handle events, see [Handling and Raising Events](~/docs/standard/events/index.md).  
   
    
   
@@ -3992,9 +4191,11 @@
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.TreeView.TreeNodePopulate" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event TreeNodePopulate As TreeNodeEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event System::Web::UI::WebControls::TreeNodeEventHandler ^ TreeNodePopulate;" />
+      <MemberSignature Language="F#" Value="member this.TreeNodePopulate : System.Web.UI.WebControls.TreeNodeEventHandler " Usage="member this.TreeNodePopulate : System.Web.UI.WebControls.TreeNodeEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -4015,7 +4216,7 @@
   
  Supported browsers (Microsoft Internet Explorer 4.0-compatible browsers and later) can also take advantage of client-side node population. When enabled, this allows the <xref:System.Web.UI.WebControls.TreeView> control to populate a node dynamically on the client when that node is expanded, which prevents the need to post back to the server. For more information on client-side node population, see <xref:System.Web.UI.WebControls.TreeView.PopulateNodesFromClient%2A>.  
   
- For more information about handling events, see [NIB: Consuming Events](http://msdn.microsoft.com/library/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+ For more information about how to handle events, see [Handling and Raising Events](~/docs/standard/events/index.md).  
   
    
   
@@ -4038,9 +4239,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeView.Visible" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Property Visible As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool Visible { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Visible : bool with get, set" Usage="System.Web.UI.WebControls.TreeView.Visible" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

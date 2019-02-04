@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.SeriesCollection" />
   <TypeSignature Language="VB.NET" Value="Public Class SeriesCollection&#xA;Inherits ChartNamedElementCollection(Of Series)" />
   <TypeSignature Language="C++ CLI" Value="public ref class SeriesCollection : System::Windows::Forms::DataVisualization::Charting::ChartNamedElementCollection&lt;System::Windows::Forms::DataVisualization::Charting::Series ^&gt;" />
+  <TypeSignature Language="F#" Value="type SeriesCollection = class&#xA;    inherit ChartNamedElementCollection&lt;Series&gt;" />
   <AssemblyInfo>
     <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -37,6 +38,7 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.SeriesCollection.Add(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function Add (name As String) As Series" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Windows::Forms::DataVisualization::Charting::Series ^ Add(System::String ^ name);" />
+      <MemberSignature Language="F#" Value="override this.Add : string -&gt; System.Windows.Forms.DataVisualization.Charting.Series" Usage="seriesCollection.Add name" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -51,7 +53,7 @@
       <Docs>
         <param name="name">The name of the <see cref="T:System.Windows.Forms.DataVisualization.Charting.Series" /> to be added.</param>
         <summary>Adds a <see cref="T:System.Windows.Forms.DataVisualization.Charting.Series" /> object to the end of the collection.</summary>
-        <returns>The new <see cref="T:System.Windows.Forms.DataVisualization.Charting.Series" /> object appended to the collection..</returns>
+        <returns>The new <see cref="T:System.Windows.Forms.DataVisualization.Charting.Series" /> object appended to the collection.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   

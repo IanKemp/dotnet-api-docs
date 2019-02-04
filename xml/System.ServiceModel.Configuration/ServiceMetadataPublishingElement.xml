@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.ServiceMetadataPublishingElement" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ServiceMetadataPublishingElement&#xA;Inherits BehaviorExtensionElement" />
   <TypeSignature Language="C++ CLI" Value="public ref class ServiceMetadataPublishingElement sealed : System::ServiceModel::Configuration::BehaviorExtensionElement" />
+  <TypeSignature Language="F#" Value="type ServiceMetadataPublishingElement = class&#xA;    inherit BehaviorExtensionElement" />
   <AssemblyInfo>
     <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -38,8 +40,14 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.Configuration.ServiceMetadataPublishingElement" /> class.</summary>
@@ -52,9 +60,11 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.BehaviorType" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property BehaviorType As Type" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Type ^ BehaviorType { Type ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.BehaviorType : Type" Usage="System.ServiceModel.Configuration.ServiceMetadataPublishingElement.BehaviorType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -72,9 +82,11 @@
       <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.CopyFrom(System.ServiceModel.Configuration.ServiceModelExtensionElement)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub CopyFrom (from As ServiceModelExtensionElement)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void CopyFrom(System::ServiceModel::Configuration::ServiceModelExtensionElement ^ from);" />
+      <MemberSignature Language="F#" Value="override this.CopyFrom : System.ServiceModel.Configuration.ServiceModelExtensionElement -&gt; unit" Usage="serviceMetadataPublishingElement.CopyFrom from" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -95,9 +107,11 @@
       <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.CreateBehavior" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function CreateBehavior () As Object" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override System::Object ^ CreateBehavior();" />
+      <MemberSignature Language="F#" Value="override this.CreateBehavior : unit -&gt; obj" Usage="serviceMetadataPublishingElement.CreateBehavior " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -116,9 +130,11 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.ExternalMetadataLocation" />
       <MemberSignature Language="VB.NET" Value="Public Property ExternalMetadataLocation As Uri" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Uri ^ ExternalMetadataLocation { Uri ^ get(); void set(Uri ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ExternalMetadataLocation : Uri with get, set" Usage="System.ServiceModel.Configuration.ServiceMetadataPublishingElement.ExternalMetadataLocation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -148,9 +164,11 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpGetBinding" />
       <MemberSignature Language="VB.NET" Value="Public Property HttpGetBinding As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ HttpGetBinding { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.HttpGetBinding : string with get, set" Usage="System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpGetBinding" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -165,8 +183,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>A string value that specifies the name of the binding to be used for metadata retrieval in HTTP GET scenarios.</summary>
-        <value>Returns <see cref="T:System.String" />.</value>
+        <summary>Gets or sets a string value that specifies the name of the binding to be used for metadata retrieval in HTTP GET scenarios.</summary>
+        <value>The name of the binding to be used for metadata retrieval in HTTP GET scenarios.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -183,9 +201,11 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpGetBindingConfiguration" />
       <MemberSignature Language="VB.NET" Value="Public Property HttpGetBindingConfiguration As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ HttpGetBindingConfiguration { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.HttpGetBindingConfiguration : string with get, set" Usage="System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpGetBindingConfiguration" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -201,7 +221,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets or sets a string that points to an XML section defining additional configuration information for the binding specified in <see cref="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpGetBinding" />.</summary>
-        <value>Returns <see cref="T:System.String" />.</value>
+        <value>A string that points to an XML section defining additional configuration information for the binding specified in <see cref="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpGetBinding" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -211,9 +231,11 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpGetEnabled" />
       <MemberSignature Language="VB.NET" Value="Public Property HttpGetEnabled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool HttpGetEnabled { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.HttpGetEnabled : bool with get, set" Usage="System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpGetEnabled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -246,9 +268,11 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpGetUrl" />
       <MemberSignature Language="VB.NET" Value="Public Property HttpGetUrl As Uri" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Uri ^ HttpGetUrl { Uri ^ get(); void set(Uri ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.HttpGetUrl : Uri with get, set" Usage="System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpGetUrl" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -271,9 +295,11 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpsGetBinding" />
       <MemberSignature Language="VB.NET" Value="Public Property HttpsGetBinding As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ HttpsGetBinding { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.HttpsGetBinding : string with get, set" Usage="System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpsGetBinding" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -288,8 +314,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>A string value that specifies the name of the binding to be used for metadata retrieval in HTTPS GET scenarios.</summary>
-        <value>Returns <see cref="T:System.String" />.</value>
+        <summary>Gets or sets a string value that specifies the name of the binding to be used for metadata retrieval in HTTPS GET scenarios.</summary>
+        <value>The name of the binding to be used for metadata retrieval in HTTPS GET scenarios.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -306,9 +332,11 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpsGetBindingConfiguration" />
       <MemberSignature Language="VB.NET" Value="Public Property HttpsGetBindingConfiguration As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ HttpsGetBindingConfiguration { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.HttpsGetBindingConfiguration : string with get, set" Usage="System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpsGetBindingConfiguration" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -324,7 +352,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets or sets a string that points to an XML section defining additional configuration information for the binding specified in <see cref="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpsGetBinding" />.</summary>
-        <value>Returns <see cref="T:System.String" />.</value>
+        <value>A string that points to an XML section defining additional configuration information for the binding specified in <see cref="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpsGetBinding" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -334,9 +362,11 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpsGetEnabled" />
       <MemberSignature Language="VB.NET" Value="Public Property HttpsGetEnabled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool HttpsGetEnabled { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.HttpsGetEnabled : bool with get, set" Usage="System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpsGetEnabled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -369,9 +399,11 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpsGetUrl" />
       <MemberSignature Language="VB.NET" Value="Public Property HttpsGetUrl As Uri" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Uri ^ HttpsGetUrl { Uri ^ get(); void set(Uri ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.HttpsGetUrl : Uri with get, set" Usage="System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpsGetUrl" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -394,9 +426,11 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.PolicyVersion" />
       <MemberSignature Language="VB.NET" Value="Public Property PolicyVersion As PolicyVersion" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::ServiceModel::Description::PolicyVersion ^ PolicyVersion { System::ServiceModel::Description::PolicyVersion ^ get(); void set(System::ServiceModel::Description::PolicyVersion ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.PolicyVersion : System.ServiceModel.Description.PolicyVersion with get, set" Usage="System.ServiceModel.Configuration.ServiceMetadataPublishingElement.PolicyVersion" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -422,9 +456,11 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.Properties" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property Properties As ConfigurationPropertyCollection" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property System::Configuration::ConfigurationPropertyCollection ^ Properties { System::Configuration::ConfigurationPropertyCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Properties : System.Configuration.ConfigurationPropertyCollection" Usage="System.ServiceModel.Configuration.ServiceMetadataPublishingElement.Properties" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

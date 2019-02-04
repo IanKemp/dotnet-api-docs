@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Collections.Concurrent.ConcurrentStack`1" />
   <TypeSignature Language="VB.NET" Value="Public Class ConcurrentStack(Of T)&#xA;Implements IEnumerable(Of T), IProducerConsumerCollection(Of T), IReadOnlyCollection(Of T)" />
   <TypeSignature Language="C++ CLI" Value="generic &lt;typename T&gt;&#xA;public ref class ConcurrentStack : System::Collections::Concurrent::IProducerConsumerCollection&lt;T&gt;, System::Collections::Generic::IEnumerable&lt;T&gt;, System::Collections::Generic::IReadOnlyCollection&lt;T&gt;" />
+  <TypeSignature Language="F#" Value="type ConcurrentStack&lt;'T&gt; = class&#xA;    interface IProducerConsumerCollection&lt;'T&gt;&#xA;    interface IReadOnlyCollection&lt;'T&gt;&#xA;    interface seq&lt;'T&gt;&#xA;    interface ICollection&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>System.Collections.Concurrent</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -35,13 +36,22 @@
     <Interface>
       <InterfaceName>System.Collections.Generic.IReadOnlyCollection&lt;T&gt;</InterfaceName>
     </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
   </Interfaces>
   <Attributes>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8">
       <AttributeName>System.Diagnostics.DebuggerDisplay("Count = {Count}")</AttributeName>
     </Attribute>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8">
       <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.Collections.Concurrent.SystemCollectionsConcurrent_ProducerConsumerCollectionDebugView`1))</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
+      <AttributeName>System.Serializable</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -70,17 +80,18 @@
 ## Examples  
  The following example shows how to use a <xref:System.Collections.Concurrent.ConcurrentStack%601> to push and pop individual items:  
   
- [!code-csharp[System.Collections.Concurrent.ConcurrentStack#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.concurrent.concurrentstack/cs/concstack.cs#2)]
- [!code-vb[System.Collections.Concurrent.ConcurrentStack#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.concurrent.concurrentstack/vb/concstack.vb#2)]  
+ [!code-csharp[System.Collections.Concurrent.ConcurrentStack#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.concurrent.concurrentstack/cs/concstack_single.cs#1)]
+ [!code-vb[System.Collections.Concurrent.ConcurrentStack#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.concurrent.concurrentstack/vb/concstack_single.vb#1)]
   
  The following example shows how to use a <xref:System.Collections.Concurrent.ConcurrentStack%601> to push and pop ranges of items:  
   
- [!code-csharp[System.Collections.Concurrent.ConcurrentStack#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.concurrent.concurrentstack/cs/concstack.cs#1)]
- [!code-vb[System.Collections.Concurrent.ConcurrentStack#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.concurrent.concurrentstack/vb/concstack.vb#1)]  
+ [!code-csharp[System.Collections.Concurrent.ConcurrentStack#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.concurrent.concurrentstack/cs/concstack_range.cs#1)]
+ [!code-vb[System.Collections.Concurrent.ConcurrentStack#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.concurrent.concurrentstack/vb/concstack_range.vb#1)]
   
  ]]></format>
     </remarks>
     <threadsafe>All public and protected members of <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" /> are thread-safe and may be used concurrently from multiple threads.</threadsafe>
+    <related type="Article" href="https://msdn.microsoft.com/library/2e7ca21f-786c-4367-96be-0cf3f3dcc6bd">Thread-Safe Collections</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -109,6 +120,7 @@
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" /> class.</summary>
         <remarks>To be added.</remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/2e7ca21f-786c-4367-96be-0cf3f3dcc6bd">Thread-Safe Collections</related>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -117,6 +129,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentStack`1.#ctor(System.Collections.Generic.IEnumerable{`0})" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (collection As IEnumerable(Of T))" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ConcurrentStack(System::Collections::Generic::IEnumerable&lt;T&gt; ^ collection);" />
+      <MemberSignature Language="F#" Value="new System.Collections.Concurrent.ConcurrentStack&lt;'T&gt; : seq&lt;'T&gt; -&gt; System.Collections.Concurrent.ConcurrentStack&lt;'T&gt;" Usage="new System.Collections.Concurrent.ConcurrentStack&lt;'T&gt; collection" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.Concurrent</AssemblyName>
@@ -141,6 +154,7 @@
         <summary>Initializes a new instance of the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" /> class that contains elements copied from the specified collection</summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="collection" /> argument is null.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/2e7ca21f-786c-4367-96be-0cf3f3dcc6bd">Thread-Safe Collections</related>
       </Docs>
     </Member>
     <Member MemberName="Clear">
@@ -149,6 +163,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentStack`1.Clear" />
       <MemberSignature Language="VB.NET" Value="Public Sub Clear ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Clear();" />
+      <MemberSignature Language="F#" Value="member this.Clear : unit -&gt; unit" Usage="concurrentStack.Clear " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.Concurrent</AssemblyName>
@@ -172,6 +187,7 @@
       <Docs>
         <summary>Removes all objects from the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" />.</summary>
         <remarks>To be added.</remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/2e7ca21f-786c-4367-96be-0cf3f3dcc6bd">Thread-Safe Collections</related>
       </Docs>
     </Member>
     <Member MemberName="CopyTo">
@@ -180,6 +196,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentStack`1.CopyTo(`0[],System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub CopyTo (array As T(), index As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void CopyTo(cli::array &lt;T&gt; ^ array, int index);" />
+      <MemberSignature Language="F#" Value="abstract member CopyTo : 'T[] * int -&gt; unit&#xA;override this.CopyTo : 'T[] * int -&gt; unit" Usage="concurrentStack.CopyTo (array, index)" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.Concurrent.IProducerConsumerCollection`1.CopyTo(`0[],System.Int32)</InterfaceMember>
@@ -208,7 +225,7 @@
       </Parameters>
       <Docs>
         <param name="array">The one-dimensional <see cref="T:System.Array" /> that is the destination of the elements copied from the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" />. The <see cref="T:System.Array" /> must have zero-based indexing.</param>
-        <param name="index">The zero-based index in <c>array</c> at which copying begins.</param>
+        <param name="index">The zero-based index in <paramref name="array" /> at which copying begins.</param>
         <summary>Copies the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" /> elements to an existing one-dimensional <see cref="T:System.Array" />, starting at the specified array index.</summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -217,6 +234,7 @@
           <paramref name="index" /> is less than zero.</exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="index" /> is equal to or greater than the length of the <paramref name="array" /> -or- The number of elements in the source <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" /> is greater than the available space from <paramref name="index" /> to the end of the destination <paramref name="array" />.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/2e7ca21f-786c-4367-96be-0cf3f3dcc6bd">Thread-Safe Collections</related>
       </Docs>
     </Member>
     <Member MemberName="Count">
@@ -225,6 +243,7 @@
       <MemberSignature Language="DocId" Value="P:System.Collections.Concurrent.ConcurrentStack`1.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="System.Collections.Concurrent.ConcurrentStack&lt;'T&gt;.Count" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.Generic.IReadOnlyCollection`1.Count</InterfaceMember>
@@ -266,6 +285,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentStack`1.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator(Of T)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Collections::Generic::IEnumerator&lt;T&gt; ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.Generic.IEnumerator&lt;'T&gt;&#xA;override this.GetEnumerator : unit -&gt; System.Collections.Generic.IEnumerator&lt;'T&gt;" Usage="concurrentStack.GetEnumerator " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.Generic.IEnumerable`1.GetEnumerator</InterfaceMember>
@@ -300,6 +320,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/2e7ca21f-786c-4367-96be-0cf3f3dcc6bd">Thread-Safe Collections</related>
       </Docs>
     </Member>
     <Member MemberName="IsEmpty">
@@ -308,6 +329,7 @@
       <MemberSignature Language="DocId" Value="P:System.Collections.Concurrent.ConcurrentStack`1.IsEmpty" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsEmpty As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsEmpty { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsEmpty : bool" Usage="System.Collections.Concurrent.ConcurrentStack&lt;'T&gt;.IsEmpty" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.Concurrent</AssemblyName>
@@ -329,7 +351,8 @@
       </ReturnValue>
       <Docs>
         <summary>Gets a value that indicates whether the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" /> is empty.</summary>
-        <value>true if the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" /> is empty; otherwise, false.</value>
+        <value>
+          <see langword="true" /> if the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" /> is empty; otherwise, <see langword="false" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -340,6 +363,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/2e7ca21f-786c-4367-96be-0cf3f3dcc6bd">Thread-Safe Collections</related>
       </Docs>
     </Member>
     <Member MemberName="Push">
@@ -348,6 +372,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentStack`1.Push(`0)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Push (item As T)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Push(T item);" />
+      <MemberSignature Language="F#" Value="member this.Push : 'T -&gt; unit" Usage="concurrentStack.Push item" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.Concurrent</AssemblyName>
@@ -374,6 +399,7 @@
         <param name="item">The object to push onto the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" />. The value can be a null reference (Nothing in Visual Basic) for reference types.</param>
         <summary>Inserts an object at the top of the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" />.</summary>
         <remarks>To be added.</remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/2e7ca21f-786c-4367-96be-0cf3f3dcc6bd">Thread-Safe Collections</related>
       </Docs>
     </Member>
     <MemberGroup MemberName="PushRange">
@@ -385,6 +411,7 @@
       </AssemblyInfo>
       <Docs>
         <remarks />
+        <related type="Article" href="https://msdn.microsoft.com/library/2e7ca21f-786c-4367-96be-0cf3f3dcc6bd">Thread-Safe Collections</related>
       </Docs>
     </MemberGroup>
     <Member MemberName="PushRange">
@@ -393,6 +420,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentStack`1.PushRange(`0[])" />
       <MemberSignature Language="VB.NET" Value="Public Sub PushRange (items As T())" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void PushRange(cli::array &lt;T&gt; ^ items);" />
+      <MemberSignature Language="F#" Value="member this.PushRange : 'T[] -&gt; unit" Usage="concurrentStack.PushRange items" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.Concurrent</AssemblyName>
@@ -430,6 +458,7 @@
         </remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="items" /> is a null reference (Nothing in Visual Basic).</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/2e7ca21f-786c-4367-96be-0cf3f3dcc6bd">Thread-Safe Collections</related>
       </Docs>
     </Member>
     <Member MemberName="PushRange">
@@ -438,6 +467,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentStack`1.PushRange(`0[],System.Int32,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub PushRange (items As T(), startIndex As Integer, count As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void PushRange(cli::array &lt;T&gt; ^ items, int startIndex, int count);" />
+      <MemberSignature Language="F#" Value="member this.PushRange : 'T[] * int * int -&gt; unit" Usage="concurrentStack.PushRange (items, startIndex, count)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.Concurrent</AssemblyName>
@@ -464,7 +494,7 @@
       </Parameters>
       <Docs>
         <param name="items">The objects to push onto the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" />.</param>
-        <param name="startIndex">The zero-based offset in <c>items</c> at which to begin inserting elements onto the top of the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" />.</param>
+        <param name="startIndex">The zero-based offset in <paramref name="items" /> at which to begin inserting elements onto the top of the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" />.</param>
         <param name="count">The number of elements to be inserted onto the top of the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" />.</param>
         <summary>Inserts multiple objects at the top of the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" /> atomically.</summary>
         <remarks>
@@ -483,6 +513,7 @@
           <paramref name="startIndex" /> or <paramref name="count" /> is negative. Or <paramref name="startIndex" /> is greater than or equal to the length of <paramref name="items" />.</exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="startIndex" /> + <paramref name="count" /> is greater than the length of <paramref name="items" />.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/2e7ca21f-786c-4367-96be-0cf3f3dcc6bd">Thread-Safe Collections</related>
       </Docs>
     </Member>
     <Member MemberName="System.Collections.Concurrent.IProducerConsumerCollection&lt;T&gt;.TryAdd">
@@ -528,6 +559,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/2e7ca21f-786c-4367-96be-0cf3f3dcc6bd">Thread-Safe Collections</related>
       </Docs>
     </Member>
     <Member MemberName="System.Collections.Concurrent.IProducerConsumerCollection&lt;T&gt;.TryTake">
@@ -559,10 +591,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="item" Type="T&amp;" RefType="out" />
+        <Parameter Name="item" Type="T" RefType="out" />
       </Parameters>
       <Docs>
-        <param name="item">When this method returns, if the operation was successful, <c>item</c> contains the object removed. If no object was available to be removed, the value is unspecified.</param>
+        <param name="item">When this method returns, if the operation was successful, <paramref name="item" /> contains the object removed. If no object was available to be removed, the value is unspecified.</param>
         <summary>Attempts to remove and return an object from the <see cref="T:System.Collections.Concurrent.IProducerConsumerCollection`1" />.</summary>
         <returns>true if an element was removed and returned succesfully; otherwise, false.</returns>
         <remarks>
@@ -573,6 +605,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/2e7ca21f-786c-4367-96be-0cf3f3dcc6bd">Thread-Safe Collections</related>
       </Docs>
     </Member>
     <Member MemberName="System.Collections.ICollection.CopyTo">
@@ -608,7 +641,7 @@
       </Parameters>
       <Docs>
         <param name="array">The one-dimensional <see cref="T:System.Array" /> that is the destination of the elements copied from the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" />. The <see cref="T:System.Array" /> must have zero-based indexing.</param>
-        <param name="index">The zero-based index in <c>array</c> at which copying begins.</param>
+        <param name="index">The zero-based index in <paramref name="array" /> at which copying begins.</param>
         <summary>Copies the elements of the <see cref="T:System.Collections.ICollection" /> to an <see cref="T:System.Array" />, starting at a particular <see cref="T:System.Array" /> index.</summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ArgumentNullException">
@@ -617,6 +650,7 @@
           <paramref name="index" /> is less than zero.</exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="array" /> is multidimensional. -or- <paramref name="array" /> does not have zero-based indexing. -or- <paramref name="index" /> is equal to or greater than the length of the <paramref name="array" /> -or- The number of elements in the source <see cref="T:System.Collections.ICollection" /> is greater than the available space from <paramref name="index" /> to the end of the destination <paramref name="array" />. -or- The type of the source <see cref="T:System.Collections.ICollection" /> cannot be cast automatically to the type of the destination <paramref name="array" />.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/2e7ca21f-786c-4367-96be-0cf3f3dcc6bd">Thread-Safe Collections</related>
       </Docs>
     </Member>
     <Member MemberName="System.Collections.ICollection.IsSynchronized">
@@ -624,7 +658,8 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
       <MemberSignature Language="DocId" Value="P:System.Collections.Concurrent.ConcurrentStack`1.System#Collections#ICollection#IsSynchronized" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property IsSynchronized As Boolean Implements ICollection.IsSynchronized" />
-      <MemberSignature Language="C++ CLI" Value="property bool System.Collections.ICollection.IsSynchronized { bool get(); };" />
+      <MemberSignature Language="C++ CLI" Value="property bool System::Collections::ICollection::IsSynchronized { bool get(); };" />
+      <MemberSignature Language="F#" Usage="System.Collections.ICollection.IsSynchronized" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.ICollection.IsSynchronized</InterfaceMember>
@@ -649,7 +684,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets a value indicating whether access to the <see cref="T:System.Collections.ICollection" /> is synchronized with the SyncRoot.</summary>
-        <value>true if access to the <see cref="T:System.Collections.ICollection" /> is synchronized with the SyncRoot; otherwise, false. For <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" />, this property always returns false.</value>
+        <value>Always returns <see langword="false" /> to indicate access is not synchronized.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -658,7 +693,8 @@
       <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
       <MemberSignature Language="DocId" Value="P:System.Collections.Concurrent.ConcurrentStack`1.System#Collections#ICollection#SyncRoot" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property SyncRoot As Object Implements ICollection.SyncRoot" />
-      <MemberSignature Language="C++ CLI" Value="property System::Object ^ System.Collections.ICollection.SyncRoot { System::Object ^ get(); };" />
+      <MemberSignature Language="C++ CLI" Value="property System::Object ^ System::Collections::ICollection::SyncRoot { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Usage="System.Collections.ICollection.SyncRoot" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.ICollection.SyncRoot</InterfaceMember>
@@ -686,6 +722,7 @@
         <value>Returns null (Nothing in Visual Basic).</value>
         <remarks>To be added.</remarks>
         <exception cref="T:System.NotSupportedException">The SyncRoot property is not supported</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/2e7ca21f-786c-4367-96be-0cf3f3dcc6bd">Thread-Safe Collections</related>
       </Docs>
     </Member>
     <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
@@ -736,6 +773,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentStack`1.ToArray" />
       <MemberSignature Language="VB.NET" Value="Public Function ToArray () As T()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual cli::array &lt;T&gt; ^ ToArray();" />
+      <MemberSignature Language="F#" Value="abstract member ToArray : unit -&gt; 'T[]&#xA;override this.ToArray : unit -&gt; 'T[]" Usage="concurrentStack.ToArray " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.Concurrent.IProducerConsumerCollection`1.ToArray</InterfaceMember>
@@ -763,6 +801,7 @@
         <summary>Copies the items stored in the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" /> to a new array.</summary>
         <returns>A new array containing a snapshot of elements copied from the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" />.</returns>
         <remarks>To be added.</remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/2e7ca21f-786c-4367-96be-0cf3f3dcc6bd">Thread-Safe Collections</related>
       </Docs>
     </Member>
     <Member MemberName="TryPeek">
@@ -771,6 +810,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentStack`1.TryPeek(`0@)" />
       <MemberSignature Language="VB.NET" Value="Public Function TryPeek (ByRef result As T) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryPeek([Runtime::InteropServices::Out] T % result);" />
+      <MemberSignature Language="F#" Value="member this.TryPeek :  -&gt; bool" Usage="concurrentStack.TryPeek result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.Concurrent</AssemblyName>
@@ -791,13 +831,14 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="result" Type="T&amp;" RefType="out" />
+        <Parameter Name="result" Type="T" RefType="out" />
       </Parameters>
       <Docs>
-        <param name="result">When this method returns, <c>result</c> contains an object from the top of the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" /> or an unspecified value if the operation failed.</param>
+        <param name="result">When this method returns, <paramref name="result" /> contains an object from the top of the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" /> or an unspecified value if the operation failed.</param>
         <summary>Attempts to return an object from the top of the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" /> without removing it.</summary>
         <returns>true if and object was returned successfully; otherwise, false.</returns>
         <remarks>To be added.</remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/2e7ca21f-786c-4367-96be-0cf3f3dcc6bd">Thread-Safe Collections</related>
       </Docs>
     </Member>
     <Member MemberName="TryPop">
@@ -806,6 +847,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentStack`1.TryPop(`0@)" />
       <MemberSignature Language="VB.NET" Value="Public Function TryPop (ByRef result As T) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryPop([Runtime::InteropServices::Out] T % result);" />
+      <MemberSignature Language="F#" Value="member this.TryPop :  -&gt; bool" Usage="concurrentStack.TryPop result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.Concurrent</AssemblyName>
@@ -826,10 +868,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="result" Type="T&amp;" RefType="out" />
+        <Parameter Name="result" Type="T" RefType="out" />
       </Parameters>
       <Docs>
-        <param name="result">When this method returns, if the operation was successful, <c>result</c> contains the object removed. If no object was available to be removed, the value is unspecified.</param>
+        <param name="result">When this method returns, if the operation was successful, <paramref name="result" /> contains the object removed. If no object was available to be removed, the value is unspecified.</param>
         <summary>Attempts to pop and return the object at the top of the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" />.</summary>
         <returns>true if an element was removed and returned from the top of the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" /> successfully; otherwise, false.</returns>
         <remarks>
@@ -851,6 +893,7 @@
       </AssemblyInfo>
       <Docs>
         <remarks />
+        <related type="Article" href="https://msdn.microsoft.com/library/2e7ca21f-786c-4367-96be-0cf3f3dcc6bd">Thread-Safe Collections</related>
       </Docs>
     </MemberGroup>
     <Member MemberName="TryPopRange">
@@ -859,6 +902,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentStack`1.TryPopRange(`0[])" />
       <MemberSignature Language="VB.NET" Value="Public Function TryPopRange (items As T()) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; int TryPopRange(cli::array &lt;T&gt; ^ items);" />
+      <MemberSignature Language="F#" Value="member this.TryPopRange : 'T[] -&gt; int" Usage="concurrentStack.TryPopRange items" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.Concurrent</AssemblyName>
@@ -897,6 +941,7 @@
         </remarks>
         <exception cref="T:System.ArgumentNullException">
           <paramref name="items" /> is a null argument (Nothing in Visual Basic).</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/2e7ca21f-786c-4367-96be-0cf3f3dcc6bd">Thread-Safe Collections</related>
       </Docs>
     </Member>
     <Member MemberName="TryPopRange">
@@ -905,6 +950,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentStack`1.TryPopRange(`0[],System.Int32,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Function TryPopRange (items As T(), startIndex As Integer, count As Integer) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; int TryPopRange(cli::array &lt;T&gt; ^ items, int startIndex, int count);" />
+      <MemberSignature Language="F#" Value="member this.TryPopRange : 'T[] * int * int -&gt; int" Usage="concurrentStack.TryPopRange (items, startIndex, count)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.Concurrent</AssemblyName>
@@ -931,8 +977,8 @@
       </Parameters>
       <Docs>
         <param name="items">The <see cref="T:System.Array" /> to which objects popped from the top of the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" /> will be added.</param>
-        <param name="startIndex">The zero-based offset in <c>items</c> at which to begin inserting elements from the top of the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" />.</param>
-        <param name="count">The number of elements to be popped from top of the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" /> and inserted into <c>items</c>.</param>
+        <param name="startIndex">The zero-based offset in <paramref name="items" /> at which to begin inserting elements from the top of the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" />.</param>
+        <param name="count">The number of elements to be popped from top of the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" /> and inserted into <paramref name="items" />.</param>
         <summary>Attempts to pop and return multiple objects from the top of the <see cref="T:System.Collections.Concurrent.ConcurrentStack`1" /> atomically.</summary>
         <returns>The number of objects successfully popped from the top of the stack and inserted in <paramref name="items" />.</returns>
         <remarks>
@@ -949,6 +995,7 @@
           <paramref name="startIndex" /> or <paramref name="count" /> is negative. Or <paramref name="startIndex" /> is greater than or equal to the length of <paramref name="items" />.</exception>
         <exception cref="T:System.ArgumentException">
           <paramref name="startIndex" /> + <paramref name="count" /> is greater than the length of <paramref name="items" />.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/2e7ca21f-786c-4367-96be-0cf3f3dcc6bd">Thread-Safe Collections</related>
       </Docs>
     </Member>
   </Members>

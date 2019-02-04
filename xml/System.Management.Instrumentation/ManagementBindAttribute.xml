@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Management.Instrumentation.ManagementBindAttribute" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ManagementBindAttribute&#xA;Inherits ManagementNewInstanceAttribute" />
   <TypeSignature Language="C++ CLI" Value="public ref class ManagementBindAttribute sealed : System::Management::Instrumentation::ManagementNewInstanceAttribute" />
+  <TypeSignature Language="F#" Value="type ManagementBindAttribute = class&#xA;    inherit ManagementNewInstanceAttribute" />
   <AssemblyInfo>
     <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -27,7 +29,8 @@
 ## Remarks  
  This attribute marks the method that the infrastructure uses to perform the WMI get operation. The method must take the key values of the corresponding WMI class as parameters and return the associated instance of the WMI class.  
   
- **Important** The method parameters must have exactly the same name and type as the key parameters of the class. The key parameters are identified by the .<xref:System.Management.Instrumentation.ManagementKeyAttribute> attribute  
+ > [!IMPORTANT]
+ > The method parameters must have exactly the same name and type as the key parameters of the class. The key parameters are identified by the <xref:System.Management.Instrumentation.ManagementKeyAttribute> attribute.
   
  The method must assign values to all instrumented properties of the class.  
   
@@ -67,11 +70,17 @@ public ClassConstructor(int Id)
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
-        <summary>Initializes a new instance of the <see cref="T:System.Management.ManagementBindAttribute" /> class. This is the default constructor.</summary>
+        <summary>Initializes a new instance of the <see cref="T:System.Management.Instrumentation.ManagementBindAttribute" /> class. This is the default constructor.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -81,17 +90,27 @@ public ClassConstructor(int Id)
       <MemberSignature Language="DocId" Value="P:System.Management.Instrumentation.ManagementBindAttribute.Schema" />
       <MemberSignature Language="VB.NET" Value="Public Property Schema As Type" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Type ^ Schema { Type ^ get(); void set(Type ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Schema : Type with get, set" Usage="System.Management.Instrumentation.ManagementBindAttribute.Schema" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Type</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets or sets a value that defines the type of output that the method that is marked with the ManagementEnumerator attribute will output.</summary>
-        <value>A <see cref="T:System.Type" /> value that indicates the type of output that the method marked with the <see cref="ManagementBind" /> attribute will output.</value>
+        <value>A <see cref="T:System.Type" /> value that indicates the type of output that the method marked with the <see cref="T:System.Management.Instrumentation.ManagementBindAttribute" /> attribute will output.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   

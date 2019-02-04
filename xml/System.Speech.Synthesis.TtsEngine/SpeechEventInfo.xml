@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.TtsEngine.SpeechEventInfo" />
   <TypeSignature Language="VB.NET" Value="Public Structure SpeechEventInfo&#xA;Implements IEquatable(Of SpeechEventInfo)" />
   <TypeSignature Language="C++ CLI" Value="public value class SpeechEventInfo : IEquatable&lt;System::Speech::Synthesis::TtsEngine::SpeechEventInfo&gt;" />
+  <TypeSignature Language="F#" Value="type SpeechEventInfo = struct" />
   <AssemblyInfo>
     <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -106,11 +108,18 @@ override public void Speak (TextFragment [] frags, IntPtr wfx, ITtsEngineSite si
       <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.SpeechEventInfo.#ctor(System.Int16,System.Int16,System.Int32,System.IntPtr)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (eventId As Short, parameterType As Short, param1 As Integer, param2 As IntPtr)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SpeechEventInfo(short eventId, short parameterType, int param1, IntPtr param2);" />
+      <MemberSignature Language="F#" Value="new System.Speech.Synthesis.TtsEngine.SpeechEventInfo : int16 * int16 * int * nativeint -&gt; System.Speech.Synthesis.TtsEngine.SpeechEventInfo" Usage="new System.Speech.Synthesis.TtsEngine.SpeechEventInfo (eventId, parameterType, param1, param2)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters>
         <Parameter Name="eventId" Type="System.Int16" />
         <Parameter Name="parameterType" Type="System.Int16" />
@@ -119,13 +128,13 @@ override public void Speak (TextFragment [] frags, IntPtr wfx, ITtsEngineSite si
       </Parameters>
       <Docs>
         <param name="eventId">An instance of <see cref="T:System.Speech.Synthesis.TtsEngine.TtsEventId" /> indicating the sort of Speech platform event the <see cref="T:System.Speech.Synthesis.TtsEngine.SpeechEventInfo" /> object is to handle.</param>
-        <param name="parameterType">An instance of <see cref="T:System.Speech.Synthesis.TtsEngine.EventParameterType" /> indicating how the <see langword="System.IntPtr" /> reference of <c>param2</c> is to be interpreted, and, by implication, the use of <c>param1</c>.</param>
+        <param name="parameterType">An instance of <see cref="T:System.Speech.Synthesis.TtsEngine.EventParameterType" /> indicating how the <see langword="System.IntPtr" /> reference of <paramref name="param2" /> is to be interpreted, and, by implication, the use of <paramref name="param1" />.</param>
         <param name="param1">An integer value to be passed to the Speech platform when the event requested by the instance of <see cref="T:System.Speech.Synthesis.TtsEngine.SpeechEventInfo" /> to be constructed is generated.  
   
- The exact meaning of this integer is implicitly determined by the value of <c>parameterType</c>.</param>
+ The exact meaning of this integer is implicitly determined by the value of <paramref name="parameterType" />.</param>
         <param name="param2">A <see langword="System.IntPtr" /> instance referencing an object. to be passed to the Speech platform when the event requested by the instance of <see cref="T:System.Speech.Synthesis.TtsEngine.SpeechEventInfo" /> to be constructed is generated.  
   
- The type which must be referenced is explicitly defined by the value <c>parameterType</c>. The value <see langword="System.IntPtr.Zero" />.</param>
+ The type which must be referenced is explicitly defined by the value <paramref name="parameterType" />. The value <see langword="System.IntPtr.Zero" />.</param>
         <summary>Constucts an appropriate <see cref="T:System.Speech.Synthesis.TtsEngine.SpeechEventInfo" />.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -223,9 +232,11 @@ override public void Speak (TextFragment [] frags, IntPtr wfx, ITtsEngineSite si
       <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.SpeechEventInfo.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="speechEventInfo.Equals obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -248,12 +259,14 @@ override public void Speak (TextFragment [] frags, IntPtr wfx, ITtsEngineSite si
       <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.SpeechEventInfo.Equals(System.Speech.Synthesis.TtsEngine.SpeechEventInfo)" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (other As SpeechEventInfo) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Equals(System::Speech::Synthesis::TtsEngine::SpeechEventInfo other);" />
+      <MemberSignature Language="F#" Value="override this.Equals : System.Speech.Synthesis.TtsEngine.SpeechEventInfo -&gt; bool" Usage="speechEventInfo.Equals other" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -276,11 +289,18 @@ override public void Speak (TextFragment [] frags, IntPtr wfx, ITtsEngineSite si
       <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.SpeechEventInfo.EventId" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EventId As Short" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property short EventId { short get(); };" />
+      <MemberSignature Language="F#" Value="member this.EventId : int16" Usage="System.Speech.Synthesis.TtsEngine.SpeechEventInfo.EventId" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Int16</ReturnType>
       </ReturnValue>
@@ -371,9 +391,11 @@ override public void Speak (TextFragment [] frags, IntPtr wfx, ITtsEngineSite si
       <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.SpeechEventInfo.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="speechEventInfo.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -392,9 +414,11 @@ override public void Speak (TextFragment [] frags, IntPtr wfx, ITtsEngineSite si
       <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.SpeechEventInfo.op_Equality(System.Speech.Synthesis.TtsEngine.SpeechEventInfo,System.Speech.Synthesis.TtsEngine.SpeechEventInfo)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator == (event1 As SpeechEventInfo, event2 As SpeechEventInfo) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator ==(System::Speech::Synthesis::TtsEngine::SpeechEventInfo event1, System::Speech::Synthesis::TtsEngine::SpeechEventInfo event2);" />
+      <MemberSignature Language="F#" Value="static member ( = ) : System.Speech.Synthesis.TtsEngine.SpeechEventInfo * System.Speech.Synthesis.TtsEngine.SpeechEventInfo -&gt; bool" Usage="event1 = event2" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -405,8 +429,8 @@ override public void Speak (TextFragment [] frags, IntPtr wfx, ITtsEngineSite si
         <Parameter Name="event2" Type="System.Speech.Synthesis.TtsEngine.SpeechEventInfo" />
       </Parameters>
       <Docs>
-        <param name="event1">The <see cref="T:System.Speech.Synthesis.TtsEngine.SpeechEventInfo" /> object to compare to <c>event2</c>.</param>
-        <param name="event2">The <see cref="T:System.Speech.Synthesis.TtsEngine.SpeechEventInfo" /> object to compare to <c>event1</c>.</param>
+        <param name="event1">The <see cref="T:System.Speech.Synthesis.TtsEngine.SpeechEventInfo" /> object to compare to <paramref name="event2" />.</param>
+        <param name="event2">The <see cref="T:System.Speech.Synthesis.TtsEngine.SpeechEventInfo" /> object to compare to <paramref name="event1" />.</param>
         <summary>Determines whether two instances of <c>SpeechEventInfo</c> are equal.</summary>
         <returns>
           <see langword="true" /> if <paramref name="event1" /> is the same as <paramref name="event2" />; otherwise, <see langword="false" />.</returns>
@@ -421,9 +445,11 @@ override public void Speak (TextFragment [] frags, IntPtr wfx, ITtsEngineSite si
       <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.SpeechEventInfo.op_Inequality(System.Speech.Synthesis.TtsEngine.SpeechEventInfo,System.Speech.Synthesis.TtsEngine.SpeechEventInfo)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator != (event1 As SpeechEventInfo, event2 As SpeechEventInfo) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator !=(System::Speech::Synthesis::TtsEngine::SpeechEventInfo event1, System::Speech::Synthesis::TtsEngine::SpeechEventInfo event2);" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : System.Speech.Synthesis.TtsEngine.SpeechEventInfo * System.Speech.Synthesis.TtsEngine.SpeechEventInfo -&gt; bool" Usage="System.Speech.Synthesis.TtsEngine.SpeechEventInfo.op_Inequality (event1, event2)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -434,8 +460,8 @@ override public void Speak (TextFragment [] frags, IntPtr wfx, ITtsEngineSite si
         <Parameter Name="event2" Type="System.Speech.Synthesis.TtsEngine.SpeechEventInfo" />
       </Parameters>
       <Docs>
-        <param name="event1">The <see cref="T:System.Speech.Synthesis.TtsEngine.SpeechEventInfo" /> object to compare to <c>event2</c>.</param>
-        <param name="event2">The <see cref="T:System.Speech.Synthesis.TtsEngine.SpeechEventInfo" /> object to compare to <c>event1</c>.</param>
+        <param name="event1">The <see cref="T:System.Speech.Synthesis.TtsEngine.SpeechEventInfo" /> object to compare to <paramref name="event2" />.</param>
+        <param name="event2">The <see cref="T:System.Speech.Synthesis.TtsEngine.SpeechEventInfo" /> object to compare to <paramref name="event1" />.</param>
         <summary>Determines whether two instances of <c>SpeechEventInfo</c> are not equal.</summary>
         <returns>
           <see langword="true" /> if <paramref name="event1" /> is different from <paramref name="event2" />; otherwise, <see langword="false" />.</returns>
@@ -450,11 +476,18 @@ override public void Speak (TextFragment [] frags, IntPtr wfx, ITtsEngineSite si
       <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.SpeechEventInfo.Param1" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Param1 As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Param1 { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Param1 : int" Usage="System.Speech.Synthesis.TtsEngine.SpeechEventInfo.Param1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
@@ -552,11 +585,18 @@ override public void Speak (TextFragment [] frags, IntPtr wfx, ITtsEngineSite si
       <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.SpeechEventInfo.Param2" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Param2 As IntPtr" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property IntPtr Param2 { IntPtr get(); };" />
+      <MemberSignature Language="F#" Value="member this.Param2 : nativeint" Usage="System.Speech.Synthesis.TtsEngine.SpeechEventInfo.Param2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.IntPtr</ReturnType>
       </ReturnValue>
@@ -654,11 +694,18 @@ override public void Speak (TextFragment [] frags, IntPtr wfx, ITtsEngineSite si
       <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.SpeechEventInfo.ParameterType" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ParameterType As Short" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property short ParameterType { short get(); };" />
+      <MemberSignature Language="F#" Value="member this.ParameterType : int16" Usage="System.Speech.Synthesis.TtsEngine.SpeechEventInfo.ParameterType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Int16</ReturnType>
       </ReturnValue>

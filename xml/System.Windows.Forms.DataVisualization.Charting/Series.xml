@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.Series" />
   <TypeSignature Language="VB.NET" Value="Public Class Series&#xA;Inherits DataPointCustomProperties" />
   <TypeSignature Language="C++ CLI" Value="public ref class Series : System::Windows::Forms::DataVisualization::Charting::DataPointCustomProperties" />
+  <TypeSignature Language="F#" Value="type Series = class&#xA;    inherit DataPointCustomProperties" />
   <AssemblyInfo>
     <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -73,6 +74,7 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Series.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (name As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Series(System::String ^ name);" />
+      <MemberSignature Language="F#" Value="new System.Windows.Forms.DataVisualization.Charting.Series : string -&gt; System.Windows.Forms.DataVisualization.Charting.Series" Usage="new System.Windows.Forms.DataVisualization.Charting.Series name" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -105,6 +107,7 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Series.#ctor(System.String,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, yValues As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Series(System::String ^ name, int yValues);" />
+      <MemberSignature Language="F#" Value="new System.Windows.Forms.DataVisualization.Charting.Series : string * int -&gt; System.Windows.Forms.DataVisualization.Charting.Series" Usage="new System.Windows.Forms.DataVisualization.Charting.Series (name, yValues)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -139,6 +142,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.AxisLabel" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Property AxisLabel As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ AxisLabel { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.AxisLabel : string with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.Series.AxisLabel" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -170,6 +174,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.ChartArea" />
       <MemberSignature Language="VB.NET" Value="Public Property ChartArea As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ChartArea { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ChartArea : string with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.Series.ChartArea" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -184,6 +189,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.SeriesAreaNameConverter))</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -210,6 +218,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.ChartType" />
       <MemberSignature Language="VB.NET" Value="Public Property ChartType As SeriesChartType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Forms::DataVisualization::Charting::SeriesChartType ChartType { System::Windows::Forms::DataVisualization::Charting::SeriesChartType get(); void set(System::Windows::Forms::DataVisualization::Charting::SeriesChartType value); };" />
+      <MemberSignature Language="F#" Value="member this.ChartType : System.Windows.Forms.DataVisualization.Charting.SeriesChartType with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.Series.ChartType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -222,11 +231,14 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartTypeEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartTypeEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.RefreshProperties</AttributeName>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -251,6 +263,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.ChartTypeName" />
       <MemberSignature Language="VB.NET" Value="Public Property ChartTypeName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ChartTypeName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ChartTypeName : string with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.Series.ChartTypeName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -266,20 +279,26 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue("Column")</AttributeName>
         </Attribute>
-        <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartTypeEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartTypeEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.ChartTypeConverter))</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartTypeEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.RefreshProperties</AttributeName>
-        </Attribute>
-        <Attribute>
-          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.ChartTypeConverter))</AttributeName>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -297,6 +316,7 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Series.Dispose(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub Dispose (disposing As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void Dispose(bool disposing);" />
+      <MemberSignature Language="F#" Value="override this.Dispose : bool -&gt; unit" Usage="series.Dispose disposing" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -321,6 +341,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.EmptyPointStyle" />
       <MemberSignature Language="VB.NET" Value="Public Property EmptyPointStyle As DataPointCustomProperties" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Forms::DataVisualization::Charting::DataPointCustomProperties ^ EmptyPointStyle { System::Windows::Forms::DataVisualization::Charting::DataPointCustomProperties ^ get(); void set(System::Windows::Forms::DataVisualization::Charting::DataPointCustomProperties ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.EmptyPointStyle : System.Windows.Forms.DataVisualization.Charting.DataPointCustomProperties with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.Series.EmptyPointStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -330,8 +351,11 @@
         <Attribute>
           <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -367,6 +391,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.Enabled" />
       <MemberSignature Language="VB.NET" Value="Public Property Enabled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Enabled { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Enabled : bool with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.Series.Enabled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -385,6 +410,9 @@
         <Attribute>
           <AttributeName>System.ComponentModel.ParenthesizePropertyName(true)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -392,7 +420,7 @@
       <Docs>
         <summary>Gets or sets a flag that indicates whether the series will be visible on the rendered chart.</summary>
         <value>
-          <see langword="True" /> if the series will be visible on the rendered chart; otherwise, <see langword="false" />. The default value is <see langword="true" />.</value>
+          <see langword="true" /> if the series will be visible on the rendered chart; otherwise, <see langword="false" />. The default value is <see langword="true" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -409,6 +437,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.IsXValueIndexed" />
       <MemberSignature Language="VB.NET" Value="Public Property IsXValueIndexed As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsXValueIndexed { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsXValueIndexed : bool with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.Series.IsXValueIndexed" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -421,6 +450,9 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -428,7 +460,7 @@
       <Docs>
         <summary>Gets or sets a flag that indicates whether data point indices will be used for the X-values.</summary>
         <value>
-          <see langword="True" /> if the indices of data points that belong to the series will be used for X-values; <see langword="false" /> if they will not. The default value is <see langword="false" />.</value>
+          <see langword="true" /> if the indices of data points that belong to the series will be used for X-values; otherwise, <see langword="false" />. The default value is <see langword="false" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -440,7 +472,7 @@
  This is useful when you do not want to have missing data points for intervals that you know you will not have data for, such as weekends.  
   
 > [!IMPORTANT]
->  If you are displaying multiple series and at least one series uses indexed X-values, then all series must be aligned—that is, have the same number of data points—and the corresponding points must have the same X-values.  
+>  If you are displaying multiple series and at least one series uses indexed X-values, then all series must be aligned - that is, have the same number of data points - and the corresponding points must have the same X-values.  
   
  ]]></format>
         </remarks>
@@ -452,6 +484,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.Legend" />
       <MemberSignature Language="VB.NET" Value="Public Property Legend As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Legend { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Legend : string with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.Series.Legend" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -466,6 +499,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.SeriesLegendNameConverter))</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -492,6 +528,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.MarkerStep" />
       <MemberSignature Language="VB.NET" Value="Public Property MarkerStep As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MarkerStep { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.MarkerStep : int with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.Series.MarkerStep" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -503,6 +540,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -529,6 +569,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.Name" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Name { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.Series.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -565,6 +606,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.Palette" />
       <MemberSignature Language="VB.NET" Value="Public Property Palette As ChartColorPalette" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Forms::DataVisualization::Charting::ChartColorPalette Palette { System::Windows::Forms::DataVisualization::Charting::ChartColorPalette get(); void set(System::Windows::Forms::DataVisualization::Charting::ChartColorPalette value); };" />
+      <MemberSignature Language="F#" Value="member this.Palette : System.Windows.Forms.DataVisualization.Charting.ChartColorPalette with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.Series.Palette" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -577,8 +619,14 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ColorPaletteEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ColorPaletteEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -616,6 +664,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.Points" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Points As DataPointCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Forms::DataVisualization::Charting::DataPointCollection ^ Points { System::Windows::Forms::DataVisualization::Charting::DataPointCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Points : System.Windows.Forms.DataVisualization.Charting.DataPointCollection" Usage="System.Windows.Forms.DataVisualization.Charting.Series.Points" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -625,11 +674,17 @@
         <Attribute>
           <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
         </Attribute>
-        <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.DataPointCollectionEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.DataPointCollectionEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.DataPointCollectionEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -654,6 +709,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.ShadowColor" />
       <MemberSignature Language="VB.NET" Value="Public Property ShadowColor As Color" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Drawing::Color ShadowColor { System::Drawing::Color get(); void set(System::Drawing::Color value); };" />
+      <MemberSignature Language="F#" Value="member this.ShadowColor : System.Drawing.Color with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.Series.ShadowColor" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -665,6 +721,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "128,0,0,0")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -693,6 +752,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.ShadowOffset" />
       <MemberSignature Language="VB.NET" Value="Public Property ShadowOffset As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ShadowOffset { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.ShadowOffset : int with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.Series.ShadowOffset" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -704,6 +764,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -728,6 +791,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.SmartLabelStyle" />
       <MemberSignature Language="VB.NET" Value="Public Property SmartLabelStyle As SmartLabelStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Forms::DataVisualization::Charting::SmartLabelStyle ^ SmartLabelStyle { System::Windows::Forms::DataVisualization::Charting::SmartLabelStyle ^ get(); void set(System::Windows::Forms::DataVisualization::Charting::SmartLabelStyle ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.SmartLabelStyle : System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.Series.SmartLabelStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -740,8 +804,11 @@
         <Attribute>
           <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -768,6 +835,7 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Series.Sort(System.Collections.Generic.IComparer{System.Windows.Forms.DataVisualization.Charting.DataPoint})" />
       <MemberSignature Language="VB.NET" Value="Public Sub Sort (comparer As IComparer(Of DataPoint))" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Sort(System::Collections::Generic::IComparer&lt;System::Windows::Forms::DataVisualization::Charting::DataPoint ^&gt; ^ comparer);" />
+      <MemberSignature Language="F#" Value="member this.Sort : System.Collections.Generic.IComparer&lt;System.Windows.Forms.DataVisualization.Charting.DataPoint&gt; -&gt; unit" Usage="series.Sort comparer" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -790,11 +858,17 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Sort(valuetype System.Windows.Forms.DataVisualization.Charting.PointSortOrder pointSortOrder) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Series.Sort(System.Windows.Forms.DataVisualization.Charting.PointSortOrder)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Sort(System::Windows::Forms::DataVisualization::Charting::PointSortOrder pointSortOrder);" />
+      <MemberSignature Language="F#" Value="member this.Sort : System.Windows.Forms.DataVisualization.Charting.PointSortOrder -&gt; unit" Usage="series.Sort pointSortOrder" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -812,6 +886,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Sort(valuetype System.Windows.Forms.DataVisualization.Charting.PointSortOrder pointSortOrder, string sortBy) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Series.Sort(System.Windows.Forms.DataVisualization.Charting.PointSortOrder,System.String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Sort(System::Windows::Forms::DataVisualization::Charting::PointSortOrder pointSortOrder, System::String ^ sortBy);" />
+      <MemberSignature Language="F#" Value="member this.Sort : System.Windows.Forms.DataVisualization.Charting.PointSortOrder * string -&gt; unit" Usage="series.Sort (pointSortOrder, sortBy)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -837,6 +912,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.XAxisType" />
       <MemberSignature Language="VB.NET" Value="Public Property XAxisType As AxisType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Forms::DataVisualization::Charting::AxisType XAxisType { System::Windows::Forms::DataVisualization::Charting::AxisType get(); void set(System::Windows::Forms::DataVisualization::Charting::AxisType value); };" />
+      <MemberSignature Language="F#" Value="member this.XAxisType : System.Windows.Forms.DataVisualization.Charting.AxisType with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.Series.XAxisType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -848,6 +924,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -874,6 +953,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.XValueMember" />
       <MemberSignature Language="VB.NET" Value="Public Property XValueMember As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ XValueMember { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.XValueMember : string with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.Series.XValueMember" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -888,6 +968,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.SeriesDataSourceMemberConverter))</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -912,6 +995,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.XValueType" />
       <MemberSignature Language="VB.NET" Value="Public Property XValueType As ChartValueType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Forms::DataVisualization::Charting::ChartValueType XValueType { System::Windows::Forms::DataVisualization::Charting::ChartValueType get(); void set(System::Windows::Forms::DataVisualization::Charting::ChartValueType value); };" />
+      <MemberSignature Language="F#" Value="member this.XValueType : System.Windows.Forms.DataVisualization.Charting.ChartValueType with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.Series.XValueType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -923,6 +1007,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -956,6 +1043,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.YAxisType" />
       <MemberSignature Language="VB.NET" Value="Public Property YAxisType As AxisType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Forms::DataVisualization::Charting::AxisType YAxisType { System::Windows::Forms::DataVisualization::Charting::AxisType get(); void set(System::Windows::Forms::DataVisualization::Charting::AxisType value); };" />
+      <MemberSignature Language="F#" Value="member this.YAxisType : System.Windows.Forms.DataVisualization.Charting.AxisType with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.Series.YAxisType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -967,6 +1055,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -995,6 +1086,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.YValueMembers" />
       <MemberSignature Language="VB.NET" Value="Public Property YValueMembers As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ YValueMembers { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.YValueMembers : string with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.Series.YValueMembers" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -1007,11 +1099,17 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.SeriesDataSourceMemberValueAxisUITypeEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.SeriesDataSourceMemberConverter))</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.SeriesDataSourceMemberValueAxisUITypeEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1036,6 +1134,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.YValuesPerPoint" />
       <MemberSignature Language="VB.NET" Value="Public Property YValuesPerPoint As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int YValuesPerPoint { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.YValuesPerPoint : int with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.Series.YValuesPerPoint" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -1073,6 +1172,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.YValueType" />
       <MemberSignature Language="VB.NET" Value="Public Property YValueType As ChartValueType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Forms::DataVisualization::Charting::ChartValueType YValueType { System::Windows::Forms::DataVisualization::Charting::ChartValueType get(); void set(System::Windows::Forms::DataVisualization::Charting::ChartValueType value); };" />
+      <MemberSignature Language="F#" Value="member this.YValueType : System.Windows.Forms.DataVisualization.Charting.ChartValueType with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.Series.YValueType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -1087,6 +1187,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.SeriesYValueTypeConverter))</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

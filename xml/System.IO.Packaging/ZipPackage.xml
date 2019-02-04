@@ -4,13 +4,16 @@
   <TypeSignature Language="DocId" Value="T:System.IO.Packaging.ZipPackage" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ZipPackage&#xA;Inherits Package" />
   <TypeSignature Language="C++ CLI" Value="public ref class ZipPackage sealed : System::IO::Packaging::Package" />
+  <TypeSignature Language="F#" Value="type ZipPackage = class&#xA;    inherit Package" />
   <AssemblyInfo>
     <AssemblyName>System.IO.Packaging</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.2.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -18,7 +21,7 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>Implements a derived subclass of the abstract <see cref="T:System.IO.Packaging.Package" /> base class—the <see cref="T:System.IO.Packaging.ZipPackage" /> class uses a ZIP archive as the container store. This class cannot be inherited.</summary>
+    <summary>Implements a derived subclass of the abstract <see cref="T:System.IO.Packaging.Package" /> base class - the <see cref="T:System.IO.Packaging.ZipPackage" /> class uses a ZIP archive as the container store. This class cannot be inherited.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -37,11 +40,13 @@
  [!code-csharp[PackageWrite#PackageWriteCreatePackage](~/samples/snippets/csharp/VS_Snippets_Wpf/PackageWrite/CSharp/PackageWrite.cs#packagewritecreatepackage)]
  [!code-vb[PackageWrite#PackageWriteCreatePackage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PackageWrite/visualbasic/packagewrite.vb#packagewritecreatepackage)]  
   
- For the complete sample, see [Writing a Package Sample](http://go.microsoft.com/fwlink/?LinkID=160055).  
+ For the complete sample, see [Writing a Package Sample](https://go.microsoft.com/fwlink/?LinkID=160055).  
   
  ]]></format>
     </remarks>
     <altmember cref="T:System.IO.Packaging.PackagePart" />
+    <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkID=160055">Writing a Package Sample</related>
+    <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkID=160034">Reading a Package Sample</related>
   </Docs>
   <Members>
     <Member MemberName="CreatePartCore">
@@ -49,14 +54,17 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.IO.Packaging.PackagePart CreatePartCore(class System.Uri partUri, string contentType, valuetype System.IO.Packaging.CompressionOption compressionOption) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.IO.Packaging.ZipPackage.CreatePartCore(System.Uri,System.String,System.IO.Packaging.CompressionOption)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::IO::Packaging::PackagePart ^ CreatePartCore(Uri ^ partUri, System::String ^ contentType, System::IO::Packaging::CompressionOption compressionOption);" />
+      <MemberSignature Language="F#" Value="override this.CreatePartCore : Uri * string * System.IO.Packaging.CompressionOption -&gt; System.IO.Packaging.PackagePart" Usage="zipPackage.CreatePartCore (partUri, contentType, compressionOption)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.IO.Packaging</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -82,14 +90,17 @@
       <MemberSignature Language="DocId" Value="M:System.IO.Packaging.ZipPackage.DeletePartCore(System.Uri)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub DeletePartCore (partUri As Uri)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void DeletePartCore(Uri ^ partUri);" />
+      <MemberSignature Language="F#" Value="override this.DeletePartCore : Uri -&gt; unit" Usage="zipPackage.DeletePartCore partUri" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.IO.Packaging</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -110,14 +121,17 @@
       <MemberSignature Language="DocId" Value="M:System.IO.Packaging.ZipPackage.Dispose(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub Dispose (disposing As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void Dispose(bool disposing);" />
+      <MemberSignature Language="F#" Value="override this.Dispose : bool -&gt; unit" Usage="zipPackage.Dispose disposing" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.IO.Packaging</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -138,14 +152,17 @@
       <MemberSignature Language="DocId" Value="M:System.IO.Packaging.ZipPackage.FlushCore" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub FlushCore ()" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void FlushCore();" />
+      <MemberSignature Language="F#" Value="override this.FlushCore : unit -&gt; unit" Usage="zipPackage.FlushCore " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.IO.Packaging</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -163,14 +180,17 @@
       <MemberSignature Language="DocId" Value="M:System.IO.Packaging.ZipPackage.GetPartCore(System.Uri)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetPartCore (partUri As Uri) As PackagePart" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::IO::Packaging::PackagePart ^ GetPartCore(Uri ^ partUri);" />
+      <MemberSignature Language="F#" Value="override this.GetPartCore : Uri -&gt; System.IO.Packaging.PackagePart" Usage="zipPackage.GetPartCore partUri" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.IO.Packaging</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -192,14 +212,17 @@
       <MemberSignature Language="DocId" Value="M:System.IO.Packaging.ZipPackage.GetPartsCore" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetPartsCore () As PackagePart()" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override cli::array &lt;System::IO::Packaging::PackagePart ^&gt; ^ GetPartsCore();" />
+      <MemberSignature Language="F#" Value="override this.GetPartsCore : unit -&gt; System.IO.Packaging.PackagePart[]" Usage="zipPackage.GetPartsCore " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.IO.Packaging</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

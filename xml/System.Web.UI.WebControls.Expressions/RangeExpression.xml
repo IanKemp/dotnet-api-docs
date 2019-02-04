@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Expressions.RangeExpression" />
   <TypeSignature Language="VB.NET" Value="Public Class RangeExpression&#xA;Inherits ParameterDataSourceExpression" />
   <TypeSignature Language="C++ CLI" Value="public ref class RangeExpression : System::Web::UI::WebControls::Expressions::ParameterDataSourceExpression" />
+  <TypeSignature Language="F#" Value="type RangeExpression = class&#xA;    inherit ParameterDataSourceExpression" />
   <AssemblyInfo>
     <AssemblyName>System.Web.Extensions</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -27,13 +28,14 @@
 ## Examples  
  The following example shows how to search the ListPrice column in the Products table of the AdventureWorks database for products that have a list price in the range that is specified in the `FromTextBox` and `ToTextBox` text boxes. The filter includes the minimum value but excludes the maximum value in the results. The results are displayed in a <xref:System.Web.UI.WebControls.Label> control.  
   
- This code example is part of a larger example provided in [Walkthrough: Filtering Data in a Web Page Using Declarative Syntax](http://msdn.microsoft.com/library/b305ae31-1a1b-4d07-a678-51457c17614f).  
+ This code example is part of a larger example provided in [Walkthrough: Filtering Data in a Web Page Using Declarative Syntax](https://msdn.microsoft.com/library/b305ae31-1a1b-4d07-a678-51457c17614f).  
   
   
   
  ]]></format>
     </remarks>
     <exception cref="T:System.InvalidOperationException">The <see cref="P:System.Web.UI.WebControls.Expressions.RangeExpression.DataField" /> property is <see langword="null" />.</exception>
+    <related type="Article" href="https://msdn.microsoft.com/library/b93e32b9-af41-4539-a009-6cbbe809c702">QueryExtender Web Server Control Overview</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -47,6 +49,11 @@
         <AssemblyName>System.Web.Extensions</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.Web.UI.WebControls.Expressions.RangeExpression" /> class.</summary>
@@ -59,6 +66,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Expressions.RangeExpression.DataField" />
       <MemberSignature Language="VB.NET" Value="Public Property DataField As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DataField { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DataField : string with get, set" Usage="System.Web.UI.WebControls.Expressions.RangeExpression.DataField" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
@@ -81,7 +89,7 @@
 ## Examples  
  The following example shows how to search the List Price column in the Products table of the AdventureWorks database for products that have a list price in the range that is specified in the `FromTextBox` and `ToTextBox` text boxes.  
   
- This code example is part of a larger example provided in [Walkthrough: Filtering Data in a Web Page Using Declarative Syntax](http://msdn.microsoft.com/library/b305ae31-1a1b-4d07-a678-51457c17614f).  
+ This code example is part of a larger example provided in [Walkthrough: Filtering Data in a Web Page Using Declarative Syntax](https://msdn.microsoft.com/library/b305ae31-1a1b-4d07-a678-51457c17614f).  
   
 ```  
 <asp:RangeExpression DataField="ListPrice"    
@@ -101,6 +109,7 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.RangeExpression.GetQueryable(System.Linq.IQueryable)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetQueryable (source As IQueryable) As IQueryable" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::Linq::IQueryable ^ GetQueryable(System::Linq::IQueryable ^ source);" />
+      <MemberSignature Language="F#" Value="override this.GetQueryable : System.Linq.IQueryable -&gt; System.Linq.IQueryable" Usage="rangeExpression.GetQueryable source" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
@@ -141,6 +150,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Expressions.RangeExpression.MaxType" />
       <MemberSignature Language="VB.NET" Value="Public Property MaxType As RangeType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::Expressions::RangeType MaxType { System::Web::UI::WebControls::Expressions::RangeType get(); void set(System::Web::UI::WebControls::Expressions::RangeType value); };" />
+      <MemberSignature Language="F#" Value="member this.MaxType : System.Web.UI.WebControls.Expressions.RangeType with get, set" Usage="System.Web.UI.WebControls.Expressions.RangeExpression.MaxType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
@@ -163,7 +173,7 @@
    
   
 ## Examples  
- The following example shows how to include the minimum value that is specified in the range and how to exclude the maximum value. The maximum and minimum values are entered into text boxes. This code example is part of a larger example provided in [Walkthrough: Filtering Data in a Web Page Using Declarative Syntax](http://msdn.microsoft.com/library/b305ae31-1a1b-4d07-a678-51457c17614f).  
+ The following example shows how to include the minimum value that is specified in the range and how to exclude the maximum value. The maximum and minimum values are entered into text boxes. This code example is part of a larger example provided in [Walkthrough: Filtering Data in a Web Page Using Declarative Syntax](https://msdn.microsoft.com/library/b305ae31-1a1b-4d07-a678-51457c17614f).  
   
 ```  
 <asp:RangeExpression DataField="ListPrice"    
@@ -183,6 +193,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Expressions.RangeExpression.MinType" />
       <MemberSignature Language="VB.NET" Value="Public Property MinType As RangeType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::Expressions::RangeType MinType { System::Web::UI::WebControls::Expressions::RangeType get(); void set(System::Web::UI::WebControls::Expressions::RangeType value); };" />
+      <MemberSignature Language="F#" Value="member this.MinType : System.Web.UI.WebControls.Expressions.RangeType with get, set" Usage="System.Web.UI.WebControls.Expressions.RangeExpression.MinType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
@@ -205,7 +216,7 @@
    
   
 ## Examples  
- The following example shows how to include the minimum value that is specified in the range and how to exclude the maximum value. The maximum and minimum values are entered into text boxes. This code example is part of a larger example provided in [Walkthrough: Filtering Data in a Web Page Using Declarative Syntax](http://msdn.microsoft.com/library/b305ae31-1a1b-4d07-a678-51457c17614f).  
+ The following example shows how to include the minimum value that is specified in the range and how to exclude the maximum value. The maximum and minimum values are entered into text boxes. This code example is part of a larger example provided in [Walkthrough: Filtering Data in a Web Page Using Declarative Syntax](https://msdn.microsoft.com/library/b305ae31-1a1b-4d07-a678-51457c17614f).  
   
 ```  
 <asp:RangeExpression DataField="ListPrice"    

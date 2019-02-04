@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Web.UI.BindableTemplateBuilder" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class BindableTemplateBuilder&#xA;Inherits TemplateBuilder&#xA;Implements IBindableTemplate" />
   <TypeSignature Language="C++ CLI" Value="public ref class BindableTemplateBuilder sealed : System::Web::UI::TemplateBuilder, System::Web::UI::IBindableTemplate" />
+  <TypeSignature Language="F#" Value="type BindableTemplateBuilder = class&#xA;    inherit TemplateBuilder&#xA;    interface IBindableTemplate&#xA;    interface ITemplate" />
   <AssemblyInfo>
     <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -14,6 +16,9 @@
   <Interfaces>
     <Interface>
       <InterfaceName>System.Web.UI.IBindableTemplate</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.ITemplate</InterfaceName>
     </Interface>
   </Interfaces>
   <Docs>
@@ -26,7 +31,7 @@
   
  The <xref:System.Web.UI.BindableTemplateBuilder> is a <xref:System.Web.UI.TemplateBuilder> for data-bound controls that include templated content. If the data-bound control is used in design-time or in a no-compile page, the <xref:System.Web.UI.IBindableTemplate> interface on the <xref:System.Web.UI.BindableTemplateBuilder> is used to parse the two-way data-binding within the templated control. If the data-bound control is compiled, an instance of the <xref:System.Web.UI.CompiledBindableTemplateBuilder> class is created and assigned to the value of the <xref:System.Web.UI.IBindableTemplate> object.  
   
- For more information about ASP.NET data binding, expressions, and syntax, see [Binding to Databases](http://msdn.microsoft.com/library/ab7b2846-975b-4057-a948-45527497c742) and [Data-Binding Expressions Overview](http://msdn.microsoft.com/library/14cdd57d-0f82-4667-b503-73e1a96f136a).  
+ For more information about ASP.NET data binding, expressions, and syntax, see [Binding to Databases](https://msdn.microsoft.com/library/ab7b2846-975b-4057-a948-45527497c742) and [Data-Binding Expressions Overview](https://msdn.microsoft.com/library/14cdd57d-0f82-4667-b503-73e1a96f136a).  
   
  ]]></format>
     </remarks>
@@ -44,8 +49,14 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.Web.UI.BindableTemplateBuilder" /> class.</summary>
@@ -58,12 +69,14 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.BindableTemplateBuilder.ExtractValues(System.Web.UI.Control)" />
       <MemberSignature Language="VB.NET" Value="Public Function ExtractValues (container As Control) As IOrderedDictionary" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Collections::Specialized::IOrderedDictionary ^ ExtractValues(System::Web::UI::Control ^ container);" />
+      <MemberSignature Language="F#" Value="abstract member ExtractValues : System.Web.UI.Control -&gt; System.Collections.Specialized.IOrderedDictionary&#xA;override this.ExtractValues : System.Web.UI.Control -&gt; System.Collections.Specialized.IOrderedDictionary" Usage="bindableTemplateBuilder.ExtractValues container" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Web.UI.IBindableTemplate.ExtractValues(System.Web.UI.Control)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -93,9 +106,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.BindableTemplateBuilder.OnAppendToParentBuilder(System.Web.UI.ControlBuilder)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub OnAppendToParentBuilder (parentBuilder As ControlBuilder)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void OnAppendToParentBuilder(System::Web::UI::ControlBuilder ^ parentBuilder);" />
+      <MemberSignature Language="F#" Value="override this.OnAppendToParentBuilder : System.Web.UI.ControlBuilder -&gt; unit" Usage="bindableTemplateBuilder.OnAppendToParentBuilder parentBuilder" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

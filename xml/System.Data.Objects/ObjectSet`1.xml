@@ -1,9 +1,10 @@
 ﻿<Type Name="ObjectSet&lt;TEntity&gt;" FullName="System.Data.Objects.ObjectSet&lt;TEntity&gt;">
-  <TypeSignature Language="C#" Value="public class ObjectSet&lt;TEntity&gt; : System.Data.Objects.ObjectQuery&lt;TEntity&gt;, System.Collections.Generic.IEnumerable&lt;TEntity&gt;, System.Data.Objects.IObjectSet&lt;TEntity&gt; where TEntity : class" />
+  <TypeSignature Language="C#" Value="public class ObjectSet&lt;TEntity&gt; : System.Data.Objects.ObjectQuery&lt;TEntity&gt;, System.Collections.Generic.IEnumerable&lt;TEntity&gt;, System.Data.Objects.IObjectSet&lt;TEntity&gt;, System.Linq.IQueryable&lt;TEntity&gt; where TEntity : class" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ObjectSet`1&lt;class TEntity&gt; extends System.Data.Objects.ObjectQuery`1&lt;!TEntity&gt; implements class System.Collections.Generic.IEnumerable`1&lt;!TEntity&gt;, class System.Collections.IEnumerable, class System.Data.Objects.IObjectSet`1&lt;!TEntity&gt;, class System.Linq.IQueryable, class System.Linq.IQueryable`1&lt;!TEntity&gt;" />
   <TypeSignature Language="DocId" Value="T:System.Data.Objects.ObjectSet`1" />
-  <TypeSignature Language="VB.NET" Value="Public Class ObjectSet(Of TEntity)&#xA;Inherits ObjectQuery(Of TEntity)&#xA;Implements IEnumerable(Of TEntity), IObjectSet(Of TEntity)" />
-  <TypeSignature Language="C++ CLI" Value="generic &lt;typename TEntity&gt;&#xA; where TEntity : classpublic ref class ObjectSet : System::Data::Objects::ObjectQuery&lt;TEntity&gt;, System::Collections::Generic::IEnumerable&lt;TEntity&gt;, System::Data::Objects::IObjectSet&lt;TEntity&gt;" />
+  <TypeSignature Language="VB.NET" Value="Public Class ObjectSet(Of TEntity)&#xA;Inherits ObjectQuery(Of TEntity)&#xA;Implements IEnumerable(Of TEntity), IObjectSet(Of TEntity), IQueryable(Of TEntity)" />
+  <TypeSignature Language="C++ CLI" Value="generic &lt;typename TEntity&gt;&#xA; where TEntity : classpublic ref class ObjectSet : System::Data::Objects::ObjectQuery&lt;TEntity&gt;, System::Collections::Generic::IEnumerable&lt;TEntity&gt;, System::Data::Objects::IObjectSet&lt;TEntity&gt;, System::Linq::IQueryable&lt;TEntity&gt;" />
+  <TypeSignature Language="F#" Value="type ObjectSet&lt;'Entity (requires 'Entity : null)&gt; = class&#xA;    inherit ObjectQuery&lt;'Entity (requires 'Entity : null)&gt;&#xA;    interface IObjectSet&lt;'Entity (requires 'Entity : null)&gt;&#xA;    interface IQueryable&lt;'Entity (requires 'Entity : null)&gt;&#xA;    interface seq&lt;'Entity (requires 'Entity : null)&gt;&#xA;    interface IEnumerable&#xA;    interface IQueryable" />
   <AssemblyInfo>
     <AssemblyName>System.Data.Entity</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -23,10 +24,22 @@
   </Base>
   <Interfaces>
     <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>System.Collections.Generic.IEnumerable&lt;TEntity&gt;</InterfaceName>
     </Interface>
     <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>System.Data.Objects.IObjectSet&lt;TEntity&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Linq.IQueryable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Linq.IQueryable&lt;TEntity&gt;</InterfaceName>
     </Interface>
   </Interfaces>
   <Docs>
@@ -48,6 +61,7 @@
       <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectSet`1.AddObject(`0)" />
       <MemberSignature Language="VB.NET" Value="Public Sub AddObject (entity As TEntity)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void AddObject(TEntity entity);" />
+      <MemberSignature Language="F#" Value="abstract member AddObject : 'Entity -&gt; unit&#xA;override this.AddObject : 'Entity -&gt; unit" Usage="objectSet.AddObject entity" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Data.Objects.IObjectSet`1.AddObject(`0)</InterfaceMember>
@@ -82,6 +96,7 @@
       <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectSet`1.ApplyCurrentValues(`0)" />
       <MemberSignature Language="VB.NET" Value="Public Function ApplyCurrentValues (currentEntity As TEntity) As TEntity" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; TEntity ApplyCurrentValues(TEntity currentEntity);" />
+      <MemberSignature Language="F#" Value="member this.ApplyCurrentValues : 'Entity -&gt; 'Entity" Usage="objectSet.ApplyCurrentValues currentEntity" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.Entity</AssemblyName>
@@ -94,7 +109,7 @@
         <Parameter Name="currentEntity" Type="TEntity" />
       </Parameters>
       <Docs>
-        <param name="currentEntity">The detached object that has property updates to apply to the original object. The entity key of <c>currentEntity</c> must match the <see cref="P:System.Data.Objects.ObjectStateEntry.EntityKey" /> property of an entry in the <see cref="T:System.Data.Objects.ObjectContext" />.</param>
+        <param name="currentEntity">The detached object that has property updates to apply to the original object. The entity key of <paramref name="currentEntity" /> must match the <see cref="P:System.Data.Objects.ObjectStateEntry.EntityKey" /> property of an entry in the <see cref="T:System.Data.Objects.ObjectContext" />.</param>
         <summary>Copies the scalar values from the supplied object into the object in the <see cref="T:System.Data.Objects.ObjectContext" /> that has the same key.</summary>
         <returns>The updated object.</returns>
         <remarks>
@@ -115,6 +130,7 @@
       <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectSet`1.ApplyOriginalValues(`0)" />
       <MemberSignature Language="VB.NET" Value="Public Function ApplyOriginalValues (originalEntity As TEntity) As TEntity" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; TEntity ApplyOriginalValues(TEntity originalEntity);" />
+      <MemberSignature Language="F#" Value="member this.ApplyOriginalValues : 'Entity -&gt; 'Entity" Usage="objectSet.ApplyOriginalValues originalEntity" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.Entity</AssemblyName>
@@ -127,7 +143,7 @@
         <Parameter Name="originalEntity" Type="TEntity" />
       </Parameters>
       <Docs>
-        <param name="originalEntity">The detached object that has property updates to apply to the original object. The entity key of <c>originalEntity</c> must match the <see cref="P:System.Data.Objects.ObjectStateEntry.EntityKey" /> property of an entry in the <see cref="T:System.Data.Objects.ObjectContext" />.</param>
+        <param name="originalEntity">The detached object that has property updates to apply to the original object. The entity key of <paramref name="originalEntity" /> must match the <see cref="P:System.Data.Objects.ObjectStateEntry.EntityKey" /> property of an entry in the <see cref="T:System.Data.Objects.ObjectContext" />.</param>
         <summary>Sets the <see cref="P:System.Data.Objects.ObjectStateEntry.OriginalValues" /> property of an <see cref="T:System.Data.Objects.ObjectStateEntry" /> to match the property values of a supplied object.</summary>
         <returns>The updated object.</returns>
         <remarks>
@@ -148,6 +164,7 @@
       <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectSet`1.Attach(`0)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Attach (entity As TEntity)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Attach(TEntity entity);" />
+      <MemberSignature Language="F#" Value="abstract member Attach : 'Entity -&gt; unit&#xA;override this.Attach : 'Entity -&gt; unit" Usage="objectSet.Attach entity" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Data.Objects.IObjectSet`1.Attach(`0)</InterfaceMember>
@@ -182,6 +199,7 @@
       <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectSet`1.CreateObject" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateObject () As TEntity" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; TEntity CreateObject();" />
+      <MemberSignature Language="F#" Value="member this.CreateObject : unit -&gt; 'Entity" Usage="objectSet.CreateObject " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.Entity</AssemblyName>
@@ -203,6 +221,7 @@
       <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectSet`1.CreateObject``1" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateObject(Of T As {Class, TEntity}) () As T" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; where T : class, TEntity T CreateObject();" />
+      <MemberSignature Language="F#" Value="member this.CreateObject : unit -&gt; 'T" Usage="objectSet.CreateObject " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.Entity</AssemblyName>
@@ -233,6 +252,7 @@
       <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectSet`1.DeleteObject(`0)" />
       <MemberSignature Language="VB.NET" Value="Public Sub DeleteObject (entity As TEntity)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void DeleteObject(TEntity entity);" />
+      <MemberSignature Language="F#" Value="abstract member DeleteObject : 'Entity -&gt; unit&#xA;override this.DeleteObject : 'Entity -&gt; unit" Usage="objectSet.DeleteObject entity" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Data.Objects.IObjectSet`1.DeleteObject(`0)</InterfaceMember>
@@ -267,6 +287,7 @@
       <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectSet`1.Detach(`0)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Detach (entity As TEntity)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Detach(TEntity entity);" />
+      <MemberSignature Language="F#" Value="abstract member Detach : 'Entity -&gt; unit&#xA;override this.Detach : 'Entity -&gt; unit" Usage="objectSet.Detach entity" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Data.Objects.IObjectSet`1.Detach(`0)</InterfaceMember>
@@ -282,7 +303,7 @@
         <Parameter Name="entity" Type="TEntity" />
       </Parameters>
       <Docs>
-        <param name="entity">Object to be detached. Only the <c>entity</c> is removed; if there are any related objects that are being tracked by the same <see cref="T:System.Data.Objects.ObjectStateManager" />, those will not be detached automatically.</param>
+        <param name="entity">Object to be detached. Only the <paramref name="entity" /> is removed; if there are any related objects that are being tracked by the same <see cref="T:System.Data.Objects.ObjectStateManager" />, those will not be detached automatically.</param>
         <summary>Removes the object from the object context.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -301,11 +322,17 @@
       <MemberSignature Language="DocId" Value="P:System.Data.Objects.ObjectSet`1.EntitySet" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EntitySet As EntitySet" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Data::Metadata::Edm::EntitySet ^ EntitySet { System::Data::Metadata::Edm::EntitySet ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.EntitySet : System.Data.Metadata.Edm.EntitySet" Usage="System.Data.Objects.ObjectSet&lt;'Entity (requires 'Entity : null)&gt;.EntitySet" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.Entity</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Data.Metadata.Edm.EntitySet</ReturnType>
       </ReturnValue>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Globalization.SortVersion" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class SortVersion&#xA;Implements IEquatable(Of SortVersion)" />
   <TypeSignature Language="C++ CLI" Value="public ref class SortVersion sealed : IEquatable&lt;System::Globalization::SortVersion ^&gt;" />
+  <TypeSignature Language="F#" Value="type SortVersion = class&#xA;    interface IEquatable&lt;SortVersion&gt;" />
   <AssemblyInfo>
     <AssemblyName>mscorlib</AssemblyName>
     <AssemblyVersion>2.0.5.0</AssemblyVersion>
@@ -26,12 +27,20 @@
       <InterfaceName>System.IEquatable&lt;System.Globalization.SortVersion&gt;</InterfaceName>
     </Interface>
   </Interfaces>
+  <Attributes>
+    <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
+      <AttributeName>System.Serializable</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>Provides information about the version of Unicode used to compare and order strings.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
-## Remarks  
+## Remarks
+
+### Sorting and string comparison in the .NET Framework
+
  From the [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)] through the [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)], each version of the.NET Framework has included tables that contain sort weights and data on string normalization and that are based on a particular version of Unicode. In the [!INCLUDE[net_v45](~/includes/net-v45-md.md)], the presence of these tables depends on the operating system:  
   
 -   On [!INCLUDE[win7](~/includes/win7-md.md)] and previous versions of the Windows operating system, the tables continue to be used for comparing and ordering strings.  
@@ -47,14 +56,20 @@
 |[!INCLUDE[net_v45](~/includes/net-v45-md.md)] and later versions of the .NET Framework|[!INCLUDE[win8](~/includes/win8-md.md)] and later Windows operating system versions|Unicode 6.0|  
   
  On [!INCLUDE[win8](~/includes/win8-md.md)], because the version of Unicode used in string comparison and ordering depends on the version of the operating system, the results of string comparison may differ even for applications that run on a specific version of the .NET Framework.  
-  
- The <xref:System.Globalization.SortVersion> class provides information about the Unicode version used by the .NET Framework for string comparison and ordering. It enables developers to write applications that can detect and successfully handle changes in the version of Unicode that is used to compare and sort an application's strings.  
+
+### Sorting and string comparison in .NET Core
+
+All versions of .NET Core rely on the underlying operating system when performing string comparisons. Therefore, the results of a string comparison or the order in which strings are sorted depends on the version of Unicode used by the operating system when performing the comparison. On Linux and macOS, [International Components for Unicode](http://site.icu-project.org/) libraries provide the implementation for comparison and sorting APIs.
+
+### Using the SortVersion class
+
+ The <xref:System.Globalization.SortVersion> class provides information about the Unicode version used by .NET for string comparison and ordering. It enables developers to write applications that can detect and successfully handle changes in the version of Unicode that is used to compare and sort an application's strings.  
   
  You can instantiate a <xref:System.Globalization.SortVersion> object in two ways:  
   
 -   By calling the <xref:System.Globalization.SortVersion.%23ctor%2A> constructor, which instantiates a new <xref:System.Globalization.SortVersion> object based on a version number and sort ID. This constructor is most useful when recreating a <xref:System.Globalization.SortVersion> object from saved data.  
   
--   By retrieving the value of the <xref:System.Globalization.CompareInfo.Version%2A?displayProperty=nameWithType> property. This property provides information about the Unicode version used by the .NET Framework on which the application is running.  
+-   By retrieving the value of the <xref:System.Globalization.CompareInfo.Version%2A?displayProperty=nameWithType> property. This property provides information about the Unicode version used by the .NET implementation on which the application is running.  
   
  The <xref:System.Globalization.SortVersion> class has two properties, <xref:System.Globalization.SortVersion.FullVersion%2A> and <xref:System.Globalization.SortVersion.SortId%2A>, that indicate the Unicode version and the specific culture used for string comparison. The <xref:System.Globalization.SortVersion.FullVersion%2A> property is an arbitrary numeric value that reflects the Unicode version used for string comparison, and the <xref:System.Globalization.SortVersion.SortId%2A> property is an arbitrary <xref:System.Guid> that reflects the culture whose conventions are used for string comparison. The values of these two properties are important only when you compare two <xref:System.Globalization.SortVersion> objects by using the <xref:System.Globalization.SortVersion.Equals%2A> method, the <xref:System.Globalization.SortVersion.op_Equality%2A> operator, or the <xref:System.Globalization.SortVersion.op_Inequality%2A> operator.  
   
@@ -89,6 +104,7 @@
       <MemberSignature Language="DocId" Value="M:System.Globalization.SortVersion.#ctor(System.Int32,System.Guid)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (fullVersion As Integer, sortId As Guid)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SortVersion(int fullVersion, Guid sortId);" />
+      <MemberSignature Language="F#" Value="new System.Globalization.SortVersion : int * Guid -&gt; System.Globalization.SortVersion" Usage="new System.Globalization.SortVersion (fullVersion, sortId)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -141,6 +157,7 @@
       <MemberSignature Language="DocId" Value="M:System.Globalization.SortVersion.Equals(System.Globalization.SortVersion)" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (other As SortVersion) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Equals(System::Globalization::SortVersion ^ other);" />
+      <MemberSignature Language="F#" Value="override this.Equals : System.Globalization.SortVersion -&gt; bool" Usage="sortVersion.Equals other" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
@@ -187,6 +204,7 @@
       <MemberSignature Language="DocId" Value="M:System.Globalization.SortVersion.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="sortVersion.Equals obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -230,6 +248,7 @@
       <MemberSignature Language="DocId" Value="P:System.Globalization.SortVersion.FullVersion" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FullVersion As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int FullVersion { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.FullVersion : int" Usage="System.Globalization.SortVersion.FullVersion" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -267,6 +286,7 @@
       <MemberSignature Language="DocId" Value="M:System.Globalization.SortVersion.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="sortVersion.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -298,6 +318,7 @@
       <MemberSignature Language="DocId" Value="M:System.Globalization.SortVersion.op_Equality(System.Globalization.SortVersion,System.Globalization.SortVersion)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As SortVersion, right As SortVersion) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator ==(System::Globalization::SortVersion ^ left, System::Globalization::SortVersion ^ right);" />
+      <MemberSignature Language="F#" Value="static member ( = ) : System.Globalization.SortVersion * System.Globalization.SortVersion -&gt; bool" Usage="left = right" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -344,6 +365,7 @@
       <MemberSignature Language="DocId" Value="M:System.Globalization.SortVersion.op_Inequality(System.Globalization.SortVersion,System.Globalization.SortVersion)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As SortVersion, right As SortVersion) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator !=(System::Globalization::SortVersion ^ left, System::Globalization::SortVersion ^ right);" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : System.Globalization.SortVersion * System.Globalization.SortVersion -&gt; bool" Usage="System.Globalization.SortVersion.op_Inequality (left, right)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
@@ -390,6 +412,7 @@
       <MemberSignature Language="DocId" Value="P:System.Globalization.SortVersion.SortId" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SortId As Guid" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Guid SortId { Guid get(); };" />
+      <MemberSignature Language="F#" Value="member this.SortId : Guid" Usage="System.Globalization.SortVersion.SortId" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>

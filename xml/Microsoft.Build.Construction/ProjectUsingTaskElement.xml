@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Construction.ProjectUsingTaskElement" />
   <TypeSignature Language="VB.NET" Value="Public Class ProjectUsingTaskElement&#xA;Inherits ProjectElementContainer" />
   <TypeSignature Language="C++ CLI" Value="public ref class ProjectUsingTaskElement : Microsoft::Build::Construction::ProjectElementContainer" />
+  <TypeSignature Language="F#" Value="type ProjectUsingTaskElement = class&#xA;    inherit ProjectElementContainer" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -13,12 +14,15 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
       <AttributeName>System.Diagnostics.DebuggerDisplay("TaskName={TaskName} AssemblyName={AssemblyName} AssemblyFile={AssemblyFile} Condition={Condition} Runtime={Runtime} Architecture={Architecture}")</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netframework-4.0">
+      <AttributeName>System.Diagnostics.DebuggerDisplay("TaskName={TaskName} AssemblyName={AssemblyName} AssemblyFile={AssemblyFile} Condition={Condition} Runtime={RequiredRuntime} Platform={RequiredPlatform}")</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Represents a [UsingTask Element (MSBuild)](http://msdn.microsoft.com/library/20247902-9446-4a1f-8253-5c7a17e4fe43) in an MSBuild project. The UsingTask element is used both for inline tasks and precompiled tasks.</summary>
+    <summary>Represents a <see href="https://msdn.microsoft.com/library/20247902-9446-4a1f-8253-5c7a17e4fe43">UsingTask Element (MSBuild)</see> in an MSBuild project. The UsingTask element is used both for inline tasks and precompiled tasks.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -28,6 +32,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectUsingTaskElement.AddParameterGroup" />
       <MemberSignature Language="VB.NET" Value="Public Function AddParameterGroup () As UsingTaskParameterGroupElement" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::UsingTaskParameterGroupElement ^ AddParameterGroup();" />
+      <MemberSignature Language="F#" Value="member this.AddParameterGroup : unit -&gt; Microsoft.Build.Construction.UsingTaskParameterGroupElement" Usage="projectUsingTaskElement.AddParameterGroup " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -39,7 +44,7 @@
       <Parameters />
       <Docs>
         <summary>Adds a new ParameterGroup element to this inline task.</summary>
-        <returns>Returns the new parameter group.</returns>
+        <returns>The new parameter group.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -49,6 +54,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Construction.ProjectUsingTaskElement.AddUsingTaskBody(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function AddUsingTaskBody (evaluate As String, taskBody As String) As ProjectUsingTaskBodyElement" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Build::Construction::ProjectUsingTaskBodyElement ^ AddUsingTaskBody(System::String ^ evaluate, System::String ^ taskBody);" />
+      <MemberSignature Language="F#" Value="member this.AddUsingTaskBody : string * string -&gt; Microsoft.Build.Construction.ProjectUsingTaskBodyElement" Usage="projectUsingTaskElement.AddUsingTaskBody (evaluate, taskBody)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -65,7 +71,7 @@
         <param name="evaluate">A flag which, if true, expands the item and property values in the task body. This flag is true by default.</param>
         <param name="taskBody">The body of the task as a string.</param>
         <summary>Adds a new TaskBody element to this inline task.</summary>
-        <returns>Returns the new task body.</returns>
+        <returns>The new task body.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -75,6 +81,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskElement.Architecture" />
       <MemberSignature Language="VB.NET" Value="Public Property Architecture As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Architecture { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Architecture : string with get, set" Usage="Microsoft.Build.Construction.ProjectUsingTaskElement.Architecture" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -85,7 +92,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the Architecture attribute of this inline task.</summary>
-        <value>Returns the value of the Architecture attribute. Returns an empty string if the attribute is not present.</value>
+        <value>The value of the Architecture attribute, or an empty string if the attribute is not present.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -95,6 +102,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskElement.ArchitectureLocation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ArchitectureLocation As ElementLocation" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Construction::ElementLocation ^ ArchitectureLocation { Microsoft::Build::Construction::ElementLocation ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ArchitectureLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Construction.ProjectUsingTaskElement.ArchitectureLocation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -104,8 +112,8 @@
         <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Location of the Architecture attribute on this element, if any.</summary>
-        <value>Returns  the Architecture attribute location. If there is no such attribute, returns null.</value>
+        <summary>Gets the location of the Architecture attribute on this element, if any.</summary>
+        <value>The Architecture attribute location, or <see langword="null" /> if there is no Architecture attribute.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -115,6 +123,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskElement.AssemblyFile" />
       <MemberSignature Language="VB.NET" Value="Public Property AssemblyFile As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ AssemblyFile { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.AssemblyFile : string with get, set" Usage="Microsoft.Build.Construction.ProjectUsingTaskElement.AssemblyFile" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -125,7 +134,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets the value of the AssemblyFile attribute, which selects the name of the assembly to load.</summary>
-        <value>Returns the value of the AssemblyFile attribute. Returns an empty string if the attribute is not present.</value>
+        <value>The value of the AssemblyFile attribute, or an empty string if the attribute is not present.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -142,6 +151,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskElement.AssemblyFileLocation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AssemblyFileLocation As ElementLocation" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Construction::ElementLocation ^ AssemblyFileLocation { Microsoft::Build::Construction::ElementLocation ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.AssemblyFileLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Construction.ProjectUsingTaskElement.AssemblyFileLocation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -151,8 +161,8 @@
         <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Location of the AssemblyFile attribute on this element, if any.</summary>
-        <value>Returns  the AssemblyFile attribute location. If there is no such attribute, returns null.</value>
+        <summary>Gets the location of the AssemblyFile attribute on this element, if any.</summary>
+        <value>The AssemblyFile attribute location, or <see langword="null" /> if there is no AssemblyFile attribute.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -162,6 +172,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskElement.AssemblyName" />
       <MemberSignature Language="VB.NET" Value="Public Property AssemblyName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ AssemblyName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.AssemblyName : string with get, set" Usage="Microsoft.Build.Construction.ProjectUsingTaskElement.AssemblyName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -171,8 +182,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets and sets the value of the AssemblyName attribute.</summary>
-        <value>Returns the value of the AssemblyName attribute. Returns an empty string if the attribute is not present.</value>
+        <summary>Gets or sets the value of the AssemblyName attribute.</summary>
+        <value>The value of the AssemblyName attribute, or an empty string if the attribute is not present.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -189,6 +200,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskElement.AssemblyNameLocation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AssemblyNameLocation As ElementLocation" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Construction::ElementLocation ^ AssemblyNameLocation { Microsoft::Build::Construction::ElementLocation ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.AssemblyNameLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Construction.ProjectUsingTaskElement.AssemblyNameLocation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -198,8 +210,8 @@
         <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Location of the AssemblyName attribute on this element, if any.</summary>
-        <value>Returns  the AssemblyName attribute location. If there is no such attribute, returns null.</value>
+        <summary>Gets the location of the AssemblyName attribute on this element, if any.</summary>
+        <value>The AssemblyName attribute location, or <see langword="null" /> if there is no AssemblyName attribute.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -209,6 +221,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskElement.ParameterGroup" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ParameterGroup As UsingTaskParameterGroupElement" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Construction::UsingTaskParameterGroupElement ^ ParameterGroup { Microsoft::Build::Construction::UsingTaskParameterGroupElement ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ParameterGroup : Microsoft.Build.Construction.UsingTaskParameterGroupElement" Usage="Microsoft.Build.Construction.ProjectUsingTaskElement.ParameterGroup" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -219,7 +232,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets any ParameterGroup element for this inline task.</summary>
-        <value>Returns the parameter group. Returns null if no parameter group exists.</value>
+        <value>The parameter group, or <see langword="null" /> if no parameter group exists.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -229,6 +242,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskElement.Runtime" />
       <MemberSignature Language="VB.NET" Value="Public Property Runtime As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Runtime { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Runtime : string with get, set" Usage="Microsoft.Build.Construction.ProjectUsingTaskElement.Runtime" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -239,7 +253,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the Runtime attribute of this inline task.</summary>
-        <value>Returns the value of the Runtime attribute. Returns an empty string if the attribute is not present.</value>
+        <value>The value of the Runtime attribute, or an empty string if the attribute is not present.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -249,6 +263,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskElement.RuntimeLocation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RuntimeLocation As ElementLocation" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Construction::ElementLocation ^ RuntimeLocation { Microsoft::Build::Construction::ElementLocation ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.RuntimeLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Construction.ProjectUsingTaskElement.RuntimeLocation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -258,8 +273,8 @@
         <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Location of the Runtime attribute on this element, if any.</summary>
-        <value>Returns  the Runtime attribute location. If there is no such attribute, returns null.</value>
+        <summary>Gets the location of the Runtime attribute on this element, if any.</summary>
+        <value>The Runtime attribute location, or <see langword="null" /> if there is no Runtime attribute.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -269,6 +284,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskElement.TaskBody" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TaskBody As ProjectUsingTaskBodyElement" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Construction::ProjectUsingTaskBodyElement ^ TaskBody { Microsoft::Build::Construction::ProjectUsingTaskBodyElement ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.TaskBody : Microsoft.Build.Construction.ProjectUsingTaskBodyElement" Usage="Microsoft.Build.Construction.ProjectUsingTaskElement.TaskBody" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -279,7 +295,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets the inner XML content of this inline task.</summary>
-        <value>Returns the inner XML content of the inline task. Returns null if no body exists.</value>
+        <value>The inner XML content of the inline task, or <see langword="null" /> if no body exists.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -296,6 +312,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskElement.TaskFactory" />
       <MemberSignature Language="VB.NET" Value="Public Property TaskFactory As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TaskFactory { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.TaskFactory : string with get, set" Usage="Microsoft.Build.Construction.ProjectUsingTaskElement.TaskFactory" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -305,8 +322,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets and sets the value of the TaskFactory attribute of this inline task.</summary>
-        <value>Returns the value of the TaskFactory attribute. Returns an empty string if the attribute is not present.</value>
+        <summary>Gets or sets the value of the TaskFactory attribute of this inline task.</summary>
+        <value>The value of the TaskFactory attribute, or an empty string if the attribute is not present.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -323,6 +340,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskElement.TaskFactoryLocation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TaskFactoryLocation As ElementLocation" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Construction::ElementLocation ^ TaskFactoryLocation { Microsoft::Build::Construction::ElementLocation ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.TaskFactoryLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Construction.ProjectUsingTaskElement.TaskFactoryLocation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -332,8 +350,8 @@
         <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Location of the TaskFactory attribute on this element, if any.</summary>
-        <value>Returns the value of the TaskFactory attribute. Returns an empty string if the attribute is not present.</value>
+        <summary>Gets the location of the TaskFactory attribute on this element, if any.</summary>
+        <value>The value of the TaskFactory attribute, or an empty string if the attribute is not present.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -343,6 +361,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskElement.TaskName" />
       <MemberSignature Language="VB.NET" Value="Public Property TaskName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TaskName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.TaskName : string with get, set" Usage="Microsoft.Build.Construction.ProjectUsingTaskElement.TaskName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -352,8 +371,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets and sets the value of the TaskName attribute.</summary>
-        <value>Returns the value of the TaskName attribute. Returns an empty string if the attribute is not present.</value>
+        <summary>Gets or sets the value of the TaskName attribute.</summary>
+        <value>The value of the TaskName attribute, or an empty string if the attribute is not present.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -370,6 +389,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectUsingTaskElement.TaskNameLocation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TaskNameLocation As ElementLocation" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Construction::ElementLocation ^ TaskNameLocation { Microsoft::Build::Construction::ElementLocation ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.TaskNameLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Construction.ProjectUsingTaskElement.TaskNameLocation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -379,8 +399,8 @@
         <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Location of the TaskName attribute on this element, if any.</summary>
-        <value>Returns the value of the TaskName attribute. Returns an empty string if the attribute is not present.</value>
+        <summary>Gets the location of the TaskName attribute on this element, if any.</summary>
+        <value>The value of the TaskName attribute, or an empty string if the attribute is not present.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

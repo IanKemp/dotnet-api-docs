@@ -4,12 +4,15 @@
   <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.PeerResolverElement" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class PeerResolverElement&#xA;Inherits ServiceModelConfigurationElement" />
   <TypeSignature Language="C++ CLI" Value="public ref class PeerResolverElement sealed : System::ServiceModel::Configuration::ServiceModelConfigurationElement" />
+  <TypeSignature Language="F#" Value="type PeerResolverElement = class&#xA;    inherit ServiceModelConfigurationElement" />
   <AssemblyInfo>
     <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.ServiceModel.Configuration.ServiceModelConfigurationElement</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-3.0">System.Configuration.ConfigurationElement</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
@@ -26,8 +29,14 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.ServiceModel.Configuration.PeerResolverElement" /> class.</summary>
@@ -40,9 +49,11 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.PeerResolverElement.Custom" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Custom As PeerCustomResolverElement" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::ServiceModel::Configuration::PeerCustomResolverElement ^ Custom { System::ServiceModel::Configuration::PeerCustomResolverElement ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Custom : System.ServiceModel.Configuration.PeerCustomResolverElement" Usage="System.ServiceModel.Configuration.PeerResolverElement.Custom" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -73,9 +84,11 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.PeerResolverElement.Mode" />
       <MemberSignature Language="VB.NET" Value="Public Property Mode As PeerResolverMode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::ServiceModel::PeerResolvers::PeerResolverMode Mode { System::ServiceModel::PeerResolvers::PeerResolverMode get(); void set(System::ServiceModel::PeerResolvers::PeerResolverMode value); };" />
+      <MemberSignature Language="F#" Value="member this.Mode : System.ServiceModel.PeerResolvers.PeerResolverMode with get, set" Usage="System.ServiceModel.Configuration.PeerResolverElement.Mode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -87,7 +100,7 @@
         <ReturnType>System.ServiceModel.PeerResolvers.PeerResolverMode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets and sets the type of the peer resolver represented by this configuration element.</summary>
+        <summary>Gets or sets the type of the peer resolver represented by this configuration element.</summary>
         <value>
           <see cref="T:System.ServiceModel.PeerResolvers.PeerResolverMode" /> enumeration value that specifies the type of peer resolvder represented by this configuration element.</value>
         <remarks>To be added.</remarks>
@@ -99,9 +112,11 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.PeerResolverElement.Properties" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property Properties As ConfigurationPropertyCollection" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property System::Configuration::ConfigurationPropertyCollection ^ Properties { System::Configuration::ConfigurationPropertyCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Properties : System.Configuration.ConfigurationPropertyCollection" Usage="System.ServiceModel.Configuration.PeerResolverElement.Properties" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -119,9 +134,11 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.PeerResolverElement.ReferralPolicy" />
       <MemberSignature Language="VB.NET" Value="Public Property ReferralPolicy As PeerReferralPolicy" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::ServiceModel::PeerResolvers::PeerReferralPolicy ReferralPolicy { System::ServiceModel::PeerResolvers::PeerReferralPolicy get(); void set(System::ServiceModel::PeerResolvers::PeerReferralPolicy value); };" />
+      <MemberSignature Language="F#" Value="member this.ReferralPolicy : System.ServiceModel.PeerResolvers.PeerReferralPolicy with get, set" Usage="System.ServiceModel.Configuration.PeerResolverElement.ReferralPolicy" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -133,7 +150,7 @@
         <ReturnType>System.ServiceModel.PeerResolvers.PeerReferralPolicy</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets and sets the referral policy for peer resolvers configured with this element.</summary>
+        <summary>Gets or sets the referral policy for peer resolvers configured with this element.</summary>
         <value>
           <see cref="T:System.ServiceModel.PeerResolvers.PeerReferralPolicy" /> that specifies the referral policy for peer resolvers configured with this element.</value>
         <remarks>To be added.</remarks>

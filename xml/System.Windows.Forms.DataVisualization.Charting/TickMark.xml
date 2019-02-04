@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.TickMark" />
   <TypeSignature Language="VB.NET" Value="Public Class TickMark&#xA;Inherits Grid" />
   <TypeSignature Language="C++ CLI" Value="public ref class TickMark : System::Windows::Forms::DataVisualization::Charting::Grid" />
+  <TypeSignature Language="F#" Value="type TickMark = class&#xA;    inherit Grid" />
   <AssemblyInfo>
     <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -39,7 +40,7 @@
   
 -   Specify a style that determines whether tick marks are displayed outside the axis, inside the axis or across the axis.  
   
--   Specify the starting point—where the first tick mark is drawn—as well as the tick mark interval, which correlates to their frequency.  
+-   Specify the starting point - where the first tick mark is drawn - as well as the tick mark interval, which correlates to their frequency.  
   
  ]]></format>
     </remarks>
@@ -68,6 +69,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.TickMark.Size" />
       <MemberSignature Language="VB.NET" Value="Public Property Size As Single" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property float Size { float get(); void set(float value); };" />
+      <MemberSignature Language="F#" Value="member this.Size : single with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.TickMark.Size" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -79,6 +81,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -109,6 +114,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.TickMark.TickMarkStyle" />
       <MemberSignature Language="VB.NET" Value="Public Property TickMarkStyle As TickMarkStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Forms::DataVisualization::Charting::TickMarkStyle TickMarkStyle { System::Windows::Forms::DataVisualization::Charting::TickMarkStyle get(); void set(System::Windows::Forms::DataVisualization::Charting::TickMarkStyle value); };" />
+      <MemberSignature Language="F#" Value="member this.TickMarkStyle : System.Windows.Forms.DataVisualization.Charting.TickMarkStyle with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.TickMark.TickMarkStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -120,6 +126,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

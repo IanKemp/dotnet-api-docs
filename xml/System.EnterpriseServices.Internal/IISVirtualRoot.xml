@@ -4,8 +4,11 @@
   <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.Internal.IISVirtualRoot" />
   <TypeSignature Language="VB.NET" Value="Public Class IISVirtualRoot&#xA;Implements IComSoapIISVRoot" />
   <TypeSignature Language="C++ CLI" Value="public ref class IISVirtualRoot : System::EnterpriseServices::Internal::IComSoapIISVRoot" />
+  <TypeSignature Language="F#" Value="type IISVirtualRoot = class&#xA;    interface IComSoapIISVRoot" />
   <AssemblyInfo>
     <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -49,6 +52,8 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
@@ -64,12 +69,15 @@
       <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.IISVirtualRoot.Create(System.String,System.String,System.String,System.String@)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Create (RootWeb As String, inPhysicalDirectory As String, VirtualDirectory As String, ByRef Error As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Create(System::String ^ RootWeb, System::String ^ inPhysicalDirectory, System::String ^ VirtualDirectory, [Runtime::InteropServices::Out] System::String ^ % Error);" />
+      <MemberSignature Language="F#" Value="abstract member Create : string * string * string *  -&gt; unit&#xA;override this.Create : string * string * string *  -&gt; unit" Usage="iISVirtualRoot.Create (RootWeb, inPhysicalDirectory, VirtualDirectory, Error)" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.EnterpriseServices.Internal.IComSoapIISVRoot.Create(System.String,System.String,System.String,System.String@)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -79,12 +87,12 @@
         <Parameter Name="RootWeb" Type="System.String" />
         <Parameter Name="inPhysicalDirectory" Type="System.String" />
         <Parameter Name="VirtualDirectory" Type="System.String" />
-        <Parameter Name="Error" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="Error" Type="System.String" RefType="out" />
       </Parameters>
       <Docs>
         <param name="RootWeb">A string with the value <c>"IIS://localhost/W3SVC/1/ROOT"</c> representing the root Web server.</param>
-        <param name="inPhysicalDirectory">The physical path of the virtual root, which corresponds to <c>PhysicalPath</c> from the <see cref="M:System.EnterpriseServices.Internal.Publish.CreateVirtualRoot(System.String,System.String,System.String@,System.String@,System.String@,System.String@)" /> method.</param>
-        <param name="VirtualDirectory">The name of the virtual root, which corresponds to <c>VirtualRoot</c> from <see cref="M:System.EnterpriseServices.Internal.Publish.CreateVirtualRoot(System.String,System.String,System.String@,System.String@,System.String@,System.String@)" />.</param>
+        <param name="inPhysicalDirectory">The physical path of the virtual root, which corresponds to <paramref name="PhysicalPath" /> from the <see cref="M:System.EnterpriseServices.Internal.Publish.CreateVirtualRoot(System.String,System.String,System.String@,System.String@,System.String@,System.String@)" /> method.</param>
+        <param name="VirtualDirectory">The name of the virtual root, which corresponds to <paramref name="VirtualRoot" /> from <see cref="M:System.EnterpriseServices.Internal.Publish.CreateVirtualRoot(System.String,System.String,System.String@,System.String@,System.String@,System.String@)" />.</param>
         <param name="Error">A string to which an error message can be written.</param>
         <summary>Creates an Internet Information Services (IIS) virtual root.</summary>
         <remarks>
@@ -104,12 +112,15 @@
       <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.IISVirtualRoot.Delete(System.String,System.String,System.String,System.String@)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Delete (RootWeb As String, PhysicalDirectory As String, VirtualDirectory As String, ByRef Error As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Delete(System::String ^ RootWeb, System::String ^ PhysicalDirectory, System::String ^ VirtualDirectory, [Runtime::InteropServices::Out] System::String ^ % Error);" />
+      <MemberSignature Language="F#" Value="abstract member Delete : string * string * string *  -&gt; unit&#xA;override this.Delete : string * string * string *  -&gt; unit" Usage="iISVirtualRoot.Delete (RootWeb, PhysicalDirectory, VirtualDirectory, Error)" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.EnterpriseServices.Internal.IComSoapIISVRoot.Delete(System.String,System.String,System.String,System.String@)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -119,10 +130,10 @@
         <Parameter Name="RootWeb" Type="System.String" />
         <Parameter Name="PhysicalDirectory" Type="System.String" />
         <Parameter Name="VirtualDirectory" Type="System.String" />
-        <Parameter Name="Error" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="Error" Type="System.String" RefType="out" />
       </Parameters>
       <Docs>
-        <param name="RootWeb">The root Web server, as specified by <c>RootWebServer</c> from the <see cref="M:System.EnterpriseServices.Internal.IComSoapPublisher.DeleteVirtualRoot(System.String,System.String,System.String@)" /> method.</param>
+        <param name="RootWeb">The root Web server, as specified by <paramref name="RootWebServer" /> from the <see cref="M:System.EnterpriseServices.Internal.IComSoapPublisher.DeleteVirtualRoot(System.String,System.String,System.String@)" /> method.</param>
         <param name="PhysicalDirectory">The physical path of the virtual root.</param>
         <param name="VirtualDirectory">The name of the virtual root.</param>
         <param name="Error">A string to which an error message can be written.</param>

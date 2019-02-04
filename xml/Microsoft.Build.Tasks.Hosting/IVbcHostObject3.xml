@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Hosting.IVbcHostObject3" />
   <TypeSignature Language="VB.NET" Value="Public Interface IVbcHostObject3&#xA;Implements ITaskHost, IVbcHostObject2" />
   <TypeSignature Language="C++ CLI" Value="public interface class IVbcHostObject3 : Microsoft::Build::Framework::ITaskHost, Microsoft::Build::Tasks::Hosting::IVbcHostObject2" />
+  <TypeSignature Language="F#" Value="type IVbcHostObject3 = interface&#xA;    interface IVbcHostObject2&#xA;    interface IVbcHostObject&#xA;    interface ITaskHost" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -11,6 +12,9 @@
   <Interfaces>
     <Interface>
       <InterfaceName>Microsoft.Build.Framework.ITaskHost</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Tasks.Hosting.IVbcHostObject</InterfaceName>
     </Interface>
     <Interface>
       <InterfaceName>Microsoft.Build.Tasks.Hosting.IVbcHostObject2</InterfaceName>
@@ -24,11 +28,11 @@
       <AttributeName>System.Runtime.InteropServices.Guid("1186fe8f-8aba-48d6-8ce3-32ca42f53728")</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.InterfaceType</AttributeName>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Defines an interface that allows the [Vbc](http://msdn.microsoft.com/library/595278b1-2782-4577-b1ba-b4b5ab5625a3) task to communicate with the host integrated development environment (IDE).</summary>
+    <summary>Defines an interface that allows the <see href="https://msdn.microsoft.com/library/595278b1-2782-4577-b1ba-b4b5ab5625a3">Vbc</see> task to communicate with the host integrated development environment (IDE).</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -38,6 +42,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.IVbcHostObject3.SetLanguageVersion(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function SetLanguageVersion (languageVersion As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool SetLanguageVersion(System::String ^ languageVersion);" />
+      <MemberSignature Language="F#" Value="abstract member SetLanguageVersion : string -&gt; bool" Usage="iVbcHostObject3.SetLanguageVersion languageVersion" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
@@ -52,7 +57,8 @@
       <Docs>
         <param name="languageVersion">The language version.</param>
         <summary>Sets the language version.</summary>
-        <returns>Returns true if the language version is set; false otherwise.</returns>
+        <returns>
+          <see langword="true" /> if the language version is set; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

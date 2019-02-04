@@ -4,13 +4,17 @@
   <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.AceFlags" />
   <TypeSignature Language="VB.NET" Value="Public Enum AceFlags" />
   <TypeSignature Language="C++ CLI" Value="public enum class AceFlags" />
+  <TypeSignature Language="F#" Value="type AceFlags = " />
   <AssemblyInfo>
     <AssemblyName>System.Security.AccessControl</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
     <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.0.5.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
@@ -18,7 +22,7 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Attributes>
-    <Attribute>
+    <Attribute FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netcore-2.1;netframework-4.8;dotnet-plat-ext-2.1;netcore-2.2;dotnet-plat-ext-2.2">
       <AttributeName>System.Flags</AttributeName>
     </Attribute>
   </Attributes>
@@ -33,14 +37,18 @@
       <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceFlags.AuditFlags" />
       <MemberSignature Language="VB.NET" Value="AuditFlags" />
       <MemberSignature Language="C++ CLI" Value="AuditFlags" />
+      <MemberSignature Language="F#" Value="AuditFlags = 192" Usage="System.Security.AccessControl.AceFlags.AuditFlags" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.AccessControl</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -58,14 +66,18 @@
       <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceFlags.ContainerInherit" />
       <MemberSignature Language="VB.NET" Value="ContainerInherit" />
       <MemberSignature Language="C++ CLI" Value="ContainerInherit" />
+      <MemberSignature Language="F#" Value="ContainerInherit = 2" Usage="System.Security.AccessControl.AceFlags.ContainerInherit" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.AccessControl</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -83,14 +95,18 @@
       <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceFlags.FailedAccess" />
       <MemberSignature Language="VB.NET" Value="FailedAccess" />
       <MemberSignature Language="C++ CLI" Value="FailedAccess" />
+      <MemberSignature Language="F#" Value="FailedAccess = 128" Usage="System.Security.AccessControl.AceFlags.FailedAccess" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.AccessControl</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -108,14 +124,18 @@
       <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceFlags.InheritanceFlags" />
       <MemberSignature Language="VB.NET" Value="InheritanceFlags" />
       <MemberSignature Language="C++ CLI" Value="InheritanceFlags" />
+      <MemberSignature Language="F#" Value="InheritanceFlags = 15" Usage="System.Security.AccessControl.AceFlags.InheritanceFlags" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.AccessControl</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -133,14 +153,18 @@
       <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceFlags.Inherited" />
       <MemberSignature Language="VB.NET" Value="Inherited" />
       <MemberSignature Language="C++ CLI" Value="Inherited" />
+      <MemberSignature Language="F#" Value="Inherited = 16" Usage="System.Security.AccessControl.AceFlags.Inherited" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.AccessControl</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -158,14 +182,18 @@
       <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceFlags.InheritOnly" />
       <MemberSignature Language="VB.NET" Value="InheritOnly" />
       <MemberSignature Language="C++ CLI" Value="InheritOnly" />
+      <MemberSignature Language="F#" Value="InheritOnly = 8" Usage="System.Security.AccessControl.AceFlags.InheritOnly" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.AccessControl</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -183,14 +211,18 @@
       <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceFlags.None" />
       <MemberSignature Language="VB.NET" Value="None" />
       <MemberSignature Language="C++ CLI" Value="None" />
+      <MemberSignature Language="F#" Value="None = 0" Usage="System.Security.AccessControl.AceFlags.None" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.AccessControl</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -208,14 +240,18 @@
       <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceFlags.NoPropagateInherit" />
       <MemberSignature Language="VB.NET" Value="NoPropagateInherit" />
       <MemberSignature Language="C++ CLI" Value="NoPropagateInherit" />
+      <MemberSignature Language="F#" Value="NoPropagateInherit = 4" Usage="System.Security.AccessControl.AceFlags.NoPropagateInherit" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.AccessControl</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -233,14 +269,18 @@
       <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceFlags.ObjectInherit" />
       <MemberSignature Language="VB.NET" Value="ObjectInherit" />
       <MemberSignature Language="C++ CLI" Value="ObjectInherit" />
+      <MemberSignature Language="F#" Value="ObjectInherit = 1" Usage="System.Security.AccessControl.AceFlags.ObjectInherit" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.AccessControl</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -258,14 +298,18 @@
       <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceFlags.SuccessfulAccess" />
       <MemberSignature Language="VB.NET" Value="SuccessfulAccess" />
       <MemberSignature Language="C++ CLI" Value="SuccessfulAccess" />
+      <MemberSignature Language="F#" Value="SuccessfulAccess = 64" Usage="System.Security.AccessControl.AceFlags.SuccessfulAccess" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.AccessControl</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>

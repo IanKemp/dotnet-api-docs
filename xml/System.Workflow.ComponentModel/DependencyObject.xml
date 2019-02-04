@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.DependencyObject" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class DependencyObject&#xA;Implements IComponent, IDisposable" />
   <TypeSignature Language="C++ CLI" Value="public ref class DependencyObject abstract : IDisposable, System::ComponentModel::IComponent" />
+  <TypeSignature Language="F#" Value="type DependencyObject = class&#xA;    interface IComponent&#xA;    interface IDisposable" />
   <AssemblyInfo>
     <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -26,7 +28,7 @@
     <Attribute>
       <AttributeName>System.ComponentModel.Design.Serialization.DesignerSerializer(typeof(System.Workflow.ComponentModel.Serialization.DependencyObjectCodeDomSerializer), typeof(System.ComponentModel.Design.Serialization.CodeDomSerializer))</AttributeName>
     </Attribute>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
       <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
     </Attribute>
   </Attributes>
@@ -53,6 +55,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
@@ -67,9 +70,11 @@
       <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.AddHandler(System.Workflow.ComponentModel.DependencyProperty,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Sub AddHandler (dependencyEvent As DependencyProperty, value As Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void AddHandler(System::Workflow::ComponentModel::DependencyProperty ^ dependencyEvent, System::Object ^ value);" />
+      <MemberSignature Language="F#" Value="member this.AddHandler : System.Workflow.ComponentModel.DependencyProperty * obj -&gt; unit" Usage="dependencyObject.AddHandler (dependencyEvent, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -92,7 +97,7 @@
    
   
 ## Examples  
- Handlers are added and removed using the following code. This code example is part of the Send Email SDK sample and is from the SendMailActivity.cs file. For more information, see [Send Email Activity Sample](http://msdn.microsoft.com/library/bfb5939e-60a9-4037-af4e-2cea9e654669).  
+ Handlers are added and removed using the following code. This code example is part of the Send Email SDK sample and is from the SendMailActivity.cs file. For more information, see [Send Email Activity Sample](https://msdn.microsoft.com/library/bfb5939e-60a9-4037-af4e-2cea9e654669).  
   
  [!code-csharp[WF_Samples#232](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#232)]
  [!code-vb[WF_Samples#232](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#232)]  
@@ -100,7 +105,12 @@
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">Either of the arguments is a null reference (<see langword="Nothing" /> in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The <paramref name="dependencyEvent" /> represents a non-event <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          Value is of incorrect <see cref="T:System.Type" />
+
+-or-
+
+The <paramref name="dependencyEvent" /> represents a non-event <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</exception>
       </Docs>
     </Member>
     <Member MemberName="DesignMode">
@@ -109,9 +119,11 @@
       <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.DependencyObject.DesignMode" />
       <MemberSignature Language="VB.NET" Value="Protected Friend ReadOnly Property DesignMode As Boolean" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; property bool DesignMode { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.DesignMode : bool" Usage="System.Workflow.ComponentModel.DependencyObject.DesignMode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -119,7 +131,7 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -147,12 +159,14 @@
       <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.Dispose" />
       <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Dispose();" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="dependencyObject.Dispose " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -170,9 +184,11 @@
       <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.Dispose(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void Dispose(bool disposing);" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="dependencyObject.Dispose disposing" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -194,9 +210,11 @@
       <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.Finalize" />
       <MemberSignature Language="VB.NET" Value="Finalize ()" />
       <MemberSignature Language="C++ CLI" Value="!DependencyObject ()" />
+      <MemberSignature Language="F#" Value="override this.Finalize : unit -&gt; unit" Usage="dependencyObject.Finalize " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -220,9 +238,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Workflow.ComponentModel.ActivityBind GetBinding(class System.Workflow.ComponentModel.DependencyProperty dependencyProperty) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.GetBinding(System.Workflow.ComponentModel.DependencyProperty)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Workflow::ComponentModel::ActivityBind ^ GetBinding(System::Workflow::ComponentModel::DependencyProperty ^ dependencyProperty);" />
+      <MemberSignature Language="F#" Value="member this.GetBinding : System.Workflow.ComponentModel.DependencyProperty -&gt; System.Workflow.ComponentModel.ActivityBind" Usage="dependencyObject.GetBinding dependencyProperty" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -244,9 +264,11 @@
       <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.GetBoundValue(System.Workflow.ComponentModel.ActivityBind,System.Type)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function GetBoundValue (bind As ActivityBind, targetType As Type) As Object" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual System::Object ^ GetBoundValue(System::Workflow::ComponentModel::ActivityBind ^ bind, Type ^ targetType);" />
+      <MemberSignature Language="F#" Value="abstract member GetBoundValue : System.Workflow.ComponentModel.ActivityBind * Type -&gt; obj&#xA;override this.GetBoundValue : System.Workflow.ComponentModel.ActivityBind * Type -&gt; obj" Usage="dependencyObject.GetBoundValue (bind, targetType)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -275,7 +297,11 @@
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">
-          <paramref name="targetType" /> is a null reference (<see langword="Nothing" />).</exception>
+          <paramref name="bind" /> is a null reference (<see langword="Nothing" /> in Visual Basic).
+
+-or-
+
+<paramref name="targetType" /> is a null reference (<see langword="Nothing" />).</exception>
       </Docs>
     </Member>
     <Member MemberName="GetInvocationList&lt;T&gt;">
@@ -284,12 +310,14 @@
       <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.GetInvocationList``1(System.Workflow.ComponentModel.DependencyProperty)" />
       <MemberSignature Language="VB.NET" Value="Protected Function GetInvocationList(Of T) (dependencyEvent As DependencyProperty) As T()" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA;generic &lt;typename T&gt;&#xA; cli::array &lt;T&gt; ^ GetInvocationList(System::Workflow::ComponentModel::DependencyProperty ^ dependencyEvent);" />
+      <MemberSignature Language="F#" Value="member this.GetInvocationList : System.Workflow.ComponentModel.DependencyProperty -&gt; 'T[]" Usage="dependencyObject.GetInvocationList dependencyEvent" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Workflow.ComponentModel.IDependencyObjectAccessor.GetInvocationList``1(System.Workflow.ComponentModel.DependencyProperty)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -318,9 +346,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetValue(class System.Workflow.ComponentModel.DependencyProperty dependencyProperty) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.GetValue(System.Workflow.ComponentModel.DependencyProperty)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Object ^ GetValue(System::Workflow::ComponentModel::DependencyProperty ^ dependencyProperty);" />
+      <MemberSignature Language="F#" Value="member this.GetValue : System.Workflow.ComponentModel.DependencyProperty -&gt; obj" Usage="dependencyObject.GetValue dependencyProperty" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -342,7 +372,7 @@
    
   
 ## Examples  
- The following code shows how to use <xref:System.Workflow.ComponentModel.DependencyObject.GetValue%2A> to return the value represented by a named dependency property in the context of get and set. This code example is part of the Send Email SDK sample and is from the SendMailActivity.cs file. For more information, see [Send Email Activity Sample](http://msdn.microsoft.com/library/bfb5939e-60a9-4037-af4e-2cea9e654669).  
+ The following code shows how to use <xref:System.Workflow.ComponentModel.DependencyObject.GetValue%2A> to return the value represented by a named dependency property in the context of get and set. This code example is part of the Send Email SDK sample and is from the SendMailActivity.cs file. For more information, see [Send Email Activity Sample](https://msdn.microsoft.com/library/bfb5939e-60a9-4037-af4e-2cea9e654669).  
   
  [!code-csharp[WF_Samples#231](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#231)]
  [!code-vb[WF_Samples#231](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#231)]  
@@ -356,9 +386,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetValueBase(class System.Workflow.ComponentModel.DependencyProperty dependencyProperty) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.GetValueBase(System.Workflow.ComponentModel.DependencyProperty)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Object ^ GetValueBase(System::Workflow::ComponentModel::DependencyProperty ^ dependencyProperty);" />
+      <MemberSignature Language="F#" Value="member this.GetValueBase : System.Workflow.ComponentModel.DependencyProperty -&gt; obj" Usage="dependencyObject.GetValueBase dependencyProperty" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -396,9 +428,11 @@
       <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.InitializeProperties" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub InitializeProperties ()" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void InitializeProperties();" />
+      <MemberSignature Language="F#" Value="abstract member InitializeProperties : unit -&gt; unit&#xA;override this.InitializeProperties : unit -&gt; unit" Usage="dependencyObject.InitializeProperties " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -422,9 +456,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsBindingSet(class System.Workflow.ComponentModel.DependencyProperty dependencyProperty) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.IsBindingSet(System.Workflow.ComponentModel.DependencyProperty)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool IsBindingSet(System::Workflow::ComponentModel::DependencyProperty ^ dependencyProperty);" />
+      <MemberSignature Language="F#" Value="member this.IsBindingSet : System.Workflow.ComponentModel.DependencyProperty -&gt; bool" Usage="dependencyObject.IsBindingSet dependencyProperty" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -448,9 +484,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool MetaEquals(class System.Workflow.ComponentModel.DependencyObject dependencyObject) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.MetaEquals(System.Workflow.ComponentModel.DependencyObject)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool MetaEquals(System::Workflow::ComponentModel::DependencyObject ^ dependencyObject);" />
+      <MemberSignature Language="F#" Value="member this.MetaEquals : System.Workflow.ComponentModel.DependencyObject -&gt; bool" Usage="dependencyObject.MetaEquals dependencyObject" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -480,9 +518,11 @@
       <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.DependencyObject.ParentDependencyObject" />
       <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property ParentDependencyObject As DependencyObject" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; property System::Workflow::ComponentModel::DependencyObject ^ ParentDependencyObject { System::Workflow::ComponentModel::DependencyObject ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ParentDependencyObject : System.Workflow.ComponentModel.DependencyObject" Usage="System.Workflow.ComponentModel.DependencyObject.ParentDependencyObject" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -500,9 +540,11 @@
       <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.RemoveHandler(System.Workflow.ComponentModel.DependencyProperty,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Sub RemoveHandler (dependencyEvent As DependencyProperty, value As Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void RemoveHandler(System::Workflow::ComponentModel::DependencyProperty ^ dependencyEvent, System::Object ^ value);" />
+      <MemberSignature Language="F#" Value="member this.RemoveHandler : System.Workflow.ComponentModel.DependencyProperty * obj -&gt; unit" Usage="dependencyObject.RemoveHandler (dependencyEvent, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -527,7 +569,7 @@
    
   
 ## Examples  
- Handlers are added and removed using the following code. For more information, see [Send Email Activity Sample](http://msdn.microsoft.com/library/bfb5939e-60a9-4037-af4e-2cea9e654669).  
+ Handlers are added and removed using the following code. For more information, see [Send Email Activity Sample](https://msdn.microsoft.com/library/bfb5939e-60a9-4037-af4e-2cea9e654669).  
   
  [!code-csharp[WF_Samples#232](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#232)]
  [!code-vb[WF_Samples#232](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#232)]  
@@ -535,7 +577,12 @@
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">Either of the arguments is a null reference (<see langword="Nothing" /> in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The <paramref name="dependencyEvent" /> is not an event.</exception>
+        <exception cref="T:System.ArgumentException">
+          The <paramref name="dependencyEvent" /> is a <see langword="metaproperty" />.
+
+-or-
+
+The <paramref name="dependencyEvent" /> is not an event.</exception>
         <exception cref="T:System.Data.ReadOnlyException">The <paramref name="value" /> is a <see cref="T:System.Workflow.ComponentModel.ActivityBind" /> and this instance is not in <see cref="P:System.Workflow.ComponentModel.DependencyObject.DesignMode" />.</exception>
       </Docs>
     </Member>
@@ -544,9 +591,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RemoveProperty(class System.Workflow.ComponentModel.DependencyProperty dependencyProperty) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.RemoveProperty(System.Workflow.ComponentModel.DependencyProperty)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool RemoveProperty(System::Workflow::ComponentModel::DependencyProperty ^ dependencyProperty);" />
+      <MemberSignature Language="F#" Value="member this.RemoveProperty : System.Workflow.ComponentModel.DependencyProperty -&gt; bool" Usage="dependencyObject.RemoveProperty dependencyProperty" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -569,9 +618,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetBinding(class System.Workflow.ComponentModel.DependencyProperty dependencyProperty, class System.Workflow.ComponentModel.ActivityBind bind) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.SetBinding(System.Workflow.ComponentModel.DependencyProperty,System.Workflow.ComponentModel.ActivityBind)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetBinding(System::Workflow::ComponentModel::DependencyProperty ^ dependencyProperty, System::Workflow::ComponentModel::ActivityBind ^ bind);" />
+      <MemberSignature Language="F#" Value="member this.SetBinding : System.Workflow.ComponentModel.DependencyProperty * System.Workflow.ComponentModel.ActivityBind -&gt; unit" Usage="dependencyObject.SetBinding (dependencyProperty, bind)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -600,7 +651,7 @@
   
  In addition, the use of the <xref:System.Workflow.ComponentModel.DependencyObject.SetBinding%2A> method is illustrated.  
   
- This code example is part of the Throw SDK sample and is from the ThrowWorkFlow.cs file. For more information, see [Using Throw](http://msdn.microsoft.com/library/aa5b9546-ec95-4e43-8337-20e26f8d71cc).  
+ This code example is part of the Throw SDK sample and is from the ThrowWorkFlow.cs file. For more information, see [Using Throw](https://msdn.microsoft.com/library/aa5b9546-ec95-4e43-8337-20e26f8d71cc).  
   
  [!code-csharp[WF_Samples#215](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets19.cs#215)]
  [!code-vb[WF_Samples#215](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets19.vb#215)]  
@@ -608,7 +659,7 @@
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">Either of the arguments is a null reference (<see langword="Nothing" /> in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The <see cref="T:System.Workflow.ComponentModel.PropertyMetadata" /> associated with the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> is not bindable.</exception>
+        <exception cref="T:System.ArgumentException">The <see cref="T:System.Workflow.ComponentModel.PropertyMetadata" /> associated with the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> is read-only, is metadata, or is not bindable.</exception>
         <exception cref="T:System.InvalidOperationException">This instance is not in <see cref="P:System.Workflow.ComponentModel.DependencyObject.DesignMode" />.</exception>
       </Docs>
     </Member>
@@ -618,9 +669,11 @@
       <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.SetBoundValue(System.Workflow.ComponentModel.ActivityBind,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub SetBoundValue (bind As ActivityBind, value As Object)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void SetBoundValue(System::Workflow::ComponentModel::ActivityBind ^ bind, System::Object ^ value);" />
+      <MemberSignature Language="F#" Value="abstract member SetBoundValue : System.Workflow.ComponentModel.ActivityBind * obj -&gt; unit&#xA;override this.SetBoundValue : System.Workflow.ComponentModel.ActivityBind * obj -&gt; unit" Usage="dependencyObject.SetBoundValue (bind, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -649,9 +702,11 @@
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void SetReadOnlyPropertyValue(class System.Workflow.ComponentModel.DependencyProperty dependencyProperty, object value) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.SetReadOnlyPropertyValue(System.Workflow.ComponentModel.DependencyProperty,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; void SetReadOnlyPropertyValue(System::Workflow::ComponentModel::DependencyProperty ^ dependencyProperty, System::Object ^ value);" />
+      <MemberSignature Language="F#" Value="member this.SetReadOnlyPropertyValue : System.Workflow.ComponentModel.DependencyProperty * obj -&gt; unit" Usage="dependencyObject.SetReadOnlyPropertyValue (dependencyProperty, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -674,9 +729,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetValue(class System.Workflow.ComponentModel.DependencyProperty dependencyProperty, object value) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.SetValue(System.Workflow.ComponentModel.DependencyProperty,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetValue(System::Workflow::ComponentModel::DependencyProperty ^ dependencyProperty, System::Object ^ value);" />
+      <MemberSignature Language="F#" Value="member this.SetValue : System.Workflow.ComponentModel.DependencyProperty * obj -&gt; unit" Usage="dependencyObject.SetValue (dependencyProperty, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -717,9 +774,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetValueBase(class System.Workflow.ComponentModel.DependencyProperty dependencyProperty, object value) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.SetValueBase(System.Workflow.ComponentModel.DependencyProperty,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetValueBase(System::Workflow::ComponentModel::DependencyProperty ^ dependencyProperty, System::Object ^ value);" />
+      <MemberSignature Language="F#" Value="member this.SetValueBase : System.Workflow.ComponentModel.DependencyProperty * obj -&gt; unit" Usage="dependencyObject.SetValueBase (dependencyProperty, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -758,9 +817,14 @@
       <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.DependencyObject.Site" />
       <MemberSignature Language="VB.NET" Value="Public Property Site As ISite" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::ComponentModel::ISite ^ Site { System::ComponentModel::ISite ^ get(); void set(System::ComponentModel::ISite ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Site : System.ComponentModel.ISite with get, set" Usage="System.Workflow.ComponentModel.DependencyObject.Site" />
       <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.ComponentModel.IComponent.Site</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -768,7 +832,7 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
@@ -783,15 +847,46 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="System.ComponentModel.IComponent.Disposed">
+      <MemberSignature Language="C#" Value="event EventHandler System.ComponentModel.IComponent.Disposed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler System.ComponentModel.IComponent.Disposed" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.ComponentModel.DependencyObject.System#ComponentModel#IComponent#Disposed" />
+      <MemberSignature Language="VB.NET" Value="Custom Event Disposed As EventHandler Implements System.ComponentModel.IComponent" />
+      <MemberType>Event</MemberType>
+      <Implements>
+        <InterfaceMember>E:System.ComponentModel.IComponent.Disposed</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Represents the method that handles the Disposed event of a component.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[
+
+## Remarks  
+When you create a Disposed delegate, you identify the method that handles the event. To associate the event with your event handler, add an instance of the delegate to the event. The event handler is called whenever the event occurs, unless you remove the delegate.
+
+]]></format>
+        </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="UserData">
       <MemberSignature Language="C#" Value="public System.Collections.IDictionary UserData { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary UserData" />
       <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.DependencyObject.UserData" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UserData As IDictionary" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::IDictionary ^ UserData { System::Collections::IDictionary ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.UserData : System.Collections.IDictionary" Usage="System.Workflow.ComponentModel.DependencyObject.UserData" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -799,7 +894,7 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

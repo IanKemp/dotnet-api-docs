@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.ReplicatorActivity" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ReplicatorActivity&#xA;Inherits CompositeActivity" />
   <TypeSignature Language="C++ CLI" Value="public ref class ReplicatorActivity sealed : System::Workflow::ComponentModel::CompositeActivity" />
+  <TypeSignature Language="F#" Value="type ReplicatorActivity = class&#xA;    inherit CompositeActivity" />
   <AssemblyInfo>
     <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -25,7 +27,7 @@
     <Attribute>
       <AttributeName>System.Drawing.ToolboxBitmap(typeof(System.Workflow.Activities.ReplicatorActivity), "Resources.Replicator.png")</AttributeName>
     </Attribute>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
       <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
     </Attribute>
     <Attribute>
@@ -52,13 +54,14 @@
    
   
 ## Examples  
- The following code example shows how to create a new instance of the <xref:System.Workflow.Activities.ReplicatorActivity> class and define a handler for the <xref:System.Workflow.Activities.ReplicatorActivity.Initialized> event. This code example is part of the Replicator SDK Sample from the SimpleReplicatorWorkflow.Designer.cs file. For more information, see [Using Replicator](http://msdn.microsoft.com/library/4e35f26b-cf12-4c04-9d25-9ceb958f2858).  
+ The following code example shows how to create a new instance of the <xref:System.Workflow.Activities.ReplicatorActivity> class and define a handler for the <xref:System.Workflow.Activities.ReplicatorActivity.Initialized> event. This code example is part of the Replicator SDK Sample from the SimpleReplicatorWorkflow.Designer.cs file. For more information, see [Using Replicator](https://msdn.microsoft.com/library/4e35f26b-cf12-4c04-9d25-9ceb958f2858).  
   
  [!code-csharp[wf_samples#177](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#177)]
  [!code-vb[wf_samples#177](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#177)]  
   
  ]]></format>
     </remarks>
+    <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms735766(v=vs.90)">Using the Replicator Activity</related>
   </Docs>
   <Members>
     <MemberGroup MemberName=".ctor">
@@ -68,6 +71,8 @@
       </AssemblyInfo>
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.ReplicatorActivity" /> class.</summary>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms735766(v=vs.90)">Using the Replicator Activity</related>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734614(v=vs.90)">Using Conditions in Workflows</related>
       </Docs>
     </MemberGroup>
     <Member MemberName=".ctor">
@@ -79,6 +84,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
@@ -88,13 +94,15 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- The following code example shows how to create a new instance of the <xref:System.Workflow.Activities.ReplicatorActivity> class.  This code example is part of the Replicator SDK Sample from the SimpleReplicatorWorkflow.Designer.cs file. For more information, see [Using Replicator](http://msdn.microsoft.com/library/4e35f26b-cf12-4c04-9d25-9ceb958f2858).  
+ The following code example shows how to create a new instance of the <xref:System.Workflow.Activities.ReplicatorActivity> class.  This code example is part of the Replicator SDK Sample from the SimpleReplicatorWorkflow.Designer.cs file. For more information, see [Using Replicator](https://msdn.microsoft.com/library/4e35f26b-cf12-4c04-9d25-9ceb958f2858).  
   
  [!code-csharp[wf_samples#178](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#178)]
  [!code-vb[wf_samples#178](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#178)]  
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms735766(v=vs.90)">Using the Replicator Activity</related>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734614(v=vs.90)">Using Conditions in Workflows</related>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -103,9 +111,11 @@
       <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ReplicatorActivity.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (name As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ReplicatorActivity(System::String ^ name);" />
+      <MemberSignature Language="F#" Value="new System.Workflow.Activities.ReplicatorActivity : string -&gt; System.Workflow.Activities.ReplicatorActivity" Usage="new System.Workflow.Activities.ReplicatorActivity name" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
@@ -115,6 +125,8 @@
         <param name="name">The user-defined name of the activity.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Workflow.Activities.ReplicatorActivity" /> class using the name of the activity.</summary>
         <remarks>To be added.</remarks>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms735766(v=vs.90)">Using the Replicator Activity</related>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734614(v=vs.90)">Using Conditions in Workflows</related>
       </Docs>
     </Member>
     <Member MemberName="AllChildrenComplete">
@@ -123,9 +135,11 @@
       <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.ReplicatorActivity.AllChildrenComplete" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AllChildrenComplete As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AllChildrenComplete { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.AllChildrenComplete : bool" Usage="System.Workflow.Activities.ReplicatorActivity.AllChildrenComplete" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -133,7 +147,7 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -151,6 +165,8 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms735766(v=vs.90)">Using the Replicator Activity</related>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734614(v=vs.90)">Using Conditions in Workflows</related>
       </Docs>
     </Member>
     <Member MemberName="Cancel">
@@ -159,9 +175,11 @@
       <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ReplicatorActivity.Cancel(System.Workflow.ComponentModel.ActivityExecutionContext)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function Cancel (executionContext As ActivityExecutionContext) As ActivityExecutionStatus" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Workflow::ComponentModel::ActivityExecutionStatus Cancel(System::Workflow::ComponentModel::ActivityExecutionContext ^ executionContext);" />
+      <MemberSignature Language="F#" Value="override this.Cancel : System.Workflow.ComponentModel.ActivityExecutionContext -&gt; System.Workflow.ComponentModel.ActivityExecutionStatus" Usage="replicatorActivity.Cancel executionContext" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -183,9 +201,11 @@
       <MemberSignature Language="DocId" Value="E:System.Workflow.Activities.ReplicatorActivity.ChildCompleted" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ChildCompleted As EventHandler(Of ReplicatorChildEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Workflow::Activities::ReplicatorChildEventArgs ^&gt; ^ ChildCompleted;" />
+      <MemberSignature Language="F#" Value="member this.ChildCompleted : EventHandler&lt;System.Workflow.Activities.ReplicatorChildEventArgs&gt; " Usage="member this.ChildCompleted : System.EventHandler&lt;System.Workflow.Activities.ReplicatorChildEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -199,6 +219,8 @@
       <Docs>
         <summary>Occurs immediately after the <see cref="T:System.Workflow.Activities.ReplicatorActivity" /> finishes running a child activity instance.</summary>
         <remarks>To be added.</remarks>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms735766(v=vs.90)">Using the Replicator Activity</related>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734614(v=vs.90)">Using Conditions in Workflows</related>
       </Docs>
     </Member>
     <Member MemberName="ChildCompletedEvent">
@@ -207,9 +229,11 @@
       <MemberSignature Language="DocId" Value="F:System.Workflow.Activities.ReplicatorActivity.ChildCompletedEvent" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly ChildCompletedEvent As DependencyProperty " />
       <MemberSignature Language="C++ CLI" Value="public: static initonly System::Workflow::ComponentModel::DependencyProperty ^ ChildCompletedEvent;" />
+      <MemberSignature Language="F#" Value=" staticval mutable ChildCompletedEvent : System.Workflow.ComponentModel.DependencyProperty" Usage="System.Workflow.Activities.ReplicatorActivity.ChildCompletedEvent" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -225,6 +249,8 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms735766(v=vs.90)">Using the Replicator Activity</related>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734614(v=vs.90)">Using Conditions in Workflows</related>
       </Docs>
     </Member>
     <Member MemberName="ChildInitialized">
@@ -233,9 +259,11 @@
       <MemberSignature Language="DocId" Value="E:System.Workflow.Activities.ReplicatorActivity.ChildInitialized" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ChildInitialized As EventHandler(Of ReplicatorChildEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Workflow::Activities::ReplicatorChildEventArgs ^&gt; ^ ChildInitialized;" />
+      <MemberSignature Language="F#" Value="member this.ChildInitialized : EventHandler&lt;System.Workflow.Activities.ReplicatorChildEventArgs&gt; " Usage="member this.ChildInitialized : System.EventHandler&lt;System.Workflow.Activities.ReplicatorChildEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -257,13 +285,15 @@
    
   
 ## Examples  
- The following code example shows how to set the value of the <xref:System.Workflow.Activities.ReplicatorActivity.ChildInitialized> event. This code example is part of the Replicator SDK sample from the SimpleReplicatorWorkflow.Designer.cs file. For more information, see [Using Replicator](http://msdn.microsoft.com/library/4e35f26b-cf12-4c04-9d25-9ceb958f2858).  
+ The following code example shows how to set the value of the <xref:System.Workflow.Activities.ReplicatorActivity.ChildInitialized> event. This code example is part of the Replicator SDK sample from the SimpleReplicatorWorkflow.Designer.cs file. For more information, see [Using Replicator](https://msdn.microsoft.com/library/4e35f26b-cf12-4c04-9d25-9ceb958f2858).  
   
  [!code-csharp[wf_samples#178](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#178)]
  [!code-vb[wf_samples#178](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#178)]  
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms735766(v=vs.90)">Using the Replicator Activity</related>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734614(v=vs.90)">Using Conditions in Workflows</related>
       </Docs>
     </Member>
     <Member MemberName="ChildInitializedEvent">
@@ -272,9 +302,11 @@
       <MemberSignature Language="DocId" Value="F:System.Workflow.Activities.ReplicatorActivity.ChildInitializedEvent" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly ChildInitializedEvent As DependencyProperty " />
       <MemberSignature Language="C++ CLI" Value="public: static initonly System::Workflow::ComponentModel::DependencyProperty ^ ChildInitializedEvent;" />
+      <MemberSignature Language="F#" Value=" staticval mutable ChildInitializedEvent : System.Workflow.ComponentModel.DependencyProperty" Usage="System.Workflow.Activities.ReplicatorActivity.ChildInitializedEvent" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -290,6 +322,8 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms735766(v=vs.90)">Using the Replicator Activity</related>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734614(v=vs.90)">Using Conditions in Workflows</related>
       </Docs>
     </Member>
     <Member MemberName="Completed">
@@ -298,9 +332,11 @@
       <MemberSignature Language="DocId" Value="E:System.Workflow.Activities.ReplicatorActivity.Completed" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event Completed As EventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ Completed;" />
+      <MemberSignature Language="F#" Value="member this.Completed : EventHandler " Usage="member this.Completed : System.EventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -314,6 +350,8 @@
       <Docs>
         <summary>Occurs when the <see cref="T:System.Workflow.Activities.ReplicatorActivity" /> completes.</summary>
         <remarks>To be added.</remarks>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms735766(v=vs.90)">Using the Replicator Activity</related>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734614(v=vs.90)">Using Conditions in Workflows</related>
       </Docs>
     </Member>
     <Member MemberName="CompletedEvent">
@@ -322,9 +360,11 @@
       <MemberSignature Language="DocId" Value="F:System.Workflow.Activities.ReplicatorActivity.CompletedEvent" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly CompletedEvent As DependencyProperty " />
       <MemberSignature Language="C++ CLI" Value="public: static initonly System::Workflow::ComponentModel::DependencyProperty ^ CompletedEvent;" />
+      <MemberSignature Language="F#" Value=" staticval mutable CompletedEvent : System.Workflow.ComponentModel.DependencyProperty" Usage="System.Workflow.Activities.ReplicatorActivity.CompletedEvent" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -340,6 +380,8 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms735766(v=vs.90)">Using the Replicator Activity</related>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734614(v=vs.90)">Using Conditions in Workflows</related>
       </Docs>
     </Member>
     <Member MemberName="CurrentChildData">
@@ -348,9 +390,11 @@
       <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.ReplicatorActivity.CurrentChildData" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CurrentChildData As IList" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::IList ^ CurrentChildData { System::Collections::IList ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CurrentChildData : System.Collections.IList" Usage="System.Workflow.Activities.ReplicatorActivity.CurrentChildData" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -358,7 +402,7 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -368,6 +412,8 @@
         <summary>Returns a list of all child activities.</summary>
         <value>A list of all child activities.</value>
         <remarks>To be added.</remarks>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms735766(v=vs.90)">Using the Replicator Activity</related>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734614(v=vs.90)">Using Conditions in Workflows</related>
       </Docs>
     </Member>
     <Member MemberName="CurrentIndex">
@@ -376,9 +422,11 @@
       <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.ReplicatorActivity.CurrentIndex" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CurrentIndex As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int CurrentIndex { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.CurrentIndex : int" Usage="System.Workflow.Activities.ReplicatorActivity.CurrentIndex" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -386,7 +434,7 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -396,6 +444,8 @@
         <summary>Gets the index position of the current child activity.</summary>
         <value>The index position of the current child activity.</value>
         <remarks>To be added.</remarks>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms735766(v=vs.90)">Using the Replicator Activity</related>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734614(v=vs.90)">Using Conditions in Workflows</related>
       </Docs>
     </Member>
     <Member MemberName="DynamicActivities">
@@ -404,9 +454,11 @@
       <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.ReplicatorActivity.DynamicActivities" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DynamicActivities As ICollection(Of Activity)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::ICollection&lt;System::Workflow::ComponentModel::Activity ^&gt; ^ DynamicActivities { System::Collections::Generic::ICollection&lt;System::Workflow::ComponentModel::Activity ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DynamicActivities : System.Collections.Generic.ICollection&lt;System.Workflow.ComponentModel.Activity&gt;" Usage="System.Workflow.Activities.ReplicatorActivity.DynamicActivities" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -414,7 +466,7 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -431,6 +483,8 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms735766(v=vs.90)">Using the Replicator Activity</related>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734614(v=vs.90)">Using Conditions in Workflows</related>
       </Docs>
     </Member>
     <Member MemberName="Execute">
@@ -439,9 +493,11 @@
       <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ReplicatorActivity.Execute(System.Workflow.ComponentModel.ActivityExecutionContext)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function Execute (executionContext As ActivityExecutionContext) As ActivityExecutionStatus" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Workflow::ComponentModel::ActivityExecutionStatus Execute(System::Workflow::ComponentModel::ActivityExecutionContext ^ executionContext);" />
+      <MemberSignature Language="F#" Value="override this.Execute : System.Workflow.ComponentModel.ActivityExecutionContext -&gt; System.Workflow.ComponentModel.ActivityExecutionStatus" Usage="replicatorActivity.Execute executionContext" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -463,9 +519,11 @@
       <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.ReplicatorActivity.ExecutionType" />
       <MemberSignature Language="VB.NET" Value="Public Property ExecutionType As ExecutionType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Workflow::Activities::ExecutionType ExecutionType { System::Workflow::Activities::ExecutionType get(); void set(System::Workflow::Activities::ExecutionType value); };" />
+      <MemberSignature Language="F#" Value="member this.ExecutionType : System.Workflow.Activities.ExecutionType with get, set" Usage="System.Workflow.Activities.ReplicatorActivity.ExecutionType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -473,7 +531,7 @@
           <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Visible)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -486,13 +544,15 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- The following sample shows setting the `ExecutionType` property. This sample is from the Simple Replicator SDK sample. For more information, see [Replicator Sample](http://msdn.microsoft.com/library/4e35f26b-cf12-4c04-9d25-9ceb958f2858).  
+ The following sample shows setting the `ExecutionType` property. This sample is from the Simple Replicator SDK sample. For more information, see [Replicator Sample](https://msdn.microsoft.com/library/4e35f26b-cf12-4c04-9d25-9ceb958f2858).  
   
  [!code-csharp[wf_samples#180](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#180)]
  [!code-vb[wf_samples#180](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#180)]  
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms735766(v=vs.90)">Using the Replicator Activity</related>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734614(v=vs.90)">Using Conditions in Workflows</related>
       </Docs>
     </Member>
     <Member MemberName="ExecutionTypeProperty">
@@ -501,9 +561,11 @@
       <MemberSignature Language="DocId" Value="F:System.Workflow.Activities.ReplicatorActivity.ExecutionTypeProperty" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly ExecutionTypeProperty As DependencyProperty " />
       <MemberSignature Language="C++ CLI" Value="public: static initonly System::Workflow::ComponentModel::DependencyProperty ^ ExecutionTypeProperty;" />
+      <MemberSignature Language="F#" Value=" staticval mutable ExecutionTypeProperty : System.Workflow.ComponentModel.DependencyProperty" Usage="System.Workflow.Activities.ReplicatorActivity.ExecutionTypeProperty" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -519,6 +581,8 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms735766(v=vs.90)">Using the Replicator Activity</related>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734614(v=vs.90)">Using Conditions in Workflows</related>
       </Docs>
     </Member>
     <Member MemberName="InitialChildData">
@@ -527,9 +591,11 @@
       <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.ReplicatorActivity.InitialChildData" />
       <MemberSignature Language="VB.NET" Value="Public Property InitialChildData As IList" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::IList ^ InitialChildData { System::Collections::IList ^ get(); void set(System::Collections::IList ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.InitialChildData : System.Collections.IList with get, set" Usage="System.Workflow.Activities.ReplicatorActivity.InitialChildData" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -540,10 +606,10 @@
           <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Workflow.ComponentModel.Design.BindUITypeEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.Editor(typeof(System.Workflow.ComponentModel.Design.BindUITypeEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Visible)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -553,6 +619,8 @@
         <summary>Gets or sets a list of child activity data.</summary>
         <value>A list of child activity data.</value>
         <remarks>To be added.</remarks>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms735766(v=vs.90)">Using the Replicator Activity</related>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734614(v=vs.90)">Using Conditions in Workflows</related>
       </Docs>
     </Member>
     <Member MemberName="InitialChildDataProperty">
@@ -561,9 +629,11 @@
       <MemberSignature Language="DocId" Value="F:System.Workflow.Activities.ReplicatorActivity.InitialChildDataProperty" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly InitialChildDataProperty As DependencyProperty " />
       <MemberSignature Language="C++ CLI" Value="public: static initonly System::Workflow::ComponentModel::DependencyProperty ^ InitialChildDataProperty;" />
+      <MemberSignature Language="F#" Value=" staticval mutable InitialChildDataProperty : System.Workflow.ComponentModel.DependencyProperty" Usage="System.Workflow.Activities.ReplicatorActivity.InitialChildDataProperty" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -579,6 +649,8 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms735766(v=vs.90)">Using the Replicator Activity</related>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734614(v=vs.90)">Using Conditions in Workflows</related>
       </Docs>
     </Member>
     <Member MemberName="Initialized">
@@ -587,9 +659,11 @@
       <MemberSignature Language="DocId" Value="E:System.Workflow.Activities.ReplicatorActivity.Initialized" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event Initialized As EventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ Initialized;" />
+      <MemberSignature Language="F#" Value="member this.Initialized : EventHandler " Usage="member this.Initialized : System.EventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -606,13 +680,15 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Examples  
- The following code example shows how to set the value of the <xref:System.Workflow.Activities.ReplicatorActivity.Initialized> event. This code example is part of the Replicator SDK sample from the SimpleReplicatorWorkflow.Designer.cs file. For more information, see [Using Replicator](http://msdn.microsoft.com/library/4e35f26b-cf12-4c04-9d25-9ceb958f2858).  
+ The following code example shows how to set the value of the <xref:System.Workflow.Activities.ReplicatorActivity.Initialized> event. This code example is part of the Replicator SDK sample from the SimpleReplicatorWorkflow.Designer.cs file. For more information, see [Using Replicator](https://msdn.microsoft.com/library/4e35f26b-cf12-4c04-9d25-9ceb958f2858).  
   
  [!code-csharp[wf_samples#178](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#178)]
  [!code-vb[wf_samples#178](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#178)]  
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms735766(v=vs.90)">Using the Replicator Activity</related>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734614(v=vs.90)">Using Conditions in Workflows</related>
       </Docs>
     </Member>
     <Member MemberName="InitializedEvent">
@@ -621,9 +697,11 @@
       <MemberSignature Language="DocId" Value="F:System.Workflow.Activities.ReplicatorActivity.InitializedEvent" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly InitializedEvent As DependencyProperty " />
       <MemberSignature Language="C++ CLI" Value="public: static initonly System::Workflow::ComponentModel::DependencyProperty ^ InitializedEvent;" />
+      <MemberSignature Language="F#" Value=" staticval mutable InitializedEvent : System.Workflow.ComponentModel.DependencyProperty" Usage="System.Workflow.Activities.ReplicatorActivity.InitializedEvent" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -632,6 +710,8 @@
       <Docs>
         <summary>Represents the <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> that targets the <see cref="E:System.Workflow.Activities.ReplicatorActivity.Initialized" /> event.</summary>
         <remarks>To be added.</remarks>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms735766(v=vs.90)">Using the Replicator Activity</related>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734614(v=vs.90)">Using Conditions in Workflows</related>
       </Docs>
     </Member>
     <Member MemberName="IsExecuting">
@@ -640,9 +720,11 @@
       <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ReplicatorActivity.IsExecuting(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Function IsExecuting (index As Integer) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool IsExecuting(int index);" />
+      <MemberSignature Language="F#" Value="member this.IsExecuting : int -&gt; bool" Usage="replicatorActivity.IsExecuting index" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -657,6 +739,8 @@
         <returns>
           <see langword="true" /> if the child activity is executing; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms735766(v=vs.90)">Using the Replicator Activity</related>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734614(v=vs.90)">Using Conditions in Workflows</related>
       </Docs>
     </Member>
     <Member MemberName="OnClosed">
@@ -665,9 +749,11 @@
       <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ReplicatorActivity.OnClosed(System.IServiceProvider)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub OnClosed (provider As IServiceProvider)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void OnClosed(IServiceProvider ^ provider);" />
+      <MemberSignature Language="F#" Value="override this.OnClosed : IServiceProvider -&gt; unit" Usage="replicatorActivity.OnClosed provider" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -688,9 +774,11 @@
       <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.ReplicatorActivity.UntilCondition" />
       <MemberSignature Language="VB.NET" Value="Public Property UntilCondition As ActivityCondition" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Workflow::ComponentModel::ActivityCondition ^ UntilCondition { System::Workflow::ComponentModel::ActivityCondition ^ get(); void set(System::Workflow::ComponentModel::ActivityCondition ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.UntilCondition : System.Workflow.ComponentModel.ActivityCondition with get, set" Usage="System.Workflow.Activities.ReplicatorActivity.UntilCondition" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -715,13 +803,15 @@
    
   
 ## Examples  
- The following code example shows how to set the value of the <xref:System.Workflow.Activities.ReplicatorActivity.UntilCondition%2A> property to `null`, which means the `ReplicatorActivity` never closes. This code example is part of the Replicator SDK Sample from the SimpleReplicatorWorkflow.Designer.cs file. For more information, see [Using Replicator](http://msdn.microsoft.com/library/4e35f26b-cf12-4c04-9d25-9ceb958f2858).  
+ The following code example shows how to set the value of the <xref:System.Workflow.Activities.ReplicatorActivity.UntilCondition%2A> property to `null`, which means the `ReplicatorActivity` never closes. This code example is part of the Replicator SDK Sample from the SimpleReplicatorWorkflow.Designer.cs file. For more information, see [Using Replicator](https://msdn.microsoft.com/library/4e35f26b-cf12-4c04-9d25-9ceb958f2858).  
   
  [!code-csharp[wf_samples#178](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#178)]
  [!code-vb[wf_samples#178](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#178)]  
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms735766(v=vs.90)">Using the Replicator Activity</related>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734614(v=vs.90)">Using Conditions in Workflows</related>
       </Docs>
     </Member>
     <Member MemberName="UntilConditionProperty">
@@ -730,9 +820,11 @@
       <MemberSignature Language="DocId" Value="F:System.Workflow.Activities.ReplicatorActivity.UntilConditionProperty" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly UntilConditionProperty As DependencyProperty " />
       <MemberSignature Language="C++ CLI" Value="public: static initonly System::Workflow::ComponentModel::DependencyProperty ^ UntilConditionProperty;" />
+      <MemberSignature Language="F#" Value=" staticval mutable UntilConditionProperty : System.Workflow.ComponentModel.DependencyProperty" Usage="System.Workflow.Activities.ReplicatorActivity.UntilConditionProperty" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -748,6 +840,8 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms735766(v=vs.90)">Using the Replicator Activity</related>
+        <related type="Article" href="https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734614(v=vs.90)">Using Conditions in Workflows</related>
       </Docs>
     </Member>
   </Members>

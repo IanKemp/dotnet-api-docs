@@ -4,26 +4,33 @@
   <TypeSignature Language="DocId" Value="T:System.Data.Objects.DataClasses.RelationshipManager" />
   <TypeSignature Language="VB.NET" Value="Public Class RelationshipManager" />
   <TypeSignature Language="C++ CLI" Value="public ref class RelationshipManager" />
+  <TypeSignature Language="F#" Value="type RelationshipManager = class" />
   <AssemblyInfo>
     <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Serializable</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>Used to track relationships between objects in the object context.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- <xref:System.Data.Objects.DataClasses.RelationshipManager> is used to track relationships between objects in an object context. There is one instance of the <xref:System.Data.Objects.DataClasses.RelationshipManager> class for each relationship tracked in the object context. Relationships are defined by associations in a conceptual model. For more information, see [Association Element (CSDL)](http://msdn.microsoft.com/library/c305169a-8af7-432f-9ba7-800a163aed41).  
+ <xref:System.Data.Objects.DataClasses.RelationshipManager> is used to track relationships between objects in an object context. There is one instance of the <xref:System.Data.Objects.DataClasses.RelationshipManager> class for each relationship tracked in the object context. Relationships are defined by associations in a conceptual model. For more information, see [Association Element (CSDL)](https://msdn.microsoft.com/library/c305169a-8af7-432f-9ba7-800a163aed41).  
   
    
   
 ## Examples  
- The example in this topic is based on the [AdventureWorks Sales Model](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832). The example adds new `SalesOrderHeader` entities to the `Contact` entity. Then it gets all related ends from the `Contact` entity and displays the relationship name, source role name, and target role name for each related end.  
+ The example in this topic is based on the [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832). The example adds new `SalesOrderHeader` entities to the `Contact` entity. Then it gets all related ends from the `Contact` entity and displays the relationship name, source role name, and target role name for each related end.  
   
  [!code-csharp[DP ObjectServices Concepts#IRelatedEnd](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#irelatedend)]
  [!code-vb[DP ObjectServices Concepts#IRelatedEnd](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#irelatedend)]  
@@ -38,9 +45,11 @@
       <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.RelationshipManager.Create(System.Data.Objects.DataClasses.IEntityWithRelationships)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Create (owner As IEntityWithRelationships) As RelationshipManager" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Data::Objects::DataClasses::RelationshipManager ^ Create(System::Data::Objects::DataClasses::IEntityWithRelationships ^ owner);" />
+      <MemberSignature Language="F#" Value="static member Create : System.Data.Objects.DataClasses.IEntityWithRelationships -&gt; System.Data.Objects.DataClasses.RelationshipManager" Usage="System.Data.Objects.DataClasses.RelationshipManager.Create owner" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -69,14 +78,19 @@
       <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.RelationshipManager.GetAllRelatedEnds" />
       <MemberSignature Language="VB.NET" Value="Public Iterator Function GetAllRelatedEnds () As IEnumerable(Of IRelatedEnd)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Generic::IEnumerable&lt;System::Data::Objects::DataClasses::IRelatedEnd ^&gt; ^ GetAllRelatedEnds();" />
+      <MemberSignature Language="F#" Value="member this.GetAllRelatedEnds : unit -&gt; seq&lt;System.Data.Objects.DataClasses.IRelatedEnd&gt;" Usage="relationshipManager.GetAllRelatedEnds " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Runtime.CompilerServices.IteratorStateMachine(typeof(System.Data.Objects.DataClasses.RelationshipManager/&lt;GetAllRelatedEnds&gt;d__40))</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.6">
+          <AttributeName>System.Runtime.CompilerServices.IteratorStateMachine(typeof(System.Data.Objects.DataClasses.RelationshipManager/&lt;GetAllRelatedEnds&gt;d__1))</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -95,7 +109,7 @@
    
   
 ## Examples  
- The example in this topic is based on the [AdventureWorks Sales Model](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832). The example adds new `SalesOrderHeader` entities to the `Contact` entity. Then it gets all related ends from the `Contact` entity and displays relationship name, source role name, and target role name for each related end,  
+ The example in this topic is based on the [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832). The example adds new `SalesOrderHeader` entities to the `Contact` entity. Then it gets all related ends from the `Contact` entity and displays relationship name, source role name, and target role name for each related end,  
   
  [!code-csharp[DP ObjectServices Concepts#IRelatedEnd](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#irelatedend)]
  [!code-vb[DP ObjectServices Concepts#IRelatedEnd](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#irelatedend)]  
@@ -110,9 +124,11 @@
       <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.RelationshipManager.GetRelatedCollection``1(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetRelatedCollection(Of TTargetEntity As Class) (relationshipName As String, targetRoleName As String) As EntityCollection(Of TTargetEntity)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TTargetEntity&gt;&#xA; where TTargetEntity : class System::Data::Objects::DataClasses::EntityCollection&lt;TTargetEntity&gt; ^ GetRelatedCollection(System::String ^ relationshipName, System::String ^ targetRoleName);" />
+      <MemberSignature Language="F#" Value="member this.GetRelatedCollection : string * string -&gt; System.Data.Objects.DataClasses.EntityCollection&lt;'argetEntity (requires 'argetEntity : null)&gt; (requires 'argetEntity : null)" Usage="relationshipManager.GetRelatedCollection (relationshipName, targetRoleName)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -154,9 +170,11 @@
       <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.RelationshipManager.GetRelatedEnd(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetRelatedEnd (relationshipName As String, targetRoleName As String) As IRelatedEnd" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Data::Objects::DataClasses::IRelatedEnd ^ GetRelatedEnd(System::String ^ relationshipName, System::String ^ targetRoleName);" />
+      <MemberSignature Language="F#" Value="member this.GetRelatedEnd : string * string -&gt; System.Data.Objects.DataClasses.IRelatedEnd" Usage="relationshipManager.GetRelatedEnd (relationshipName, targetRoleName)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -167,8 +185,8 @@
         <Parameter Name="targetRoleName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="relationshipName">Name of the relationship in which <c>targetRoleName</c> is defined. The relationship name is not namespace qualified.</param>
-        <param name="targetRoleName">Target role to use to retrieve the other end of <c>relationshipName</c>.</param>
+        <param name="relationshipName">Name of the relationship in which <paramref name="targetRoleName" /> is defined. The relationship name is not namespace qualified.</param>
+        <param name="targetRoleName">Target role to use to retrieve the other end of <paramref name="relationshipName" />.</param>
         <summary>Returns either an <see cref="T:System.Data.Objects.DataClasses.EntityCollection`1" /> or <see cref="T:System.Data.Objects.DataClasses.EntityReference`1" /> of the correct type for the specified target role in a relationship.</summary>
         <returns>
           <see cref="T:System.Data.Objects.DataClasses.IRelatedEnd" /> representing the <see cref="T:System.Data.Objects.DataClasses.EntityCollection`1" /> or <see cref="T:System.Data.Objects.DataClasses.EntityReference`1" /> that was retrieved.</returns>
@@ -199,9 +217,11 @@
       <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.RelationshipManager.GetRelatedReference``1(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetRelatedReference(Of TTargetEntity As Class) (relationshipName As String, targetRoleName As String) As EntityReference(Of TTargetEntity)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TTargetEntity&gt;&#xA; where TTargetEntity : class System::Data::Objects::DataClasses::EntityReference&lt;TTargetEntity&gt; ^ GetRelatedReference(System::String ^ relationshipName, System::String ^ targetRoleName);" />
+      <MemberSignature Language="F#" Value="member this.GetRelatedReference : string * string -&gt; System.Data.Objects.DataClasses.EntityReference&lt;'argetEntity (requires 'argetEntity : null)&gt; (requires 'argetEntity : null)" Usage="relationshipManager.GetRelatedReference (relationshipName, targetRoleName)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -241,16 +261,18 @@
       <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.RelationshipManager.InitializeRelatedCollection``1(System.String,System.String,System.Data.Objects.DataClasses.EntityCollection{``0})" />
       <MemberSignature Language="VB.NET" Value="Public Sub InitializeRelatedCollection(Of TTargetEntity As Class) (relationshipName As String, targetRoleName As String, entityCollection As EntityCollection(Of TTargetEntity))" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TTargetEntity&gt;&#xA; where TTargetEntity : class void InitializeRelatedCollection(System::String ^ relationshipName, System::String ^ targetRoleName, System::Data::Objects::DataClasses::EntityCollection&lt;TTargetEntity&gt; ^ entityCollection);" />
+      <MemberSignature Language="F#" Value="member this.InitializeRelatedCollection : string * string * System.Data.Objects.DataClasses.EntityCollection&lt;'argetEntity (requires 'argetEntity : null)&gt; -&gt; unit (requires 'argetEntity : null)" Usage="relationshipManager.InitializeRelatedCollection (relationshipName, targetRoleName, entityCollection)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
         </Attribute>
       </Attributes>
@@ -302,16 +324,18 @@
       <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.RelationshipManager.InitializeRelatedReference``1(System.String,System.String,System.Data.Objects.DataClasses.EntityReference{``0})" />
       <MemberSignature Language="VB.NET" Value="Public Sub InitializeRelatedReference(Of TTargetEntity As Class) (relationshipName As String, targetRoleName As String, entityReference As EntityReference(Of TTargetEntity))" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TTargetEntity&gt;&#xA; where TTargetEntity : class void InitializeRelatedReference(System::String ^ relationshipName, System::String ^ targetRoleName, System::Data::Objects::DataClasses::EntityReference&lt;TTargetEntity&gt; ^ entityReference);" />
+      <MemberSignature Language="F#" Value="member this.InitializeRelatedReference : string * string * System.Data.Objects.DataClasses.EntityReference&lt;'argetEntity (requires 'argetEntity : null)&gt; -&gt; unit (requires 'argetEntity : null)" Usage="relationshipManager.InitializeRelatedReference (relationshipName, targetRoleName, entityReference)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
         </Attribute>
       </Attributes>
@@ -363,20 +387,21 @@
       <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.RelationshipManager.OnDeserialized(System.Runtime.Serialization.StreamingContext)" />
       <MemberSignature Language="VB.NET" Value="Public Sub OnDeserialized (context As StreamingContext)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void OnDeserialized(System::Runtime::Serialization::StreamingContext context);" />
+      <MemberSignature Language="F#" Value="member this.OnDeserialized : System.Runtime.Serialization.StreamingContext -&gt; unit" Usage="relationshipManager.OnDeserialized context" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.Entity</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
-        <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
-        </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Runtime.Serialization.OnDeserialized</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -397,20 +422,22 @@
       <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.RelationshipManager.OnSerializing(System.Runtime.Serialization.StreamingContext)" />
       <MemberSignature Language="VB.NET" Value="Public Sub OnSerializing (context As StreamingContext)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void OnSerializing(System::Runtime::Serialization::StreamingContext context);" />
+      <MemberSignature Language="F#" Value="member this.OnSerializing : System.Runtime.Serialization.StreamingContext -&gt; unit" Usage="relationshipManager.OnSerializing context" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
-        </Attribute>
-        <Attribute>
           <AttributeName>System.Runtime.Serialization.OnSerializing</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -426,7 +453,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Serialization of relationships is only supported for binary serialization. Complete object graphs, including relationships, is not supported for Windows Communication Foundation and XML serialization. For more information, see [Serializing Objects](http://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
+ Serialization of relationships is only supported for binary serialization. Complete object graphs, including relationships, is not supported for Windows Communication Foundation and XML serialization. For more information, see [Serializing Objects](https://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
   
  ]]></format>
         </remarks>

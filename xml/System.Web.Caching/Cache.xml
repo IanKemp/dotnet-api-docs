@@ -4,8 +4,11 @@
   <TypeSignature Language="DocId" Value="T:System.Web.Caching.Cache" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class Cache&#xA;Implements IEnumerable" />
   <TypeSignature Language="C++ CLI" Value="public ref class Cache sealed : System::Collections::IEnumerable" />
+  <TypeSignature Language="F#" Value="type Cache = class&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -30,7 +33,7 @@
    
   
 ## Examples  
- The following example is a page that shows users the value assigned to an item in the cache, and then notifies them when the item is removed from the cache. It creates a `RemovedCallback` method, which has the signature of the `CacheItemRemovedCallback` delegate, to notify users when the cache item is removed, and it uses the <xref:System.Web.Caching.CacheItemRemovedReason> enumeration to tell them why it was removed. In addition, it uses the <xref:System.Web.Caching.Cache.Item%2A?displayProperty=nameWithType> property to add objects to the cache and retrieve the value of those objects. In the `AddItemToCache` method, it uses the <xref:System.Web.Caching.Cache.Add%2A?displayProperty=nameWithType> method to add an item to the cache. To use the `CacheItemRemovedCallback` delegate, you must add an item to the cache with this method or the <xref:System.Web.Caching.Cache.Insert%2A?displayProperty=nameWithType> method, so that that ASP.NET can automatically make the proper method calls when the item is removed. The custom `RemoveItemFromCache` method uses the <xref:System.Web.Caching.Cache.Remove%2A?displayProperty=nameWithType> method to explicitly delete the item from the cache, causing the `RemovedCallback` method to be invoked.  
+ The following example is a page that shows users the value assigned to an item in the cache, and then notifies them when the item is removed from the cache. It creates a `RemovedCallback` method, which has the signature of the `CacheItemRemovedCallback` delegate, to notify users when the cache item is removed, and it uses the <xref:System.Web.Caching.CacheItemRemovedReason> enumeration to tell them why it was removed. In addition, it uses the <xref:System.Web.Caching.Cache.Item%2A?displayProperty=nameWithType> property to add objects to the cache and retrieve the value of those objects. In the `AddItemToCache` method, it uses the <xref:System.Web.Caching.Cache.Add%2A?displayProperty=nameWithType> method to add an item to the cache. To use the `CacheItemRemovedCallback` delegate, you must add an item to the cache with this method or the <xref:System.Web.Caching.Cache.Insert%2A?displayProperty=nameWithType> method, so that ASP.NET can automatically make the proper method calls when the item is removed. The custom `RemoveItemFromCache` method uses the <xref:System.Web.Caching.Cache.Remove%2A?displayProperty=nameWithType> method to explicitly delete the item from the cache, causing the `RemovedCallback` method to be invoked.  
   
 > [!NOTE]
 >  The instance of Cache that is accessed by the snippet below is a member of the <xref:System.Web.UI.Page> object that this sample inherits.  
@@ -44,6 +47,7 @@
     <altmember cref="T:System.Web.HttpContext" />
     <altmember cref="T:System.Web.Caching.CacheDependency" />
     <altmember cref="T:System.Web.Caching.CacheItemRemovedCallback" />
+    <related type="Article" href="https://msdn.microsoft.com/library/206f977d-7860-4d20-bdd5-c3b3d8479f3d(v=vs.100)">Caching Application Data</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -55,8 +59,15 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.Web.Caching.Cache" /> class.</summary>
@@ -69,9 +80,12 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Caching.Cache.Add(System.String,System.Object,System.Web.Caching.CacheDependency,System.DateTime,System.TimeSpan,System.Web.Caching.CacheItemPriority,System.Web.Caching.CacheItemRemovedCallback)" />
       <MemberSignature Language="VB.NET" Value="Public Function Add (key As String, value As Object, dependencies As CacheDependency, absoluteExpiration As DateTime, slidingExpiration As TimeSpan, priority As CacheItemPriority, onRemoveCallback As CacheItemRemovedCallback) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Object ^ Add(System::String ^ key, System::Object ^ value, System::Web::Caching::CacheDependency ^ dependencies, DateTime absoluteExpiration, TimeSpan slidingExpiration, System::Web::Caching::CacheItemPriority priority, System::Web::Caching::CacheItemRemovedCallback ^ onRemoveCallback);" />
+      <MemberSignature Language="F#" Value="member this.Add : string * obj * System.Web.Caching.CacheDependency * DateTime * TimeSpan * System.Web.Caching.CacheItemPriority * System.Web.Caching.CacheItemRemovedCallback -&gt; obj" Usage="cache.Add (key, value, dependencies, absoluteExpiration, slidingExpiration, priority, onRemoveCallback)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -90,8 +104,8 @@
         <param name="key">The cache key used to reference the item.</param>
         <param name="value">The item to be added to the cache.</param>
         <param name="dependencies">The file or cache key dependencies for the item. When any dependency changes, the object becomes invalid and is removed from the cache. If there are no dependencies, this parameter contains <see langword="null" />.</param>
-        <param name="absoluteExpiration">The time at which the added object expires and is removed from the cache. If you are using sliding expiration, the <c>absoluteExpiration</c> parameter must be <see cref="F:System.Web.Caching.Cache.NoAbsoluteExpiration" />.</param>
-        <param name="slidingExpiration">The interval between the time the added object was last accessed and the time at which that object expires. If this value is the equivalent of 20 minutes, the object expires and is removed from the cache 20 minutes after it is last accessed. If you are using absolute expiration, the <c>slidingExpiration</c> parameter must be <see cref="F:System.Web.Caching.Cache.NoSlidingExpiration" />.</param>
+        <param name="absoluteExpiration">The time at which the added object expires and is removed from the cache. If you are using sliding expiration, the <paramref name="absoluteExpiration" /> parameter must be <see cref="F:System.Web.Caching.Cache.NoAbsoluteExpiration" />.</param>
+        <param name="slidingExpiration">The interval between the time the added object was last accessed and the time at which that object expires. If this value is the equivalent of 20 minutes, the object expires and is removed from the cache 20 minutes after it is last accessed. If you are using absolute expiration, the <paramref name="slidingExpiration" /> parameter must be <see cref="F:System.Web.Caching.Cache.NoSlidingExpiration" />.</param>
         <param name="priority">The relative cost of the object, as expressed by the <see cref="T:System.Web.Caching.CacheItemPriority" /> enumeration. The cache uses this value when it evicts objects; objects with a lower cost are removed from the cache before objects with a higher cost.</param>
         <param name="onRemoveCallback">A delegate that, if provided, is called when an object is removed from the cache. You can use this to notify applications when their objects are deleted from the cache.</param>
         <summary>Adds the specified item to the <see cref="T:System.Web.Caching.Cache" /> object with dependencies, expiration and priority policies, and a delegate you can use to notify your application when the inserted item is removed from the <see langword="Cache" />.</summary>
@@ -112,7 +126,7 @@
  The following example creates an `AddItemToCache` method. When this method is called, it sets an `itemRemoved` property to `false` and registers an `onRemove` method with a new instance of the <xref:System.Web.Caching.CacheItemRemovedCallback> delegate. The delegate's signature is used in the `RemovedCallback` method. The `AddItemToCache` method then checks the value associated with the `Key1` key in the cache. If the value is `null`, the `Add` method places an item in the cache with a key of `Key1`, a value of `Value 1`, an absolute expiration of 60 seconds, and a high cache priority. It also uses the `onRemove` method as an argument. This allows the `RemovedCallback` method to be called when this item is removed from the cache.  
   
 > [!NOTE]
->  For examples of how to use the <xref:System.Web.Caching.CacheDependency> class and the <xref:System.Web.Caching.CacheItemRemovedCallback> delegate, see [Caching Application Data](http://msdn.microsoft.com/library/206f977d-7860-4d20-bdd5-c3b3d8479f3d).  
+>  For examples of how to use the <xref:System.Web.Caching.CacheDependency> class and the <xref:System.Web.Caching.CacheItemRemovedCallback> delegate, see [Caching Application Data](https://msdn.microsoft.com/library/206f977d-7860-4d20-bdd5-c3b3d8479f3d(v=vs.100)).  
   
  [!code-csharp[System.Web.Caching Examples#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Caching Examples/CS/cachecs.aspx#3)]
  [!code-vb[System.Web.Caching Examples#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Caching Examples/VB/cachevb.aspx#3)]  
@@ -125,6 +139,7 @@
         <altmember cref="T:System.Web.Caching.CacheDependency" />
         <altmember cref="T:System.Web.Caching.CacheItemPriority" />
         <altmember cref="T:System.Web.Caching.CacheItemRemovedCallback" />
+        <related type="Article" href="https://msdn.microsoft.com/library/206f977d-7860-4d20-bdd5-c3b3d8479f3d(v=vs.100)">Caching Application Data</related>
       </Docs>
     </Member>
     <Member MemberName="Count">
@@ -133,9 +148,12 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Caching.Cache.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="System.Web.Caching.Cache.Count" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -168,9 +186,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Caching.Cache.EffectivePercentagePhysicalMemoryLimit" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EffectivePercentagePhysicalMemoryLimit As Long" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property long EffectivePercentagePhysicalMemoryLimit { long get(); };" />
+      <MemberSignature Language="F#" Value="member this.EffectivePercentagePhysicalMemoryLimit : int64" Usage="System.Web.Caching.Cache.EffectivePercentagePhysicalMemoryLimit" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -185,7 +205,7 @@
 ## Remarks  
  The <xref:System.Web.Caching.Cache.EffectivePercentagePhysicalMemoryLimit%2A> property returns the percentage of physical memory that is available to the application. When the available percentage becomes low, the cache algorithm begins removing items from the cache.  
   
- The <xref:System.Web.Caching.Cache.EffectivePercentagePhysicalMemoryLimit%2A> property can be set with the `percentagePhysicalMemoryUsedLimit` attribute of the [cache Element for caching (ASP.NET Settings Schema)](http://msdn.microsoft.com/library/68fa0040-5abf-4c73-93fc-17e3c6af3299) element in the application's configuration file. If the `percentagePhysicalMemoryUsedLimit` attribute is not set, the cache algorithm determines the maximum size of the cache, and the <xref:System.Web.Caching.Cache.EffectivePercentagePhysicalMemoryLimit%2A> property is calculated.  
+ The <xref:System.Web.Caching.Cache.EffectivePercentagePhysicalMemoryLimit%2A> property can be set with the `percentagePhysicalMemoryUsedLimit` attribute of the [cache Element for caching (ASP.NET Settings Schema)](https://msdn.microsoft.com/library/68fa0040-5abf-4c73-93fc-17e3c6af3299) element in the application's configuration file. If the `percentagePhysicalMemoryUsedLimit` attribute is not set, the cache algorithm determines the maximum size of the cache, and the <xref:System.Web.Caching.Cache.EffectivePercentagePhysicalMemoryLimit%2A> property is calculated.  
   
  <xref:System.Web.Caching.Cache.EffectivePercentagePhysicalMemoryLimit%2A> is introduced in the .NET Framework version 3.5.  For more information, see [Versions and Dependencies](~/docs/framework/migration-guide/versions-and-dependencies.md).  
   
@@ -200,9 +220,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Caching.Cache.EffectivePrivateBytesLimit" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EffectivePrivateBytesLimit As Long" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property long EffectivePrivateBytesLimit { long get(); };" />
+      <MemberSignature Language="F#" Value="member this.EffectivePrivateBytesLimit : int64" Usage="System.Web.Caching.Cache.EffectivePrivateBytesLimit" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -217,7 +239,7 @@
 ## Remarks  
  The <xref:System.Web.Caching.Cache.EffectivePrivateBytesLimit%2A> property returns the number of bytes that can be used by the application process. Once this limit is reached, the cache algorithm begins aggressively scavenging the cache.  
   
- The <xref:System.Web.Caching.Cache.EffectivePrivateBytesLimit%2A> property can be set with the `privateBytesLimit` attribute of the [cache Element for caching (ASP.NET Settings Schema)](http://msdn.microsoft.com/library/68fa0040-5abf-4c73-93fc-17e3c6af3299) element in the application's configuration file. When the `privateBytesLimit` attribute is not set, the cache algorithm determines the maximum size of the cache, and the <xref:System.Web.Caching.Cache.EffectivePrivateBytesLimit%2A> property contains the size chosen by the algorithm.  
+ The <xref:System.Web.Caching.Cache.EffectivePrivateBytesLimit%2A> property can be set with the `privateBytesLimit` attribute of the [cache Element for caching (ASP.NET Settings Schema)](https://msdn.microsoft.com/library/68fa0040-5abf-4c73-93fc-17e3c6af3299) element in the application's configuration file. When the `privateBytesLimit` attribute is not set, the cache algorithm determines the maximum size of the cache, and the <xref:System.Web.Caching.Cache.EffectivePrivateBytesLimit%2A> property contains the size chosen by the algorithm.  
   
    
   
@@ -234,9 +256,12 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Caching.Cache.Get(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function Get (key As String) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Object ^ Get(System::String ^ key);" />
+      <MemberSignature Language="F#" Value="member this.Get : string -&gt; obj" Usage="cache.Get key" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -260,6 +285,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/206f977d-7860-4d20-bdd5-c3b3d8479f3d(v=vs.100)">Caching Application Data</related>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -268,9 +294,12 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Caching.Cache.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IDictionaryEnumerator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::IDictionaryEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="member this.GetEnumerator : unit -&gt; System.Collections.IDictionaryEnumerator" Usage="cache.GetEnumerator " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -313,9 +342,12 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Caching.Cache.Insert(System.String,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Insert (key As String, value As Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Insert(System::String ^ key, System::Object ^ value);" />
+      <MemberSignature Language="F#" Value="member this.Insert : string * obj -&gt; unit" Usage="cache.Insert (key, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -346,6 +378,7 @@
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentNullException">The <paramref name="key" /> or <paramref name="value" /> parameter is <see langword="null" />.</exception>
+        <related type="Article" href="https://msdn.microsoft.com/library/206f977d-7860-4d20-bdd5-c3b3d8479f3d(v=vs.100)">Caching Application Data</related>
       </Docs>
     </Member>
     <Member MemberName="Insert">
@@ -354,9 +387,12 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Caching.Cache.Insert(System.String,System.Object,System.Web.Caching.CacheDependency)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Insert (key As String, value As Object, dependencies As CacheDependency)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Insert(System::String ^ key, System::Object ^ value, System::Web::Caching::CacheDependency ^ dependencies);" />
+      <MemberSignature Language="F#" Value="member this.Insert : string * obj * System.Web.Caching.CacheDependency -&gt; unit" Usage="cache.Insert (key, value, dependencies)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -398,9 +434,12 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Caching.Cache.Insert(System.String,System.Object,System.Web.Caching.CacheDependency,System.DateTime,System.TimeSpan)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Insert (key As String, value As Object, dependencies As CacheDependency, absoluteExpiration As DateTime, slidingExpiration As TimeSpan)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Insert(System::String ^ key, System::Object ^ value, System::Web::Caching::CacheDependency ^ dependencies, DateTime absoluteExpiration, TimeSpan slidingExpiration);" />
+      <MemberSignature Language="F#" Value="member this.Insert : string * obj * System.Web.Caching.CacheDependency * DateTime * TimeSpan -&gt; unit" Usage="cache.Insert (key, value, dependencies, absoluteExpiration, slidingExpiration)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -417,8 +456,8 @@
         <param name="key">The cache key used to reference the object.</param>
         <param name="value">The object to be inserted in the cache.</param>
         <param name="dependencies">The file or cache key dependencies for the inserted object. When any dependency changes, the object becomes invalid and is removed from the cache. If there are no dependencies, this parameter contains <see langword="null" />.</param>
-        <param name="absoluteExpiration">The time at which the inserted object expires and is removed from the cache. To avoid possible issues with local time such as changes from standard time to daylight saving time, use <see cref="P:System.DateTime.UtcNow" /> rather than <see cref="P:System.DateTime.Now" /> for this parameter value. If you are using absolute expiration, the <c>slidingExpiration</c> parameter must be <see cref="F:System.Web.Caching.Cache.NoSlidingExpiration" />.</param>
-        <param name="slidingExpiration">The interval between the time the inserted object is last accessed and the time at which that object expires. If this value is the equivalent of 20 minutes, the object will expire and be removed from the cache 20 minutes after it was last accessed. If you are using sliding expiration, the <c>absoluteExpiration</c> parameter must be <see cref="F:System.Web.Caching.Cache.NoAbsoluteExpiration" />.</param>
+        <param name="absoluteExpiration">The time at which the inserted object expires and is removed from the cache. To avoid possible issues with local time such as changes from standard time to daylight saving time, use <see cref="P:System.DateTime.UtcNow" /> rather than <see cref="P:System.DateTime.Now" /> for this parameter value. If you are using absolute expiration, the <paramref name="slidingExpiration" /> parameter must be <see cref="F:System.Web.Caching.Cache.NoSlidingExpiration" />.</param>
+        <param name="slidingExpiration">The interval between the time the inserted object is last accessed and the time at which that object expires. If this value is the equivalent of 20 minutes, the object will expire and be removed from the cache 20 minutes after it was last accessed. If you are using sliding expiration, the <paramref name="absoluteExpiration" /> parameter must be <see cref="F:System.Web.Caching.Cache.NoAbsoluteExpiration" />.</param>
         <summary>Inserts an object into the <see cref="T:System.Web.Caching.Cache" /> with dependencies and expiration policies.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -451,6 +490,7 @@
         <exception cref="T:System.ArgumentException">The <paramref name="absoluteExpiration" /> and <paramref name="slidingExpiration" /> parameters are both set for the item you are trying to add to the <see langword="Cache" />.</exception>
         <altmember cref="T:System.DateTime" />
         <altmember cref="T:System.TimeSpan" />
+        <related type="Article" href="https://msdn.microsoft.com/library/206f977d-7860-4d20-bdd5-c3b3d8479f3d(v=vs.100)">Caching Application Data</related>
       </Docs>
     </Member>
     <Member MemberName="Insert">
@@ -459,9 +499,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Caching.Cache.Insert(System.String,System.Object,System.Web.Caching.CacheDependency,System.DateTime,System.TimeSpan,System.Web.Caching.CacheItemUpdateCallback)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Insert (key As String, value As Object, dependencies As CacheDependency, absoluteExpiration As DateTime, slidingExpiration As TimeSpan, onUpdateCallback As CacheItemUpdateCallback)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Insert(System::String ^ key, System::Object ^ value, System::Web::Caching::CacheDependency ^ dependencies, DateTime absoluteExpiration, TimeSpan slidingExpiration, System::Web::Caching::CacheItemUpdateCallback ^ onUpdateCallback);" />
+      <MemberSignature Language="F#" Value="member this.Insert : string * obj * System.Web.Caching.CacheDependency * DateTime * TimeSpan * System.Web.Caching.CacheItemUpdateCallback -&gt; unit" Usage="cache.Insert (key, value, dependencies, absoluteExpiration, slidingExpiration, onUpdateCallback)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -479,8 +521,8 @@
         <param name="key">The cache key that is used to reference the object.</param>
         <param name="value">The object to insert into the cache.</param>
         <param name="dependencies">The file or cache key dependencies for the item. When any dependency changes, the object becomes invalid and is removed from the cache. If there are no dependencies, this parameter contains <see langword="null" />.</param>
-        <param name="absoluteExpiration">The time at which the inserted object expires and is removed from the cache. To avoid possible issues with local time such as changes from standard time to daylight saving time, use <see cref="P:System.DateTime.UtcNow" /> instead of <see cref="P:System.DateTime.Now" /> for this parameter value. If you are using absolute expiration, the <c>slidingExpiration</c> parameter must be set to <see cref="F:System.Web.Caching.Cache.NoSlidingExpiration" />.</param>
-        <param name="slidingExpiration">The interval between the time that the cached object was last accessed and the time at which that object expires. If this value is the equivalent of 20 minutes, the object will expire and be removed from the cache 20 minutes after it was last accessed. If you are using sliding expiration, the <c>absoluteExpiration</c> parameter must be set to <see cref="F:System.Web.Caching.Cache.NoAbsoluteExpiration" />.</param>
+        <param name="absoluteExpiration">The time at which the inserted object expires and is removed from the cache. To avoid possible issues with local time such as changes from standard time to daylight saving time, use <see cref="P:System.DateTime.UtcNow" /> instead of <see cref="P:System.DateTime.Now" /> for this parameter value. If you are using absolute expiration, the <paramref name="slidingExpiration" /> parameter must be set to <see cref="F:System.Web.Caching.Cache.NoSlidingExpiration" />.</param>
+        <param name="slidingExpiration">The interval between the time that the cached object was last accessed and the time at which that object expires. If this value is the equivalent of 20 minutes, the object will expire and be removed from the cache 20 minutes after it was last accessed. If you are using sliding expiration, the <paramref name="absoluteExpiration" /> parameter must be set to <see cref="F:System.Web.Caching.Cache.NoAbsoluteExpiration" />.</param>
         <param name="onUpdateCallback">A delegate that will be called before the object is removed from the cache. You can use this to update the cached item and ensure that it is not removed from the cache.</param>
         <summary>Inserts an object into the <see cref="T:System.Web.Caching.Cache" /> object together with dependencies, expiration policies, and a delegate that you can use to notify the application before the item is removed from the cache.</summary>
         <remarks>
@@ -513,9 +555,12 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Caching.Cache.Insert(System.String,System.Object,System.Web.Caching.CacheDependency,System.DateTime,System.TimeSpan,System.Web.Caching.CacheItemPriority,System.Web.Caching.CacheItemRemovedCallback)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Insert (key As String, value As Object, dependencies As CacheDependency, absoluteExpiration As DateTime, slidingExpiration As TimeSpan, priority As CacheItemPriority, onRemoveCallback As CacheItemRemovedCallback)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Insert(System::String ^ key, System::Object ^ value, System::Web::Caching::CacheDependency ^ dependencies, DateTime absoluteExpiration, TimeSpan slidingExpiration, System::Web::Caching::CacheItemPriority priority, System::Web::Caching::CacheItemRemovedCallback ^ onRemoveCallback);" />
+      <MemberSignature Language="F#" Value="member this.Insert : string * obj * System.Web.Caching.CacheDependency * DateTime * TimeSpan * System.Web.Caching.CacheItemPriority * System.Web.Caching.CacheItemRemovedCallback -&gt; unit" Usage="cache.Insert (key, value, dependencies, absoluteExpiration, slidingExpiration, priority, onRemoveCallback)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -534,8 +579,8 @@
         <param name="key">The cache key used to reference the object.</param>
         <param name="value">The object to be inserted in the cache.</param>
         <param name="dependencies">The file or cache key dependencies for the item. When any dependency changes, the object becomes invalid and is removed from the cache. If there are no dependencies, this parameter contains <see langword="null" />.</param>
-        <param name="absoluteExpiration">The time at which the inserted object expires and is removed from the cache. To avoid possible issues with local time such as changes from standard time to daylight saving time, use <see cref="P:System.DateTime.UtcNow" /> rather than <see cref="P:System.DateTime.Now" /> for this parameter value. If you are using absolute expiration, the <c>slidingExpiration</c> parameter must be <see cref="F:System.Web.Caching.Cache.NoSlidingExpiration" />.</param>
-        <param name="slidingExpiration">The interval between the time the inserted object was last accessed and the time at which that object expires. If this value is the equivalent of 20 minutes, the object will expire and be removed from the cache 20 minutes after it was last accessed. If you are using sliding expiration, the <c>absoluteExpiration</c> parameter must be <see cref="F:System.Web.Caching.Cache.NoAbsoluteExpiration" />.</param>
+        <param name="absoluteExpiration">The time at which the inserted object expires and is removed from the cache. To avoid possible issues with local time such as changes from standard time to daylight saving time, use <see cref="P:System.DateTime.UtcNow" /> rather than <see cref="P:System.DateTime.Now" /> for this parameter value. If you are using absolute expiration, the <paramref name="slidingExpiration" /> parameter must be <see cref="F:System.Web.Caching.Cache.NoSlidingExpiration" />.</param>
+        <param name="slidingExpiration">The interval between the time the inserted object was last accessed and the time at which that object expires. If this value is the equivalent of 20 minutes, the object will expire and be removed from the cache 20 minutes after it was last accessed. If you are using sliding expiration, the <paramref name="absoluteExpiration" /> parameter must be <see cref="F:System.Web.Caching.Cache.NoAbsoluteExpiration" />.</param>
         <param name="priority">The cost of the object relative to other items stored in the cache, as expressed by the <see cref="T:System.Web.Caching.CacheItemPriority" /> enumeration. This value is used by the cache when it evicts objects; objects with a lower cost are removed from the cache before objects with a higher cost.</param>
         <param name="onRemoveCallback">A delegate that, if provided, will be called when an object is removed from the cache. You can use this to notify applications when their objects are deleted from the cache.</param>
         <summary>Inserts an object into the <see cref="T:System.Web.Caching.Cache" /> object with dependencies, expiration and priority policies, and a delegate you can use to notify your application when the inserted item is removed from the <see langword="Cache" />.</summary>
@@ -555,7 +600,7 @@
  The following example demonstrates how to assign an item high priority when you insert it into your application's `Cache` object.  
   
 > [!NOTE]
->  For more information about how to use this method with the <xref:System.Web.Caching.CacheItemRemovedCallback> delegate, see [How to: Notify an Application When an Item Is Removed from the Cache](http://msdn.microsoft.com/library/38c33aa0-afe9-40ba-a1a4-1ebab95286ef).  
+>  For more information about how to use this method with the <xref:System.Web.Caching.CacheItemRemovedCallback> delegate, see [How to: Notify an Application When an Item Is Removed from the Cache](https://msdn.microsoft.com/library/38c33aa0-afe9-40ba-a1a4-1ebab95286ef).  
   
  [!code-csharp[Classic Cache.Insert3 Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic Cache.Insert3 Example/CS/source.cs#1)]
  [!code-vb[Classic Cache.Insert3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic Cache.Insert3 Example/VB/source.vb#1)]  
@@ -569,6 +614,7 @@
         <altmember cref="T:System.TimeSpan" />
         <altmember cref="T:System.Web.Caching.CacheItemPriority" />
         <altmember cref="T:System.Web.Caching.CacheItemRemovedCallback" />
+        <related type="Article" href="https://msdn.microsoft.com/library/206f977d-7860-4d20-bdd5-c3b3d8479f3d(v=vs.100)">Caching Application Data</related>
       </Docs>
     </Member>
     <Member MemberName="Item">
@@ -577,11 +623,22 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Caching.Cache.Item(System.String)" />
       <MemberSignature Language="VB.NET" Value="Default Public Property Item(key As String) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ default[System::String ^] { System::Object ^ get(System::String ^ key); void set(System::String ^ key, System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Item(string) : obj with get, set" Usage="System.Web.Caching.Cache.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
@@ -613,6 +670,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/206f977d-7860-4d20-bdd5-c3b3d8479f3d(v=vs.100)">Caching Application Data</related>
       </Docs>
     </Member>
     <Member MemberName="NoAbsoluteExpiration">
@@ -621,9 +679,12 @@
       <MemberSignature Language="DocId" Value="F:System.Web.Caching.Cache.NoAbsoluteExpiration" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly NoAbsoluteExpiration As DateTime " />
       <MemberSignature Language="C++ CLI" Value="public: static initonly DateTime NoAbsoluteExpiration;" />
+      <MemberSignature Language="F#" Value=" staticval mutable NoAbsoluteExpiration : DateTime" Usage="System.Web.Caching.Cache.NoAbsoluteExpiration" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -657,9 +718,12 @@
       <MemberSignature Language="DocId" Value="F:System.Web.Caching.Cache.NoSlidingExpiration" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly NoSlidingExpiration As TimeSpan " />
       <MemberSignature Language="C++ CLI" Value="public: static initonly TimeSpan NoSlidingExpiration;" />
+      <MemberSignature Language="F#" Value=" staticval mutable NoSlidingExpiration : TimeSpan" Usage="System.Web.Caching.Cache.NoSlidingExpiration" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -693,9 +757,12 @@
       <MemberSignature Language="DocId" Value="M:System.Web.Caching.Cache.Remove(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function Remove (key As String) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Object ^ Remove(System::String ^ key);" />
+      <MemberSignature Language="F#" Value="member this.Remove : string -&gt; obj" Usage="cache.Remove key" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -719,6 +786,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/206f977d-7860-4d20-bdd5-c3b3d8479f3d(v=vs.100)">Caching Application Data</related>
       </Docs>
     </Member>
     <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
@@ -733,6 +801,8 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

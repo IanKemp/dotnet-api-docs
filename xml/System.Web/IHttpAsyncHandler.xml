@@ -4,8 +4,11 @@
   <TypeSignature Language="DocId" Value="T:System.Web.IHttpAsyncHandler" />
   <TypeSignature Language="VB.NET" Value="Public Interface IHttpAsyncHandler&#xA;Implements IHttpHandler" />
   <TypeSignature Language="C++ CLI" Value="public interface class IHttpAsyncHandler : System::Web::IHttpHandler" />
+  <TypeSignature Language="F#" Value="type IHttpAsyncHandler = interface&#xA;    interface IHttpHandler" />
   <AssemblyInfo>
     <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
@@ -31,9 +34,12 @@
       <MemberSignature Language="DocId" Value="M:System.Web.IHttpAsyncHandler.BeginProcessRequest(System.Web.HttpContext,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginProcessRequest (context As HttpContext, cb As AsyncCallback, extraData As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginProcessRequest(System::Web::HttpContext ^ context, AsyncCallback ^ cb, System::Object ^ extraData);" />
+      <MemberSignature Language="F#" Value="abstract member BeginProcessRequest : System.Web.HttpContext * AsyncCallback * obj -&gt; IAsyncResult" Usage="iHttpAsyncHandler.BeginProcessRequest (context, cb, extraData)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -46,7 +52,7 @@
       </Parameters>
       <Docs>
         <param name="context">An <see cref="T:System.Web.HttpContext" /> object that provides references to intrinsic server objects (for example, <see langword="Request" />, <see langword="Response" />, <see langword="Session" />, and <see langword="Server" />) used to service HTTP requests.</param>
-        <param name="cb">The <see cref="T:System.AsyncCallback" /> to call when the asynchronous method call is complete. If <c>cb</c> is <see langword="null" />, the delegate is not called.</param>
+        <param name="cb">The <see cref="T:System.AsyncCallback" /> to call when the asynchronous method call is complete. If <paramref name="cb" /> is <see langword="null" />, the delegate is not called.</param>
         <param name="extraData">Any extra data needed to process the request.</param>
         <summary>Initiates an asynchronous call to the HTTP handler.</summary>
         <returns>An <see cref="T:System.IAsyncResult" /> that contains information about the status of the process.</returns>
@@ -59,9 +65,12 @@
       <MemberSignature Language="DocId" Value="M:System.Web.IHttpAsyncHandler.EndProcessRequest(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndProcessRequest (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndProcessRequest(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="abstract member EndProcessRequest : IAsyncResult -&gt; unit" Usage="iHttpAsyncHandler.EndProcessRequest result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

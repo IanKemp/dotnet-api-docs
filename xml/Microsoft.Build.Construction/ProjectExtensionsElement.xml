@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Construction.ProjectExtensionsElement" />
   <TypeSignature Language="VB.NET" Value="Public Class ProjectExtensionsElement&#xA;Inherits ProjectElement" />
   <TypeSignature Language="C++ CLI" Value="public ref class ProjectExtensionsElement : Microsoft::Build::Construction::ProjectElement" />
+  <TypeSignature Language="F#" Value="type ProjectExtensionsElement = class&#xA;    inherit ProjectElement" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -13,7 +14,7 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>Represents the [ProjectExtensions Element (MSBuild)](http://msdn.microsoft.com/library/f95f312f-ff92-41eb-9469-ad99e236a307) in an MSBuild project. Project extensions can contain arbitrary XML content.</summary>
+    <summary>Represents the <see href="https://msdn.microsoft.com/library/f95f312f-ff92-41eb-9469-ad99e236a307">ProjectExtensions Element (MSBuild)</see> in an MSBuild project. Project extensions can contain arbitrary XML content.</summary>
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
@@ -30,6 +31,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectExtensionsElement.Condition" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Property Condition As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Condition { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Condition : string with get, set" Usage="Microsoft.Build.Construction.ProjectExtensionsElement.Condition" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -40,7 +42,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets a nonexistent condition, which is implicitly true.</summary>
-        <value>Returns a null.</value>
+        <value>Always returns <see langword="null" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -50,6 +52,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectExtensionsElement.ConditionLocation" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ConditionLocation As ElementLocation" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::Build::Construction::ElementLocation ^ ConditionLocation { Microsoft::Build::Construction::ElementLocation ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ConditionLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Construction.ProjectExtensionsElement.ConditionLocation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -70,6 +73,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectExtensionsElement.Content" />
       <MemberSignature Language="VB.NET" Value="Public Property Content As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Content { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Content : string with get, set" Usage="Microsoft.Build.Construction.ProjectExtensionsElement.Content" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -85,7 +89,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the arbitrary XML content of this project extension.</summary>
-        <value>Returns the arbitrary XML content of this project extension.</value>
+        <value>The arbitrary XML content of this project extension.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -95,6 +99,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectExtensionsElement.Item(System.String)" />
       <MemberSignature Language="VB.NET" Value="Default Public Property Item(name As String) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ default[System::String ^] { System::String ^ get(System::String ^ name); void set(System::String ^ name, System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Item(string) : string with get, set" Usage="Microsoft.Build.Construction.ProjectExtensionsElement.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -109,7 +114,7 @@
       <Docs>
         <param name="name">The name of the sub-element.</param>
         <summary>Gets or sets the content of the first sub-element with the given <paramref name="name" /> parameter.</summary>
-        <value>Returns the contents of the element.</value>
+        <value>The contents of the element.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

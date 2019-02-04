@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.WorkflowRuntime" />
   <TypeSignature Language="VB.NET" Value="Public Class WorkflowRuntime&#xA;Implements IDisposable, IServiceProvider" />
   <TypeSignature Language="C++ CLI" Value="public ref class WorkflowRuntime : IDisposable, IServiceProvider" />
+  <TypeSignature Language="F#" Value="type WorkflowRuntime = class&#xA;    interface IServiceProvider&#xA;    interface IDisposable" />
   <AssemblyInfo>
     <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -20,7 +22,7 @@
     </Interface>
   </Interfaces>
   <Attributes>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
       <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
     </Attribute>
   </Attributes>
@@ -41,7 +43,7 @@
 ## Examples  
  The following code example demonstrates how to use <xref:System.Workflow.Runtime.WorkflowRuntime> functionality from a workflow host. It provides examples of how to use the <xref:System.Workflow.Runtime.WorkflowRuntime.%23ctor%2A> constructor and the <xref:System.Workflow.Runtime.WorkflowRuntime.AddService%2A>, <xref:System.Workflow.Runtime.WorkflowRuntime.StartRuntime%2A>, and <xref:System.Workflow.Runtime.WorkflowRuntime.StopRuntime%2A> methods. The code also shows the recommended way to create a <xref:System.Workflow.Runtime.WorkflowInstance> object in a workflow host using the <xref:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow%2A> method. It also shows how to set event handlers for the <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowCompleted>, <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowIdled>, and <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowTerminated> events.  
   
- This code example is part of the [Canceling a Workflow](http://go.microsoft.com/fwlink/?LinkID=157346) sample.  
+ This code example is part of the [Canceling a Workflow](https://go.microsoft.com/fwlink/?LinkID=157346) sample.  
   
  [!code-csharp[WF_Samples#258](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#258)]
  [!code-vb[WF_Samples#258](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#258)]  
@@ -69,6 +71,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
@@ -94,7 +97,7 @@
 ## Examples  
  The following code example demonstrates how you can use <xref:System.Workflow.Runtime.WorkflowRuntime> functionality from a workflow host. It provides an example of how to use the <xref:System.Workflow.Runtime.WorkflowRuntime.%23ctor%2A> constructor to create an instance of a <xref:System.Workflow.Runtime.WorkflowRuntime> and access its methods and events.  
   
- This code example is part of the [Canceling a Workflow](http://go.microsoft.com/fwlink/?LinkID=157346) sample.  
+ This code example is part of the [Canceling a Workflow](https://go.microsoft.com/fwlink/?LinkID=157346) sample.  
   
  [!code-csharp[WF_Samples#258](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#258)]
  [!code-vb[WF_Samples#258](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#258)]  
@@ -109,9 +112,11 @@
       <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (configSectionName As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; WorkflowRuntime(System::String ^ configSectionName);" />
+      <MemberSignature Language="F#" Value="new System.Workflow.Runtime.WorkflowRuntime : string -&gt; System.Workflow.Runtime.WorkflowRuntime" Usage="new System.Workflow.Runtime.WorkflowRuntime configSectionName" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
@@ -154,9 +159,11 @@
       <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.#ctor(System.Workflow.Runtime.Configuration.WorkflowRuntimeSection)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (settings As WorkflowRuntimeSection)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; WorkflowRuntime(System::Workflow::Runtime::Configuration::WorkflowRuntimeSection ^ settings);" />
+      <MemberSignature Language="F#" Value="new System.Workflow.Runtime.WorkflowRuntime : System.Workflow.Runtime.Configuration.WorkflowRuntimeSection -&gt; System.Workflow.Runtime.WorkflowRuntime" Usage="new System.Workflow.Runtime.WorkflowRuntime settings" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
@@ -196,9 +203,11 @@
       <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.AddService(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Sub AddService (service As Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void AddService(System::Object ^ service);" />
+      <MemberSignature Language="F#" Value="member this.AddService : obj -&gt; unit" Usage="workflowRuntime.AddService service" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -224,7 +233,7 @@
 ## Examples  
  The following code example demonstrates how to use <xref:System.Workflow.Runtime.WorkflowRuntime> functionality from a workflow host. It provides example of how to use the <xref:System.Workflow.Runtime.WorkflowRuntime.AddService%2A> method to add an <xref:System.Workflow.Activities.ExternalDataExchangeService> and <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService> to the workflow run-time engine.  
   
- This code example is part of the [Cancelling a Workflow](http://go.microsoft.com/fwlink/?LinkId=157346) sample.  
+ This code example is part of the [Cancelling a Workflow](https://go.microsoft.com/fwlink/?LinkId=157346) sample.  
   
  [!code-csharp[WF_Samples#258](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#258)]
  [!code-vb[WF_Samples#258](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#258)]  
@@ -265,9 +274,11 @@
       <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow(System.Type)" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateWorkflow (workflowType As Type) As WorkflowInstance" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Workflow::Runtime::WorkflowInstance ^ CreateWorkflow(Type ^ workflowType);" />
+      <MemberSignature Language="F#" Value="member this.CreateWorkflow : Type -&gt; System.Workflow.Runtime.WorkflowInstance" Usage="workflowRuntime.CreateWorkflow workflowType" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -293,7 +304,7 @@
 ## Examples  
  The following code example demonstrates the recommended way to create a <xref:System.Workflow.Runtime.WorkflowInstance> object in a workflow host using the <xref:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow%2A> method.  
   
- This code example is part of the [Canceling a Workflow](http://go.microsoft.com/fwlink/?LinkID=157346) sample.  
+ This code example is part of the [Canceling a Workflow](https://go.microsoft.com/fwlink/?LinkID=157346) sample.  
   
  [!code-csharp[WF_Samples#260](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#260)]
  [!code-vb[WF_Samples#260](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#260)]  
@@ -310,9 +321,11 @@
       <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow(System.Xml.XmlReader)" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateWorkflow (workflowDefinitionReader As XmlReader) As WorkflowInstance" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Workflow::Runtime::WorkflowInstance ^ CreateWorkflow(System::Xml::XmlReader ^ workflowDefinitionReader);" />
+      <MemberSignature Language="F#" Value="member this.CreateWorkflow : System.Xml.XmlReader -&gt; System.Workflow.Runtime.WorkflowInstance" Usage="workflowRuntime.CreateWorkflow workflowDefinitionReader" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -385,9 +398,11 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow(System.Type,System.Collections.Generic.Dictionary{System.String,System.Object})" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateWorkflow (workflowType As Type, namedArgumentValues As Dictionary(Of String, Object)) As WorkflowInstance" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Workflow::Runtime::WorkflowInstance ^ CreateWorkflow(Type ^ workflowType, System::Collections::Generic::Dictionary&lt;System::String ^, System::Object ^&gt; ^ namedArgumentValues);" />
+      <MemberSignature Language="F#" Value="member this.CreateWorkflow : Type * System.Collections.Generic.Dictionary&lt;string, obj&gt; -&gt; System.Workflow.Runtime.WorkflowInstance" Usage="workflowRuntime.CreateWorkflow (workflowType, namedArgumentValues)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -410,7 +425,7 @@ static void Main(string[] args)
   
  For more information about disabling validation, see <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.ValidateOnCreate%2A>.  
   
- For an example of passing in parameters to `CreateWorkflow`, see [Workflow with Parameters Sample](http://go.microsoft.com/fwlink/?LinkId=157403).  
+ For an example of passing in parameters to `CreateWorkflow`, see [Workflow with Parameters Sample](https://go.microsoft.com/fwlink/?LinkId=157403).  
   
  ]]></format>
         </remarks>
@@ -424,9 +439,11 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow(System.Type,System.Collections.Generic.Dictionary{System.String,System.Object},System.Guid)" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateWorkflow (workflowType As Type, namedArgumentValues As Dictionary(Of String, Object), instanceId As Guid) As WorkflowInstance" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Workflow::Runtime::WorkflowInstance ^ CreateWorkflow(Type ^ workflowType, System::Collections::Generic::Dictionary&lt;System::String ^, System::Object ^&gt; ^ namedArgumentValues, Guid instanceId);" />
+      <MemberSignature Language="F#" Value="member this.CreateWorkflow : Type * System.Collections.Generic.Dictionary&lt;string, obj&gt; * Guid -&gt; System.Workflow.Runtime.WorkflowInstance" Usage="workflowRuntime.CreateWorkflow (workflowType, namedArgumentValues, instanceId)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -453,7 +470,7 @@ static void Main(string[] args)
   
  The workflow `instanceId` for any running workflows loaded by the <xref:System.Workflow.Runtime.WorkflowRuntime> must be unique. If you pass an `instanceId` to create a workflow and a running workflow is already using that `instanceId`, an <xref:System.InvalidOperationException> is thrown.  
   
- For an example of passing in parameters to `CreateWorkflow`, see [Workflow with Parameters Sample](http://go.microsoft.com/fwlink/?LinkID=157403).  
+ For an example of passing in parameters to `CreateWorkflow`, see [Workflow with Parameters Sample](https://go.microsoft.com/fwlink/?LinkID=157403).  
   
  ]]></format>
         </remarks>
@@ -467,9 +484,11 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow(System.Xml.XmlReader,System.Xml.XmlReader,System.Collections.Generic.Dictionary{System.String,System.Object})" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateWorkflow (workflowDefinitionReader As XmlReader, rulesReader As XmlReader, namedArgumentValues As Dictionary(Of String, Object)) As WorkflowInstance" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Workflow::Runtime::WorkflowInstance ^ CreateWorkflow(System::Xml::XmlReader ^ workflowDefinitionReader, System::Xml::XmlReader ^ rulesReader, System::Collections::Generic::Dictionary&lt;System::String ^, System::Object ^&gt; ^ namedArgumentValues);" />
+      <MemberSignature Language="F#" Value="member this.CreateWorkflow : System.Xml.XmlReader * System.Xml.XmlReader * System.Collections.Generic.Dictionary&lt;string, obj&gt; -&gt; System.Workflow.Runtime.WorkflowInstance" Usage="workflowRuntime.CreateWorkflow (workflowDefinitionReader, rulesReader, namedArgumentValues)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -496,9 +515,9 @@ static void Main(string[] args)
   
  For more information about disabling validation, see <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.ValidateOnCreate%2A>.  
   
- For an example of passing in parameters to `CreateWorkflow`, see [Workflow with Parameters Sample](http://go.microsoft.com/fwlink/?LinkID=157403).  
+ For an example of passing in parameters to `CreateWorkflow`, see [Workflow with Parameters Sample](https://go.microsoft.com/fwlink/?LinkID=157403).  
   
- For an example of using rules defined in XML, see [IfElse with Rules Sample](http://go.microsoft.com/fwlink/?LinkId=157404).  
+ For an example of using rules defined in XML, see [IfElse with Rules Sample](https://go.microsoft.com/fwlink/?LinkId=157404).  
   
  ]]></format>
         </remarks>
@@ -513,9 +532,11 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow(System.Xml.XmlReader,System.Xml.XmlReader,System.Collections.Generic.Dictionary{System.String,System.Object},System.Guid)" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateWorkflow (workflowDefinitionReader As XmlReader, rulesReader As XmlReader, namedArgumentValues As Dictionary(Of String, Object), instanceId As Guid) As WorkflowInstance" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Workflow::Runtime::WorkflowInstance ^ CreateWorkflow(System::Xml::XmlReader ^ workflowDefinitionReader, System::Xml::XmlReader ^ rulesReader, System::Collections::Generic::Dictionary&lt;System::String ^, System::Object ^&gt; ^ namedArgumentValues, Guid instanceId);" />
+      <MemberSignature Language="F#" Value="member this.CreateWorkflow : System.Xml.XmlReader * System.Xml.XmlReader * System.Collections.Generic.Dictionary&lt;string, obj&gt; * Guid -&gt; System.Workflow.Runtime.WorkflowInstance" Usage="workflowRuntime.CreateWorkflow (workflowDefinitionReader, rulesReader, namedArgumentValues, instanceId)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -544,9 +565,9 @@ static void Main(string[] args)
   
  The workflow `instanceId` for any running workflows loaded by the <xref:System.Workflow.Runtime.WorkflowRuntime> must be unique. If you pass an `instanceId` to create a workflow and a running workflow is already using that `instanceId`, an <xref:System.InvalidOperationException> is thrown.  
   
- For an example of passing in parameters to `CreateWorkflow`, see [Workflow with Parameters Sample](http://go.microsoft.com/fwlink/?LinkID=157403).  
+ For an example of passing in parameters to `CreateWorkflow`, see [Workflow with Parameters Sample](https://go.microsoft.com/fwlink/?LinkID=157403).  
   
- For an example of using rules defined in XML, see [IfElse with Rules Sample](http://go.microsoft.com/fwlink/?LinkID=157404).  
+ For an example of using rules defined in XML, see [IfElse with Rules Sample](https://go.microsoft.com/fwlink/?LinkID=157404).  
   
  ]]></format>
         </remarks>
@@ -560,12 +581,14 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.Dispose" />
       <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Dispose();" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="workflowRuntime.Dispose " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -585,7 +608,7 @@ static void Main(string[] args)
    
   
 ## Examples  
- The following example demonstrates how to call <xref:System.Workflow.Runtime.WorkflowRuntime.Dispose%2A> on a <xref:System.Workflow.Runtime.WorkflowRuntime> object. In this sample, the <xref:System.Workflow.Runtime.WorkflowRuntime.Dispose%2A> method is called from the FormClosing event handler for the main form of the application; this ensures that the objects created by the runtime are properly cleaned up when the application shuts down. This sample is from the [Speech Application Sample](http://go.microsoft.com/fwlink/?LinkId=157405).  
+ The following example demonstrates how to call <xref:System.Workflow.Runtime.WorkflowRuntime.Dispose%2A> on a <xref:System.Workflow.Runtime.WorkflowRuntime> object. In this sample, the <xref:System.Workflow.Runtime.WorkflowRuntime.Dispose%2A> method is called from the FormClosing event handler for the main form of the application; this ensures that the objects created by the runtime are properly cleaned up when the application shuts down. This sample is from the [Speech Application Sample](https://go.microsoft.com/fwlink/?LinkId=157405).  
   
  [!code-csharp[WF_Samples#108](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#108)]
  [!code-vb[WF_Samples#108](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#108)]  
@@ -600,9 +623,11 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.GetAllServices(System.Type)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetAllServices (serviceType As Type) As ReadOnlyCollection(Of Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::ReadOnlyCollection&lt;System::Object ^&gt; ^ GetAllServices(Type ^ serviceType);" />
+      <MemberSignature Language="F#" Value="member this.GetAllServices : Type -&gt; System.Collections.ObjectModel.ReadOnlyCollection&lt;obj&gt;" Usage="workflowRuntime.GetAllServices serviceType" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -642,9 +667,11 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.GetAllServices``1" />
       <MemberSignature Language="VB.NET" Value="Public Function GetAllServices(Of T) () As ReadOnlyCollection(Of T)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; System::Collections::ObjectModel::ReadOnlyCollection&lt;T&gt; ^ GetAllServices();" />
+      <MemberSignature Language="F#" Value="member this.GetAllServices : unit -&gt; System.Collections.ObjectModel.ReadOnlyCollection&lt;'T&gt;" Usage="workflowRuntime.GetAllServices " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -683,9 +710,11 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.GetLoadedWorkflows" />
       <MemberSignature Language="VB.NET" Value="Public Function GetLoadedWorkflows () As ReadOnlyCollection(Of WorkflowInstance)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::ReadOnlyCollection&lt;System::Workflow::Runtime::WorkflowInstance ^&gt; ^ GetLoadedWorkflows();" />
+      <MemberSignature Language="F#" Value="member this.GetLoadedWorkflows : unit -&gt; System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Workflow.Runtime.WorkflowInstance&gt;" Usage="workflowRuntime.GetLoadedWorkflows " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -720,9 +749,14 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.GetService(System.Type)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetService (serviceType As Type) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Object ^ GetService(Type ^ serviceType);" />
+      <MemberSignature Language="F#" Value="abstract member GetService : Type -&gt; obj&#xA;override this.GetService : Type -&gt; obj" Usage="workflowRuntime.GetService serviceType" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IServiceProvider.GetService(System.Type)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -755,9 +789,11 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.GetService``1" />
       <MemberSignature Language="VB.NET" Value="Public Function GetService(Of T) () As T" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; T GetService();" />
+      <MemberSignature Language="F#" Value="member this.GetService : unit -&gt; 'T" Usage="workflowRuntime.GetService " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -780,7 +816,7 @@ static void Main(string[] args)
    
   
 ## Examples  
- The following example demonstrates how to retrieve a single service from a <xref:System.Workflow.Runtime.WorkflowRuntime> object; in this case, a service of type <xref:System.Workflow.Runtime.Hosting.ManualWorkflowSchedulerService>. This example is from the [Workflow Threading Sample](http://go.microsoft.com/fwlink/?LinkId=157350).  
+ The following example demonstrates how to retrieve a single service from a <xref:System.Workflow.Runtime.WorkflowRuntime> object; in this case, a service of type <xref:System.Workflow.Runtime.Hosting.ManualWorkflowSchedulerService>. This example is from the [Workflow Threading Sample](https://go.microsoft.com/fwlink/?LinkId=157350).  
   
  [!code-csharp[WF_Samples#28](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#28)]
  [!code-vb[WF_Samples#28](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#28)]  
@@ -797,9 +833,11 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.GetWorkflow(System.Guid)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetWorkflow (instanceId As Guid) As WorkflowInstance" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Workflow::Runtime::WorkflowInstance ^ GetWorkflow(Guid instanceId);" />
+      <MemberSignature Language="F#" Value="member this.GetWorkflow : Guid -&gt; System.Workflow.Runtime.WorkflowInstance" Usage="workflowRuntime.GetWorkflow instanceId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -823,7 +861,7 @@ static void Main(string[] args)
 ## Examples  
  The following code example demonstrates a `ReloadWorkflow` method that calls the <xref:System.Workflow.Runtime.WorkflowRuntime.GetWorkflow%2A> method. The `ReloadWorkflow` method is part of a larger class that has a `Runtime` property to access all of the methods, properties, and events of the <xref:System.Workflow.Runtime.WorkflowRuntime> class.  
   
- This code example is part of the [Custom Persistence Service Sample](http://go.microsoft.com/fwlink/?LinkId=157351) sample.  
+ This code example is part of the [Custom Persistence Service Sample](https://go.microsoft.com/fwlink/?LinkId=157351) sample.  
   
 > [!NOTE]
 >  In the example, the call to <xref:System.Workflow.Runtime.WorkflowInstance.Load%2A> is redundant because both the <xref:System.Workflow.Runtime.WorkflowRuntime.GetWorkflow%2A> and <xref:System.Workflow.Runtime.WorkflowInstance.Load%2A> methods use the same internal helper method to load the workflow instance into memory.  
@@ -842,9 +880,11 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.WorkflowRuntime.IsStarted" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsStarted As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsStarted { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsStarted : bool" Usage="System.Workflow.Runtime.WorkflowRuntime.IsStarted" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -881,9 +921,11 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.WorkflowRuntime.Name" />
       <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="System.Workflow.Runtime.WorkflowRuntime.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -918,9 +960,11 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.RemoveService(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Sub RemoveService (service As Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void RemoveService(System::Object ^ service);" />
+      <MemberSignature Language="F#" Value="member this.RemoveService : obj -&gt; unit" Usage="workflowRuntime.RemoveService service" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -953,7 +997,7 @@ static void Main(string[] args)
         <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> is already disposed of.</exception>
         <exception cref="T:System.InvalidOperationException">The workflow run-time engine has started (<see cref="P:System.Workflow.Runtime.WorkflowRuntime.IsStarted" /> is <see langword="true" />) and <paramref name="service" /> is a core service.  
   
- \- or -  
+-or-
   
  <paramref name="service" /> is not registered with the workflow run-time engine.</exception>
       </Docs>
@@ -964,9 +1008,11 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.WorkflowRuntime.ServicesExceptionNotHandled" />
       <MemberSignature Language="VB.NET" Value="Public Event ServicesExceptionNotHandled As EventHandler(Of ServicesExceptionNotHandledEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Workflow::Runtime::ServicesExceptionNotHandledEventArgs ^&gt; ^ ServicesExceptionNotHandled;" />
+      <MemberSignature Language="F#" Value="member this.ServicesExceptionNotHandled : EventHandler&lt;System.Workflow.Runtime.ServicesExceptionNotHandledEventArgs&gt; " Usage="member this.ServicesExceptionNotHandled : System.EventHandler&lt;System.Workflow.Runtime.ServicesExceptionNotHandledEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -984,14 +1030,14 @@ static void Main(string[] args)
   
  For the <xref:System.Workflow.Runtime.WorkflowRuntime.ServicesExceptionNotHandled> event, the sender contains the <xref:System.Workflow.Runtime.WorkflowRuntime> and <xref:System.Workflow.Runtime.WorkflowEventArgs> contains the <xref:System.Guid> of the workflow instance that was using the service and the <xref:System.Exception> that could not be handled.  
   
- For more information about handling events, see [Consuming Events](http://go.microsoft.com/fwlink/?LinkID=157352).  
+ For more information about handling events, see [Consuming Events](https://go.microsoft.com/fwlink/?LinkID=157352).  
   
    
   
 ## Examples  
  The following code example demonstrates how to use <xref:System.Workflow.Runtime.WorkflowRuntime> functionality from a workflow host. The code associates <xref:System.Workflow.Runtime.WorkflowRuntime.ServicesExceptionNotHandled> with an event handler, a method named `OnExceptionNotHandled`.  
   
- This code example is part of the [Custom Persistence Service Sample](http://go.microsoft.com/fwlink/?LinkID=157351).  
+ This code example is part of the [Custom Persistence Service Sample](https://go.microsoft.com/fwlink/?LinkID=157351).  
   
  [!code-csharp[WF_Samples#271](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#271)]
  [!code-vb[WF_Samples#271](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#271)]  
@@ -1006,9 +1052,11 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.WorkflowRuntime.Started" />
       <MemberSignature Language="VB.NET" Value="Public Event Started As EventHandler(Of WorkflowRuntimeEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Workflow::Runtime::WorkflowRuntimeEventArgs ^&gt; ^ Started;" />
+      <MemberSignature Language="F#" Value="member this.Started : EventHandler&lt;System.Workflow.Runtime.WorkflowRuntimeEventArgs&gt; " Usage="member this.Started : System.EventHandler&lt;System.Workflow.Runtime.WorkflowRuntimeEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1022,7 +1070,7 @@ static void Main(string[] args)
 ## Remarks  
  The <xref:System.Workflow.Runtime.WorkflowRuntime.StartRuntime%2A> method raises the <xref:System.Workflow.Runtime.WorkflowRuntime.Started> event after it has validated the core service configuration of the workflow run-time engine, has invoked the <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A> method implemented by each of its services that derive from the <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService> class, and has set <xref:System.Workflow.Runtime.WorkflowRuntime.IsStarted%2A> to `true`. There is no guarantee about the order in which the services that derive from the <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService> class are started by the workflow run-time engine, and some of these workflow run-time engine services may depend on functionality supplied by other of these services to complete their startup tasks. Workflow run-time engine services can override the <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStarted%2A?displayProperty=nameWithType> method to perform any final startup tasks that require the support of other workflow run-time engine services when the <xref:System.Workflow.Runtime.WorkflowRuntime.Started> event is raised.  
   
- For more information about handling events, see [Consuming Events](http://go.microsoft.com/fwlink/?LinkID=157352).  
+ For more information about handling events, see [Consuming Events](https://go.microsoft.com/fwlink/?LinkID=157352).  
   
    
   
@@ -1042,9 +1090,11 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.StartRuntime" />
       <MemberSignature Language="VB.NET" Value="Public Sub StartRuntime ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void StartRuntime();" />
+      <MemberSignature Language="F#" Value="member this.StartRuntime : unit -&gt; unit" Usage="workflowRuntime.StartRuntime " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1066,7 +1116,7 @@ static void Main(string[] args)
 ## Examples  
  The following code example demonstrates how to use <xref:System.Workflow.Runtime.WorkflowRuntime> functionality from a workflow host. The code calls the <xref:System.Workflow.Runtime.WorkflowRuntime.StartRuntime%2A> after the <xref:System.Workflow.Runtime.WorkflowRuntime.%23ctor%2A> creates a <xref:System.Workflow.Runtime.WorkflowRuntime> instance and after it calls <xref:System.Workflow.Runtime.WorkflowRuntime.AddService%2A> to add services to the runtime. It also calls <xref:System.Workflow.Runtime.WorkflowRuntime.StartRuntime%2A> before any other processing occurs.  
   
- This code example is part of the [Canceling a Workflow](http://go.microsoft.com/fwlink/?LinkId=157346) sample.  
+ This code example is part of the [Canceling a Workflow](https://go.microsoft.com/fwlink/?LinkId=157346) sample.  
   
  [!code-csharp[WF_Samples#258](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#258)]
  [!code-vb[WF_Samples#258](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#258)]  
@@ -1091,9 +1141,11 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.WorkflowRuntime.Stopped" />
       <MemberSignature Language="VB.NET" Value="Public Event Stopped As EventHandler(Of WorkflowRuntimeEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Workflow::Runtime::WorkflowRuntimeEventArgs ^&gt; ^ Stopped;" />
+      <MemberSignature Language="F#" Value="member this.Stopped : EventHandler&lt;System.Workflow.Runtime.WorkflowRuntimeEventArgs&gt; " Usage="member this.Stopped : System.EventHandler&lt;System.Workflow.Runtime.WorkflowRuntimeEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1107,7 +1159,7 @@ static void Main(string[] args)
 ## Remarks  
  The <xref:System.Workflow.Runtime.WorkflowRuntime.StopRuntime%2A> method raises the <xref:System.Workflow.Runtime.WorkflowRuntime.Stopped> event after it has invoked the <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop%2A> method implemented by each of its services that derive from the <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService> class.  There is no guarantee about the order in which these workflow run-time engine services are stopped, and some of these services may need to preserve some functionality that is relied on by other services until they too are stopped. Such services can override the <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStopped%2A?displayProperty=nameWithType> method to perform any residual shutdown logic when the <xref:System.Workflow.Runtime.WorkflowRuntime.Stopped> event is raised.  
   
- For more information about handling events, see [Consuming Events](http://go.microsoft.com/fwlink/?LinkID=157352).  
+ For more information about handling events, see [Consuming Events](https://go.microsoft.com/fwlink/?LinkID=157352).  
   
    
   
@@ -1127,9 +1179,11 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.StopRuntime" />
       <MemberSignature Language="VB.NET" Value="Public Sub StopRuntime ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void StopRuntime();" />
+      <MemberSignature Language="F#" Value="member this.StopRuntime : unit -&gt; unit" Usage="workflowRuntime.StopRuntime " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1153,7 +1207,7 @@ static void Main(string[] args)
 ## Examples  
  The following code example demonstrates how to use <xref:System.Workflow.Runtime.WorkflowRuntime> functionality from a workflow host. <xref:System.Workflow.Runtime.WorkflowRuntime.StopRuntime%2A> is called after the host has completed all other processing associated with the runtime.  
   
- This code example is part of the [Canceling a Workflow](http://go.microsoft.com/fwlink/?LinkId=157346) sample.  
+ This code example is part of the [Canceling a Workflow](https://go.microsoft.com/fwlink/?LinkId=157346) sample.  
   
  [!code-csharp[WF_Samples#259](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#259)]
  [!code-vb[WF_Samples#259](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#259)]  
@@ -1169,9 +1223,11 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowAborted" />
       <MemberSignature Language="VB.NET" Value="Public Event WorkflowAborted As EventHandler(Of WorkflowEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Workflow::Runtime::WorkflowEventArgs ^&gt; ^ WorkflowAborted;" />
+      <MemberSignature Language="F#" Value="member this.WorkflowAborted : EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt; " Usage="member this.WorkflowAborted : System.EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1187,14 +1243,14 @@ static void Main(string[] args)
   
  For this event, the sender contains the <xref:System.Workflow.Runtime.WorkflowRuntime> and <xref:System.Workflow.Runtime.WorkflowEventArgs> contains the <xref:System.Workflow.Runtime.WorkflowInstance> associated with the event.  
   
- For more information about handling events, see [Consuming Events](http://go.microsoft.com/fwlink/?LinkId=157352).  
+ For more information about handling events, see [Consuming Events](https://go.microsoft.com/fwlink/?LinkId=157352).  
   
    
   
 ## Examples  
  The following code example demonstrates how to use <xref:System.Workflow.Runtime.WorkflowRuntime> functionality from a workflow host. The code associates the <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowAborted> with an event handler, a method named `OnWorkflowAborted`.  
   
- This code example is part of the [Canceling a Workflow](http://go.microsoft.com/fwlink/?LinkID=157346) sample.  
+ This code example is part of the [Canceling a Workflow](https://go.microsoft.com/fwlink/?LinkID=157346) sample.  
   
  [!code-csharp[WF_Samples#141](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#141)]
  [!code-vb[WF_Samples#141](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#141)]  
@@ -1209,9 +1265,11 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowCompleted" />
       <MemberSignature Language="VB.NET" Value="Public Event WorkflowCompleted As EventHandler(Of WorkflowCompletedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Workflow::Runtime::WorkflowCompletedEventArgs ^&gt; ^ WorkflowCompleted;" />
+      <MemberSignature Language="F#" Value="member this.WorkflowCompleted : EventHandler&lt;System.Workflow.Runtime.WorkflowCompletedEventArgs&gt; " Usage="member this.WorkflowCompleted : System.EventHandler&lt;System.Workflow.Runtime.WorkflowCompletedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1227,14 +1285,14 @@ static void Main(string[] args)
   
  For the <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowPersisted> event, the sender contains the <xref:System.Workflow.Runtime.WorkflowRuntime> and <xref:System.Workflow.Runtime.WorkflowCompletedEventArgs> contains the <xref:System.Workflow.Runtime.WorkflowInstance> and its output parameters.  
   
- For more information about handling events, see [Consuming Events](http://go.microsoft.com/fwlink/?LinkId=157352).  
+ For more information about handling events, see [Consuming Events](https://go.microsoft.com/fwlink/?LinkId=157352).  
   
    
   
 ## Examples  
  The following code example demonstrates how to use <xref:System.Workflow.Runtime.WorkflowRuntime> functionality from a workflow host. The code associates the <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowCompleted> with an event handler, a method named `OnWorkflowCompleted`.  
   
- This code example is part of the [Canceling a Workflow](http://go.microsoft.com/fwlink/?LinkId=157346) sample.  
+ This code example is part of the [Canceling a Workflow](https://go.microsoft.com/fwlink/?LinkId=157346) sample.  
   
  [!code-csharp[WF_Samples#258](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#258)]
  [!code-vb[WF_Samples#258](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#258)]  
@@ -1249,9 +1307,11 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowCreated" />
       <MemberSignature Language="VB.NET" Value="Public Event WorkflowCreated As EventHandler(Of WorkflowEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Workflow::Runtime::WorkflowEventArgs ^&gt; ^ WorkflowCreated;" />
+      <MemberSignature Language="F#" Value="member this.WorkflowCreated : EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt; " Usage="member this.WorkflowCreated : System.EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1265,14 +1325,14 @@ static void Main(string[] args)
 ## Remarks  
  The workflow run-time engine raises the <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowCreated> event after the workflow instance is completely constructed but before activities are processed. For this event, the sender contains the <xref:System.Workflow.Runtime.WorkflowRuntime> and <xref:System.Workflow.Runtime.WorkflowEventArgs> contains the <xref:System.Workflow.Runtime.WorkflowInstance> associated with the event.  
   
- For more information about handling events, see [Consuming Events](http://go.microsoft.com/fwlink/?LinkId=157352).  
+ For more information about handling events, see [Consuming Events](https://go.microsoft.com/fwlink/?LinkId=157352).  
   
    
   
 ## Examples  
  The following code example demonstrates how to use <xref:System.Workflow.Runtime.WorkflowRuntime> functionality from a workflow host. The code associates the <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowCreated> with an event handler, a method named `OnWorkflowCreated`.  
   
- This code example is part of the [Custom Persistence Service Sample](http://go.microsoft.com/fwlink/?LinkID=15735).  
+ This code example is part of the [Custom Persistence Service Sample](https://go.microsoft.com/fwlink/?LinkID=15735).  
   
  [!code-csharp[WF_Samples#271](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#271)]
  [!code-vb[WF_Samples#271](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#271)]  
@@ -1287,9 +1347,11 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowIdled" />
       <MemberSignature Language="VB.NET" Value="Public Event WorkflowIdled As EventHandler(Of WorkflowEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Workflow::Runtime::WorkflowEventArgs ^&gt; ^ WorkflowIdled;" />
+      <MemberSignature Language="F#" Value="member this.WorkflowIdled : EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt; " Usage="member this.WorkflowIdled : System.EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1312,7 +1374,7 @@ static void Main(string[] args)
 ## Examples  
  The following code example demonstrates how to use <xref:System.Workflow.Runtime.WorkflowRuntime> functionality from a workflow host. The code associates the <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowIdled> with an event handler, a method named `OnWorkflowIdled`.  
   
- This code example is part of the [Canceling a Workflow](http://go.microsoft.com/fwlink/?LinkID=157346) sample.  
+ This code example is part of the [Canceling a Workflow](https://go.microsoft.com/fwlink/?LinkID=157346) sample.  
   
  [!code-csharp[WF_Samples#258](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#258)]
  [!code-vb[WF_Samples#258](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#258)]  
@@ -1327,9 +1389,11 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowLoaded" />
       <MemberSignature Language="VB.NET" Value="Public Event WorkflowLoaded As EventHandler(Of WorkflowEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Workflow::Runtime::WorkflowEventArgs ^&gt; ^ WorkflowLoaded;" />
+      <MemberSignature Language="F#" Value="member this.WorkflowLoaded : EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt; " Usage="member this.WorkflowLoaded : System.EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1345,14 +1409,14 @@ static void Main(string[] args)
   
  For the <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowLoaded> event, the sender contains the <xref:System.Workflow.Runtime.WorkflowRuntime> and <xref:System.Workflow.Runtime.WorkflowEventArgs> contains the <xref:System.Workflow.Runtime.WorkflowInstance> associated with the event.  
   
- For more information about handling events, see [Consuming Events](http://go.microsoft.com/fwlink/?LinkID=157352).  
+ For more information about handling events, see [Consuming Events](https://go.microsoft.com/fwlink/?LinkID=157352).  
   
    
   
 ## Examples  
  The following code example demonstrates how to use <xref:System.Workflow.Runtime.WorkflowRuntime> functionality from a workflow host. The code associates the <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowLoaded> with an event handler, a method named `OnWorkflowLoad`.  
   
- This code example is part of the [Custom Persistence Service](http://go.microsoft.com/fwlink/?LinkID=157351) sample.  
+ This code example is part of the [Custom Persistence Service](https://go.microsoft.com/fwlink/?LinkID=157351) sample.  
   
  [!code-csharp[WF_Samples#271](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#271)]
  [!code-vb[WF_Samples#271](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#271)]  
@@ -1367,9 +1431,11 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowPersisted" />
       <MemberSignature Language="VB.NET" Value="Public Event WorkflowPersisted As EventHandler(Of WorkflowEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Workflow::Runtime::WorkflowEventArgs ^&gt; ^ WorkflowPersisted;" />
+      <MemberSignature Language="F#" Value="member this.WorkflowPersisted : EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt; " Usage="member this.WorkflowPersisted : System.EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1385,14 +1451,14 @@ static void Main(string[] args)
   
  For the <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowPersisted> event, the sender contains the <xref:System.Workflow.Runtime.WorkflowRuntime> and <xref:System.Workflow.Runtime.WorkflowEventArgs> contains the <xref:System.Workflow.Runtime.WorkflowInstance> associated with the event.  
   
- For more information about handling events, see [Consuming Events](http://go.microsoft.com/fwlink/?LinkID=157352).  
+ For more information about handling events, see [Consuming Events](https://go.microsoft.com/fwlink/?LinkID=157352).  
   
    
   
 ## Examples  
  The following code example demonstrates how you can use <xref:System.Workflow.Runtime.WorkflowRuntime> functionality from a workflow host. The code associates the <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowPersisted> with an event handler, a method named `OnWorkflowPersisted`.  
   
- This code example is part of the [Custom Persistence Service Sample](http://go.microsoft.com/fwlink/?LinkID=15735).  
+ This code example is part of the [Custom Persistence Service Sample](https://go.microsoft.com/fwlink/?LinkID=15735).  
   
  [!code-csharp[WF_Samples#279](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#279)]
  [!code-vb[WF_Samples#279](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#279)]  
@@ -1407,9 +1473,11 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowResumed" />
       <MemberSignature Language="VB.NET" Value="Public Event WorkflowResumed As EventHandler(Of WorkflowEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Workflow::Runtime::WorkflowEventArgs ^&gt; ^ WorkflowResumed;" />
+      <MemberSignature Language="F#" Value="member this.WorkflowResumed : EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt; " Usage="member this.WorkflowResumed : System.EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1425,14 +1493,14 @@ static void Main(string[] args)
   
  For the <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowResumed> event, the sender contains the <xref:System.Workflow.Runtime.WorkflowRuntime> and <xref:System.Workflow.Runtime.WorkflowEventArgs> contains the <xref:System.Workflow.Runtime.WorkflowInstance> associated with the event.  
   
- For more information about handling events, see [Consuming Events](http://go.microsoft.com/fwlink/?LinkID=157352).  
+ For more information about handling events, see [Consuming Events](https://go.microsoft.com/fwlink/?LinkID=157352).  
   
    
   
 ## Examples  
  The following code example demonstrates how you can use <xref:System.Workflow.Runtime.WorkflowRuntime> functionality from a workflow host. The code associates the <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowResumed> with an event handler, a method named `OnWorkflowResume`.  
   
- This code example is part of the [Suspend and Terminate Sample](http://go.microsoft.com/fwlink/?LinkId=157402).  
+ This code example is part of the [Suspend and Terminate Sample](https://go.microsoft.com/fwlink/?LinkId=157402).  
   
  [!code-csharp[WF_Samples#171](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#171)]
  [!code-vb[WF_Samples#171](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#171)]  
@@ -1447,9 +1515,11 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowStarted" />
       <MemberSignature Language="VB.NET" Value="Public Event WorkflowStarted As EventHandler(Of WorkflowEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Workflow::Runtime::WorkflowEventArgs ^&gt; ^ WorkflowStarted;" />
+      <MemberSignature Language="F#" Value="member this.WorkflowStarted : EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt; " Usage="member this.WorkflowStarted : System.EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1463,14 +1533,14 @@ static void Main(string[] args)
 ## Remarks  
  The workflow run-time engine raises the <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowStarted> event after the workflow instance is started by scheduling the root activity for execution. For this event, the sender contains the <xref:System.Workflow.Runtime.WorkflowRuntime> and <xref:System.Workflow.Runtime.WorkflowEventArgs> contains the <xref:System.Workflow.Runtime.WorkflowInstance> associated with the event.  
   
- For more information about handling events, see [Consuming Events](http://go.microsoft.com/fwlink/?LinkID=157352).  
+ For more information about handling events, see [Consuming Events](https://go.microsoft.com/fwlink/?LinkID=157352).  
   
    
   
 ## Examples  
  The following code example demonstrates how to use <xref:System.Workflow.Runtime.WorkflowRuntime> functionality from a workflow host. The code associates the <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowStarted> with an event handler, a method named `OnWorkflowStarted`.  
   
- This code example is part of the [Host Communication Sample](http://go.microsoft.com/fwlink/?LinkId=157406).  
+ This code example is part of the [Host Communication Sample](https://go.microsoft.com/fwlink/?LinkId=157406).  
   
  [!code-csharp[WF_Samples#297](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets38.cs#297)]  
   
@@ -1484,9 +1554,11 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowSuspended" />
       <MemberSignature Language="VB.NET" Value="Public Event WorkflowSuspended As EventHandler(Of WorkflowSuspendedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Workflow::Runtime::WorkflowSuspendedEventArgs ^&gt; ^ WorkflowSuspended;" />
+      <MemberSignature Language="F#" Value="member this.WorkflowSuspended : EventHandler&lt;System.Workflow.Runtime.WorkflowSuspendedEventArgs&gt; " Usage="member this.WorkflowSuspended : System.EventHandler&lt;System.Workflow.Runtime.WorkflowSuspendedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1502,14 +1574,14 @@ static void Main(string[] args)
   
  For the <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowSuspended> event, the sender contains the <xref:System.Workflow.Runtime.WorkflowRuntime> and <xref:System.Workflow.Runtime.WorkflowSuspendedEventArgs> contains the <xref:System.Workflow.Runtime.WorkflowInstance> and a string that describes the reason the instance was suspended.  
   
- For more information about handling events, see [Consuming Events](http://go.microsoft.com/fwlink/?LinkID=157352).  
+ For more information about handling events, see [Consuming Events](https://go.microsoft.com/fwlink/?LinkID=157352).  
   
    
   
 ## Examples  
  The following code example demonstrates how to use <xref:System.Workflow.Runtime.WorkflowRuntime> functionality from a workflow host. The code associates the <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowSuspended> with an event handler, a method named `OnWorkflowSuspended`.  
   
- This code example is part of the [Suspend and Terminate Sample](http://go.microsoft.com/fwlink/?LinkID=157402).  
+ This code example is part of the [Suspend and Terminate Sample](https://go.microsoft.com/fwlink/?LinkID=157402).  
   
  [!code-csharp[WF_Samples#170](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#170)]
  [!code-vb[WF_Samples#170](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#170)]  
@@ -1524,9 +1596,11 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowTerminated" />
       <MemberSignature Language="VB.NET" Value="Public Event WorkflowTerminated As EventHandler(Of WorkflowTerminatedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Workflow::Runtime::WorkflowTerminatedEventArgs ^&gt; ^ WorkflowTerminated;" />
+      <MemberSignature Language="F#" Value="member this.WorkflowTerminated : EventHandler&lt;System.Workflow.Runtime.WorkflowTerminatedEventArgs&gt; " Usage="member this.WorkflowTerminated : System.EventHandler&lt;System.Workflow.Runtime.WorkflowTerminatedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1542,14 +1616,14 @@ static void Main(string[] args)
   
  For the <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowPersisted> event, the sender contains the <xref:System.Workflow.Runtime.WorkflowRuntime> and <xref:System.Workflow.Runtime.WorkflowTerminatedEventArgs> contains the <xref:System.Workflow.Runtime.WorkflowInstance> and information about the reason the instance was terminated in the <xref:System.Workflow.Runtime.WorkflowTerminatedEventArgs.Exception%2A?displayProperty=nameWithType> property.  
   
- For more information about handling events, see [Consuming Events](http://go.microsoft.com/fwlink/?LinkID=157352).  
+ For more information about handling events, see [Consuming Events](https://go.microsoft.com/fwlink/?LinkID=157352).  
   
    
   
 ## Examples  
  The following code example demonstrates how to use <xref:System.Workflow.Runtime.WorkflowRuntime> functionality from a workflow host. The code associates the <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowCompleted> with an event handler, a method named `OnWorkflowCompleted`.  
   
- This code example is part of the [Canceling a Workflow](http://go.microsoft.com/fwlink/?LinkID=157346) sample.  
+ This code example is part of the [Canceling a Workflow](https://go.microsoft.com/fwlink/?LinkID=157346) sample.  
   
  [!code-csharp[WF_Samples#260](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#260)]
  [!code-vb[WF_Samples#260](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#260)]  
@@ -1564,9 +1638,11 @@ static void Main(string[] args)
       <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowUnloaded" />
       <MemberSignature Language="VB.NET" Value="Public Event WorkflowUnloaded As EventHandler(Of WorkflowEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Workflow::Runtime::WorkflowEventArgs ^&gt; ^ WorkflowUnloaded;" />
+      <MemberSignature Language="F#" Value="member this.WorkflowUnloaded : EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt; " Usage="member this.WorkflowUnloaded : System.EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1586,14 +1662,14 @@ static void Main(string[] args)
   
  For the <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowUnloaded> event, the sender contains the <xref:System.Workflow.Runtime.WorkflowRuntime> and <xref:System.Workflow.Runtime.WorkflowEventArgs> contains the <xref:System.Workflow.Runtime.WorkflowInstance> associated with the event.  
   
- For more information about handling events, see [Consuming Events](http://go.microsoft.com/fwlink/?LinkID=157352).  
+ For more information about handling events, see [Consuming Events](https://go.microsoft.com/fwlink/?LinkID=157352).  
   
    
   
 ## Examples  
  The following code example demonstrates how to use <xref:System.Workflow.Runtime.WorkflowRuntime> functionality from a workflow host. The code associates the <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowUnloaded> with an event handler, a method named `OnWorkflowUnload`.  
   
- This code example is part of the [Custom Persistence Service Sample](http://go.microsoft.com/fwlink/?LinkID=157351).  
+ This code example is part of the [Custom Persistence Service Sample](https://go.microsoft.com/fwlink/?LinkID=157351).  
   
  [!code-csharp[WF_Samples#271](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#271)]
  [!code-vb[WF_Samples#271](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#271)]  

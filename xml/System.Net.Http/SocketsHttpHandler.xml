@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Net.Http.SocketsHttpHandler" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class SocketsHttpHandler&#xA;Inherits HttpMessageHandler" />
   <TypeSignature Language="C++ CLI" Value="public ref class SocketsHttpHandler sealed : System::Net::Http::HttpMessageHandler" />
+  <TypeSignature Language="F#" Value="type SocketsHttpHandler = class&#xA;    inherit HttpMessageHandler" />
   <AssemblyInfo>
     <AssemblyName>System.Net.Http</AssemblyName>
     <AssemblyVersion>4.2.1.0</AssemblyVersion>
@@ -13,8 +14,43 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Provides the default message handler used by <see cref="T:System.Net.Http.HttpClient" /> in .NET Core 2.1 and later.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+
+Starting with .NET Core 2.1, the `SocketsHttpHandler` class provides the implementation used by higher-level HTTP networking classes such as <xref:System.Net.Http.HttpClient>. The use of `SocketsHttpHandler` offers a number of advantages:
+
+- A significant performance improvement when compared with the previous implementation.
+
+- The elimination of platform dependencies, which simplifies deployment and servicing. For example, `libcurl` is no longer a dependency on .NET Core for macOS and .NET Core for Linux.
+
+- Consistent behavior across all .NET platforms.
+
+If this change is undesirable, you can configure your application to use the older <xref:System.Net.Http.HttpClientHandler?displayProperty=nameWithType> class instead in a number of ways:
+
+- By calling the <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> method as follows:
+
+   ```csharp
+   AppContext.SetSwitch("System.Net.Http.useSocketsHttpHandler", false);
+   ```
+
+   ```vb
+   AppContext.SetSwitch("System.Net.Http.useSocketsHttpHandler", False)
+   ``` 
+- By defining the `System.Net.Http.useSocketsHttpHandler` switch in the *.netcore.runtimeconfig.json* configuration file:
+
+  ```json
+  "runtimeOptions": {
+    "configProperties": {
+        "System.Net.Http.useSocketsHttpHandler": false
+    }
+  }
+  ```
+  
+- By defining an environment variable named `DOTNET_SYSTEM_NET_HTTP_USESOCKETSHTTPHANDLER` and setting it to either `false` or 0.
+
+         ]]></format>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -40,6 +76,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.Http.SocketsHttpHandler.AllowAutoRedirect" />
       <MemberSignature Language="VB.NET" Value="Public Property AllowAutoRedirect As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AllowAutoRedirect { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.AllowAutoRedirect : bool with get, set" Usage="System.Net.Http.SocketsHttpHandler.AllowAutoRedirect" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Http</AssemblyName>
@@ -60,6 +97,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.Http.SocketsHttpHandler.AutomaticDecompression" />
       <MemberSignature Language="VB.NET" Value="Public Property AutomaticDecompression As DecompressionMethods" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::DecompressionMethods AutomaticDecompression { System::Net::DecompressionMethods get(); void set(System::Net::DecompressionMethods value); };" />
+      <MemberSignature Language="F#" Value="member this.AutomaticDecompression : System.Net.DecompressionMethods with get, set" Usage="System.Net.Http.SocketsHttpHandler.AutomaticDecompression" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Http</AssemblyName>
@@ -80,6 +118,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.Http.SocketsHttpHandler.ConnectTimeout" />
       <MemberSignature Language="VB.NET" Value="Public Property ConnectTimeout As TimeSpan" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property TimeSpan ConnectTimeout { TimeSpan get(); void set(TimeSpan value); };" />
+      <MemberSignature Language="F#" Value="member this.ConnectTimeout : TimeSpan with get, set" Usage="System.Net.Http.SocketsHttpHandler.ConnectTimeout" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Http</AssemblyName>
@@ -100,6 +139,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.Http.SocketsHttpHandler.CookieContainer" />
       <MemberSignature Language="VB.NET" Value="Public Property CookieContainer As CookieContainer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::CookieContainer ^ CookieContainer { System::Net::CookieContainer ^ get(); void set(System::Net::CookieContainer ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.CookieContainer : System.Net.CookieContainer with get, set" Usage="System.Net.Http.SocketsHttpHandler.CookieContainer" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Http</AssemblyName>
@@ -120,6 +160,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.Http.SocketsHttpHandler.Credentials" />
       <MemberSignature Language="VB.NET" Value="Public Property Credentials As ICredentials" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::ICredentials ^ Credentials { System::Net::ICredentials ^ get(); void set(System::Net::ICredentials ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Credentials : System.Net.ICredentials with get, set" Usage="System.Net.Http.SocketsHttpHandler.Credentials" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Http</AssemblyName>
@@ -140,6 +181,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.Http.SocketsHttpHandler.DefaultProxyCredentials" />
       <MemberSignature Language="VB.NET" Value="Public Property DefaultProxyCredentials As ICredentials" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::ICredentials ^ DefaultProxyCredentials { System::Net::ICredentials ^ get(); void set(System::Net::ICredentials ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DefaultProxyCredentials : System.Net.ICredentials with get, set" Usage="System.Net.Http.SocketsHttpHandler.DefaultProxyCredentials" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Http</AssemblyName>
@@ -160,6 +202,7 @@
       <MemberSignature Language="DocId" Value="M:System.Net.Http.SocketsHttpHandler.Dispose(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub Dispose (disposing As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void Dispose(bool disposing);" />
+      <MemberSignature Language="F#" Value="override this.Dispose : bool -&gt; unit" Usage="socketsHttpHandler.Dispose disposing" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Http</AssemblyName>
@@ -183,6 +226,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.Http.SocketsHttpHandler.Expect100ContinueTimeout" />
       <MemberSignature Language="VB.NET" Value="Public Property Expect100ContinueTimeout As TimeSpan" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property TimeSpan Expect100ContinueTimeout { TimeSpan get(); void set(TimeSpan value); };" />
+      <MemberSignature Language="F#" Value="member this.Expect100ContinueTimeout : TimeSpan with get, set" Usage="System.Net.Http.SocketsHttpHandler.Expect100ContinueTimeout" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Http</AssemblyName>
@@ -203,6 +247,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.Http.SocketsHttpHandler.MaxAutomaticRedirections" />
       <MemberSignature Language="VB.NET" Value="Public Property MaxAutomaticRedirections As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MaxAutomaticRedirections { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.MaxAutomaticRedirections : int with get, set" Usage="System.Net.Http.SocketsHttpHandler.MaxAutomaticRedirections" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Http</AssemblyName>
@@ -223,6 +268,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.Http.SocketsHttpHandler.MaxConnectionsPerServer" />
       <MemberSignature Language="VB.NET" Value="Public Property MaxConnectionsPerServer As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MaxConnectionsPerServer { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.MaxConnectionsPerServer : int with get, set" Usage="System.Net.Http.SocketsHttpHandler.MaxConnectionsPerServer" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Http</AssemblyName>
@@ -243,6 +289,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.Http.SocketsHttpHandler.MaxResponseDrainSize" />
       <MemberSignature Language="VB.NET" Value="Public Property MaxResponseDrainSize As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MaxResponseDrainSize { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.MaxResponseDrainSize : int with get, set" Usage="System.Net.Http.SocketsHttpHandler.MaxResponseDrainSize" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Http</AssemblyName>
@@ -263,6 +310,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.Http.SocketsHttpHandler.MaxResponseHeadersLength" />
       <MemberSignature Language="VB.NET" Value="Public Property MaxResponseHeadersLength As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MaxResponseHeadersLength { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.MaxResponseHeadersLength : int with get, set" Usage="System.Net.Http.SocketsHttpHandler.MaxResponseHeadersLength" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Http</AssemblyName>
@@ -283,6 +331,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.Http.SocketsHttpHandler.PooledConnectionIdleTimeout" />
       <MemberSignature Language="VB.NET" Value="Public Property PooledConnectionIdleTimeout As TimeSpan" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property TimeSpan PooledConnectionIdleTimeout { TimeSpan get(); void set(TimeSpan value); };" />
+      <MemberSignature Language="F#" Value="member this.PooledConnectionIdleTimeout : TimeSpan with get, set" Usage="System.Net.Http.SocketsHttpHandler.PooledConnectionIdleTimeout" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Http</AssemblyName>
@@ -292,9 +341,10 @@
         <ReturnType>System.TimeSpan</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>Gets or sets how long a connection can be idle in the pool to be considered reusable.</summary>
+        <value>The maximum idle time for a connection in the pool. The default value for this property is 2 minutes.</value>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">The value specified is less than <see cref="F:System.TimeSpan.Zero" /> or is equal to <see cref="F:System.Threading.Timeout.InfiniteTimeSpan" />.</exception>
       </Docs>
     </Member>
     <Member MemberName="PooledConnectionLifetime">
@@ -303,6 +353,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.Http.SocketsHttpHandler.PooledConnectionLifetime" />
       <MemberSignature Language="VB.NET" Value="Public Property PooledConnectionLifetime As TimeSpan" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property TimeSpan PooledConnectionLifetime { TimeSpan get(); void set(TimeSpan value); };" />
+      <MemberSignature Language="F#" Value="member this.PooledConnectionLifetime : TimeSpan with get, set" Usage="System.Net.Http.SocketsHttpHandler.PooledConnectionLifetime" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Http</AssemblyName>
@@ -323,6 +374,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.Http.SocketsHttpHandler.PreAuthenticate" />
       <MemberSignature Language="VB.NET" Value="Public Property PreAuthenticate As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool PreAuthenticate { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.PreAuthenticate : bool with get, set" Usage="System.Net.Http.SocketsHttpHandler.PreAuthenticate" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Http</AssemblyName>
@@ -343,6 +395,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.Http.SocketsHttpHandler.Properties" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Properties As IDictionary(Of String, Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IDictionary&lt;System::String ^, System::Object ^&gt; ^ Properties { System::Collections::Generic::IDictionary&lt;System::String ^, System::Object ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Properties : System.Collections.Generic.IDictionary&lt;string, obj&gt;" Usage="System.Net.Http.SocketsHttpHandler.Properties" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Http</AssemblyName>
@@ -363,6 +416,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.Http.SocketsHttpHandler.Proxy" />
       <MemberSignature Language="VB.NET" Value="Public Property Proxy As IWebProxy" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::IWebProxy ^ Proxy { System::Net::IWebProxy ^ get(); void set(System::Net::IWebProxy ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Proxy : System.Net.IWebProxy with get, set" Usage="System.Net.Http.SocketsHttpHandler.Proxy" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Http</AssemblyName>
@@ -383,6 +437,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.Http.SocketsHttpHandler.ResponseDrainTimeout" />
       <MemberSignature Language="VB.NET" Value="Public Property ResponseDrainTimeout As TimeSpan" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property TimeSpan ResponseDrainTimeout { TimeSpan get(); void set(TimeSpan value); };" />
+      <MemberSignature Language="F#" Value="member this.ResponseDrainTimeout : TimeSpan with get, set" Usage="System.Net.Http.SocketsHttpHandler.ResponseDrainTimeout" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Http</AssemblyName>
@@ -402,6 +457,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; SendAsync(class System.Net.Http.HttpRequestMessage request, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Net.Http.SocketsHttpHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override System::Threading::Tasks::Task&lt;System::Net::Http::HttpResponseMessage ^&gt; ^ SendAsync(System::Net::Http::HttpRequestMessage ^ request, System::Threading::CancellationToken cancellationToken);" />
+      <MemberSignature Language="F#" Value="override this.SendAsync : System.Net.Http.HttpRequestMessage * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;" Usage="socketsHttpHandler.SendAsync (request, cancellationToken)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Http</AssemblyName>
@@ -428,6 +484,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.Http.SocketsHttpHandler.SslOptions" />
       <MemberSignature Language="VB.NET" Value="Public Property SslOptions As SslClientAuthenticationOptions" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::Security::SslClientAuthenticationOptions ^ SslOptions { System::Net::Security::SslClientAuthenticationOptions ^ get(); void set(System::Net::Security::SslClientAuthenticationOptions ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.SslOptions : System.Net.Security.SslClientAuthenticationOptions with get, set" Usage="System.Net.Http.SocketsHttpHandler.SslOptions" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Http</AssemblyName>
@@ -448,6 +505,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.Http.SocketsHttpHandler.UseCookies" />
       <MemberSignature Language="VB.NET" Value="Public Property UseCookies As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool UseCookies { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.UseCookies : bool with get, set" Usage="System.Net.Http.SocketsHttpHandler.UseCookies" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Http</AssemblyName>
@@ -468,6 +526,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.Http.SocketsHttpHandler.UseProxy" />
       <MemberSignature Language="VB.NET" Value="Public Property UseProxy As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool UseProxy { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.UseProxy : bool with get, set" Usage="System.Net.Http.SocketsHttpHandler.UseProxy" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Net.Http</AssemblyName>

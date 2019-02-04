@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Xps.Packaging.XpsFont" />
   <TypeSignature Language="VB.NET" Value="Public Class XpsFont&#xA;Inherits XpsResource" />
   <TypeSignature Language="C++ CLI" Value="public ref class XpsFont : System::Windows::Xps::Packaging::XpsResource" />
+  <TypeSignature Language="F#" Value="type XpsFont = class&#xA;    inherit XpsResource" />
   <AssemblyInfo>
     <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -38,6 +40,7 @@
  ]]></format>
     </remarks>
     <altmember cref="T:System.Windows.Xps.Packaging.XpsImage" />
+    <related type="ExternalDocumentation" href="https://go.microsoft.com/fwlink/?LinkID=65761">XML Paper Specification (XPS)</related>
   </Docs>
   <Members>
     <Member MemberName="IsObfuscated">
@@ -46,11 +49,18 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.XpsFont.IsObfuscated" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsObfuscated As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsObfuscated { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsObfuscated : bool" Usage="System.Windows.Xps.Packaging.XpsFont.IsObfuscated" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -62,7 +72,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- For more information about font obfuscation, see Section 2.1.7.3 "Embedded Font Obfuscation" in the *XML Paper Specification (XPS)* available for download at [http://go.microsoft.com/fwlink/?LinkID=65761](http://go.microsoft.com/fwlink/?LinkID=65761).  
+ For more information about font obfuscation, see Section 2.1.7.3 "Embedded Font Obfuscation" in the *XML Paper Specification (XPS)* available for download at [http://go.microsoft.com/fwlink/?LinkID=65761](https://go.microsoft.com/fwlink/?LinkID=65761).  
   
  ]]></format>
         </remarks>
@@ -75,11 +85,21 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.XpsFont.IsRestricted" />
       <MemberSignature Language="VB.NET" Value="Public Property IsRestricted As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsRestricted { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsRestricted : bool with get, set" Usage="System.Windows.Xps.Packaging.XpsFont.IsRestricted" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -91,7 +111,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- For more information about the use of restricted fonts, see the *XML Paper Specification (XPS)* available for download at [http://go.microsoft.com/fwlink/?LinkID=65761](http://go.microsoft.com/fwlink/?LinkID=65761).  
+ For more information about the use of restricted fonts, see the *XML Paper Specification (XPS)* available for download at [http://go.microsoft.com/fwlink/?LinkID=65761](https://go.microsoft.com/fwlink/?LinkID=65761).  
   
  ]]></format>
         </remarks>
@@ -102,9 +122,11 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ObfuscateFontData(unsigned int8[] fontData, valuetype System.Guid guid) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.XpsFont.ObfuscateFontData(System.Byte[],System.Guid)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void ObfuscateFontData(cli::array &lt;System::Byte&gt; ^ fontData, Guid guid);" />
+      <MemberSignature Language="F#" Value="static member ObfuscateFontData : byte[] * Guid -&gt; unit" Usage="System.Windows.Xps.Packaging.XpsFont.ObfuscateFontData (fontData, guid)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -116,7 +138,7 @@
       </Parameters>
       <Docs>
         <param name="fontData">The typeface data to obfuscate.</param>
-        <param name="guid">The globally unique identifier (GUID) to use to obfuscate the <c>fontdata</c>.</param>
+        <param name="guid">The globally unique identifier (GUID) to use to obfuscate the <paramref name="fontData" />.</param>
         <summary>Obfuscates the font typeface data.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -126,7 +148,7 @@
   
  While this method does not provide encryption, the <xref:System.Windows.Xps.Packaging.XpsFont.ObfuscateFontData%2A> method can be used to inhibit users from unzipping proprietary [!INCLUDE[TLA#tla_opentype](~/includes/tlasharptla-opentype-md.md)] fonts and installing them separately for other uses.  
   
- For more information about font obfuscation, see Section 2.1.7.3 "Embedded Font Obfuscation" in the *XML Paper Specification (XPS)* available for download at [http://go.microsoft.com/fwlink/?LinkID=65761](http://go.microsoft.com/fwlink/?LinkID=65761).  
+ For more information about font obfuscation, see Section 2.1.7.3 "Embedded Font Obfuscation" in the *XML Paper Specification (XPS)* available for download at [http://go.microsoft.com/fwlink/?LinkID=65761](https://go.microsoft.com/fwlink/?LinkID=65761).  
   
  ]]></format>
         </remarks>

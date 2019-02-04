@@ -4,14 +4,26 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Utilities.TaskItem" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class TaskItem&#xA;Inherits MarshalByRefObject&#xA;Implements ITaskItem2" />
   <TypeSignature Language="C++ CLI" Value="public ref class TaskItem sealed : MarshalByRefObject, Microsoft::Build::Framework::ITaskItem2" />
+  <TypeSignature Language="F#" Value="type TaskItem = class&#xA;    inherit MarshalByRefObject&#xA;    interface ITaskItem&#xA;    interface ITaskItem2" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Utilities</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Utilities.v3.5</AssemblyName>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
   </Base>
   <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.ITaskItem</InterfaceName>
+    </Interface>
     <Interface>
       <InterfaceName>Microsoft.Build.Framework.ITaskItem2</InterfaceName>
     </Interface>
@@ -50,6 +62,14 @@
         <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v3.5</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:Microsoft.Build.Utilities.TaskItem" /> class.</summary>
@@ -69,10 +89,19 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.#ctor(Microsoft.Build.Framework.ITaskItem)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (sourceItem As ITaskItem)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; TaskItem(Microsoft::Build::Framework::ITaskItem ^ sourceItem);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Utilities.TaskItem : Microsoft.Build.Framework.ITaskItem -&gt; Microsoft.Build.Utilities.TaskItem" Usage="new Microsoft.Build.Utilities.TaskItem sourceItem" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v3.5</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="sourceItem" Type="Microsoft.Build.Framework.ITaskItem" />
@@ -89,10 +118,19 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (itemSpec As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; TaskItem(System::String ^ itemSpec);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Utilities.TaskItem : string -&gt; Microsoft.Build.Utilities.TaskItem" Usage="new Microsoft.Build.Utilities.TaskItem itemSpec" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v3.5</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="itemSpec" Type="System.String" />
@@ -109,10 +147,19 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.#ctor(System.String,System.Collections.IDictionary)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (itemSpec As String, itemMetadata As IDictionary)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; TaskItem(System::String ^ itemSpec, System::Collections::IDictionary ^ itemMetadata);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Utilities.TaskItem : string * System.Collections.IDictionary -&gt; Microsoft.Build.Utilities.TaskItem" Usage="new Microsoft.Build.Utilities.TaskItem (itemSpec, itemMetadata)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v3.5</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="itemSpec" Type="System.String" />
@@ -131,6 +178,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.CloneCustomMetadata" />
       <MemberSignature Language="VB.NET" Value="Public Function CloneCustomMetadata () As IDictionary" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Collections::IDictionary ^ CloneCustomMetadata();" />
+      <MemberSignature Language="F#" Value="abstract member CloneCustomMetadata : unit -&gt; System.Collections.IDictionary&#xA;override this.CloneCustomMetadata : unit -&gt; System.Collections.IDictionary" Usage="taskItem.CloneCustomMetadata " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Build.Framework.ITaskItem.CloneCustomMetadata</InterfaceMember>
@@ -138,6 +186,14 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v3.5</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.IDictionary</ReturnType>
@@ -162,6 +218,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.CopyMetadataTo(Microsoft.Build.Framework.ITaskItem)" />
       <MemberSignature Language="VB.NET" Value="Public Sub CopyMetadataTo (destinationItem As ITaskItem)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void CopyMetadataTo(Microsoft::Build::Framework::ITaskItem ^ destinationItem);" />
+      <MemberSignature Language="F#" Value="abstract member CopyMetadataTo : Microsoft.Build.Framework.ITaskItem -&gt; unit&#xA;override this.CopyMetadataTo : Microsoft.Build.Framework.ITaskItem -&gt; unit" Usage="taskItem.CopyMetadataTo destinationItem" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Build.Framework.ITaskItem.CopyMetadataTo(Microsoft.Build.Framework.ITaskItem)</InterfaceMember>
@@ -169,6 +226,14 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v3.5</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -197,6 +262,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.GetMetadata(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetMetadata (metadataName As String) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::String ^ GetMetadata(System::String ^ metadataName);" />
+      <MemberSignature Language="F#" Value="abstract member GetMetadata : string -&gt; string&#xA;override this.GetMetadata : string -&gt; string" Usage="taskItem.GetMetadata metadataName" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Build.Framework.ITaskItem.GetMetadata(System.String)</InterfaceMember>
@@ -204,6 +270,14 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v3.5</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -224,13 +298,22 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.InitializeLifetimeService" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function InitializeLifetimeService () As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::Object ^ InitializeLifetimeService();" />
+      <MemberSignature Language="F#" Value="override this.InitializeLifetimeService : unit -&gt; obj" Usage="taskItem.InitializeLifetimeService " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v3.5</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Security.SecurityCritical</AttributeName>
         </Attribute>
       </Attributes>
@@ -258,6 +341,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.TaskItem.ItemSpec" />
       <MemberSignature Language="VB.NET" Value="Public Property ItemSpec As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ItemSpec { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ItemSpec : string with get, set" Usage="Microsoft.Build.Utilities.TaskItem.ItemSpec" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Build.Framework.ITaskItem.ItemSpec</InterfaceMember>
@@ -265,6 +349,14 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v3.5</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -294,6 +386,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.TaskItem.MetadataCount" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MetadataCount As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MetadataCount { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.MetadataCount : int" Usage="Microsoft.Build.Utilities.TaskItem.MetadataCount" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Build.Framework.ITaskItem.MetadataCount</InterfaceMember>
@@ -301,6 +394,14 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v3.5</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -317,6 +418,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.TaskItem.MetadataNames" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MetadataNames As ICollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ICollection ^ MetadataNames { System::Collections::ICollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.MetadataNames : System.Collections.ICollection" Usage="Microsoft.Build.Utilities.TaskItem.MetadataNames" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Build.Framework.ITaskItem.MetadataNames</InterfaceMember>
@@ -324,6 +426,14 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v3.5</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.ICollection</ReturnType>
@@ -355,7 +465,7 @@
       <Docs>
         <summary>
           <see cref="T:Microsoft.Build.Framework.ITaskItem2" /> implementation which returns a clone of the metadata on this object. Values returned are in their original escaped form.</summary>
-        <returns>Returns the cloned metadata, with values' escaping preserved.</returns>
+        <returns>The cloned metadata, with values' escaping preserved.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -364,7 +474,8 @@
       <MemberSignature Language="ILAsm" Value=".property instance string Microsoft.Build.Framework.ITaskItem2.EvaluatedIncludeEscaped" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.TaskItem.Microsoft#Build#Framework#ITaskItem2#EvaluatedIncludeEscaped" />
       <MemberSignature Language="VB.NET" Value=" Property EvaluatedIncludeEscaped As String Implements ITaskItem2.EvaluatedIncludeEscaped" />
-      <MemberSignature Language="C++ CLI" Value="property System::String ^ Microsoft.Build.Framework.ITaskItem2.EvaluatedIncludeEscaped { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="C++ CLI" Value="property System::String ^ Microsoft::Build::Framework::ITaskItem2::EvaluatedIncludeEscaped { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Usage="Microsoft.Build.Framework.ITaskItem2.EvaluatedIncludeEscaped" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Build.Framework.ITaskItem2.EvaluatedIncludeEscaped</InterfaceMember>
@@ -379,7 +490,7 @@
       <Docs>
         <summary>
           <see cref="T:Microsoft.Build.Framework.ITaskItem2" /> implementation which gets or sets the item include value.  For disk-based items this would be the file path.</summary>
-        <value>Returns the item include value.</value>
+        <value>The item include value.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -407,7 +518,7 @@
         <param name="metadataName">The metadata to be queried</param>
         <summary>
           <see cref="T:Microsoft.Build.Framework.ITaskItem2" /> implementation which allows the values of metadata on the item to be queried.</summary>
-        <returns>Returns the escaped metadata value.</returns>
+        <returns>The escaped metadata value.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -446,10 +557,19 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.op_Explicit(Microsoft.Build.Utilities.TaskItem)~System.String" />
       <MemberSignature Language="VB.NET" Value="Public Shared Narrowing Operator CType (taskItemToCast As TaskItem) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static explicit operator System::String ^(Microsoft::Build::Utilities::TaskItem ^ taskItemToCast);" />
+      <MemberSignature Language="F#" Value="static member op_Explicit : Microsoft.Build.Utilities.TaskItem -&gt; string" Usage="Microsoft.Build.Utilities.TaskItem.op_Explicit taskItemToCast" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v3.5</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -472,6 +592,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.RemoveMetadata(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub RemoveMetadata (metadataName As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void RemoveMetadata(System::String ^ metadataName);" />
+      <MemberSignature Language="F#" Value="abstract member RemoveMetadata : string -&gt; unit&#xA;override this.RemoveMetadata : string -&gt; unit" Usage="taskItem.RemoveMetadata metadataName" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Build.Framework.ITaskItem.RemoveMetadata(System.String)</InterfaceMember>
@@ -479,6 +600,14 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v3.5</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -498,6 +627,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.SetMetadata(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SetMetadata (metadataName As String, metadataValue As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void SetMetadata(System::String ^ metadataName, System::String ^ metadataValue);" />
+      <MemberSignature Language="F#" Value="abstract member SetMetadata : string * string -&gt; unit&#xA;override this.SetMetadata : string * string -&gt; unit" Usage="taskItem.SetMetadata (metadataName, metadataValue)" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Build.Framework.ITaskItem.SetMetadata(System.String,System.String)</InterfaceMember>
@@ -505,6 +635,14 @@
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v3.5</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -526,10 +664,19 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TaskItem.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="taskItem.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v3.5</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

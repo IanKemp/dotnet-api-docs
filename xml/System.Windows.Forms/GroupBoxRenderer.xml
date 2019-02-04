@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Forms.GroupBoxRenderer" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class GroupBoxRenderer" />
   <TypeSignature Language="C++ CLI" Value="public ref class GroupBoxRenderer sealed" />
+  <TypeSignature Language="F#" Value="type GroupBoxRenderer = class" />
   <AssemblyInfo>
     <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -56,9 +58,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GroupBoxRenderer.DrawGroupBox(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.VisualStyles.GroupBoxState)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub DrawGroupBox (g As Graphics, bounds As Rectangle, state As GroupBoxState)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void DrawGroupBox(System::Drawing::Graphics ^ g, System::Drawing::Rectangle bounds, System::Windows::Forms::VisualStyles::GroupBoxState state);" />
+      <MemberSignature Language="F#" Value="static member DrawGroupBox : System.Drawing.Graphics * System.Drawing.Rectangle * System.Windows.Forms.VisualStyles.GroupBoxState -&gt; unit" Usage="System.Windows.Forms.GroupBoxRenderer.DrawGroupBox (g, bounds, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -98,11 +102,18 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawGroupBox(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string groupBoxText, class System.Drawing.Font font, valuetype System.Windows.Forms.VisualStyles.GroupBoxState state) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GroupBoxRenderer.DrawGroupBox(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Windows.Forms.VisualStyles.GroupBoxState)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void DrawGroupBox(System::Drawing::Graphics ^ g, System::Drawing::Rectangle bounds, System::String ^ groupBoxText, System::Drawing::Font ^ font, System::Windows::Forms::VisualStyles::GroupBoxState state);" />
+      <MemberSignature Language="F#" Value="static member DrawGroupBox : System.Drawing.Graphics * System.Drawing.Rectangle * string * System.Drawing.Font * System.Windows.Forms.VisualStyles.GroupBoxState -&gt; unit" Usage="System.Windows.Forms.GroupBoxRenderer.DrawGroupBox (g, bounds, groupBoxText, font, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -117,7 +128,7 @@
         <param name="g">The <see cref="T:System.Drawing.Graphics" /> used to draw the group box.</param>
         <param name="bounds">The <see cref="T:System.Drawing.Rectangle" /> that specifies the bounds of the group box.</param>
         <param name="groupBoxText">The <see cref="T:System.String" /> to draw with the group box.</param>
-        <param name="font">The <see cref="T:System.Drawing.Font" /> to apply to <c>groupBoxText</c>.</param>
+        <param name="font">The <see cref="T:System.Drawing.Font" /> to apply to <paramref name="groupBoxText" />.</param>
         <param name="state">One of the <see cref="T:System.Windows.Forms.VisualStyles.GroupBoxState" /> values that specifies the visual state of the group box.</param>
         <summary>Draws a group box control in the specified state and bounds, with the specified text and font.</summary>
         <remarks>
@@ -144,11 +155,18 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawGroupBox(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string groupBoxText, class System.Drawing.Font font, valuetype System.Drawing.Color textColor, valuetype System.Windows.Forms.VisualStyles.GroupBoxState state) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GroupBoxRenderer.DrawGroupBox(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Drawing.Color,System.Windows.Forms.VisualStyles.GroupBoxState)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void DrawGroupBox(System::Drawing::Graphics ^ g, System::Drawing::Rectangle bounds, System::String ^ groupBoxText, System::Drawing::Font ^ font, System::Drawing::Color textColor, System::Windows::Forms::VisualStyles::GroupBoxState state);" />
+      <MemberSignature Language="F#" Value="static member DrawGroupBox : System.Drawing.Graphics * System.Drawing.Rectangle * string * System.Drawing.Font * System.Drawing.Color * System.Windows.Forms.VisualStyles.GroupBoxState -&gt; unit" Usage="System.Windows.Forms.GroupBoxRenderer.DrawGroupBox (g, bounds, groupBoxText, font, textColor, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -164,8 +182,8 @@
         <param name="g">The <see cref="T:System.Drawing.Graphics" /> used to draw the group box.</param>
         <param name="bounds">The <see cref="T:System.Drawing.Rectangle" /> that specifies the bounds of the group box.</param>
         <param name="groupBoxText">The <see cref="T:System.String" /> to draw with the group box.</param>
-        <param name="font">The <see cref="T:System.Drawing.Font" /> to apply to <c>groupBoxText</c>.</param>
-        <param name="textColor">The <see cref="T:System.Drawing.Color" /> to apply to <c>groupBoxText</c>.</param>
+        <param name="font">The <see cref="T:System.Drawing.Font" /> to apply to <paramref name="groupBoxText" />.</param>
+        <param name="textColor">The <see cref="T:System.Drawing.Color" /> to apply to <paramref name="groupBoxText" />.</param>
         <param name="state">One of the <see cref="T:System.Windows.Forms.VisualStyles.GroupBoxState" /> values that specifies the visual state of the group box.</param>
         <summary>Draws a group box control in the specified state and bounds, with the specified text, font, and color.</summary>
         <remarks>
@@ -183,9 +201,11 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawGroupBox(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string groupBoxText, class System.Drawing.Font font, valuetype System.Windows.Forms.TextFormatFlags flags, valuetype System.Windows.Forms.VisualStyles.GroupBoxState state) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GroupBoxRenderer.DrawGroupBox(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Windows.Forms.TextFormatFlags,System.Windows.Forms.VisualStyles.GroupBoxState)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void DrawGroupBox(System::Drawing::Graphics ^ g, System::Drawing::Rectangle bounds, System::String ^ groupBoxText, System::Drawing::Font ^ font, System::Windows::Forms::TextFormatFlags flags, System::Windows::Forms::VisualStyles::GroupBoxState state);" />
+      <MemberSignature Language="F#" Value="static member DrawGroupBox : System.Drawing.Graphics * System.Drawing.Rectangle * string * System.Drawing.Font * System.Windows.Forms.TextFormatFlags * System.Windows.Forms.VisualStyles.GroupBoxState -&gt; unit" Usage="System.Windows.Forms.GroupBoxRenderer.DrawGroupBox (g, bounds, groupBoxText, font, flags, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -203,7 +223,7 @@
         <param name="g">The <see cref="T:System.Drawing.Graphics" /> used to draw the group box.</param>
         <param name="bounds">The <see cref="T:System.Drawing.Rectangle" /> that specifies the bounds of the group box.</param>
         <param name="groupBoxText">The <see cref="T:System.String" /> to draw with the group box.</param>
-        <param name="font">The <see cref="T:System.Drawing.Font" /> to apply to <c>groupBoxText</c>.</param>
+        <param name="font">The <see cref="T:System.Drawing.Font" /> to apply to <paramref name="groupBoxText" />.</param>
         <param name="flags">A bitwise combination of the <see cref="T:System.Windows.Forms.TextFormatFlags" /> values.</param>
         <param name="state">One of the <see cref="T:System.Windows.Forms.VisualStyles.GroupBoxState" /> values that specifies the visual state of the group box.</param>
         <summary>Draws a group box control in the specified state and bounds, with the specified text, font, and text formatting.</summary>
@@ -222,9 +242,11 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawGroupBox(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string groupBoxText, class System.Drawing.Font font, valuetype System.Drawing.Color textColor, valuetype System.Windows.Forms.TextFormatFlags flags, valuetype System.Windows.Forms.VisualStyles.GroupBoxState state) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GroupBoxRenderer.DrawGroupBox(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Drawing.Color,System.Windows.Forms.TextFormatFlags,System.Windows.Forms.VisualStyles.GroupBoxState)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void DrawGroupBox(System::Drawing::Graphics ^ g, System::Drawing::Rectangle bounds, System::String ^ groupBoxText, System::Drawing::Font ^ font, System::Drawing::Color textColor, System::Windows::Forms::TextFormatFlags flags, System::Windows::Forms::VisualStyles::GroupBoxState state);" />
+      <MemberSignature Language="F#" Value="static member DrawGroupBox : System.Drawing.Graphics * System.Drawing.Rectangle * string * System.Drawing.Font * System.Drawing.Color * System.Windows.Forms.TextFormatFlags * System.Windows.Forms.VisualStyles.GroupBoxState -&gt; unit" Usage="System.Windows.Forms.GroupBoxRenderer.DrawGroupBox (g, bounds, groupBoxText, font, textColor, flags, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -243,8 +265,8 @@
         <param name="g">The <see cref="T:System.Drawing.Graphics" /> used to draw the group box.</param>
         <param name="bounds">The <see cref="T:System.Drawing.Rectangle" /> that specifies the bounds of the group box.</param>
         <param name="groupBoxText">The <see cref="T:System.String" /> to draw with the group box.</param>
-        <param name="font">The <see cref="T:System.Drawing.Font" /> to apply to <c>groupBoxText</c>.</param>
-        <param name="textColor">The <see cref="T:System.Drawing.Color" /> to apply to <c>groupBoxText</c>.</param>
+        <param name="font">The <see cref="T:System.Drawing.Font" /> to apply to <paramref name="groupBoxText" />.</param>
+        <param name="textColor">The <see cref="T:System.Drawing.Color" /> to apply to <paramref name="groupBoxText" />.</param>
         <param name="flags">A bitwise combination of the <see cref="T:System.Windows.Forms.TextFormatFlags" /> values.</param>
         <param name="state">One of the <see cref="T:System.Windows.Forms.VisualStyles.GroupBoxState" /> values that specifies the visual state of the group box.</param>
         <summary>Draws a group box control in the specified state and bounds, with the specified text, font, color, and text formatting.</summary>
@@ -264,9 +286,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GroupBoxRenderer.DrawParentBackground(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.Control)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub DrawParentBackground (g As Graphics, bounds As Rectangle, childControl As Control)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void DrawParentBackground(System::Drawing::Graphics ^ g, System::Drawing::Rectangle bounds, System::Windows::Forms::Control ^ childControl);" />
+      <MemberSignature Language="F#" Value="static member DrawParentBackground : System.Drawing.Graphics * System.Drawing.Rectangle * System.Windows.Forms.Control -&gt; unit" Usage="System.Windows.Forms.GroupBoxRenderer.DrawParentBackground (g, bounds, childControl)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -278,8 +302,8 @@
         <Parameter Name="childControl" Type="System.Windows.Forms.Control" />
       </Parameters>
       <Docs>
-        <param name="g">The <see cref="T:System.Drawing.Graphics" /> used to draw the background of the parent of <c>childControl</c>.</param>
-        <param name="bounds">The <see cref="T:System.Drawing.Rectangle" /> in which to draw the parent control's background. This rectangle should be inside the child control’s bounds.</param>
+        <param name="g">The <see cref="T:System.Drawing.Graphics" /> used to draw the background of the parent of <paramref name="childControl" />.</param>
+        <param name="bounds">The <see cref="T:System.Drawing.Rectangle" /> in which to draw the parent control's background. This rectangle should be inside the child control's bounds.</param>
         <param name="childControl">The control whose parent's background will be drawn.</param>
         <summary>Draws the background of a control's parent in the specified area.</summary>
         <remarks>To be added.</remarks>
@@ -291,9 +315,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GroupBoxRenderer.IsBackgroundPartiallyTransparent(System.Windows.Forms.VisualStyles.GroupBoxState)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function IsBackgroundPartiallyTransparent (state As GroupBoxState) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool IsBackgroundPartiallyTransparent(System::Windows::Forms::VisualStyles::GroupBoxState state);" />
+      <MemberSignature Language="F#" Value="static member IsBackgroundPartiallyTransparent : System.Windows.Forms.VisualStyles.GroupBoxState -&gt; bool" Usage="System.Windows.Forms.GroupBoxRenderer.IsBackgroundPartiallyTransparent state" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -316,11 +342,21 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GroupBoxRenderer.RenderMatchingApplicationState" />
       <MemberSignature Language="VB.NET" Value="Public Shared Property RenderMatchingApplicationState As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property bool RenderMatchingApplicationState { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.RenderMatchingApplicationState : bool with get, set" Usage="System.Windows.Forms.GroupBoxRenderer.RenderMatchingApplicationState" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Data.Services.BuildProvider.DataServiceBuildProvider" />
   <TypeSignature Language="VB.NET" Value="Public Class DataServiceBuildProvider&#xA;Inherits BuildProvider" />
   <TypeSignature Language="C++ CLI" Value="public ref class DataServiceBuildProvider : System::Web::Compilation::BuildProvider" />
+  <TypeSignature Language="F#" Value="type DataServiceBuildProvider = class&#xA;    inherit BuildProvider" />
   <AssemblyInfo>
     <AssemblyName>System.Data.Services.Design</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -17,7 +18,7 @@
       <AttributeName>System.Security.SecurityCritical</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Web.Compilation.FolderLevelBuildProviderAppliesTo</AttributeName>
+      <AttributeName>System.Web.Compilation.FolderLevelBuildProviderAppliesTo(System.Web.Compilation.FolderLevelBuildProviderAppliesTo.WebReferences)</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -43,6 +44,11 @@
         <AssemblyName>System.Data.Services.Design</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Creates a new instance of the <see cref="T:System.Data.Services.BuildProvider.DataServiceBuildProvider" /> class.</summary>
@@ -54,6 +60,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GenerateCode(class System.Web.Compilation.AssemblyBuilder assemblyBuilder) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Data.Services.BuildProvider.DataServiceBuildProvider.GenerateCode(System.Web.Compilation.AssemblyBuilder)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void GenerateCode(System::Web::Compilation::AssemblyBuilder ^ assemblyBuilder);" />
+      <MemberSignature Language="F#" Value="override this.GenerateCode : System.Web.Compilation.AssemblyBuilder -&gt; unit" Usage="dataServiceBuildProvider.GenerateCode assemblyBuilder" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.Services.Design</AssemblyName>

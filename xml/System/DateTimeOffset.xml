@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.DateTimeOffset" />
   <TypeSignature Language="VB.NET" Value="Public Structure DateTimeOffset&#xA;Implements IComparable, IComparable(Of DateTimeOffset), IDeserializationCallback, IEquatable(Of DateTimeOffset), IFormattable, ISerializable" />
   <TypeSignature Language="C++ CLI" Value="public value class DateTimeOffset : IComparable, IComparable&lt;DateTimeOffset&gt;, IEquatable&lt;DateTimeOffset&gt;, IFormattable, System::Runtime::Serialization::IDeserializationCallback, System::Runtime::Serialization::ISerializable" />
+  <TypeSignature Language="F#" Value="type DateTimeOffset = struct&#xA;    interface IFormattable&#xA;    interface ISerializable&#xA;    interface IDeserializationCallback" />
   <AssemblyInfo>
     <AssemblyName>System.Runtime</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -15,6 +16,7 @@
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.0.5.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
@@ -45,6 +47,11 @@
       <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
     </Interface>
   </Interfaces>
+  <Attributes>
+    <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
+      <AttributeName>System.Serializable</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>Represents a point in time, typically expressed as a date and time of day, relative to Coordinated Universal Time (UTC).</summary>
     <remarks>
@@ -52,11 +59,10 @@
   
 ## Remarks  
  The <xref:System.DateTimeOffset> structure includes a <xref:System.DateTime> value, together with an <xref:System.DateTimeOffset.Offset%2A> property that defines the difference between the current <xref:System.DateTimeOffset> instance's date and time and Coordinated Universal Time (UTC). Because it exactly defines a date and time relative to UTC, the <xref:System.DateTimeOffset> structure does not include a `Kind` member, as the <xref:System.DateTime> structure does. It represents dates and times with values whose UTC ranges from 12:00:00 midnight, January 1, 0001 Anno Domini (Common Era), to 11:59:59 P.M., December 31, 9999 A.D. (C.E.).  
-  
+
+[!INCLUDE[japanese-era-note](~/includes/calendar-era.md)]
+
  The time component of a <xref:System.DateTimeOffset> value is measured in 100-nanosecond units called ticks, and a particular date is the number of ticks since 12:00 midnight, January 1, 0001 A.D. (C.E.) in the <xref:System.Globalization.GregorianCalendar> calendar. A <xref:System.DateTimeOffset> value is always expressed in the context of an explicit or default calendar. Ticks that are attributable to leap seconds are not included in the total number of ticks.  
-  
-> [!NOTE]
->  If you are working with a ticks value that you want to convert to some other time interval, such as minutes or seconds, you should use the <xref:System.TimeSpan.TicksPerDay?displayProperty=nameWithType>, <xref:System.TimeSpan.TicksPerHour?displayProperty=nameWithType>, <xref:System.TimeSpan.TicksPerMinute?displayProperty=nameWithType>, <xref:System.TimeSpan.TicksPerSecond?displayProperty=nameWithType>, or <xref:System.TimeSpan.TicksPerMillisecond?displayProperty=nameWithType> constant to perform the conversion. For example, to add the number of seconds represented by a specified number of ticks to the <xref:System.DateTimeOffset.Second%2A> component of a <xref:System.DateTimeOffset> value, you can use the expression `dateValue.Second + nTicks/Timespan.TicksPerSecond`.  
   
  Although a <xref:System.DateTimeOffset> value includes an offset, it is not a fully time zone-aware data structure. While an offset from UTC is one characteristic of a time zone, it does not unambiguously identify a time zone. Not only do multiple time zones share the same offset from UTC, but the offset of a single time zone changes if it observes daylight saving time. This means that, as soon as a <xref:System.DateTimeOffset> value is disassociated from its time zone, it can no longer be unambiguously linked back to its original time zone.  
   
@@ -80,7 +86,11 @@
 -   Time manipulation and extraction operations.  
   
      You can extract either the date or the time of a <xref:System.DateTimeOffset> value. You can also retrieve the value of a particular <xref:System.DateTimeOffset> component, such as its year or its month.  
+
+   > [!NOTE]
+   >  If you are working with a ticks value that you want to convert to some other time interval, such as minutes or seconds, you should use the <xref:System.TimeSpan.TicksPerDay?displayProperty=nameWithType>, <xref:System.TimeSpan.TicksPerHour?displayProperty=nameWithType>, <xref:System.TimeSpan.TicksPerMinute?displayProperty=nameWithType>, <xref:System.TimeSpan.TicksPerSecond?displayProperty=nameWithType>, or <xref:System.TimeSpan.TicksPerMillisecond?displayProperty=nameWithType> constant to perform the conversion. For example, to add the number of seconds represented by a specified number of ticks to the <xref:System.DateTimeOffset.Second%2A> component of a <xref:System.DateTimeOffset> value, you can use the expression `dateValue.Second + nTicks/Timespan.TicksPerSecond`.  
   
+
 -   Date and time conversion.  
   
      You can convert any <xref:System.DateTimeOffset> value to another <xref:System.DateTimeOffset> value that represents the same point in time in another time zone. However, a time zone's adjustment rules are applied only in the case of the <xref:System.DateTimeOffset.ToLocalTime%2A> method, which converts a <xref:System.DateTimeOffset> value to the date and time in the local system zone.  
@@ -91,6 +101,8 @@
   
  ]]></format>
     </remarks>
+    <related type="Article" href="~/docs/standard/datetime/choosing-between-datetime.md">Choosing Between DateTime, DateTimeOffset, TimeSpan, and TimeZoneInfo</related>
+    <related type="ExternalDocumentation" href="https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d">Sample: .NET Framework 4 Formatting Utility</related>
   </Docs>
   <Members>
     <MemberGroup MemberName=".ctor">
@@ -111,6 +123,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.DateTime dateTime) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.#ctor(System.DateTime)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DateTimeOffset(DateTime dateTime);" />
+      <MemberSignature Language="F#" Value="new DateTimeOffset : DateTime -&gt; DateTimeOffset" Usage="new System.DateTimeOffset dateTime" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -123,6 +136,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -161,6 +175,7 @@
  -or-  
   
  The UTC date and time that results from applying the offset is later than <see cref="F:System.DateTimeOffset.MaxValue" />.</exception>
+        <related type="Article" href="~/docs/standard/datetime/instantiating-a-datetimeoffset-object.md">Instantiating a DateTimeOffset Object</related>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -168,6 +183,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.DateTime dateTime, valuetype System.TimeSpan offset) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.#ctor(System.DateTime,System.TimeSpan)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DateTimeOffset(DateTime dateTime, TimeSpan offset);" />
+      <MemberSignature Language="F#" Value="new DateTimeOffset : DateTime * TimeSpan -&gt; DateTimeOffset" Usage="new System.DateTimeOffset (dateTime, offset)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -180,6 +196,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -233,6 +250,7 @@
  -or-  
   
  <see cref="P:System.DateTimeOffset.UtcDateTime" /> is less than <see cref="F:System.DateTimeOffset.MinValue" /> or greater than <see cref="F:System.DateTimeOffset.MaxValue" />.</exception>
+        <related type="Article" href="~/docs/standard/datetime/instantiating-a-datetimeoffset-object.md">Instantiating a DateTimeOffset Object</related>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -241,6 +259,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.#ctor(System.Int64,System.TimeSpan)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (ticks As Long, offset As TimeSpan)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DateTimeOffset(long ticks, TimeSpan offset);" />
+      <MemberSignature Language="F#" Value="new DateTimeOffset : int64 * TimeSpan -&gt; DateTimeOffset" Usage="new System.DateTimeOffset (ticks, offset)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -253,6 +272,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -298,6 +318,7 @@
  -or-  
   
  <paramref name="Offset" /> s less than -14 hours or greater than 14 hours.</exception>
+        <related type="Article" href="~/docs/standard/datetime/instantiating-a-datetimeoffset-object.md">Instantiating a DateTimeOffset Object</related>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -306,6 +327,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.TimeSpan)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (year As Integer, month As Integer, day As Integer, hour As Integer, minute As Integer, second As Integer, offset As TimeSpan)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DateTimeOffset(int year, int month, int day, int hour, int minute, int second, TimeSpan offset);" />
+      <MemberSignature Language="F#" Value="new DateTimeOffset : int * int * int * int * int * int * TimeSpan -&gt; DateTimeOffset" Usage="new System.DateTimeOffset (year, month, day, hour, minute, second, offset)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -318,6 +340,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -337,7 +360,7 @@
       <Docs>
         <param name="year">The year (1 through 9999).</param>
         <param name="month">The month (1 through 12).</param>
-        <param name="day">The day (1 through the number of days in <c>month</c>).</param>
+        <param name="day">The day (1 through the number of days in <paramref name="month" />).</param>
         <param name="hour">The hours (0 through 23).</param>
         <param name="minute">The minutes (0 through 59).</param>
         <param name="second">The seconds (0 through 59).</param>
@@ -391,6 +414,7 @@
  -or-  
   
  The <see cref="P:System.DateTimeOffset.UtcDateTime" /> property is earlier than <see cref="F:System.DateTimeOffset.MinValue" /> or later than <see cref="F:System.DateTimeOffset.MaxValue" />.</exception>
+        <related type="Article" href="~/docs/standard/datetime/instantiating-a-datetimeoffset-object.md">Instantiating a DateTimeOffset Object</related>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -399,6 +423,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.TimeSpan)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (year As Integer, month As Integer, day As Integer, hour As Integer, minute As Integer, second As Integer, millisecond As Integer, offset As TimeSpan)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DateTimeOffset(int year, int month, int day, int hour, int minute, int second, int millisecond, TimeSpan offset);" />
+      <MemberSignature Language="F#" Value="new DateTimeOffset : int * int * int * int * int * int * int * TimeSpan -&gt; DateTimeOffset" Usage="new System.DateTimeOffset (year, month, day, hour, minute, second, millisecond, offset)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -411,6 +436,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -431,7 +457,7 @@
       <Docs>
         <param name="year">The year (1 through 9999).</param>
         <param name="month">The month (1 through 12).</param>
-        <param name="day">The day (1 through the number of days in <c>month</c>).</param>
+        <param name="day">The day (1 through the number of days in <paramref name="month" />).</param>
         <param name="hour">The hours (0 through 23).</param>
         <param name="minute">The minutes (0 through 59).</param>
         <param name="second">The seconds (0 through 59).</param>
@@ -490,6 +516,7 @@
  -or-  
   
  The <see cref="P:System.DateTimeOffset.UtcDateTime" /> property is earlier than <see cref="F:System.DateTimeOffset.MinValue" /> or later than <see cref="F:System.DateTimeOffset.MaxValue" />.</exception>
+        <related type="Article" href="~/docs/standard/datetime/instantiating-a-datetimeoffset-object.md">Instantiating a DateTimeOffset Object</related>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -497,9 +524,11 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 year, int32 month, int32 day, int32 hour, int32 minute, int32 second, int32 millisecond, class System.Globalization.Calendar calendar, valuetype System.TimeSpan offset) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Globalization.Calendar,System.TimeSpan)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DateTimeOffset(int year, int month, int day, int hour, int minute, int second, int millisecond, System::Globalization::Calendar ^ calendar, TimeSpan offset);" />
+      <MemberSignature Language="F#" Value="new DateTimeOffset : int * int * int * int * int * int * int * System.Globalization.Calendar * TimeSpan -&gt; DateTimeOffset" Usage="new System.DateTimeOffset (year, month, day, hour, minute, second, millisecond, calendar, offset)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -526,12 +555,12 @@
       <Docs>
         <param name="year">The year.</param>
         <param name="month">The month (1 through 12).</param>
-        <param name="day">The day (1 through the number of days in <c>month</c>).</param>
+        <param name="day">The day (1 through the number of days in <paramref name="month" />).</param>
         <param name="hour">The hours (0 through 23).</param>
         <param name="minute">The minutes (0 through 59).</param>
         <param name="second">The seconds (0 through 59).</param>
         <param name="millisecond">The milliseconds (0 through 999).</param>
-        <param name="calendar">The calendar that is used to interpret <c>year</c>, <c>month</c>, and <c>day</c>.</param>
+        <param name="calendar">The calendar that is used to interpret <paramref name="year" />, <paramref name="month" />, and <paramref name="day" />.</param>
         <param name="offset">The time's offset from Coordinated Universal Time (UTC).</param>
         <summary>Initializes a new instance of the <see cref="T:System.DateTimeOffset" /> structure using the specified year, month, day, hour, minute, second, millisecond, and offset of a specified calendar.</summary>
         <remarks>
@@ -539,9 +568,9 @@
   
 ## Remarks  
  The `year`, `month`, `day`, `hour`, `minute`, `second`, and `millisecond` parameters all reflect values expressed in the calendar specified by the `calendar` parameter. An exception is thrown if these values form a date and time that cannot be expressed by using this calendar.  
-  
-   
-  
+
+[!INCLUDE[japanese-era-note](~/includes/calendar-era.md)]   
+
 ## Examples  
  The following example uses instances of both the <xref:System.Globalization.HebrewCalendar> class and the <xref:System.Globalization.HijriCalendar> class to instantiate a <xref:System.DateTimeOffset> value. That date is then displayed to the console using the respective calendars and the Gregorian calendar.  
   
@@ -592,6 +621,7 @@
  -or-  
   
  The <see cref="P:System.DateTimeOffset.UtcDateTime" /> property is earlier than <see cref="F:System.DateTimeOffset.MinValue" /> or later than <see cref="F:System.DateTimeOffset.MaxValue" />.</exception>
+        <related type="Article" href="~/docs/standard/datetime/instantiating-a-datetimeoffset-object.md">Instantiating a DateTimeOffset Object</related>
       </Docs>
     </Member>
     <Member MemberName="Add">
@@ -599,6 +629,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.DateTimeOffset Add(valuetype System.TimeSpan timeSpan) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.Add(System.TimeSpan)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DateTimeOffset Add(TimeSpan timeSpan);" />
+      <MemberSignature Language="F#" Value="member this.Add : TimeSpan -&gt; DateTimeOffset" Usage="dateTimeOffset.Add timeSpan" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -611,6 +642,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -659,6 +691,7 @@
   
  The resulting <see cref="T:System.DateTimeOffset" /> value is greater than <see cref="F:System.DateTimeOffset.MaxValue" />.</exception>
         <altmember cref="M:System.DateTimeOffset.op_Addition(System.DateTimeOffset,System.TimeSpan)" />
+        <related type="Article" href="~/docs/standard/datetime/performing-arithmetic-operations.md">Performing Arithmetic Operations with Dates and Times</related>
       </Docs>
     </Member>
     <Member MemberName="AddDays">
@@ -667,6 +700,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.AddDays(System.Double)" />
       <MemberSignature Language="VB.NET" Value="Public Function AddDays (days As Double) As DateTimeOffset" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DateTimeOffset AddDays(double days);" />
+      <MemberSignature Language="F#" Value="member this.AddDays : double -&gt; DateTimeOffset" Usage="dateTimeOffset.AddDays days" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -679,6 +713,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -732,6 +767,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.AddHours(System.Double)" />
       <MemberSignature Language="VB.NET" Value="Public Function AddHours (hours As Double) As DateTimeOffset" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DateTimeOffset AddHours(double hours);" />
+      <MemberSignature Language="F#" Value="member this.AddHours : double -&gt; DateTimeOffset" Usage="dateTimeOffset.AddHours hours" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -744,6 +780,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -789,6 +826,7 @@
  -or-  
   
  The resulting <see cref="T:System.DateTimeOffset" /> value is greater than <see cref="F:System.DateTimeOffset.MaxValue" />.</exception>
+        <related type="Article" href="~/docs/standard/datetime/performing-arithmetic-operations.md">Performing Arithmetic Operations with Dates and Times</related>
       </Docs>
     </Member>
     <Member MemberName="AddMilliseconds">
@@ -797,6 +835,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.AddMilliseconds(System.Double)" />
       <MemberSignature Language="VB.NET" Value="Public Function AddMilliseconds (milliseconds As Double) As DateTimeOffset" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DateTimeOffset AddMilliseconds(double milliseconds);" />
+      <MemberSignature Language="F#" Value="member this.AddMilliseconds : double -&gt; DateTimeOffset" Usage="dateTimeOffset.AddMilliseconds milliseconds" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -809,6 +848,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -844,6 +884,7 @@
  -or-  
   
  The resulting <see cref="T:System.DateTimeOffset" /> value is greater than <see cref="F:System.DateTimeOffset.MaxValue" />.</exception>
+        <related type="Article" href="~/docs/standard/datetime/performing-arithmetic-operations.md">Performing Arithmetic Operations with Dates and Times</related>
       </Docs>
     </Member>
     <Member MemberName="AddMinutes">
@@ -852,6 +893,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.AddMinutes(System.Double)" />
       <MemberSignature Language="VB.NET" Value="Public Function AddMinutes (minutes As Double) As DateTimeOffset" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DateTimeOffset AddMinutes(double minutes);" />
+      <MemberSignature Language="F#" Value="member this.AddMinutes : double -&gt; DateTimeOffset" Usage="dateTimeOffset.AddMinutes minutes" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -864,6 +906,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -901,6 +944,7 @@
  -or-  
   
  The resulting <see cref="T:System.DateTimeOffset" /> value is greater than <see cref="F:System.DateTimeOffset.MaxValue" />.</exception>
+        <related type="Article" href="~/docs/standard/datetime/performing-arithmetic-operations.md">Performing Arithmetic Operations with Dates and Times</related>
       </Docs>
     </Member>
     <Member MemberName="AddMonths">
@@ -909,6 +953,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.AddMonths(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Function AddMonths (months As Integer) As DateTimeOffset" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DateTimeOffset AddMonths(int months);" />
+      <MemberSignature Language="F#" Value="member this.AddMonths : int -&gt; DateTimeOffset" Usage="dateTimeOffset.AddMonths months" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -921,6 +966,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -970,6 +1016,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.AddSeconds(System.Double)" />
       <MemberSignature Language="VB.NET" Value="Public Function AddSeconds (seconds As Double) As DateTimeOffset" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DateTimeOffset AddSeconds(double seconds);" />
+      <MemberSignature Language="F#" Value="member this.AddSeconds : double -&gt; DateTimeOffset" Usage="dateTimeOffset.AddSeconds seconds" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -982,6 +1029,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1025,6 +1073,7 @@
  -or-  
   
  The resulting <see cref="T:System.DateTimeOffset" /> value is greater than <see cref="F:System.DateTimeOffset.MaxValue" />.</exception>
+        <related type="Article" href="~/docs/standard/datetime/performing-arithmetic-operations.md">Performing Arithmetic Operations with Dates and Times</related>
       </Docs>
     </Member>
     <Member MemberName="AddTicks">
@@ -1033,6 +1082,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.AddTicks(System.Int64)" />
       <MemberSignature Language="VB.NET" Value="Public Function AddTicks (ticks As Long) As DateTimeOffset" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DateTimeOffset AddTicks(long ticks);" />
+      <MemberSignature Language="F#" Value="member this.AddTicks : int64 -&gt; DateTimeOffset" Usage="dateTimeOffset.AddTicks ticks" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -1045,6 +1095,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1093,6 +1144,7 @@
  -or-  
   
  The resulting <see cref="T:System.DateTimeOffset" /> value is greater than <see cref="F:System.DateTimeOffset.MaxValue" />.</exception>
+        <related type="Article" href="~/docs/standard/datetime/performing-arithmetic-operations.md">Performing Arithmetic Operations with Dates and Times</related>
       </Docs>
     </Member>
     <Member MemberName="AddYears">
@@ -1101,6 +1153,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.AddYears(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Function AddYears (years As Integer) As DateTimeOffset" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DateTimeOffset AddYears(int years);" />
+      <MemberSignature Language="F#" Value="member this.AddYears : int -&gt; DateTimeOffset" Usage="dateTimeOffset.AddYears years" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -1113,6 +1166,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1162,6 +1216,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.Compare(System.DateTimeOffset,System.DateTimeOffset)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Compare (first As DateTimeOffset, second As DateTimeOffset) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static int Compare(DateTimeOffset first, DateTimeOffset second);" />
+      <MemberSignature Language="F#" Value="static member Compare : DateTimeOffset * DateTimeOffset -&gt; int" Usage="System.DateTimeOffset.Compare (first, second)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -1174,6 +1229,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1240,6 +1296,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.CompareTo(System.DateTimeOffset)" />
       <MemberSignature Language="VB.NET" Value="Public Function CompareTo (other As DateTimeOffset) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual int CompareTo(DateTimeOffset other);" />
+      <MemberSignature Language="F#" Value="abstract member CompareTo : DateTimeOffset -&gt; int&#xA;override this.CompareTo : DateTimeOffset -&gt; int" Usage="dateTimeOffset.CompareTo other" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IComparable`1.CompareTo(`0)</InterfaceMember>
@@ -1255,6 +1312,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1314,6 +1372,7 @@
       <MemberSignature Language="DocId" Value="P:System.DateTimeOffset.Date" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Date As DateTime" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property DateTime Date { DateTime get(); };" />
+      <MemberSignature Language="F#" Value="member this.Date : DateTime" Usage="System.DateTimeOffset.Date" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -1326,6 +1385,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1359,6 +1419,8 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="~/docs/standard/base-types/standard-date-and-time-format-strings.md">Standard DateTime Format Strings</related>
+        <related type="Article" href="~/docs/standard/base-types/custom-date-and-time-format-strings.md">Custom DateTime Format Strings</related>
       </Docs>
     </Member>
     <Member MemberName="DateTime">
@@ -1367,6 +1429,7 @@
       <MemberSignature Language="DocId" Value="P:System.DateTimeOffset.DateTime" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DateTime As DateTime" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property DateTime DateTime { DateTime get(); };" />
+      <MemberSignature Language="F#" Value="member this.DateTime : DateTime" Usage="System.DateTimeOffset.DateTime" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -1379,6 +1442,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1413,6 +1477,7 @@
  ]]></format>
         </remarks>
         <altmember cref="P:System.DateTimeOffset.LocalDateTime" />
+        <related type="Article" href="~/docs/standard/datetime/converting-between-datetime-and-offset.md">Converting Between DateTime and DateTimeOffset</related>
       </Docs>
     </Member>
     <Member MemberName="Day">
@@ -1421,6 +1486,7 @@
       <MemberSignature Language="DocId" Value="P:System.DateTimeOffset.Day" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Day As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Day { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Day : int" Usage="System.DateTimeOffset.Day" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -1433,6 +1499,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1478,6 +1545,7 @@
       <MemberSignature Language="DocId" Value="P:System.DateTimeOffset.DayOfWeek" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DayOfWeek As DayOfWeek" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property DayOfWeek DayOfWeek { DayOfWeek get(); };" />
+      <MemberSignature Language="F#" Value="member this.DayOfWeek : DayOfWeek" Usage="System.DateTimeOffset.DayOfWeek" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -1490,6 +1558,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1537,6 +1606,7 @@
       <MemberSignature Language="DocId" Value="P:System.DateTimeOffset.DayOfYear" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DayOfYear As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int DayOfYear { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.DayOfYear : int" Usage="System.DateTimeOffset.DayOfYear" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -1549,6 +1619,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1584,6 +1655,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.Equals(System.DateTimeOffset)" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (other As DateTimeOffset) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Equals(DateTimeOffset other);" />
+      <MemberSignature Language="F#" Value="override this.Equals : DateTimeOffset -&gt; bool" Usage="dateTimeOffset.Equals other" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
@@ -1599,6 +1671,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1651,6 +1724,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="dateTimeOffset.Equals obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -1663,6 +1737,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1713,6 +1788,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.Equals(System.DateTimeOffset,System.DateTimeOffset)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Equals (first As DateTimeOffset, second As DateTimeOffset) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool Equals(DateTimeOffset first, DateTimeOffset second);" />
+      <MemberSignature Language="F#" Value="static member Equals : DateTimeOffset * DateTimeOffset -&gt; bool" Usage="System.DateTimeOffset.Equals (first, second)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -1725,6 +1801,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1775,6 +1852,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.EqualsExact(System.DateTimeOffset)" />
       <MemberSignature Language="VB.NET" Value="Public Function EqualsExact (other As DateTimeOffset) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool EqualsExact(DateTimeOffset other);" />
+      <MemberSignature Language="F#" Value="member this.EqualsExact : DateTimeOffset -&gt; bool" Usage="dateTimeOffset.EqualsExact other" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -1787,6 +1865,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1832,6 +1911,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.FromFileTime(System.Int64)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function FromFileTime (fileTime As Long) As DateTimeOffset" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static DateTimeOffset FromFileTime(long fileTime);" />
+      <MemberSignature Language="F#" Value="static member FromFileTime : int64 -&gt; DateTimeOffset" Usage="System.DateTimeOffset.FromFileTime fileTime" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -1844,6 +1924,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1895,6 +1976,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.FromUnixTimeMilliseconds(System.Int64)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function FromUnixTimeMilliseconds (milliseconds As Long) As DateTimeOffset" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static DateTimeOffset FromUnixTimeMilliseconds(long milliseconds);" />
+      <MemberSignature Language="F#" Value="static member FromUnixTimeMilliseconds : int64 -&gt; DateTimeOffset" Usage="System.DateTimeOffset.FromUnixTimeMilliseconds milliseconds" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -1946,6 +2028,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.FromUnixTimeSeconds(System.Int64)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function FromUnixTimeSeconds (seconds As Long) As DateTimeOffset" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static DateTimeOffset FromUnixTimeSeconds(long seconds);" />
+      <MemberSignature Language="F#" Value="static member FromUnixTimeSeconds : int64 -&gt; DateTimeOffset" Usage="System.DateTimeOffset.FromUnixTimeSeconds seconds" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -1997,6 +2080,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="dateTimeOffset.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -2009,6 +2093,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2032,6 +2117,7 @@
       <MemberSignature Language="DocId" Value="P:System.DateTimeOffset.Hour" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Hour As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Hour { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Hour : int" Usage="System.DateTimeOffset.Hour" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -2044,6 +2130,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2089,6 +2176,7 @@
       <MemberSignature Language="DocId" Value="P:System.DateTimeOffset.LocalDateTime" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LocalDateTime As DateTime" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property DateTime LocalDateTime { DateTime get(); };" />
+      <MemberSignature Language="F#" Value="member this.LocalDateTime : DateTime" Usage="System.DateTimeOffset.LocalDateTime" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -2101,6 +2189,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2147,6 +2236,7 @@
       <MemberSignature Language="DocId" Value="F:System.DateTimeOffset.MaxValue" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly MaxValue As DateTimeOffset " />
       <MemberSignature Language="C++ CLI" Value="public: static initonly DateTimeOffset MaxValue;" />
+      <MemberSignature Language="F#" Value=" staticval mutable MaxValue : DateTimeOffset" Usage="System.DateTimeOffset.MaxValue" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -2159,6 +2249,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2193,6 +2284,7 @@
       <MemberSignature Language="DocId" Value="P:System.DateTimeOffset.Millisecond" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Millisecond As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Millisecond { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Millisecond : int" Usage="System.DateTimeOffset.Millisecond" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -2205,6 +2297,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2244,6 +2337,7 @@
       <MemberSignature Language="DocId" Value="P:System.DateTimeOffset.Minute" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Minute As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Minute { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Minute : int" Usage="System.DateTimeOffset.Minute" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -2256,6 +2350,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2301,6 +2396,7 @@
       <MemberSignature Language="DocId" Value="F:System.DateTimeOffset.MinValue" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly MinValue As DateTimeOffset " />
       <MemberSignature Language="C++ CLI" Value="public: static initonly DateTimeOffset MinValue;" />
+      <MemberSignature Language="F#" Value=" staticval mutable MinValue : DateTimeOffset" Usage="System.DateTimeOffset.MinValue" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -2313,6 +2409,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2344,6 +2441,7 @@
       <MemberSignature Language="DocId" Value="P:System.DateTimeOffset.Month" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Month As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Month { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Month : int" Usage="System.DateTimeOffset.Month" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -2356,6 +2454,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2401,6 +2500,7 @@
       <MemberSignature Language="DocId" Value="P:System.DateTimeOffset.Now" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Now As DateTimeOffset" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property DateTimeOffset Now { DateTimeOffset get(); };" />
+      <MemberSignature Language="F#" Value="member this.Now : DateTimeOffset" Usage="System.DateTimeOffset.Now" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -2413,6 +2513,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2456,6 +2557,7 @@
       <MemberSignature Language="DocId" Value="P:System.DateTimeOffset.Offset" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Offset As TimeSpan" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property TimeSpan Offset { TimeSpan get(); };" />
+      <MemberSignature Language="F#" Value="member this.Offset : TimeSpan" Usage="System.DateTimeOffset.Offset" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -2468,6 +2570,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2502,10 +2605,15 @@
       </Docs>
     </Member>
     <Member MemberName="op_Addition">
-      <MemberSignature Language="C#" Value="public static DateTimeOffset operator + (DateTimeOffset dateTimeOffset, TimeSpan timeSpan);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.DateTimeOffset op_Addition(valuetype System.DateTimeOffset dateTimeOffset, valuetype System.TimeSpan timeSpan) cil managed" />
+      <MemberSignature Language="C#" Value="public static DateTimeOffset operator + (DateTimeOffset dateTimeOffset, TimeSpan timeSpan);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.DateTimeOffset op_Addition(valuetype System.DateTimeOffset dateTimeOffset, valuetype System.TimeSpan timeSpan) cil managed" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2" />
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.op_Addition(System.DateTimeOffset,System.TimeSpan)" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; static DateTimeOffset operator +(DateTimeOffset dateTimeOffset, TimeSpan timeSpan);" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static DateTimeOffset operator +(DateTimeOffset dateTimeOffset, TimeSpan timeSpan);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2" />
+      <MemberSignature Language="F#" Value="static member ( + ) : DateTimeOffset * TimeSpan -&gt; DateTimeOffset" Usage="dateTimeOffset + timeSpan" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0" />
+      <MemberSignature Language="C#" Value="public static DateTimeOffset operator + (DateTimeOffset dateTimeTz, TimeSpan timeSpan);" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.DateTimeOffset op_Addition(valuetype System.DateTimeOffset dateTimeTz, valuetype System.TimeSpan timeSpan) cil managed" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static DateTimeOffset operator +(DateTimeOffset dateTimeTz, TimeSpan timeSpan);" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5" />
+      <MemberSignature Language="F#" Value="static member ( + ) : DateTimeOffset * TimeSpan -&gt; DateTimeOffset" Usage="dateTimeTz + timeSpan" FrameworkAlternate="netcore-2.2;netframework-2.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -2518,6 +2626,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2529,11 +2638,13 @@
         <ReturnType>System.DateTimeOffset</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="dateTimeOffset" Type="System.DateTimeOffset" />
-        <Parameter Name="timeSpan" Type="System.TimeSpan" />
+        <Parameter Name="dateTimeOffset" Type="System.DateTimeOffset" Index="0" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2" />
+        <Parameter Name="dateTimeTz" Type="System.DateTimeOffset" Index="0" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5" />
+        <Parameter Name="timeSpan" Type="System.TimeSpan" Index="1" />
       </Parameters>
       <Docs>
         <param name="dateTimeOffset">The object to add the time interval to.</param>
+        <param name="dateTimeTz">The object to add the time interval to.</param>
         <param name="timeSpan">The time interval to add.</param>
         <summary>Adds a specified time interval to a <see cref="T:System.DateTimeOffset" /> object that has a specified date and time, and yields a <see cref="T:System.DateTimeOffset" /> object that has new a date and time.</summary>
         <returns>An object whose value is the sum of the values of <paramref name="dateTimeTz" /> and <paramref name="timeSpan" />.</returns>
@@ -2556,6 +2667,7 @@
   
  The resulting <see cref="T:System.DateTimeOffset" /> value is greater than <see cref="F:System.DateTimeOffset.MaxValue" />.</exception>
         <altmember cref="M:System.DateTimeOffset.Add(System.TimeSpan)" />
+        <related type="Article" href="~/docs/standard/datetime/performing-arithmetic-operations.md">Performing Arithmetic Operations with Dates and Times</related>
       </Docs>
     </Member>
     <Member MemberName="op_Equality">
@@ -2564,6 +2676,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.op_Equality(System.DateTimeOffset,System.DateTimeOffset)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As DateTimeOffset, right As DateTimeOffset) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator ==(DateTimeOffset left, DateTimeOffset right);" />
+      <MemberSignature Language="F#" Value="static member ( = ) : DateTimeOffset * DateTimeOffset -&gt; bool" Usage="left = right" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -2576,6 +2689,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2623,6 +2737,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.op_GreaterThan(System.DateTimeOffset,System.DateTimeOffset)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator &gt; (left As DateTimeOffset, right As DateTimeOffset) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator &gt;(DateTimeOffset left, DateTimeOffset right);" />
+      <MemberSignature Language="F#" Value="static member ( &gt; ) : DateTimeOffset * DateTimeOffset -&gt; bool" Usage="left &gt; right" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -2635,6 +2750,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2683,6 +2799,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.op_GreaterThanOrEqual(System.DateTimeOffset,System.DateTimeOffset)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator &gt;= (left As DateTimeOffset, right As DateTimeOffset) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator &gt;=(DateTimeOffset left, DateTimeOffset right);" />
+      <MemberSignature Language="F#" Value="static member ( &gt;= ) : DateTimeOffset * DateTimeOffset -&gt; bool" Usage="left &gt;= right" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -2695,6 +2812,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2742,6 +2860,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.DateTimeOffset op_Implicit(valuetype System.DateTime dateTime) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.op_Implicit(System.DateTime)~System.DateTimeOffset" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static operator DateTimeOffset(DateTime dateTime);" />
+      <MemberSignature Language="F#" Value="static member op_Implicit : DateTime -&gt; DateTimeOffset" Usage="System.DateTimeOffset.op_Implicit dateTime" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -2754,6 +2873,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2801,6 +2921,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.op_Inequality(System.DateTimeOffset,System.DateTimeOffset)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As DateTimeOffset, right As DateTimeOffset) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator !=(DateTimeOffset left, DateTimeOffset right);" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : DateTimeOffset * DateTimeOffset -&gt; bool" Usage="System.DateTimeOffset.op_Inequality (left, right)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -2813,6 +2934,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2863,6 +2985,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.op_LessThan(System.DateTimeOffset,System.DateTimeOffset)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator &lt; (left As DateTimeOffset, right As DateTimeOffset) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator &lt;(DateTimeOffset left, DateTimeOffset right);" />
+      <MemberSignature Language="F#" Value="static member ( &lt; ) : DateTimeOffset * DateTimeOffset -&gt; bool" Usage="left &lt; right" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -2875,6 +2998,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2923,6 +3047,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.op_LessThanOrEqual(System.DateTimeOffset,System.DateTimeOffset)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator &lt;= (left As DateTimeOffset, right As DateTimeOffset) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator &lt;=(DateTimeOffset left, DateTimeOffset right);" />
+      <MemberSignature Language="F#" Value="static member ( &lt;= ) : DateTimeOffset * DateTimeOffset -&gt; bool" Usage="left &lt;= right" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -2935,6 +3060,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2996,6 +3122,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.op_Subtraction(System.DateTimeOffset,System.DateTimeOffset)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator - (left As DateTimeOffset, right As DateTimeOffset) As TimeSpan" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static TimeSpan operator -(DateTimeOffset left, DateTimeOffset right);" />
+      <MemberSignature Language="F#" Value="static member ( - ) : DateTimeOffset * DateTimeOffset -&gt; TimeSpan" Usage="left - right" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -3008,6 +3135,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -3041,13 +3169,19 @@
  The equivalent method for this operator is <xref:System.DateTimeOffset.Subtract%28System.TimeSpan%29?displayProperty=nameWithType>.]]></format>
         </remarks>
         <altmember cref="M:System.DateTimeOffset.Subtract(System.DateTimeOffset)" />
+        <related type="Article" href="~/docs/standard/datetime/performing-arithmetic-operations.md">Performing Arithmetic Operations with Dates and Times</related>
       </Docs>
     </Member>
     <Member MemberName="op_Subtraction">
-      <MemberSignature Language="C#" Value="public static DateTimeOffset operator - (DateTimeOffset dateTimeOffset, TimeSpan timeSpan);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.DateTimeOffset op_Subtraction(valuetype System.DateTimeOffset dateTimeOffset, valuetype System.TimeSpan timeSpan) cil managed" />
+      <MemberSignature Language="C#" Value="public static DateTimeOffset operator - (DateTimeOffset dateTimeOffset, TimeSpan timeSpan);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.DateTimeOffset op_Subtraction(valuetype System.DateTimeOffset dateTimeOffset, valuetype System.TimeSpan timeSpan) cil managed" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2" />
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.op_Subtraction(System.DateTimeOffset,System.TimeSpan)" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; static DateTimeOffset operator -(DateTimeOffset dateTimeOffset, TimeSpan timeSpan);" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static DateTimeOffset operator -(DateTimeOffset dateTimeOffset, TimeSpan timeSpan);" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2" />
+      <MemberSignature Language="F#" Value="static member ( - ) : DateTimeOffset * TimeSpan -&gt; DateTimeOffset" Usage="dateTimeOffset - timeSpan" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0" />
+      <MemberSignature Language="C#" Value="public static DateTimeOffset operator - (DateTimeOffset dateTimeTz, TimeSpan timeSpan);" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.DateTimeOffset op_Subtraction(valuetype System.DateTimeOffset dateTimeTz, valuetype System.TimeSpan timeSpan) cil managed" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static DateTimeOffset operator -(DateTimeOffset dateTimeTz, TimeSpan timeSpan);" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5" />
+      <MemberSignature Language="F#" Value="static member ( - ) : DateTimeOffset * TimeSpan -&gt; DateTimeOffset" Usage="dateTimeTz - timeSpan" FrameworkAlternate="netcore-2.2;netframework-2.0" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -3060,6 +3194,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -3071,11 +3206,13 @@
         <ReturnType>System.DateTimeOffset</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="dateTimeOffset" Type="System.DateTimeOffset" />
-        <Parameter Name="timeSpan" Type="System.TimeSpan" />
+        <Parameter Name="dateTimeOffset" Type="System.DateTimeOffset" Index="0" FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.0;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2" />
+        <Parameter Name="dateTimeTz" Type="System.DateTimeOffset" Index="0" FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5" />
+        <Parameter Name="timeSpan" Type="System.TimeSpan" Index="1" />
       </Parameters>
       <Docs>
         <param name="dateTimeOffset">The date and time object to subtract from.</param>
+        <param name="dateTimeTz">The date and time object to subtract from.</param>
         <param name="timeSpan">The time interval to subtract.</param>
         <summary>Subtracts a specified time interval from a specified date and time, and yields a new date and time.</summary>
         <returns>An object that is equal to the value of <paramref name="dateTimeOffset" /> minus <paramref name="timeSpan" />.</returns>
@@ -3094,6 +3231,7 @@
         </remarks>
         <exception cref="T:System.ArgumentOutOfRangeException">The resulting <see cref="T:System.DateTimeOffset" /> value is less than <see cref="F:System.DateTimeOffset.MinValue" /> or greater than <see cref="F:System.DateTimeOffset.MaxValue" />.</exception>
         <altmember cref="M:System.DateTimeOffset.Subtract(System.TimeSpan)" />
+        <related type="Article" href="~/docs/standard/datetime/performing-arithmetic-operations.md">Performing Arithmetic Operations with Dates and Times</related>
       </Docs>
     </Member>
     <MemberGroup MemberName="Parse">
@@ -3107,6 +3245,13 @@
       </AssemblyInfo>
       <Docs>
         <summary>Converts the specified string representation of a date and time to its <see cref="T:System.DateTimeOffset" /> equivalent.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+
+[!INCLUDE[japanese-era-note](~/includes/calendar-era.md)]        
+
+         ]]></format>
+        </remarks>
       </Docs>
     </MemberGroup>
     <Member MemberName="Parse">
@@ -3115,6 +3260,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.Parse(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Parse (input As String) As DateTimeOffset" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static DateTimeOffset Parse(System::String ^ input);" />
+      <MemberSignature Language="F#" Value="static member Parse : string -&gt; DateTimeOffset" Usage="System.DateTimeOffset.Parse input" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -3127,6 +3273,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -3134,6 +3281,11 @@
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.DateTimeOffset</ReturnType>
       </ReturnValue>
@@ -3189,6 +3341,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.Parse(System.String,System.IFormatProvider)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Parse (input As String, formatProvider As IFormatProvider) As DateTimeOffset" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static DateTimeOffset Parse(System::String ^ input, IFormatProvider ^ formatProvider);" />
+      <MemberSignature Language="F#" Value="static member Parse : string * IFormatProvider -&gt; DateTimeOffset" Usage="System.DateTimeOffset.Parse (input, formatProvider)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -3201,6 +3354,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -3217,7 +3371,7 @@
       </Parameters>
       <Docs>
         <param name="input">A string that contains a date and time to convert.</param>
-        <param name="formatProvider">An object that provides culture-specific format information about <c>input</c>.</param>
+        <param name="formatProvider">An object that provides culture-specific format information about <paramref name="input" />.</param>
         <summary>Converts the specified string representation of a date and time to its <see cref="T:System.DateTimeOffset" /> equivalent using the specified culture-specific format information.</summary>
         <returns>An object that is equivalent to the date and time that is contained in <paramref name="input" />, as specified by <paramref name="formatProvider" />.</returns>
         <remarks>
@@ -3272,10 +3426,17 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.DateTimeOffset Parse(valuetype System.ReadOnlySpan`1&lt;char&gt; input, class System.IFormatProvider formatProvider, valuetype System.Globalization.DateTimeStyles styles) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider,System.Globalization.DateTimeStyles)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Parse (input As ReadOnlySpan(Of Char), Optional formatProvider As IFormatProvider = null, Optional styles As DateTimeStyles = System.Globalization.DateTimeStyles.None) As DateTimeOffset" />
+      <MemberSignature Language="F#" Value="static member Parse : ReadOnlySpan&lt;char&gt; * IFormatProvider * System.Globalization.DateTimeStyles -&gt; DateTimeOffset" Usage="System.DateTimeOffset.Parse (input, formatProvider, styles)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTimeOffset</ReturnType>
@@ -3300,6 +3461,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.Parse(System.String,System.IFormatProvider,System.Globalization.DateTimeStyles)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Parse (input As String, formatProvider As IFormatProvider, styles As DateTimeStyles) As DateTimeOffset" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static DateTimeOffset Parse(System::String ^ input, IFormatProvider ^ formatProvider, System::Globalization::DateTimeStyles styles);" />
+      <MemberSignature Language="F#" Value="static member Parse : string * IFormatProvider * System.Globalization.DateTimeStyles -&gt; DateTimeOffset" Usage="System.DateTimeOffset.Parse (input, formatProvider, styles)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -3312,6 +3474,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -3319,6 +3482,11 @@
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.DateTimeOffset</ReturnType>
       </ReturnValue>
@@ -3329,8 +3497,8 @@
       </Parameters>
       <Docs>
         <param name="input">A string that contains a date and time to convert.</param>
-        <param name="formatProvider">An object that provides culture-specific format information about <c>input</c>.</param>
-        <param name="styles">A bitwise combination of enumeration values that indicates the permitted format of <c>input</c>. A typical value to specify is <see cref="F:System.Globalization.DateTimeStyles.None" />.</param>
+        <param name="formatProvider">An object that provides culture-specific format information about <paramref name="input" />.</param>
+        <param name="styles">A bitwise combination of enumeration values that indicates the permitted format of <paramref name="input" />. A typical value to specify is <see cref="F:System.Globalization.DateTimeStyles.None" />.</param>
         <summary>Converts the specified string representation of a date and time to its <see cref="T:System.DateTimeOffset" /> equivalent using the specified culture-specific format information and formatting style.</summary>
         <returns>An object that is equivalent to the date and time that is contained in <paramref name="input" /> as specified by <paramref name="formatProvider" /> and <paramref name="styles" />.</returns>
         <remarks>
@@ -3421,6 +3589,11 @@
       </AssemblyInfo>
       <Docs>
         <summary>Converts the specified string representation of a date and time to its <see cref="T:System.DateTimeOffset" /> equivalent. The format of the string representation must match a specified format exactly.</summary>
+        <format type="text/markdown"><![CDATA[  
+
+[!INCLUDE[japanese-era-note](~/includes/calendar-era.md)]        
+
+         ]]></format>
       </Docs>
     </MemberGroup>
     <Member MemberName="ParseExact">
@@ -3429,6 +3602,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.ParseExact(System.String,System.String,System.IFormatProvider)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function ParseExact (input As String, format As String, formatProvider As IFormatProvider) As DateTimeOffset" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static DateTimeOffset ParseExact(System::String ^ input, System::String ^ format, IFormatProvider ^ formatProvider);" />
+      <MemberSignature Language="F#" Value="static member ParseExact : string * string * IFormatProvider -&gt; DateTimeOffset" Usage="System.DateTimeOffset.ParseExact (input, format, formatProvider)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -3441,6 +3615,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -3458,8 +3633,8 @@
       </Parameters>
       <Docs>
         <param name="input">A string that contains a date and time to convert.</param>
-        <param name="format">A format specifier that defines the expected format of <c>input</c>.</param>
-        <param name="formatProvider">An object that supplies culture-specific formatting information about <c>input</c>.</param>
+        <param name="format">A format specifier that defines the expected format of <paramref name="input" />.</param>
+        <param name="formatProvider">An object that supplies culture-specific formatting information about <paramref name="input" />.</param>
         <summary>Converts the specified string representation of a date and time to its <see cref="T:System.DateTimeOffset" /> equivalent using the specified format and culture-specific format information. The format of the string representation must match the specified format exactly.</summary>
         <returns>An object that is equivalent to the date and time that is contained in <paramref name="input" /> as specified by <paramref name="format" /> and <paramref name="formatProvider" />.</returns>
         <remarks>
@@ -3487,7 +3662,13 @@
   
  [!code-csharp[System.DateTimeOffset.ParseExact#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.ParseExact/cs/ParseExact.cs#1)]
  [!code-vb[System.DateTimeOffset.ParseExact#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.ParseExact/vb/ParseExact.vb#1)]  
-  
+
+The following example parses an array of strings that are expected to conform to [ISO 8601](~/docs/standard/base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier). As the output from the example shows, strings with leading or trailing spaces fail to parse successfully, as do strings with date and time elements that are out of range.
+
+[!code-csharp[Parsing an ISO 8601 string](~/samples/snippets/csharp/api/system/datetimeoffset/parseexact/parseexact-iso8601.cs)]
+[!code-vb[Parsing an ISO 8601 string](~/samples/snippets/visualbasic/api/system/datetimeoffset/parseexact/parseexact-iso8601.vb)]
+
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentException">The offset is greater than 14 hours or less than -14 hours.</exception>
@@ -3515,6 +3696,8 @@
           <para>In the [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)], the <see cref="Overload:System.DateTimeOffset.ParseExact" /> method throws a <see cref="T:System.FormatException" /> if the string to be parsed contains an hour component and an AM/PM designator that are not in agreement. In the [!INCLUDE[net_v35_short](~/includes/net-v35-short-md.md)] and earlier versions, the AM/PM designator is ignored.</para>
         </block>
         <altmember cref="Overload:System.DateTimeOffset.TryParseExact" />
+        <related type="Article" href="~/docs/standard/base-types/standard-date-and-time-format-strings.md">Standard Date and Time Format Strings</related>
+        <related type="Article" href="~/docs/standard/base-types/custom-date-and-time-format-strings.md">Custom Date and Time Format Strings</related>
       </Docs>
     </Member>
     <Member MemberName="ParseExact">
@@ -3522,10 +3705,17 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.DateTimeOffset ParseExact(valuetype System.ReadOnlySpan`1&lt;char&gt; input, valuetype System.ReadOnlySpan`1&lt;char&gt; format, class System.IFormatProvider formatProvider, valuetype System.Globalization.DateTimeStyles styles) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.ParseExact(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char},System.IFormatProvider,System.Globalization.DateTimeStyles)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function ParseExact (input As ReadOnlySpan(Of Char), format As ReadOnlySpan(Of Char), formatProvider As IFormatProvider, Optional styles As DateTimeStyles = System.Globalization.DateTimeStyles.None) As DateTimeOffset" />
+      <MemberSignature Language="F#" Value="static member ParseExact : ReadOnlySpan&lt;char&gt; * ReadOnlySpan&lt;char&gt; * IFormatProvider * System.Globalization.DateTimeStyles -&gt; DateTimeOffset" Usage="System.DateTimeOffset.ParseExact (input, format, formatProvider, styles)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTimeOffset</ReturnType>
@@ -3537,13 +3727,46 @@
         <Parameter Name="styles" Type="System.Globalization.DateTimeStyles" />
       </Parameters>
       <Docs>
-        <param name="input">To be added.</param>
-        <param name="format">To be added.</param>
-        <param name="formatProvider">To be added.</param>
-        <param name="styles">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="input">A character span that represents a date and time.</param>
+        <param name="format">A character span that contains a format specifier that defines the expected format of <paramref name="input" />.</param>
+        <param name="formatProvider">An object that provides culture-specific formatting information about <paramref name="input" />.</param>
+        <param name="styles">A bitwise combination of enumeration values that indicates the permitted format of <paramref name="input" />.</param>
+        <summary>Converts a character span that represents a date and time to its <see cref="T:System.DateTimeOffset" /> equivalent using the specified format, culture-specific format information, and style. The format of the date and time representation must match the specified format exactly.</summary>
+        <returns>An object that is equivalent to the date and time that is contained in the <paramref name="input" /> parameter, as specified by the <paramref name="format" />, <paramref name="formatProvider" />, and <paramref name="styles" /> parameters.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+
+This method parses a character span that represents a date, which must be in the format defined by the `format` parameter. It also requires that the \<Date>, \<Time>, and \<Offset> elements of the string representation of a date and time appear in the order specified by `format`. If `input` does not match the `format` pattern, the method throws a <xref:System.FormatException>.  In contrast, the <xref:System.DateTimeOffset.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider,System.Globalization.DateTimeStyles)?displayProperty=nameWithType> method parses the string representation of a date in any one of the formats recognized by the format provider's <xref:System.Globalization.DateTimeFormatInfo> object. <xref:System.DateTimeOffset.Parse%2A> also allows the \<Date>, \<Time>, and \<Offset> elements of the string representation of a date and time to appear in any order.  
+  
+ The `format` parameter is a character span that contains either a single-character standard format specifier or one or more custom format specifiers that define the required format of the `input` parameter. For details about valid formatting codes, see [Standard Date and Time Format Strings](~/docs/standard/base-types/standard-date-and-time-format-strings.md) and [Custom Date and Time Format Strings](~/docs/standard/base-types/custom-date-and-time-format-strings.md). If `format` includes the `z`, `zz`, or `zzz` custom format specifiers to indicate that an offset must be present in `input`, that offset must include either a negative sign or a positive sign. If the sign is missing, the method throws a <xref:System.FormatException>.  
+  
+ If `format` requires that `input` contain a date but not a time, the resulting <xref:System.DateTimeOffset> object is assigned a time of midnight (0:00:00). If `format` requires that `input` contain a time but not a date, the resulting <xref:System.DateTimeOffset> object is assigned the current date on the local system. If `format` does not require that `input` contain an offset, the resulting <xref:System.DateTimeOffset> object is assigned the time zone offset of the local system.  
+  
+ The particular date and time symbols and strings used in `input` are defined by the `formatProvider` parameter, as is the precise format of `input` if `format` is a standard format specifier. The `formatProvider` parameter can be either of the following:  
+  
+-   A <xref:System.Globalization.CultureInfo> object that represents the culture based on which `input` is interpreted. The <xref:System.Globalization.DateTimeFormatInfo> object returned by its <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> property defines the symbols and formatting in `input`.  
+  
+-   A <xref:System.Globalization.DateTimeFormatInfo> object that defines the format of date and time data.  
+  
+ If `formatprovider` is `null`, the <xref:System.Globalization.CultureInfo> object that corresponds to the current culture is used.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">The offset is greater than 14 hours or less than -14 hours.  
+-or-  
+The <paramref name="styles" /> parameter includes an unsupported value.  
+-or-  
+The <paramref name="styles" /> parameter contains <see cref="T:System.Globalization.DateTimeStyles" /> values that cannot be used together.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="input" /> is an empty character span.  
+ -or-  
+ <paramref name="input" /> does not contain a valid string representation of a date and time.  
+ -or-  
+ <paramref name="format" /> is an empty character span.  
+ -or-  
+ The hour component and the AM/PM designator in <paramref name="input" /> do not agree.</exception>
       </Docs>
     </Member>
     <Member MemberName="ParseExact">
@@ -3551,10 +3774,17 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.DateTimeOffset ParseExact(valuetype System.ReadOnlySpan`1&lt;char&gt; input, string[] formats, class System.IFormatProvider formatProvider, valuetype System.Globalization.DateTimeStyles styles) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.ParseExact(System.ReadOnlySpan{System.Char},System.String[],System.IFormatProvider,System.Globalization.DateTimeStyles)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function ParseExact (input As ReadOnlySpan(Of Char), formats As String(), formatProvider As IFormatProvider, Optional styles As DateTimeStyles = System.Globalization.DateTimeStyles.None) As DateTimeOffset" />
+      <MemberSignature Language="F#" Value="static member ParseExact : ReadOnlySpan&lt;char&gt; * string[] * IFormatProvider * System.Globalization.DateTimeStyles -&gt; DateTimeOffset" Usage="System.DateTimeOffset.ParseExact (input, formats, formatProvider, styles)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTimeOffset</ReturnType>
@@ -3566,13 +3796,63 @@
         <Parameter Name="styles" Type="System.Globalization.DateTimeStyles" />
       </Parameters>
       <Docs>
-        <param name="input">To be added.</param>
-        <param name="formats">To be added.</param>
-        <param name="formatProvider">To be added.</param>
-        <param name="styles">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="input">A character span that contains a date and time to convert.</param>
+        <param name="formats">An array of format specifiers that define the expected formats of <paramref name="input" />.</param>
+        <param name="formatProvider">An object that supplies culture-specific formatting information about <paramref name="input" />.</param>
+        <param name="styles">A bitwise combination of enumeration values that indicates the permitted format of <paramref name="input" />.</param>
+        <summary>Converts a character span that contains the string representation of a date and time to its <see cref="T:System.DateTimeOffset" /> equivalent using the specified formats, culture-specific format information, and style. The format of the date and time representation must match one of the specified formats exactly.</summary>
+        <returns>An object that is equivalent to the date and time that is contained in the <paramref name="input" /> parameter, as specified by the <paramref name="formats" />, <paramref name="formatProvider" />, and <paramref name="styles" /> parameters.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ 
+This method parses a character span representing a date that matches any one of the patterns assigned to the `formats` parameter. If `input` does not match any one of these patterns with any of the variations defined by the `styles` parameter, the method throws a <xref:System.FormatException>. Aside from comparing `input` to multiple formatting patterns, this overload behaves identically to the <xref:System.DateTimeOffset.ParseExact(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char},System.IFormatProvider,System.Globalization.DateTimeStyles)?displayProperty=nameWithType> method.  
+  
+ The `formats` parameter is a string array whose elements contain either a single standard format specifier or one or more custom format specifiers that define the possible pattern of the `input` parameter. When the method is called, `input` must match one of these patterns. For details about valid formatting codes, see [Standard Date and Time Format Strings](~/docs/standard/base-types/standard-date-and-time-format-strings.md) and [Custom Date and Time Format Strings](~/docs/standard/base-types/custom-date-and-time-format-strings.md). If the matched element in `formats` includes the `z`, `zz`, or `zzz` custom format specifiers to indicate that an offset must be present in `input`, that offset must include either a negative sign or a positive sign. If the sign is missing, the method throws a <xref:System.FormatException>.  
+  
+> [!IMPORTANT]
+>  Using the `formats` parameter of this overload to specify multiple formats can help reduce the frustration many users experience when they enter dates and times. In particular, the ability to define multiple input patterns enables an application to handle date and time representations that can either include or lack leading zeros in months, days, hours, minutes, and seconds.
+  
+ If the matched element in `formats` requires that `input` contain a date but not a time, the resulting <xref:System.DateTimeOffset> object is assigned a time of midnight (0:00:00). If the matched element in `formats` requires that `input` contain a time but not a date, the resulting <xref:System.DateTimeOffset> object is assigned the current date on the local system. If the matched element in `formats` does not require that `input` contain an offset, the offset of the resulting <xref:System.DateTimeOffset> object depends on the value of the `styles` parameter. If `styles` includes <xref:System.Globalization.DateTimeStyles.AssumeLocal>, the offset of the local time zone is assigned to the <xref:System.DateTimeOffset> object. If `styles` includes <xref:System.Globalization.DateTimeStyles.AssumeUniversal>, the Coordinated Universal Time (UTC) offset, or +00:00, is assigned to the <xref:System.DateTimeOffset> object. If neither value is specified, the offset of the local time zone is used.  
+  
+ The particular date and time symbols and strings used in `input` are defined by the `formatProvider` parameter. The same is true for the precise format of `input`, if the matching element of `formats` is a standard format specifier string. The `formatProvider` parameter can be either of the following:  
+  
+-   A <xref:System.Globalization.CultureInfo> object that represents the culture based on which `input` is interpreted. The <xref:System.Globalization.DateTimeFormatInfo> object returned by the <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> property defines the symbols and formatting in `input`.  
+  
+-   A <xref:System.Globalization.DateTimeFormatInfo> object that defines the format of date and time data.  
+  
+ If `formatprovider` is `null`, the <xref:System.Globalization.CultureInfo> object that corresponds to the current culture is used.  
+  
+ The `styles` parameter defines whether white space is permitted in the input string, indicates how strings without an explicit offset component are parsed, and supports UTC conversion as part of the parsing operation. All members of the <xref:System.Globalization.DateTimeStyles> enumeration are supported except <xref:System.Globalization.DateTimeStyles.NoCurrentDateDefault>. The following table lists the effect of each supported member.  
+  
+|`DateTimeStyles` member|Behavior|  
+|-----------------------------|--------------|  
+|<xref:System.Globalization.DateTimeStyles.AdjustToUniversal>|Parses `input` and, if necessary, converts it to UTC. It is equivalent to parsing a string, and then calling the <xref:System.DateTimeOffset.ToUniversalTime%2A?displayProperty=nameWithType> method of the returned <xref:System.DateTimeOffset> object.|  
+|<xref:System.Globalization.DateTimeStyles.AssumeLocal>|If the matched element in `formats` does not require that `input` contain an offset value, the returned <xref:System.DateTimeOffset> object is given the offset of the local time zone. This is the default value.|  
+|<xref:System.Globalization.DateTimeStyles.AssumeUniversal>|If the matched element in `formats` does not require that `input` contain an offset value, the returned <xref:System.DateTimeOffset> object is given the UTC offset (+00:00).|  
+|<xref:System.Globalization.DateTimeStyles.AllowInnerWhite>|Allows `input` to include inner white space not specified by `format`. Extra white space can appear between date and time components and within individual components (except the offset), and is ignored when parsing the string.|  
+|<xref:System.Globalization.DateTimeStyles.AllowLeadingWhite>|Allows `input` to include leading spaces not specified by `formats`. These are ignored when parsing the string.|  
+|<xref:System.Globalization.DateTimeStyles.AllowTrailingWhite>|Allows `input` to include trailing spaces not specified by `formats`. These are ignored when parsing the string.|  
+|<xref:System.Globalization.DateTimeStyles.AllowWhiteSpaces>|Allows `input` to include leading, trailing, and inner spaces not specified by `formats`. All extra white-space characters not specified in the matched element in `formats` are ignored when parsing the string.|  
+|<xref:System.Globalization.DateTimeStyles.None>|Indicates that additional white space is not permitted in `input`. White space must appear exactly as specified in a particular element of `formats` for a match to occur. This is the default behavior.|  
+|<xref:System.Globalization.DateTimeStyles.RoundtripKind>|Has no effect because the <xref:System.DateTimeOffset> structure does not include a `Kind` property.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">The offset is greater than 14 hours or less than -14 hours.  
+-or-  
+<paramref name="styles" /> includes an unsupported value.  
+-or-  
+The <paramref name="styles" /> parameter contains <see cref="T:System.Globalization.DateTimeStyles" /> values that cannot be used together.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="input" /> is an empty character span.  
+-or-  
+<paramref name="input" /> does not contain a valid string representation of a date and time.  
+-or-  
+No element of <paramref name="formats" /> contains a valid format specifier.  
+-or-  
+The hour component and the AM/PM designator in <paramref name="input" /> do not agree.</exception>
       </Docs>
     </Member>
     <Member MemberName="ParseExact">
@@ -3581,6 +3861,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.ParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.DateTimeStyles)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function ParseExact (input As String, format As String, formatProvider As IFormatProvider, styles As DateTimeStyles) As DateTimeOffset" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static DateTimeOffset ParseExact(System::String ^ input, System::String ^ format, IFormatProvider ^ formatProvider, System::Globalization::DateTimeStyles styles);" />
+      <MemberSignature Language="F#" Value="static member ParseExact : string * string * IFormatProvider * System.Globalization.DateTimeStyles -&gt; DateTimeOffset" Usage="System.DateTimeOffset.ParseExact (input, format, formatProvider, styles)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -3593,6 +3874,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -3611,9 +3893,9 @@
       </Parameters>
       <Docs>
         <param name="input">A string that contains a date and time to convert.</param>
-        <param name="format">A format specifier that defines the expected format of <c>input</c>.</param>
-        <param name="formatProvider">An object that supplies culture-specific formatting information about <c>input</c>.</param>
-        <param name="styles">A bitwise combination of enumeration values that indicates the permitted format of <c>input</c>.</param>
+        <param name="format">A format specifier that defines the expected format of <paramref name="input" />.</param>
+        <param name="formatProvider">An object that supplies culture-specific formatting information about <paramref name="input" />.</param>
+        <param name="styles">A bitwise combination of enumeration values that indicates the permitted format of <paramref name="input" />.</param>
         <summary>Converts the specified string representation of a date and time to its <see cref="T:System.DateTimeOffset" /> equivalent using the specified format, culture-specific format information, and style. The format of the string representation must match the specified format exactly.</summary>
         <returns>An object that is equivalent to the date and time that is contained in the <paramref name="input" /> parameter, as specified by the <paramref name="format" />, <paramref name="formatProvider" />, and <paramref name="styles" /> parameters.</returns>
         <remarks>
@@ -3655,7 +3937,19 @@
   
  [!code-csharp[System.DateTimeOffset.ParseExact#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.ParseExact/cs/ParseExact.cs#2)]
  [!code-vb[System.DateTimeOffset.ParseExact#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.ParseExact/vb/ParseExact.vb#2)]  
-  
+
+The following example uses a variety of <xref:System.Globalization.DateTimeStyles> values to parse an array of strings that are expected to conform to [ISO 8601](~/docs/standard/base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier). As the output from the example shows, strings that are in the proper format fail to parse if:
+
+- they contain white space, and an appropriate <xref:System.Globalization.DateTimeStyles> flag (such as <xref:System.Globalization.DateTimeStyles.AllowWhiteSpaces?displayProperty=nameWithType> has not been supplied in the method call.
+
+- they contain date and time elements that are out of range.
+
+Strings that do not specify a UTC offset are assumed to have the offset of the local time zone (in this case, -07:00) unless the <xref:System.Globalization.DateTimeStyles.AssumeUniversal?displayProperty=nameWithType> flag is supplied in the method call. In that case, they are assumed to be Universal Coordinated Time.
+
+[!code-csharp[Parsing ISO 8601 strings](~/samples/snippets/csharp/api/system/datetimeoffset/parseexact/parseexact-iso8601-2.cs)]
+[!code-vb[Parsing ISO 8601 strings](~/samples/snippets/visualbasic/api/system/datetimeoffset/parseexact/parseexact-iso8601-2.vb)]
+
+
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentException">The offset is greater than 14 hours or less than -14 hours.  
@@ -3691,6 +3985,8 @@
           <para>In the [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)], the <see cref="Overload:System.DateTimeOffset.ParseExact" /> method throws a <see cref="T:System.FormatException" /> if the string to be parsed contains an hour component and an AM/PM designator that are not in agreement. In the [!INCLUDE[net_v35_short](~/includes/net-v35-short-md.md)] and earlier versions, the AM/PM designator is ignored.</para>
         </block>
         <altmember cref="Overload:System.DateTimeOffset.TryParseExact" />
+        <related type="Article" href="~/docs/standard/base-types/standard-date-and-time-format-strings.md">Standard Date and Time Format Strings</related>
+        <related type="Article" href="~/docs/standard/base-types/custom-date-and-time-format-strings.md">Custom Date and Time Format Strings</related>
       </Docs>
     </Member>
     <Member MemberName="ParseExact">
@@ -3699,6 +3995,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.ParseExact(System.String,System.String[],System.IFormatProvider,System.Globalization.DateTimeStyles)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function ParseExact (input As String, formats As String(), formatProvider As IFormatProvider, styles As DateTimeStyles) As DateTimeOffset" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static DateTimeOffset ParseExact(System::String ^ input, cli::array &lt;System::String ^&gt; ^ formats, IFormatProvider ^ formatProvider, System::Globalization::DateTimeStyles styles);" />
+      <MemberSignature Language="F#" Value="static member ParseExact : string * string[] * IFormatProvider * System.Globalization.DateTimeStyles -&gt; DateTimeOffset" Usage="System.DateTimeOffset.ParseExact (input, formats, formatProvider, styles)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -3711,6 +4008,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -3729,9 +4027,9 @@
       </Parameters>
       <Docs>
         <param name="input">A string that contains a date and time to convert.</param>
-        <param name="formats">An array of format specifiers that define the expected formats of <c>input</c>.</param>
-        <param name="formatProvider">An object that supplies culture-specific formatting information about <c>input</c>.</param>
-        <param name="styles">A bitwise combination of enumeration values that indicates the permitted format of <c>input</c>.</param>
+        <param name="formats">An array of format specifiers that define the expected formats of <paramref name="input" />.</param>
+        <param name="formatProvider">An object that supplies culture-specific formatting information about <paramref name="input" />.</param>
+        <param name="styles">A bitwise combination of enumeration values that indicates the permitted format of <paramref name="input" />.</param>
         <summary>Converts the specified string representation of a date and time to its <see cref="T:System.DateTimeOffset" /> equivalent using the specified formats, culture-specific format information, and style. The format of the string representation must match one of the specified formats exactly.</summary>
         <returns>An object that is equivalent to the date and time that is contained in the <paramref name="input" /> parameter, as specified by the <paramref name="formats" />, <paramref name="formatProvider" />, and <paramref name="styles" /> parameters.</returns>
         <remarks>
@@ -3808,6 +4106,8 @@
           <para>In the [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)], the <see cref="Overload:System.DateTimeOffset.ParseExact" /> method throws a <see cref="T:System.FormatException" /> if the string to be parsed contains an hour component and an AM/PM designator that are not in agreement. In the [!INCLUDE[net_v35_short](~/includes/net-v35-short-md.md)] and earlier versions, the AM/PM designator is ignored.</para>
         </block>
         <altmember cref="Overload:System.DateTimeOffset.TryParseExact" />
+        <related type="Article" href="~/docs/standard/base-types/standard-date-and-time-format-strings.md">Standard Date and Time Format Strings</related>
+        <related type="Article" href="~/docs/standard/base-types/custom-date-and-time-format-strings.md">Custom Date and Time Format Strings</related>
       </Docs>
     </Member>
     <Member MemberName="Second">
@@ -3816,6 +4116,7 @@
       <MemberSignature Language="DocId" Value="P:System.DateTimeOffset.Second" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Second As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Second { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Second : int" Usage="System.DateTimeOffset.Second" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -3828,6 +4129,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -3886,6 +4188,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.Subtract(System.DateTimeOffset)" />
       <MemberSignature Language="VB.NET" Value="Public Function Subtract (value As DateTimeOffset) As TimeSpan" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; TimeSpan Subtract(DateTimeOffset value);" />
+      <MemberSignature Language="F#" Value="member this.Subtract : DateTimeOffset -&gt; TimeSpan" Usage="dateTimeOffset.Subtract value" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -3898,6 +4201,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -3936,6 +4240,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="~/docs/standard/datetime/performing-arithmetic-operations.md">Performing Arithmetic Operations with Dates and Times</related>
       </Docs>
     </Member>
     <Member MemberName="Subtract">
@@ -3944,6 +4249,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.Subtract(System.TimeSpan)" />
       <MemberSignature Language="VB.NET" Value="Public Function Subtract (value As TimeSpan) As DateTimeOffset" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DateTimeOffset Subtract(TimeSpan value);" />
+      <MemberSignature Language="F#" Value="member this.Subtract : TimeSpan -&gt; DateTimeOffset" Usage="dateTimeOffset.Subtract value" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -3956,6 +4262,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4001,6 +4308,7 @@
  -or-  
   
  The resulting <see cref="T:System.DateTimeOffset" /> value is greater than <see cref="F:System.DateTimeOffset.MaxValue" />.</exception>
+        <related type="Article" href="~/docs/standard/datetime/performing-arithmetic-operations.md">Performing Arithmetic Operations with Dates and Times</related>
       </Docs>
     </Member>
     <Member MemberName="System.IComparable.CompareTo">
@@ -4024,6 +4332,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4074,6 +4383,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4110,6 +4420,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4123,7 +4434,7 @@
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.0">
           <AttributeName>System.Security.SecurityCritical</AttributeName>
         </Attribute>
       </Attributes>
@@ -4149,6 +4460,7 @@
       <MemberSignature Language="DocId" Value="P:System.DateTimeOffset.Ticks" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Ticks As Long" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property long Ticks { long get(); };" />
+      <MemberSignature Language="F#" Value="member this.Ticks : int64" Usage="System.DateTimeOffset.Ticks" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -4161,6 +4473,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4203,6 +4516,7 @@
       <MemberSignature Language="DocId" Value="P:System.DateTimeOffset.TimeOfDay" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TimeOfDay As TimeSpan" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property TimeSpan TimeOfDay { TimeSpan get(); };" />
+      <MemberSignature Language="F#" Value="member this.TimeOfDay : TimeSpan" Usage="System.DateTimeOffset.TimeOfDay" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -4215,6 +4529,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4254,6 +4569,7 @@
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.ToFileTime" />
       <MemberSignature Language="VB.NET" Value="Public Function ToFileTime () As Long" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; long ToFileTime();" />
+      <MemberSignature Language="F#" Value="member this.ToFileTime : unit -&gt; int64" Usage="dateTimeOffset.ToFileTime " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -4266,6 +4582,7 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4308,6 +4625,7 @@ Me.ToUtcDateTime().ToFileTime()
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.ToLocalTime" />
       <MemberSignature Language="VB.NET" Value="Public Function ToLocalTime () As DateTimeOffset" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DateTimeOffset ToLocalTime();" />
+      <MemberSignature Language="F#" Value="member this.ToLocalTime : unit -&gt; DateTimeOffset" Usage="dateTimeOffset.ToLocalTime " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -4320,6 +4638,7 @@ Me.ToUtcDateTime().ToFileTime()
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4363,6 +4682,7 @@ Me.ToUtcDateTime().ToFileTime()
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.ToOffset(System.TimeSpan)" />
       <MemberSignature Language="VB.NET" Value="Public Function ToOffset (offset As TimeSpan) As DateTimeOffset" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DateTimeOffset ToOffset(TimeSpan offset);" />
+      <MemberSignature Language="F#" Value="member this.ToOffset : TimeSpan -&gt; DateTimeOffset" Usage="dateTimeOffset.ToOffset offset" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -4375,6 +4695,7 @@ Me.ToUtcDateTime().ToFileTime()
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4432,6 +4753,11 @@ Me.ToUtcDateTime().ToFileTime()
       </AssemblyInfo>
       <Docs>
         <summary>Converts the value of the current <see cref="T:System.DateTimeOffset" /> object to its equivalent string representation.</summary>
+        <format type="text/markdown"><![CDATA[  
+
+[!INCLUDE[japanese-era-note](~/includes/calendar-era.md)]        
+
+         ]]></format>
       </Docs>
     </MemberGroup>
     <Member MemberName="ToString">
@@ -4440,6 +4766,7 @@ Me.ToUtcDateTime().ToFileTime()
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="dateTimeOffset.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -4452,6 +4779,7 @@ Me.ToUtcDateTime().ToFileTime()
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4459,6 +4787,11 @@ Me.ToUtcDateTime().ToFileTime()
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -4499,6 +4832,7 @@ Me.ToUtcDateTime().ToFileTime()
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.ToString(System.IFormatProvider)" />
       <MemberSignature Language="VB.NET" Value="Public Function ToString (formatProvider As IFormatProvider) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ ToString(IFormatProvider ^ formatProvider);" />
+      <MemberSignature Language="F#" Value="override this.ToString : IFormatProvider -&gt; string" Usage="dateTimeOffset.ToString formatProvider" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -4511,6 +4845,7 @@ Me.ToUtcDateTime().ToFileTime()
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4518,6 +4853,11 @@ Me.ToUtcDateTime().ToFileTime()
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -4567,6 +4907,7 @@ Me.ToUtcDateTime().ToFileTime()
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.ToString(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function ToString (format As String) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ ToString(System::String ^ format);" />
+      <MemberSignature Language="F#" Value="override this.ToString : string -&gt; string" Usage="dateTimeOffset.ToString format" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -4579,6 +4920,7 @@ Me.ToUtcDateTime().ToFileTime()
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4586,6 +4928,11 @@ Me.ToUtcDateTime().ToFileTime()
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -4637,6 +4984,8 @@ Me.ToUtcDateTime().ToFileTime()
  [!code-csharp[System.DateTimeOffset.ToString.ArgumentOutOfRangeException#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.datetimeoffset.tostring.argumentoutofrangeexception/cs/datetimeoffset.tostring.argumentoutofrangeexception3.cs#3)]
  [!code-vb[System.DateTimeOffset.ToString.ArgumentOutOfRangeException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.datetimeoffset.tostring.argumentoutofrangeexception/vb/datetimeoffset.tostring.argumentoutofrangeexception3.vb#3)]</para>
         </block>
+        <related type="Article" href="~/docs/standard/base-types/standard-date-and-time-format-strings.md">Standard Date and Time Format Strings</related>
+        <related type="Article" href="~/docs/standard/base-types/custom-date-and-time-format-strings.md">Custom Date and Time Format Strings</related>
       </Docs>
     </Member>
     <Member MemberName="ToString">
@@ -4645,6 +4994,7 @@ Me.ToUtcDateTime().ToFileTime()
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.ToString(System.String,System.IFormatProvider)" />
       <MemberSignature Language="VB.NET" Value="Public Function ToString (format As String, formatProvider As IFormatProvider) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::String ^ ToString(System::String ^ format, IFormatProvider ^ formatProvider);" />
+      <MemberSignature Language="F#" Value="override this.ToString : string * IFormatProvider -&gt; string" Usage="dateTimeOffset.ToString (format, formatProvider)" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IFormattable.ToString(System.String,System.IFormatProvider)</InterfaceMember>
@@ -4660,6 +5010,7 @@ Me.ToUtcDateTime().ToFileTime()
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4667,6 +5018,11 @@ Me.ToUtcDateTime().ToFileTime()
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -4726,6 +5082,9 @@ Me.ToUtcDateTime().ToFileTime()
  [!code-csharp[System.DateTimeOffset.ToString.ArgumentOutOfRangeException#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.datetimeoffset.tostring.argumentoutofrangeexception/cs/datetimeoffset.tostring.argumentoutofrangeexception4.cs#4)]
  [!code-vb[System.DateTimeOffset.ToString.ArgumentOutOfRangeException#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.datetimeoffset.tostring.argumentoutofrangeexception/vb/datetimeoffset.tostring.argumentoutofrangeexception4.vb#4)]</para>
         </block>
+        <related type="Article" href="~/docs/standard/base-types/standard-date-and-time-format-strings.md">Standard Date and Time Format Strings</related>
+        <related type="Article" href="~/docs/standard/base-types/custom-date-and-time-format-strings.md">Custom Date and Time Format Strings</related>
+        <related type="ExternalDocumentation" href="https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d">Sample: .NET Framework 4 Formatting Utility</related>
       </Docs>
     </Member>
     <Member MemberName="ToUniversalTime">
@@ -4734,6 +5093,7 @@ Me.ToUtcDateTime().ToFileTime()
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.ToUniversalTime" />
       <MemberSignature Language="VB.NET" Value="Public Function ToUniversalTime () As DateTimeOffset" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DateTimeOffset ToUniversalTime();" />
+      <MemberSignature Language="F#" Value="member this.ToUniversalTime : unit -&gt; DateTimeOffset" Usage="dateTimeOffset.ToUniversalTime " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -4746,6 +5106,7 @@ Me.ToUtcDateTime().ToFileTime()
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4788,6 +5149,7 @@ Me.ToUtcDateTime().ToFileTime()
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.ToUnixTimeMilliseconds" />
       <MemberSignature Language="VB.NET" Value="Public Function ToUnixTimeMilliseconds () As Long" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; long ToUnixTimeMilliseconds();" />
+      <MemberSignature Language="F#" Value="member this.ToUnixTimeMilliseconds : unit -&gt; int64" Usage="dateTimeOffset.ToUnixTimeMilliseconds " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -4832,6 +5194,7 @@ Me.ToUtcDateTime().ToFileTime()
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.ToUnixTimeSeconds" />
       <MemberSignature Language="VB.NET" Value="Public Function ToUnixTimeSeconds () As Long" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; long ToUnixTimeSeconds();" />
+      <MemberSignature Language="F#" Value="member this.ToUnixTimeSeconds : unit -&gt; int64" Usage="dateTimeOffset.ToUnixTimeSeconds " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -4883,17 +5246,24 @@ Me.ToUtcDateTime().ToFileTime()
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryFormat(valuetype System.Span`1&lt;char&gt; destination, [out] int32&amp; charsWritten, valuetype System.ReadOnlySpan`1&lt;char&gt; format, class System.IFormatProvider formatProvider) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)" />
       <MemberSignature Language="VB.NET" Value="Public Function TryFormat (destination As Span(Of Char), ByRef charsWritten As Integer, Optional format As ReadOnlySpan(Of Char) = null, Optional formatProvider As IFormatProvider = null) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryFormat : Span&lt;char&gt; *  * ReadOnlySpan&lt;char&gt; * IFormatProvider -&gt; bool" Usage="dateTimeOffset.TryFormat (destination, charsWritten, format, formatProvider)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="destination" Type="System.Span&lt;System.Char&gt;" />
-        <Parameter Name="charsWritten" Type="System.Int32&amp;" RefType="out" />
+        <Parameter Name="charsWritten" Type="System.Int32" RefType="out" />
         <Parameter Name="format" Type="System.ReadOnlySpan&lt;System.Char&gt;" />
         <Parameter Name="formatProvider" Type="System.IFormatProvider" />
       </Parameters>
@@ -4918,6 +5288,11 @@ Me.ToUtcDateTime().ToFileTime()
       </AssemblyInfo>
       <Docs>
         <summary>Converts a specified string representation of a date and time to its <see cref="T:System.DateTimeOffset" /> equivalent.</summary>
+        <format type="text/markdown"><![CDATA[  
+
+[!INCLUDE[japanese-era-note](~/includes/calendar-era.md)]        
+
+         ]]></format>
       </Docs>
     </MemberGroup>
     <Member MemberName="TryParse">
@@ -4926,17 +5301,24 @@ Me.ToUtcDateTime().ToFileTime()
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.TryParse(System.ReadOnlySpan{System.Char},System.DateTimeOffset@)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function TryParse (input As ReadOnlySpan(Of Char), ByRef result As DateTimeOffset) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool TryParse(ReadOnlySpan&lt;char&gt; input, [Runtime::InteropServices::Out] DateTimeOffset % result);" />
+      <MemberSignature Language="F#" Value="static member TryParse : ReadOnlySpan&lt;char&gt; *  -&gt; bool" Usage="System.DateTimeOffset.TryParse (input, result)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="input" Type="System.ReadOnlySpan&lt;System.Char&gt;" />
-        <Parameter Name="result" Type="System.DateTimeOffset&amp;" RefType="out" />
+        <Parameter Name="result" Type="System.DateTimeOffset" RefType="out" />
       </Parameters>
       <Docs>
         <param name="input">To be added.</param>
@@ -4952,6 +5334,7 @@ Me.ToUtcDateTime().ToFileTime()
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.TryParse(System.String,System.DateTimeOffset@)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function TryParse (input As String, ByRef result As DateTimeOffset) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool TryParse(System::String ^ input, [Runtime::InteropServices::Out] DateTimeOffset % result);" />
+      <MemberSignature Language="F#" Value="static member TryParse : string *  -&gt; bool" Usage="System.DateTimeOffset.TryParse (input, result)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -4964,6 +5347,7 @@ Me.ToUtcDateTime().ToFileTime()
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -4971,16 +5355,21 @@ Me.ToUtcDateTime().ToFileTime()
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="input" Type="System.String" />
-        <Parameter Name="result" Type="System.DateTimeOffset&amp;" RefType="out" />
+        <Parameter Name="result" Type="System.DateTimeOffset" RefType="out" />
       </Parameters>
       <Docs>
         <param name="input">A string that contains a date and time to convert.</param>
-        <param name="result">When the method returns, contains the <see cref="T:System.DateTimeOffset" /> equivalent to the date and time of <c>input</c>, if the conversion succeeded, or <see cref="F:System.DateTimeOffset.MinValue" />, if the conversion failed. The conversion fails if the <c>input</c> parameter is <see langword="null" /> or does not contain a valid string representation of a date and time. This parameter is passed uninitialized.</param>
+        <param name="result">When the method returns, contains the <see cref="T:System.DateTimeOffset" /> equivalent to the date and time of <paramref name="input" />, if the conversion succeeded, or <see cref="F:System.DateTimeOffset.MinValue" />, if the conversion failed. The conversion fails if the <paramref name="input" /> parameter is <see langword="null" /> or does not contain a valid string representation of a date and time. This parameter is passed uninitialized.</param>
         <summary>Tries to converts a specified string representation of a date and time to its <see cref="T:System.DateTimeOffset" /> equivalent, and returns a value that indicates whether the conversion succeeded.</summary>
         <returns>
           <see langword="true" /> if the <paramref name="input" /> parameter is successfully converted; otherwise, <see langword="false" />.</returns>
@@ -5011,6 +5400,7 @@ Me.ToUtcDateTime().ToFileTime()
  ]]></format>
         </remarks>
         <altmember cref="Overload:System.DateTimeOffset.Parse" />
+        <related type="ExternalDocumentation" href="https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d">Sample: .NET Framework 4 Formatting Utility</related>
       </Docs>
     </Member>
     <Member MemberName="TryParse">
@@ -5019,10 +5409,17 @@ Me.ToUtcDateTime().ToFileTime()
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,System.Globalization.DateTimeStyles,System.DateTimeOffset@)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function TryParse (input As ReadOnlySpan(Of Char), formatProvider As IFormatProvider, styles As DateTimeStyles, ByRef result As DateTimeOffset) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool TryParse(ReadOnlySpan&lt;char&gt; input, IFormatProvider ^ formatProvider, System::Globalization::DateTimeStyles styles, [Runtime::InteropServices::Out] DateTimeOffset % result);" />
+      <MemberSignature Language="F#" Value="static member TryParse : ReadOnlySpan&lt;char&gt; * IFormatProvider * System.Globalization.DateTimeStyles *  -&gt; bool" Usage="System.DateTimeOffset.TryParse (input, formatProvider, styles, result)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -5031,7 +5428,7 @@ Me.ToUtcDateTime().ToFileTime()
         <Parameter Name="input" Type="System.ReadOnlySpan&lt;System.Char&gt;" />
         <Parameter Name="formatProvider" Type="System.IFormatProvider" />
         <Parameter Name="styles" Type="System.Globalization.DateTimeStyles" />
-        <Parameter Name="result" Type="System.DateTimeOffset&amp;" RefType="out" />
+        <Parameter Name="result" Type="System.DateTimeOffset" RefType="out" />
       </Parameters>
       <Docs>
         <param name="input">To be added.</param>
@@ -5049,6 +5446,7 @@ Me.ToUtcDateTime().ToFileTime()
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.TryParse(System.String,System.IFormatProvider,System.Globalization.DateTimeStyles,System.DateTimeOffset@)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function TryParse (input As String, formatProvider As IFormatProvider, styles As DateTimeStyles, ByRef result As DateTimeOffset) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool TryParse(System::String ^ input, IFormatProvider ^ formatProvider, System::Globalization::DateTimeStyles styles, [Runtime::InteropServices::Out] DateTimeOffset % result);" />
+      <MemberSignature Language="F#" Value="static member TryParse : string * IFormatProvider * System.Globalization.DateTimeStyles *  -&gt; bool" Usage="System.DateTimeOffset.TryParse (input, formatProvider, styles, result)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -5061,6 +5459,7 @@ Me.ToUtcDateTime().ToFileTime()
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -5068,6 +5467,11 @@ Me.ToUtcDateTime().ToFileTime()
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -5075,13 +5479,13 @@ Me.ToUtcDateTime().ToFileTime()
         <Parameter Name="input" Type="System.String" />
         <Parameter Name="formatProvider" Type="System.IFormatProvider" />
         <Parameter Name="styles" Type="System.Globalization.DateTimeStyles" />
-        <Parameter Name="result" Type="System.DateTimeOffset&amp;" RefType="out" />
+        <Parameter Name="result" Type="System.DateTimeOffset" RefType="out" />
       </Parameters>
       <Docs>
         <param name="input">A string that contains a date and time to convert.</param>
-        <param name="formatProvider">An object that provides culture-specific formatting information about <c>input</c>.</param>
-        <param name="styles">A bitwise combination of enumeration values that indicates the permitted format of <c>input</c>.</param>
-        <param name="result">When the method returns, contains the <see cref="T:System.DateTimeOffset" /> value equivalent to the date and time of <c>input</c>, if the conversion succeeded, or <see cref="F:System.DateTimeOffset.MinValue" />, if the conversion failed. The conversion fails if the <c>input</c> parameter is <see langword="null" /> or does not contain a valid string representation of a date and time. This parameter is passed uninitialized.</param>
+        <param name="formatProvider">An object that provides culture-specific formatting information about <paramref name="input" />.</param>
+        <param name="styles">A bitwise combination of enumeration values that indicates the permitted format of <paramref name="input" />.</param>
+        <param name="result">When the method returns, contains the <see cref="T:System.DateTimeOffset" /> value equivalent to the date and time of <paramref name="input" />, if the conversion succeeded, or <see cref="F:System.DateTimeOffset.MinValue" />, if the conversion failed. The conversion fails if the <paramref name="input" /> parameter is <see langword="null" /> or does not contain a valid string representation of a date and time. This parameter is passed uninitialized.</param>
         <summary>Tries to convert a specified string representation of a date and time to its <see cref="T:System.DateTimeOffset" /> equivalent, and returns a value that indicates whether the conversion succeeded.</summary>
         <returns>
           <see langword="true" /> if the <paramref name="input" /> parameter is successfully converted; otherwise, <see langword="false" />.</returns>
@@ -5161,6 +5565,11 @@ Me.ToUtcDateTime().ToFileTime()
       </AssemblyInfo>
       <Docs>
         <summary>Converts the specified string representation of a date and time to its <see cref="T:System.DateTimeOffset" /> equivalent. The format of the string representation must match a specified format exactly.</summary>
+        <format type="text/markdown"><![CDATA[  
+
+[!INCLUDE[japanese-era-note](~/includes/calendar-era.md)]        
+
+         ]]></format>
       </Docs>
     </MemberGroup>
     <Member MemberName="TryParseExact">
@@ -5169,10 +5578,17 @@ Me.ToUtcDateTime().ToFileTime()
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.TryParseExact(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char},System.IFormatProvider,System.Globalization.DateTimeStyles,System.DateTimeOffset@)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function TryParseExact (input As ReadOnlySpan(Of Char), format As ReadOnlySpan(Of Char), formatProvider As IFormatProvider, styles As DateTimeStyles, ByRef result As DateTimeOffset) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool TryParseExact(ReadOnlySpan&lt;char&gt; input, ReadOnlySpan&lt;char&gt; format, IFormatProvider ^ formatProvider, System::Globalization::DateTimeStyles styles, [Runtime::InteropServices::Out] DateTimeOffset % result);" />
+      <MemberSignature Language="F#" Value="static member TryParseExact : ReadOnlySpan&lt;char&gt; * ReadOnlySpan&lt;char&gt; * IFormatProvider * System.Globalization.DateTimeStyles *  -&gt; bool" Usage="System.DateTimeOffset.TryParseExact (input, format, formatProvider, styles, result)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -5182,17 +5598,58 @@ Me.ToUtcDateTime().ToFileTime()
         <Parameter Name="format" Type="System.ReadOnlySpan&lt;System.Char&gt;" />
         <Parameter Name="formatProvider" Type="System.IFormatProvider" />
         <Parameter Name="styles" Type="System.Globalization.DateTimeStyles" />
-        <Parameter Name="result" Type="System.DateTimeOffset&amp;" RefType="out" />
+        <Parameter Name="result" Type="System.DateTimeOffset" RefType="out" />
       </Parameters>
       <Docs>
-        <param name="input">To be added.</param>
-        <param name="format">To be added.</param>
-        <param name="formatProvider">To be added.</param>
-        <param name="styles">To be added.</param>
-        <param name="result">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="input">A character span that contains the representation of a date and time to convert.</param>
+        <param name="format">A format specifier that defines the required format of <paramref name="input" />.</param>
+        <param name="formatProvider">An object that supplies culture-specific formatting information about <paramref name="input" />.</param>
+        <param name="styles">A bitwise combination of enumeration values that indicates the permitted format of <paramref name="input" />. A typical value to specify is <see cref="F:System.Globalization.DateTimeStyles.None" /></param>
+        <param name="result">When the method returns, contains the <see cref="T:System.DateTimeOffset" /> equivalent to the date and time of <paramref name="input" />, if the conversion succedded, or <see cref="F:System.DateTimeOffset.MinValue" /> if the conversion failed. The conversion fails if the </param>
+        <summary>Converts the representation of a date and time in a character span to its <see cref="System.DateTimeOffset" /> equivalent using the specified format, culture-specific format information, and style. The format of the date and time representation must match the specied format exactly.</summary>
+        <returns>
+          <see langword="true" /> if the <paramref name="input" /> parameter is successfully converted; otherwise, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+
+This overload is like the <xref:System.DateTimeOffset.ParseExact(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char},System.IFormatProvider,System.Globalization.DateTimeStyles)?displayProperty=nameWithType> method, except that this method does not throw an exception if the conversion fails. It parses the representation of a date and time that must exactly match the pattern specified by the `format` parameter. If `input` does not match this pattern, with some possible variations in white space defined by the `styles` parameter, the parsing operation fails and the method returns `false`.  
+  
+The `format` parameter is a character span that contains either a single standard format specifier or one or more custom format specifiers that define the required pattern of `input`. For details about valid formatting codes, see [Standard Date and Time Format Strings](~/docs/standard/base-types/standard-date-and-time-format-strings.md) and [Custom Date and Time Format Strings](~/docs/standard/base-types/custom-date-and-time-format-strings.md). If `format` includes the `z`, `zz`, or `zzz` custom format specifiers to indicate that an offset must be present in `input`, that offset must include either a negative sign or a positive sign. If the sign is missing, the parsing operation fails and the method returns `false`.  
+  
+If `format` requires that `input` contain a date but not a time, the resulting <xref:System.DateTimeOffset> object is assigned a time of midnight (0:00:00). If `format` requires that `input` contain a time but not a date, the resulting <xref:System.DateTimeOffset> object is assigned the current date on the local system. If `format` does not require that `input` contain an offset, the offset of the resulting <xref:System.DateTimeOffset> object depends on the value of the `styles` parameter. If `styles` includes <xref:System.Globalization.DateTimeStyles.AssumeLocal>, the offset of the local time zone is assigned to the <xref:System.DateTimeOffset> object. If `styles` includes <xref:System.Globalization.DateTimeStyles.AssumeUniversal>, the Coordinated Universal Time (UTC) offset, or +00:00, is assigned to the <xref:System.DateTimeOffset> object. If neither value is specified, the offset of the local time zone is used.  
+  
+The particular date and time symbols and strings used in `input` are defined by the `formatProvider` parameter. The same is true for the precise pattern of `input` if `format` is a standard format specifier string. The `formatProvider` parameter can be either of the following:  
+  
+-   A <xref:System.Globalization.CultureInfo> object that represents the culture based on which `input` is interpreted. The <xref:System.Globalization.DateTimeFormatInfo> object returned by the <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> property defines the symbols and standard formats allowed in `input`.  
+  
+-   A <xref:System.Globalization.DateTimeFormatInfo> object that defines the format of date and time data.  
+  
+ If `formatprovider` is `null`, the <xref:System.Globalization.CultureInfo> object that corresponds to the current culture is used.  
+  
+ The `styles` parameter defines whether white space is allowed in the input string, indicates how strings without an explicit offset component are parsed, and supports UTC conversion as part of the parsing operation. All members of the <xref:System.Globalization.DateTimeStyles> enumeration are supported except <xref:System.Globalization.DateTimeStyles.NoCurrentDateDefault>. The following table lists the effect of each supported member.  
+  
+|`DateTimeStyles` member|Behavior|  
+|-----------------------------|--------------|  
+|<xref:System.Globalization.DateTimeStyles.AdjustToUniversal>|Parses `input` and, if necessary, converts it to UTC. It is equivalent to parsing a date and time representation, and then calling the <xref:System.DateTimeOffset.ToUniversalTime%2A?displayProperty=nameWithType> method of the returned <xref:System.DateTimeOffset> object.|  
+|<xref:System.Globalization.DateTimeStyles.AssumeLocal>|If `format` does not require that `input` contain an offset value, the returned <xref:System.DateTimeOffset> object is given the offset of the local time zone. This is the default behavior.|  
+|<xref:System.Globalization.DateTimeStyles.AssumeUniversal>|If `format` does not require that `input` contain an offset value, the returned <xref:System.DateTimeOffset> object is given the UTC offset (+00:00).|  
+|<xref:System.Globalization.DateTimeStyles.AllowInnerWhite>|Allows `input` to include inner white space not specified by format. Extra white space can appear between date and time components and within individual components, other than the offset, and is ignored when parsing the string.|  
+|<xref:System.Globalization.DateTimeStyles.AllowLeadingWhite>|Allows `input` to include leading spaces not specified by `format`. These are ignored when parsing the string.|  
+|<xref:System.Globalization.DateTimeStyles.AllowTrailingWhite>|Allows `input` to include trailing spaces not specified by `format`. These are ignored when parsing the string.|  
+|<xref:System.Globalization.DateTimeStyles.AllowWhiteSpaces>|Allows `input` to include leading, trailing, and inner spaces not specified by `format`. All extra white-space characters not specified in `format` are ignored when parsing the string.|  
+|<xref:System.Globalization.DateTimeStyles.None>|Indicates that additional white space is not permitted in `input`. White space must appear exactly as specified in `format`. This is the default behavior.|  
+|<xref:System.Globalization.DateTimeStyles.RoundtripKind>|Has no effect, because the <xref:System.DateTimeOffset> structure does not include a `Kind` property.|  
+
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="styles" /> includes an undefined <see cref="T:System.Globalization.DateTimeStyles" /> value.  
+-or-  
+<see cref="F:System.Globalization.DateTimeStyles.NoCurrentDateDefault" /> is not supported.  
+-or-  
+<paramref name="styles" /> includes mutually exclusive <see cref="T:System.Globalization.DateTimeStyles" /> values.</exception>
       </Docs>
     </Member>
     <Member MemberName="TryParseExact">
@@ -5201,10 +5658,17 @@ Me.ToUtcDateTime().ToFileTime()
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.TryParseExact(System.ReadOnlySpan{System.Char},System.String[],System.IFormatProvider,System.Globalization.DateTimeStyles,System.DateTimeOffset@)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function TryParseExact (input As ReadOnlySpan(Of Char), formats As String(), formatProvider As IFormatProvider, styles As DateTimeStyles, ByRef result As DateTimeOffset) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool TryParseExact(ReadOnlySpan&lt;char&gt; input, cli::array &lt;System::String ^&gt; ^ formats, IFormatProvider ^ formatProvider, System::Globalization::DateTimeStyles styles, [Runtime::InteropServices::Out] DateTimeOffset % result);" />
+      <MemberSignature Language="F#" Value="static member TryParseExact : ReadOnlySpan&lt;char&gt; * string[] * IFormatProvider * System.Globalization.DateTimeStyles *  -&gt; bool" Usage="System.DateTimeOffset.TryParseExact (input, formats, formatProvider, styles, result)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -5214,7 +5678,7 @@ Me.ToUtcDateTime().ToFileTime()
         <Parameter Name="formats" Type="System.String[]" />
         <Parameter Name="formatProvider" Type="System.IFormatProvider" />
         <Parameter Name="styles" Type="System.Globalization.DateTimeStyles" />
-        <Parameter Name="result" Type="System.DateTimeOffset&amp;" RefType="out" />
+        <Parameter Name="result" Type="System.DateTimeOffset" RefType="out" />
       </Parameters>
       <Docs>
         <param name="input">To be added.</param>
@@ -5224,7 +5688,50 @@ Me.ToUtcDateTime().ToFileTime()
         <param name="result">To be added.</param>
         <summary>To be added.</summary>
         <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks
+ 
+This method parses the string representation of a date that matches any one of the patterns assigned to the `formats` array. If `input` does not match any one of these patterns with any variations defined by the `styles` parameter, the parsing operation fails and the method returns `false`. Aside from comparing `input` to multiple strings that contain format specifiers, this overload behaves identically to the <xref:System.DateTimeOffset.ParseExact(System.ReadOnlySpan{System.Char},System.String[],System.IFormatProvider,System.Globalization.DateTimeStyles)?displayProperty=nameWithType> method.  
+  
+ The `formats` parameter is a string array whose elements contain either a single standard format specifier or one or more custom format specifiers that define the possible pattern of `input`. For details about valid formatting codes, see [Standard Date and Time Format Strings](~/docs/standard/base-types/standard-date-and-time-format-strings.md) and [Custom Date and Time Format Strings](~/docs/standard/base-types/custom-date-and-time-format-strings.md). If the matched element in `formats` includes the `z`, `zz`, or `zzz` custom format specifiers to indicate that an offset must be present in `input`, that offset must include either a negative sign or a positive sign. If the sign is missing, the parse operation fails and the method returns `false`.  
+  
+> [!IMPORTANT]
+>  Using the `formats` parameter of this overload to specify multiple formats can help reduce the frustration many users experience when they enter dates and times. In particular, the ability to define multiple input patterns enables an application to handle date and time representations that can either include or lack leading zeros in months, days, hours, minutes, and seconds. The example provides an illustration of this.  
+  
+ If the matched element in `formats` requires that `input` contain a date but not a time, the resulting <xref:System.DateTimeOffset> object is assigned a time of midnight (0:00:00). If the matched element in `formats` requires that input contain a time but not a date, the resulting <xref:System.DateTimeOffset> object is assigned the current date on the local system. If the matched element in `formats` does not require that `input` contain an offset, the offset of the resulting <xref:System.DateTimeOffset> object depends on the value of the `styles` parameter. If `styles` includes <xref:System.Globalization.DateTimeStyles.AssumeLocal?displayProperty=nameWithType>, the offset of the local time zone is assigned to the <xref:System.DateTimeOffset> object. If `styles` includes <xref:System.Globalization.DateTimeStyles.AssumeUniversal?displayProperty=nameWithType>, the Coordinated Universal Time (UTC) offset, or +00:00, is assigned to the <xref:System.DateTimeOffset> object. If neither value is specified, the offset of the local time zone is used.  
+  
+ The particular date and time symbols used in `input` are defined by the `formatProvider` parameter. The same is true for the precise pattern of `input` if the matching element of `formats` is a standard format specifier string. The `formatProvider` parameter can be either of the following:  
+  
+-   A <xref:System.Globalization.CultureInfo> object that represents the culture based on which `input` is interpreted. The <xref:System.Globalization.DateTimeFormatInfo> object returned by the <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> property defines the symbols and formatting in `input`.  
+  
+-   A <xref:System.Globalization.DateTimeFormatInfo> object that defines the format of date and time data.  
+  
+ If `formatprovider` is `null`, the <xref:System.Globalization.CultureInfo> object that corresponds to the current culture is used.  
+  
+ The `styles` parameter defines whether white space is permitted in the input string, indicates how strings without an explicit offset component are parsed, and supports UTC conversion as part of the parsing operation. All members of the <xref:System.Globalization.DateTimeStyles> enumeration are supported except <xref:System.Globalization.DateTimeStyles.NoCurrentDateDefault>. The following table lists the effect of each supported member.  
+  
+|`DateTimeStyles` member|Behavior|  
+|-----------------------------|--------------|  
+|<xref:System.Globalization.DateTimeStyles.AdjustToUniversal>|Parses `input` and, if necessary, converts it to UTC. It is equivalent to parsing a string, and then calling the <xref:System.DateTimeOffset.ToUniversalTime%2A?displayProperty=nameWithType> method of the returned <xref:System.DateTimeOffset> object.|  
+|<xref:System.Globalization.DateTimeStyles.AssumeLocal>|If the matched element in `formats` does not require that `input` contain an offset value, the returned <xref:System.DateTimeOffset> object is given the offset of the local time zone. This is the default value.|  
+|<xref:System.Globalization.DateTimeStyles.AssumeUniversal>|If the matched element in `formats` does not require that `input` contain an offset value, the returned <xref:System.DateTimeOffset> object is given the UTC offset (+00:00).|  
+|<xref:System.Globalization.DateTimeStyles.AllowInnerWhite>|Allows `input` to include inner white space not specified by the elements in `formats`. Extra white space can appear between date and time components and within individual components (except for the offset) and is ignored when parsing the string.|  
+|<xref:System.Globalization.DateTimeStyles.AllowLeadingWhite>|Allows `input` to include leading spaces not specified by the elements in `formats`. These are ignored when parsing the string.|  
+|<xref:System.Globalization.DateTimeStyles.AllowTrailingWhite>|Allows `input` to include trailing spaces not specified by the elements in `formats`. These are ignored when parsing the string.|  
+|<xref:System.Globalization.DateTimeStyles.AllowWhiteSpaces>|Allows `input` to include leading, trailing, and inner spaces not specified by the elements in `formats`. All extra white-space characters not specified in the matched element in `formats` are ignored when parsing the string.|  
+|<xref:System.Globalization.DateTimeStyles.None>|Indicates that additional white space is not permitted in `input`. White space must appear exactly as specified in a particular element in `formats` for a successful match to occur. This is the default behavior.|  
+|<xref:System.Globalization.DateTimeStyles.RoundtripKind>|Has no effect because the <xref:System.DateTimeOffset> structure does not include a `Kind` property.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="styles" /> includes an undefined <see cref="T:System.Globalization.DateTimeStyles" /> value.  
+-or-  
+<see cref="F:System.Globalization.DateTimeStyles.NoCurrentDateDefault" /> is not supported.  
+-or-  
+<paramref name="styles" /> includes mutually exclusive <see cref="T:System.Globalization.DateTimeStyles" /> values.</exception>
       </Docs>
     </Member>
     <Member MemberName="TryParseExact">
@@ -5233,6 +5740,7 @@ Me.ToUtcDateTime().ToFileTime()
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.DateTimeStyles,System.DateTimeOffset@)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function TryParseExact (input As String, format As String, formatProvider As IFormatProvider, styles As DateTimeStyles, ByRef result As DateTimeOffset) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool TryParseExact(System::String ^ input, System::String ^ format, IFormatProvider ^ formatProvider, System::Globalization::DateTimeStyles styles, [Runtime::InteropServices::Out] DateTimeOffset % result);" />
+      <MemberSignature Language="F#" Value="static member TryParseExact : string * string * IFormatProvider * System.Globalization.DateTimeStyles *  -&gt; bool" Usage="System.DateTimeOffset.TryParseExact (input, format, formatProvider, styles, result)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -5245,6 +5753,7 @@ Me.ToUtcDateTime().ToFileTime()
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -5260,14 +5769,14 @@ Me.ToUtcDateTime().ToFileTime()
         <Parameter Name="format" Type="System.String" />
         <Parameter Name="formatProvider" Type="System.IFormatProvider" />
         <Parameter Name="styles" Type="System.Globalization.DateTimeStyles" />
-        <Parameter Name="result" Type="System.DateTimeOffset&amp;" RefType="out" />
+        <Parameter Name="result" Type="System.DateTimeOffset" RefType="out" />
       </Parameters>
       <Docs>
         <param name="input">A string that contains a date and time to convert.</param>
-        <param name="format">A format specifier that defines the required format of <c>input</c>.</param>
-        <param name="formatProvider">An object that supplies culture-specific formatting information about <c>input</c>.</param>
+        <param name="format">A format specifier that defines the required format of <paramref name="input" />.</param>
+        <param name="formatProvider">An object that supplies culture-specific formatting information about <paramref name="input" />.</param>
         <param name="styles">A bitwise combination of enumeration values that indicates the permitted format of input. A typical value to specify is <see langword="None" />.</param>
-        <param name="result">When the method returns, contains the <see cref="T:System.DateTimeOffset" /> equivalent to the date and time of <c>input</c>, if the conversion succeeded, or <see cref="F:System.DateTimeOffset.MinValue" />, if the conversion failed. The conversion fails if the <c>input</c> parameter is <see langword="null" />, or does not contain a valid string representation of a date and time in the expected format defined by <c>format</c> and <c>provider</c>. This parameter is passed uninitialized.</param>
+        <param name="result">When the method returns, contains the <see cref="T:System.DateTimeOffset" /> equivalent to the date and time of <paramref name="input" />, if the conversion succeeded, or <see cref="F:System.DateTimeOffset.MinValue" />, if the conversion failed. The conversion fails if the <paramref name="input" /> parameter is <see langword="null" />, or does not contain a valid string representation of a date and time in the expected format defined by <paramref name="format" /> and <c>provider</c>. This parameter is passed uninitialized.</param>
         <summary>Converts the specified string representation of a date and time to its <see cref="T:System.DateTimeOffset" /> equivalent using the specified format, culture-specific format information, and style. The format of the string representation must match the specified format exactly.</summary>
         <returns>
           <see langword="true" /> if the <paramref name="input" /> parameter is successfully converted; otherwise, <see langword="false" />.</returns>
@@ -5303,13 +5812,23 @@ Me.ToUtcDateTime().ToFileTime()
 |<xref:System.Globalization.DateTimeStyles.None>|Indicates that additional white space is not permitted in `input`. White space must appear exactly as specified in `format`. This is the default behavior.|  
 |<xref:System.Globalization.DateTimeStyles.RoundtripKind>|Has no effect, because the <xref:System.DateTimeOffset> structure does not include a `Kind` property.|  
   
-   
-  
-## Examples  
+## Examples 
+
  The following example uses the <xref:System.DateTimeOffset.TryParseExact%28System.String%2CSystem.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%2CSystem.DateTimeOffset%40%29> method with standard and custom format specifiers, the invariant culture, and various <xref:System.Globalization.DateTimeStyles> values to parse several date and time strings.  
   
  [!code-csharp[System.DateTimeOffset.TryParseExact#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.TryParseExact/cs/TryParseExact.cs#1)]
  [!code-vb[System.DateTimeOffset.TryParseExact#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.TryParseExact/vb/TryParseExact.vb#1)]  
+
+The following example uses a variety of <xref:System.Globalization.DateTimeStyles> values to parse an array of strings that are expected to conform to [ISO 8601](~/docs/standard/base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier). As the output from the example shows, strings that are in the proper format fail to parse if:
+
+- they contain white space, and an appropriate <xref:System.Globalization.DateTimeStyles> flag (such as <xref:System.Globalization.DateTimeStyles.AllowWhiteSpaces?displayProperty=nameWithType> has not been supplied in the method call.
+
+- they contain date and time elements that are out of range.
+
+Strings that do not specify a UTC offset are assumed to have the offset of the local time zone (in this case, -07:00, which reflects the offset of the Pacific Daylight Time zone) unless the <xref:System.Globalization.DateTimeStyles.AssumeUniversal?displayProperty=nameWithType> flag is supplied in the method call. In that case, they are assumed to be Universal Coordinated Time.
+
+[!code-csharp[Parsing ISO 8601 strings](~/samples/snippets/csharp/api/system/datetimeoffset/tryparseexact/tryparseexacto8601-2.cs)]
+[!code-vb[Parsing ISO 8601 strings](~/samples/snippets/visualbasic/api/system/datetimeoffset/tryparseexact/tryparseexacto8601-2.vb)]
   
  ]]></format>
         </remarks>
@@ -5335,6 +5854,7 @@ Me.ToUtcDateTime().ToFileTime()
       <MemberSignature Language="DocId" Value="M:System.DateTimeOffset.TryParseExact(System.String,System.String[],System.IFormatProvider,System.Globalization.DateTimeStyles,System.DateTimeOffset@)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function TryParseExact (input As String, formats As String(), formatProvider As IFormatProvider, styles As DateTimeStyles, ByRef result As DateTimeOffset) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool TryParseExact(System::String ^ input, cli::array &lt;System::String ^&gt; ^ formats, IFormatProvider ^ formatProvider, System::Globalization::DateTimeStyles styles, [Runtime::InteropServices::Out] DateTimeOffset % result);" />
+      <MemberSignature Language="F#" Value="static member TryParseExact : string * string[] * IFormatProvider * System.Globalization.DateTimeStyles *  -&gt; bool" Usage="System.DateTimeOffset.TryParseExact (input, formats, formatProvider, styles, result)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -5347,6 +5867,7 @@ Me.ToUtcDateTime().ToFileTime()
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -5362,14 +5883,14 @@ Me.ToUtcDateTime().ToFileTime()
         <Parameter Name="formats" Type="System.String[]" />
         <Parameter Name="formatProvider" Type="System.IFormatProvider" />
         <Parameter Name="styles" Type="System.Globalization.DateTimeStyles" />
-        <Parameter Name="result" Type="System.DateTimeOffset&amp;" RefType="out" />
+        <Parameter Name="result" Type="System.DateTimeOffset" RefType="out" />
       </Parameters>
       <Docs>
         <param name="input">A string that contains a date and time to convert.</param>
-        <param name="formats">An array that defines the expected formats of <c>input</c>.</param>
-        <param name="formatProvider">An object that supplies culture-specific formatting information about <c>input</c>.</param>
+        <param name="formats">An array that defines the expected formats of <paramref name="input" />.</param>
+        <param name="formatProvider">An object that supplies culture-specific formatting information about <paramref name="input" />.</param>
         <param name="styles">A bitwise combination of enumeration values that indicates the permitted format of input. A typical value to specify is <see langword="None" />.</param>
-        <param name="result">When the method returns, contains the <see cref="T:System.DateTimeOffset" /> equivalent to the date and time of <c>input</c>, if the conversion succeeded, or <see cref="F:System.DateTimeOffset.MinValue" />, if the conversion failed. The conversion fails if the <c>input</c> does not contain a valid string representation of a date and time, or does not contain the date and time in the expected format defined by <c>format</c>, or if <c>formats</c> is <see langword="null" />. This parameter is passed uninitialized.</param>
+        <param name="result">When the method returns, contains the <see cref="T:System.DateTimeOffset" /> equivalent to the date and time of <paramref name="input" />, if the conversion succeeded, or <see cref="F:System.DateTimeOffset.MinValue" />, if the conversion failed. The conversion fails if the <paramref name="input" /> does not contain a valid string representation of a date and time, or does not contain the date and time in the expected format defined by <paramref name="format" />, or if <paramref name="formats" /> is <see langword="null" />. This parameter is passed uninitialized.</param>
         <summary>Converts the specified string representation of a date and time to its <see cref="T:System.DateTimeOffset" /> equivalent using the specified array of formats, culture-specific format information, and style. The format of the string representation must match one of the specified formats exactly.</summary>
         <returns>
           <see langword="true" /> if the <paramref name="input" /> parameter is successfully converted; otherwise, <see langword="false" />.</returns>
@@ -5439,10 +5960,17 @@ Me.ToUtcDateTime().ToFileTime()
       <MemberSignature Language="DocId" Value="F:System.DateTimeOffset.UnixEpoch" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly UnixEpoch As DateTimeOffset " />
       <MemberSignature Language="C++ CLI" Value="public: static initonly DateTimeOffset UnixEpoch;" />
+      <MemberSignature Language="F#" Value=" staticval mutable UnixEpoch : DateTimeOffset" Usage="System.DateTimeOffset.UnixEpoch" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTimeOffset</ReturnType>
@@ -5458,6 +5986,7 @@ Me.ToUtcDateTime().ToFileTime()
       <MemberSignature Language="DocId" Value="P:System.DateTimeOffset.UtcDateTime" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UtcDateTime As DateTime" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property DateTime UtcDateTime { DateTime get(); };" />
+      <MemberSignature Language="F#" Value="member this.UtcDateTime : DateTime" Usage="System.DateTimeOffset.UtcDateTime" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -5470,6 +5999,7 @@ Me.ToUtcDateTime().ToFileTime()
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -5515,6 +6045,7 @@ Me.ToUtcDateTime().ToFileTime()
       <MemberSignature Language="DocId" Value="P:System.DateTimeOffset.UtcNow" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property UtcNow As DateTimeOffset" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property DateTimeOffset UtcNow { DateTimeOffset get(); };" />
+      <MemberSignature Language="F#" Value="member this.UtcNow : DateTimeOffset" Usage="System.DateTimeOffset.UtcNow" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -5527,6 +6058,7 @@ Me.ToUtcDateTime().ToFileTime()
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -5567,6 +6099,7 @@ Me.ToUtcDateTime().ToFileTime()
       <MemberSignature Language="DocId" Value="P:System.DateTimeOffset.UtcTicks" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UtcTicks As Long" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property long UtcTicks { long get(); };" />
+      <MemberSignature Language="F#" Value="member this.UtcTicks : int64" Usage="System.DateTimeOffset.UtcTicks" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -5579,6 +6112,7 @@ Me.ToUtcDateTime().ToFileTime()
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -5608,6 +6142,7 @@ Me.ToUtcDateTime().ToFileTime()
       <MemberSignature Language="DocId" Value="P:System.DateTimeOffset.Year" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Year As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Year { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Year : int" Usage="System.DateTimeOffset.Year" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
@@ -5620,6 +6155,7 @@ Me.ToUtcDateTime().ToFileTime()
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>

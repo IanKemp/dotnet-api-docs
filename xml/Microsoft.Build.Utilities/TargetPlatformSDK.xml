@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Utilities.TargetPlatformSDK" />
   <TypeSignature Language="VB.NET" Value="Public Class TargetPlatformSDK&#xA;Implements IEquatable(Of TargetPlatformSDK)" />
   <TypeSignature Language="C++ CLI" Value="public ref class TargetPlatformSDK : IEquatable&lt;Microsoft::Build::Utilities::TargetPlatformSDK ^&gt;" />
+  <TypeSignature Language="F#" Value="type TargetPlatformSDK = class&#xA;    interface IEquatable&lt;TargetPlatformSDK&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -27,6 +28,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TargetPlatformSDK.#ctor(System.String,System.Version,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (targetPlatformIdentifier As String, targetPlatformVersion As Version, path As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; TargetPlatformSDK(System::String ^ targetPlatformIdentifier, Version ^ targetPlatformVersion, System::String ^ path);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Build.Utilities.TargetPlatformSDK : string * Version * string -&gt; Microsoft.Build.Utilities.TargetPlatformSDK" Usage="new Microsoft.Build.Utilities.TargetPlatformSDK (targetPlatformIdentifier, targetPlatformVersion, path)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
@@ -60,6 +62,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TargetPlatformSDK.Equals(Microsoft.Build.Utilities.TargetPlatformSDK)" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (other As TargetPlatformSDK) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Equals(Microsoft::Build::Utilities::TargetPlatformSDK ^ other);" />
+      <MemberSignature Language="F#" Value="override this.Equals : Microsoft.Build.Utilities.TargetPlatformSDK -&gt; bool" Usage="targetPlatformSDK.Equals other" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
@@ -77,7 +80,8 @@
       <Docs>
         <param name="other">Target platform SDK to compare to this element.</param>
         <summary>Ensures equality between target platform SDKs.</summary>
-        <returns>Returns <see langword="true" /> if items are equal, otherwise, returns <see langword="false" />.</returns>
+        <returns>
+          <see langword="true" /> if items are equal; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -87,6 +91,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TargetPlatformSDK.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="targetPlatformSDK.Equals obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
@@ -101,7 +106,8 @@
       <Docs>
         <param name="obj">Object to compare to this element.</param>
         <summary>Ensures equality between target platform SDK and object.</summary>
-        <returns>Returns <see langword="true" /> if items are equal, otherwise, returns <see langword="false" />.</returns>
+        <returns>
+          <see langword="true" /> if items are equal; otherwise, <see langword="false" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -111,6 +117,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.TargetPlatformSDK.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="targetPlatformSDK.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
@@ -121,8 +128,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Get hash code for the target platform SDK.</summary>
-        <returns>Returns a hash code.</returns>
+        <summary>Gets the hash code for the target platform SDK.</summary>
+        <returns>A hash code.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -132,6 +139,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.TargetPlatformSDK.Path" />
       <MemberSignature Language="VB.NET" Value="Public Property Path As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Path { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Path : string with get, set" Usage="Microsoft.Build.Utilities.TargetPlatformSDK.Path" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
@@ -142,7 +150,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the Path to the target platform SDK.</summary>
-        <value>Returns the path to the target platform SDK.</value>
+        <value>The path to the target platform SDK.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -152,6 +160,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.TargetPlatformSDK.TargetPlatformIdentifier" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TargetPlatformIdentifier As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TargetPlatformIdentifier { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.TargetPlatformIdentifier : string" Usage="Microsoft.Build.Utilities.TargetPlatformSDK.TargetPlatformIdentifier" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
@@ -162,7 +171,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the target platform SDK identifier.</summary>
-        <value>Returns the target platform SDK identifier.</value>
+        <value>The target platform SDK identifier.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -172,6 +181,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.TargetPlatformSDK.TargetPlatformVersion" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TargetPlatformVersion As Version" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Version ^ TargetPlatformVersion { Version ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.TargetPlatformVersion : Version" Usage="Microsoft.Build.Utilities.TargetPlatformSDK.TargetPlatformVersion" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
@@ -182,7 +192,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the version of the target platform.</summary>
-        <value>Returns the target platform version.</value>
+        <value>The target platform version.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

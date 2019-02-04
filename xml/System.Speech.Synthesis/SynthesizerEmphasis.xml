@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.SynthesizerEmphasis" />
   <TypeSignature Language="VB.NET" Value="Public Enum SynthesizerEmphasis" />
   <TypeSignature Language="C++ CLI" Value="public enum class SynthesizerEmphasis" />
+  <TypeSignature Language="F#" Value="type SynthesizerEmphasis = " />
   <AssemblyInfo>
     <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -34,9 +36,11 @@
       <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.SynthesizerEmphasis.Emphasized" />
       <MemberSignature Language="VB.NET" Value="Emphasized" />
       <MemberSignature Language="C++ CLI" Value="Emphasized" />
+      <MemberSignature Language="F#" Value="Emphasized = 2" Usage="System.Speech.Synthesis.SynthesizerEmphasis.Emphasized" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -53,9 +57,11 @@
       <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.SynthesizerEmphasis.Stressed" />
       <MemberSignature Language="VB.NET" Value="Stressed" />
       <MemberSignature Language="C++ CLI" Value="Stressed" />
+      <MemberSignature Language="F#" Value="Stressed = 1" Usage="System.Speech.Synthesis.SynthesizerEmphasis.Stressed" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

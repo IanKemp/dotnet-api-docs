@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Web.UI.ProfileServiceManager" />
   <TypeSignature Language="VB.NET" Value="Public Class ProfileServiceManager" />
   <TypeSignature Language="C++ CLI" Value="public ref class ProfileServiceManager" />
+  <TypeSignature Language="F#" Value="type ProfileServiceManager = class" />
   <AssemblyInfo>
     <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -49,6 +51,7 @@
  ]]></format>
     </remarks>
     <altmember cref="T:System.Web.Configuration.ScriptingProfileServiceSection" />
+    <related type="Article" href="https://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61">Using Profile Information with ASP.NET AJAX</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -60,8 +63,14 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.Web.UI.ProfileServiceManager" /> class.</summary>
@@ -74,9 +83,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.ProfileServiceManager.LoadProperties" />
       <MemberSignature Language="VB.NET" Value="Public Property LoadProperties As String()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;System::String ^&gt; ^ LoadProperties { cli::array &lt;System::String ^&gt; ^ get(); void set(cli::array &lt;System::String ^&gt; ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.LoadProperties : string[] with get, set" Usage="System.Web.UI.ProfileServiceManager.LoadProperties" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -103,7 +114,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- If <xref:System.Web.UI.ProfileServiceManager.LoadProperties%2A> contains at least one string that corresponds to the name of a profile property, then the built-in profile service in the Web application retrieves the current user's profile data for each of the specified profile properties. The profile property values are serialized and then made available to client script through the [properties Field](http://msdn.microsoft.com/library/ebce3c40-7017-482b-94df-91f7448fda05) collection.  
+ If <xref:System.Web.UI.ProfileServiceManager.LoadProperties%2A> contains at least one string that corresponds to the name of a profile property, then the built-in profile service in the Web application retrieves the current user's profile data for each of the specified profile properties. The profile property values are serialized and then made available to client script through the [properties Field](https://msdn.microsoft.com/library/ebce3c40-7017-482b-94df-91f7448fda05) collection.  
   
 > [!NOTE]
 >  To set this property declaratively, use a comma-separated list of property names. For grouped property values, use the syntax *GroupName*.*PropertyName*.  
@@ -114,7 +125,7 @@
   
  ]]></format>
         </remarks>
-        <exception cref="T:System.ArgumentException">The <see cref="P:System.Web.UI.ProfileServiceManager.LoadProperties" /> property includes property names that are not in the current application’s profile schema.</exception>
+        <exception cref="T:System.ArgumentException">The <see cref="P:System.Web.UI.ProfileServiceManager.LoadProperties" /> property includes property names that are not in the current application's profile schema.</exception>
       </Docs>
     </Member>
     <Member MemberName="Path">
@@ -123,9 +134,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.ProfileServiceManager.Path" />
       <MemberSignature Language="VB.NET" Value="Public Property Path As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Path { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Path : string with get, set" Usage="System.Web.UI.ProfileServiceManager.Path" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -140,6 +153,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

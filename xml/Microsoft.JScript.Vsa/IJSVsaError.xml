@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.JScript.Vsa.IJSVsaError" />
   <TypeSignature Language="VB.NET" Value="Public Interface IJSVsaError" />
   <TypeSignature Language="C++ CLI" Value="public interface class IJSVsaError" />
+  <TypeSignature Language="F#" Value="type IJSVsaError = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.JScript</AssemblyName>
     <AssemblyVersion>10.0.0.0</AssemblyVersion>
@@ -20,7 +21,7 @@
       <AttributeName>System.Runtime.InteropServices.Guid("425EA439-6417-4F3E-BCC9-1AFAC79E3F66")</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.InterfaceType</AttributeName>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -34,6 +35,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaError.Description" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Description As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Description { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Description : string" Usage="Microsoft.JScript.Vsa.IJSVsaError.Description" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.JScript</AssemblyName>
@@ -44,7 +46,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets a brief description of the error, in some instances returning a reference to the token in the source code that is causing the error.</summary>
-        <value>Returns a string literal description of the error.</value>
+        <value>A string literal description of the error.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -54,6 +56,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaError.EndColumn" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EndColumn As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int EndColumn { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.EndColumn : int" Usage="Microsoft.JScript.Vsa.IJSVsaError.EndColumn" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.JScript</AssemblyName>
@@ -64,7 +67,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets the ending column number for the source text that caused the error, if available.</summary>
-        <value>Returns the ending column number for the source text that caused the error, if available.</value>
+        <value>The ending column number for the source text that caused the error, if available.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -74,6 +77,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaError.Line" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Line As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Line { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Line : int" Usage="Microsoft.JScript.Vsa.IJSVsaError.Line" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.JScript</AssemblyName>
@@ -84,7 +88,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets the line number on which an error occurs.</summary>
-        <value>Returns the line number on which the error has occurred.</value>
+        <value>The line number on which the error has occurred.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -94,6 +98,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaError.LineText" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LineText As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ LineText { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.LineText : string" Usage="Microsoft.JScript.Vsa.IJSVsaError.LineText" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.JScript</AssemblyName>
@@ -104,7 +109,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets the text of the source code from the line that caused the error.</summary>
-        <value>Returns the string literal source code from the line that caused the error.</value>
+        <value>The string literal source code from the line that caused the error.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -114,6 +119,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaError.Number" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Number As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Number { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Number : int" Usage="Microsoft.JScript.Vsa.IJSVsaError.Number" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.JScript</AssemblyName>
@@ -124,7 +130,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets a number that uniquely identifies the error.</summary>
-        <value>Returns the number that uniquely identifies the error.</value>
+        <value>The number that uniquely identifies the error.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -134,6 +140,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaError.Severity" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Severity As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Severity { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Severity : int" Usage="Microsoft.JScript.Vsa.IJSVsaError.Severity" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.JScript</AssemblyName>
@@ -144,7 +151,7 @@
       </ReturnValue>
       <Docs>
         <summary>Sets the severity of the error.</summary>
-        <value>Returns an integer (0-4) that represents the error severity.</value>
+        <value>An integer (0-4) that represents the error severity.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -154,6 +161,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaError.SourceItem" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SourceItem As IJSVsaItem" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::JScript::Vsa::IJSVsaItem ^ SourceItem { Microsoft::JScript::Vsa::IJSVsaItem ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SourceItem : Microsoft.JScript.Vsa.IJSVsaItem" Usage="Microsoft.JScript.Vsa.IJSVsaError.SourceItem" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.JScript</AssemblyName>
@@ -163,8 +171,8 @@
         <ReturnType>Microsoft.JScript.Vsa.IJSVsaItem</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets a reference to the [IVsaItem](http://msdn.microsoft.com/library/microsoft.vsa.ivsaitem.aspx) object that generated the error.</summary>
-        <value>Returns a reference to the object that generated the error.</value>
+        <summary>Gets a reference to the <see cref="T:Microsoft.JScript.Vsa.IJSVsaItem" /> object that generated the error.</summary>
+        <value>A reference to the object that generated the error.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -174,6 +182,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaError.SourceMoniker" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SourceMoniker As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ SourceMoniker { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SourceMoniker : string" Usage="Microsoft.JScript.Vsa.IJSVsaError.SourceMoniker" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.JScript</AssemblyName>
@@ -184,7 +193,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets the fully qualified name of the source item that contained the error, in a format recognizable by the script engine.</summary>
-        <value>Returns the fully qualified name of the source item that contained the error.</value>
+        <value>The fully qualified name of the source item that contained the error.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -194,6 +203,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaError.StartColumn" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property StartColumn As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int StartColumn { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.StartColumn : int" Usage="Microsoft.JScript.Vsa.IJSVsaError.StartColumn" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.JScript</AssemblyName>
@@ -204,7 +214,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets the starting column number for the source text that caused the error, if available.</summary>
-        <value>Returns the starting column number for the source text that caused the error, if available.</value>
+        <value>The starting column number for the source text that caused the error, if available.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

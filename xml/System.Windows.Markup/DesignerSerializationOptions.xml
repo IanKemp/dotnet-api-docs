@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Markup.DesignerSerializationOptions" />
   <TypeSignature Language="VB.NET" Value="Public Enum DesignerSerializationOptions" />
   <TypeSignature Language="C++ CLI" Value="public enum class DesignerSerializationOptions" />
+  <TypeSignature Language="F#" Value="type DesignerSerializationOptions = " />
   <AssemblyInfo>
     <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -28,9 +30,11 @@
       <MemberSignature Language="DocId" Value="F:System.Windows.Markup.DesignerSerializationOptions.SerializeAsAttribute" />
       <MemberSignature Language="VB.NET" Value="SerializeAsAttribute" />
       <MemberSignature Language="C++ CLI" Value="SerializeAsAttribute" />
+      <MemberSignature Language="F#" Value="SerializeAsAttribute = 1" Usage="System.Windows.Markup.DesignerSerializationOptions.SerializeAsAttribute" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

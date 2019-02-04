@@ -4,17 +4,19 @@
   <TypeSignature Language="DocId" Value="T:System.IO.FileSystemAclExtensions" />
   <TypeSignature Language="VB.NET" Value="Public Module FileSystemAclExtensions" />
   <TypeSignature Language="C++ CLI" Value="public ref class FileSystemAclExtensions abstract sealed" />
+  <TypeSignature Language="F#" Value="type FileSystemAclExtensions = class" />
   <AssemblyInfo>
     <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.2.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute>
+    <Attribute FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0">
       <AttributeName>System.Security.SecurityCritical</AttributeName>
     </Attribute>
   </Attributes>
@@ -28,11 +30,13 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.AccessControl.DirectorySecurity GetAccessControl(class System.IO.DirectoryInfo directoryInfo) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.IO.FileSystemAclExtensions.GetAccessControl(System.IO.DirectoryInfo)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::Security::AccessControl::DirectorySecurity ^ GetAccessControl(System::IO::DirectoryInfo ^ directoryInfo);" />
+      <MemberSignature Language="F#" Value="static member GetAccessControl : System.IO.DirectoryInfo -&gt; System.Security.AccessControl.DirectorySecurity" Usage="System.IO.FileSystemAclExtensions.GetAccessControl directoryInfo" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.AccessControl.DirectorySecurity</ReturnType>
@@ -52,11 +56,13 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.AccessControl.FileSecurity GetAccessControl(class System.IO.FileInfo fileInfo) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.IO.FileSystemAclExtensions.GetAccessControl(System.IO.FileInfo)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::Security::AccessControl::FileSecurity ^ GetAccessControl(System::IO::FileInfo ^ fileInfo);" />
+      <MemberSignature Language="F#" Value="static member GetAccessControl : System.IO.FileInfo -&gt; System.Security.AccessControl.FileSecurity" Usage="System.IO.FileSystemAclExtensions.GetAccessControl fileInfo" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.AccessControl.FileSecurity</ReturnType>
@@ -76,11 +82,13 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.AccessControl.FileSecurity GetAccessControl(class System.IO.FileStream fileStream) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.IO.FileSystemAclExtensions.GetAccessControl(System.IO.FileStream)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::Security::AccessControl::FileSecurity ^ GetAccessControl(System::IO::FileStream ^ fileStream);" />
+      <MemberSignature Language="F#" Value="static member GetAccessControl : System.IO.FileStream -&gt; System.Security.AccessControl.FileSecurity" Usage="System.IO.FileSystemAclExtensions.GetAccessControl fileStream" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.AccessControl.FileSecurity</ReturnType>
@@ -100,11 +108,13 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.AccessControl.DirectorySecurity GetAccessControl(class System.IO.DirectoryInfo directoryInfo, valuetype System.Security.AccessControl.AccessControlSections includeSections) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.IO.FileSystemAclExtensions.GetAccessControl(System.IO.DirectoryInfo,System.Security.AccessControl.AccessControlSections)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::Security::AccessControl::DirectorySecurity ^ GetAccessControl(System::IO::DirectoryInfo ^ directoryInfo, System::Security::AccessControl::AccessControlSections includeSections);" />
+      <MemberSignature Language="F#" Value="static member GetAccessControl : System.IO.DirectoryInfo * System.Security.AccessControl.AccessControlSections -&gt; System.Security.AccessControl.DirectorySecurity" Usage="System.IO.FileSystemAclExtensions.GetAccessControl (directoryInfo, includeSections)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.AccessControl.DirectorySecurity</ReturnType>
@@ -126,11 +136,13 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.AccessControl.FileSecurity GetAccessControl(class System.IO.FileInfo fileInfo, valuetype System.Security.AccessControl.AccessControlSections includeSections) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.IO.FileSystemAclExtensions.GetAccessControl(System.IO.FileInfo,System.Security.AccessControl.AccessControlSections)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::Security::AccessControl::FileSecurity ^ GetAccessControl(System::IO::FileInfo ^ fileInfo, System::Security::AccessControl::AccessControlSections includeSections);" />
+      <MemberSignature Language="F#" Value="static member GetAccessControl : System.IO.FileInfo * System.Security.AccessControl.AccessControlSections -&gt; System.Security.AccessControl.FileSecurity" Usage="System.IO.FileSystemAclExtensions.GetAccessControl (fileInfo, includeSections)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Security.AccessControl.FileSecurity</ReturnType>
@@ -152,11 +164,13 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetAccessControl(class System.IO.DirectoryInfo directoryInfo, class System.Security.AccessControl.DirectorySecurity directorySecurity) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.IO.FileSystemAclExtensions.SetAccessControl(System.IO.DirectoryInfo,System.Security.AccessControl.DirectorySecurity)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void SetAccessControl(System::IO::DirectoryInfo ^ directoryInfo, System::Security::AccessControl::DirectorySecurity ^ directorySecurity);" />
+      <MemberSignature Language="F#" Value="static member SetAccessControl : System.IO.DirectoryInfo * System.Security.AccessControl.DirectorySecurity -&gt; unit" Usage="System.IO.FileSystemAclExtensions.SetAccessControl (directoryInfo, directorySecurity)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -177,11 +191,13 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetAccessControl(class System.IO.FileInfo fileInfo, class System.Security.AccessControl.FileSecurity fileSecurity) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.IO.FileSystemAclExtensions.SetAccessControl(System.IO.FileInfo,System.Security.AccessControl.FileSecurity)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void SetAccessControl(System::IO::FileInfo ^ fileInfo, System::Security::AccessControl::FileSecurity ^ fileSecurity);" />
+      <MemberSignature Language="F#" Value="static member SetAccessControl : System.IO.FileInfo * System.Security.AccessControl.FileSecurity -&gt; unit" Usage="System.IO.FileSystemAclExtensions.SetAccessControl (fileInfo, fileSecurity)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -202,11 +218,13 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetAccessControl(class System.IO.FileStream fileStream, class System.Security.AccessControl.FileSecurity fileSecurity) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.IO.FileSystemAclExtensions.SetAccessControl(System.IO.FileStream,System.Security.AccessControl.FileSecurity)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void SetAccessControl(System::IO::FileStream ^ fileStream, System::Security::AccessControl::FileSecurity ^ fileSecurity);" />
+      <MemberSignature Language="F#" Value="static member SetAccessControl : System.IO.FileStream * System.Security.AccessControl.FileSecurity -&gt; unit" Usage="System.IO.FileSystemAclExtensions.SetAccessControl (fileStream, fileSecurity)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

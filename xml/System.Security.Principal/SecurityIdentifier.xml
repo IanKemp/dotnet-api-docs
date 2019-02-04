@@ -4,13 +4,16 @@
   <TypeSignature Language="DocId" Value="T:System.Security.Principal.SecurityIdentifier" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class SecurityIdentifier&#xA;Inherits IdentityReference&#xA;Implements IComparable(Of SecurityIdentifier)" />
   <TypeSignature Language="C++ CLI" Value="public ref class SecurityIdentifier sealed : System::Security::Principal::IdentityReference, IComparable&lt;System::Security::Principal::SecurityIdentifier ^&gt;" />
+  <TypeSignature Language="F#" Value="type SecurityIdentifier = class&#xA;    inherit IdentityReference&#xA;    interface IComparable&lt;SecurityIdentifier&gt;" />
   <AssemblyInfo>
     <AssemblyName>System.Security.Principal.Windows</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.0.5.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
@@ -23,7 +26,7 @@
     </Interface>
   </Interfaces>
   <Attributes>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8">
       <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
     </Attribute>
   </Attributes>
@@ -48,17 +51,25 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Principal.SecurityIdentifier.#ctor(System.IntPtr)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (binaryForm As IntPtr)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SecurityIdentifier(IntPtr binaryForm);" />
+      <MemberSignature Language="F#" Value="new System.Security.Principal.SecurityIdentifier : nativeint -&gt; System.Security.Principal.SecurityIdentifier" Usage="new System.Security.Principal.SecurityIdentifier binaryForm" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Principal.Windows</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters>
         <Parameter Name="binaryForm" Type="System.IntPtr" />
       </Parameters>
@@ -75,17 +86,25 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Principal.SecurityIdentifier.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (sddlForm As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SecurityIdentifier(System::String ^ sddlForm);" />
+      <MemberSignature Language="F#" Value="new System.Security.Principal.SecurityIdentifier : string -&gt; System.Security.Principal.SecurityIdentifier" Usage="new System.Security.Principal.SecurityIdentifier sddlForm" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Principal.Windows</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters>
         <Parameter Name="sddlForm" Type="System.String" />
       </Parameters>
@@ -101,14 +120,17 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Principal.SecurityIdentifier.#ctor(System.Byte[],System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (binaryForm As Byte(), offset As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SecurityIdentifier(cli::array &lt;System::Byte&gt; ^ binaryForm, int offset);" />
+      <MemberSignature Language="F#" Value="new System.Security.Principal.SecurityIdentifier : byte[] * int -&gt; System.Security.Principal.SecurityIdentifier" Usage="new System.Security.Principal.SecurityIdentifier (binaryForm, offset)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Principal.Windows</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -118,7 +140,7 @@
       </Parameters>
       <Docs>
         <param name="binaryForm">The byte array that represents the SID.</param>
-        <param name="offset">The byte offset to use as the starting index in <c>binaryForm</c>.</param>
+        <param name="offset">The byte offset to use as the starting index in <paramref name="binaryForm" />.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Security.Principal.SecurityIdentifier" /> class by using a specified binary representation of a security identifier (SID).</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -129,17 +151,25 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Principal.SecurityIdentifier.#ctor(System.Security.Principal.WellKnownSidType,System.Security.Principal.SecurityIdentifier)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (sidType As WellKnownSidType, domainSid As SecurityIdentifier)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SecurityIdentifier(System::Security::Principal::WellKnownSidType sidType, System::Security::Principal::SecurityIdentifier ^ domainSid);" />
+      <MemberSignature Language="F#" Value="new System.Security.Principal.SecurityIdentifier : System.Security.Principal.WellKnownSidType * System.Security.Principal.SecurityIdentifier -&gt; System.Security.Principal.SecurityIdentifier" Usage="new System.Security.Principal.SecurityIdentifier (sidType, domainSid)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Principal.Windows</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters>
         <Parameter Name="sidType" Type="System.Security.Principal.WellKnownSidType" />
         <Parameter Name="domainSid" Type="System.Security.Principal.SecurityIdentifier" />
@@ -183,17 +213,25 @@
       <MemberSignature Language="DocId" Value="P:System.Security.Principal.SecurityIdentifier.AccountDomainSid" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AccountDomainSid As SecurityIdentifier" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Security::Principal::SecurityIdentifier ^ AccountDomainSid { System::Security::Principal::SecurityIdentifier ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.AccountDomainSid : System.Security.Principal.SecurityIdentifier" Usage="System.Security.Principal.SecurityIdentifier.AccountDomainSid" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Principal.Windows</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Security.Principal.SecurityIdentifier</ReturnType>
       </ReturnValue>
@@ -209,14 +247,17 @@
       <MemberSignature Language="DocId" Value="P:System.Security.Principal.SecurityIdentifier.BinaryLength" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BinaryLength As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int BinaryLength { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.BinaryLength : int" Usage="System.Security.Principal.SecurityIdentifier.BinaryLength" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Principal.Windows</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -235,6 +276,7 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Principal.SecurityIdentifier.CompareTo(System.Security.Principal.SecurityIdentifier)" />
       <MemberSignature Language="VB.NET" Value="Public Function CompareTo (sid As SecurityIdentifier) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual int CompareTo(System::Security::Principal::SecurityIdentifier ^ sid);" />
+      <MemberSignature Language="F#" Value="abstract member CompareTo : System.Security.Principal.SecurityIdentifier -&gt; int&#xA;override this.CompareTo : System.Security.Principal.SecurityIdentifier -&gt; int" Usage="securityIdentifier.CompareTo sid" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IComparable`1.CompareTo(`0)</InterfaceMember>
@@ -243,9 +285,11 @@
         <AssemblyName>System.Security.Principal.Windows</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -296,14 +340,17 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Principal.SecurityIdentifier.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (o As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ o);" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="securityIdentifier.Equals o" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Principal.Windows</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -327,14 +374,17 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Principal.SecurityIdentifier.Equals(System.Security.Principal.SecurityIdentifier)" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (sid As SecurityIdentifier) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Equals(System::Security::Principal::SecurityIdentifier ^ sid);" />
+      <MemberSignature Language="F#" Value="override this.Equals : System.Security.Principal.SecurityIdentifier -&gt; bool" Usage="securityIdentifier.Equals sid" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Principal.Windows</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -358,14 +408,17 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Principal.SecurityIdentifier.GetBinaryForm(System.Byte[],System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub GetBinaryForm (binaryForm As Byte(), offset As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void GetBinaryForm(cli::array &lt;System::Byte&gt; ^ binaryForm, int offset);" />
+      <MemberSignature Language="F#" Value="member this.GetBinaryForm : byte[] * int -&gt; unit" Usage="securityIdentifier.GetBinaryForm (binaryForm, offset)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Principal.Windows</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -378,7 +431,7 @@
       </Parameters>
       <Docs>
         <param name="binaryForm">The byte array to receive the copied SID.</param>
-        <param name="offset">The byte offset to use as the starting index in <c>binaryForm</c>.</param>
+        <param name="offset">The byte offset to use as the starting index in <paramref name="binaryForm" />.</param>
         <summary>Copies the binary representation of the specified security identifier (SID) represented by the <see cref="T:System.Security.Principal.SecurityIdentifier" /> class to a byte array.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -389,14 +442,17 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Principal.SecurityIdentifier.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="securityIdentifier.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Principal.Windows</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -416,17 +472,25 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Principal.SecurityIdentifier.IsAccountSid" />
       <MemberSignature Language="VB.NET" Value="Public Function IsAccountSid () As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool IsAccountSid();" />
+      <MemberSignature Language="F#" Value="member this.IsAccountSid : unit -&gt; bool" Usage="securityIdentifier.IsAccountSid " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Principal.Windows</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -444,17 +508,25 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Principal.SecurityIdentifier.IsEqualDomainSid(System.Security.Principal.SecurityIdentifier)" />
       <MemberSignature Language="VB.NET" Value="Public Function IsEqualDomainSid (sid As SecurityIdentifier) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool IsEqualDomainSid(System::Security::Principal::SecurityIdentifier ^ sid);" />
+      <MemberSignature Language="F#" Value="member this.IsEqualDomainSid : System.Security.Principal.SecurityIdentifier -&gt; bool" Usage="securityIdentifier.IsEqualDomainSid sid" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Principal.Windows</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -475,14 +547,17 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Principal.SecurityIdentifier.IsValidTargetType(System.Type)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function IsValidTargetType (targetType As Type) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool IsValidTargetType(Type ^ targetType);" />
+      <MemberSignature Language="F#" Value="override this.IsValidTargetType : Type -&gt; bool" Usage="securityIdentifier.IsValidTargetType targetType" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Principal.Windows</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -510,17 +585,25 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Principal.SecurityIdentifier.IsWellKnown(System.Security.Principal.WellKnownSidType)" />
       <MemberSignature Language="VB.NET" Value="Public Function IsWellKnown (type As WellKnownSidType) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool IsWellKnown(System::Security::Principal::WellKnownSidType type);" />
+      <MemberSignature Language="F#" Value="member this.IsWellKnown : System.Security.Principal.WellKnownSidType -&gt; bool" Usage="securityIdentifier.IsWellKnown type" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Principal.Windows</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -541,14 +624,17 @@
       <MemberSignature Language="DocId" Value="F:System.Security.Principal.SecurityIdentifier.MaxBinaryLength" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly MaxBinaryLength As Integer " />
       <MemberSignature Language="C++ CLI" Value="public: static initonly int MaxBinaryLength;" />
+      <MemberSignature Language="F#" Value=" staticval mutable MaxBinaryLength : int" Usage="System.Security.Principal.SecurityIdentifier.MaxBinaryLength" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Principal.Windows</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -566,14 +652,17 @@
       <MemberSignature Language="DocId" Value="F:System.Security.Principal.SecurityIdentifier.MinBinaryLength" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly MinBinaryLength As Integer " />
       <MemberSignature Language="C++ CLI" Value="public: static initonly int MinBinaryLength;" />
+      <MemberSignature Language="F#" Value=" staticval mutable MinBinaryLength : int" Usage="System.Security.Principal.SecurityIdentifier.MinBinaryLength" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Principal.Windows</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -591,14 +680,17 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Principal.SecurityIdentifier.op_Equality(System.Security.Principal.SecurityIdentifier,System.Security.Principal.SecurityIdentifier)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As SecurityIdentifier, right As SecurityIdentifier) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator ==(System::Security::Principal::SecurityIdentifier ^ left, System::Security::Principal::SecurityIdentifier ^ right);" />
+      <MemberSignature Language="F#" Value="static member ( = ) : System.Security.Principal.SecurityIdentifier * System.Security.Principal.SecurityIdentifier -&gt; bool" Usage="left = right" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Principal.Windows</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -624,14 +716,17 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Principal.SecurityIdentifier.op_Inequality(System.Security.Principal.SecurityIdentifier,System.Security.Principal.SecurityIdentifier)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As SecurityIdentifier, right As SecurityIdentifier) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator !=(System::Security::Principal::SecurityIdentifier ^ left, System::Security::Principal::SecurityIdentifier ^ right);" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : System.Security.Principal.SecurityIdentifier * System.Security.Principal.SecurityIdentifier -&gt; bool" Usage="System.Security.Principal.SecurityIdentifier.op_Inequality (left, right)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Principal.Windows</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -657,14 +752,17 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Principal.SecurityIdentifier.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="securityIdentifier.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Principal.Windows</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -684,17 +782,25 @@
       <MemberSignature Language="DocId" Value="M:System.Security.Principal.SecurityIdentifier.Translate(System.Type)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Translate (targetType As Type) As IdentityReference" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::Security::Principal::IdentityReference ^ Translate(Type ^ targetType);" />
+      <MemberSignature Language="F#" Value="override this.Translate : Type -&gt; System.Security.Principal.IdentityReference" Usage="securityIdentifier.Translate targetType" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Principal.Windows</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Security.Principal.IdentityReference</ReturnType>
       </ReturnValue>
@@ -721,14 +827,17 @@
       <MemberSignature Language="DocId" Value="P:System.Security.Principal.SecurityIdentifier.Value" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Value As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Value { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Value : string" Usage="System.Security.Principal.SecurityIdentifier.Value" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Principal.Windows</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>

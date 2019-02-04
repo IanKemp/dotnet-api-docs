@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.CodeDomDesignerLoader" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class CodeDomDesignerLoader&#xA;Inherits BasicDesignerLoader&#xA;Implements IDesignerSerializationService, INameCreationService" />
   <TypeSignature Language="C++ CLI" Value="public ref class CodeDomDesignerLoader abstract : System::ComponentModel::Design::Serialization::BasicDesignerLoader, System::ComponentModel::Design::Serialization::IDesignerSerializationService, System::ComponentModel::Design::Serialization::INameCreationService" />
+  <TypeSignature Language="F#" Value="type CodeDomDesignerLoader = class&#xA;    inherit BasicDesignerLoader&#xA;    interface INameCreationService&#xA;    interface IDesignerSerializationService" />
   <AssemblyInfo>
     <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -20,7 +22,7 @@
     </Interface>
   </Interfaces>
   <Attributes>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
       <AttributeName>System.Security.SecurityCritical</AttributeName>
     </Attribute>
   </Attributes>
@@ -40,6 +42,7 @@
     <altmember cref="T:System.ComponentModel.Design.IDesignerHost" />
     <altmember cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
     <altmember cref="N:System.CodeDom" />
+    <related type="Article" href="https://msdn.microsoft.com/library/d077a3e8-bd81-4bdf-b6a3-323857ea30fb">Dynamic Source Code Generation and Compilation</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -51,6 +54,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
@@ -65,9 +69,11 @@
       <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.CodeDomDesignerLoader.CodeDomProvider" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride ReadOnly Property CodeDomProvider As CodeDomProvider" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract property System::CodeDom::Compiler::CodeDomProvider ^ CodeDomProvider { System::CodeDom::Compiler::CodeDomProvider ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CodeDomProvider : System.CodeDom.Compiler.CodeDomProvider" Usage="System.ComponentModel.Design.Serialization.CodeDomDesignerLoader.CodeDomProvider" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -92,9 +98,11 @@
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomDesignerLoader.Dispose" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub Dispose ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void Dispose();" />
+      <MemberSignature Language="F#" Value="override this.Dispose : unit -&gt; unit" Usage="codeDomDesignerLoader.Dispose " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -124,9 +132,11 @@
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomDesignerLoader.Initialize" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub Initialize ()" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void Initialize();" />
+      <MemberSignature Language="F#" Value="override this.Initialize : unit -&gt; unit" Usage="codeDomDesignerLoader.Initialize " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -143,7 +153,7 @@
   
 |Term|Definition|  
 |----------|----------------|  
-|<xref:System.ComponentModel.Design.Serialization.INameCreationService>|Provides semantics for creating names of objects. The service uses the CodeDOM provider’s <xref:System.CodeDom.Compiler.ICodeGenerator> interface to create names that are valid identifiers for the language. In addition, the name creation service supports empty names. Empty names should be interpreted as temporary local variables during serialization.|  
+|<xref:System.ComponentModel.Design.Serialization.INameCreationService>|Provides semantics for creating names of objects. The service uses the CodeDOM provider's <xref:System.CodeDom.Compiler.ICodeGenerator> interface to create names that are valid identifiers for the language. In addition, the name creation service supports empty names. Empty names should be interpreted as temporary local variables during serialization.|  
 |<xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>|Allows other objects to serialize a group of components into a binary object. This service is most often used by features such as copy and paste or undo and redo. The <xref:System.ComponentModel.Design.Serialization.CodeDomDesignerLoader> class provides a designer serialization service that is based on creating CodeDOM trees for objects.|  
 |<xref:System.ComponentModel.Design.Serialization.ComponentSerializationService>|This service replaces <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService> as a means to serialize components to a binary object.|  
   
@@ -157,6 +167,7 @@
         <altmember cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationService" />
         <altmember cref="T:System.ComponentModel.Design.Serialization.ComponentSerializationService" />
         <altmember cref="T:System.ComponentModel.Design.Serialization.INameCreationService" />
+        <related type="Article" href="https://msdn.microsoft.com/library/d077a3e8-bd81-4bdf-b6a3-323857ea30fb">Dynamic Source Code Generation and Compilation</related>
       </Docs>
     </Member>
     <Member MemberName="IsReloadNeeded">
@@ -165,9 +176,11 @@
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomDesignerLoader.IsReloadNeeded" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function IsReloadNeeded () As Boolean" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override bool IsReloadNeeded();" />
+      <MemberSignature Language="F#" Value="override this.IsReloadNeeded : unit -&gt; bool" Usage="codeDomDesignerLoader.IsReloadNeeded " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -196,9 +209,11 @@
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomDesignerLoader.OnBeginLoad" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub OnBeginLoad ()" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void OnBeginLoad();" />
+      <MemberSignature Language="F#" Value="override this.OnBeginLoad : unit -&gt; unit" Usage="codeDomDesignerLoader.OnBeginLoad " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -223,9 +238,11 @@
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomDesignerLoader.OnBeginUnload" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub OnBeginUnload ()" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void OnBeginUnload();" />
+      <MemberSignature Language="F#" Value="override this.OnBeginUnload : unit -&gt; unit" Usage="codeDomDesignerLoader.OnBeginUnload " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -250,9 +267,11 @@
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomDesignerLoader.OnComponentRename(System.Object,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnComponentRename (component As Object, oldName As String, newName As String)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnComponentRename(System::Object ^ component, System::String ^ oldName, System::String ^ newName);" />
+      <MemberSignature Language="F#" Value="abstract member OnComponentRename : obj * string * string -&gt; unit&#xA;override this.OnComponentRename : obj * string * string -&gt; unit" Usage="codeDomDesignerLoader.OnComponentRename (component, oldName, newName)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -277,9 +296,11 @@
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomDesignerLoader.OnEndLoad(System.Boolean,System.Collections.ICollection)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub OnEndLoad (successful As Boolean, errors As ICollection)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void OnEndLoad(bool successful, System::Collections::ICollection ^ errors);" />
+      <MemberSignature Language="F#" Value="override this.OnEndLoad : bool * System.Collections.ICollection -&gt; unit" Usage="codeDomDesignerLoader.OnEndLoad (successful, errors)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -310,9 +331,11 @@
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomDesignerLoader.Parse" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Function Parse () As CodeCompileUnit" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract System::CodeDom::CodeCompileUnit ^ Parse();" />
+      <MemberSignature Language="F#" Value="abstract member Parse : unit -&gt; System.CodeDom.CodeCompileUnit" Usage="codeDomDesignerLoader.Parse " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -331,6 +354,7 @@
  ]]></format>
         </remarks>
         <altmember cref="T:System.CodeDom.CodeCompileUnit" />
+        <related type="Article" href="https://msdn.microsoft.com/library/d077a3e8-bd81-4bdf-b6a3-323857ea30fb">Dynamic Source Code Generation and Compilation</related>
       </Docs>
     </Member>
     <Member MemberName="PerformFlush">
@@ -339,9 +363,11 @@
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomDesignerLoader.PerformFlush(System.ComponentModel.Design.Serialization.IDesignerSerializationManager)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub PerformFlush (manager As IDesignerSerializationManager)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void PerformFlush(System::ComponentModel::Design::Serialization::IDesignerSerializationManager ^ manager);" />
+      <MemberSignature Language="F#" Value="override this.PerformFlush : System.ComponentModel.Design.Serialization.IDesignerSerializationManager -&gt; unit" Usage="codeDomDesignerLoader.PerformFlush manager" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -376,9 +402,11 @@
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomDesignerLoader.PerformLoad(System.ComponentModel.Design.Serialization.IDesignerSerializationManager)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub PerformLoad (manager As IDesignerSerializationManager)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void PerformLoad(System::ComponentModel::Design::Serialization::IDesignerSerializationManager ^ manager);" />
+      <MemberSignature Language="F#" Value="override this.PerformLoad : System.ComponentModel.Design.Serialization.IDesignerSerializationManager -&gt; unit" Usage="codeDomDesignerLoader.PerformLoad manager" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -404,6 +432,7 @@
         <exception cref="T:System.NotSupportedException">The language did not provide a code parser for this file; this file type may not support a designer.</exception>
         <exception cref="T:System.InvalidOperationException">The class can be designed, but it is not the first class in the file, or the designer could not be shown for this file because none of the classes within it can be designed.</exception>
         <altmember cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <related type="Article" href="https://msdn.microsoft.com/library/d077a3e8-bd81-4bdf-b6a3-323857ea30fb">Dynamic Source Code Generation and Compilation</related>
       </Docs>
     </Member>
     <Member MemberName="System.ComponentModel.Design.Serialization.IDesignerSerializationService.Deserialize">
@@ -413,8 +442,12 @@
       <MemberSignature Language="VB.NET" Value="Function Deserialize (serializationData As Object) As ICollection Implements IDesignerSerializationService.Deserialize" />
       <MemberSignature Language="C++ CLI" Value=" virtual System::Collections::ICollection ^ System.ComponentModel.Design.Serialization.IDesignerSerializationService.Deserialize(System::Object ^ serializationData) = System::ComponentModel::Design::Serialization::IDesignerSerializationService::Deserialize;" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ComponentModel.Design.Serialization.IDesignerSerializationService.Deserialize(System.Object)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -439,8 +472,12 @@
       <MemberSignature Language="VB.NET" Value="Function Serialize (objects As ICollection) As Object Implements IDesignerSerializationService.Serialize" />
       <MemberSignature Language="C++ CLI" Value=" virtual System::Object ^ System.ComponentModel.Design.Serialization.IDesignerSerializationService.Serialize(System::Collections::ICollection ^ objects) = System::ComponentModel::Design::Serialization::IDesignerSerializationService::Serialize;" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ComponentModel.Design.Serialization.IDesignerSerializationService.Serialize(System.Collections.ICollection)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -464,8 +501,12 @@
       <MemberSignature Language="VB.NET" Value="Function CreateName (container As IContainer, dataType As Type) As String Implements INameCreationService.CreateName" />
       <MemberSignature Language="C++ CLI" Value=" virtual System::String ^ System.ComponentModel.Design.Serialization.INameCreationService.CreateName(System::ComponentModel::IContainer ^ container, Type ^ dataType) = System::ComponentModel::Design::Serialization::INameCreationService::CreateName;" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ComponentModel.Design.Serialization.INameCreationService.CreateName(System.ComponentModel.IContainer,System.Type)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -492,8 +533,12 @@
       <MemberSignature Language="VB.NET" Value="Function IsValidName (name As String) As Boolean Implements INameCreationService.IsValidName" />
       <MemberSignature Language="C++ CLI" Value=" virtual bool System.ComponentModel.Design.Serialization.INameCreationService.IsValidName(System::String ^ name) = System::ComponentModel::Design::Serialization::INameCreationService::IsValidName;" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ComponentModel.Design.Serialization.INameCreationService.IsValidName(System.String)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -519,8 +564,12 @@
       <MemberSignature Language="VB.NET" Value="Sub ValidateName (name As String) Implements INameCreationService.ValidateName" />
       <MemberSignature Language="C++ CLI" Value=" virtual void System.ComponentModel.Design.Serialization.INameCreationService.ValidateName(System::String ^ name) = System::ComponentModel::Design::Serialization::INameCreationService::ValidateName;" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ComponentModel.Design.Serialization.INameCreationService.ValidateName(System.String)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -545,9 +594,11 @@
       <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.CodeDomDesignerLoader.TypeResolutionService" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride ReadOnly Property TypeResolutionService As ITypeResolutionService" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract property System::ComponentModel::Design::ITypeResolutionService ^ TypeResolutionService { System::ComponentModel::Design::ITypeResolutionService ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.TypeResolutionService : System.ComponentModel.Design.ITypeResolutionService" Usage="System.ComponentModel.Design.Serialization.CodeDomDesignerLoader.TypeResolutionService" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -565,6 +616,7 @@
  ]]></format>
         </remarks>
         <altmember cref="T:System.ComponentModel.Design.ITypeResolutionService" />
+        <related type="Article" href="https://msdn.microsoft.com/library/d077a3e8-bd81-4bdf-b6a3-323857ea30fb">Dynamic Source Code Generation and Compilation</related>
       </Docs>
     </Member>
     <Member MemberName="Write">
@@ -573,9 +625,11 @@
       <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.CodeDomDesignerLoader.Write(System.CodeDom.CodeCompileUnit)" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Sub Write (unit As CodeCompileUnit)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract void Write(System::CodeDom::CodeCompileUnit ^ unit);" />
+      <MemberSignature Language="F#" Value="abstract member Write : System.CodeDom.CodeCompileUnit -&gt; unit" Usage="codeDomDesignerLoader.Write unit" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -596,6 +650,7 @@
  ]]></format>
         </remarks>
         <altmember cref="T:System.CodeDom.CodeCompileUnit" />
+        <related type="Article" href="https://msdn.microsoft.com/library/d077a3e8-bd81-4bdf-b6a3-323857ea30fb">Dynamic Source Code Generation and Compilation</related>
       </Docs>
     </Member>
   </Members>

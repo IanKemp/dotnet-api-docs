@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Net.WebSockets.HttpListenerWebSocketContext" />
   <TypeSignature Language="VB.NET" Value="Public Class HttpListenerWebSocketContext&#xA;Inherits WebSocketContext" />
   <TypeSignature Language="C++ CLI" Value="public ref class HttpListenerWebSocketContext : System::Net::WebSockets::WebSocketContext" />
+  <TypeSignature Language="F#" Value="type HttpListenerWebSocketContext = class&#xA;    inherit WebSocketContext" />
   <AssemblyInfo>
     <AssemblyName>System</AssemblyName>
     <AssemblyVersion>2.0.5.0</AssemblyVersion>
@@ -39,6 +40,12 @@
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+      </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
@@ -51,6 +58,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.WebSockets.HttpListenerWebSocketContext.CookieCollection" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property CookieCollection As CookieCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Net::CookieCollection ^ CookieCollection { System::Net::CookieCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CookieCollection : System.Net.CookieCollection" Usage="System.Net.WebSockets.HttpListenerWebSocketContext.CookieCollection" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -67,7 +75,7 @@
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
           <AttributeName>System.MonoTODO</AttributeName>
         </Attribute>
       </Attributes>
@@ -76,9 +84,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets the cookies received by the <see cref="T:System.Net.HttpListener" /> object in the WebSocket opening handshake.</summary>
-        <value>Returns <see cref="T:System.Net.CookieCollection" />.  
-  
- The cookies received by the <see cref="T:System.Net.HttpListener" /> object.</value>
+        <value>The cookies received by the <see cref="T:System.Net.HttpListener" /> object.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -88,6 +94,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.WebSockets.HttpListenerWebSocketContext.Headers" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Headers As NameValueCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Collections::Specialized::NameValueCollection ^ Headers { System::Collections::Specialized::NameValueCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Headers : System.Collections.Specialized.NameValueCollection" Usage="System.Net.WebSockets.HttpListenerWebSocketContext.Headers" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -104,7 +111,7 @@
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
           <AttributeName>System.MonoTODO</AttributeName>
         </Attribute>
       </Attributes>
@@ -113,9 +120,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets the HTTP headers received by the <see cref="T:System.Net.HttpListener" /> object in the WebSocket opening handshake.</summary>
-        <value>Returns <see cref="T:System.Collections.Specialized.NameValueCollection" />.  
-  
- The HTTP headers received by the <see cref="T:System.Net.HttpListener" /> object.</value>
+        <value>The HTTP headers received by the <see cref="T:System.Net.HttpListener" /> object.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -125,6 +130,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.WebSockets.HttpListenerWebSocketContext.IsAuthenticated" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property IsAuthenticated As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool IsAuthenticated { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsAuthenticated : bool" Usage="System.Net.WebSockets.HttpListenerWebSocketContext.IsAuthenticated" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -141,7 +147,7 @@
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
           <AttributeName>System.MonoTODO</AttributeName>
         </Attribute>
       </Attributes>
@@ -150,9 +156,8 @@
       </ReturnValue>
       <Docs>
         <summary>Gets a value that indicates if the WebSocket client is authenticated.</summary>
-        <value>Returns <see cref="T:System.Boolean" />.  
-  
- <see langword="true" /> if the WebSocket client is authenticated; otherwise <see langword="false" />.</value>
+        <value>
+          <see langword="true" /> if the WebSocket client is authenticated; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -162,6 +167,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.WebSockets.HttpListenerWebSocketContext.IsLocal" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property IsLocal As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool IsLocal { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsLocal : bool" Usage="System.Net.WebSockets.HttpListenerWebSocketContext.IsLocal" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -178,7 +184,7 @@
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
           <AttributeName>System.MonoTODO</AttributeName>
         </Attribute>
       </Attributes>
@@ -187,9 +193,8 @@
       </ReturnValue>
       <Docs>
         <summary>Gets a value that indicates if the WebSocket client connected from the local machine.</summary>
-        <value>Returns <see cref="T:System.Boolean" />.  
-  
- <see langword="true" /> if the WebSocket client connected from the local machine; otherwise <see langword="false" />.</value>
+        <value>
+          <see langword="true" /> if the WebSocket client connected from the local machine; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -199,6 +204,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.WebSockets.HttpListenerWebSocketContext.IsSecureConnection" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property IsSecureConnection As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool IsSecureConnection { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsSecureConnection : bool" Usage="System.Net.WebSockets.HttpListenerWebSocketContext.IsSecureConnection" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -215,7 +221,7 @@
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
           <AttributeName>System.MonoTODO</AttributeName>
         </Attribute>
       </Attributes>
@@ -224,9 +230,8 @@
       </ReturnValue>
       <Docs>
         <summary>Gets a value that indicates if the WebSocket connection is secured using Secure Sockets Layer (SSL).</summary>
-        <value>Returns <see cref="T:System.Boolean" />.  
-  
- <see langword="true" /> if the WebSocket connection is secured using SSL; otherwise <see langword="false" />.</value>
+        <value>
+          <see langword="true" /> if the WebSocket connection is secured using SSL; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -236,6 +241,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.WebSockets.HttpListenerWebSocketContext.Origin" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Origin As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Origin { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Origin : string" Usage="System.Net.WebSockets.HttpListenerWebSocketContext.Origin" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -252,7 +258,7 @@
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
           <AttributeName>System.MonoTODO</AttributeName>
         </Attribute>
       </Attributes>
@@ -261,9 +267,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets the value of the Origin HTTP header included in the WebSocket opening handshake.</summary>
-        <value>Returns <see cref="T:System.String" />.  
-  
- The value of the Origin HTTP header.</value>
+        <value>The value of the Origin HTTP header.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -273,6 +277,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.WebSockets.HttpListenerWebSocketContext.RequestUri" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property RequestUri As Uri" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Uri ^ RequestUri { Uri ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.RequestUri : Uri" Usage="System.Net.WebSockets.HttpListenerWebSocketContext.RequestUri" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -289,7 +294,7 @@
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
           <AttributeName>System.MonoTODO</AttributeName>
         </Attribute>
       </Attributes>
@@ -298,9 +303,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets the URI requested by the WebSocket client.</summary>
-        <value>Returns <see cref="T:System.Uri" />.  
-  
- The URI requested by the WebSocket client.</value>
+        <value>The URI requested by the WebSocket client.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -310,6 +313,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.WebSockets.HttpListenerWebSocketContext.SecWebSocketKey" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property SecWebSocketKey As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ SecWebSocketKey { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SecWebSocketKey : string" Usage="System.Net.WebSockets.HttpListenerWebSocketContext.SecWebSocketKey" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -326,7 +330,7 @@
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
           <AttributeName>System.MonoTODO</AttributeName>
         </Attribute>
       </Attributes>
@@ -335,9 +339,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets the value of the SecWebSocketKey HTTP header included in the WebSocket opening handshake.</summary>
-        <value>Returns <see cref="T:System.String" />.  
-  
- The value of the SecWebSocketKey HTTP header.</value>
+        <value>The value of the SecWebSocketKey HTTP header.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -347,6 +349,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.WebSockets.HttpListenerWebSocketContext.SecWebSocketProtocols" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property SecWebSocketProtocols As IEnumerable(Of String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ SecWebSocketProtocols { System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SecWebSocketProtocols : seq&lt;string&gt;" Usage="System.Net.WebSockets.HttpListenerWebSocketContext.SecWebSocketProtocols" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -363,7 +366,7 @@
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
           <AttributeName>System.MonoTODO</AttributeName>
         </Attribute>
       </Attributes>
@@ -372,9 +375,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets the list of the Secure WebSocket protocols included in the WebSocket opening handshake.</summary>
-        <value>Returns <see cref="T:System.Collections.Generic.IEnumerable`1" />.  
-  
- The list of the Secure WebSocket protocols.</value>
+        <value>The list of the Secure WebSocket protocols.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -384,6 +385,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.WebSockets.HttpListenerWebSocketContext.SecWebSocketVersion" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property SecWebSocketVersion As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ SecWebSocketVersion { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SecWebSocketVersion : string" Usage="System.Net.WebSockets.HttpListenerWebSocketContext.SecWebSocketVersion" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -400,7 +402,7 @@
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
           <AttributeName>System.MonoTODO</AttributeName>
         </Attribute>
       </Attributes>
@@ -409,9 +411,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets the list of sub-protocols requested by the WebSocket client.</summary>
-        <value>Returns <see cref="T:System.String" />.  
-  
- The list of sub-protocols requested by the WebSocket client.</value>
+        <value>The list of sub-protocols requested by the WebSocket client.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -421,6 +421,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.WebSockets.HttpListenerWebSocketContext.User" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property User As IPrincipal" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Security::Principal::IPrincipal ^ User { System::Security::Principal::IPrincipal ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.User : System.Security.Principal.IPrincipal" Usage="System.Net.WebSockets.HttpListenerWebSocketContext.User" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -437,7 +438,7 @@
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
           <AttributeName>System.MonoTODO</AttributeName>
         </Attribute>
       </Attributes>
@@ -446,9 +447,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets an object used to obtain identity, authentication information, and security roles for the WebSocket client.</summary>
-        <value>Returns <see cref="T:System.Security.Principal.IPrincipal" />.  
-  
- The identity, authentication information, and security roles for the WebSocket client.</value>
+        <value>The identity, authentication information, and security roles for the WebSocket client.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -458,6 +457,7 @@
       <MemberSignature Language="DocId" Value="P:System.Net.WebSockets.HttpListenerWebSocketContext.WebSocket" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property WebSocket As WebSocket" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Net::WebSockets::WebSocket ^ WebSocket { System::Net::WebSockets::WebSocket ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.WebSocket : System.Net.WebSockets.WebSocket" Usage="System.Net.WebSockets.HttpListenerWebSocketContext.WebSocket" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -474,7 +474,7 @@
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
           <AttributeName>System.MonoTODO</AttributeName>
         </Attribute>
       </Attributes>
@@ -482,10 +482,8 @@
         <ReturnType>System.Net.WebSockets.WebSocket</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets the WebSocket instance used to send and receive data over the WebSocket connection.</summary>
-        <value>Returns <see cref="T:System.Net.WebSockets.WebSocket" />.  
-  
- The WebSocket instance.</value>
+        <summary>Gets the <see cref="T:System.Net.WebSockets.WebSocket" /> instance used to send and receive data over the <see cref="T:System.Net.WebSockets.WebSocket" /> connection.</summary>
+        <value>The <see cref="T:System.Net.WebSockets.WebSocket" /> instance used to send and receive data over the <see cref="T:System.Net.WebSockets.WebSocket" /> connection.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

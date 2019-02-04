@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.ServiceDebugBehavior" />
   <TypeSignature Language="VB.NET" Value="Public Class ServiceDebugBehavior&#xA;Implements IServiceBehavior" />
   <TypeSignature Language="C++ CLI" Value="public ref class ServiceDebugBehavior : System::ServiceModel::Description::IServiceBehavior" />
+  <TypeSignature Language="F#" Value="type ServiceDebugBehavior = class&#xA;    interface IServiceBehavior" />
   <AssemblyInfo>
     <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -43,7 +45,7 @@
   
  To enable or disable one of the <xref:System.ServiceModel.Description.ServiceDebugBehavior> features using a configuration file:  
   
-1.  Add a `behaviorConfiguration` attribute to the [&lt;service&gt;](~/docs/framework/configure-apps/file-schema/wcf/service.md) element for your WCF service. Endpoint behaviors are configured on [\<endpoint>](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elements; service behaviors on [&lt;service&gt;](~/docs/framework/configure-apps/file-schema/wcf/service.md) elements.  
+1.  Add a `behaviorConfiguration` attribute to the [&lt;service&gt;](~/docs/framework/configure-apps/file-schema/wcf/service.md) element for your WCF service. Endpoint behaviors are configured on [\<endpoint>](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elements; service behaviors on [&lt;service&gt;](~/docs/framework/configure-apps/file-schema/wcf/service.md) elements.  
   
 2.  Add to or create a [&lt;serviceBehaviors&gt;](~/docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) section and add a [&lt;behavior&gt;](~/docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) element to that with the name that matches the `behaviorConfiguration` attribute value from step 1. Endpoint behaviors are configured using an [&lt;endpointBehaviors&gt;](~/docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) element; service behaviors are configured using a [&lt;serviceBehaviors&gt;](~/docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) element.  
   
@@ -77,6 +79,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
@@ -108,11 +111,18 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceDebugBehavior.HttpHelpPageBinding" />
       <MemberSignature Language="VB.NET" Value="Public Property HttpHelpPageBinding As Binding" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::ServiceModel::Channels::Binding ^ HttpHelpPageBinding { System::ServiceModel::Channels::Binding ^ get(); void set(System::ServiceModel::Channels::Binding ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.HttpHelpPageBinding : System.ServiceModel.Channels.Binding with get, set" Usage="System.ServiceModel.Description.ServiceDebugBehavior.HttpHelpPageBinding" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.ServiceModel.Channels.Binding</ReturnType>
       </ReturnValue>
@@ -128,14 +138,22 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceDebugBehavior.HttpHelpPageEnabled" />
       <MemberSignature Language="VB.NET" Value="Public Property HttpHelpPageEnabled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool HttpHelpPageEnabled { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.HttpHelpPageEnabled : bool with get, set" Usage="System.ServiceModel.Description.ServiceDebugBehavior.HttpHelpPageEnabled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -182,17 +200,22 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceDebugBehavior.HttpHelpPageUrl" />
       <MemberSignature Language="VB.NET" Value="Public Property HttpHelpPageUrl As Uri" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Uri ^ HttpHelpPageUrl { Uri ^ get(); void set(Uri ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.HttpHelpPageUrl : Uri with get, set" Usage="System.ServiceModel.Description.ServiceDebugBehavior.HttpHelpPageUrl" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.UriTypeConverter))</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -225,11 +248,18 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceDebugBehavior.HttpsHelpPageBinding" />
       <MemberSignature Language="VB.NET" Value="Public Property HttpsHelpPageBinding As Binding" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::ServiceModel::Channels::Binding ^ HttpsHelpPageBinding { System::ServiceModel::Channels::Binding ^ get(); void set(System::ServiceModel::Channels::Binding ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.HttpsHelpPageBinding : System.ServiceModel.Channels.Binding with get, set" Usage="System.ServiceModel.Description.ServiceDebugBehavior.HttpsHelpPageBinding" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.ServiceModel.Channels.Binding</ReturnType>
       </ReturnValue>
@@ -245,14 +275,22 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceDebugBehavior.HttpsHelpPageEnabled" />
       <MemberSignature Language="VB.NET" Value="Public Property HttpsHelpPageEnabled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool HttpsHelpPageEnabled { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.HttpsHelpPageEnabled : bool with get, set" Usage="System.ServiceModel.Description.ServiceDebugBehavior.HttpsHelpPageEnabled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -286,17 +324,22 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceDebugBehavior.HttpsHelpPageUrl" />
       <MemberSignature Language="VB.NET" Value="Public Property HttpsHelpPageUrl As Uri" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Uri ^ HttpsHelpPageUrl { Uri ^ get(); void set(Uri ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.HttpsHelpPageUrl : Uri with get, set" Usage="System.ServiceModel.Description.ServiceDebugBehavior.HttpsHelpPageUrl" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.UriTypeConverter))</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -331,14 +374,22 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults" />
       <MemberSignature Language="VB.NET" Value="Public Property IncludeExceptionDetailInFaults As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IncludeExceptionDetailInFaults { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IncludeExceptionDetailInFaults : bool with get, set" Usage="System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -393,6 +444,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -431,6 +483,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -458,6 +511,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

@@ -4,11 +4,14 @@
   <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.Unsafe" />
   <TypeSignature Language="VB.NET" Value="Public Class Unsafe" />
   <TypeSignature Language="C++ CLI" Value="public ref class Unsafe abstract sealed" />
+  <TypeSignature Language="F#" Value="type Unsafe = class" />
   <AssemblyInfo>
     <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.2.0</AssemblyVersion>
     <AssemblyVersion>4.0.3.0</AssemblyVersion>
+    <AssemblyVersion>4.0.4.0</AssemblyVersion>
+    <AssemblyVersion>4.0.4.1</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -22,11 +25,43 @@
   </Docs>
   <Members>
     <Member MemberName="Add&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static void* Add&lt;T&gt; (void* source, int elementOffset);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void* Add&lt;T&gt;(void* source, int32 elementOffset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.Add``1(System.Void*,System.Int32)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; static void* Add(void* source, int elementOffset);" />
+      <MemberSignature Language="F#" Value="static member Add : nativeptr&lt;unit&gt; * int -&gt; nativeptr&lt;unit&gt;" Usage="System.Runtime.CompilerServices.Unsafe.Add (source, elementOffset)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.1</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void*</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Void*" Index="0" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
+        <Parameter Name="elementOffset" Type="System.Int32" Index="1" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">To be added.</typeparam>
+        <param name="source">To be added.</param>
+        <param name="elementOffset">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add&lt;T&gt;">
       <MemberSignature Language="C#" Value="public static T Add&lt;T&gt; (ref T source, int elementOffset);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T Add&lt;T&gt;(!!T&amp; source, int32 elementOffset) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.Add``1(``0@,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Add(Of T) (ByRef source As T, elementOffset As Integer) As T" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; static T % Add(T % source, int elementOffset);" />
+      <MemberSignature Language="F#" Value="static member Add :  * int -&gt; " Usage="System.Runtime.CompilerServices.Unsafe.Add (source, elementOffset)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
@@ -60,6 +95,7 @@
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.Add``1(``0@,System.IntPtr)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Add(Of T) (ByRef source As T, elementOffset As IntPtr) As T" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; static T % Add(T % source, IntPtr elementOffset);" />
+      <MemberSignature Language="F#" Value="static member Add :  * nativeint -&gt; " Usage="System.Runtime.CompilerServices.Unsafe.Add (source, elementOffset)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
@@ -90,6 +126,7 @@
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.AddByteOffset``1(``0@,System.IntPtr)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function AddByteOffset(Of T) (ByRef source As T, byteOffset As IntPtr) As T" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; static T % AddByteOffset(T % source, IntPtr byteOffset);" />
+      <MemberSignature Language="F#" Value="static member AddByteOffset :  * nativeint -&gt; " Usage="System.Runtime.CompilerServices.Unsafe.AddByteOffset (source, byteOffset)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
@@ -122,11 +159,14 @@
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.AreSame``1(``0@,``0@)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function AreSame(Of T) (ByRef left As T, ByRef right As T) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; static bool AreSame(T % left, T % right);" />
+      <MemberSignature Language="F#" Value="static member AreSame :  *  -&gt; bool" Usage="System.Runtime.CompilerServices.Unsafe.AreSame (left, right)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.1</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -135,8 +175,8 @@
         <TypeParameter Name="T" />
       </TypeParameters>
       <Parameters>
-        <Parameter Name="left" Type="T&amp;" RefType="ref" />
-        <Parameter Name="right" Type="T&amp;" RefType="ref" />
+        <Parameter Name="left" Type="T" RefType="ref" Index="0" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2;netcore-1.1" />
+        <Parameter Name="right" Type="T" RefType="ref" Index="1" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2;netcore-1.1" />
       </Parameters>
       <Docs>
         <typeparam name="T">The type of reference.</typeparam>
@@ -156,12 +196,15 @@
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.As``1(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function As(Of T As Class) (o As Object) As T" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; where T : class static T As(System::Object ^ o);" />
+      <MemberSignature Language="F#" Value="static member As : obj -&gt; 'T (requires 'T : null)" Usage="System.Runtime.CompilerServices.Unsafe.As o" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.1</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -190,6 +233,7 @@
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.As``2(``0@)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function As(Of TFrom, TTo) (ByRef source As TFrom) As TTo" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TFrom, typename TTo&gt;&#xA; static TTo % As(TFrom % source);" />
+      <MemberSignature Language="F#" Value="static member As :  -&gt; " Usage="System.Runtime.CompilerServices.Unsafe.As source" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
@@ -207,7 +251,7 @@
         <Parameter Name="source" Type="TFrom&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <typeparam name="TFrom">The type of reference to reinterpret..</typeparam>
+        <typeparam name="TFrom">The type of reference to reinterpret.</typeparam>
         <typeparam name="TTo">The desired type of the reference.</typeparam>
         <param name="source">The reference to reinterpret.</param>
         <summary>
@@ -222,12 +266,15 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void* AsPointer&lt;T&gt;(!!T&amp; value) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.AsPointer``1(``0@)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; static void* AsPointer(T % value);" />
+      <MemberSignature Language="F#" Value="static member AsPointer :  -&gt; nativeptr&lt;unit&gt;" Usage="System.Runtime.CompilerServices.Unsafe.AsPointer value" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.1</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void*</ReturnType>
@@ -236,7 +283,7 @@
         <TypeParameter Name="T" />
       </TypeParameters>
       <Parameters>
-        <Parameter Name="value" Type="T&amp;" RefType="ref" />
+        <Parameter Name="value" Type="T" RefType="ref" />
       </Parameters>
       <Docs>
         <typeparam name="T">The type of object.</typeparam>
@@ -253,6 +300,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T AsRef&lt;T&gt;(void* source) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.AsRef``1(System.Void*)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; static T % AsRef(void* source);" />
+      <MemberSignature Language="F#" Value="static member AsRef : nativeptr&lt;unit&gt; -&gt; " Usage="System.Runtime.CompilerServices.Unsafe.AsRef source" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
@@ -279,16 +327,49 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="AsRef&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static ref T AsRef&lt;T&gt; (ref T source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T AsRef&lt;T&gt;([in]!!T&amp; source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.AsRef``1(``0@)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AsRef(Of T) (ByRef source As T) As T" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; static T % AsRef(T % source);" />
+      <MemberSignature Language="F#" Value="static member AsRef :  -&gt; " Usage="System.Runtime.CompilerServices.Unsafe.AsRef source" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.1</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue RefType="Ref">
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="T" RefType="ref" Index="0" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">To be added.</typeparam>
+        <param name="source">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ByteOffset&lt;T&gt;">
       <MemberSignature Language="C#" Value="public static IntPtr ByteOffset&lt;T&gt; (ref T origin, ref T target);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig native int ByteOffset&lt;T&gt;(!!T&amp; origin, !!T&amp; target) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.ByteOffset``1(``0@,``0@)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function ByteOffset(Of T) (ByRef origin As T, ByRef target As T) As IntPtr" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; static IntPtr ByteOffset(T % origin, T % target);" />
+      <MemberSignature Language="F#" Value="static member ByteOffset :  *  -&gt; nativeint" Usage="System.Runtime.CompilerServices.Unsafe.ByteOffset (origin, target)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.1</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.IntPtr</ReturnType>
@@ -297,8 +378,8 @@
         <TypeParameter Name="T" />
       </TypeParameters>
       <Parameters>
-        <Parameter Name="origin" Type="T&amp;" RefType="ref" />
-        <Parameter Name="target" Type="T&amp;" RefType="ref" />
+        <Parameter Name="origin" Type="T" RefType="ref" Index="0" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
+        <Parameter Name="target" Type="T" RefType="ref" Index="1" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
       </Parameters>
       <Docs>
         <typeparam name="T">The type of reference.</typeparam>
@@ -316,12 +397,15 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Copy&lt;T&gt;(void* destination, !!T&amp; source) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.Copy``1(System.Void*,``0@)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; static void Copy(void* destination, T % source);" />
+      <MemberSignature Language="F#" Value="static member Copy : nativeptr&lt;unit&gt; *  -&gt; unit" Usage="System.Runtime.CompilerServices.Unsafe.Copy (destination, source)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.1</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -331,7 +415,7 @@
       </TypeParameters>
       <Parameters>
         <Parameter Name="destination" Type="System.Void*" />
-        <Parameter Name="source" Type="T&amp;" RefType="ref" />
+        <Parameter Name="source" Type="T" RefType="ref" />
       </Parameters>
       <Docs>
         <typeparam name="T">The type of value to copy.</typeparam>
@@ -348,12 +432,15 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Copy&lt;T&gt;(!!T&amp; destination, void* source) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.Copy``1(``0@,System.Void*)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; static void Copy(T % destination, void* source);" />
+      <MemberSignature Language="F#" Value="static member Copy :  * nativeptr&lt;unit&gt; -&gt; unit" Usage="System.Runtime.CompilerServices.Unsafe.Copy (destination, source)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.1</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -362,7 +449,7 @@
         <TypeParameter Name="T" />
       </TypeParameters>
       <Parameters>
-        <Parameter Name="destination" Type="T&amp;" RefType="ref" />
+        <Parameter Name="destination" Type="T" RefType="ref" />
         <Parameter Name="source" Type="System.Void*" />
       </Parameters>
       <Docs>
@@ -381,18 +468,21 @@
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.CopyBlock(System.Byte@,System.Byte@,System.UInt32)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub CopyBlock (ByRef destination As Byte, ByRef source As Byte, byteCount As UInteger)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void CopyBlock(System::Byte % destination, System::Byte % source, System::UInt32 byteCount);" />
+      <MemberSignature Language="F#" Value="static member CopyBlock :  *  * uint32 -&gt; unit" Usage="System.Runtime.CompilerServices.Unsafe.CopyBlock (destination, source, byteCount)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.1</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="destination" Type="System.Byte&amp;" RefType="ref" />
-        <Parameter Name="source" Type="System.Byte&amp;" RefType="ref" />
-        <Parameter Name="byteCount" Type="System.UInt32" />
+        <Parameter Name="destination" Type="System.Byte" RefType="ref" Index="0" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
+        <Parameter Name="source" Type="System.Byte" RefType="ref" Index="1" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
+        <Parameter Name="byteCount" Type="System.UInt32" Index="2" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
       </Parameters>
       <Docs>
         <param name="destination">The destination address to copy to.</param>
@@ -409,12 +499,15 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void CopyBlock(void* destination, void* source, unsigned int32 byteCount) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.CopyBlock(System.Void*,System.Void*,System.UInt32)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void CopyBlock(void* destination, void* source, System::UInt32 byteCount);" />
+      <MemberSignature Language="F#" Value="static member CopyBlock : nativeptr&lt;unit&gt; * nativeptr&lt;unit&gt; * uint32 -&gt; unit" Usage="System.Runtime.CompilerServices.Unsafe.CopyBlock (destination, source, byteCount)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.1</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -440,18 +533,21 @@
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.CopyBlockUnaligned(System.Byte@,System.Byte@,System.UInt32)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub CopyBlockUnaligned (ByRef destination As Byte, ByRef source As Byte, byteCount As UInteger)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void CopyBlockUnaligned(System::Byte % destination, System::Byte % source, System::UInt32 byteCount);" />
+      <MemberSignature Language="F#" Value="static member CopyBlockUnaligned :  *  * uint32 -&gt; unit" Usage="System.Runtime.CompilerServices.Unsafe.CopyBlockUnaligned (destination, source, byteCount)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.1</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="destination" Type="System.Byte&amp;" RefType="ref" />
-        <Parameter Name="source" Type="System.Byte&amp;" RefType="ref" />
-        <Parameter Name="byteCount" Type="System.UInt32" />
+        <Parameter Name="destination" Type="System.Byte" RefType="ref" Index="0" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
+        <Parameter Name="source" Type="System.Byte" RefType="ref" Index="1" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
+        <Parameter Name="byteCount" Type="System.UInt32" Index="2" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
       </Parameters>
       <Docs>
         <param name="destination">The destination address to copy to.</param>
@@ -469,18 +565,21 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void CopyBlockUnaligned(void* destination, void* source, unsigned int32 byteCount) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.CopyBlockUnaligned(System.Void*,System.Void*,System.UInt32)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void CopyBlockUnaligned(void* destination, void* source, System::UInt32 byteCount);" />
+      <MemberSignature Language="F#" Value="static member CopyBlockUnaligned : nativeptr&lt;unit&gt; * nativeptr&lt;unit&gt; * uint32 -&gt; unit" Usage="System.Runtime.CompilerServices.Unsafe.CopyBlockUnaligned (destination, source, byteCount)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.1</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="destination" Type="System.Void*" />
-        <Parameter Name="source" Type="System.Void*" />
-        <Parameter Name="byteCount" Type="System.UInt32" />
+        <Parameter Name="destination" Type="System.Void*" Index="0" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
+        <Parameter Name="source" Type="System.Void*" Index="1" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
+        <Parameter Name="byteCount" Type="System.UInt32" Index="2" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
       </Parameters>
       <Docs>
         <param name="destination">The destination address to copy to.</param>
@@ -499,18 +598,21 @@
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.InitBlock(System.Byte@,System.Byte,System.UInt32)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub InitBlock (ByRef startAddress As Byte, value As Byte, byteCount As UInteger)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void InitBlock(System::Byte % startAddress, System::Byte value, System::UInt32 byteCount);" />
+      <MemberSignature Language="F#" Value="static member InitBlock :  * byte * uint32 -&gt; unit" Usage="System.Runtime.CompilerServices.Unsafe.InitBlock (startAddress, value, byteCount)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.1</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="startAddress" Type="System.Byte&amp;" RefType="ref" />
-        <Parameter Name="value" Type="System.Byte" />
-        <Parameter Name="byteCount" Type="System.UInt32" />
+        <Parameter Name="startAddress" Type="System.Byte" RefType="ref" Index="0" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
+        <Parameter Name="value" Type="System.Byte" Index="1" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
+        <Parameter Name="byteCount" Type="System.UInt32" Index="2" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
       </Parameters>
       <Docs>
         <param name="startAddress">The address of the start of the memory block to initialize.</param>
@@ -527,12 +629,15 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void InitBlock(void* startAddress, unsigned int8 value, unsigned int32 byteCount) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.InitBlock(System.Void*,System.Byte,System.UInt32)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void InitBlock(void* startAddress, System::Byte value, System::UInt32 byteCount);" />
+      <MemberSignature Language="F#" Value="static member InitBlock : nativeptr&lt;unit&gt; * byte * uint32 -&gt; unit" Usage="System.Runtime.CompilerServices.Unsafe.InitBlock (startAddress, value, byteCount)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.1</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -558,18 +663,21 @@
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.InitBlockUnaligned(System.Byte@,System.Byte,System.UInt32)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub InitBlockUnaligned (ByRef startAddress As Byte, value As Byte, byteCount As UInteger)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void InitBlockUnaligned(System::Byte % startAddress, System::Byte value, System::UInt32 byteCount);" />
+      <MemberSignature Language="F#" Value="static member InitBlockUnaligned :  * byte * uint32 -&gt; unit" Usage="System.Runtime.CompilerServices.Unsafe.InitBlockUnaligned (startAddress, value, byteCount)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.1</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="startAddress" Type="System.Byte&amp;" RefType="ref" />
-        <Parameter Name="value" Type="System.Byte" />
-        <Parameter Name="byteCount" Type="System.UInt32" />
+        <Parameter Name="startAddress" Type="System.Byte" RefType="ref" Index="0" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
+        <Parameter Name="value" Type="System.Byte" Index="1" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
+        <Parameter Name="byteCount" Type="System.UInt32" Index="2" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
       </Parameters>
       <Docs>
         <param name="startAddress">The address of the start of the memory block to initialize.</param>
@@ -587,18 +695,21 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void InitBlockUnaligned(void* startAddress, unsigned int8 value, unsigned int32 byteCount) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.InitBlockUnaligned(System.Void*,System.Byte,System.UInt32)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void InitBlockUnaligned(void* startAddress, System::Byte value, System::UInt32 byteCount);" />
+      <MemberSignature Language="F#" Value="static member InitBlockUnaligned : nativeptr&lt;unit&gt; * byte * uint32 -&gt; unit" Usage="System.Runtime.CompilerServices.Unsafe.InitBlockUnaligned (startAddress, value, byteCount)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.1</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="startAddress" Type="System.Void*" />
-        <Parameter Name="value" Type="System.Byte" />
-        <Parameter Name="byteCount" Type="System.UInt32" />
+        <Parameter Name="startAddress" Type="System.Void*" Index="0" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
+        <Parameter Name="value" Type="System.Byte" Index="1" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
+        <Parameter Name="byteCount" Type="System.UInt32" Index="2" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
       </Parameters>
       <Docs>
         <param name="startAddress">The address of the start of the memory block to initialize.</param>
@@ -611,17 +722,84 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="IsAddressGreaterThan&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static bool IsAddressGreaterThan&lt;T&gt; (ref T left, ref T right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsAddressGreaterThan&lt;T&gt;(!!T&amp; left, !!T&amp; right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.IsAddressGreaterThan``1(``0@,``0@)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function IsAddressGreaterThan(Of T) (ByRef left As T, ByRef right As T) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; static bool IsAddressGreaterThan(T % left, T % right);" />
+      <MemberSignature Language="F#" Value="static member IsAddressGreaterThan :  *  -&gt; bool" Usage="System.Runtime.CompilerServices.Unsafe.IsAddressGreaterThan (left, right)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.1</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="left" Type="T" RefType="ref" Index="0" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
+        <Parameter Name="right" Type="T" RefType="ref" Index="1" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">To be added.</typeparam>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAddressLessThan&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static bool IsAddressLessThan&lt;T&gt; (ref T left, ref T right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsAddressLessThan&lt;T&gt;(!!T&amp; left, !!T&amp; right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.IsAddressLessThan``1(``0@,``0@)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function IsAddressLessThan(Of T) (ByRef left As T, ByRef right As T) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; static bool IsAddressLessThan(T % left, T % right);" />
+      <MemberSignature Language="F#" Value="static member IsAddressLessThan :  *  -&gt; bool" Usage="System.Runtime.CompilerServices.Unsafe.IsAddressLessThan (left, right)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.1</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="left" Type="T" RefType="ref" Index="0" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
+        <Parameter Name="right" Type="T" RefType="ref" Index="1" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">To be added.</typeparam>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Read&lt;T&gt;">
       <MemberSignature Language="C#" Value="public static T Read&lt;T&gt; (void* source);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T Read&lt;T&gt;(void* source) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.Read``1(System.Void*)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; static T Read(void* source);" />
+      <MemberSignature Language="F#" Value="static member Read : nativeptr&lt;unit&gt; -&gt; 'T" Usage="System.Runtime.CompilerServices.Unsafe.Read source" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.1</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -648,10 +826,13 @@
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.ReadUnaligned``1(System.Byte@)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function ReadUnaligned(Of T) (ByRef source As Byte) As T" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; static T ReadUnaligned(System::Byte % source);" />
+      <MemberSignature Language="F#" Value="static member ReadUnaligned :  -&gt; 'T" Usage="System.Runtime.CompilerServices.Unsafe.ReadUnaligned source" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.1</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -660,7 +841,7 @@
         <TypeParameter Name="T" />
       </TypeParameters>
       <Parameters>
-        <Parameter Name="source" Type="System.Byte&amp;" RefType="ref" />
+        <Parameter Name="source" Type="System.Byte" RefType="ref" Index="0" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
       </Parameters>
       <Docs>
         <typeparam name="T">The type to read.</typeparam>
@@ -678,10 +859,13 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T ReadUnaligned&lt;T&gt;(void* source) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.ReadUnaligned``1(System.Void*)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; static T ReadUnaligned(void* source);" />
+      <MemberSignature Language="F#" Value="static member ReadUnaligned : nativeptr&lt;unit&gt; -&gt; 'T" Usage="System.Runtime.CompilerServices.Unsafe.ReadUnaligned source" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.1</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>T</ReturnType>
@@ -690,7 +874,7 @@
         <TypeParameter Name="T" />
       </TypeParameters>
       <Parameters>
-        <Parameter Name="source" Type="System.Void*" />
+        <Parameter Name="source" Type="System.Void*" Index="0" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
       </Parameters>
       <Docs>
         <typeparam name="T">The type to read.</typeparam>
@@ -709,12 +893,15 @@
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.SizeOf``1" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function SizeOf(Of T) () As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; static int SizeOf();" />
+      <MemberSignature Language="F#" Value="static member SizeOf : unit -&gt; int" Usage="System.Runtime.CompilerServices.Unsafe.SizeOf " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.1</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -731,11 +918,43 @@
       </Docs>
     </Member>
     <Member MemberName="Subtract&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static void* Subtract&lt;T&gt; (void* source, int elementOffset);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void* Subtract&lt;T&gt;(void* source, int32 elementOffset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.Subtract``1(System.Void*,System.Int32)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; static void* Subtract(void* source, int elementOffset);" />
+      <MemberSignature Language="F#" Value="static member Subtract : nativeptr&lt;unit&gt; * int -&gt; nativeptr&lt;unit&gt;" Usage="System.Runtime.CompilerServices.Unsafe.Subtract (source, elementOffset)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.1</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void*</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Void*" Index="0" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
+        <Parameter Name="elementOffset" Type="System.Int32" Index="1" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">To be added.</typeparam>
+        <param name="source">To be added.</param>
+        <param name="elementOffset">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subtract&lt;T&gt;">
       <MemberSignature Language="C#" Value="public static T Subtract&lt;T&gt; (ref T source, int elementOffset);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!T Subtract&lt;T&gt;(!!T&amp; source, int32 elementOffset) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.Subtract``1(``0@,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Subtract(Of T) (ByRef source As T, elementOffset As Integer) As T" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; static T % Subtract(T % source, int elementOffset);" />
+      <MemberSignature Language="F#" Value="static member Subtract :  * int -&gt; " Usage="System.Runtime.CompilerServices.Unsafe.Subtract (source, elementOffset)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
@@ -767,6 +986,7 @@
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.Subtract``1(``0@,System.IntPtr)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Subtract(Of T) (ByRef source As T, elementOffset As IntPtr) As T" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; static T % Subtract(T % source, IntPtr elementOffset);" />
+      <MemberSignature Language="F#" Value="static member Subtract :  * nativeint -&gt; " Usage="System.Runtime.CompilerServices.Unsafe.Subtract (source, elementOffset)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
@@ -799,6 +1019,7 @@
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.SubtractByteOffset``1(``0@,System.IntPtr)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function SubtractByteOffset(Of T) (ByRef source As T, byteOffset As IntPtr) As T" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; static T % SubtractByteOffset(T % source, IntPtr byteOffset);" />
+      <MemberSignature Language="F#" Value="static member SubtractByteOffset :  * nativeint -&gt; " Usage="System.Runtime.CompilerServices.Unsafe.SubtractByteOffset (source, byteOffset)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
@@ -831,12 +1052,15 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Write&lt;T&gt;(void* destination, !!T value) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.Write``1(System.Void*,``0)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; static void Write(void* destination, T value);" />
+      <MemberSignature Language="F#" Value="static member Write : nativeptr&lt;unit&gt; * 'T -&gt; unit" Usage="System.Runtime.CompilerServices.Unsafe.Write (destination, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.1</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -864,10 +1088,13 @@
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.WriteUnaligned``1(System.Byte@,``0)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub WriteUnaligned(Of T) (ByRef destination As Byte, value As T)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; static void WriteUnaligned(System::Byte % destination, T value);" />
+      <MemberSignature Language="F#" Value="static member WriteUnaligned :  * 'T -&gt; unit" Usage="System.Runtime.CompilerServices.Unsafe.WriteUnaligned (destination, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.1</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -876,8 +1103,8 @@
         <TypeParameter Name="T" />
       </TypeParameters>
       <Parameters>
-        <Parameter Name="destination" Type="System.Byte&amp;" RefType="ref" />
-        <Parameter Name="value" Type="T" />
+        <Parameter Name="destination" Type="System.Byte" RefType="ref" Index="0" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
+        <Parameter Name="value" Type="T" Index="1" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
       </Parameters>
       <Docs>
         <typeparam name="T">The type of value to write.</typeparam>
@@ -895,10 +1122,13 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteUnaligned&lt;T&gt;(void* destination, !!T value) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.Unsafe.WriteUnaligned``1(System.Void*,``0)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; static void WriteUnaligned(void* destination, T value);" />
+      <MemberSignature Language="F#" Value="static member WriteUnaligned : nativeptr&lt;unit&gt; * 'T -&gt; unit" Usage="System.Runtime.CompilerServices.Unsafe.WriteUnaligned (destination, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.CompilerServices.Unsafe</AssemblyName>
         <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.0</AssemblyVersion>
+        <AssemblyVersion>4.0.4.1</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -907,8 +1137,8 @@
         <TypeParameter Name="T" />
       </TypeParameters>
       <Parameters>
-        <Parameter Name="destination" Type="System.Void*" />
-        <Parameter Name="value" Type="T" />
+        <Parameter Name="destination" Type="System.Void*" Index="0" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
+        <Parameter Name="value" Type="T" Index="1" FrameworkAlternate="dotnet-plat-ext-2.1;dotnet-plat-ext-2.2" />
       </Parameters>
       <Docs>
         <typeparam name="T">The type of value to write.</typeparam>

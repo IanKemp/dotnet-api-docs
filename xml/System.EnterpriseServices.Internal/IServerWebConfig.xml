@@ -4,8 +4,11 @@
   <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.Internal.IServerWebConfig" />
   <TypeSignature Language="VB.NET" Value="Public Interface IServerWebConfig" />
   <TypeSignature Language="C++ CLI" Value="public interface class IServerWebConfig" />
+  <TypeSignature Language="F#" Value="type IServerWebConfig = interface" />
   <AssemblyInfo>
     <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
@@ -35,9 +38,12 @@
       <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.IServerWebConfig.AddElement(System.String,System.String,System.String,System.String,System.String,System.String@)" />
       <MemberSignature Language="VB.NET" Value="Public Sub AddElement (FilePath As String, AssemblyName As String, TypeName As String, ProgId As String, Mode As String, ByRef Error As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void AddElement(System::String ^ FilePath, System::String ^ AssemblyName, System::String ^ TypeName, System::String ^ ProgId, System::String ^ Mode, [Runtime::InteropServices::Out] System::String ^ % Error);" />
+      <MemberSignature Language="F#" Value="abstract member AddElement : string * string * string * string * string *  -&gt; unit" Usage="iServerWebConfig.AddElement (FilePath, AssemblyName, TypeName, ProgId, Mode, Error)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -54,7 +60,7 @@
         <Parameter Name="TypeName" Type="System.String" />
         <Parameter Name="ProgId" Type="System.String" />
         <Parameter Name="Mode" Type="System.String" />
-        <Parameter Name="Error" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="Error" Type="System.String" RefType="out" />
       </Parameters>
       <Docs>
         <param name="FilePath">The path for the existing Web.config file.</param>
@@ -81,9 +87,12 @@
       <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.IServerWebConfig.Create(System.String,System.String,System.String@)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Create (FilePath As String, FileRootName As String, ByRef Error As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Create(System::String ^ FilePath, System::String ^ FileRootName, [Runtime::InteropServices::Out] System::String ^ % Error);" />
+      <MemberSignature Language="F#" Value="abstract member Create : string * string *  -&gt; unit" Usage="iServerWebConfig.Create (FilePath, FileRootName, Error)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -97,7 +106,7 @@
       <Parameters>
         <Parameter Name="FilePath" Type="System.String" />
         <Parameter Name="FileRootName" Type="System.String" />
-        <Parameter Name="Error" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="Error" Type="System.String" RefType="out" />
       </Parameters>
       <Docs>
         <param name="FilePath">The folder in which to create the configuration file.</param>

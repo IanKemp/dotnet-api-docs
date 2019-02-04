@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Activities.CompletionCallback`1" />
   <TypeSignature Language="VB.NET" Value="Public Delegate Sub CompletionCallback(Of TResult)(context As NativeActivityContext, completedInstance As ActivityInstance, result As TResult)" />
   <TypeSignature Language="C++ CLI" Value="generic &lt;typename TResult&gt;&#xA;public delegate void CompletionCallback(NativeActivityContext ^ context, ActivityInstance ^ completedInstance, TResult result);" />
+  <TypeSignature Language="F#" Value="type CompletionCallback&lt;'Result&gt; = delegate of NativeActivityContext * ActivityInstance * 'Result -&gt; unit" />
   <AssemblyInfo>
     <AssemblyName>System.Activities</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -26,7 +27,7 @@
     <typeparam name="TResult">The type of the result value.</typeparam>
     <param name="context">The execution environment of the activity.</param>
     <param name="completedInstance">The activity that completed.</param>
-    <param name="result">The <see cref="P:System.Activities.WorkflowElement`1.Result" /> value of the activity that completed.</param>
+    <param name="result">The <paramref name="TResult" /> value of the activity that completed.</param>
     <summary>The method that is called when an activity completes.</summary>
     <remarks>To be added.</remarks>
   </Docs>

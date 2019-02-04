@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Build.Construction.ProjectOutputElement" />
   <TypeSignature Language="VB.NET" Value="Public Class ProjectOutputElement&#xA;Inherits ProjectElement" />
   <TypeSignature Language="C++ CLI" Value="public ref class ProjectOutputElement : Microsoft::Build::Construction::ProjectElement" />
+  <TypeSignature Language="F#" Value="type ProjectOutputElement = class&#xA;    inherit ProjectElement" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Build</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -18,7 +19,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Represents an [Output Element (MSBuild)](http://msdn.microsoft.com/library/34bc7cd1-efd3-4b57-b691-4584eeb6a0e9) in an MSBuild project.</summary>
+    <summary>Represents an <see href="https://msdn.microsoft.com/library/34bc7cd1-efd3-4b57-b691-4584eeb6a0e9">Output Element (MSBuild)</see> in an MSBuild project.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectOutputElement.IsOutputItem" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsOutputItem As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsOutputItem { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsOutputItem : bool" Usage="Microsoft.Build.Construction.ProjectOutputElement.IsOutputItem" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -38,7 +40,8 @@
       </ReturnValue>
       <Docs>
         <summary>Determines whether this output element represents an output item, as opposed to an output property.</summary>
-        <value>Returns true if this output element represents an output item; false otherwise.</value>
+        <value>
+          <see langword="true" /> if this output element represents an output item; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -48,6 +51,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectOutputElement.IsOutputProperty" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsOutputProperty As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsOutputProperty { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsOutputProperty : bool" Usage="Microsoft.Build.Construction.ProjectOutputElement.IsOutputProperty" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -58,7 +62,8 @@
       </ReturnValue>
       <Docs>
         <summary>Determines whether this output element represents an output property, as opposed to an output item.</summary>
-        <value>Returns true if this output element represents an output property; false otherwise.</value>
+        <value>
+          <see langword="true" /> if this output element represents an output property; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -68,6 +73,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectOutputElement.ItemType" />
       <MemberSignature Language="VB.NET" Value="Public Property ItemType As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ItemType { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ItemType : string with get, set" Usage="Microsoft.Build.Construction.ProjectOutputElement.ItemType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -83,7 +89,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the ItemType attribute value.</summary>
-        <value>Gets or sets the ItemType attribute value  Returns an empty string if the attribute is not present.</value>
+        <value>The ItemType attribute value, or an empty string if the attribute is not present.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -100,6 +106,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectOutputElement.ItemTypeLocation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ItemTypeLocation As ElementLocation" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Construction::ElementLocation ^ ItemTypeLocation { Microsoft::Build::Construction::ElementLocation ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ItemTypeLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Construction.ProjectOutputElement.ItemTypeLocation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -120,6 +127,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectOutputElement.PropertyName" />
       <MemberSignature Language="VB.NET" Value="Public Property PropertyName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ PropertyName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.PropertyName : string with get, set" Usage="Microsoft.Build.Construction.ProjectOutputElement.PropertyName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -135,7 +143,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the PropertyName attribute value.</summary>
-        <value>Gets or sets the PropertyName attribute value. Returns an empty string if the attribute is not present.</value>
+        <value>The PropertyName attribute value, or an empty string if the attribute is not present.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -152,6 +160,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectOutputElement.PropertyNameLocation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PropertyNameLocation As ElementLocation" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Construction::ElementLocation ^ PropertyNameLocation { Microsoft::Build::Construction::ElementLocation ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.PropertyNameLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Construction.ProjectOutputElement.PropertyNameLocation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -172,6 +181,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectOutputElement.TaskParameter" />
       <MemberSignature Language="VB.NET" Value="Public Property TaskParameter As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TaskParameter { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.TaskParameter : string with get, set" Usage="Microsoft.Build.Construction.ProjectOutputElement.TaskParameter" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>
@@ -190,7 +200,7 @@
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the TaskParameter attributevalue.</summary>
-        <value>Gets or sets the TaskParameter attribute value. Returns an empty string if the attribute is not present.</value>
+        <value>The TaskParameter attribute value, or an empty string if the attribute is not present.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -207,6 +217,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Build.Construction.ProjectOutputElement.TaskParameterLocation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TaskParameterLocation As ElementLocation" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Build::Construction::ElementLocation ^ TaskParameterLocation { Microsoft::Build::Construction::ElementLocation ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.TaskParameterLocation : Microsoft.Build.Construction.ElementLocation" Usage="Microsoft.Build.Construction.ProjectOutputElement.TaskParameterLocation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Build</AssemblyName>

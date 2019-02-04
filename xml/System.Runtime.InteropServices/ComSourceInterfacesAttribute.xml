@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ComSourceInterfacesAttribute" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ComSourceInterfacesAttribute&#xA;Inherits Attribute" />
   <TypeSignature Language="C++ CLI" Value="public ref class ComSourceInterfacesAttribute sealed : Attribute" />
+  <TypeSignature Language="F#" Value="type ComSourceInterfacesAttribute = class&#xA;    inherit Attribute" />
   <AssemblyInfo>
     <AssemblyName>System.Runtime.InteropServices</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -16,6 +17,8 @@
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.0.5.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
@@ -28,11 +31,23 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute>
+    <Attribute FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-1.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2">
       <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, Inherited=true)</AttributeName>
     </Attribute>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8">
       <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netstandard-1.5;netstandard-1.6;netcore-2.2">
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netcore-1.0;netcore-1.1;netcore-2.0;netcore-2.1;netstandard-1.2;netstandard-1.3;netstandard-1.4;netstandard-1.5;netstandard-1.6;netcore-2.2">
+      <AttributeName>System.Obsolete("ComSourceInterfacesAttribute may be unavailable in future releases.")</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netframework-1.1">
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netstandard-1.2;netstandard-1.3;netstandard-1.4">
+      <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -43,7 +58,7 @@
 ## Remarks  
  You can apply this attribute to classes.  
   
- You apply this attribute to a managed class to identify the event interfaces that the class exposes as COM connection points. An event interface contains methods that map to the event members of the class. The class event name and the interface method name must be the same. This attribute can accommodate up to four source interfaces for a class by passing the type of the source interface to the appropriate constructor, which take between one and four type arguments. For classes that want to expose more than four source interfaces, the string version of the constructor can be used. For additional information about exposing.NET events to COM clients, see [How to: Raise Events Handled by a COM Sink](http://msdn.microsoft.com/library/7c9944b2-e951-4c3e-a0a1-59b2ae37d7fd).  
+ You apply this attribute to a managed class to identify the event interfaces that the class exposes as COM connection points. An event interface contains methods that map to the event members of the class. The class event name and the interface method name must be the same. This attribute can accommodate up to four source interfaces for a class by passing the type of the source interface to the appropriate constructor, which take between one and four type arguments. For classes that want to expose more than four source interfaces, the string version of the constructor can be used. For additional information about exposing.NET events to COM clients, see [How to: Raise Events Handled by a COM Sink](https://msdn.microsoft.com/library/7c9944b2-e951-4c3e-a0a1-59b2ae37d7fd).  
   
    
   
@@ -78,6 +93,7 @@
       <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComSourceInterfacesAttribute.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (sourceInterfaces As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ComSourceInterfacesAttribute(System::String ^ sourceInterfaces);" />
+      <MemberSignature Language="F#" Value="new System.Runtime.InteropServices.ComSourceInterfacesAttribute : string -&gt; System.Runtime.InteropServices.ComSourceInterfacesAttribute" Usage="new System.Runtime.InteropServices.ComSourceInterfacesAttribute sourceInterfaces" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.InteropServices</AssemblyName>
@@ -91,6 +107,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -120,6 +138,7 @@
       <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComSourceInterfacesAttribute.#ctor(System.Type)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (sourceInterface As Type)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ComSourceInterfacesAttribute(Type ^ sourceInterface);" />
+      <MemberSignature Language="F#" Value="new System.Runtime.InteropServices.ComSourceInterfacesAttribute : Type -&gt; System.Runtime.InteropServices.ComSourceInterfacesAttribute" Usage="new System.Runtime.InteropServices.ComSourceInterfacesAttribute sourceInterface" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.InteropServices</AssemblyName>
@@ -133,6 +152,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -162,6 +183,7 @@
       <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComSourceInterfacesAttribute.#ctor(System.Type,System.Type)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (sourceInterface1 As Type, sourceInterface2 As Type)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ComSourceInterfacesAttribute(Type ^ sourceInterface1, Type ^ sourceInterface2);" />
+      <MemberSignature Language="F#" Value="new System.Runtime.InteropServices.ComSourceInterfacesAttribute : Type * Type -&gt; System.Runtime.InteropServices.ComSourceInterfacesAttribute" Usage="new System.Runtime.InteropServices.ComSourceInterfacesAttribute (sourceInterface1, sourceInterface2)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.InteropServices</AssemblyName>
@@ -175,6 +197,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -206,6 +230,7 @@
       <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComSourceInterfacesAttribute.#ctor(System.Type,System.Type,System.Type)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (sourceInterface1 As Type, sourceInterface2 As Type, sourceInterface3 As Type)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ComSourceInterfacesAttribute(Type ^ sourceInterface1, Type ^ sourceInterface2, Type ^ sourceInterface3);" />
+      <MemberSignature Language="F#" Value="new System.Runtime.InteropServices.ComSourceInterfacesAttribute : Type * Type * Type -&gt; System.Runtime.InteropServices.ComSourceInterfacesAttribute" Usage="new System.Runtime.InteropServices.ComSourceInterfacesAttribute (sourceInterface1, sourceInterface2, sourceInterface3)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.InteropServices</AssemblyName>
@@ -219,6 +244,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -252,6 +279,7 @@
       <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComSourceInterfacesAttribute.#ctor(System.Type,System.Type,System.Type,System.Type)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (sourceInterface1 As Type, sourceInterface2 As Type, sourceInterface3 As Type, sourceInterface4 As Type)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ComSourceInterfacesAttribute(Type ^ sourceInterface1, Type ^ sourceInterface2, Type ^ sourceInterface3, Type ^ sourceInterface4);" />
+      <MemberSignature Language="F#" Value="new System.Runtime.InteropServices.ComSourceInterfacesAttribute : Type * Type * Type * Type -&gt; System.Runtime.InteropServices.ComSourceInterfacesAttribute" Usage="new System.Runtime.InteropServices.ComSourceInterfacesAttribute (sourceInterface1, sourceInterface2, sourceInterface3, sourceInterface4)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.InteropServices</AssemblyName>
@@ -265,6 +293,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -300,6 +330,7 @@
       <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.ComSourceInterfacesAttribute.Value" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Value As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Value { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Value : string" Usage="System.Runtime.InteropServices.ComSourceInterfacesAttribute.Value" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.InteropServices</AssemblyName>
@@ -313,6 +344,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>

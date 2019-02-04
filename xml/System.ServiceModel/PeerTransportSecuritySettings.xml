@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.ServiceModel.PeerTransportSecuritySettings" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class PeerTransportSecuritySettings" />
   <TypeSignature Language="C++ CLI" Value="public ref class PeerTransportSecuritySettings sealed" />
+  <TypeSignature Language="F#" Value="type PeerTransportSecuritySettings = class" />
   <AssemblyInfo>
     <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -40,16 +42,23 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerTransportSecuritySettings.CredentialType" />
       <MemberSignature Language="VB.NET" Value="Public Property CredentialType As PeerTransportCredentialType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::ServiceModel::PeerTransportCredentialType CredentialType { System::ServiceModel::PeerTransportCredentialType get(); void set(System::ServiceModel::PeerTransportCredentialType value); };" />
+      <MemberSignature Language="F#" Value="member this.CredentialType : System.ServiceModel.PeerTransportCredentialType with get, set" Usage="System.ServiceModel.PeerTransportSecuritySettings.CredentialType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.ServiceModel.PeerTransportCredentialType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets and sets the type of credential used to authenticate the peer channel transport.</summary>
+        <summary>Gets or sets the type of credential used to authenticate the peer channel transport.</summary>
         <value>A <see cref="T:System.ServiceModel.PeerTransportCredentialType" /> enumeration value that specifies the type of credentials to provide for authentication.</value>
         <remarks>To be added.</remarks>
         <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">The credential type is an invalid <see cref="T:System.ServiceModel.PeerTransportCredentialType" /> enumeration value.</exception>

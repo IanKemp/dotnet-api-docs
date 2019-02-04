@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Net.HttpListenerContext" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class HttpListenerContext" />
   <TypeSignature Language="C++ CLI" Value="public ref class HttpListenerContext sealed" />
+  <TypeSignature Language="F#" Value="type HttpListenerContext = class" />
   <AssemblyInfo>
     <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.0.5.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
@@ -64,6 +66,7 @@
       <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerContext.AcceptWebSocketAsync(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function AcceptWebSocketAsync (subProtocol As String) As Task(Of HttpListenerWebSocketContext)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Threading::Tasks::Task&lt;System::Net::WebSockets::HttpListenerWebSocketContext ^&gt; ^ AcceptWebSocketAsync(System::String ^ subProtocol);" />
+      <MemberSignature Language="F#" Value="member this.AcceptWebSocketAsync : string -&gt; System.Threading.Tasks.Task&lt;System.Net.WebSockets.HttpListenerWebSocketContext&gt;" Usage="httpListenerContext.AcceptWebSocketAsync subProtocol" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -80,7 +83,7 @@
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
           <AttributeName>System.MonoTODO</AttributeName>
         </Attribute>
       </Attributes>
@@ -93,9 +96,7 @@
       <Docs>
         <param name="subProtocol">The supported WebSocket sub-protocol.</param>
         <summary>Accept a WebSocket connection as an asynchronous operation.</summary>
-        <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.  
-  
- The task object representing the asynchronous operation. The <see cref="P:System.Threading.Tasks.Task`1.Result" /> property on the task object returns an <see cref="T:System.Net.WebSockets.HttpListenerWebSocketContext" /> object.</returns>
+        <returns>The task object representing the asynchronous operation. The <see cref="P:System.Threading.Tasks.Task`1.Result" /> property on the task object returns an <see cref="T:System.Net.WebSockets.HttpListenerWebSocketContext" /> object.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -122,6 +123,7 @@
       <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerContext.AcceptWebSocketAsync(System.String,System.TimeSpan)" />
       <MemberSignature Language="VB.NET" Value="Public Function AcceptWebSocketAsync (subProtocol As String, keepAliveInterval As TimeSpan) As Task(Of HttpListenerWebSocketContext)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Threading::Tasks::Task&lt;System::Net::WebSockets::HttpListenerWebSocketContext ^&gt; ^ AcceptWebSocketAsync(System::String ^ subProtocol, TimeSpan keepAliveInterval);" />
+      <MemberSignature Language="F#" Value="member this.AcceptWebSocketAsync : string * TimeSpan -&gt; System.Threading.Tasks.Task&lt;System.Net.WebSockets.HttpListenerWebSocketContext&gt;" Usage="httpListenerContext.AcceptWebSocketAsync (subProtocol, keepAliveInterval)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -138,7 +140,7 @@
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
           <AttributeName>System.MonoTODO</AttributeName>
         </Attribute>
       </Attributes>
@@ -153,9 +155,7 @@
         <param name="subProtocol">The supported WebSocket sub-protocol.</param>
         <param name="keepAliveInterval">The WebSocket protocol keep-alive interval in milliseconds.</param>
         <summary>Accept a WebSocket connection specifying the supported WebSocket sub-protocol  and WebSocket keep-alive interval as an asynchronous operation.</summary>
-        <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.  
-  
- The task object representing the asynchronous operation. The <see cref="P:System.Threading.Tasks.Task`1.Result" /> property on the task object returns an <see cref="T:System.Net.WebSockets.HttpListenerWebSocketContext" /> object.</returns>
+        <returns>The task object representing the asynchronous operation. The <see cref="P:System.Threading.Tasks.Task`1.Result" /> property on the task object returns an <see cref="T:System.Net.WebSockets.HttpListenerWebSocketContext" /> object.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -184,6 +184,7 @@
       <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerContext.AcceptWebSocketAsync(System.String,System.Int32,System.TimeSpan)" />
       <MemberSignature Language="VB.NET" Value="Public Function AcceptWebSocketAsync (subProtocol As String, receiveBufferSize As Integer, keepAliveInterval As TimeSpan) As Task(Of HttpListenerWebSocketContext)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Threading::Tasks::Task&lt;System::Net::WebSockets::HttpListenerWebSocketContext ^&gt; ^ AcceptWebSocketAsync(System::String ^ subProtocol, int receiveBufferSize, TimeSpan keepAliveInterval);" />
+      <MemberSignature Language="F#" Value="member this.AcceptWebSocketAsync : string * int * TimeSpan -&gt; System.Threading.Tasks.Task&lt;System.Net.WebSockets.HttpListenerWebSocketContext&gt;" Usage="httpListenerContext.AcceptWebSocketAsync (subProtocol, receiveBufferSize, keepAliveInterval)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -200,7 +201,7 @@
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
           <AttributeName>System.MonoTODO</AttributeName>
         </Attribute>
       </Attributes>
@@ -217,9 +218,7 @@
         <param name="receiveBufferSize">The receive buffer size in bytes.</param>
         <param name="keepAliveInterval">The WebSocket protocol keep-alive interval in milliseconds.</param>
         <summary>Accept a WebSocket connection specifying the supported WebSocket sub-protocol, receive buffer size, and WebSocket keep-alive interval as an asynchronous operation.</summary>
-        <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.  
-  
- The task object representing the asynchronous operation. The <see cref="P:System.Threading.Tasks.Task`1.Result" /> property on the task object returns an <see cref="T:System.Net.WebSockets.HttpListenerWebSocketContext" /> object.</returns>
+        <returns>The task object representing the asynchronous operation. The <see cref="P:System.Threading.Tasks.Task`1.Result" /> property on the task object returns an <see cref="T:System.Net.WebSockets.HttpListenerWebSocketContext" /> object.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -254,6 +253,7 @@
       <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerContext.AcceptWebSocketAsync(System.String,System.Int32,System.TimeSpan,System.ArraySegment{System.Byte})" />
       <MemberSignature Language="VB.NET" Value="Public Function AcceptWebSocketAsync (subProtocol As String, receiveBufferSize As Integer, keepAliveInterval As TimeSpan, internalBuffer As ArraySegment(Of Byte)) As Task(Of HttpListenerWebSocketContext)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Threading::Tasks::Task&lt;System::Net::WebSockets::HttpListenerWebSocketContext ^&gt; ^ AcceptWebSocketAsync(System::String ^ subProtocol, int receiveBufferSize, TimeSpan keepAliveInterval, ArraySegment&lt;System::Byte&gt; internalBuffer);" />
+      <MemberSignature Language="F#" Value="member this.AcceptWebSocketAsync : string * int * TimeSpan * ArraySegment&lt;byte&gt; -&gt; System.Threading.Tasks.Task&lt;System.Net.WebSockets.HttpListenerWebSocketContext&gt;" Usage="httpListenerContext.AcceptWebSocketAsync (subProtocol, receiveBufferSize, keepAliveInterval, internalBuffer)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
@@ -270,8 +270,11 @@
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
           <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-2.0;netframework-4.8">
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -289,9 +292,7 @@
         <param name="keepAliveInterval">The WebSocket protocol keep-alive interval in milliseconds.</param>
         <param name="internalBuffer">An internal buffer to use for this operation.</param>
         <summary>Accept a WebSocket connection specifying the supported WebSocket sub-protocol, receive buffer size, WebSocket keep-alive interval, and the internal buffer as an asynchronous operation.</summary>
-        <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.  
-  
- The task object representing the asynchronous operation. The <see cref="P:System.Threading.Tasks.Task`1.Result" /> property on the task object returns an <see cref="T:System.Net.WebSockets.HttpListenerWebSocketContext" /> object.</returns>
+        <returns>The task object representing the asynchronous operation. The <see cref="P:System.Threading.Tasks.Task`1.Result" /> property on the task object returns an <see cref="T:System.Net.WebSockets.HttpListenerWebSocketContext" /> object.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -326,9 +327,11 @@
       <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerContext.Request" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Request As HttpListenerRequest" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::HttpListenerRequest ^ Request { System::Net::HttpListenerRequest ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Request : System.Net.HttpListenerRequest" Usage="System.Net.HttpListenerContext.Request" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -341,6 +344,11 @@
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Net.HttpListenerRequest</ReturnType>
       </ReturnValue>
@@ -370,9 +378,11 @@
       <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerContext.Response" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Response As HttpListenerResponse" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::HttpListenerResponse ^ Response { System::Net::HttpListenerResponse ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Response : System.Net.HttpListenerResponse" Usage="System.Net.HttpListenerContext.Response" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -417,9 +427,11 @@
       <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerContext.User" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property User As IPrincipal" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Security::Principal::IPrincipal ^ User { System::Security::Principal::IPrincipal ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.User : System.Security.Principal.IPrincipal" Usage="System.Net.HttpListenerContext.User" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>

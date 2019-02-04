@@ -4,9 +4,11 @@
   <TypeSignature Language="DocId" Value="T:System.ServiceModel.AuditLogLocation" />
   <TypeSignature Language="VB.NET" Value="Public Enum AuditLogLocation" />
   <TypeSignature Language="C++ CLI" Value="public enum class AuditLogLocation" />
+  <TypeSignature Language="F#" Value="type AuditLogLocation = " />
   <AssemblyInfo>
     <AssemblyName>System.ServiceModel</AssemblyName>
     <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -44,6 +46,8 @@
     <altmember cref="P:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel" />
     <altmember cref="P:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel" />
     <altmember cref="T:System.ServiceModel.AuditLevel" />
+    <related type="Article" href="https://msdn.microsoft.com/library/5633f61c-a3c9-40dd-8070-1c373b66a716">Auditing Security Events</related>
+    <related type="Article" href="https://msdn.microsoft.com/library/ba517369-a034-4f8e-a2c4-66517716062b">serviceSecurityAudit element</related>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -52,10 +56,12 @@
       <MemberSignature Language="DocId" Value="F:System.ServiceModel.AuditLogLocation.Application" />
       <MemberSignature Language="VB.NET" Value="Application" />
       <MemberSignature Language="C++ CLI" Value="Application" />
+      <MemberSignature Language="F#" Value="Application = 1" Usage="System.ServiceModel.AuditLogLocation.Application" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -72,10 +78,12 @@
       <MemberSignature Language="DocId" Value="F:System.ServiceModel.AuditLogLocation.Default" />
       <MemberSignature Language="VB.NET" Value="Default" />
       <MemberSignature Language="C++ CLI" Value="Default" />
+      <MemberSignature Language="F#" Value="Default = 0" Usage="System.ServiceModel.AuditLogLocation.Default" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -92,10 +100,12 @@
       <MemberSignature Language="DocId" Value="F:System.ServiceModel.AuditLogLocation.Security" />
       <MemberSignature Language="VB.NET" Value="Security" />
       <MemberSignature Language="C++ CLI" Value="Security" />
+      <MemberSignature Language="F#" Value="Security = 2" Usage="System.ServiceModel.AuditLogLocation.Security" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

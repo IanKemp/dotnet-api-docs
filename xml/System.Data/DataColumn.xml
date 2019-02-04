@@ -4,8 +4,11 @@
   <TypeSignature Language="DocId" Value="T:System.Data.DataColumn" />
   <TypeSignature Language="VB.NET" Value="Public Class DataColumn&#xA;Inherits MarshalByValueComponent" />
   <TypeSignature Language="C++ CLI" Value="public ref class DataColumn : System::ComponentModel::MarshalByValueComponent" />
+  <TypeSignature Language="F#" Value="type DataColumn = class&#xA;    inherit MarshalByValueComponent" />
   <AssemblyInfo>
     <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.0.5.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
@@ -23,17 +26,29 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute>
+    <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2">
       <AttributeName>System.ComponentModel.DefaultProperty("ColumnName")</AttributeName>
     </Attribute>
-    <Attribute>
+    <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2">
       <AttributeName>System.ComponentModel.DesignTimeVisible(false)</AttributeName>
     </Attribute>
-    <Attribute>
+    <Attribute FrameworkAlternate="xamarinmac-3.0">
       <AttributeName>System.ComponentModel.Editor("Microsoft.VSDesigner.Data.Design.DataColumnEditor, Microsoft.VSDesigner, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
     </Attribute>
-    <Attribute>
+    <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2">
       <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netframework-1.1">
+      <AttributeName>System.ComponentModel.Editor("Microsoft.VSDesigner.Data.Design.DataColumnEditor, Microsoft.VSDesigner, Version=7.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">
+      <AttributeName>System.ComponentModel.Editor("Microsoft.VSDesigner.Data.Design.DataColumnEditor, Microsoft.VSDesigner, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+      <AttributeName>System.ComponentModel.Editor("Microsoft.VSDesigner.Data.Design.DataColumnEditor, Microsoft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="xamarinandroid-7.1;xamarinios-10.8">
+      <AttributeName>System.ComponentModel.Editor("Microsoft.VSDesigner.Data.Design.DataColumnEditor, Microsoft.VSDesigner, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=2.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -76,6 +91,7 @@
     <altmember cref="M:System.Data.DataTable.NewRow" />
     <altmember cref="T:System.Data.DataRowCollection" />
     <altmember cref="T:System.Data.UniqueConstraint" />
+    <related type="Article" href="~/docs/framework/data/adonet/dataset-datatable-dataview/index.md">Using DataSets in ADO.NET</related>
   </Docs>
   <Members>
     <MemberGroup MemberName=".ctor">
@@ -97,6 +113,8 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -133,6 +151,7 @@
         <altmember cref="P:System.Data.DataColumn.DefaultValue" />
         <altmember cref="T:System.Data.DataTable" />
         <altmember cref="P:System.Data.DataColumn.DataType" />
+        <related type="Article" href="~/docs/framework/data/adonet/dataset-datatable-dataview/index.md">Using DataSets in ADO.NET</related>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -141,9 +160,12 @@
       <MemberSignature Language="DocId" Value="M:System.Data.DataColumn.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (columnName As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DataColumn(System::String ^ columnName);" />
+      <MemberSignature Language="F#" Value="new System.Data.DataColumn : string -&gt; System.Data.DataColumn" Usage="new System.Data.DataColumn columnName" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -183,6 +205,7 @@
         <altmember cref="P:System.Data.DataColumn.DefaultValue" />
         <altmember cref="T:System.Data.DataTable" />
         <altmember cref="P:System.Data.DataColumn.DataType" />
+        <related type="Article" href="~/docs/framework/data/adonet/dataset-datatable-dataview/index.md">Using DataSets in ADO.NET</related>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -191,9 +214,12 @@
       <MemberSignature Language="DocId" Value="M:System.Data.DataColumn.#ctor(System.String,System.Type)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (columnName As String, dataType As Type)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DataColumn(System::String ^ columnName, Type ^ dataType);" />
+      <MemberSignature Language="F#" Value="new System.Data.DataColumn : string * Type -&gt; System.Data.DataColumn" Usage="new System.Data.DataColumn (columnName, dataType)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -231,6 +257,7 @@
         <altmember cref="P:System.Data.DataColumn.Caption" />
         <altmember cref="T:System.Data.DataTable" />
         <altmember cref="P:System.Data.DataColumn.DataType" />
+        <related type="Article" href="~/docs/framework/data/adonet/dataset-datatable-dataview/index.md">Using DataSets in ADO.NET</related>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -239,9 +266,12 @@
       <MemberSignature Language="DocId" Value="M:System.Data.DataColumn.#ctor(System.String,System.Type,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (columnName As String, dataType As Type, expr As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DataColumn(System::String ^ columnName, Type ^ dataType, System::String ^ expr);" />
+      <MemberSignature Language="F#" Value="new System.Data.DataColumn : string * Type * string -&gt; System.Data.DataColumn" Usage="new System.Data.DataColumn (columnName, dataType, expr)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -282,6 +312,7 @@
         <altmember cref="T:System.Data.DataTable" />
         <altmember cref="P:System.Data.DataColumn.DataType" />
         <altmember cref="P:System.Data.DataColumn.Expression" />
+        <related type="Article" href="~/docs/framework/data/adonet/dataset-datatable-dataview/index.md">Using DataSets in ADO.NET</related>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -289,9 +320,12 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string columnName, class System.Type dataType, string expr, valuetype System.Data.MappingType type) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Data.DataColumn.#ctor(System.String,System.Type,System.String,System.Data.MappingType)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DataColumn(System::String ^ columnName, Type ^ dataType, System::String ^ expr, System::Data::MappingType type);" />
+      <MemberSignature Language="F#" Value="new System.Data.DataColumn : string * Type * string * System.Data.MappingType -&gt; System.Data.DataColumn" Usage="new System.Data.DataColumn (columnName, dataType, expr, type)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -343,6 +377,7 @@
         <altmember cref="P:System.Data.DataColumn.DefaultValue" />
         <altmember cref="T:System.Data.DataTable" />
         <altmember cref="P:System.Data.DataColumn.DataType" />
+        <related type="Article" href="~/docs/framework/data/adonet/dataset-datatable-dataview/index.md">Using DataSets in ADO.NET</related>
       </Docs>
     </Member>
     <Member MemberName="AllowDBNull">
@@ -351,9 +386,12 @@
       <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.AllowDBNull" />
       <MemberSignature Language="VB.NET" Value="Public Property AllowDBNull As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AllowDBNull { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.AllowDBNull : bool with get, set" Usage="System.Data.DataColumn.AllowDBNull" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -367,8 +405,11 @@
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2">
           <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-1.1">
+          <AttributeName>System.Data.DataSysDescription("DataColumnAllowNullDescr")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -390,6 +431,7 @@
  ]]></format>
         </remarks>
         <altmember cref="P:System.Data.DataColumn.Unique" />
+        <related type="Article" href="~/docs/framework/data/adonet/dataset-datatable-dataview/index.md">Using DataSets in ADO.NET</related>
       </Docs>
     </Member>
     <Member MemberName="AutoIncrement">
@@ -398,9 +440,12 @@
       <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.AutoIncrement" />
       <MemberSignature Language="VB.NET" Value="Public Property AutoIncrement As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AutoIncrement { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.AutoIncrement : bool with get, set" Usage="System.Data.DataColumn.AutoIncrement" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -414,11 +459,14 @@
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2">
           <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
         </Attribute>
-        <Attribute>
-          <AttributeName>System.ComponentModel.RefreshProperties</AttributeName>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;netcore-2.2;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;xamarinmac-3.0">
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-1.1">
+          <AttributeName>System.Data.DataSysDescription("DataColumnAutoIncrementDescr")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -458,6 +506,7 @@
         <altmember cref="P:System.Data.DataColumn.Expression" />
         <altmember cref="P:System.Data.DataRow.ItemArray" />
         <altmember cref="M:System.Data.DataTable.NewRow" />
+        <related type="Article" href="~/docs/framework/data/adonet/dataset-datatable-dataview/index.md">Using DataSets in ADO.NET</related>
       </Docs>
     </Member>
     <Member MemberName="AutoIncrementSeed">
@@ -466,9 +515,12 @@
       <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.AutoIncrementSeed" />
       <MemberSignature Language="VB.NET" Value="Public Property AutoIncrementSeed As Long" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property long AutoIncrementSeed { long get(); void set(long value); };" />
+      <MemberSignature Language="F#" Value="member this.AutoIncrementSeed : int64 with get, set" Usage="System.Data.DataColumn.AutoIncrementSeed" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -482,8 +534,11 @@
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2">
           <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-1.1">
+          <AttributeName>System.Data.DataSysDescription("DataColumnAutoIncrementSeedDescr")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -507,6 +562,7 @@
         <altmember cref="P:System.Data.DataColumn.AutoIncrementStep" />
         <altmember cref="P:System.Data.DataColumn.Expression" />
         <altmember cref="P:System.Data.DataRow.ItemArray" />
+        <related type="Article" href="~/docs/framework/data/adonet/dataset-datatable-dataview/index.md">Using DataSets in ADO.NET</related>
       </Docs>
     </Member>
     <Member MemberName="AutoIncrementStep">
@@ -515,9 +571,12 @@
       <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.AutoIncrementStep" />
       <MemberSignature Language="VB.NET" Value="Public Property AutoIncrementStep As Long" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property long AutoIncrementStep { long get(); void set(long value); };" />
+      <MemberSignature Language="F#" Value="member this.AutoIncrementStep : int64 with get, set" Usage="System.Data.DataColumn.AutoIncrementStep" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -531,8 +590,11 @@
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2">
           <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-1.1">
+          <AttributeName>System.Data.DataSysDescription("DataColumnAutoIncrementStepDescr")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -557,6 +619,7 @@
         <altmember cref="P:System.Data.DataColumn.AutoIncrementSeed" />
         <altmember cref="P:System.Data.DataColumn.Expression" />
         <altmember cref="P:System.Data.DataRow.ItemArray" />
+        <related type="Article" href="~/docs/framework/data/adonet/dataset-datatable-dataview/index.md">Using DataSets in ADO.NET</related>
       </Docs>
     </Member>
     <Member MemberName="Caption">
@@ -565,9 +628,12 @@
       <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.Caption" />
       <MemberSignature Language="VB.NET" Value="Public Property Caption As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Caption { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Caption : string with get, set" Usage="System.Data.DataColumn.Caption" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -580,6 +646,11 @@
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-1.1">
+          <AttributeName>System.Data.DataSysDescription("DataColumnCaptionDescr")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -603,6 +674,7 @@
  ]]></format>
         </remarks>
         <altmember cref="P:System.Data.DataColumn.ColumnName" />
+        <related type="Article" href="~/docs/framework/data/adonet/dataset-datatable-dataview/index.md">Using DataSets in ADO.NET</related>
       </Docs>
     </Member>
     <Member MemberName="CheckNotAllowNull">
@@ -611,9 +683,12 @@
       <MemberSignature Language="DocId" Value="M:System.Data.DataColumn.CheckNotAllowNull" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Sub CheckNotAllowNull ()" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; void CheckNotAllowNull();" />
+      <MemberSignature Language="F#" Value="member this.CheckNotAllowNull : unit -&gt; unit" Usage="dataColumn.CheckNotAllowNull " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -641,9 +716,12 @@
       <MemberSignature Language="DocId" Value="M:System.Data.DataColumn.CheckUnique" />
       <MemberSignature Language="VB.NET" Value="Protected Sub CheckUnique ()" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void CheckUnique();" />
+      <MemberSignature Language="F#" Value="member this.CheckUnique : unit -&gt; unit" Usage="dataColumn.CheckUnique " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -671,9 +749,12 @@
       <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.ColumnMapping" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property ColumnMapping As MappingType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Data::MappingType ColumnMapping { System::Data::MappingType get(); void set(System::Data::MappingType value); };" />
+      <MemberSignature Language="F#" Value="member this.ColumnMapping : System.Data.MappingType with get, set" Usage="System.Data.DataColumn.ColumnMapping" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -687,8 +768,11 @@
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2">
           <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-1.1">
+          <AttributeName>System.Data.DataSysDescription("DataColumnMappingDescr")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -741,6 +825,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="~/docs/framework/data/adonet/dataset-datatable-dataview/index.md">Using DataSets in ADO.NET</related>
       </Docs>
     </Member>
     <Member MemberName="ColumnName">
@@ -749,9 +834,12 @@
       <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.ColumnName" />
       <MemberSignature Language="VB.NET" Value="Public Property ColumnName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ColumnName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ColumnName : string with get, set" Usage="System.Data.DataColumn.ColumnName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -765,11 +853,14 @@
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2">
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
         </Attribute>
-        <Attribute>
-          <AttributeName>System.ComponentModel.RefreshProperties</AttributeName>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;netcore-2.2;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;xamarinmac-3.0">
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-1.1">
+          <AttributeName>System.Data.DataSysDescription("DataColumnColumnNameDescr")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -799,6 +890,7 @@
         <exception cref="T:System.ArgumentException">The property is set to <see langword="null" /> or an empty string and the column belongs to a collection.</exception>
         <exception cref="T:System.Data.DuplicateNameException">A column with the same name already exists in the collection. The name comparison is not case sensitive.</exception>
         <altmember cref="P:System.Data.DataColumn.Caption" />
+        <related type="Article" href="~/docs/framework/data/adonet/dataset-datatable-dataview/index.md">Using DataSets in ADO.NET</related>
       </Docs>
     </Member>
     <Member MemberName="DataType">
@@ -807,9 +899,12 @@
       <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.DataType" />
       <MemberSignature Language="VB.NET" Value="Public Property DataType As Type" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Type ^ DataType { Type ^ get(); void set(Type ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DataType : Type with get, set" Usage="System.Data.DataColumn.DataType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -823,14 +918,17 @@
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2">
           <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
         </Attribute>
-        <Attribute>
-          <AttributeName>System.ComponentModel.RefreshProperties</AttributeName>
-        </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8">
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Data.ColumnTypeConverter))</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;netcore-2.2;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;xamarinmac-3.0">
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-1.1">
+          <AttributeName>System.Data.DataSysDescription("DataColumnDataTypeDescr")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -892,7 +990,7 @@
 > [!NOTE]
 >  A column of data type `Byte[]` requires special treatment in certain cases since, unlike the base .NET Framework data types, it is a reference data type. If a column of data type `Byte[]` is used as a <xref:System.Data.DataTable.PrimaryKey%2A>, or as a <xref:System.Data.DataView.Sort%2A> or <xref:System.Data.DataView.RowFilter%2A> key for a <xref:System.Data.DataView>, any change to the column value must involve assigning the `Byte[]` column value to a separately instantiated `Byte[]` object. This assignment is required to trigger the update of the internal indexes used by sorting, filtering, and primary key operations. This is illustrated by the following example:  
   
-```  
+```csharp  
 byte[] columnValue = (byte[])myDataTable.Rows[0][0];  
 byte[] newValue = (byte[])columnValue.Clone();  
 newValue[1] = 2;  
@@ -900,7 +998,7 @@ myDataTable.Rows[0][0] = newValue;
 ```  
   
 > [!NOTE]
->  Although it is possible to define a column as data type other than the base .NET Framework data types and `Byte[]`, such a column will be treated as a user-defined type, subject to the following usage restrictions. (For more information on user-defined types, see [Creating and Using User-Defined Types](http://msdn.microsoft.com/library/ec0266d2-7e5b-47e4-938a-85ac9d04fa40).)  
+>  Although it is possible to define a column as data type other than the base .NET Framework data types and `Byte[]`, such a column will be treated as a user-defined type, subject to the following usage restrictions. (For more information on user-defined types, see [Creating and Using User-Defined Types](https://msdn.microsoft.com/library/ec0266d2-7e5b-47e4-938a-85ac9d04fa40).)  
   
 -   The column cannot be part of a <xref:System.Data.DataView.RowFilter%2A> or <xref:System.Data.DataTable.Select%2A> expression.  
   
@@ -908,9 +1006,9 @@ myDataTable.Rows[0][0] = newValue;
   
 -   Its <xref:System.Data.DataColumn.ColumnMapping%2A> can be only set to `MappingType.Element`.  
   
--   The class that implements the column’s data type must be must be marked with the <xref:System.SerializableAttribute>, and if necessary implement the <xref:System.Runtime.Serialization.ISerializable> or <xref:System.Xml.Serialization.IXmlSerializable> interface.  
+-   The class that implements the column's data type must be must be marked with the <xref:System.SerializableAttribute>, and if necessary implement the <xref:System.Runtime.Serialization.ISerializable> or <xref:System.Xml.Serialization.IXmlSerializable> interface.  
   
--   Support for change tracking is limited. To utilize the <xref:System.Data.DataTable> class’s change tracking mechanism, the class that implements the column’s data type must either implement the <xref:System.ComponentModel.IChangeTracking> interface, or take over the responsibility for informing the <xref:System.Data.DataRow> when the column value has been modified, either by calling <xref:System.Data.DataRow.SetModified%2A> on the row or by assigning the column value object to a separately instantiated column value object.  
+-   Support for change tracking is limited. To utilize the <xref:System.Data.DataTable> class' change tracking mechanism, the class that implements the column's data type must either implement the <xref:System.ComponentModel.IChangeTracking> interface, or take over the responsibility for informing the <xref:System.Data.DataRow> when the column value has been modified, either by calling <xref:System.Data.DataRow.SetModified%2A> on the row or by assigning the column value object to a separately instantiated column value object.  
   
    
   
@@ -925,6 +1023,7 @@ myDataTable.Rows[0][0] = newValue;
         <exception cref="T:System.ArgumentException">The column already has data stored.</exception>
         <altmember cref="T:System.Type" />
         <altmember cref="M:System.Type.GetType" />
+        <related type="Article" href="~/docs/framework/data/adonet/dataset-datatable-dataview/index.md">Using DataSets in ADO.NET</related>
       </Docs>
     </Member>
     <Member MemberName="DateTimeMode">
@@ -933,9 +1032,11 @@ myDataTable.Rows[0][0] = newValue;
       <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.DateTimeMode" />
       <MemberSignature Language="VB.NET" Value="Public Property DateTimeMode As DataSetDateTime" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Data::DataSetDateTime DateTimeMode { System::Data::DataSetDateTime get(); void set(System::Data::DataSetDateTime value); };" />
+      <MemberSignature Language="F#" Value="member this.DateTimeMode : System.Data.DataSetDateTime with get, set" Usage="System.Data.DataColumn.DateTimeMode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -949,11 +1050,11 @@ myDataTable.Rows[0][0] = newValue;
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2">
           <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
         </Attribute>
-        <Attribute>
-          <AttributeName>System.ComponentModel.RefreshProperties</AttributeName>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-2.0;netframework-3.0;netframework-3.5;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;netcore-2.2;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;xamarinmac-3.0">
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -970,6 +1071,7 @@ myDataTable.Rows[0][0] = newValue;
   
  ]]></format>
         </remarks>
+        <related type="Article" href="~/docs/framework/data/adonet/dataset-datatable-dataview/index.md">Using DataSets in ADO.NET</related>
       </Docs>
     </Member>
     <Member MemberName="DefaultValue">
@@ -978,9 +1080,12 @@ myDataTable.Rows[0][0] = newValue;
       <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.DefaultValue" />
       <MemberSignature Language="VB.NET" Value="Public Property DefaultValue As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ DefaultValue { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DefaultValue : obj with get, set" Usage="System.Data.DataColumn.DefaultValue" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -994,8 +1099,11 @@ myDataTable.Rows[0][0] = newValue;
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8">
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Data.DefaultValueTypeConverter))</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-1.1">
+          <AttributeName>System.Data.DataSysDescription("DataColumnDefaultValueDescr")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1028,6 +1136,7 @@ myDataTable.Rows[0][0] = newValue;
         <altmember cref="P:System.Data.DataRow.ItemArray" />
         <altmember cref="P:System.Data.DataColumn.AutoIncrement" />
         <altmember cref="T:System.Data.UniqueConstraint" />
+        <related type="Article" href="~/docs/framework/data/adonet/dataset-datatable-dataview/index.md">Using DataSets in ADO.NET</related>
       </Docs>
     </Member>
     <Member MemberName="Expression">
@@ -1036,9 +1145,12 @@ myDataTable.Rows[0][0] = newValue;
       <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.Expression" />
       <MemberSignature Language="VB.NET" Value="Public Property Expression As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Expression { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Expression : string with get, set" Usage="System.Data.DataColumn.Expression" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1052,11 +1164,14 @@ myDataTable.Rows[0][0] = newValue;
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2">
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
         </Attribute>
-        <Attribute>
-          <AttributeName>System.ComponentModel.RefreshProperties</AttributeName>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;netcore-2.2;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;xamarinmac-3.0">
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-1.1">
+          <AttributeName>System.Data.DataSysDescription("DataColumnExpressionDescr")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1075,7 +1190,7 @@ myDataTable.Rows[0][0] = newValue;
   
  A second use is to create an aggregate column. Similar to a calculated value, an aggregate performs an operation based on the complete set of rows in the <xref:System.Data.DataTable>. A simple example is to count the number of rows returned in the set. This is the method you would use to count the number of transactions completed by a particular salesperson, as shown in this Visual Basic code:  
   
-```  
+```vb  
 DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"  
 ```  
   
@@ -1217,7 +1332,7 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
 ## Parent/Child Relation Referencing  
  A parent table may be referenced in an expression by prepending the column name with `Parent`. For example, the `Parent.Price` references the parent table's column named `Price`.  
   
- When a child has more than one parent row, use Parent(RelationName).ColumnName. For example, the Parent(RelationName).Price references the parent table’s column named Price via the relation.  
+ When a child has more than one parent row, use Parent(RelationName).ColumnName. For example, the Parent(RelationName).Price references the parent table's column named Price via the relation.  
   
  A column in a child table may be referenced in an expression by prepending the column name with `Child`. However, because child relationships may return multiple rows, you must include the reference to the child column in an aggregate function. For example, `Sum(Child.Price)` would return the sum of the column named `Price` in the child table.  
   
@@ -1346,6 +1461,7 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
   
  When you use the SUBSTRING function, the length argument is out of range.</exception>
         <exception cref="T:System.Exception">When you use the LEN function or the TRIM function, the expression does not evaluate to a string. This includes expressions that evaluate to <see cref="T:System.Char" />.</exception>
+        <related type="Article" href="~/docs/framework/data/adonet/dataset-datatable-dataview/index.md">Using DataSets in ADO.NET</related>
       </Docs>
     </Member>
     <Member MemberName="ExtendedProperties">
@@ -1354,9 +1470,12 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
       <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.ExtendedProperties" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExtendedProperties As PropertyCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Data::PropertyCollection ^ ExtendedProperties { System::Data::PropertyCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ExtendedProperties : System.Data.PropertyCollection" Usage="System.Data.DataColumn.ExtendedProperties" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1370,8 +1489,11 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2">
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-1.1">
+          <AttributeName>System.Data.DataSysDescription("ExtendedPropertiesDescr")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1399,6 +1521,7 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
  ]]></format>
         </remarks>
         <altmember cref="T:System.Data.PropertyCollection" />
+        <related type="Article" href="~/docs/framework/data/adonet/dataset-datatable-dataview/index.md">Using DataSets in ADO.NET</related>
       </Docs>
     </Member>
     <Member MemberName="MaxLength">
@@ -1407,9 +1530,12 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
       <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.MaxLength" />
       <MemberSignature Language="VB.NET" Value="Public Property MaxLength As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MaxLength { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.MaxLength : int with get, set" Usage="System.Data.DataColumn.MaxLength" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1423,8 +1549,11 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2">
           <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-1.1">
+          <AttributeName>System.Data.DataSysDescription("DataColumnMaxLengthDescr")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1432,7 +1561,7 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
       </ReturnValue>
       <Docs>
         <summary>Gets or sets the maximum length of a text column.</summary>
-        <value>The maximum length of the column in characters. If the column has no maximum length, the value is –1 (default).</value>
+        <value>The maximum length of the column in characters. If the column has no maximum length, the value is -1 (default).</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1441,6 +1570,7 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
   
  ]]></format>
         </remarks>
+        <related type="Article" href="~/docs/framework/data/adonet/dataset-datatable-dataview/index.md">Using DataSets in ADO.NET</related>
       </Docs>
     </Member>
     <Member MemberName="Namespace">
@@ -1449,9 +1579,12 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
       <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.Namespace" />
       <MemberSignature Language="VB.NET" Value="Public Property Namespace As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Namespace { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Namespace : string with get, set" Usage="System.Data.DataColumn.Namespace" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1464,6 +1597,11 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
         <AssemblyVersion>4.2.0.0</AssemblyVersion>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-1.1">
+          <AttributeName>System.Data.DataSysDescription("DataColumnNamespaceDescr")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -1481,6 +1619,7 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
  ]]></format>
         </remarks>
         <exception cref="T:System.ArgumentException">The namespace already has data.</exception>
+        <related type="Article" href="~/docs/framework/data/adonet/dataset-datatable-dataview/index.md">Using DataSets in ADO.NET</related>
       </Docs>
     </Member>
     <Member MemberName="OnPropertyChanging">
@@ -1489,9 +1628,12 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
       <MemberSignature Language="DocId" Value="M:System.Data.DataColumn.OnPropertyChanging(System.ComponentModel.PropertyChangedEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnPropertyChanging (pcevent As PropertyChangedEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnPropertyChanging(System::ComponentModel::PropertyChangedEventArgs ^ pcevent);" />
+      <MemberSignature Language="F#" Value="abstract member OnPropertyChanging : System.ComponentModel.PropertyChangedEventArgs -&gt; unit&#xA;override this.OnPropertyChanging : System.ComponentModel.PropertyChangedEventArgs -&gt; unit" Usage="dataColumn.OnPropertyChanging pcevent" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1522,9 +1664,12 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
       <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.Ordinal" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Ordinal As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Ordinal { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Ordinal : int" Usage="System.Data.DataColumn.Ordinal" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1538,11 +1683,14 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2">
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
-        <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;netcore-2.2;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;xamarinmac-3.0">
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-1.1">
+          <AttributeName>System.Data.DataSysDescription("DataColumnOrdinalDescr")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1562,6 +1710,7 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
   
  ]]></format>
         </remarks>
+        <related type="Article" href="~/docs/framework/data/adonet/dataset-datatable-dataview/index.md">Using DataSets in ADO.NET</related>
       </Docs>
     </Member>
     <Member MemberName="Prefix">
@@ -1570,9 +1719,12 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
       <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.Prefix" />
       <MemberSignature Language="VB.NET" Value="Public Property Prefix As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Prefix { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Prefix : string with get, set" Usage="System.Data.DataColumn.Prefix" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1586,8 +1738,11 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2">
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-1.1">
+          <AttributeName>System.Data.DataSysDescription("DataColumnPrefixDescr")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1604,6 +1759,7 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
   
  ]]></format>
         </remarks>
+        <related type="Article" href="~/docs/framework/data/adonet/dataset-datatable-dataview/index.md">Using DataSets in ADO.NET</related>
       </Docs>
     </Member>
     <Member MemberName="RaisePropertyChanging">
@@ -1612,9 +1768,12 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
       <MemberSignature Language="DocId" Value="M:System.Data.DataColumn.RaisePropertyChanging(System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Sub RaisePropertyChanging (name As String)" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; void RaisePropertyChanging(System::String ^ name);" />
+      <MemberSignature Language="F#" Value="member this.RaisePropertyChanging : string -&gt; unit" Usage="dataColumn.RaisePropertyChanging name" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1645,9 +1804,12 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
       <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.ReadOnly" />
       <MemberSignature Language="VB.NET" Value="Public Property ReadOnly As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ReadOnly { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.ReadOnly : bool with get, set" Usage="System.Data.DataColumn.ReadOnly" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1661,8 +1823,11 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2">
           <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-1.1">
+          <AttributeName>System.Data.DataSysDescription("DataColumnReadOnlyDescr")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1686,6 +1851,7 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
         <exception cref="T:System.ArgumentException">The property is set to <see langword="false" /> on a computed column.</exception>
         <altmember cref="P:System.Data.DataColumn.Unique" />
         <altmember cref="P:System.Data.DataColumn.AutoIncrement" />
+        <related type="Article" href="~/docs/framework/data/adonet/dataset-datatable-dataview/index.md">Using DataSets in ADO.NET</related>
       </Docs>
     </Member>
     <Member MemberName="SetOrdinal">
@@ -1694,9 +1860,11 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
       <MemberSignature Language="DocId" Value="M:System.Data.DataColumn.SetOrdinal(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SetOrdinal (ordinal As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetOrdinal(int ordinal);" />
+      <MemberSignature Language="F#" Value="member this.SetOrdinal : int -&gt; unit" Usage="dataColumn.SetOrdinal ordinal" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1722,12 +1890,13 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Changes the ordinal or position of the <xref:System.Data.DataColumn> to the specified ordinal or position. If ordinal is less than 0 or greater than the existing number of columns – 1 (greater than the ordinal of the last column) then an Invalid <xref:System.ArgumentException> is thrown.  
+ Changes the ordinal or position of the <xref:System.Data.DataColumn> to the specified ordinal or position. If ordinal is less than 0 or greater than the existing number of columns - 1 (greater than the ordinal of the last column) then an Invalid <xref:System.ArgumentException> is thrown.  
   
- When you change a column’s ordinal, the column is moved to the new position in the collection of columns. Any columns between the previous and new ordinal will be renumbered, to adjust for a column's new ordinal.  
+ When you change a column's ordinal, the column is moved to the new position in the collection of columns. Any columns between the previous and new ordinal will be renumbered, to adjust for a column's new ordinal.  
   
  ]]></format>
         </remarks>
+        <related type="Article" href="~/docs/framework/data/adonet/dataset-datatable-dataview/index.md">Using DataSets in ADO.NET</related>
       </Docs>
     </Member>
     <Member MemberName="Table">
@@ -1736,9 +1905,12 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
       <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.Table" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Table As DataTable" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Data::DataTable ^ Table { System::Data::DataTable ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Table : System.Data.DataTable" Usage="System.Data.DataColumn.Table" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1752,11 +1924,14 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2">
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
-        <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;netcore-2.2;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;xamarinmac-3.0">
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-1.1">
+          <AttributeName>System.Data.DataSysDescription("DataColumnDataTableDescr")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1777,6 +1952,7 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
  ]]></format>
         </remarks>
         <altmember cref="T:System.Data.DataTable" />
+        <related type="Article" href="~/docs/framework/data/adonet/dataset-datatable-dataview/index.md">Using DataSets in ADO.NET</related>
       </Docs>
     </Member>
     <Member MemberName="ToString">
@@ -1785,9 +1961,12 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
       <MemberSignature Language="DocId" Value="M:System.Data.DataColumn.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="dataColumn.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1820,6 +1999,7 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
         </remarks>
         <altmember cref="P:System.Data.DataColumn.Expression" />
         <altmember cref="P:System.Data.DataColumn.ColumnName" />
+        <related type="Article" href="~/docs/framework/data/adonet/dataset-datatable-dataview/index.md">Using DataSets in ADO.NET</related>
       </Docs>
     </Member>
     <Member MemberName="Unique">
@@ -1828,9 +2008,12 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
       <MemberSignature Language="DocId" Value="P:System.Data.DataColumn.Unique" />
       <MemberSignature Language="VB.NET" Value="Public Property Unique As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Unique { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Unique : bool with get, set" Usage="System.Data.DataColumn.Unique" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1844,11 +2027,14 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8;netcore-2.2">
           <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
         </Attribute>
-        <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+        <Attribute FrameworkAlternate="netcore-2.0;netcore-2.1;netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netstandard-2.0;xamarinandroid-7.1;xamarinios-10.8;netcore-2.2;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;xamarinmac-3.0">
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-1.1">
+          <AttributeName>System.Data.DataSysDescription("DataColumnUniqueDescr")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1878,6 +2064,7 @@ DataSet1.Tables("Orders").Columns("OrderCount").Expression = "Count(OrderID)"
         <altmember cref="P:System.Data.DataColumn.AllowDBNull" />
         <altmember cref="T:System.Data.UniqueConstraint" />
         <altmember cref="P:System.Data.DataTable.Constraints" />
+        <related type="Article" href="~/docs/framework/data/adonet/dataset-datatable-dataview/index.md">Using DataSets in ADO.NET</related>
       </Docs>
     </Member>
   </Members>

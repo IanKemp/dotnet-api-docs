@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.CustomLabel" />
   <TypeSignature Language="VB.NET" Value="Public Class CustomLabel&#xA;Inherits ChartNamedElement" />
   <TypeSignature Language="C++ CLI" Value="public ref class CustomLabel : System::Windows::Forms::DataVisualization::Charting::ChartNamedElement" />
+  <TypeSignature Language="F#" Value="type CustomLabel = class&#xA;    inherit ChartNamedElement" />
   <AssemblyInfo>
     <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -78,6 +79,7 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.CustomLabel.#ctor(System.Double,System.Double,System.String,System.Int32,System.Windows.Forms.DataVisualization.Charting.LabelMarkStyle)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (fromPosition As Double, toPosition As Double, text As String, labelRow As Integer, markStyle As LabelMarkStyle)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; CustomLabel(double fromPosition, double toPosition, System::String ^ text, int labelRow, System::Windows::Forms::DataVisualization::Charting::LabelMarkStyle markStyle);" />
+      <MemberSignature Language="F#" Value="new System.Windows.Forms.DataVisualization.Charting.CustomLabel : double * double * string * int * System.Windows.Forms.DataVisualization.Charting.LabelMarkStyle -&gt; System.Windows.Forms.DataVisualization.Charting.CustomLabel" Usage="new System.Windows.Forms.DataVisualization.Charting.CustomLabel (fromPosition, toPosition, text, labelRow, markStyle)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -106,6 +108,7 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.CustomLabel.#ctor(System.Double,System.Double,System.String,System.Int32,System.Windows.Forms.DataVisualization.Charting.LabelMarkStyle,System.Windows.Forms.DataVisualization.Charting.GridTickTypes)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (fromPosition As Double, toPosition As Double, text As String, labelRow As Integer, markStyle As LabelMarkStyle, gridTick As GridTickTypes)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; CustomLabel(double fromPosition, double toPosition, System::String ^ text, int labelRow, System::Windows::Forms::DataVisualization::Charting::LabelMarkStyle markStyle, System::Windows::Forms::DataVisualization::Charting::GridTickTypes gridTick);" />
+      <MemberSignature Language="F#" Value="new System.Windows.Forms.DataVisualization.Charting.CustomLabel : double * double * string * int * System.Windows.Forms.DataVisualization.Charting.LabelMarkStyle * System.Windows.Forms.DataVisualization.Charting.GridTickTypes -&gt; System.Windows.Forms.DataVisualization.Charting.CustomLabel" Usage="new System.Windows.Forms.DataVisualization.Charting.CustomLabel (fromPosition, toPosition, text, labelRow, markStyle, gridTick)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -136,6 +139,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.CustomLabel.Axis" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Axis As Axis" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Forms::DataVisualization::Charting::Axis ^ Axis { System::Windows::Forms::DataVisualization::Charting::Axis ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Axis : System.Windows.Forms.DataVisualization.Charting.Axis" Usage="System.Windows.Forms.DataVisualization.Charting.CustomLabel.Axis" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -145,8 +149,11 @@
         <Attribute>
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -171,6 +178,7 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.CustomLabel.Clone" />
       <MemberSignature Language="VB.NET" Value="Public Function Clone () As CustomLabel" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Windows::Forms::DataVisualization::Charting::CustomLabel ^ Clone();" />
+      <MemberSignature Language="F#" Value="member this.Clone : unit -&gt; System.Windows.Forms.DataVisualization.Charting.CustomLabel" Usage="customLabel.Clone " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -192,6 +200,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.CustomLabel.ForeColor" />
       <MemberSignature Language="VB.NET" Value="Public Property ForeColor As Color" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Drawing::Color ForeColor { System::Drawing::Color get(); void set(System::Drawing::Color value); };" />
+      <MemberSignature Language="F#" Value="member this.ForeColor : System.Drawing.Color with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.CustomLabel.ForeColor" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -204,7 +213,7 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
         </Attribute>
         <Attribute>
@@ -212,6 +221,12 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -236,6 +251,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.CustomLabel.FromPosition" />
       <MemberSignature Language="VB.NET" Value="Public Property FromPosition As Double" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property double FromPosition { double get(); void set(double value); };" />
+      <MemberSignature Language="F#" Value="member this.FromPosition : double with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.CustomLabel.FromPosition" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -250,6 +266,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.AxisLabelDateValueConverter))</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -266,7 +285,7 @@
   
  The difference between the values of the <xref:System.Windows.Forms.DataVisualization.Charting.CustomLabel.ToPosition%2A> and <xref:System.Windows.Forms.DataVisualization.Charting.CustomLabel.FromPosition%2A> properties determines where the label text will be displayed. For example, suppose the X-axis has a scale that ranges from 1 to 5 (1, 2 ,3 , 4, 5). In order to display a custom label just underneath the second point, you would set the <xref:System.Windows.Forms.DataVisualization.Charting.CustomLabel.ToPosition%2A> property to 1.5 and the <xref:System.Windows.Forms.DataVisualization.Charting.CustomLabel.FromPosition%2A> property to 2.5.  
   
- If the <xref:System.Windows.Forms.DataVisualization.Charting.Series.XValueType%2A>—or <xref:System.Windows.Forms.DataVisualization.Charting.Series.YValueType%2A>, depending on the axis in question—is set to a <xref:System.DateTime> value, then this <xref:System.Windows.Forms.DataVisualization.Charting.CustomLabel.FromPosition%2A> property will be displayed as a <xref:System.DateTime> value in the designer.  
+ If the <xref:System.Windows.Forms.DataVisualization.Charting.Series.XValueType%2A> - or <xref:System.Windows.Forms.DataVisualization.Charting.Series.YValueType%2A>, depending on the axis in question - is set to a <xref:System.DateTime> value, then this <xref:System.Windows.Forms.DataVisualization.Charting.CustomLabel.FromPosition%2A> property will be displayed as a <xref:System.DateTime> value in the designer.  
   
  This property should not be set to the same value as the <xref:System.Windows.Forms.DataVisualization.Charting.CustomLabel.ToPosition%2A> property.  
   
@@ -280,6 +299,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.CustomLabel.GridTicks" />
       <MemberSignature Language="VB.NET" Value="Public Property GridTicks As GridTickTypes" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Forms::DataVisualization::Charting::GridTickTypes GridTicks { System::Windows::Forms::DataVisualization::Charting::GridTickTypes get(); void set(System::Windows::Forms::DataVisualization::Charting::GridTickTypes value); };" />
+      <MemberSignature Language="F#" Value="member this.GridTicks : System.Windows.Forms.DataVisualization.Charting.GridTickTypes with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.CustomLabel.GridTicks" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -292,8 +312,14 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.FlagsEnumUITypeEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.FlagsEnumUITypeEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -311,6 +337,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.CustomLabel.Image" />
       <MemberSignature Language="VB.NET" Value="Public Property Image As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Image { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Image : string with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.CustomLabel.Image" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -323,11 +350,17 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ImageValueEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ImageValueEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -345,6 +378,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.CustomLabel.ImageTransparentColor" />
       <MemberSignature Language="VB.NET" Value="Public Property ImageTransparentColor As Color" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Drawing::Color ImageTransparentColor { System::Drawing::Color get(); void set(System::Drawing::Color value); };" />
+      <MemberSignature Language="F#" Value="member this.ImageTransparentColor : System.Drawing.Color with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.CustomLabel.ImageTransparentColor" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -357,7 +391,7 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
         </Attribute>
         <Attribute>
@@ -365,6 +399,12 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -382,6 +422,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.CustomLabel.LabelMark" />
       <MemberSignature Language="VB.NET" Value="Public Property LabelMark As LabelMarkStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Windows::Forms::DataVisualization::Charting::LabelMarkStyle LabelMark { System::Windows::Forms::DataVisualization::Charting::LabelMarkStyle get(); void set(System::Windows::Forms::DataVisualization::Charting::LabelMarkStyle value); };" />
+      <MemberSignature Language="F#" Value="member this.LabelMark : System.Windows.Forms.DataVisualization.Charting.LabelMarkStyle with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.CustomLabel.LabelMark" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -393,6 +434,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -419,6 +463,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.CustomLabel.MarkColor" />
       <MemberSignature Language="VB.NET" Value="Public Property MarkColor As Color" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Drawing::Color MarkColor { System::Drawing::Color get(); void set(System::Drawing::Color value); };" />
+      <MemberSignature Language="F#" Value="member this.MarkColor : System.Drawing.Color with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.CustomLabel.MarkColor" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -431,7 +476,7 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
         </Attribute>
         <Attribute>
@@ -439,6 +484,12 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -463,6 +514,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.CustomLabel.Name" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Name { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.CustomLabel.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -473,10 +525,10 @@
           <AttributeName>System.ComponentModel.DefaultValue("Custom LabelStyle")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignOnly(true)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignOnly(true)</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -501,6 +553,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.CustomLabel.RowIndex" />
       <MemberSignature Language="VB.NET" Value="Public Property RowIndex As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int RowIndex { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.RowIndex : int with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.CustomLabel.RowIndex" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -512,6 +565,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -540,6 +596,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.CustomLabel.Text" />
       <MemberSignature Language="VB.NET" Value="Public Property Text As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Text { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Text : string with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.CustomLabel.Text" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -551,6 +608,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -577,6 +637,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.CustomLabel.ToolTip" />
       <MemberSignature Language="VB.NET" Value="Public Property ToolTip As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ToolTip { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ToolTip : string with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.CustomLabel.ToolTip" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -588,6 +649,12 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -605,6 +672,7 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.CustomLabel.ToPosition" />
       <MemberSignature Language="VB.NET" Value="Public Property ToPosition As Double" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property double ToPosition { double get(); void set(double value); };" />
+      <MemberSignature Language="F#" Value="member this.ToPosition : double with get, set" Usage="System.Windows.Forms.DataVisualization.Charting.CustomLabel.ToPosition" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
@@ -619,6 +687,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.AxisLabelDateValueConverter))</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

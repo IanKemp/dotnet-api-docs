@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Xps.Packaging.IStoryFragmentProvider" />
   <TypeSignature Language="VB.NET" Value="Public Interface IStoryFragmentProvider" />
   <TypeSignature Language="C++ CLI" Value="public interface class IStoryFragmentProvider" />
+  <TypeSignature Language="F#" Value="type IStoryFragmentProvider = interface" />
   <AssemblyInfo>
     <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
@@ -15,7 +17,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- For more information about the <xref:System.Windows.Documents.DocumentStructures.StoryFragments> element of an [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] package, see chapter 9 in the [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] specification, which you can obtain at [XPS: Specification and License Downloads](http://go.microsoft.com/fwlink/?LinkId=67000).  
+ For more information about the <xref:System.Windows.Documents.DocumentStructures.StoryFragments> element of an [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] package, see chapter 9 in the [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] specification, which you can obtain at [XPS: Specification and License Downloads](https://go.microsoft.com/fwlink/?LinkId=67000).  
   
  ]]></format>
     </remarks>
@@ -27,9 +29,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.IStoryFragmentProvider.AddStoryFragment" />
       <MemberSignature Language="VB.NET" Value="Public Function AddStoryFragment () As XpsStructure" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Windows::Xps::Packaging::XpsStructure ^ AddStoryFragment();" />
+      <MemberSignature Language="F#" Value="abstract member AddStoryFragment : unit -&gt; System.Windows.Xps.Packaging.XpsStructure" Usage="iStoryFragmentProvider.AddStoryFragment " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -43,7 +47,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- For more information about the <xref:System.Windows.Documents.DocumentStructures.StoryFragments> element of an [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] package, see chapter 9 in the [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] specification, which you can obtain at [XPS: Specification and License Downloads](http://go.microsoft.com/fwlink/?LinkId=67000).  
+ For more information about the <xref:System.Windows.Documents.DocumentStructures.StoryFragments> element of an [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] package, see chapter 9 in the [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] specification, which you can obtain at [XPS: Specification and License Downloads](https://go.microsoft.com/fwlink/?LinkId=67000).  
   
  ]]></format>
         </remarks>

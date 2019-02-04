@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Web.Configuration.TraceSection" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class TraceSection&#xA;Inherits ConfigurationSection" />
   <TypeSignature Language="C++ CLI" Value="public ref class TraceSection sealed : System::Configuration::ConfigurationSection" />
+  <TypeSignature Language="F#" Value="type TraceSection = class&#xA;    inherit ConfigurationSection" />
   <AssemblyInfo>
     <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -36,6 +38,8 @@
  ]]></format>
     </remarks>
     <altmember cref="T:System.Configuration.ConfigurationSection" />
+    <related type="Article" href="https://msdn.microsoft.com/library/1552561d-887c-4002-8770-f92662cdf416">ASP.NET Tracing Overview</related>
+    <related type="Article" href="https://msdn.microsoft.com/library/4c532abb-ab07-49fe-850f-70eec141782b">How to: View Trace Information with the Trace Viewer</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -47,12 +51,19 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.Web.Configuration.TraceSection" /> class using default settings.</summary>
         <remarks>To be added.</remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/1552561d-887c-4002-8770-f92662cdf416">ASP.NET Tracing Overview</related>
       </Docs>
     </Member>
     <Member MemberName="Enabled">
@@ -61,9 +72,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TraceSection.Enabled" />
       <MemberSignature Language="VB.NET" Value="Public Property Enabled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Enabled { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Enabled : bool with get, set" Usage="System.Web.Configuration.TraceSection.Enabled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -89,6 +102,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/1552561d-887c-4002-8770-f92662cdf416">ASP.NET Tracing Overview</related>
       </Docs>
     </Member>
     <Member MemberName="LocalOnly">
@@ -97,9 +111,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TraceSection.LocalOnly" />
       <MemberSignature Language="VB.NET" Value="Public Property LocalOnly As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool LocalOnly { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.LocalOnly : bool with get, set" Usage="System.Web.Configuration.TraceSection.LocalOnly" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -133,9 +149,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TraceSection.MostRecent" />
       <MemberSignature Language="VB.NET" Value="Public Property MostRecent As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool MostRecent { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.MostRecent : bool with get, set" Usage="System.Web.Configuration.TraceSection.MostRecent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -175,9 +193,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TraceSection.PageOutput" />
       <MemberSignature Language="VB.NET" Value="Public Property PageOutput As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool PageOutput { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.PageOutput : bool with get, set" Usage="System.Web.Configuration.TraceSection.PageOutput" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -211,11 +231,18 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TraceSection.Properties" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property Properties As ConfigurationPropertyCollection" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property System::Configuration::ConfigurationPropertyCollection ^ Properties { System::Configuration::ConfigurationPropertyCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Properties : System.Configuration.ConfigurationPropertyCollection" Usage="System.Web.Configuration.TraceSection.Properties" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
       </ReturnValue>
@@ -231,9 +258,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TraceSection.RequestLimit" />
       <MemberSignature Language="VB.NET" Value="Public Property RequestLimit As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int RequestLimit { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.RequestLimit : int with get, set" Usage="System.Web.Configuration.TraceSection.RequestLimit" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -279,9 +308,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TraceSection.TraceMode" />
       <MemberSignature Language="VB.NET" Value="Public Property TraceMode As TraceDisplayMode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::Configuration::TraceDisplayMode TraceMode { System::Web::Configuration::TraceDisplayMode get(); void set(System::Web::Configuration::TraceDisplayMode value); };" />
+      <MemberSignature Language="F#" Value="member this.TraceMode : System.Web.Configuration.TraceDisplayMode with get, set" Usage="System.Web.Configuration.TraceSection.TraceMode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -314,9 +345,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TraceSection.WriteToDiagnosticsTrace" />
       <MemberSignature Language="VB.NET" Value="Public Property WriteToDiagnosticsTrace As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool WriteToDiagnosticsTrace { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.WriteToDiagnosticsTrace : bool with get, set" Usage="System.Web.Configuration.TraceSection.WriteToDiagnosticsTrace" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>

@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolStripItemImageScaling" />
   <TypeSignature Language="VB.NET" Value="Public Enum ToolStripItemImageScaling" />
   <TypeSignature Language="C++ CLI" Value="public enum class ToolStripItemImageScaling" />
+  <TypeSignature Language="F#" Value="type ToolStripItemImageScaling = " />
   <AssemblyInfo>
     <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -17,7 +19,7 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The <xref:System.Windows.Forms.ToolStripItem.Image%2A>, <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A>, <xref:System.Windows.Forms.ToolStripItem.ImageIndex%2A>, <xref:System.Windows.Forms.ToolStripItem.ImageKey%2A>, and <xref:System.Windows.Forms.ToolStripItem.ImageScaling%2A> properties pertain to various aspects of image handling. Use images in <xref:System.Windows.Forms.ToolStrip> controls by setting these properties directly or by setting the run-time–only <xref:System.Windows.Forms.ToolStrip.ImageList%2A> property.  
+ The <xref:System.Windows.Forms.ToolStripItem.Image%2A>, <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A>, <xref:System.Windows.Forms.ToolStripItem.ImageIndex%2A>, <xref:System.Windows.Forms.ToolStripItem.ImageKey%2A>, and <xref:System.Windows.Forms.ToolStripItem.ImageScaling%2A> properties pertain to various aspects of image handling. Use images in <xref:System.Windows.Forms.ToolStrip> controls by setting these properties directly or by setting the run-time-only <xref:System.Windows.Forms.ToolStrip.ImageList%2A> property.  
   
  Image scaling is determined by the interaction of properties in both <xref:System.Windows.Forms.ToolStrip> and <xref:System.Windows.Forms.ToolStripItem>, as follows:  
   
@@ -48,9 +50,11 @@
       <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripItemImageScaling.None" />
       <MemberSignature Language="VB.NET" Value="None" />
       <MemberSignature Language="C++ CLI" Value="None" />
+      <MemberSignature Language="F#" Value="None = 0" Usage="System.Windows.Forms.ToolStripItemImageScaling.None" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -67,9 +71,11 @@
       <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripItemImageScaling.SizeToFit" />
       <MemberSignature Language="VB.NET" Value="SizeToFit" />
       <MemberSignature Language="C++ CLI" Value="SizeToFit" />
+      <MemberSignature Language="F#" Value="SizeToFit = 1" Usage="System.Windows.Forms.ToolStripItemImageScaling.SizeToFit" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

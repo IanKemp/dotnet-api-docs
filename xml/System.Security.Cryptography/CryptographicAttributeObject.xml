@@ -4,13 +4,17 @@
   <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.CryptographicAttributeObject" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class CryptographicAttributeObject" />
   <TypeSignature Language="C++ CLI" Value="public ref class CryptographicAttributeObject sealed" />
+  <TypeSignature Language="F#" Value="type CryptographicAttributeObject = class" />
   <AssemblyInfo>
     <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.2.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.1</AssemblyVersion>
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.0.5.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
@@ -45,14 +49,18 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.Oid oid) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptographicAttributeObject.#ctor(System.Security.Cryptography.Oid)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; CryptographicAttributeObject(System::Security::Cryptography::Oid ^ oid);" />
+      <MemberSignature Language="F#" Value="new System.Security.Cryptography.CryptographicAttributeObject : System.Security.Cryptography.Oid -&gt; System.Security.Cryptography.CryptographicAttributeObject" Usage="new System.Security.Cryptography.CryptographicAttributeObject oid" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.1</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -71,14 +79,18 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.Oid oid, class System.Security.Cryptography.AsnEncodedDataCollection values) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptographicAttributeObject.#ctor(System.Security.Cryptography.Oid,System.Security.Cryptography.AsnEncodedDataCollection)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; CryptographicAttributeObject(System::Security::Cryptography::Oid ^ oid, System::Security::Cryptography::AsnEncodedDataCollection ^ values);" />
+      <MemberSignature Language="F#" Value="new System.Security.Cryptography.CryptographicAttributeObject : System.Security.Cryptography.Oid * System.Security.Cryptography.AsnEncodedDataCollection -&gt; System.Security.Cryptography.CryptographicAttributeObject" Usage="new System.Security.Cryptography.CryptographicAttributeObject (oid, values)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.1</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -88,7 +100,7 @@
       </Parameters>
       <Docs>
         <param name="oid">The attribute to store in this <see cref="T:System.Security.Cryptography.CryptographicAttributeObject" /> object.</param>
-        <param name="values">The set of values associated with the attribute represented by the <c>oid</c> parameter.</param>
+        <param name="values">The set of values associated with the attribute represented by the <paramref name="oid" /> parameter.</param>
         <summary>Initializes a new instance of the <see cref="T:System.Security.Cryptography.CryptographicAttributeObject" /> class using an attribute represented by the specified <see cref="T:System.Security.Cryptography.Oid" /> object and the set of values associated with that attribute represented by the specified <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> collection.</summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.InvalidOperationException">The collection contains duplicate items.</exception>
@@ -102,14 +114,18 @@
       <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CryptographicAttributeObject.Oid" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Oid As Oid" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Security::Cryptography::Oid ^ Oid { System::Security::Cryptography::Oid ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Oid : System.Security.Cryptography.Oid" Usage="System.Security.Cryptography.CryptographicAttributeObject.Oid" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.1</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -129,14 +145,18 @@
       <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CryptographicAttributeObject.Values" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Values As AsnEncodedDataCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Security::Cryptography::AsnEncodedDataCollection ^ Values { System::Security::Cryptography::AsnEncodedDataCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Values : System.Security.Cryptography.AsnEncodedDataCollection" Usage="System.Security.Cryptography.CryptographicAttributeObject.Values" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.1</AssemblyVersion>
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>

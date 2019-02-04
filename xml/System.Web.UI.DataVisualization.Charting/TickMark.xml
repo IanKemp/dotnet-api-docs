@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.TickMark" />
   <TypeSignature Language="VB.NET" Value="Public Class TickMark&#xA;Inherits Grid" />
   <TypeSignature Language="C++ CLI" Value="public ref class TickMark : System::Web::UI::DataVisualization::Charting::Grid" />
+  <TypeSignature Language="F#" Value="type TickMark = class&#xA;    inherit Grid" />
   <AssemblyInfo>
     <AssemblyName>System.Web.DataVisualization</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -39,7 +40,7 @@
   
 -   Specify a style that determines whether tick marks are displayed outside the axis, inside the axis or across the axis.  
   
--   Specify the starting point—where the first tick mark is drawn—as well as the tick mark interval, which correlates to their frequency.  
+-   Specify the starting point - where the first tick mark is drawn - as well as the tick mark interval, which correlates to their frequency.  
   
  ]]></format>
     </remarks>
@@ -68,6 +69,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.TickMark.Size" />
       <MemberSignature Language="VB.NET" Value="Public Property Size As Single" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property float Size { float get(); void set(float value); };" />
+      <MemberSignature Language="F#" Value="member this.Size : single with get, set" Usage="System.Web.UI.DataVisualization.Charting.TickMark.Size" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -80,8 +82,11 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -112,6 +117,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.TickMark.TickMarkStyle" />
       <MemberSignature Language="VB.NET" Value="Public Property TickMarkStyle As TickMarkStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::DataVisualization::Charting::TickMarkStyle TickMarkStyle { System::Web::UI::DataVisualization::Charting::TickMarkStyle get(); void set(System::Web::UI::DataVisualization::Charting::TickMarkStyle value); };" />
+      <MemberSignature Language="F#" Value="member this.TickMarkStyle : System.Web.UI.DataVisualization.Charting.TickMarkStyle with get, set" Usage="System.Web.UI.DataVisualization.Charting.TickMark.TickMarkStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -124,8 +130,11 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

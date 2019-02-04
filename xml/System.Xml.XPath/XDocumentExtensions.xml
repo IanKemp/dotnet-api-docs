@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Xml.XPath.XDocumentExtensions" />
   <TypeSignature Language="VB.NET" Value="Public Module XDocumentExtensions" />
   <TypeSignature Language="C++ CLI" Value="public ref class XDocumentExtensions abstract sealed" />
+  <TypeSignature Language="F#" Value="type XDocumentExtensions = class" />
   <AssemblyInfo>
     <AssemblyName>System.Xml.XPath.XDocument</AssemblyName>
     <AssemblyVersion>4.0.1.0</AssemblyVersion>
@@ -23,7 +24,7 @@
   </Base>
   <Interfaces />
   <Attributes>
-    <Attribute>
+    <Attribute FrameworkAlternate="netstandard-2.0;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
       <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
     </Attribute>
   </Attributes>
@@ -38,6 +39,7 @@
       <MemberSignature Language="DocId" Value="M:System.Xml.XPath.XDocumentExtensions.ToXPathNavigable(System.Xml.Linq.XNode)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ToXPathNavigable (node As XNode) As IXPathNavigable" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::Xml::XPath::IXPathNavigable ^ ToXPathNavigable(System::Xml::Linq::XNode ^ node);" />
+      <MemberSignature Language="F#" Value="static member ToXPathNavigable : System.Xml.Linq.XNode -&gt; System.Xml.XPath.IXPathNavigable" Usage="System.Xml.XPath.XDocumentExtensions.ToXPathNavigable node" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Xml.XPath.XDocument</AssemblyName>
@@ -53,6 +55,11 @@
         <AssemblyName>System.Xml.Linq</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Xml.XPath.IXPathNavigable</ReturnType>
       </ReturnValue>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.ArrowAnnotation" />
   <TypeSignature Language="VB.NET" Value="Public Class ArrowAnnotation&#xA;Inherits Annotation" />
   <TypeSignature Language="C++ CLI" Value="public ref class ArrowAnnotation : System::Web::UI::DataVisualization::Charting::Annotation" />
+  <TypeSignature Language="F#" Value="type ArrowAnnotation = class&#xA;    inherit Annotation" />
   <AssemblyInfo>
     <AssemblyName>System.Web.DataVisualization</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -49,6 +50,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ArrowAnnotation.AnchorAlignment" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Property AnchorAlignment As ContentAlignment" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Drawing::ContentAlignment AnchorAlignment { System::Drawing::ContentAlignment get(); void set(System::Drawing::ContentAlignment value); };" />
+      <MemberSignature Language="F#" Value="member this.AnchorAlignment : System.Drawing.ContentAlignment with get, set" Usage="System.Web.UI.DataVisualization.Charting.ArrowAnnotation.AnchorAlignment" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -89,6 +91,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ArrowAnnotation.AnnotationType" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property AnnotationType As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ AnnotationType { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.AnnotationType : string" Usage="System.Web.UI.DataVisualization.Charting.ArrowAnnotation.AnnotationType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -102,7 +105,7 @@
           <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
@@ -132,6 +135,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ArrowAnnotation.ArrowSize" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property ArrowSize As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property int ArrowSize { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.ArrowSize : int with get, set" Usage="System.Web.UI.DataVisualization.Charting.ArrowAnnotation.ArrowSize" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -147,13 +151,16 @@
         <Attribute>
           <AttributeName>System.ComponentModel.ParenthesizePropertyName(true)</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>Gets or sets an arrow size, in pixels.</summary>
-        <value>An <see langword="integer" /> value that represents arrow size—that is, its thickness—in pixels.</value>
+        <value>An <see langword="integer" /> value that represents arrow size - that is, its thickness - in pixels.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -163,6 +170,7 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ArrowAnnotation.ArrowStyle" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property ArrowStyle As ArrowStyle" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Web::UI::DataVisualization::Charting::ArrowStyle ArrowStyle { System::Web::UI::DataVisualization::Charting::ArrowStyle get(); void set(System::Web::UI::DataVisualization::Charting::ArrowStyle value); };" />
+      <MemberSignature Language="F#" Value="member this.ArrowStyle : System.Web.UI.DataVisualization.Charting.ArrowStyle with get, set" Usage="System.Web.UI.DataVisualization.Charting.ArrowAnnotation.ArrowStyle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.DataVisualization</AssemblyName>
@@ -177,6 +185,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.ParenthesizePropertyName(true)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

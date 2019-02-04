@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Collections.SortedList" />
   <TypeSignature Language="VB.NET" Value="Public Class SortedList&#xA;Implements ICloneable, IDictionary" />
   <TypeSignature Language="C++ CLI" Value="public ref class SortedList : ICloneable, System::Collections::IDictionary" />
+  <TypeSignature Language="F#" Value="type SortedList = class&#xA;    interface IDictionary&#xA;    interface ICloneable&#xA;    interface ICollection&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>System.Collections.NonGeneric</AssemblyName>
     <AssemblyVersion>4.0.1.0</AssemblyVersion>
@@ -12,6 +13,8 @@
   </AssemblyInfo>
   <AssemblyInfo>
     <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.0.5.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
@@ -24,21 +27,30 @@
   </Base>
   <Interfaces>
     <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>System.Collections.IDictionary</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
     </Interface>
     <Interface>
       <InterfaceName>System.ICloneable</InterfaceName>
     </Interface>
   </Interfaces>
   <Attributes>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8">
       <AttributeName>System.Diagnostics.DebuggerDisplay("Count = {Count}")</AttributeName>
     </Attribute>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8">
       <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.Collections.SortedList/SortedListDebugView))</AttributeName>
     </Attribute>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8">
       <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
+      <AttributeName>System.Serializable</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -47,15 +59,17 @@
       <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- For the generic version of this collection, see <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType>.  
-  
- A <xref:System.Collections.SortedList> element can be accessed by its key, like an element in any <xref:System.Collections.IDictionary> implementation, or by its index, like an element in any <xref:System.Collections.IList> implementation.  
-  
+
+A <xref:System.Collections.SortedList> element can be accessed by its key, like an element in any <xref:System.Collections.IDictionary> implementation, or by its index, like an element in any <xref:System.Collections.IList> implementation.  
+
+> [!IMPORTANT]
+> We don't recommend that you use the `SortedList` class for new development. Instead, we recommend that you use the generic <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> class. For more information, see [Non-generic collections shouldn't be used](https://github.com/dotnet/platform-compat/blob/master/docs/DE0006.md) on GitHub.
+
  A <xref:System.Collections.SortedList> object internally maintains two arrays to store the elements of the list; that is, one array for the keys and another array for the associated values. Each element is a key/value pair that can be accessed as a <xref:System.Collections.DictionaryEntry> object. A key cannot be `null`, but a value can be.  
   
  The capacity of a <xref:System.Collections.SortedList> object is the number of elements the <xref:System.Collections.SortedList> can hold. As elements are added to a <xref:System.Collections.SortedList>, the capacity is automatically increased as required through reallocation. The capacity can be decreased by calling <xref:System.Collections.SortedList.TrimToSize%2A> or by setting the <xref:System.Collections.SortedList.Capacity%2A> property explicitly.  
   
- For very large <xref:System.Collections.SortedList> objects, you can increase the maximum capacity to 2 billion elements on a 64-bit system by setting the `enabled` attribute of the  configuration element to `true` in the run-time environment.  
+ **.NET Framework only:** For very large <xref:System.Collections.SortedList> objects, you can increase the maximum capacity to 2 billion elements on a 64-bit system by setting the `enabled` attribute of the [`<gcAllowVeryLargeObjects>`](~/docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) configuration element to `true` in the run-time environment.  
   
  The elements of a <xref:System.Collections.SortedList> object are sorted by the keys either according to a specific <xref:System.Collections.IComparer> implementation specified when the <xref:System.Collections.SortedList> is created or according to the <xref:System.IComparable> implementation provided by the keys themselves. In either case, a <xref:System.Collections.SortedList> does not allow duplicate keys.  
   
@@ -94,6 +108,7 @@
     <altmember cref="T:System.Collections.IDictionary" />
     <altmember cref="T:System.Collections.Hashtable" />
     <altmember cref="T:System.Collections.Generic.SortedList`2" />
+    <related type="Article" href="~/docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md">Performing Culture-Insensitive String Operations in Collections</related>
   </Docs>
   <Members>
     <MemberGroup MemberName=".ctor">
@@ -121,6 +136,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -156,6 +173,7 @@
         </remarks>
         <altmember cref="T:System.IComparable" />
         <altmember cref="P:System.Collections.SortedList.Capacity" />
+        <related type="Article" href="~/docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md">Performing Culture-Insensitive String Operations in Collections</related>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -164,6 +182,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.SortedList.#ctor(System.Collections.IComparer)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (comparer As IComparer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SortedList(System::Collections::IComparer ^ comparer);" />
+      <MemberSignature Language="F#" Value="new System.Collections.SortedList : System.Collections.IComparer -&gt; System.Collections.SortedList" Usage="new System.Collections.SortedList comparer" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
@@ -173,6 +192,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -216,6 +237,7 @@
         <altmember cref="T:System.Collections.IComparer" />
         <altmember cref="T:System.IComparable" />
         <altmember cref="P:System.Collections.SortedList.Capacity" />
+        <related type="Article" href="~/docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md">Performing Culture-Insensitive String Operations in Collections</related>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -224,6 +246,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.SortedList.#ctor(System.Collections.IDictionary)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (d As IDictionary)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SortedList(System::Collections::IDictionary ^ d);" />
+      <MemberSignature Language="F#" Value="new System.Collections.SortedList : System.Collections.IDictionary -&gt; System.Collections.SortedList" Usage="new System.Collections.SortedList d" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
@@ -233,6 +256,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -278,6 +303,7 @@
         <altmember cref="T:System.IComparable" />
         <altmember cref="T:System.Collections.Hashtable" />
         <altmember cref="P:System.Collections.SortedList.Capacity" />
+        <related type="Article" href="~/docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md">Performing Culture-Insensitive String Operations in Collections</related>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -286,6 +312,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.SortedList.#ctor(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (initialCapacity As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SortedList(int initialCapacity);" />
+      <MemberSignature Language="F#" Value="new System.Collections.SortedList : int -&gt; System.Collections.SortedList" Usage="new System.Collections.SortedList initialCapacity" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
@@ -295,6 +322,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -336,6 +365,7 @@
         <exception cref="T:System.OutOfMemoryException">There is not enough available memory to create a <see cref="T:System.Collections.SortedList" /> object with the specified <paramref name="initialCapacity" />.</exception>
         <altmember cref="T:System.IComparable" />
         <altmember cref="P:System.Collections.SortedList.Capacity" />
+        <related type="Article" href="~/docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md">Performing Culture-Insensitive String Operations in Collections</related>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -344,6 +374,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.SortedList.#ctor(System.Collections.IComparer,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (comparer As IComparer, capacity As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SortedList(System::Collections::IComparer ^ comparer, int capacity);" />
+      <MemberSignature Language="F#" Value="new System.Collections.SortedList : System.Collections.IComparer * int -&gt; System.Collections.SortedList" Usage="new System.Collections.SortedList (comparer, capacity)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
@@ -353,6 +384,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -401,6 +434,7 @@
         <altmember cref="T:System.Collections.IComparer" />
         <altmember cref="T:System.IComparable" />
         <altmember cref="P:System.Collections.SortedList.Capacity" />
+        <related type="Article" href="~/docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md">Performing Culture-Insensitive String Operations in Collections</related>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -409,6 +443,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.SortedList.#ctor(System.Collections.IDictionary,System.Collections.IComparer)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (d As IDictionary, comparer As IComparer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SortedList(System::Collections::IDictionary ^ d, System::Collections::IComparer ^ comparer);" />
+      <MemberSignature Language="F#" Value="new System.Collections.SortedList : System.Collections.IDictionary * System.Collections.IComparer -&gt; System.Collections.SortedList" Usage="new System.Collections.SortedList (d, comparer)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
@@ -418,6 +453,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -471,6 +508,7 @@
         <altmember cref="T:System.IComparable" />
         <altmember cref="T:System.Collections.Hashtable" />
         <altmember cref="P:System.Collections.SortedList.Capacity" />
+        <related type="Article" href="~/docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md">Performing Culture-Insensitive String Operations in Collections</related>
       </Docs>
     </Member>
     <Member MemberName="Add">
@@ -479,6 +517,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.SortedList.Add(System.Object,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub Add (key As Object, value As Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Add(System::Object ^ key, System::Object ^ value);" />
+      <MemberSignature Language="F#" Value="abstract member Add : obj * obj -&gt; unit&#xA;override this.Add : obj * obj -&gt; unit" Usage="sortedList.Add (key, value)" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IDictionary.Add(System.Object,System.Object)</InterfaceMember>
@@ -491,6 +530,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -562,6 +603,7 @@
       <MemberSignature Language="DocId" Value="P:System.Collections.SortedList.Capacity" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property Capacity As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property int Capacity { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.Capacity : int with get, set" Usage="System.Collections.SortedList.Capacity" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
@@ -571,6 +613,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -609,6 +653,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.SortedList.Clear" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub Clear ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Clear();" />
+      <MemberSignature Language="F#" Value="abstract member Clear : unit -&gt; unit&#xA;override this.Clear : unit -&gt; unit" Usage="sortedList.Clear " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IDictionary.Clear</InterfaceMember>
@@ -621,6 +666,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -671,6 +718,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.SortedList.Clone" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function Clone () As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Object ^ Clone();" />
+      <MemberSignature Language="F#" Value="abstract member Clone : unit -&gt; obj&#xA;override this.Clone : unit -&gt; obj" Usage="sortedList.Clone " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.ICloneable.Clone</InterfaceMember>
@@ -683,6 +731,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -718,6 +768,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.SortedList.Contains(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function Contains (key As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Contains(System::Object ^ key);" />
+      <MemberSignature Language="F#" Value="abstract member Contains : obj -&gt; bool&#xA;override this.Contains : obj -&gt; bool" Usage="sortedList.Contains key" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IDictionary.Contains(System.Object)</InterfaceMember>
@@ -730,6 +781,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -758,7 +811,7 @@
   
  This method uses a binary search algorithm; therefore, this method is an O(log `n`) operation, where `n` is <xref:System.Collections.SortedList.Count%2A>.  
   
- Starting with the .NET Framework 2.0, this method uses the collection’s objects’ <xref:System.Object.Equals%2A> and <xref:System.IComparable.CompareTo%2A> methods on `item` to determine whether item exists. In the earlier versions of the .NET Framework, this determination was made by using the <xref:System.Object.Equals%2A> and <xref:System.IComparable.CompareTo%2A> methods of the `item` parameter on the objects in the collection.  
+ Starting with the .NET Framework 2.0, this method uses the collection's objects' <xref:System.Object.Equals%2A> and <xref:System.IComparable.CompareTo%2A> methods on `item` to determine whether item exists. In the earlier versions of the .NET Framework, this determination was made by using the <xref:System.Object.Equals%2A> and <xref:System.IComparable.CompareTo%2A> methods of the `item` parameter on the objects in the collection.  
   
    
   
@@ -776,6 +829,7 @@
         <exception cref="T:System.InvalidOperationException">The comparer throws an exception.</exception>
         <altmember cref="M:System.Collections.SortedList.ContainsKey(System.Object)" />
         <altmember cref="M:System.Collections.SortedList.IndexOfKey(System.Object)" />
+        <related type="Article" href="~/docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md">Performing Culture-Insensitive String Operations in Collections</related>
       </Docs>
     </Member>
     <Member MemberName="ContainsKey">
@@ -784,6 +838,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.SortedList.ContainsKey(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function ContainsKey (key As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool ContainsKey(System::Object ^ key);" />
+      <MemberSignature Language="F#" Value="abstract member ContainsKey : obj -&gt; bool&#xA;override this.ContainsKey : obj -&gt; bool" Usage="sortedList.ContainsKey key" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
@@ -793,6 +848,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -821,7 +878,7 @@
   
  This method uses a binary search algorithm; therefore, this method is an O(log `n`) operation, where `n` is <xref:System.Collections.SortedList.Count%2A>.  
   
- Starting with the .NET Framework 2.0, this method uses the collection’s objects’ <xref:System.Object.Equals%2A> and <xref:System.IComparable.CompareTo%2A> methods on `item` to determine whether item exists. In the earlier versions of the .NET Framework, this determination was made by using the <xref:System.Object.Equals%2A> and <xref:System.IComparable.CompareTo%2A> methods of the `item` parameter on the objects in the collection.  
+ Starting with the .NET Framework 2.0, this method uses the collection's objects' <xref:System.Object.Equals%2A> and <xref:System.IComparable.CompareTo%2A> methods on `item` to determine whether item exists. In the earlier versions of the .NET Framework, this determination was made by using the <xref:System.Object.Equals%2A> and <xref:System.IComparable.CompareTo%2A> methods of the `item` parameter on the objects in the collection.  
   
    
   
@@ -840,6 +897,7 @@
         <altmember cref="M:System.Collections.SortedList.Contains(System.Object)" />
         <altmember cref="M:System.Collections.SortedList.ContainsValue(System.Object)" />
         <altmember cref="M:System.Collections.SortedList.IndexOfKey(System.Object)" />
+        <related type="Article" href="~/docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md">Performing Culture-Insensitive String Operations in Collections</related>
       </Docs>
     </Member>
     <Member MemberName="ContainsValue">
@@ -848,6 +906,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.SortedList.ContainsValue(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function ContainsValue (value As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool ContainsValue(System::Object ^ value);" />
+      <MemberSignature Language="F#" Value="abstract member ContainsValue : obj -&gt; bool&#xA;override this.ContainsValue : obj -&gt; bool" Usage="sortedList.ContainsValue value" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
@@ -857,6 +916,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -883,7 +944,7 @@
   
  This method performs a linear search; therefore, the average execution time is proportional to <xref:System.Collections.SortedList.Count%2A>. That is, this method is an O(`n`) operation, where `n` is <xref:System.Collections.SortedList.Count%2A>.  
   
- Starting with the .NET Framework 2.0, this method uses the collection’s objects’ <xref:System.Object.Equals%2A> and <xref:System.IComparable.CompareTo%2A> methods on `item` to determine whether item exists. In the earlier versions of the .NET Framework, this determination was made by using the <xref:System.Object.Equals%2A> and <xref:System.IComparable.CompareTo%2A> methods of the `item` parameter on the objects in the collection.  
+ Starting with the .NET Framework 2.0, this method uses the collection's objects' <xref:System.Object.Equals%2A> and <xref:System.IComparable.CompareTo%2A> methods on `item` to determine whether item exists. In the earlier versions of the .NET Framework, this determination was made by using the <xref:System.Object.Equals%2A> and <xref:System.IComparable.CompareTo%2A> methods of the `item` parameter on the objects in the collection.  
   
    
   
@@ -898,6 +959,7 @@
         </remarks>
         <altmember cref="M:System.Collections.SortedList.ContainsKey(System.Object)" />
         <altmember cref="M:System.Collections.SortedList.IndexOfValue(System.Object)" />
+        <related type="Article" href="~/docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md">Performing Culture-Insensitive String Operations in Collections</related>
       </Docs>
     </Member>
     <Member MemberName="CopyTo">
@@ -905,6 +967,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 arrayIndex) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Collections.SortedList.CopyTo(System.Array,System.Int32)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void CopyTo(Array ^ array, int arrayIndex);" />
+      <MemberSignature Language="F#" Value="abstract member CopyTo : Array * int -&gt; unit&#xA;override this.CopyTo : Array * int -&gt; unit" Usage="sortedList.CopyTo (array, arrayIndex)" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.ICollection.CopyTo(System.Array,System.Int32)</InterfaceMember>
@@ -917,6 +980,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -933,7 +998,7 @@
       </Parameters>
       <Docs>
         <param name="array">The one-dimensional <see cref="T:System.Array" /> object that is the destination of the <see cref="T:System.Collections.DictionaryEntry" /> objects copied from <see cref="T:System.Collections.SortedList" />. The <see cref="T:System.Array" /> must have zero-based indexing.</param>
-        <param name="arrayIndex">The zero-based index in <c>array</c> at which copying begins.</param>
+        <param name="arrayIndex">The zero-based index in <paramref name="array" /> at which copying begins.</param>
         <summary>Copies <see cref="T:System.Collections.SortedList" /> elements to a one-dimensional <see cref="T:System.Array" /> object, starting at the specified index in the array.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -980,6 +1045,7 @@
       <MemberSignature Language="DocId" Value="P:System.Collections.SortedList.Count" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="System.Collections.SortedList.Count" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.ICollection.Count</InterfaceMember>
@@ -992,6 +1058,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1028,6 +1096,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.SortedList.GetByIndex(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function GetByIndex (index As Integer) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Object ^ GetByIndex(int index);" />
+      <MemberSignature Language="F#" Value="abstract member GetByIndex : int -&gt; obj&#xA;override this.GetByIndex : int -&gt; obj" Usage="sortedList.GetByIndex index" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
@@ -1037,6 +1106,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1085,6 +1156,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.SortedList.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function GetEnumerator () As IDictionaryEnumerator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Collections::IDictionaryEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IDictionaryEnumerator&#xA;override this.GetEnumerator : unit -&gt; System.Collections.IDictionaryEnumerator" Usage="sortedList.GetEnumerator " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IDictionary.GetEnumerator</InterfaceMember>
@@ -1097,6 +1169,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1143,6 +1217,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.SortedList.GetKey(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function GetKey (index As Integer) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Object ^ GetKey(int index);" />
+      <MemberSignature Language="F#" Value="abstract member GetKey : int -&gt; obj&#xA;override this.GetKey : int -&gt; obj" Usage="sortedList.GetKey index" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
@@ -1152,6 +1227,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1198,6 +1275,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.SortedList.GetKeyList" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function GetKeyList () As IList" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Collections::IList ^ GetKeyList();" />
+      <MemberSignature Language="F#" Value="abstract member GetKeyList : unit -&gt; System.Collections.IList&#xA;override this.GetKeyList : unit -&gt; System.Collections.IList" Usage="sortedList.GetKeyList " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
@@ -1207,6 +1285,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1255,6 +1335,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.SortedList.GetValueList" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function GetValueList () As IList" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Collections::IList ^ GetValueList();" />
+      <MemberSignature Language="F#" Value="abstract member GetValueList : unit -&gt; System.Collections.IList&#xA;override this.GetValueList : unit -&gt; System.Collections.IList" Usage="sortedList.GetValueList " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
@@ -1264,6 +1345,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1312,6 +1395,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.SortedList.IndexOfKey(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function IndexOfKey (key As Object) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual int IndexOfKey(System::Object ^ key);" />
+      <MemberSignature Language="F#" Value="abstract member IndexOfKey : obj -&gt; int&#xA;override this.IndexOfKey : obj -&gt; int" Usage="sortedList.IndexOfKey key" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
@@ -1321,6 +1405,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1348,7 +1434,7 @@
   
  This method uses a binary search algorithm; therefore, this method is an O(log `n`) operation, where `n` is <xref:System.Collections.SortedList.Count%2A>.  
   
- Starting with the .NET Framework 2.0, this method uses the collection’s objects’ <xref:System.Object.Equals%2A> and <xref:System.IComparable.CompareTo%2A> methods on `item` to determine whether item exists. In the earlier versions of the .NET Framework, this determination was made by using the <xref:System.Object.Equals%2A> and <xref:System.IComparable.CompareTo%2A> methods of the `item` parameter on the objects in the collection.  
+ Starting with the .NET Framework 2.0, this method uses the collection's objects' <xref:System.Object.Equals%2A> and <xref:System.IComparable.CompareTo%2A> methods on `item` to determine whether item exists. In the earlier versions of the .NET Framework, this determination was made by using the <xref:System.Object.Equals%2A> and <xref:System.IComparable.CompareTo%2A> methods of the `item` parameter on the objects in the collection.  
   
    
   
@@ -1366,6 +1452,7 @@
         <exception cref="T:System.InvalidOperationException">The comparer throws an exception.</exception>
         <altmember cref="M:System.Collections.SortedList.ContainsKey(System.Object)" />
         <altmember cref="M:System.Collections.SortedList.IndexOfValue(System.Object)" />
+        <related type="Article" href="~/docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md">Performing Culture-Insensitive String Operations in Collections</related>
       </Docs>
     </Member>
     <Member MemberName="IndexOfValue">
@@ -1374,6 +1461,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.SortedList.IndexOfValue(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function IndexOfValue (value As Object) As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual int IndexOfValue(System::Object ^ value);" />
+      <MemberSignature Language="F#" Value="abstract member IndexOfValue : obj -&gt; int&#xA;override this.IndexOfValue : obj -&gt; int" Usage="sortedList.IndexOfValue value" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
@@ -1383,6 +1471,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1410,7 +1500,7 @@
   
  This method uses a linear search; therefore, this method is an O(`n`) operation, where `n` is <xref:System.Collections.SortedList.Count%2A>.  
   
- Starting with the .NET Framework 2.0, this method uses the collection’s objects’ <xref:System.Object.Equals%2A> and <xref:System.IComparable.CompareTo%2A> methods on `item` to determine whether item exists. In the earlier versions of the .NET Framework, this determination was made by using the <xref:System.Object.Equals%2A> and <xref:System.IComparable.CompareTo%2A> methods of the `item` parameter on the objects in the collection.  
+ Starting with the .NET Framework 2.0, this method uses the collection's objects' <xref:System.Object.Equals%2A> and <xref:System.IComparable.CompareTo%2A> methods on `item` to determine whether item exists. In the earlier versions of the .NET Framework, this determination was made by using the <xref:System.Object.Equals%2A> and <xref:System.IComparable.CompareTo%2A> methods of the `item` parameter on the objects in the collection.  
   
    
   
@@ -1425,6 +1515,7 @@
         </remarks>
         <altmember cref="M:System.Collections.SortedList.ContainsValue(System.Object)" />
         <altmember cref="M:System.Collections.SortedList.IndexOfKey(System.Object)" />
+        <related type="Article" href="~/docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md">Performing Culture-Insensitive String Operations in Collections</related>
       </Docs>
     </Member>
     <Member MemberName="IsFixedSize">
@@ -1433,6 +1524,7 @@
       <MemberSignature Language="DocId" Value="P:System.Collections.SortedList.IsFixedSize" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property IsFixedSize As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool IsFixedSize { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsFixedSize : bool" Usage="System.Collections.SortedList.IsFixedSize" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.IDictionary.IsFixedSize</InterfaceMember>
@@ -1445,6 +1537,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1479,6 +1573,7 @@
       <MemberSignature Language="DocId" Value="P:System.Collections.SortedList.IsReadOnly" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property IsReadOnly As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool IsReadOnly { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsReadOnly : bool" Usage="System.Collections.SortedList.IsReadOnly" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.IDictionary.IsReadOnly</InterfaceMember>
@@ -1491,6 +1586,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1525,6 +1622,7 @@
       <MemberSignature Language="DocId" Value="P:System.Collections.SortedList.IsSynchronized" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property IsSynchronized As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool IsSynchronized { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsSynchronized : bool" Usage="System.Collections.SortedList.IsSynchronized" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.ICollection.IsSynchronized</InterfaceMember>
@@ -1537,6 +1635,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1588,6 +1688,7 @@
       <MemberSignature Language="DocId" Value="P:System.Collections.SortedList.Item(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Default Public Overridable Property Item(key As Object) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Object ^ default[System::Object ^] { System::Object ^ get(System::Object ^ key); void set(System::Object ^ key, System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Item(obj) : obj with get, set" Usage="System.Collections.SortedList.Item" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.IDictionary.Item(System.Object)</InterfaceMember>
@@ -1600,6 +1701,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1615,7 +1718,7 @@
       </Parameters>
       <Docs>
         <param name="key">The key associated with the value to get or set.</param>
-        <summary>Gets and sets the value associated with a specific key in a <see cref="T:System.Collections.SortedList" /> object.</summary>
+        <summary>Gets or sets the value associated with a specific key in a <see cref="T:System.Collections.SortedList" /> object.</summary>
         <value>The value associated with the <paramref name="key" /> parameter in the <see cref="T:System.Collections.SortedList" /> object, if <paramref name="key" /> is found; otherwise, <see langword="null" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1629,7 +1732,7 @@
   
  The elements of a <xref:System.Collections.SortedList> are sorted by the keys either according to a specific <xref:System.Collections.IComparer> implementation specified when the <xref:System.Collections.SortedList> is created or according to the <xref:System.IComparable> implementation provided by the keys themselves.  
   
- The C# language uses the  keyword to define the indexers instead of implementing the <xref:System.Collections.SortedList.Keys%2A> property. Visual Basic implements <xref:System.Collections.SortedList.Item%2A> as a default property, which provides the same indexing functionality.  
+ The C# language uses the [`this`](~/docs/csharp/language-reference/keywords/this.md) keyword to define the indexers instead of implementing the <xref:System.Collections.SortedList.Keys%2A> property. Visual Basic implements <xref:System.Collections.SortedList.Item%2A> as a default property, which provides the same indexing functionality.  
   
  Retrieving the value of this property is an O(log `n`) operation, where `n` is <xref:System.Collections.SortedList.Count%2A>. Setting the property is an O(log `n`) operation if the key is already in the <xref:System.Collections.SortedList>. If the key is not in the list, setting the property is an O(`n`) operation for unsorted data, or O(log `n`) if the new element is added at the end of the list. If insertion causes a resize, the operation is O(`n`).  
   
@@ -1647,6 +1750,7 @@
         <altmember cref="M:System.Collections.SortedList.Add(System.Object,System.Object)" />
         <altmember cref="M:System.Collections.SortedList.Contains(System.Object)" />
         <altmember cref="M:System.Collections.SortedList.ContainsKey(System.Object)" />
+        <related type="Article" href="~/docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md">Performing Culture-Insensitive String Operations in Collections</related>
       </Docs>
     </Member>
     <Member MemberName="Keys">
@@ -1655,6 +1759,7 @@
       <MemberSignature Language="DocId" Value="P:System.Collections.SortedList.Keys" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Keys As ICollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Collections::ICollection ^ Keys { System::Collections::ICollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Keys : System.Collections.ICollection" Usage="System.Collections.SortedList.Keys" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.IDictionary.Keys</InterfaceMember>
@@ -1667,6 +1772,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1697,6 +1804,7 @@
         <altmember cref="T:System.Collections.ICollection" />
         <altmember cref="P:System.Collections.SortedList.Values" />
         <altmember cref="M:System.Collections.SortedList.GetKeyList" />
+        <related type="Article" href="~/docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md">Performing Culture-Insensitive String Operations in Collections</related>
       </Docs>
     </Member>
     <Member MemberName="Remove">
@@ -1705,6 +1813,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.SortedList.Remove(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub Remove (key As Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Remove(System::Object ^ key);" />
+      <MemberSignature Language="F#" Value="abstract member Remove : obj -&gt; unit&#xA;override this.Remove : obj -&gt; unit" Usage="sortedList.Remove key" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IDictionary.Remove(System.Object)</InterfaceMember>
@@ -1717,6 +1826,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1762,6 +1873,7 @@
   
  The <see cref="T:System.Collections.SortedList" /> has a fixed size.</exception>
         <altmember cref="M:System.Collections.SortedList.RemoveAt(System.Int32)" />
+        <related type="Article" href="~/docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md">Performing Culture-Insensitive String Operations in Collections</related>
       </Docs>
     </Member>
     <Member MemberName="RemoveAt">
@@ -1770,6 +1882,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.SortedList.RemoveAt(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub RemoveAt (index As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void RemoveAt(int index);" />
+      <MemberSignature Language="F#" Value="abstract member RemoveAt : int -&gt; unit&#xA;override this.RemoveAt : int -&gt; unit" Usage="sortedList.RemoveAt index" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
@@ -1779,6 +1892,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1832,6 +1947,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.SortedList.SetByIndex(System.Int32,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub SetByIndex (index As Integer, value As Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void SetByIndex(int index, System::Object ^ value);" />
+      <MemberSignature Language="F#" Value="abstract member SetByIndex : int * obj -&gt; unit&#xA;override this.SetByIndex : int * obj -&gt; unit" Usage="sortedList.SetByIndex (index, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
@@ -1841,6 +1957,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1856,7 +1974,7 @@
         <Parameter Name="value" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="index">The zero-based index at which to save <c>value</c>.</param>
+        <param name="index">The zero-based index at which to save <paramref name="value" />.</param>
         <param name="value">The <see cref="T:System.Object" /> to save into the <see cref="T:System.Collections.SortedList" /> object. The value can be <see langword="null" />.</param>
         <summary>Replaces the value at a specific index in a <see cref="T:System.Collections.SortedList" /> object.</summary>
         <remarks>
@@ -1890,6 +2008,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.SortedList.Synchronized(System.Collections.SortedList)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function Synchronized (list As SortedList) As SortedList" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Collections::SortedList ^ Synchronized(System::Collections::SortedList ^ list);" />
+      <MemberSignature Language="F#" Value="static member Synchronized : System.Collections.SortedList -&gt; System.Collections.SortedList" Usage="System.Collections.SortedList.Synchronized list" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
@@ -1899,6 +2018,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -1955,6 +2076,7 @@
       <MemberSignature Language="DocId" Value="P:System.Collections.SortedList.SyncRoot" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property SyncRoot As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Object ^ SyncRoot { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SyncRoot : obj" Usage="System.Collections.SortedList.SyncRoot" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.ICollection.SyncRoot</InterfaceMember>
@@ -1967,6 +2089,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2023,6 +2147,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2071,6 +2197,7 @@
       <MemberSignature Language="DocId" Value="M:System.Collections.SortedList.TrimToSize" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub TrimToSize ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void TrimToSize();" />
+      <MemberSignature Language="F#" Value="abstract member TrimToSize : unit -&gt; unit&#xA;override this.TrimToSize : unit -&gt; unit" Usage="sortedList.TrimToSize " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
@@ -2080,6 +2207,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2130,6 +2259,7 @@
       <MemberSignature Language="DocId" Value="P:System.Collections.SortedList.Values" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Values As ICollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Collections::ICollection ^ Values { System::Collections::ICollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Values : System.Collections.ICollection" Usage="System.Collections.SortedList.Values" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.IDictionary.Values</InterfaceMember>
@@ -2142,6 +2272,8 @@
       </AssemblyInfo>
       <AssemblyInfo>
         <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.5.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
@@ -2172,6 +2304,7 @@
         <altmember cref="T:System.Collections.ICollection" />
         <altmember cref="P:System.Collections.SortedList.Keys" />
         <altmember cref="M:System.Collections.SortedList.GetValueList" />
+        <related type="Article" href="~/docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md">Performing Culture-Insensitive String Operations in Collections</related>
       </Docs>
     </Member>
   </Members>

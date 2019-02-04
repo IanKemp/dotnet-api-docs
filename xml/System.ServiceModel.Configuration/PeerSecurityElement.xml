@@ -4,12 +4,15 @@
   <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.PeerSecurityElement" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class PeerSecurityElement&#xA;Inherits ServiceModelConfigurationElement" />
   <TypeSignature Language="C++ CLI" Value="public ref class PeerSecurityElement sealed : System::ServiceModel::Configuration::ServiceModelConfigurationElement" />
+  <TypeSignature Language="F#" Value="type PeerSecurityElement = class&#xA;    inherit ServiceModelConfigurationElement" />
   <AssemblyInfo>
     <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.ServiceModel.Configuration.ServiceModelConfigurationElement</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-3.0">System.Configuration.ConfigurationElement</BaseTypeName>
   </Base>
   <Interfaces />
   <Docs>
@@ -26,8 +29,14 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Initializes a new default instance of the <see cref="T:System.ServiceModel.Configuration.PeerSecurityElement" /> class.</summary>
@@ -40,9 +49,11 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.PeerSecurityElement.Mode" />
       <MemberSignature Language="VB.NET" Value="Public Property Mode As SecurityMode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::ServiceModel::SecurityMode Mode { System::ServiceModel::SecurityMode get(); void set(System::ServiceModel::SecurityMode value); };" />
+      <MemberSignature Language="F#" Value="member this.Mode : System.ServiceModel.SecurityMode with get, set" Usage="System.ServiceModel.Configuration.PeerSecurityElement.Mode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -54,7 +65,7 @@
         <ReturnType>System.ServiceModel.SecurityMode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets and sets the type of security used by peers configured with this element.</summary>
+        <summary>Gets or sets the type of security used by peers configured with this element.</summary>
         <value>
           <see cref="T:System.ServiceModel.SecurityMode" /> enumeration value that specifies the type of security used by peers configured with this element.</value>
         <remarks>To be added.</remarks>
@@ -66,9 +77,11 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.PeerSecurityElement.Properties" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property Properties As ConfigurationPropertyCollection" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property System::Configuration::ConfigurationPropertyCollection ^ Properties { System::Configuration::ConfigurationPropertyCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Properties : System.Configuration.ConfigurationPropertyCollection" Usage="System.ServiceModel.Configuration.PeerSecurityElement.Properties" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -86,9 +99,11 @@
       <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.PeerSecurityElement.Transport" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Transport As PeerTransportSecurityElement" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::ServiceModel::Configuration::PeerTransportSecurityElement ^ Transport { System::ServiceModel::Configuration::PeerTransportSecurityElement ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Transport : System.ServiceModel.Configuration.PeerTransportSecurityElement" Usage="System.ServiceModel.Configuration.PeerSecurityElement.Transport" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>

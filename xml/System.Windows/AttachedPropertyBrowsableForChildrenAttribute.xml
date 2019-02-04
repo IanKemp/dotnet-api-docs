@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.AttachedPropertyBrowsableForChildrenAttribute" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class AttachedPropertyBrowsableForChildrenAttribute&#xA;Inherits AttachedPropertyBrowsableAttribute" />
   <TypeSignature Language="C++ CLI" Value="public ref class AttachedPropertyBrowsableForChildrenAttribute sealed : System::Windows::AttachedPropertyBrowsableAttribute" />
+  <TypeSignature Language="F#" Value="type AttachedPropertyBrowsableForChildrenAttribute = class&#xA;    inherit AttachedPropertyBrowsableAttribute" />
   <AssemblyInfo>
     <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -31,7 +33,7 @@
   
  Generally, the browsable state parallels functionality. For example, <xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=nameWithType> is designated browsable on elements that are child elements of a <xref:System.Windows.Controls.Canvas>, because <xref:System.Windows.Controls.Canvas> includes code for checking any set values of <xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=nameWithType> on child elements.  
   
- This  [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] supports two types of tree detection modes for parent element positions:  a shallow mode, and a deep mode. The shallow mode, which is the default mode for an applied <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute> [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)], requires that the immediate parent element be the owner type of the property in order for the attached property to be browsable. The deep mode is declared by applying the attribute with <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.IncludeDescendants%2A> as `true`. The deep mode is less restrictive because it only requires that the owner type be somewhere in the ancestor direction of the logical tree., and therefore the attached property is browsable on all child elements, not just immediate child elements. The deep mode is applied for attached property usages where intervening elements in the logical tree should not be reported as the true parent element. Implicit collections (for example, the <xref:System.Windows.Controls.UIElementCollection> that is implicit in the <xref:System.Windows.Controls.Panel.Children%2A> of a <xref:System.Windows.Controls.Panel>) are not considered to be parent elements for purposes of how this  [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] declares the tree detection mode.  
+ This  [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] supports two types of tree detection modes for parent element positions:  a shallow mode, and a deep mode. The shallow mode, which is the default mode for an applied <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute> [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)], requires that the immediate parent element be the owner type of the property in order for the attached property to be browsable. The deep mode is declared by applying the attribute with <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.IncludeDescendants%2A> as `true`. The deep mode is less restrictive because it only requires that the owner type be somewhere in the ancestor direction of the logical tree, and therefore the attached property is browsable on all child elements, not just immediate child elements. The deep mode is applied for attached property usages where intervening elements in the logical tree should not be reported as the true parent element. Implicit collections (for example, the <xref:System.Windows.Controls.UIElementCollection> that is implicit in the <xref:System.Windows.Controls.Panel.Children%2A> of a <xref:System.Windows.Controls.Panel>) are not considered to be parent elements for purposes of how this  [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] declares the tree detection mode.  
   
  This [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] should only be applied on the get accessor of attached property definitions. Do not apply this [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] to the set accessor. Although intuitively it is the set operation that is being made browsable for [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] on child elements, it is the presence and characteristics of the get accessor on the parent element that controls the true behavior.  
   
@@ -57,8 +59,14 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.Windows.AttachedPropertyBrowsableForChildrenAttribute" /> class.</summary>
@@ -78,9 +86,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="attachedPropertyBrowsableForChildrenAttribute.Equals obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -110,9 +120,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="attachedPropertyBrowsableForChildrenAttribute.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -138,11 +150,21 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.AttachedPropertyBrowsableForChildrenAttribute.IncludeDescendants" />
       <MemberSignature Language="VB.NET" Value="Public Property IncludeDescendants As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IncludeDescendants { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IncludeDescendants : bool with get, set" Usage="System.Windows.AttachedPropertyBrowsableForChildrenAttribute.IncludeDescendants" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>

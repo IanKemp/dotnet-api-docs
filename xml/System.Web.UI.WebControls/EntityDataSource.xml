@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.EntityDataSource" />
   <TypeSignature Language="VB.NET" Value="Public Class EntityDataSource&#xA;Inherits DataSourceControl&#xA;Implements IDynamicDataSource, IQueryableDataSource" />
   <TypeSignature Language="C++ CLI" Value="public ref class EntityDataSource : System::Web::UI::DataSourceControl, System::Web::DynamicData::IDynamicDataSource, System::Web::UI::WebControls::IQueryableDataSource" />
+  <TypeSignature Language="F#" Value="type EntityDataSource = class&#xA;    inherit DataSourceControl&#xA;    interface IDynamicDataSource&#xA;    interface IDataSource&#xA;    interface IQueryableDataSource" />
   <AssemblyInfo>
     <AssemblyName>System.Web.Entity</AssemblyName>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -14,6 +16,9 @@
   <Interfaces>
     <Interface>
       <InterfaceName>System.Web.DynamicData.IDynamicDataSource</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IDataSource</InterfaceName>
     </Interface>
     <Interface>
       <InterfaceName>System.Web.UI.WebControls.IQueryableDataSource</InterfaceName>
@@ -26,7 +31,7 @@
     <Attribute>
       <AttributeName>System.ComponentModel.DefaultProperty("EntitySetName")</AttributeName>
     </Attribute>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
       <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.EntityDataSourceDesigner, System.Web.Entity.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089")</AttributeName>
     </Attribute>
     <Attribute>
@@ -37,6 +42,9 @@
     </Attribute>
     <Attribute>
       <AttributeName>System.Web.UI.PersistChildren(false)</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netframework-3.5">
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.EntityDataSourceDesigner, System.Web.Entity.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089")</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -53,7 +61,7 @@
   
 <a name="introduction"></a>   
 ## Introduction  
- You can use the <xref:System.Web.UI.WebControls.EntityDataSource> control together with a data-bound control to retrieve data from an EDM and to display, edit, and sort data on a Web page by using little or no code. For more information, see [EntityDataSource Web Server Control Overview](http://msdn.microsoft.com/library/1f09af00-9578-4744-a029-765710a3c83f).  
+ You can use the <xref:System.Web.UI.WebControls.EntityDataSource> control together with a data-bound control to retrieve data from an EDM and to display, edit, and sort data on a Web page by using little or no code. For more information, see [EntityDataSource Web Server Control Overview](https://msdn.microsoft.com/library/1f09af00-9578-4744-a029-765710a3c83f).  
   
 <a name="declarative_syntax"></a>   
 ## Declarative Syntax  
@@ -109,6 +117,8 @@
   
  ]]></format>
     </remarks>
+    <related type="Article" href="https://msdn.microsoft.com/library/a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0">Introducing the Entity Framework</related>
+    <related type="Article" href="https://msdn.microsoft.com/library/338d8a55-05cc-46b0-bbb8-1379d77068e9">Working with Objects</related>
   </Docs>
   <Members>
     <MemberGroup MemberName=".ctor">
@@ -129,6 +139,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
@@ -143,11 +154,18 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSource.#ctor(System.Data.EntityClient.EntityConnection)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (connection As EntityConnection)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; EntityDataSource(System::Data::EntityClient::EntityConnection ^ connection);" />
+      <MemberSignature Language="F#" Value="new System.Web.UI.WebControls.EntityDataSource : System.Data.EntityClient.EntityConnection -&gt; System.Web.UI.WebControls.EntityDataSource" Usage="new System.Web.UI.WebControls.EntityDataSource connection" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters>
         <Parameter Name="connection" Type="System.Data.EntityClient.EntityConnection" />
       </Parameters>
@@ -163,9 +181,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.AutoGenerateOrderByClause" />
       <MemberSignature Language="VB.NET" Value="Public Property AutoGenerateOrderByClause As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AutoGenerateOrderByClause { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.AutoGenerateOrderByClause : bool with get, set" Usage="System.Web.UI.WebControls.EntityDataSource.AutoGenerateOrderByClause" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -174,6 +194,9 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -242,12 +265,14 @@ AutoGenerateOrderByClause="True">
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.AutoGenerateWhereClause" />
       <MemberSignature Language="VB.NET" Value="Public Property AutoGenerateWhereClause As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AutoGenerateWhereClause { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.AutoGenerateWhereClause : bool with get, set" Usage="System.Web.UI.WebControls.EntityDataSource.AutoGenerateWhereClause" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Web.DynamicData.IDynamicDataSource.AutoGenerateWhereClause</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -256,6 +281,9 @@ AutoGenerateOrderByClause="True">
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -316,9 +344,11 @@ AutoGenerateOrderByClause="True">
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.AutoPage" />
       <MemberSignature Language="VB.NET" Value="Public Property AutoPage As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AutoPage { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.AutoPage : bool with get, set" Usage="System.Web.UI.WebControls.EntityDataSource.AutoPage" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -327,6 +357,9 @@ AutoGenerateOrderByClause="True">
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -356,9 +389,11 @@ AutoGenerateOrderByClause="True">
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.AutoSort" />
       <MemberSignature Language="VB.NET" Value="Public Property AutoSort As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AutoSort { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.AutoSort : bool with get, set" Usage="System.Web.UI.WebControls.EntityDataSource.AutoSort" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -367,6 +402,9 @@ AutoGenerateOrderByClause="True">
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -394,9 +432,11 @@ AutoGenerateOrderByClause="True">
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.CommandParameters" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CommandParameters As ParameterCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::ParameterCollection ^ CommandParameters { System::Web::UI::WebControls::ParameterCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CommandParameters : System.Web.UI.WebControls.ParameterCollection" Usage="System.Web.UI.WebControls.EntityDataSource.CommandParameters" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -410,7 +450,7 @@ AutoGenerateOrderByClause="True">
           <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -475,11 +515,18 @@ AutoGenerateOrderByClause="True">
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.CommandText" />
       <MemberSignature Language="VB.NET" Value="Public Property CommandText As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ CommandText { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.CommandText : string with get, set" Usage="System.Web.UI.WebControls.EntityDataSource.CommandText" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -548,11 +595,18 @@ AutoGenerateOrderByClause="True">
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.ConnectionString" />
       <MemberSignature Language="VB.NET" Value="Public Property ConnectionString As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ConnectionString { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ConnectionString : string with get, set" Usage="System.Web.UI.WebControls.EntityDataSource.ConnectionString" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -563,7 +617,7 @@ AutoGenerateOrderByClause="True">
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The <xref:System.Web.UI.WebControls.EntityDataSource.ConnectionString%2A> property of the <xref:System.Web.UI.WebControls.EntityDataSource> control can be initialized from a named EDM connection string stored in the  element of the application configuration file. When the EDM is created by using the Entity Data Model Wizard, a named EDM connection is created in the application configuration file. When a named EDM connection string is found in the application configuration file, the connection is visible as an option in the Configure Data Source wizard of the EntityDataSource designer. For more information, see [Configure Data Source Wizard (EntityDataSource Control)](http://msdn.microsoft.com/library/263976a5-2406-47c0-8919-c6af6e76d78e).  
+ The <xref:System.Web.UI.WebControls.EntityDataSource.ConnectionString%2A> property of the <xref:System.Web.UI.WebControls.EntityDataSource> control can be initialized from a named EDM connection string stored in the  element of the application configuration file. When the EDM is created by using the Entity Data Model Wizard, a named EDM connection is created in the application configuration file. When a named EDM connection string is found in the application configuration file, the connection is visible as an option in the Configure Data Source wizard of the EntityDataSource designer. For more information, see [Configure Data Source Wizard (EntityDataSource Control)](https://msdn.microsoft.com/library/263976a5-2406-47c0-8919-c6af6e76d78e).  
   
  If the <xref:System.Web.UI.WebControls.EntityDataSource.ContextTypeName%2A> property is not specified, both the <xref:System.Web.UI.WebControls.EntityDataSource.DefaultContainerName%2A> and <xref:System.Web.UI.WebControls.EntityDataSource.ConnectionString%2A> properties must be set for the control to create the <xref:System.Data.Objects.ObjectContext>.  
   
@@ -577,9 +631,11 @@ AutoGenerateOrderByClause="True">
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSource.ContextCreated" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ContextCreated As EventHandler(Of EntityDataSourceContextCreatedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Web::UI::WebControls::EntityDataSourceContextCreatedEventArgs ^&gt; ^ ContextCreated;" />
+      <MemberSignature Language="F#" Value="member this.ContextCreated : EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceContextCreatedEventArgs&gt; " Usage="member this.ContextCreated : System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceContextCreatedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -596,7 +652,7 @@ AutoGenerateOrderByClause="True">
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Handle this event to access the <xref:System.Data.Objects.ObjectContext> that is used by the <xref:System.Web.UI.WebControls.EntityDataSource> control to execute the query and track changes. This context object can be stored and used for successive operations outside the <xref:System.Web.UI.WebControls.EntityDataSource>. The <xref:System.Data.Objects.ObjectContext> is obtained from the <xref:System.Web.UI.WebControls.EntityDataSourceContextCreatedEventArgs> that is returned by the <xref:System.Web.UI.WebControls.EntityDataSource.ContextCreated> event. For more information, see [Object Context Life-Cycle Management (EntityDataSource)](http://msdn.microsoft.com/library/67bc2486-112c-47c3-b23f-0297f7ac2160). For more information about the object context, see [Identity Resolution, State Management, and Change Tracking](http://msdn.microsoft.com/library/3bd49311-0e72-4ea4-8355-38fe57036ba0).  
+ Handle this event to access the <xref:System.Data.Objects.ObjectContext> that is used by the <xref:System.Web.UI.WebControls.EntityDataSource> control to execute the query and track changes. This context object can be stored and used for successive operations outside the <xref:System.Web.UI.WebControls.EntityDataSource>. The <xref:System.Data.Objects.ObjectContext> is obtained from the <xref:System.Web.UI.WebControls.EntityDataSourceContextCreatedEventArgs> that is returned by the <xref:System.Web.UI.WebControls.EntityDataSource.ContextCreated> event. For more information, see [Object Context Life-Cycle Management (EntityDataSource)](https://msdn.microsoft.com/library/67bc2486-112c-47c3-b23f-0297f7ac2160). For more information about the object context, see [Identity Resolution, State Management, and Change Tracking](https://msdn.microsoft.com/library/3bd49311-0e72-4ea4-8355-38fe57036ba0).  
   
  The <xref:System.Web.UI.WebControls.EntityDataSource.ContextCreated> event allows you to assign the <xref:System.Data.Objects.ObjectContext> that has been created to a variable for successive operations outside the <xref:System.Web.UI.WebControls.EntityDataSource>. The <xref:System.Web.UI.WebControls.EntityDataSourceContextCreatedEventArgs.Context%2A?displayProperty=nameWithType> property contains the context that has been created in the <xref:System.Web.UI.WebControls.EntityDataSource.ContextCreating> event. If the user does not assign a context during the <xref:System.Web.UI.WebControls.EntityDataSource.ContextCreating> event, the context instance contained in <xref:System.Web.UI.WebControls.EntityDataSourceContextCreatedEventArgs.Context%2A?displayProperty=nameWithType> is the one created by the <xref:System.Web.UI.WebControls.EntityDataSource> based on the <xref:System.Web.UI.WebControls.EntityDataSource.ContextTypeName%2A?displayProperty=nameWithType>, <xref:System.Web.UI.WebControls.EntityDataSource.DefaultContainerName%2A?displayProperty=nameWithType>, or <xref:System.Web.UI.WebControls.EntityDataSource.ConnectionString%2A?displayProperty=nameWithType> properties.  
   
@@ -610,9 +666,11 @@ AutoGenerateOrderByClause="True">
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSource.ContextCreating" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ContextCreating As EventHandler(Of EntityDataSourceContextCreatingEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Web::UI::WebControls::EntityDataSourceContextCreatingEventArgs ^&gt; ^ ContextCreating;" />
+      <MemberSignature Language="F#" Value="member this.ContextCreating : EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceContextCreatingEventArgs&gt; " Usage="member this.ContextCreating : System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceContextCreatingEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -629,7 +687,7 @@ AutoGenerateOrderByClause="True">
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Handle the <xref:System.Web.UI.WebControls.EntityDataSource.ContextCreating> event to supply your own <xref:System.Data.Objects.ObjectContext> instead of having a new <xref:System.Data.Objects.ObjectContext> created. If the <xref:System.Web.UI.WebControls.EntityDataSource.ContextCreating> event is not handled or the handler does not provide an <xref:System.Data.Objects.ObjectContext>, the <xref:System.Web.UI.WebControls.EntityDataSource> creates one according to its configuration. When an <xref:System.Data.Objects.ObjectContext> is provided to the <xref:System.Web.UI.WebControls.EntityDataSource.ContextCreating> event, the same instance is assigned to the `Context` property of the event object of successive events. For more information, see [Object Context Life-Cycle Management (EntityDataSource)](http://msdn.microsoft.com/library/67bc2486-112c-47c3-b23f-0297f7ac2160). For more information about the object context, see [Identity Resolution, State Management, and Change Tracking](http://msdn.microsoft.com/library/3bd49311-0e72-4ea4-8355-38fe57036ba0).  
+ Handle the <xref:System.Web.UI.WebControls.EntityDataSource.ContextCreating> event to supply your own <xref:System.Data.Objects.ObjectContext> instead of having a new <xref:System.Data.Objects.ObjectContext> created. If the <xref:System.Web.UI.WebControls.EntityDataSource.ContextCreating> event is not handled or the handler does not provide an <xref:System.Data.Objects.ObjectContext>, the <xref:System.Web.UI.WebControls.EntityDataSource> creates one according to its configuration. When an <xref:System.Data.Objects.ObjectContext> is provided to the <xref:System.Web.UI.WebControls.EntityDataSource.ContextCreating> event, the same instance is assigned to the `Context` property of the event object of successive events. For more information, see [Object Context Life-Cycle Management (EntityDataSource)](https://msdn.microsoft.com/library/67bc2486-112c-47c3-b23f-0297f7ac2160). For more information about the object context, see [Identity Resolution, State Management, and Change Tracking](https://msdn.microsoft.com/library/3bd49311-0e72-4ea4-8355-38fe57036ba0).  
   
    
   
@@ -660,9 +718,11 @@ public partial class _Default : System.Web.UI.Page
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSource.ContextDisposing" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ContextDisposing As EventHandler(Of EntityDataSourceContextDisposingEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Web::UI::WebControls::EntityDataSourceContextDisposingEventArgs ^&gt; ^ ContextDisposing;" />
+      <MemberSignature Language="F#" Value="member this.ContextDisposing : EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceContextDisposingEventArgs&gt; " Usage="member this.ContextDisposing : System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceContextDisposingEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -679,7 +739,7 @@ public partial class _Default : System.Web.UI.Page
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Handle this event to prevent the <xref:System.Data.Objects.ObjectContext> used by the <xref:System.Web.UI.WebControls.EntityDataSource> control from being disposed of. Do this when you want to use a single <xref:System.Data.Objects.ObjectContext> instance in your page with several controls or instances of the <xref:System.Web.UI.WebControls.EntityDataSource> control. To prevent the <xref:System.Data.Objects.ObjectContext> from being disposed of, set the <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> property of the <xref:System.Web.UI.WebControls.EntityDataSourceContextDisposingEventArgs> object to `true`. For more information, see [Object Context Life-Cycle Management (EntityDataSource)](http://msdn.microsoft.com/library/67bc2486-112c-47c3-b23f-0297f7ac2160). For more information about the object context, see [Identity Resolution, State Management, and Change Tracking](http://msdn.microsoft.com/library/3bd49311-0e72-4ea4-8355-38fe57036ba0).  
+ Handle this event to prevent the <xref:System.Data.Objects.ObjectContext> used by the <xref:System.Web.UI.WebControls.EntityDataSource> control from being disposed of. Do this when you want to use a single <xref:System.Data.Objects.ObjectContext> instance in your page with several controls or instances of the <xref:System.Web.UI.WebControls.EntityDataSource> control. To prevent the <xref:System.Data.Objects.ObjectContext> from being disposed of, set the <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> property of the <xref:System.Web.UI.WebControls.EntityDataSourceContextDisposingEventArgs> object to `true`. For more information, see [Object Context Life-Cycle Management (EntityDataSource)](https://msdn.microsoft.com/library/67bc2486-112c-47c3-b23f-0297f7ac2160). For more information about the object context, see [Identity Resolution, State Management, and Change Tracking](https://msdn.microsoft.com/library/3bd49311-0e72-4ea4-8355-38fe57036ba0).  
   
    
   
@@ -705,17 +765,22 @@ protected void EntityDataSource2_ContextDisposing(object sender,
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.ContextType" />
       <MemberSignature Language="VB.NET" Value="Public Property ContextType As Type" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Type ^ ContextType { Type ^ get(); void set(Type ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ContextType : Type with get, set" Usage="System.Web.UI.WebControls.EntityDataSource.ContextType" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Web.DynamicData.IDynamicDataSource.ContextType</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
-          <AttributeName>System.ComponentModel.DesignerSerializationVisibility</AttributeName>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -728,7 +793,7 @@ protected void EntityDataSource2_ContextDisposing(object sender,
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The <xref:System.Data.Objects.ObjectContext> used by the <xref:System.Web.UI.WebControls.EntityDataSource> control can be accessed from the <xref:System.Web.UI.WebControls.EntityDataSource.ContextType%2A> property. For more information, see [Object Context Life-Cycle Management (EntityDataSource)](http://msdn.microsoft.com/library/67bc2486-112c-47c3-b23f-0297f7ac2160).  
+ The <xref:System.Data.Objects.ObjectContext> used by the <xref:System.Web.UI.WebControls.EntityDataSource> control can be accessed from the <xref:System.Web.UI.WebControls.EntityDataSource.ContextType%2A> property. For more information, see [Object Context Life-Cycle Management (EntityDataSource)](https://msdn.microsoft.com/library/67bc2486-112c-47c3-b23f-0297f7ac2160).  
   
  ]]></format>
         </remarks>
@@ -740,9 +805,11 @@ protected void EntityDataSource2_ContextDisposing(object sender,
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.ContextTypeName" />
       <MemberSignature Language="VB.NET" Value="Public Property ContextTypeName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ContextTypeName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ContextTypeName : string with get, set" Usage="System.Web.UI.WebControls.EntityDataSource.ContextTypeName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -751,6 +818,9 @@ protected void EntityDataSource2_ContextDisposing(object sender,
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -775,6 +845,7 @@ protected void EntityDataSource2_ContextDisposing(object sender,
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSource.CreateView" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function CreateView () As EntityDataSourceView" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual System::Web::UI::WebControls::EntityDataSourceView ^ CreateView();" />
+      <MemberSignature Language="F#" Value="abstract member CreateView : unit -&gt; System.Web.UI.WebControls.EntityDataSourceView&#xA;override this.CreateView : unit -&gt; System.Web.UI.WebControls.EntityDataSourceView" Usage="entityDataSource.CreateView " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
@@ -803,11 +874,18 @@ protected void EntityDataSource2_ContextDisposing(object sender,
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.DefaultContainerName" />
       <MemberSignature Language="VB.NET" Value="Public Property DefaultContainerName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DefaultContainerName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DefaultContainerName : string with get, set" Usage="System.Web.UI.WebControls.EntityDataSource.DefaultContainerName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -830,9 +908,11 @@ protected void EntityDataSource2_ContextDisposing(object sender,
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSource.Deleted" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event Deleted As EventHandler(Of EntityDataSourceChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Web::UI::WebControls::EntityDataSourceChangedEventArgs ^&gt; ^ Deleted;" />
+      <MemberSignature Language="F#" Value="member this.Deleted : EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangedEventArgs&gt; " Usage="member this.Deleted : System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -863,9 +943,11 @@ protected void EntityDataSource2_ContextDisposing(object sender,
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.DeleteParameters" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DeleteParameters As ParameterCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::ParameterCollection ^ DeleteParameters { System::Web::UI::WebControls::ParameterCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DeleteParameters : System.Web.UI.WebControls.ParameterCollection" Usage="System.Web.UI.WebControls.EntityDataSource.DeleteParameters" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -879,7 +961,7 @@ protected void EntityDataSource2_ContextDisposing(object sender,
           <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -904,9 +986,11 @@ protected void EntityDataSource2_ContextDisposing(object sender,
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSource.Deleting" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event Deleting As EventHandler(Of EntityDataSourceChangingEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Web::UI::WebControls::EntityDataSourceChangingEventArgs ^&gt; ^ Deleting;" />
+      <MemberSignature Language="F#" Value="member this.Deleting : EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangingEventArgs&gt; " Usage="member this.Deleting : System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangingEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -941,12 +1025,14 @@ protected void EntityDataSource2_ContextDisposing(object sender,
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.EnableDelete" />
       <MemberSignature Language="VB.NET" Value="Public Property EnableDelete As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool EnableDelete { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.EnableDelete : bool with get, set" Usage="System.Web.UI.WebControls.EntityDataSource.EnableDelete" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Web.DynamicData.IDynamicDataSource.EnableDelete</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -955,6 +1041,9 @@ protected void EntityDataSource2_ContextDisposing(object sender,
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -984,17 +1073,21 @@ protected void EntityDataSource2_ContextDisposing(object sender,
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.EnableFlattening" />
       <MemberSignature Language="VB.NET" Value="Public Property EnableFlattening As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool EnableFlattening { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.EnableFlattening : bool with get, set" Usage="System.Web.UI.WebControls.EntityDataSource.EnableFlattening" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1003,12 +1096,12 @@ protected void EntityDataSource2_ContextDisposing(object sender,
       <Docs>
         <summary>Gets or sets the value that indicates whether you want to turn off wrapper creation.</summary>
         <value>
-          <see langword="True" /> if the properties will be flattened; otherwise <see langword="false" />.</value>
+          <see langword="true" /> if the properties will be flattened; otherwise, <see langword="false" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- When you initialize the <xref:System.Web.UI.WebControls.EntityDataSource> control by using the <xref:System.Web.UI.WebControls.EntityDataSource.EntitySetName%2A> property, the <xref:System.Web.UI.WebControls.EntityDataSource> wraps each entity instance in the results in an object of the <xref:System.ComponentModel.ICustomTypeDescriptor> type. For more information, see [Flattening Objects (EntityDataSource)](http://msdn.microsoft.com/library/08a30ef3-1132-4ac4-856c-5ed3d65eaf16).  
+ When you initialize the <xref:System.Web.UI.WebControls.EntityDataSource> control by using the <xref:System.Web.UI.WebControls.EntityDataSource.EntitySetName%2A> property, the <xref:System.Web.UI.WebControls.EntityDataSource> wraps each entity instance in the results in an object of the <xref:System.ComponentModel.ICustomTypeDescriptor> type. For more information, see [Flattening Objects (EntityDataSource)](https://msdn.microsoft.com/library/08a30ef3-1132-4ac4-856c-5ed3d65eaf16).  
   
  ]]></format>
         </remarks>
@@ -1020,12 +1113,14 @@ protected void EntityDataSource2_ContextDisposing(object sender,
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.EnableInsert" />
       <MemberSignature Language="VB.NET" Value="Public Property EnableInsert As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool EnableInsert { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.EnableInsert : bool with get, set" Usage="System.Web.UI.WebControls.EntityDataSource.EnableInsert" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Web.DynamicData.IDynamicDataSource.EnableInsert</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1034,6 +1129,9 @@ protected void EntityDataSource2_ContextDisposing(object sender,
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1063,12 +1161,14 @@ protected void EntityDataSource2_ContextDisposing(object sender,
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.EnableUpdate" />
       <MemberSignature Language="VB.NET" Value="Public Property EnableUpdate As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool EnableUpdate { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.EnableUpdate : bool with get, set" Usage="System.Web.UI.WebControls.EntityDataSource.EnableUpdate" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Web.DynamicData.IDynamicDataSource.EnableUpdate</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1077,6 +1177,9 @@ protected void EntityDataSource2_ContextDisposing(object sender,
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1108,14 +1211,21 @@ protected void EntityDataSource2_ContextDisposing(object sender,
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.EntitySetName" />
       <MemberSignature Language="VB.NET" Value="Public Property EntitySetName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ EntitySetName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.EntitySetName : string with get, set" Usage="System.Web.UI.WebControls.EntityDataSource.EntitySetName" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Web.DynamicData.IDynamicDataSource.EntitySetName</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -1126,7 +1236,7 @@ protected void EntityDataSource2_ContextDisposing(object sender,
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The <xref:System.Web.UI.WebControls.EntityDataSource.EntitySetName%2A> property of the <xref:System.Web.UI.WebControls.EntityDataSource> control is used to specify the entity set of the type of the objects that are accessed by the control. The value of the <xref:System.Web.UI.WebControls.EntityDataSource.EntitySetName%2A> property is the default SELECT statement that is used by the control. The setting is not required if the query is specified as an Entity SQL expression that is supplied to the <xref:System.Web.UI.WebControls.EntityDataSource.CommandText%2A> property. For more information, see [Custom Command Text (EntityDataSource)](http://msdn.microsoft.com/library/d42e90d0-1443-474e-8940-53f504d6fc91).  
+ The <xref:System.Web.UI.WebControls.EntityDataSource.EntitySetName%2A> property of the <xref:System.Web.UI.WebControls.EntityDataSource> control is used to specify the entity set of the type of the objects that are accessed by the control. The value of the <xref:System.Web.UI.WebControls.EntityDataSource.EntitySetName%2A> property is the default SELECT statement that is used by the control. The setting is not required if the query is specified as an Entity SQL expression that is supplied to the <xref:System.Web.UI.WebControls.EntityDataSource.CommandText%2A> property. For more information, see [Custom Command Text (EntityDataSource)](https://msdn.microsoft.com/library/d42e90d0-1443-474e-8940-53f504d6fc91).  
   
  ]]></format>
         </remarks>
@@ -1138,11 +1248,18 @@ protected void EntityDataSource2_ContextDisposing(object sender,
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.EntityTypeFilter" />
       <MemberSignature Language="VB.NET" Value="Public Property EntityTypeFilter As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ EntityTypeFilter { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.EntityTypeFilter : string with get, set" Usage="System.Web.UI.WebControls.EntityDataSource.EntityTypeFilter" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -1165,11 +1282,21 @@ protected void EntityDataSource2_ContextDisposing(object sender,
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSource.GetView(System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetView (viewName As String) As DataSourceView" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Web::UI::DataSourceView ^ GetView(System::String ^ viewName);" />
+      <MemberSignature Language="F#" Value="override this.GetView : string -&gt; System.Web.UI.DataSourceView" Usage="entityDataSource.GetView viewName" />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Web.UI.IDataSource.GetView(System.String)</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Web.UI.DataSourceView</ReturnType>
       </ReturnValue>
@@ -1177,7 +1304,7 @@ protected void EntityDataSource2_ContextDisposing(object sender,
         <Parameter Name="viewName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="viewName">The name of the view to retrieve. Because the <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> control supports only one view, <c>viewName</c> is ignored.</param>
+        <param name="viewName">The name of the view to retrieve. Because the <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> control supports only one view, <paramref name="viewName" /> is ignored.</param>
         <summary>Gets the named data source view that is associated with the data source control.</summary>
         <returns>The <see cref="T:System.Web.UI.WebControls.EntityDataSourceView" /> that is associated with the <see cref="T:System.Web.UI.WebControls.EntityDataSource" /> control.</returns>
         <remarks>
@@ -1196,9 +1323,14 @@ protected void EntityDataSource2_ContextDisposing(object sender,
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSource.GetViewNames" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetViewNames () As ICollection" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Collections::ICollection ^ GetViewNames();" />
+      <MemberSignature Language="F#" Value="override this.GetViewNames : unit -&gt; System.Collections.ICollection" Usage="entityDataSource.GetViewNames " />
       <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Web.UI.IDataSource.GetViewNames</InterfaceMember>
+      </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1224,9 +1356,11 @@ protected void EntityDataSource2_ContextDisposing(object sender,
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.GroupBy" />
       <MemberSignature Language="VB.NET" Value="Public Property GroupBy As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ GroupBy { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.GroupBy : string with get, set" Usage="System.Web.UI.WebControls.EntityDataSource.GroupBy" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1235,6 +1369,9 @@ protected void EntityDataSource2_ContextDisposing(object sender,
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1252,9 +1389,11 @@ protected void EntityDataSource2_ContextDisposing(object sender,
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.Include" />
       <MemberSignature Language="VB.NET" Value="Public Property Include As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Include { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Include : string with get, set" Usage="System.Web.UI.WebControls.EntityDataSource.Include" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1263,6 +1402,9 @@ protected void EntityDataSource2_ContextDisposing(object sender,
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1277,9 +1419,9 @@ protected void EntityDataSource2_ContextDisposing(object sender,
 ## Remarks  
  The <xref:System.Web.UI.WebControls.EntityDataSource.Include%2A> property of the <xref:System.Web.UI.WebControls.EntityDataSource> control specifies a comma-separated list of query paths that define the objects thatare returned together with the specifically queried object. Each comma-separated value in the string is passed, without modification, as a separate call to the <xref:System.Data.Objects.ObjectQuery%601.Include%2A> method of an <xref:System.Data.Objects.ObjectQuery%601> that is executed by the [!INCLUDE[adonet_ef](~/includes/adonet-ef-md.md)]. This query is the source of the data regulated by the <xref:System.Web.UI.WebControls.EntityDataSource> control. The <xref:System.Web.UI.WebControls.EntityDataSource.Include%2A> property is the argument applied to the <xref:System.Data.Objects.ObjectQuery%601> before it is executed.  
   
- The string supplied to the <xref:System.Web.UI.WebControls.EntityDataSource.Include%2A> property uses the same format as the string that is passed to the <xref:System.Data.Objects.ObjectQuery%601.Include%2A> method of <xref:System.Data.Objects.ObjectQuery%601>. For examples of how to use query paths to automatically load related objects, see [How to: Use Query Paths to Shape Results](http://msdn.microsoft.com/library/100bf7f5-00ba-4c17-8e27-7a8a14831093).  
+ The string supplied to the <xref:System.Web.UI.WebControls.EntityDataSource.Include%2A> property uses the same format as the string that is passed to the <xref:System.Data.Objects.ObjectQuery%601.Include%2A> method of <xref:System.Data.Objects.ObjectQuery%601>. For examples of how to use query paths to automatically load related objects, see [How to: Use Query Paths to Shape Results](https://msdn.microsoft.com/library/100bf7f5-00ba-4c17-8e27-7a8a14831093).  
   
- When the <xref:System.Web.UI.WebControls.EntityDataSource.Include%2A> property is used to specify query paths, the properties of the related entities can only be used for read-only data-binding. If related objects are not explicitly included in the query path, the property descriptors are still available for data binding, but the properties themselves return null values. In this case, the related objects must be explicitly loaded to display their values. For more information, see [Loading Related Objects](http://msdn.microsoft.com/library/452347d2-7b3b-44cd-9001-231299a28cb1).  
+ When the <xref:System.Web.UI.WebControls.EntityDataSource.Include%2A> property is used to specify query paths, the properties of the related entities can only be used for read-only data-binding. If related objects are not explicitly included in the query path, the property descriptors are still available for data binding, but the properties themselves return null values. In this case, the related objects must be explicitly loaded to display their values. For more information, see [Loading Related Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896272(v=vs.100)).  
   
    
   
@@ -1321,9 +1463,11 @@ ObjectQuery<Contact> customers =
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSource.Inserted" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event Inserted As EventHandler(Of EntityDataSourceChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Web::UI::WebControls::EntityDataSourceChangedEventArgs ^&gt; ^ Inserted;" />
+      <MemberSignature Language="F#" Value="member this.Inserted : EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangedEventArgs&gt; " Usage="member this.Inserted : System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1356,9 +1500,11 @@ ObjectQuery<Contact> customers =
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSource.Inserting" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event Inserting As EventHandler(Of EntityDataSourceChangingEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Web::UI::WebControls::EntityDataSourceChangingEventArgs ^&gt; ^ Inserting;" />
+      <MemberSignature Language="F#" Value="member this.Inserting : EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangingEventArgs&gt; " Usage="member this.Inserting : System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangingEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1393,9 +1539,11 @@ ObjectQuery<Contact> customers =
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.InsertParameters" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InsertParameters As ParameterCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::ParameterCollection ^ InsertParameters { System::Web::UI::WebControls::ParameterCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.InsertParameters : System.Web.UI.WebControls.ParameterCollection" Usage="System.Web.UI.WebControls.EntityDataSource.InsertParameters" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1409,7 +1557,7 @@ ObjectQuery<Contact> customers =
           <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1434,9 +1582,11 @@ ObjectQuery<Contact> customers =
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSource.LoadControlState(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub LoadControlState (savedState As Object)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void LoadControlState(System::Object ^ savedState);" />
+      <MemberSignature Language="F#" Value="override this.LoadControlState : obj -&gt; unit" Usage="entityDataSource.LoadControlState savedState" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1457,9 +1607,11 @@ ObjectQuery<Contact> customers =
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSource.OnInit(System.EventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub OnInit (e As EventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void OnInit(EventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="override this.OnInit : EventArgs -&gt; unit" Usage="entityDataSource.OnInit e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1480,9 +1632,11 @@ ObjectQuery<Contact> customers =
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSource.OnUnload(System.EventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub OnUnload (e As EventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void OnUnload(EventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="override this.OnUnload : EventArgs -&gt; unit" Usage="entityDataSource.OnUnload e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1503,11 +1657,18 @@ ObjectQuery<Contact> customers =
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.OrderBy" />
       <MemberSignature Language="VB.NET" Value="Public Property OrderBy As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OrderBy { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.OrderBy : string with get, set" Usage="System.Web.UI.WebControls.EntityDataSource.OrderBy" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -1518,7 +1679,7 @@ ObjectQuery<Contact> customers =
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The <xref:System.Web.UI.WebControls.EntityDataSource.OrderBy%2A> property of the <xref:System.Web.UI.WebControls.EntityDataSource> control is a string that represents an  expression of an Entity SQL query. This string is passed, without modification, to an <xref:System.Data.Objects.ObjectQuery%601> that is executed by the [!INCLUDE[adonet_ef](~/includes/adonet-ef-md.md)]. This query is the source of the data regulated by the <xref:System.Web.UI.WebControls.EntityDataSource> control. The string supplied to the <xref:System.Web.UI.WebControls.EntityDataSource.OrderBy%2A> property uses the same format as the string that is passed to the <xref:System.Data.Objects.ObjectQuery%601.OrderBy%2A> method of <xref:System.Data.Objects.ObjectQuery%601>. For examples of how to use the  clause to order query results, see [How to: Sort Data](http://msdn.microsoft.com/library/c05f2506-cb9d-4ebc-822b-300042ad53e7).  
+ The <xref:System.Web.UI.WebControls.EntityDataSource.OrderBy%2A> property of the <xref:System.Web.UI.WebControls.EntityDataSource> control is a string that represents an  expression of an Entity SQL query. This string is passed, without modification, to an <xref:System.Data.Objects.ObjectQuery%601> that is executed by the [!INCLUDE[adonet_ef](~/includes/adonet-ef-md.md)]. This query is the source of the data regulated by the <xref:System.Web.UI.WebControls.EntityDataSource> control. The string supplied to the <xref:System.Web.UI.WebControls.EntityDataSource.OrderBy%2A> property uses the same format as the string that is passed to the <xref:System.Data.Objects.ObjectQuery%601.OrderBy%2A> method of <xref:System.Data.Objects.ObjectQuery%601>. For examples of how to use the  clause to order query results, see [How to: Sort Data](https://msdn.microsoft.com/library/c05f2506-cb9d-4ebc-822b-300042ad53e7).  
   
    
   
@@ -1561,9 +1722,11 @@ ObjectQuery<SalesOrderHeader> onlineOrders =
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.OrderByParameters" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OrderByParameters As ParameterCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::ParameterCollection ^ OrderByParameters { System::Web::UI::WebControls::ParameterCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.OrderByParameters : System.Web.UI.WebControls.ParameterCollection" Usage="System.Web.UI.WebControls.EntityDataSource.OrderByParameters" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1577,7 +1740,7 @@ ObjectQuery<SalesOrderHeader> onlineOrders =
           <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1621,6 +1784,7 @@ ObjectQuery<SalesOrderHeader> onlineOrders =
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSource.QueryCreated" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event QueryCreated As EventHandler(Of QueryCreatedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual event EventHandler&lt;System::Web::UI::WebControls::QueryCreatedEventArgs ^&gt; ^ QueryCreated;" />
+      <MemberSignature Language="F#" Value="member this.QueryCreated : EventHandler&lt;System.Web.UI.WebControls.QueryCreatedEventArgs&gt; " Usage="member this.QueryCreated : System.EventHandler&lt;System.Web.UI.WebControls.QueryCreatedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <Implements>
         <InterfaceMember>E:System.Web.UI.WebControls.IQueryableDataSource.QueryCreated</InterfaceMember>
@@ -1630,7 +1794,7 @@ ObjectQuery<SalesOrderHeader> onlineOrders =
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
         </Attribute>
       </Attributes>
@@ -1643,7 +1807,7 @@ ObjectQuery<SalesOrderHeader> onlineOrders =
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- For more information, see [Applying LINQ Queries to EntityDataSource](http://msdn.microsoft.com/library/cb70db56-9f9d-4b79-98fe-f03dd5ad1e38).  
+ For more information, see [Applying LINQ Queries to EntityDataSource](https://msdn.microsoft.com/library/cb70db56-9f9d-4b79-98fe-f03dd5ad1e38).  
   
  ]]></format>
         </remarks>
@@ -1655,9 +1819,11 @@ ObjectQuery<SalesOrderHeader> onlineOrders =
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSource.SaveControlState" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function SaveControlState () As Object" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Object ^ SaveControlState();" />
+      <MemberSignature Language="F#" Value="override this.SaveControlState : unit -&gt; obj" Usage="entityDataSource.SaveControlState " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -1676,11 +1842,18 @@ ObjectQuery<SalesOrderHeader> onlineOrders =
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.Select" />
       <MemberSignature Language="VB.NET" Value="Public Property Select As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Select { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Select : string with get, set" Usage="System.Web.UI.WebControls.EntityDataSource.Select" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -1693,7 +1866,7 @@ ObjectQuery<SalesOrderHeader> onlineOrders =
 ## Remarks  
  The <xref:System.Web.UI.WebControls.EntityDataSource.Select%2A> property of the <xref:System.Web.UI.WebControls.EntityDataSource> control contains a string that represents the  statement of an Entity SQL query. This enables you to project a specified set of properties from the objects returned by the query.  
   
- This string is passed, without modification, to the <xref:System.Data.Objects.ObjectQuery%601> that is executed by the [!INCLUDE[adonet_ef](~/includes/adonet-ef-md.md)]. This query is the source of the data regulated by the <xref:System.Web.UI.WebControls.EntityDataSource> control. The string supplied to the <xref:System.Web.UI.WebControls.EntityDataSource.Select%2A> property uses the same format as the string that is passed to the <xref:System.Data.Objects.ObjectQuery%601.Select%2A> method of <xref:System.Data.Objects.ObjectQuery%601>. For examples of how to use the  clause to define a projection for a query, see [How to: Execute a Query that Returns Anonymous Type Objects](http://msdn.microsoft.com/library/3b264025-e911-4d73-90ce-992d2b9d189d).  
+ This string is passed, without modification, to the <xref:System.Data.Objects.ObjectQuery%601> that is executed by the [!INCLUDE[adonet_ef](~/includes/adonet-ef-md.md)]. This query is the source of the data regulated by the <xref:System.Web.UI.WebControls.EntityDataSource> control. The string supplied to the <xref:System.Web.UI.WebControls.EntityDataSource.Select%2A> property uses the same format as the string that is passed to the <xref:System.Data.Objects.ObjectQuery%601.Select%2A> method of <xref:System.Data.Objects.ObjectQuery%601>. For examples of how to use the  clause to define a projection for a query, see [How to: Execute a Query that Returns Anonymous Type Objects](https://msdn.microsoft.com/library/3b264025-e911-4d73-90ce-992d2b9d189d).  
   
  Updates are not supported for projected data. This means that when you use the <xref:System.Web.UI.WebControls.EntityDataSource.Select%2A> property to specify a projection, the bound data binding does not support updates.  
   
@@ -1740,9 +1913,11 @@ ObjectQuery<Product> products = context.Product
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSource.Selected" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event Selected As EventHandler(Of EntityDataSourceSelectedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Web::UI::WebControls::EntityDataSourceSelectedEventArgs ^&gt; ^ Selected;" />
+      <MemberSignature Language="F#" Value="member this.Selected : EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceSelectedEventArgs&gt; " Usage="member this.Selected : System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceSelectedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1777,9 +1952,11 @@ ObjectQuery<Product> products = context.Product
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSource.Selecting" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event Selecting As EventHandler(Of EntityDataSourceSelectingEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Web::UI::WebControls::EntityDataSourceSelectingEventArgs ^&gt; ^ Selecting;" />
+      <MemberSignature Language="F#" Value="member this.Selecting : EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceSelectingEventArgs&gt; " Usage="member this.Selecting : System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceSelectingEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1814,9 +1991,11 @@ ObjectQuery<Product> products = context.Product
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.SelectParameters" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SelectParameters As ParameterCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::ParameterCollection ^ SelectParameters { System::Web::UI::WebControls::ParameterCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SelectParameters : System.Web.UI.WebControls.ParameterCollection" Usage="System.Web.UI.WebControls.EntityDataSource.SelectParameters" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1830,7 +2009,7 @@ ObjectQuery<Product> products = context.Product
           <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1857,9 +2036,11 @@ ObjectQuery<Product> products = context.Product
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.StoreOriginalValuesInViewState" />
       <MemberSignature Language="VB.NET" Value="Public Property StoreOriginalValuesInViewState As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool StoreOriginalValuesInViewState { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.StoreOriginalValuesInViewState : bool with get, set" Usage="System.Web.UI.WebControls.EntityDataSource.StoreOriginalValuesInViewState" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1868,6 +2049,9 @@ ObjectQuery<Product> products = context.Product
         </Attribute>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1881,7 +2065,7 @@ ObjectQuery<Product> products = context.Product
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- To track changes when update and delete operations are enabled, the <xref:System.Web.UI.WebControls.EntityDataSource> control must store information about original values of loaded objects in the <xref:System.Web.UI.PageStatePersister.ControlState%2A>. Storing this required information in the view state will increase the page size. You can disable storing original values in the view state by setting the <xref:System.Web.UI.WebControls.EntityDataSource.StoreOriginalValuesInViewState%2A> property to `false`. If you do this, the [!INCLUDE[adonet_ef](~/includes/adonet-ef-md.md)] cannot track concurrency in updated objects. For more information, see [Updating Data (EntityDataSource)](http://msdn.microsoft.com/library/ca153eec-6817-4c1d-b262-efd6d35b0246).  
+ To track changes when update and delete operations are enabled, the <xref:System.Web.UI.WebControls.EntityDataSource> control must store information about original values of loaded objects in the <xref:System.Web.UI.PageStatePersister.ControlState%2A>. Storing this required information in the view state will increase the page size. You can disable storing original values in the view state by setting the <xref:System.Web.UI.WebControls.EntityDataSource.StoreOriginalValuesInViewState%2A> property to `false`. If you do this, the [!INCLUDE[adonet_ef](~/includes/adonet-ef-md.md)] cannot track concurrency in updated objects. For more information, see [Updating Data (EntityDataSource)](https://msdn.microsoft.com/library/ca153eec-6817-4c1d-b262-efd6d35b0246).  
   
  ]]></format>
         </remarks>
@@ -1898,14 +2082,30 @@ ObjectQuery<Product> products = context.Product
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.EventHandler&lt;System.Web.DynamicData.DynamicValidatorEventArgs&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Occurs when validation fails in a partial methods or when an exception is raised.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ The <xref:System.Web.UI.WebControls.EntityDataSource.System%23Web%23DynamicData%23IDynamicDataSource%23Exception> event is implemented to provide for compatibility with ASP.NET Dynamic Data. This event, defined by the <xref:System.Web.DynamicData.IDynamicDataSource> interface, is explicitly implemented by the <xref:System.Web.UI.WebControls.EntityDataSource>. A handler for this event cannot be registered in markup. It can be used only when the <xref:System.Web.UI.WebControls.EntityDataSource> instance is cast to an <xref:System.Web.DynamicData.IDynamicDataSource> interface.  
+  
+ The <xref:System.Web.UI.WebControls.EntityDataSource.System%23Web%23DynamicData%23IDynamicDataSource%23Exception> event provides an <xref:System.Web.DynamicData.DynamicValidatorEventArgs> object that returns the <xref:System.Exception>. The <xref:System.Web.UI.WebControls.EntityDataSource.System%23Web%23DynamicData%23IDynamicDataSource%23Exception> event may be raised in the following cases:  
+  
+-   When an object is created. This enables the partial methods on the object to raise exceptions during validation of property settings.  
+  
+-   When an exception occurs during the execution of the query.  
+  
+-   When an exception occurs during the execution of any INSERT, UPDATE, or DELETE operation.  
+  
+ ]]></format>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="System.Web.UI.WebControls.IQueryableDataSource.RaiseViewChanged">
@@ -1937,6 +2137,7 @@ ObjectQuery<Product> products = context.Product
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EntityDataSource.TrackViewState" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub TrackViewState ()" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void TrackViewState();" />
+      <MemberSignature Language="F#" Value="override this.TrackViewState : unit -&gt; unit" Usage="entityDataSource.TrackViewState " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
@@ -1964,9 +2165,11 @@ ObjectQuery<Product> products = context.Product
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSource.Updated" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event Updated As EventHandler(Of EntityDataSourceChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Web::UI::WebControls::EntityDataSourceChangedEventArgs ^&gt; ^ Updated;" />
+      <MemberSignature Language="F#" Value="member this.Updated : EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangedEventArgs&gt; " Usage="member this.Updated : System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -1999,9 +2202,11 @@ ObjectQuery<Product> products = context.Product
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.UpdateParameters" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UpdateParameters As ParameterCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::ParameterCollection ^ UpdateParameters { System::Web::UI::WebControls::ParameterCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.UpdateParameters : System.Web.UI.WebControls.ParameterCollection" Usage="System.Web.UI.WebControls.EntityDataSource.UpdateParameters" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2015,7 +2220,7 @@ ObjectQuery<Product> products = context.Product
           <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -2040,9 +2245,11 @@ ObjectQuery<Product> products = context.Product
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.EntityDataSource.Updating" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event Updating As EventHandler(Of EntityDataSourceChangingEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::Web::UI::WebControls::EntityDataSourceChangingEventArgs ^&gt; ^ Updating;" />
+      <MemberSignature Language="F#" Value="member this.Updating : EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangingEventArgs&gt; " Usage="member this.Updating : System.EventHandler&lt;System.Web.UI.WebControls.EntityDataSourceChangingEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2061,7 +2268,7 @@ ObjectQuery<Product> products = context.Product
 ## Remarks  
  The <xref:System.Web.UI.WebControls.EntityDataSource.Updating> event is raised before changes to the properties of an object are persisted to the data source. The <xref:System.Web.UI.WebControls.EntityDataSource.Updating> event enables you to modify or verify changes to the object, supply a different object, or cancel the operation before the changes are persisted. You can access the modified object from the <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs.Entity%2A> property of the <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs> object. If supplying a different object, the user is responsible for setting the correct entity type in the <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs.Entity%2A> property.  
   
- Handle the <xref:System.Web.UI.WebControls.EntityDataSource.Updating> event if you must modify the <xref:System.Data.Objects.ObjectStateEntry> for the object to set different original values for concurrency control. For more information, see [Saving Changes and Managing Concurrency](http://msdn.microsoft.com/library/b8378601-4f26-4a05-a24a-f50aeb68610e).  
+ Handle the <xref:System.Web.UI.WebControls.EntityDataSource.Updating> event if you must modify the <xref:System.Data.Objects.ObjectStateEntry> for the object to set different original values for concurrency control. For more information, see [Saving Changes and Managing Concurrency](https://msdn.microsoft.com/library/b8378601-4f26-4a05-a24a-f50aeb68610e).  
   
  To stop the changes from being persisted, set the <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> property of the <xref:System.Web.UI.WebControls.EntityDataSourceChangingEventArgs> object to `true`.  
   
@@ -2079,14 +2286,21 @@ ObjectQuery<Product> products = context.Product
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.Where" />
       <MemberSignature Language="VB.NET" Value="Public Property Where As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Where { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Where : string with get, set" Usage="System.Web.UI.WebControls.EntityDataSource.Where" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Web.DynamicData.IDynamicDataSource.Where</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>get: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
@@ -2097,7 +2311,7 @@ ObjectQuery<Product> products = context.Product
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The <xref:System.Web.UI.WebControls.EntityDataSource.Where%2A> property of the <xref:System.Web.UI.WebControls.EntityDataSource> control is a string that represents a  clause that is the predicate of an Entity SQL query. This string is passed, without modification, to an <xref:System.Data.Objects.ObjectQuery%601> that is executed by the [!INCLUDE[adonet_ef](~/includes/adonet-ef-md.md)]. This query is the source of the data regulated by the <xref:System.Web.UI.WebControls.EntityDataSource> control. The string supplied to the <xref:System.Web.UI.WebControls.EntityDataSource.Where%2A> property uses the same format as the string that is passed to the <xref:System.Data.Objects.ObjectQuery%601.Where%2A> method of <xref:System.Data.Objects.ObjectQuery%601>. For examples of how to use the  clause to filter a query, see [How to: Filter Data](http://msdn.microsoft.com/library/776f8556-3350-4572-804a-b1513515c1b2).  
+ The <xref:System.Web.UI.WebControls.EntityDataSource.Where%2A> property of the <xref:System.Web.UI.WebControls.EntityDataSource> control is a string that represents a  clause that is the predicate of an Entity SQL query. This string is passed, without modification, to an <xref:System.Data.Objects.ObjectQuery%601> that is executed by the [!INCLUDE[adonet_ef](~/includes/adonet-ef-md.md)]. This query is the source of the data regulated by the <xref:System.Web.UI.WebControls.EntityDataSource> control. The string supplied to the <xref:System.Web.UI.WebControls.EntityDataSource.Where%2A> property uses the same format as the string that is passed to the <xref:System.Data.Objects.ObjectQuery%601.Where%2A> method of <xref:System.Data.Objects.ObjectQuery%601>. For examples of how to use the  clause to filter a query, see [How to: Filter Data](https://msdn.microsoft.com/library/776f8556-3350-4572-804a-b1513515c1b2).  
   
  To filter query results by equating an entity type property to an expression, see information about the <xref:System.Web.UI.WebControls.EntityDataSource.AutoGenerateWhereClause%2A> property.  
   
@@ -2141,12 +2355,14 @@ ObjectQuery<SalesOrderHeader> onlineOrders =
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EntityDataSource.WhereParameters" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property WhereParameters As ParameterCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::ParameterCollection ^ WhereParameters { System::Web::UI::WebControls::ParameterCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.WhereParameters : System.Web.UI.WebControls.ParameterCollection" Usage="System.Web.UI.WebControls.EntityDataSource.WhereParameters" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Web.DynamicData.IDynamicDataSource.WhereParameters</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web.Entity</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -2160,7 +2376,7 @@ ObjectQuery<SalesOrderHeader> onlineOrders =
           <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Web.UI.PersistenceMode</AttributeName>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

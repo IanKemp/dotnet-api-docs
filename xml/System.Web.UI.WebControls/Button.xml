@@ -4,8 +4,11 @@
   <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Button" />
   <TypeSignature Language="VB.NET" Value="Public Class Button&#xA;Inherits WebControl&#xA;Implements IButtonControl, IPostBackEventHandler" />
   <TypeSignature Language="C++ CLI" Value="public ref class Button : System::Web::UI::WebControls::WebControl, System::Web::UI::IPostBackEventHandler, System::Web::UI::WebControls::IButtonControl" />
+  <TypeSignature Language="F#" Value="type Button = class&#xA;    inherit WebControl&#xA;    interface IButtonControl&#xA;    interface IPostBackEventHandler" />
   <AssemblyInfo>
     <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -26,17 +29,32 @@
     <Attribute>
       <AttributeName>System.ComponentModel.DefaultProperty("Text")</AttributeName>
     </Attribute>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
       <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.ButtonDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
     </Attribute>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
       <AttributeName>System.Web.UI.DataBindingHandler("System.Web.UI.Design.TextDataBindingHandler, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
     </Attribute>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
       <AttributeName>System.Web.UI.SupportsEventValidation</AttributeName>
     </Attribute>
-    <Attribute>
+    <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
       <AttributeName>System.Web.UI.ToolboxData("&lt;{0}:Button runat="server" Text="Button"&gt;&lt;/{0}:Button&gt;")</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netframework-1.1">
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.ButtonDesigner, System.Design, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netframework-1.1">
+      <AttributeName>System.Web.UI.DataBindingHandler("System.Web.UI.Design.TextDataBindingHandler, System.Design, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netframework-1.1">
+      <AttributeName>System.Web.UI.ToolboxData("&lt;{0}:Button runat=server Text="Button"&gt;&lt;/{0}:Button&gt;")</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.ButtonDesigner, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">
+      <AttributeName>System.Web.UI.DataBindingHandler("System.Web.UI.Design.TextDataBindingHandler, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -68,7 +86,7 @@
  Use the <xref:System.Web.UI.WebControls.Button> control to create a push button on the Web page that lets users to post a page to the server. The control triggers an event in server code that you can handle to respond to the postback. It can also raise an event in client script that you can handle before the page is posted or that can run and then cancel submission of the page.  
   
 > [!NOTE]
->  ASP.NET includes several kinds of button controls, each of which appears differently on Web pages. They are the <xref:System.Web.UI.WebControls.Button> control, which renders as a push button; the <xref:System.Web.UI.WebControls.LinkButton> control, which renders as a link; and the <xref:System.Web.UI.WebControls.ImageButton> control, which renders as an image; and the <xref:System.Web.UI.WebControls.ImageMap> control, which lets you create a graphic that has hotspots that users can click. By default, all button controls submit the page when clicked. You can also use the <xref:System.Web.UI.HtmlControls.HtmlButton> and <xref:System.Web.UI.HtmlControls.HtmlInputButton> controls to create buttons on the page that are programmable in server code. For details about the differences between HTML and Web server controls, see [ASP.NET Web Server Controls Overview](http://msdn.microsoft.com/library/0d4854a3-6e79-4b7b-a27f-ac57cd9c2a84).  
+>  ASP.NET includes several kinds of button controls, each of which appears differently on Web pages. They are the <xref:System.Web.UI.WebControls.Button> control, which renders as a push button; the <xref:System.Web.UI.WebControls.LinkButton> control, which renders as a link; and the <xref:System.Web.UI.WebControls.ImageButton> control, which renders as an image; and the <xref:System.Web.UI.WebControls.ImageMap> control, which lets you create a graphic that has hotspots that users can click. By default, all button controls submit the page when clicked. You can also use the <xref:System.Web.UI.HtmlControls.HtmlButton> and <xref:System.Web.UI.HtmlControls.HtmlInputButton> controls to create buttons on the page that are programmable in server code. For details about the differences between HTML and Web server controls, see [ASP.NET Web Server Controls Overview](https://msdn.microsoft.com/library/0d4854a3-6e79-4b7b-a27f-ac57cd9c2a84).  
   
  By default, a <xref:System.Web.UI.WebControls.Button> control is a Submit button. A Submit button does not have a command name (specified by the <xref:System.Web.UI.WebControls.Button.CommandName%2A> property) associated with the button and simply posts the Web page back to the server. You can provide an event handler for the <xref:System.Web.UI.WebControls.Button.Click> event to programmatically control the actions performed when the Submit button is clicked.  
   
@@ -78,15 +96,15 @@
 ## Button Postback Behavior and Server Events  
  When a user clicks any Web server control button, the page is sent to the server. This causes the Web page to be processed and any pending events to be raised in server-based code. When all page and control processing has finished, the page renders itself to the browser again.  
   
- The buttons can raise their own <xref:System.Web.UI.WebControls.Button.Click> events or <xref:System.Web.UI.WebControls.Button.Command> event, which you can handle by using server-based code. This is different than events in traditional HTML pages or in client-based Web applications, where a button's `onclick` event is handled by using JavaScript that runs in the client. For more information, see [ASP.NET Web Forms Server Control Event Model](http://msdn.microsoft.com/library/6304bff7-1b0e-4641-8acb-6d3b0badc4a3).  
+ The buttons can raise their own <xref:System.Web.UI.WebControls.Button.Click> events or <xref:System.Web.UI.WebControls.Button.Command> event, which you can handle by using server-based code. This is different than events in traditional HTML pages or in client-based Web applications, where a button's `onclick` event is handled by using JavaScript that runs in the client. For more information, see [ASP.NET Web Forms Server Control Event Model](https://msdn.microsoft.com/library/6304bff7-1b0e-4641-8acb-6d3b0badc4a3).  
   
  When users click a button control, the page is posted back to the server. By default, the page is posted back to itself,  
   
- You can configure buttons to post the current page to another page. This can be useful for creating multi-page forms. For details, see [Cross-Page Posting in ASP.NET Web Forms](http://msdn.microsoft.com/library/fedf234e-b7c4-4644-a9e8-c1c0870b043b).  
+ You can configure buttons to post the current page to another page. This can be useful for creating multi-page forms. For details, see [Cross-Page Posting in ASP.NET Web Forms](https://msdn.microsoft.com/library/fedf234e-b7c4-4644-a9e8-c1c0870b043b).  
   
 <a name="HandlingButtonEventsinClientScript"></a>   
 ## Handling Button Events in Client Script  
- Button controls can raise both server events and client events. Server events occur after postback, and they are handled in the server-side code that you write for the page. Client events are handled in client script, typically ECMAScript (JavaScript), and are raised before the page is submitted. By adding client-side events to ASP.NET button controls, you can perform tasks such as displaying confirmation dialog boxes before submitting the page, and potentially cancel the submission. For details, see [Client Script in ASP.NET Web Pages](http://msdn.microsoft.com/library/13edb6b9-2dea-43c6-b8c1-a47207de19aa) and [How to: Respond to Button Web Server Control Events in Client Script](http://msdn.microsoft.com/library/1ab97f0b-1c38-4897-85b0-ac915f6a182b).  
+ Button controls can raise both server events and client events. Server events occur after postback, and they are handled in the server-side code that you write for the page. Client events are handled in client script, typically ECMAScript (JavaScript), and are raised before the page is submitted. By adding client-side events to ASP.NET button controls, you can perform tasks such as displaying confirmation dialog boxes before submitting the page, and potentially cancel the submission. For details, see [Client Script in ASP.NET Web Pages](https://msdn.microsoft.com/library/13edb6b9-2dea-43c6-b8c1-a47207de19aa) and [How to: Respond to Button Web Server Control Events in Client Script](https://msdn.microsoft.com/library/1ab97f0b-1c38-4897-85b0-ac915f6a182b).  
   
  You might also want the <xref:System.Web.UI.WebControls.Button> control to also use client script to perform the postback (instead of simply performing an HTTP POST operation). This can be useful if you want to programmatically manipulate the postback, such as attaching it to other elements on the page. You can set the <xref:System.Web.UI.WebControls.Button> control's <xref:System.Web.UI.WebControls.Button.UseSubmitBehavior%2A> property to `true` to cause the <xref:System.Web.UI.WebControls.Button> control to use client-script based postback.  
   
@@ -101,7 +119,7 @@
 |<xref:System.Web.UI.WebControls.Button.CausesValidation%2A>|Specifies whether clicking the button also performs a validation check. Set this property to `false` to prevent a validation check.|  
 |<xref:System.Web.UI.WebControls.Button.ValidationGroup%2A>|Enables you to specify which validators on the page are called when the button is clicked. If no validation groups are established, a button click calls all of the validators that are on the page.|  
   
- For more information, see [Validating User Input in ASP.NET Web Pages](http://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461).  
+ For more information, see [Validating User Input in ASP.NET Web Pages](https://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461).  
   
 <a name="ButtonsInDataControls"></a>   
 ## Buttons in Data Controls  
@@ -123,7 +141,7 @@
   
 -   Defining a <xref:System.Web.UI.WebControls.Button> control that is inside an <xref:System.Web.UI.UpdatePanel> control as a <xref:System.Web.UI.PostBackTrigger> for the panel. When the button is clicked, it performs a postback even though it is inside an <xref:System.Web.UI.UpdatePanel> control.  
   
- For more information about partial-page rendering and using <xref:System.Web.UI.UpdatePanel> controls, see [UpdatePanel Control Overview](http://msdn.microsoft.com/library/29a2265d-9674-4c19-b70e-e5560ee9689a) and [Partial-Page Rendering Overview](http://msdn.microsoft.com/library/5c12736d-d9e9-464a-9388-3fe0f9f49e49).  
+ For more information about partial-page rendering and using <xref:System.Web.UI.UpdatePanel> controls, see [UpdatePanel Control Overview](https://msdn.microsoft.com/library/29a2265d-9674-4c19-b70e-e5560ee9689a) and [Partial-Page Rendering Overview](https://msdn.microsoft.com/library/5c12736d-d9e9-464a-9388-3fe0f9f49e49).  
   
 <a name="DeclarativeSyntax"></a>   
 ## Declarative Syntax  
@@ -196,6 +214,7 @@
     <altmember cref="P:System.Web.UI.WebControls.Button.CommandArgument" />
     <altmember cref="E:System.Web.UI.WebControls.Button.Click" />
     <altmember cref="E:System.Web.UI.WebControls.Button.Command" />
+    <related type="Article" href="https://msdn.microsoft.com/library/66b3ce28-3b93-4f0a-951f-42fb5bb5fddf">Button Web Server Controls</related>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -207,6 +226,8 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
@@ -228,6 +249,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/66b3ce28-3b93-4f0a-951f-42fb5bb5fddf">Button Web Server Controls</related>
       </Docs>
     </Member>
     <Member MemberName="AddAttributesToRender">
@@ -236,9 +258,12 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Button.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub AddAttributesToRender (writer As HtmlTextWriter)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void AddAttributesToRender(System::Web::UI::HtmlTextWriter ^ writer);" />
+      <MemberSignature Language="F#" Value="override this.AddAttributesToRender : System.Web.UI.HtmlTextWriter -&gt; unit" Usage="button.AddAttributesToRender writer" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -263,6 +288,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/66b3ce28-3b93-4f0a-951f-42fb5bb5fddf">Button Web Server Controls</related>
       </Docs>
     </Member>
     <Member MemberName="CausesValidation">
@@ -271,20 +297,26 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Button.CausesValidation" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property CausesValidation As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool CausesValidation { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.CausesValidation : bool with get, set" Usage="System.Web.UI.WebControls.Button.CausesValidation" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Web.UI.WebControls.IButtonControl.CausesValidation</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-1.1">
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -309,7 +341,7 @@
   
  When the value of the <xref:System.Web.UI.WebControls.Button.CausesValidation%2A> property is set to `true`, you can also use the <xref:System.Web.UI.WebControls.Button.ValidationGroup%2A> property to specify the name of the validation group for which the <xref:System.Web.UI.WebControls.Button> control causes validation.  
   
- This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+ This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](https://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
   
    
   
@@ -317,7 +349,7 @@
  The following code example demonstrates how to use the <xref:System.Web.UI.WebControls.Button.CausesValidation%2A> property to prevent page validation from occurring. Note that the <xref:System.Web.UI.WebControls.BaseValidator.Validate%2A> method activates each validation control independently.  
   
 > [!IMPORTANT]
->  This example has a text box that accepts user input, which is a potential security threat. By default, ASP.NET Web pages validate that user input does not include script or HTML elements. For more information, see [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+>  This example has a text box that accepts user input, which is a potential security threat. By default, ASP.NET Web pages validate that user input does not include script or HTML elements. For more information, see [Script Exploits Overview](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
   
  [!code-aspx-csharp[ButtonControlCausesValidation#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ButtonControlCausesValidation/CS/buttoncausesvalidationcs.aspx#1)]
  [!code-aspx-vb[ButtonControlCausesValidation#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ButtonControlCausesValidation/VB/buttoncausesvalidationvb.aspx#1)]  
@@ -326,6 +358,7 @@
         </remarks>
         <altmember cref="M:System.Web.UI.Page.Validate" />
         <altmember cref="P:System.Web.UI.WebControls.Button.ValidationGroup" />
+        <related type="Article" href="https://msdn.microsoft.com/library/66b3ce28-3b93-4f0a-951f-42fb5bb5fddf">Button Web Server Controls</related>
       </Docs>
     </Member>
     <Member MemberName="Click">
@@ -334,12 +367,15 @@
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Button.Click" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event Click As EventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual event EventHandler ^ Click;" />
+      <MemberSignature Language="F#" Value="member this.Click : EventHandler " Usage="member this.Click : System.EventHandler " />
       <MemberType>Event</MemberType>
       <Implements>
         <InterfaceMember>E:System.Web.UI.WebControls.IButtonControl.Click</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -367,6 +403,7 @@
         </remarks>
         <altmember cref="M:System.Web.UI.WebControls.Button.OnClick(System.EventArgs)" />
         <altmember cref="T:System.Web.UI.WebControls.CommandEventHandler" />
+        <related type="Article" href="https://msdn.microsoft.com/library/66b3ce28-3b93-4f0a-951f-42fb5bb5fddf">Button Web Server Controls</related>
       </Docs>
     </Member>
     <Member MemberName="Command">
@@ -375,12 +412,15 @@
       <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.Button.Command" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event Command As CommandEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual event System::Web::UI::WebControls::CommandEventHandler ^ Command;" />
+      <MemberSignature Language="F#" Value="member this.Command : System.Web.UI.WebControls.CommandEventHandler " Usage="member this.Command : System.Web.UI.WebControls.CommandEventHandler " />
       <MemberType>Event</MemberType>
       <Implements>
         <InterfaceMember>E:System.Web.UI.WebControls.IButtonControl.Command</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -397,7 +437,7 @@
 > [!NOTE]
 >  The <xref:System.Web.UI.WebControls.Button.Command> event is raised through the control hierarchy in the form of the `BubbleEvent`.  
   
- For more information about handling events, see [NIB: Consuming Events](http://msdn.microsoft.com/library/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+ For more information about how to handle events, see [Handling and Raising Events](~/docs/standard/events/index.md).  
   
    
   
@@ -416,6 +456,7 @@
         </remarks>
         <altmember cref="M:System.Web.UI.WebControls.Button.OnCommand(System.Web.UI.WebControls.CommandEventArgs)" />
         <altmember cref="T:System.Web.UI.WebControls.CommandEventHandler" />
+        <related type="Article" href="https://msdn.microsoft.com/library/66b3ce28-3b93-4f0a-951f-42fb5bb5fddf">Button Web Server Controls</related>
       </Docs>
     </Member>
     <Member MemberName="CommandArgument">
@@ -424,12 +465,15 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Button.CommandArgument" />
       <MemberSignature Language="VB.NET" Value="Public Property CommandArgument As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ CommandArgument { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.CommandArgument : string with get, set" Usage="System.Web.UI.WebControls.Button.CommandArgument" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Web.UI.WebControls.IButtonControl.CommandArgument</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -439,7 +483,7 @@
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
         </Attribute>
       </Attributes>
@@ -460,7 +504,7 @@
   
  The <xref:System.Web.UI.WebControls.Button.CommandArgument%2A> property complements the <xref:System.Web.UI.WebControls.Button.CommandName%2A> property by allowing you to provide additional information about the command to perform. For example, if you set the <xref:System.Web.UI.WebControls.Button.CommandName%2A> property to `Sort` and the <xref:System.Web.UI.WebControls.Button.CommandArgument%2A> property to `Ascending`, you specify a command to sort in ascending order.  
   
- This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+ This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](https://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
   
    
   
@@ -475,6 +519,7 @@
         <altmember cref="E:System.Web.UI.WebControls.Button.Command" />
         <altmember cref="M:System.Web.UI.WebControls.Button.OnCommand(System.Web.UI.WebControls.CommandEventArgs)" />
         <altmember cref="P:System.Web.UI.WebControls.Button.CommandName" />
+        <related type="Article" href="https://msdn.microsoft.com/library/66b3ce28-3b93-4f0a-951f-42fb5bb5fddf">Button Web Server Controls</related>
       </Docs>
     </Member>
     <Member MemberName="CommandName">
@@ -483,19 +528,22 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Button.CommandName" />
       <MemberSignature Language="VB.NET" Value="Public Property CommandName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ CommandName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.CommandName : string with get, set" Usage="System.Web.UI.WebControls.Button.CommandName" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Web.UI.WebControls.IButtonControl.CommandName</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
         </Attribute>
       </Attributes>
@@ -513,7 +561,7 @@
   
  Additional information about the command, such as `Ascending`, may be specified by using the <xref:System.Web.UI.WebControls.Button.CommandArgument%2A> property.  
   
- This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+ This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](https://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
   
    
   
@@ -528,6 +576,7 @@
         <altmember cref="E:System.Web.UI.WebControls.Button.Command" />
         <altmember cref="M:System.Web.UI.WebControls.Button.OnCommand(System.Web.UI.WebControls.CommandEventArgs)" />
         <altmember cref="P:System.Web.UI.WebControls.Button.CommandArgument" />
+        <related type="Article" href="https://msdn.microsoft.com/library/66b3ce28-3b93-4f0a-951f-42fb5bb5fddf">Button Web Server Controls</related>
       </Docs>
     </Member>
     <Member MemberName="GetPostBackOptions">
@@ -536,9 +585,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Button.GetPostBackOptions" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function GetPostBackOptions () As PostBackOptions" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual System::Web::UI::PostBackOptions ^ GetPostBackOptions();" />
+      <MemberSignature Language="F#" Value="abstract member GetPostBackOptions : unit -&gt; System.Web.UI.PostBackOptions&#xA;override this.GetPostBackOptions : unit -&gt; System.Web.UI.PostBackOptions" Usage="button.GetPostBackOptions " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -562,6 +613,8 @@
           <para>You can override the <see cref="M:System.Web.UI.WebControls.Button.GetPostBackOptions" /> method in your derived class to modify the postback options for the button control, or to call client-side script when the button is clicked. Be sure to call the base class's <see cref="M:System.Web.UI.WebControls.Button.GetPostBackOptions" /> method so that the standard postback options are set.</para>
         </block>
         <altmember cref="T:System.Web.UI.PostBackOptions" />
+        <related type="Article" href="https://msdn.microsoft.com/library/66b3ce28-3b93-4f0a-951f-42fb5bb5fddf">Button Web Server Controls</related>
+        <related type="Article" href="https://msdn.microsoft.com/library/13edb6b9-2dea-43c6-b8c1-a47207de19aa">Client Script in ASP.NET Web Pages</related>
       </Docs>
     </Member>
     <Member MemberName="OnClick">
@@ -570,9 +623,12 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Button.OnClick(System.EventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnClick (e As EventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnClick(EventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member OnClick : EventArgs -&gt; unit&#xA;override this.OnClick : EventArgs -&gt; unit" Usage="button.OnClick e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -609,6 +665,7 @@
         </block>
         <altmember cref="E:System.Web.UI.WebControls.Button.Click" />
         <altmember cref="T:System.EventArgs" />
+        <related type="Article" href="https://msdn.microsoft.com/library/66b3ce28-3b93-4f0a-951f-42fb5bb5fddf">Button Web Server Controls</related>
       </Docs>
     </Member>
     <Member MemberName="OnClientClick">
@@ -617,16 +674,18 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Button.OnClientClick" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property OnClientClick As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ OnClientClick { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.OnClientClick : string with get, set" Usage="System.Web.UI.WebControls.Button.OnClientClick" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
         </Attribute>
       </Attributes>
@@ -642,12 +701,12 @@
 ## Remarks  
  Use the <xref:System.Web.UI.WebControls.Button.OnClientClick%2A> property to specify additional client-side script that executes when a <xref:System.Web.UI.WebControls.Button> control's <xref:System.Web.UI.WebControls.Button.Click> event is raised. The script that you specify for this property is rendered in the <xref:System.Web.UI.WebControls.Button> control's `OnClick` attribute in addition to the control's predefined client-side script.  
   
- This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+ This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](https://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
   
    
   
 ## Examples  
- A Visual Studio Web site project with source code is available to accompany this topic: [Download](http://go.microsoft.com/fwlink/?LinkId=192871).  
+ A Visual Studio Web site project with source code is available to accompany this topic: [Download](https://go.microsoft.com/fwlink/?LinkId=192871).  
   
  The following code example demonstrates how to use the <xref:System.Web.UI.WebControls.Button.OnClientClick%2A> property to specify additional client-side script that executes when a <xref:System.Web.UI.WebControls.Button> control is clicked.  
   
@@ -657,6 +716,7 @@
  ]]></format>
         </remarks>
         <altmember cref="E:System.Web.UI.WebControls.Button.Click" />
+        <related type="Article" href="https://msdn.microsoft.com/library/66b3ce28-3b93-4f0a-951f-42fb5bb5fddf">Button Web Server Controls</related>
       </Docs>
     </Member>
     <Member MemberName="OnCommand">
@@ -665,9 +725,12 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Button.OnCommand(System.Web.UI.WebControls.CommandEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnCommand (e As CommandEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnCommand(System::Web::UI::WebControls::CommandEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member OnCommand : System.Web.UI.WebControls.CommandEventArgs -&gt; unit&#xA;override this.OnCommand : System.Web.UI.WebControls.CommandEventArgs -&gt; unit" Usage="button.OnCommand e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -712,6 +775,7 @@
         </block>
         <altmember cref="E:System.Web.UI.WebControls.Button.Command" />
         <altmember cref="T:System.Web.UI.WebControls.CommandEventArgs" />
+        <related type="Article" href="https://msdn.microsoft.com/library/66b3ce28-3b93-4f0a-951f-42fb5bb5fddf">Button Web Server Controls</related>
       </Docs>
     </Member>
     <Member MemberName="OnPreRender">
@@ -720,9 +784,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Button.OnPreRender(System.EventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub OnPreRender (e As EventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void OnPreRender(EventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="override this.OnPreRender : EventArgs -&gt; unit" Usage="button.OnPreRender e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -742,6 +808,7 @@
   
  ]]></format>
         </remarks>
+        <related type="Article" href="https://msdn.microsoft.com/library/66b3ce28-3b93-4f0a-951f-42fb5bb5fddf">Button Web Server Controls</related>
       </Docs>
     </Member>
     <Member MemberName="PostBackUrl">
@@ -750,26 +817,31 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Button.PostBackUrl" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property PostBackUrl As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ PostBackUrl { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.PostBackUrl : string with get, set" Usage="System.Web.UI.WebControls.Button.PostBackUrl" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Web.UI.WebControls.IButtonControl.PostBackUrl</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.UrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Web.UI.UrlProperty("*.aspx")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.UrlEditor, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -785,7 +857,7 @@
  The <xref:System.Web.UI.WebControls.Button.PostBackUrl%2A> property allows you to perform a cross-page post using the <xref:System.Web.UI.WebControls.Button> control.  
   
 > [!NOTE]
->  Only correctly specified paths work with this property. For example, relative paths (Test/default.aspx), absolute paths (https://localhost/WebApp/default.aspx) and virtual (~\Test\default.aspx) work correctly. Incorrectly formed paths such as "/Test/default.aspx" or "\Test\default.aspx" do not work. See [ASP.NET Web Project Paths](http://msdn.microsoft.com/library/2447f50c-b849-483c-8093-85ed53e7a5bd) for a discussion on creating correct paths.  
+>  Only correctly specified paths work with this property. For example, relative paths (Test/default.aspx), absolute paths (https://localhost/WebApp/default.aspx) and virtual (~\Test\default.aspx) work correctly. Incorrectly formed paths such as "/Test/default.aspx" or "\Test\default.aspx" do not work. See [ASP.NET Web Project Paths](https://msdn.microsoft.com/library/2447f50c-b849-483c-8093-85ed53e7a5bd) for a discussion on creating correct paths.  
   
  Set the <xref:System.Web.UI.WebControls.Button.PostBackUrl%2A> property to the URL of the Web page to post to when the <xref:System.Web.UI.WebControls.Button> control is clicked. For example, specifying `Page2.aspx` causes the page that contains the <xref:System.Web.UI.WebControls.Button> control to post to `Page2.aspx`. If you do not specify a value for the <xref:System.Web.UI.WebControls.Button.PostBackUrl%2A> property, the page posts back to itself.  
   
@@ -802,9 +874,9 @@ Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Lo
 End Sub  
 ```  
   
- For more information on cross-page posting techniques, see [Cross-Page Posting in ASP.NET Web Forms](http://msdn.microsoft.com/library/fedf234e-b7c4-4644-a9e8-c1c0870b043b).  
+ For more information on cross-page posting techniques, see [Cross-Page Posting in ASP.NET Web Forms](https://msdn.microsoft.com/library/fedf234e-b7c4-4644-a9e8-c1c0870b043b).  
   
- This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+ This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](https://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
   
    
   
@@ -817,7 +889,7 @@ End Sub
  The following code example demonstrates how to use the <xref:System.Web.UI.Page.PreviousPage%2A?displayProperty=nameWithType> property to access a value that was posted from another page using the <xref:System.Web.UI.WebControls.Button.PostBackUrl%2A> property. This page gets the string that was posted from the previous page and displays it to the user. If you attempt to run this code example directly, you will get an error because the value of the `text` field will be `null`. Instead, use this code to create a target page and place the file in the same directory as the code for the previous example. The name of the file must correspond to the value specified for the <xref:System.Web.UI.WebControls.Button.PostBackUrl%2A> property in the previous example. When you run the code for the previous example, this page will execute automatically when the cross page post occurs.  
   
 > [!IMPORTANT]
->  This example has a text box that accepts user input, which is a potential security threat. By default, ASP.NET Web pages validate that user input does not include script or HTML elements. For more information, see [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+>  This example has a text box that accepts user input, which is a potential security threat. By default, ASP.NET Web pages validate that user input does not include script or HTML elements. For more information, see [Script Exploits Overview](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
   
  [!code-aspx-csharp[Button.PostBackUrlPage2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Button.PostBackUrlPage2/CS/button.postbackurlpage2cs.aspx#1)]
  [!code-aspx-vb[Button.PostBackUrlPage2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Button.PostBackUrlPage2/VB/button.postbackurlpage2vb.aspx#1)]  
@@ -825,6 +897,8 @@ End Sub
  ]]></format>
         </remarks>
         <altmember cref="P:System.Web.UI.Page.PreviousPage" />
+        <related type="Article" href="https://msdn.microsoft.com/library/fedf234e-b7c4-4644-a9e8-c1c0870b043b">Cross-Page Posting in an ASP.NET Web Page</related>
+        <related type="Article" href="https://msdn.microsoft.com/library/66b3ce28-3b93-4f0a-951f-42fb5bb5fddf">Button Web Server Controls</related>
       </Docs>
     </Member>
     <Member MemberName="RaisePostBackEvent">
@@ -833,12 +907,14 @@ End Sub
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Button.RaisePostBackEvent(System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub RaisePostBackEvent (eventArgument As String)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void RaisePostBackEvent(System::String ^ eventArgument);" />
+      <MemberSignature Language="F#" Value="abstract member RaisePostBackEvent : string -&gt; unit&#xA;override this.RaisePostBackEvent : string -&gt; unit" Usage="button.RaisePostBackEvent eventArgument" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(System.String)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -860,6 +936,7 @@ End Sub
         </remarks>
         <altmember cref="E:System.Web.UI.WebControls.Button.Click" />
         <altmember cref="E:System.Web.UI.WebControls.Button.Command" />
+        <related type="Article" href="https://msdn.microsoft.com/library/66b3ce28-3b93-4f0a-951f-42fb5bb5fddf">Button Web Server Controls</related>
       </Docs>
     </Member>
     <Member MemberName="RenderContents">
@@ -868,9 +945,12 @@ End Sub
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Button.RenderContents(System.Web.UI.HtmlTextWriter)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub RenderContents (writer As HtmlTextWriter)" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void RenderContents(System::Web::UI::HtmlTextWriter ^ writer);" />
+      <MemberSignature Language="F#" Value="override this.RenderContents : System.Web.UI.HtmlTextWriter -&gt; unit" Usage="button.RenderContents writer" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -896,6 +976,7 @@ End Sub
  ]]></format>
         </remarks>
         <altmember cref="T:System.Web.UI.HtmlTextWriter" />
+        <related type="Article" href="https://msdn.microsoft.com/library/66b3ce28-3b93-4f0a-951f-42fb5bb5fddf">Button Web Server Controls</related>
       </Docs>
     </Member>
     <Member MemberName="System.Web.UI.IPostBackEventHandler.RaisePostBackEvent">
@@ -910,8 +991,15 @@ End Sub
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -939,6 +1027,7 @@ End Sub
         </remarks>
         <altmember cref="E:System.Web.UI.WebControls.Button.Click" />
         <altmember cref="E:System.Web.UI.WebControls.Button.Command" />
+        <related type="Article" href="https://msdn.microsoft.com/library/66b3ce28-3b93-4f0a-951f-42fb5bb5fddf">Button Web Server Controls</related>
       </Docs>
     </Member>
     <Member MemberName="Text">
@@ -947,12 +1036,15 @@ End Sub
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Button.Text" />
       <MemberSignature Language="VB.NET" Value="Public Property Text As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Text { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Text : string with get, set" Usage="System.Web.UI.WebControls.Button.Text" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Web.UI.WebControls.IButtonControl.Text</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -962,7 +1054,7 @@ End Sub
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
         </Attribute>
       </Attributes>
@@ -978,7 +1070,7 @@ End Sub
 ## Remarks  
  Use the <xref:System.Web.UI.WebControls.Button.Text%2A> property to specify or determine the caption to display in the <xref:System.Web.UI.WebControls.Button> control.  
   
- The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+ The value of this property, when set, can be saved automatically to a resource file by using a designer tool. For more information, see <xref:System.ComponentModel.LocalizableAttribute> and [Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
   
    
   
@@ -991,6 +1083,7 @@ End Sub
  ]]></format>
         </remarks>
         <altmember cref="F:System.String.Empty" />
+        <related type="Article" href="https://msdn.microsoft.com/library/66b3ce28-3b93-4f0a-951f-42fb5bb5fddf">Button Web Server Controls</related>
       </Docs>
     </Member>
     <Member MemberName="UseSubmitBehavior">
@@ -999,16 +1092,18 @@ End Sub
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Button.UseSubmitBehavior" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property UseSubmitBehavior As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool UseSubmitBehavior { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.UseSubmitBehavior : bool with get, set" Usage="System.Web.UI.WebControls.Button.UseSubmitBehavior" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
         </Attribute>
       </Attributes>
@@ -1027,7 +1122,7 @@ End Sub
   
  When the <xref:System.Web.UI.WebControls.Button.UseSubmitBehavior%2A> property is `false`, control developers can use the <xref:System.Web.UI.ClientScriptManager.GetPostBackEventReference%2A> method to return the client postback event for the <xref:System.Web.UI.WebControls.Button>. The string returned by the <xref:System.Web.UI.ClientScriptManager.GetPostBackEventReference%2A> method contains the text of the client-side function call and can be inserted into a client-side event handler.  
   
- This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+ This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](https://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
   
    
   
@@ -1040,6 +1135,8 @@ End Sub
  ]]></format>
         </remarks>
         <altmember cref="Overload:System.Web.UI.ClientScriptManager.GetPostBackEventReference" />
+        <related type="Article" href="https://msdn.microsoft.com/library/66b3ce28-3b93-4f0a-951f-42fb5bb5fddf">Button Web Server Controls</related>
+        <related type="Article" href="https://msdn.microsoft.com/library/13edb6b9-2dea-43c6-b8c1-a47207de19aa">Client Script in ASP.NET Web Pages</related>
       </Docs>
     </Member>
     <Member MemberName="ValidationGroup">
@@ -1048,19 +1145,21 @@ End Sub
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Button.ValidationGroup" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property ValidationGroup As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ ValidationGroup { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ValidationGroup : string with get, set" Usage="System.Web.UI.WebControls.Button.ValidationGroup" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Web.UI.WebControls.IButtonControl.ValidationGroup</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
         </Attribute>
       </Attributes>
@@ -1078,7 +1177,7 @@ End Sub
   
  This property has an effect only when the value of the <xref:System.Web.UI.WebControls.Button.CausesValidation%2A> property is set to `true`. When you specify a value for the <xref:System.Web.UI.WebControls.Button.ValidationGroup%2A> property, only the validation controls that are part of the specified group are validated when the <xref:System.Web.UI.WebControls.Button> control posts back to the server. If you do not specify a value for this property and the <xref:System.Web.UI.WebControls.Button.CausesValidation%2A> property is set to `true`, all validation controls on the page that are not assigned to a validation group are validated when the control posts back to the server.  
   
- This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+ This property cannot be set by themes or style sheet themes. For more information, see <xref:System.Web.UI.ThemeableAttribute> and [ASP.NET Themes and Skins](https://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
   
    
   
@@ -1086,7 +1185,7 @@ End Sub
  The following code example demonstrates how to use the <xref:System.Web.UI.WebControls.Button.ValidationGroup%2A> property to specify the controls to validate when a <xref:System.Web.UI.WebControls.Button> control posts back to the server. The page contains three text boxes to capture data from the user and three <xref:System.Web.UI.WebControls.RequiredFieldValidator> controls to ensure that the user does not leave a text box blank. The <xref:System.Web.UI.WebControls.RequiredFieldValidator> controls for the first two text boxes are in the `PersonalInfoGroup` validation group and the <xref:System.Web.UI.WebControls.RequiredFieldValidator> control for the third text box is in the `LocationInfoGroup` validation group. When `Button1` is clicked, only the controls in validation group `PersonalInfoGroup` are validated. When `Button2` is clicked, only the control in validation group `LocationInfoGroup` is validated.  
   
 > [!IMPORTANT]
->  This example has a text box that accepts user input, which is a potential security threat. By default, ASP.NET Web pages validate that user input does not include script or HTML elements. For more information, see [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+>  This example has a text box that accepts user input, which is a potential security threat. By default, ASP.NET Web pages validate that user input does not include script or HTML elements. For more information, see [Script Exploits Overview](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
   
  [!code-aspx-csharp[Button.ValidationGroup#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Button.ValidationGroup/CS/button.validationgroupcs.aspx#1)]
  [!code-aspx-vb[Button.ValidationGroup#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Button.ValidationGroup/VB/button.validationgroupvb.aspx#1)]  
@@ -1095,6 +1194,7 @@ End Sub
         </remarks>
         <altmember cref="P:System.Web.UI.WebControls.Button.CausesValidation" />
         <altmember cref="T:System.Web.UI.WebControls.RequiredFieldValidator" />
+        <related type="Article" href="https://msdn.microsoft.com/library/66b3ce28-3b93-4f0a-951f-42fb5bb5fddf">Button Web Server Controls</related>
       </Docs>
     </Member>
   </Members>

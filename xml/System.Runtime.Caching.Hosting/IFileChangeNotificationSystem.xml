@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:System.Runtime.Caching.Hosting.IFileChangeNotificationSystem" />
   <TypeSignature Language="VB.NET" Value="Public Interface IFileChangeNotificationSystem" />
   <TypeSignature Language="C++ CLI" Value="public interface class IFileChangeNotificationSystem" />
+  <TypeSignature Language="F#" Value="type IFileChangeNotificationSystem = interface" />
   <AssemblyInfo>
     <AssemblyName>System.Runtime.Caching</AssemblyName>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
@@ -32,6 +33,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StartMonitoring(string filePath, class System.Runtime.Caching.OnChangedCallback onChangedCallback, [out] object&amp; state, [out] valuetype System.DateTimeOffset&amp; lastWriteTime, [out] int64&amp; fileSize) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.Hosting.IFileChangeNotificationSystem.StartMonitoring(System.String,System.Runtime.Caching.OnChangedCallback,System.Object@,System.DateTimeOffset@,System.Int64@)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void StartMonitoring(System::String ^ filePath, System::Runtime::Caching::OnChangedCallback ^ onChangedCallback, [Runtime::InteropServices::Out] System::Object ^ % state, [Runtime::InteropServices::Out] DateTimeOffset % lastWriteTime, [Runtime::InteropServices::Out] long % fileSize);" />
+      <MemberSignature Language="F#" Value="abstract member StartMonitoring : string * System.Runtime.Caching.OnChangedCallback *  *  *  -&gt; unit" Usage="iFileChangeNotificationSystem.StartMonitoring (filePath, onChangedCallback, state, lastWriteTime, fileSize)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.Caching</AssemblyName>
@@ -43,16 +45,16 @@
       <Parameters>
         <Parameter Name="filePath" Type="System.String" />
         <Parameter Name="onChangedCallback" Type="System.Runtime.Caching.OnChangedCallback" />
-        <Parameter Name="state" Type="System.Object&amp;" RefType="out" />
-        <Parameter Name="lastWriteTime" Type="System.DateTimeOffset&amp;" RefType="out" />
-        <Parameter Name="fileSize" Type="System.Int64&amp;" RefType="out" />
+        <Parameter Name="state" Type="System.Object" RefType="out" />
+        <Parameter Name="lastWriteTime" Type="System.DateTimeOffset" RefType="out" />
+        <Parameter Name="fileSize" Type="System.Int64" RefType="out" />
       </Parameters>
       <Docs>
         <param name="filePath">The fully qualified physical path of a directory or file to monitor for changes.</param>
         <param name="onChangedCallback">A reference to a method that implements the <see cref="T:System.Runtime.Caching.OnChangedCallback" /> delegate. When the monitored file or directory changes, the host environment's implementation of the <see cref="T:System.Runtime.Caching.Hosting.IFileChangeNotificationSystem" /> interface raises an event by calling the <see cref="T:System.Runtime.Caching.OnChangedCallback" /> class.</param>
         <param name="state">The state that is supplied by the host environment. Cache implementations and custom change monitors should treat the state value as opaque. However, the state must be stored so that it can be sent to the host environment when the cache implementation calls the <see cref="M:System.Runtime.Caching.Hosting.IFileChangeNotificationSystem.StopMonitoring(System.String,System.Object)" /> method.</param>
-        <param name="lastWriteTime">When this method returns, contains the last date and time that a write operation occurred on <c>filePath</c>. This parameter is passed uninitialized. This parameter is returned from the host environment.</param>
-        <param name="fileSize">When this method returns, contains the total size of the monitored <c>filePath</c>. This parameter is passed uninitialized. This parameter is returned from the host environment.</param>
+        <param name="lastWriteTime">When this method returns, contains the last date and time that a write operation occurred on <paramref name="filePath" />. This parameter is passed uninitialized. This parameter is returned from the host environment.</param>
+        <param name="fileSize">When this method returns, contains the total size of the monitored <paramref name="filePath" />. This parameter is passed uninitialized. This parameter is returned from the host environment.</param>
         <summary>Registers a file path to monitor with the host environment.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -70,6 +72,7 @@
       <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.Hosting.IFileChangeNotificationSystem.StopMonitoring(System.String,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Sub StopMonitoring (filePath As String, state As Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void StopMonitoring(System::String ^ filePath, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="abstract member StopMonitoring : string * obj -&gt; unit" Usage="iFileChangeNotificationSystem.StopMonitoring (filePath, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime.Caching</AssemblyName>

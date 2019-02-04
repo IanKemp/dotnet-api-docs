@@ -4,10 +4,12 @@
   <TypeSignature Language="DocId" Value="T:System.Composition.Convention.ExportConventionBuilder" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ExportConventionBuilder" />
   <TypeSignature Language="C++ CLI" Value="public ref class ExportConventionBuilder sealed" />
+  <TypeSignature Language="F#" Value="type ExportConventionBuilder = class" />
   <AssemblyInfo>
     <AssemblyName>System.Composition.Convention</AssemblyName>
     <AssemblyVersion>1.0.31.0</AssemblyVersion>
     <AssemblyVersion>1.0.32.0</AssemblyVersion>
+    <AssemblyVersion>1.0.33.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -24,11 +26,13 @@
       <MemberSignature Language="DocId" Value="M:System.Composition.Convention.ExportConventionBuilder.AddMetadata(System.String,System.Func{System.Type,System.Object})" />
       <MemberSignature Language="VB.NET" Value="Public Function AddMetadata (name As String, getValueFromPartType As Func(Of Type, Object)) As ExportConventionBuilder" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Composition::Convention::ExportConventionBuilder ^ AddMetadata(System::String ^ name, Func&lt;Type ^, System::Object ^&gt; ^ getValueFromPartType);" />
+      <MemberSignature Language="F#" Value="member this.AddMetadata : string * Func&lt;Type, obj&gt; -&gt; System.Composition.Convention.ExportConventionBuilder" Usage="exportConventionBuilder.AddMetadata (name, getValueFromPartType)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Composition.Convention</AssemblyName>
         <AssemblyVersion>1.0.31.0</AssemblyVersion>
         <AssemblyVersion>1.0.32.0</AssemblyVersion>
+        <AssemblyVersion>1.0.33.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Composition.Convention.ExportConventionBuilder</ReturnType>
@@ -51,11 +55,13 @@
       <MemberSignature Language="DocId" Value="M:System.Composition.Convention.ExportConventionBuilder.AddMetadata(System.String,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function AddMetadata (name As String, value As Object) As ExportConventionBuilder" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Composition::Convention::ExportConventionBuilder ^ AddMetadata(System::String ^ name, System::Object ^ value);" />
+      <MemberSignature Language="F#" Value="member this.AddMetadata : string * obj -&gt; System.Composition.Convention.ExportConventionBuilder" Usage="exportConventionBuilder.AddMetadata (name, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Composition.Convention</AssemblyName>
         <AssemblyVersion>1.0.31.0</AssemblyVersion>
         <AssemblyVersion>1.0.32.0</AssemblyVersion>
+        <AssemblyVersion>1.0.33.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Composition.Convention.ExportConventionBuilder</ReturnType>
@@ -78,11 +84,13 @@
       <MemberSignature Language="DocId" Value="M:System.Composition.Convention.ExportConventionBuilder.AsContractName(System.Func{System.Type,System.String})" />
       <MemberSignature Language="VB.NET" Value="Public Function AsContractName (getContractNameFromPartType As Func(Of Type, String)) As ExportConventionBuilder" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Composition::Convention::ExportConventionBuilder ^ AsContractName(Func&lt;Type ^, System::String ^&gt; ^ getContractNameFromPartType);" />
+      <MemberSignature Language="F#" Value="member this.AsContractName : Func&lt;Type, string&gt; -&gt; System.Composition.Convention.ExportConventionBuilder" Usage="exportConventionBuilder.AsContractName getContractNameFromPartType" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Composition.Convention</AssemblyName>
         <AssemblyVersion>1.0.31.0</AssemblyVersion>
         <AssemblyVersion>1.0.32.0</AssemblyVersion>
+        <AssemblyVersion>1.0.33.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Composition.Convention.ExportConventionBuilder</ReturnType>
@@ -103,11 +111,13 @@
       <MemberSignature Language="DocId" Value="M:System.Composition.Convention.ExportConventionBuilder.AsContractName(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function AsContractName (contractName As String) As ExportConventionBuilder" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Composition::Convention::ExportConventionBuilder ^ AsContractName(System::String ^ contractName);" />
+      <MemberSignature Language="F#" Value="member this.AsContractName : string -&gt; System.Composition.Convention.ExportConventionBuilder" Usage="exportConventionBuilder.AsContractName contractName" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Composition.Convention</AssemblyName>
         <AssemblyVersion>1.0.31.0</AssemblyVersion>
         <AssemblyVersion>1.0.32.0</AssemblyVersion>
+        <AssemblyVersion>1.0.33.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Composition.Convention.ExportConventionBuilder</ReturnType>
@@ -127,11 +137,13 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.ExportConventionBuilder AsContractType(class System.Type type) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Composition.Convention.ExportConventionBuilder.AsContractType(System.Type)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Composition::Convention::ExportConventionBuilder ^ AsContractType(Type ^ type);" />
+      <MemberSignature Language="F#" Value="member this.AsContractType : Type -&gt; System.Composition.Convention.ExportConventionBuilder" Usage="exportConventionBuilder.AsContractType type" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Composition.Convention</AssemblyName>
         <AssemblyVersion>1.0.31.0</AssemblyVersion>
         <AssemblyVersion>1.0.32.0</AssemblyVersion>
+        <AssemblyVersion>1.0.33.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Composition.Convention.ExportConventionBuilder</ReturnType>
@@ -152,11 +164,13 @@
       <MemberSignature Language="DocId" Value="M:System.Composition.Convention.ExportConventionBuilder.AsContractType``1" />
       <MemberSignature Language="VB.NET" Value="Public Function AsContractType(Of T) () As ExportConventionBuilder" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; System::Composition::Convention::ExportConventionBuilder ^ AsContractType();" />
+      <MemberSignature Language="F#" Value="member this.AsContractType : unit -&gt; System.Composition.Convention.ExportConventionBuilder" Usage="exportConventionBuilder.AsContractType " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Composition.Convention</AssemblyName>
         <AssemblyVersion>1.0.31.0</AssemblyVersion>
         <AssemblyVersion>1.0.32.0</AssemblyVersion>
+        <AssemblyVersion>1.0.33.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Composition.Convention.ExportConventionBuilder</ReturnType>

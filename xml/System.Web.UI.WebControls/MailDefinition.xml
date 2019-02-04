@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.MailDefinition" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class MailDefinition&#xA;Implements IStateManager" />
   <TypeSignature Language="C++ CLI" Value="public ref class MailDefinition sealed : System::Web::UI::IStateManager" />
+  <TypeSignature Language="F#" Value="type MailDefinition = class&#xA;    interface IStateManager" />
   <AssemblyInfo>
     <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -50,7 +52,7 @@
  On the Web Forms page that this code generates, you can click **Create email and display only** to create an email message and display the properties of the <xref:System.Net.Mail.MailMessage> object in the Web page. Click **Create email and send** to both display the email message in the Web page and send the message to the recipients using Internet email.  
   
 > [!IMPORTANT]
->  This control has a text box that accepts user input, which is a potential security threat. By default, ASP.NET Web pages validate that user input does not include script or HTML elements. For more information, see [Script Exploits Overview](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+>  This control has a text box that accepts user input, which is a potential security threat. By default, ASP.NET Web pages validate that user input does not include script or HTML elements. For more information, see [Script Exploits Overview](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
   
  [!code-aspx-csharp[MailDefinitionClassSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MailDefinitionClassSample/CS/maildefinitionsamplecs.aspx#1)]
  [!code-aspx-vb[MailDefinitionClassSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MailDefinitionClassSample/VB/maildefinitionsamplevb.aspx#1)]  
@@ -71,8 +73,14 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.Web.UI.WebControls.MailDefinition" /> class.</summary>
@@ -85,16 +93,18 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MailDefinition.BodyFileName" />
       <MemberSignature Language="VB.NET" Value="Public Property BodyFileName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ BodyFileName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.BodyFileName : string with get, set" Usage="System.Web.UI.WebControls.MailDefinition.BodyFileName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
         </Attribute>
-        <Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8">
           <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.WebControls.MailDefinitionBodyFileNameEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
         </Attribute>
         <Attribute>
@@ -102,6 +112,12 @@
         </Attribute>
         <Attribute>
           <AttributeName>System.Web.UI.UrlProperty("*.*")</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5">
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.WebControls.MailDefinitionBodyFileNameEditor, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>set: System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -143,9 +159,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MailDefinition.CC" />
       <MemberSignature Language="VB.NET" Value="Public Property CC As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ CC { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.CC : string with get, set" Usage="System.Web.UI.WebControls.MailDefinition.CC" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -202,9 +220,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MailDefinition.CreateMailMessage(System.String,System.Collections.IDictionary,System.Web.UI.Control)" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateMailMessage (recipients As String, replacements As IDictionary, owner As Control) As MailMessage" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Net::Mail::MailMessage ^ CreateMailMessage(System::String ^ recipients, System::Collections::IDictionary ^ replacements, System::Web::UI::Control ^ owner);" />
+      <MemberSignature Language="F#" Value="member this.CreateMailMessage : string * System.Collections.IDictionary * System.Web.UI.Control -&gt; System.Net.Mail.MailMessage" Usage="mailDefinition.CreateMailMessage (recipients, replacements, owner)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -258,7 +278,7 @@
           <paramref name="replacements" /> does not contain strings.</exception>
         <exception cref="T:System.Web.HttpException">The <see langword="From" /> value in the SMTP section of the configuration file is <see langword="null" /> or the empty string  
   
- \- or -  
+-or-
   
  <paramref name="recipients" /> contains an incorrect email address.</exception>
         <exception cref="T:System.ArgumentNullException">
@@ -274,9 +294,11 @@
       <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MailDefinition.CreateMailMessage(System.String,System.Collections.IDictionary,System.String,System.Web.UI.Control)" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateMailMessage (recipients As String, replacements As IDictionary, body As String, owner As Control) As MailMessage" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Net::Mail::MailMessage ^ CreateMailMessage(System::String ^ recipients, System::Collections::IDictionary ^ replacements, System::String ^ body, System::Web::UI::Control ^ owner);" />
+      <MemberSignature Language="F#" Value="member this.CreateMailMessage : string * System.Collections.IDictionary * string * System.Web.UI.Control -&gt; System.Net.Mail.MailMessage" Usage="mailDefinition.CreateMailMessage (recipients, replacements, body, owner)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -332,7 +354,7 @@
           <paramref name="replacements" /> does not contain strings.</exception>
         <exception cref="T:System.Web.HttpException">The <see langword="From" /> value in the SMTP section of the configuration file is <see langword="null" /> or an empty string ("").  
   
- \- or -  
+-or-
   
  <paramref name="recipients" /> contains an incorrect email address.</exception>
         <exception cref="T:System.ArgumentNullException">
@@ -348,9 +370,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MailDefinition.EmbeddedObjects" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EmbeddedObjects As EmbeddedMailObjectsCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Web::UI::WebControls::EmbeddedMailObjectsCollection ^ EmbeddedObjects { System::Web::UI::WebControls::EmbeddedMailObjectsCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.EmbeddedObjects : System.Web.UI.WebControls.EmbeddedMailObjectsCollection" Usage="System.Web.UI.WebControls.MailDefinition.EmbeddedObjects" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -388,9 +412,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MailDefinition.From" />
       <MemberSignature Language="VB.NET" Value="Public Property From As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ From { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.From : string with get, set" Usage="System.Web.UI.WebControls.MailDefinition.From" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -436,9 +462,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MailDefinition.IsBodyHtml" />
       <MemberSignature Language="VB.NET" Value="Public Property IsBodyHtml As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsBodyHtml { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsBodyHtml : bool with get, set" Usage="System.Web.UI.WebControls.MailDefinition.IsBodyHtml" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -475,17 +503,19 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MailDefinition.Priority" />
       <MemberSignature Language="VB.NET" Value="Public Property Priority As MailPriority" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::Mail::MailPriority Priority { System::Net::Mail::MailPriority get(); void set(System::Net::Mail::MailPriority value); };" />
+      <MemberSignature Language="F#" Value="member this.Priority : System.Net.Mail.MailPriority with get, set" Usage="System.Web.UI.WebControls.MailDefinition.Priority" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.DefaultValue</AttributeName>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -524,9 +554,11 @@
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MailDefinition.Subject" />
       <MemberSignature Language="VB.NET" Value="Public Property Subject As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Subject { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Subject : string with get, set" Usage="System.Web.UI.WebControls.MailDefinition.Subject" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
@@ -571,13 +603,15 @@
       <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.IStateManager.IsTrackingViewState" />
       <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MailDefinition.System#Web#UI#IStateManager#IsTrackingViewState" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property IsTrackingViewState As Boolean Implements IStateManager.IsTrackingViewState" />
-      <MemberSignature Language="C++ CLI" Value="property bool System.Web.UI.IStateManager.IsTrackingViewState { bool get(); };" />
+      <MemberSignature Language="C++ CLI" Value="property bool System::Web::UI::IStateManager::IsTrackingViewState { bool get(); };" />
+      <MemberSignature Language="F#" Usage="System.Web.UI.IStateManager.IsTrackingViewState" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Web.UI.IStateManager.IsTrackingViewState</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -612,6 +646,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -645,6 +680,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -676,6 +712,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

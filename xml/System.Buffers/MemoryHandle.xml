@@ -4,9 +4,13 @@
   <TypeSignature Language="DocId" Value="T:System.Buffers.MemoryHandle" />
   <TypeSignature Language="VB.NET" Value="Public Structure MemoryHandle&#xA;Implements IDisposable" />
   <TypeSignature Language="C++ CLI" Value="public value class MemoryHandle : IDisposable" />
+  <TypeSignature Language="F#" Value="type MemoryHandle = struct&#xA;    interface IDisposable" />
   <AssemblyInfo>
     <AssemblyName>System.Runtime</AssemblyName>
     <AssemblyVersion>4.2.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Memory</AssemblyName>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.ValueType</BaseTypeName>
@@ -17,21 +21,38 @@
     </Interface>
   </Interfaces>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Provides a memory handle for a block of memory.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+
+A `MemoryHandle` instance represents a handle to a pinned block of memory. It is returned by the following methods:
+
+- <xref:System.Buffers.IPinnable.Pin%2A?displayProperty=nameWithType>.
+- <xref:System.Memory%601.Pin%2A?displayProperty=nameWithType>
+- <xref:System.ReadOnlyMemory%601.Pin%2A?displayProperty=nameWithType>.
+- <xref:System.Buffers.MemoryManager%601.Pin%2A?displayProperty=<nameWithType>
+
+ ]]></format>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public MemoryHandle (void* pointer, System.Runtime.InteropServices.GCHandle handle = null, System.Buffers.IPinnable pinnable = null);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(void* pointer, valuetype System.Runtime.InteropServices.GCHandle handle, class System.Buffers.IPinnable pinnable) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Buffers.MemoryHandle.#ctor(System.Void*,System.Runtime.InteropServices.GCHandle,System.Buffers.IPinnable)" />
+      <MemberSignature Language="F#" Value="new System.Buffers.MemoryHandle : nativeptr&lt;unit&gt; * System.Runtime.InteropServices.GCHandle * System.Buffers.IPinnable -&gt; System.Buffers.MemoryHandle" Usage="new System.Buffers.MemoryHandle (pointer, handle, pinnable)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Memory</AssemblyName>
+      </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netcore-2.1;netcore-2.2">
           <AttributeName>System.CLSCompliant(false)</AttributeName>
         </Attribute>
       </Attributes>
@@ -41,10 +62,10 @@
         <Parameter Name="pinnable" Type="System.Buffers.IPinnable" />
       </Parameters>
       <Docs>
-        <param name="pointer">To be added.</param>
-        <param name="handle">To be added.</param>
-        <param name="pinnable">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="pointer">A pointer to memory.</param>
+        <param name="handle">A handle used to pin array buffers.</param>
+        <param name="pinnable">A reference to a manually managed object, or <see langword="default" /> if there is no memory manager.</param>
+        <summary>Creates a new memory handle for the block of memory.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -54,6 +75,7 @@
       <MemberSignature Language="DocId" Value="M:System.Buffers.MemoryHandle.Dispose" />
       <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Dispose();" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="memoryHandle.Dispose " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
@@ -62,12 +84,15 @@
         <AssemblyName>System.Runtime</AssemblyName>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Memory</AssemblyName>
+      </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Frees the pinned handle and releases the <see cref="T:System.Buffers.IPinnable" /> instance.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -76,13 +101,17 @@
       <MemberSignature Language="ILAsm" Value=".property instance void* Pointer" />
       <MemberSignature Language="DocId" Value="P:System.Buffers.MemoryHandle.Pointer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property void* Pointer { void* get(); };" />
+      <MemberSignature Language="F#" Value="member this.Pointer : nativeptr&lt;unit&gt;" Usage="System.Buffers.MemoryHandle.Pointer" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Runtime</AssemblyName>
         <AssemblyVersion>4.2.1.0</AssemblyVersion>
       </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Memory</AssemblyName>
+      </AssemblyInfo>
       <Attributes>
-        <Attribute>
+        <Attribute FrameworkAlternate="netcore-2.1;netcore-2.2">
           <AttributeName>System.CLSCompliant(false)</AttributeName>
         </Attribute>
       </Attributes>
@@ -90,9 +119,9 @@
         <ReturnType>System.Void*</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Returns a pointer to the memory block.</summary>
+        <value>A pointer to the memory block.</value>
+        <remarks>The memory is assumed to be pinned so that its address won't change.</remarks>
       </Docs>
     </Member>
   </Members>

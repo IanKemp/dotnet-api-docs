@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.Animatable" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class Animatable&#xA;Inherits Freezable&#xA;Implements IAnimatable" />
   <TypeSignature Language="C++ CLI" Value="public ref class Animatable abstract : System::Windows::Freezable, System::Windows::Media::Animation::IAnimatable" />
+  <TypeSignature Language="F#" Value="type Animatable = class&#xA;    inherit Freezable&#xA;    interface IAnimatable&#xA;    interface DUCE.IResource" />
   <AssemblyInfo>
     <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -30,8 +32,14 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters />
       <Docs>
         <summary>Initializes a new instance of the <see cref="T:System.Windows.Media.Animation.Animatable" /> class.</summary>
@@ -53,14 +61,21 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Animatable.ApplyAnimationClock(System.Windows.DependencyProperty,System.Windows.Media.Animation.AnimationClock)" />
       <MemberSignature Language="VB.NET" Value="Public Sub ApplyAnimationClock (dp As DependencyProperty, clock As AnimationClock)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void ApplyAnimationClock(System::Windows::DependencyProperty ^ dp, System::Windows::Media::Animation::AnimationClock ^ clock);" />
+      <MemberSignature Language="F#" Value="abstract member ApplyAnimationClock : System.Windows.DependencyProperty * System.Windows.Media.Animation.AnimationClock -&gt; unit&#xA;override this.ApplyAnimationClock : System.Windows.DependencyProperty * System.Windows.Media.Animation.AnimationClock -&gt; unit" Usage="animatable.ApplyAnimationClock (dp, clock)" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Windows.Media.Animation.IAnimatable.ApplyAnimationClock(System.Windows.DependencyProperty,System.Windows.Media.Animation.AnimationClock)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -70,7 +85,7 @@
       </Parameters>
       <Docs>
         <param name="dp">The property to animate.</param>
-        <param name="clock">The clock with which to animate the specified property. If <c>clock</c> is <see langword="null" />, all animations will be removed from the specified property (but not stopped).</param>
+        <param name="clock">The clock with which to animate the specified property. If <paramref name="clock" /> is <see langword="null" />, all animations will be removed from the specified property (but not stopped).</param>
         <summary>Applies an <see cref="T:System.Windows.Media.Animation.AnimationClock" /> to the specified <see cref="T:System.Windows.DependencyProperty" />. If the property is already animated, the <see cref="F:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace" /> handoff behavior is used.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -87,12 +102,14 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyAnimationClock(class System.Windows.DependencyProperty dp, class System.Windows.Media.Animation.AnimationClock clock, valuetype System.Windows.Media.Animation.HandoffBehavior handoffBehavior) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Animatable.ApplyAnimationClock(System.Windows.DependencyProperty,System.Windows.Media.Animation.AnimationClock,System.Windows.Media.Animation.HandoffBehavior)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void ApplyAnimationClock(System::Windows::DependencyProperty ^ dp, System::Windows::Media::Animation::AnimationClock ^ clock, System::Windows::Media::Animation::HandoffBehavior handoffBehavior);" />
+      <MemberSignature Language="F#" Value="abstract member ApplyAnimationClock : System.Windows.DependencyProperty * System.Windows.Media.Animation.AnimationClock * System.Windows.Media.Animation.HandoffBehavior -&gt; unit&#xA;override this.ApplyAnimationClock : System.Windows.DependencyProperty * System.Windows.Media.Animation.AnimationClock * System.Windows.Media.Animation.HandoffBehavior -&gt; unit" Usage="animatable.ApplyAnimationClock (dp, clock, handoffBehavior)" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Windows.Media.Animation.IAnimatable.ApplyAnimationClock(System.Windows.DependencyProperty,System.Windows.Media.Animation.AnimationClock,System.Windows.Media.Animation.HandoffBehavior)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -105,7 +122,7 @@
       </Parameters>
       <Docs>
         <param name="dp">The property to animate.</param>
-        <param name="clock">The clock with which to animate the specified property. If <c>handoffBehavior</c> is <see cref="F:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace" /> and <c>clock</c> is <see langword="null" />, all animations will be removed from the specified property (but not stopped). If <c>handoffBehavior</c> is <see cref="F:System.Windows.Media.Animation.HandoffBehavior.Compose" /> and clock is <see langword="null" />, this method has no effect.</param>
+        <param name="clock">The clock with which to animate the specified property. If <paramref name="handoffBehavior" /> is <see cref="F:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace" /> and <paramref name="clock" /> is <see langword="null" />, all animations will be removed from the specified property (but not stopped). If <paramref name="handoffBehavior" /> is <see cref="F:System.Windows.Media.Animation.HandoffBehavior.Compose" /> and clock is <see langword="null" />, this method has no effect.</param>
         <param name="handoffBehavior">A value that specifies how the new animation should interact with any current animations already affecting the property value.</param>
         <summary>Applies an <see cref="T:System.Windows.Media.Animation.AnimationClock" /> to the specified <see cref="T:System.Windows.DependencyProperty" />. If the property is already animated, the specified <see cref="T:System.Windows.Media.Animation.HandoffBehavior" /> is used.</summary>
         <remarks>
@@ -151,14 +168,21 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Animatable.BeginAnimation(System.Windows.DependencyProperty,System.Windows.Media.Animation.AnimationTimeline)" />
       <MemberSignature Language="VB.NET" Value="Public Sub BeginAnimation (dp As DependencyProperty, animation As AnimationTimeline)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void BeginAnimation(System::Windows::DependencyProperty ^ dp, System::Windows::Media::Animation::AnimationTimeline ^ animation);" />
+      <MemberSignature Language="F#" Value="abstract member BeginAnimation : System.Windows.DependencyProperty * System.Windows.Media.Animation.AnimationTimeline -&gt; unit&#xA;override this.BeginAnimation : System.Windows.DependencyProperty * System.Windows.Media.Animation.AnimationTimeline -&gt; unit" Usage="animatable.BeginAnimation (dp, animation)" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Windows.Media.Animation.IAnimatable.BeginAnimation(System.Windows.DependencyProperty,System.Windows.Media.Animation.AnimationTimeline)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="netframework-4.0">
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
@@ -172,7 +196,7 @@
   
  If the animation's <see cref="P:System.Windows.Media.Animation.Timeline.BeginTime" /> is <see langword="null" />, any current animations will be removed and the current value of the property will be held.  
   
- If <c>animation</c> is <see langword="null" />, all animations will be removed from the property and the property value will revert back to its base value.</param>
+ If <paramref name="animation" /> is <see langword="null" />, all animations will be removed from the property and the property value will revert back to its base value.</param>
         <summary>Applies an animation to the specified <see cref="T:System.Windows.DependencyProperty" />. The animation is started when the next frame is rendered. If the specified property is already animated, the <see cref="F:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace" /> handoff behavior is used.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -189,12 +213,14 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginAnimation(class System.Windows.DependencyProperty dp, class System.Windows.Media.Animation.AnimationTimeline animation, valuetype System.Windows.Media.Animation.HandoffBehavior handoffBehavior) cil managed" />
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Animatable.BeginAnimation(System.Windows.DependencyProperty,System.Windows.Media.Animation.AnimationTimeline,System.Windows.Media.Animation.HandoffBehavior)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void BeginAnimation(System::Windows::DependencyProperty ^ dp, System::Windows::Media::Animation::AnimationTimeline ^ animation, System::Windows::Media::Animation::HandoffBehavior handoffBehavior);" />
+      <MemberSignature Language="F#" Value="abstract member BeginAnimation : System.Windows.DependencyProperty * System.Windows.Media.Animation.AnimationTimeline * System.Windows.Media.Animation.HandoffBehavior -&gt; unit&#xA;override this.BeginAnimation : System.Windows.DependencyProperty * System.Windows.Media.Animation.AnimationTimeline * System.Windows.Media.Animation.HandoffBehavior -&gt; unit" Usage="animatable.BeginAnimation (dp, animation, handoffBehavior)" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Windows.Media.Animation.IAnimatable.BeginAnimation(System.Windows.DependencyProperty,System.Windows.Media.Animation.AnimationTimeline,System.Windows.Media.Animation.HandoffBehavior)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -209,11 +235,11 @@
         <param name="dp">The property to animate.</param>
         <param name="animation">The animation used to animate the specified property.  
   
- If <c>handoffBehavior</c> is <see cref="F:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace" /> and the animation's <see cref="P:System.Windows.Media.Animation.Timeline.BeginTime" /> is <see langword="null" />, any current animations will be removed and the current value of the property will be held.  
+ If <paramref name="handoffBehavior" /> is <see cref="F:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace" /> and the animation's <see cref="P:System.Windows.Media.Animation.Timeline.BeginTime" /> is <see langword="null" />, any current animations will be removed and the current value of the property will be held.  
   
- If <c>handoffBehavior</c> is <see cref="F:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace" /> and <c>animation</c> is a <see langword="null" /> reference, all animations will be removed from the property and the property value will revert back to its base value.  
+ If <paramref name="handoffBehavior" /> is <see cref="F:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace" /> and <paramref name="animation" /> is a <see langword="null" /> reference, all animations will be removed from the property and the property value will revert back to its base value.  
   
- If <c>handoffBehavior</c> is <see cref="F:System.Windows.Media.Animation.HandoffBehavior.Compose" />, this method will have no effect if the animation or its <see cref="P:System.Windows.Media.Animation.Timeline.BeginTime" /> is <see langword="null" />.</param>
+ If <paramref name="handoffBehavior" /> is <see cref="F:System.Windows.Media.Animation.HandoffBehavior.Compose" />, this method will have no effect if the animation or its <see cref="P:System.Windows.Media.Animation.Timeline.BeginTime" /> is <see langword="null" />.</param>
         <param name="handoffBehavior">A value that specifies how the new animation should interact with any current animations already affecting the property value.</param>
         <summary>Applies an animation to the specified <see cref="T:System.Windows.DependencyProperty" />. The animation is started when the next frame is rendered. If the specified property is already animated, the specified <see cref="T:System.Windows.Media.Animation.HandoffBehavior" /> is used.</summary>
         <remarks>
@@ -254,9 +280,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Animatable.Clone" />
       <MemberSignature Language="VB.NET" Value="Public Function Clone () As Animatable" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Windows::Media::Animation::Animatable ^ Clone();" />
+      <MemberSignature Language="F#" Value="override this.Clone : unit -&gt; System.Windows.Media.Animation.Animatable" Usage="animatable.Clone " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -265,7 +293,7 @@
       <Parameters />
       <Docs>
         <summary>Creates a modifiable clone of this <see cref="T:System.Windows.Media.Animation.Animatable" />, making deep copies of this object's values. When copying this object's dependency properties, this method copies resource references and data bindings (but they might no longer resolve) but not animations or their current values.</summary>
-        <returns>A modifiable clone of this instance. The returned clone is effectively a deep copy of the current object. The clone's <see cref="P:System.Windows.Freezable.IsFrozen" /> property is **false**.</returns>
+        <returns>A modifiable clone of this instance. The returned clone is effectively a deep copy of the current object. The clone's <see cref="P:System.Windows.Freezable.IsFrozen" /> property is <see langword="false" />.</returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -283,9 +311,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Animatable.FreezeCore(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function FreezeCore (isChecking As Boolean) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override bool FreezeCore(bool isChecking);" />
+      <MemberSignature Language="F#" Value="override this.FreezeCore : bool -&gt; bool" Usage="animatable.FreezeCore isChecking" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -305,7 +335,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- This method will return **false** when <xref:System.Windows.Media.Animation.Animatable.HasAnimatedProperties%2A> is **true**.  
+ This method will return `false` when <xref:System.Windows.Media.Animation.Animatable.HasAnimatedProperties%2A> is `true`.  
   
  Do not call this method directly (except when calling base in an implementation). This method is called internally by <xref:System.Windows.Freezable.CanFreeze%2A> (with `isChecking` equal to `true`) and  <xref:System.Windows.Freezable.Freeze%2A> (with `isChecking` equal to `false`).  
   
@@ -325,12 +355,14 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Animatable.GetAnimationBaseValue(System.Windows.DependencyProperty)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetAnimationBaseValue (dp As DependencyProperty) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Object ^ GetAnimationBaseValue(System::Windows::DependencyProperty ^ dp);" />
+      <MemberSignature Language="F#" Value="abstract member GetAnimationBaseValue : System.Windows.DependencyProperty -&gt; obj&#xA;override this.GetAnimationBaseValue : System.Windows.DependencyProperty -&gt; obj" Usage="animatable.GetAnimationBaseValue dp" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Windows.Media.Animation.IAnimatable.GetAnimationBaseValue(System.Windows.DependencyProperty)</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -367,12 +399,14 @@
       <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Animatable.HasAnimatedProperties" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HasAnimatedProperties As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool HasAnimatedProperties { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.HasAnimatedProperties : bool" Usage="System.Windows.Media.Animation.Animatable.HasAnimatedProperties" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Windows.Media.Animation.IAnimatable.HasAnimatedProperties</InterfaceMember>
       </Implements>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -380,7 +414,8 @@
       </ReturnValue>
       <Docs>
         <summary>Gets a value that indicates whether one or more <see cref="T:System.Windows.Media.Animation.AnimationClock" /> objects is associated with any of this object's dependency properties.</summary>
-        <value>**true** if one or more <see cref="T:System.Windows.Media.Animation.AnimationClock" /> objects is associated with any of this object's dependency properties; otherwise, **false**.</value>
+        <value>
+          <see langword="true" /> if one or more <see cref="T:System.Windows.Media.Animation.AnimationClock" /> objects is associated with any of this object's dependency properties; otherwise, <see langword="false" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -397,9 +432,11 @@
       <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Animatable.ShouldSerializeStoredWeakReference(System.Windows.DependencyObject)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function ShouldSerializeStoredWeakReference (target As DependencyObject) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool ShouldSerializeStoredWeakReference(System::Windows::DependencyObject ^ target);" />
+      <MemberSignature Language="F#" Value="static member ShouldSerializeStoredWeakReference : System.Windows.DependencyObject -&gt; bool" Usage="System.Windows.Media.Animation.Animatable.ShouldSerializeStoredWeakReference target" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>

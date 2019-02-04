@@ -4,8 +4,11 @@
   <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.IProcessInitializer" />
   <TypeSignature Language="VB.NET" Value="Public Interface IProcessInitializer" />
   <TypeSignature Language="C++ CLI" Value="public interface class IProcessInitializer" />
+  <TypeSignature Language="F#" Value="type IProcessInitializer = interface" />
   <AssemblyInfo>
     <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces />
@@ -14,7 +17,7 @@
       <AttributeName>System.Runtime.InteropServices.Guid("1113f52d-dc7f-4943-aed6-88d04027e32a")</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.InterfaceType</AttributeName>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -39,9 +42,12 @@
       <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.IProcessInitializer.Shutdown" />
       <MemberSignature Language="VB.NET" Value="Public Sub Shutdown ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Shutdown();" />
+      <MemberSignature Language="F#" Value="abstract member Shutdown : unit -&gt; unit" Usage="iProcessInitializer.Shutdown " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -66,9 +72,12 @@
       <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.IProcessInitializer.Startup(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Startup (punkProcessControl As Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Startup(System::Object ^ punkProcessControl);" />
+      <MemberSignature Language="F#" Value="abstract member Startup : obj -&gt; unit" Usage="iProcessInitializer.Startup punkProcessControl" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>1.0.5000.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>

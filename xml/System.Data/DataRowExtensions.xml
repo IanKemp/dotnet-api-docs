@@ -4,8 +4,10 @@
   <TypeSignature Language="DocId" Value="T:System.Data.DataRowExtensions" />
   <TypeSignature Language="VB.NET" Value="Public Module DataRowExtensions" />
   <TypeSignature Language="C++ CLI" Value="public ref class DataRowExtensions abstract sealed" />
+  <TypeSignature Language="F#" Value="type DataRowExtensions = class" />
   <AssemblyInfo>
     <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+    <AssemblyVersion>3.5.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
@@ -39,9 +41,11 @@
       <MemberSignature Language="DocId" Value="M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.Data.DataColumn)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Field(Of T) (row As DataRow, column As DataColumn) As T" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static T Field(System::Data::DataRow ^ row, System::Data::DataColumn ^ column);" />
+      <MemberSignature Language="F#" Value="static member Field : System.Data.DataRow * System.Data.DataColumn -&gt; 'T" Usage="System.Data.DataRowExtensions.Field (row, column)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -83,9 +87,11 @@
       <MemberSignature Language="DocId" Value="M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Field(Of T) (row As DataRow, columnIndex As Integer) As T" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static T Field(System::Data::DataRow ^ row, int columnIndex);" />
+      <MemberSignature Language="F#" Value="static member Field : System.Data.DataRow * int -&gt; 'T" Usage="System.Data.DataRowExtensions.Field (row, columnIndex)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -108,7 +114,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The <xref:System.Data.DataSet> class represents **null** values with the <xref:System.DBNull.Value> instance of the <xref:System.DBNull> class.  A [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expression that accessed a column with a **null** value would generate a <xref:System.InvalidCastException> at run time. Additionally, <xref:System.Data.DataSet> doesn’t support nullable types. The <xref:System.Data.DataRowExtensions.Field%2A> method provides support for accessing columns as nullable types.  If the underlying value in the <xref:System.Data.DataSet> is <xref:System.DBNull.Value>, the returned nullable type will have a value of **null**.  
+ The <xref:System.Data.DataSet> class represents **null** values with the <xref:System.DBNull.Value> instance of the <xref:System.DBNull> class.  A [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expression that accessed a column with a **null** value would generate a <xref:System.InvalidCastException> at run time. Additionally, <xref:System.Data.DataSet> doesn't support nullable types. The <xref:System.Data.DataRowExtensions.Field%2A> method provides support for accessing columns as nullable types.  If the underlying value in the <xref:System.Data.DataSet> is <xref:System.DBNull.Value>, the returned nullable type will have a value of **null**.  
   
  If the value of the specified <xref:System.Data.DataColumn> is **null** and `T` is a reference type or nullable type, then the return type will be **null**.  The <xref:System.Data.DataRowExtensions.Field%2A> method will not return <xref:System.DBNull.Value>.  
   
@@ -127,9 +133,11 @@
       <MemberSignature Language="DocId" Value="M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.String)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Field(Of T) (row As DataRow, columnName As String) As T" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static T Field(System::Data::DataRow ^ row, System::String ^ columnName);" />
+      <MemberSignature Language="F#" Value="static member Field : System.Data.DataRow * string -&gt; 'T" Usage="System.Data.DataRowExtensions.Field (row, columnName)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -171,9 +179,11 @@
       <MemberSignature Language="DocId" Value="M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.Data.DataColumn,System.Data.DataRowVersion)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Field(Of T) (row As DataRow, column As DataColumn, version As DataRowVersion) As T" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static T Field(System::Data::DataRow ^ row, System::Data::DataColumn ^ column, System::Data::DataRowVersion version);" />
+      <MemberSignature Language="F#" Value="static member Field : System.Data.DataRow * System.Data.DataColumn * System.Data.DataRowVersion -&gt; 'T" Usage="System.Data.DataRowExtensions.Field (row, column, version)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -198,7 +208,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The <xref:System.Data.DataSet> class represents **null** values with the <xref:System.DBNull.Value> instance of the <xref:System.DBNull> class.  A [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expression that accessed a column with a **null** value would generate a <xref:System.InvalidCastException> at run time. Additionally, <xref:System.Data.DataSet> doesn’t support nullable types. The <xref:System.Data.DataRowExtensions.Field%2A> method provides support for accessing columns as nullable types.  If the underlying value in the <xref:System.Data.DataSet> is <xref:System.DBNull.Value>, the returned nullable type will have a value of **null**.  
+ The <xref:System.Data.DataSet> class represents **null** values with the <xref:System.DBNull.Value> instance of the <xref:System.DBNull> class.  A [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expression that accessed a column with a **null** value would generate a <xref:System.InvalidCastException> at run time. Additionally, <xref:System.Data.DataSet> doesn't support nullable types. The <xref:System.Data.DataRowExtensions.Field%2A> method provides support for accessing columns as nullable types.  If the underlying value in the <xref:System.Data.DataSet> is <xref:System.DBNull.Value>, the returned nullable type will have a value of **null**.  
   
  If the value of the specified <xref:System.Data.DataColumn> is null and `T` is a reference type or nullable type, then the return type will be **null**. The <xref:System.Data.DataRowExtensions.Field%2A> method will not return <xref:System.DBNull.Value>.  
   
@@ -217,9 +227,11 @@
       <MemberSignature Language="DocId" Value="M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.Int32,System.Data.DataRowVersion)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Field(Of T) (row As DataRow, columnIndex As Integer, version As DataRowVersion) As T" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static T Field(System::Data::DataRow ^ row, int columnIndex, System::Data::DataRowVersion version);" />
+      <MemberSignature Language="F#" Value="static member Field : System.Data.DataRow * int * System.Data.DataRowVersion -&gt; 'T" Usage="System.Data.DataRowExtensions.Field (row, columnIndex, version)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -244,7 +256,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The <xref:System.Data.DataSet> class represents **null** values with the <xref:System.DBNull.Value> instance of the <xref:System.DBNull> class.  A [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expression that accessed a column with a **null** value would generate a <xref:System.InvalidCastException> at run time. Additionally, <xref:System.Data.DataSet> doesn’t support nullable types. The <xref:System.Data.DataRowExtensions.Field%2A> method provides support for accessing columns as nullable types.  If the underlying value in the <xref:System.Data.DataSet> is <xref:System.DBNull.Value>, the returned nullable type will have a value of **null**.  
+ The <xref:System.Data.DataSet> class represents **null** values with the <xref:System.DBNull.Value> instance of the <xref:System.DBNull> class.  A [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expression that accessed a column with a **null** value would generate a <xref:System.InvalidCastException> at run time. Additionally, <xref:System.Data.DataSet> doesn't support nullable types. The <xref:System.Data.DataRowExtensions.Field%2A> method provides support for accessing columns as nullable types.  If the underlying value in the <xref:System.Data.DataSet> is <xref:System.DBNull.Value>, the returned nullable type will have a value of **null**.  
   
  If the value of the specified <xref:System.Data.DataColumn> is null and `T` is a reference type or nullable type, then the return type will be **null**. The <xref:System.Data.DataRowExtensions.Field%2A> method will not return <xref:System.DBNull.Value>.  
   
@@ -263,9 +275,11 @@
       <MemberSignature Language="DocId" Value="M:System.Data.DataRowExtensions.Field``1(System.Data.DataRow,System.String,System.Data.DataRowVersion)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Field(Of T) (row As DataRow, columnName As String, version As DataRowVersion) As T" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static T Field(System::Data::DataRow ^ row, System::String ^ columnName, System::Data::DataRowVersion version);" />
+      <MemberSignature Language="F#" Value="static member Field : System.Data.DataRow * string * System.Data.DataRowVersion -&gt; 'T" Usage="System.Data.DataRowExtensions.Field (row, columnName, version)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -290,7 +304,7 @@
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- The <xref:System.Data.DataSet> class represents **null** values with the <xref:System.DBNull.Value> instance of the <xref:System.DBNull> class.  A [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expression that accessed a column with a **null** value would generate a <xref:System.InvalidCastException> at run time. Additionally, <xref:System.Data.DataSet> doesn’t support nullable types. The <xref:System.Data.DataRowExtensions.Field%2A> method provides support for accessing columns as nullable types.  If the underlying value in the <xref:System.Data.DataSet> is <xref:System.DBNull.Value>, the returned nullable type will have a value of **null**.  
+ The <xref:System.Data.DataSet> class represents **null** values with the <xref:System.DBNull.Value> instance of the <xref:System.DBNull> class.  A [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expression that accessed a column with a **null** value would generate a <xref:System.InvalidCastException> at run time. Additionally, <xref:System.Data.DataSet> doesn't support nullable types. The <xref:System.Data.DataRowExtensions.Field%2A> method provides support for accessing columns as nullable types.  If the underlying value in the <xref:System.Data.DataSet> is <xref:System.DBNull.Value>, the returned nullable type will have a value of **null**.  
   
  If the value of the specified <xref:System.Data.DataColumn> is null and `T` is a reference type or nullable type, then the return type will be **null**. The <xref:System.Data.DataRowExtensions.Field%2A> method will not return <xref:System.DBNull.Value>.  
   
@@ -318,9 +332,11 @@
       <MemberSignature Language="DocId" Value="M:System.Data.DataRowExtensions.SetField``1(System.Data.DataRow,System.Data.DataColumn,``0)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub SetField(Of T) (row As DataRow, column As DataColumn, value As T)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void SetField(System::Data::DataRow ^ row, System::Data::DataColumn ^ column, T value);" />
+      <MemberSignature Language="F#" Value="static member SetField : System.Data.DataRow * System.Data.DataColumn * 'T -&gt; unit" Usage="System.Data.DataRowExtensions.SetField (row, column, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -338,7 +354,7 @@
         <typeparam name="T">A generic parameter that specifies the value type of the column.</typeparam>
         <param name="row">The input <see cref="T:System.Data.DataRow" />, which acts as the <see langword="this" /> instance for the extension method.</param>
         <param name="column">The input <see cref="T:System.Data.DataColumn" /> specifies which row value to retrieve.</param>
-        <param name="value">The new row value for the specified column, of type <c>T</c>.</param>
+        <param name="value">The new row value for the specified column, of type <paramref name="T" />.</param>
         <summary>Sets a new value for the specified column in the <see cref="T:System.Data.DataRow" />. The <see cref="M:System.Data.DataRowExtensions.SetField``1(System.Data.DataRow,System.Data.DataColumn,``0)" /> method also supports nullable types.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -364,9 +380,11 @@
       <MemberSignature Language="DocId" Value="M:System.Data.DataRowExtensions.SetField``1(System.Data.DataRow,System.Int32,``0)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub SetField(Of T) (row As DataRow, columnIndex As Integer, value As T)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void SetField(System::Data::DataRow ^ row, int columnIndex, T value);" />
+      <MemberSignature Language="F#" Value="static member SetField : System.Data.DataRow * int * 'T -&gt; unit" Usage="System.Data.DataRowExtensions.SetField (row, columnIndex, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -384,7 +402,7 @@
         <typeparam name="T">A generic parameter that specifies the value type of the column.</typeparam>
         <param name="row">The input <see cref="T:System.Data.DataRow" />, which acts as the <see langword="this" /> instance for the extension method.</param>
         <param name="columnIndex">The zero-based ordinal of the column to set the value of.</param>
-        <param name="value">The new row value for the specified column, of type <c>T</c>.</param>
+        <param name="value">The new row value for the specified column, of type <paramref name="T" />.</param>
         <summary>Sets a new value for the specified column in the <see cref="T:System.Data.DataRow" /> the method is called on. The <see cref="M:System.Data.DataRowExtensions.SetField``1(System.Data.DataRow,System.Int32,``0)" /> method also supports nullable types.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -409,9 +427,11 @@
       <MemberSignature Language="DocId" Value="M:System.Data.DataRowExtensions.SetField``1(System.Data.DataRow,System.String,``0)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub SetField(Of T) (row As DataRow, columnName As String, value As T)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void SetField(System::Data::DataRow ^ row, System::String ^ columnName, T value);" />
+      <MemberSignature Language="F#" Value="static member SetField : System.Data.DataRow * string * 'T -&gt; unit" Usage="System.Data.DataRowExtensions.SetField (row, columnName, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>3.5.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
@@ -429,7 +449,7 @@
         <typeparam name="T">A generic parameter that specifies the value type of the column.</typeparam>
         <param name="row">The input <see cref="T:System.Data.DataRow" />, which acts as the <see langword="this" /> instance for the extension method.</param>
         <param name="columnName">The name of the column to set the value of.</param>
-        <param name="value">The new row value for the specified column, of type <c>T</c>.</param>
+        <param name="value">The new row value for the specified column, of type <paramref name="T" />.</param>
         <summary>Sets a new value for the specified column in the <see cref="T:System.Data.DataRow" />. The <see cref="M:System.Data.DataRowExtensions.SetField``1(System.Data.DataRow,System.String,``0)" /> method also supports nullable types.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
